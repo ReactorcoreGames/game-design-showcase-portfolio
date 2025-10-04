@@ -1,5 +1,7 @@
 # Reactorcore's Game Design Showcase Portfolio
 
+![Banner Image](https://raw.githubusercontent.com/ReactorcoreGames/game-design-showcase-portfolio/main/ReactorcoreCollageBanner.jpg)
+
 This repository hosts the source code for my personal game design portfolio website.
 
 **Please view the live site here:**  
@@ -30,12 +32,12 @@ https://reactorcoregames.github.io/game-design-showcase-portfolio/hire_me/hire_m
 I can handle any genre, any platform, any theme, any scope.
 
 ## My Links
-My releases: https://reactorcore.itch.io/
-Devblog and news: https://www.patreon.com/ReactorcoreGames
-All my links: https://linktr.ee/reactorcore
-Discord server for chat: https://discord.gg/UdRavGhj47
+- My releases: https://reactorcore.itch.io/
+- Devblog and news: https://www.patreon.com/ReactorcoreGames
+- All my links: https://linktr.ee/reactorcore
+- Discord server for chat: https://discord.gg/UdRavGhj47
 
 ## Socials
-https://www.youtube.com/channel/UCP3mctF-V1aq7HVmBE9KZ3A
-https://bsky.app/profile/reactorcoregames.bsky.social
-https://twitter.com/ReactorcoreDev
+- https://www.youtube.com/channel/UCP3mctF-V1aq7HVmBE9KZ3A
+- https://bsky.app/profile/reactorcoregames.bsky.social
+- https://twitter.com/ReactorcoreDev
