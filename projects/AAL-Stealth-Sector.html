@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Stealth Sector: Covert Battleship Wars</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        /* 
+        Required Images:
+        stealth_sector_1_title.jpg - Futuristic naval command center with holographic displays
+        stealth_sector_2_vignette.jpg - Tactical combat scenario showing salvo strike pattern
+        stealth_sector_3_feature.jpg - Close-up of advanced targeting system interface
+        stealth_sector_4_boxart.jpg - Dramatic fleet composition in synthwave aesthetic
+        stealth_sector_5_story.jpg - Overworld view of the greater AAL universe showing space colonies and military installations
+        */
+
+        :root {
+            --background-color: #0a0a0a;
+            --container-bg: #1a1a2e;
+            --card-bg: #16213e;
+            --border-color: #00ffff;
+            --text-color: #e1e5e9;
+            --accent-color: #ff00ff;
+            --secondary-accent: #00ff41;
+            --title-primary: #00ffff;
+            --title-secondary: #ff00ff;
+            --shadow-color: rgba(0, 255, 255, 0.3);
+            --shadow-pink: rgba(255, 0, 255, 0.3);
+            --hover-glow: rgba(0, 255, 255, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #1a1a2e 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .reactorcore-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            padding: 5px 10px;
+            font-size: 12px;
+            color: var(--border-color);
+            text-decoration: none;
+            border-radius: 3px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .reactorcore-label:hover {
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 10px var(--shadow-color);
+        }
+
+        .title-section {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('images/stealth_sector_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .title-content {
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--title-primary);
+            text-shadow: 0 0 20px #2000c0, 0 0 40px #2000c0, 0 0 60px #2000c0;
+            animation: h1GlowWave 6s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 2rem);
+            color: var(--title-secondary);
+            text-shadow: 0 0 15px #2000c0, 0 0 30px #2000c0;
+            animation: subtitleGlowWave 8s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        @keyframes h1GlowWave {
+            0% {
+                text-shadow: 0 0 10px #2000c0, 0 0 20px #2000c0, 0 0 30px #2000c0;
+            }
+            50% {
+                text-shadow: 0 0 20px #2000c0, 0 0 40px #2000c0, 0 0 60px #2000c0, 0 0 80px #2000c0;
+            }
+            100% {
+                text-shadow: 0 0 10px #2000c0, 0 0 20px #2000c0, 0 0 30px #2000c0;
+            }
+        }
+
+        @keyframes h2GlowWave {
+            0% {
+                text-shadow: 0 0 5px #4a00e8, 0 0 10px #4a00e8;
+            }
+            50% {
+                text-shadow: 0 0 15px #4a00e8, 0 0 25px #4a00e8, 0 0 35px #4a00e8;
+            }
+            100% {
+                text-shadow: 0 0 5px #4a00e8, 0 0 10px #4a00e8;
+            }
+        }
+
+        @keyframes subtitleGlowWave {
+            0% {
+                text-shadow: 0 0 5px #2000c0, 0 0 10px #2000c0;
+            }
+            50% {
+                text-shadow: 0 0 15px #2000c0, 0 0 25px #2000c0, 0 0 35px #2000c0;
+            }
+            100% {
+                text-shadow: 0 0 5px #2000c0, 0 0 10px #2000c0;
+            }
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--title-primary);
+            text-shadow: 0 0 10px #004fa3, 0 0 20px #004d9f;
+            animation: h2GlowWave 10s ease-in-out infinite;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .overview {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 0 20px var(--shadow-color);
+        }
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 0 15px var(--shadow-pink);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--secondary-accent);
+            box-shadow: 0 0 25px var(--hover-glow);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px var(--accent-color);
+        }
+
+        .wide-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 0 15px var(--shadow-color);
+        }
+
+        .controls-section {
+            background: var(--container-bg);
+            border: 2px solid var(--secondary-accent);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 30px var(--shadow-color);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 550px;
+            background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.1)), url('images/stealth_sector_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+
+        .vignette-quote {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            color: var(--text-color);
+            font-style: italic;
+            font-size: 1.1rem;
+            text-shadow: 0 0 5px var(--border-color);
+        }
+
+        .story-image-section {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 30px var(--shadow-color);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 550px;
+            background: url('images/stealth_sector_5_story.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid var(--secondary-accent);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 0 15px var(--shadow-color);
+        }
+
+        .feature-image-section {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 30px var(--shadow-pink);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 550px;
+            background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.1)), url('images/stealth_sector_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+            align-items: center;
+        }
+
+		.boxart-image {
+			width: 100%;
+			height: 550px;
+			background: url('images/stealth_sector_4_boxart.jpg');
+			background-size: contain; /* Shows full image without cropping */
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: 10px;
+			border: 2px solid var(--accent-color);
+			box-shadow: 0 0 25px var(--shadow-pink);
+		}
+
+        .boxart-content {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 0 20px var(--shadow-color);
+        }
+
+        .mermaid-container {
+            background: var(--container-bg);
+            border: 2px solid var(--secondary-accent);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+
+        .trivia {
+            background: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 0 15px var(--shadow-pink);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--container-bg);
+            border-top: 2px solid var(--border-color);
+            margin-top: 3rem;
+        }
+
+        .footer a {
+            color: var(--border-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-shadow: 0 0 5px var(--border-color);
+        }
+
+        strong {
+            color: var(--secondary-accent);
+            text-shadow: 0 0 3px var(--secondary-accent);
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .boxart-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .cards-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="reactorcore-label">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1>AAL Stealth Sector</h1>
+            <div class="subtitle">Covert Battleship Wars</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="overview">
+            <h2>🎯 Game Overview</h2>
+            <p>AAL Stealth Sector revolutionizes the classic battleship experience with advanced tactical combat systems and futuristic naval warfare. Command a diverse fleet of 8 specialized warships, each with unique firing patterns and strategic capabilities, in intense grid-based battles that demand both tactical precision and strategic foresight.</p>
+            <br>
+            <p>This isn't your grandfather's battleship game. With salvo-based combat systems, electronic warfare mechanics, and progressive fleet management, every engagement becomes a high-stakes tactical puzzle where positioning, timing, and ship selection determine victory or defeat.</p>
+            <br>
+            <p>Experience the thrill of commanding everything from nimble corvettes to devastating obliterator-class vessels, each bringing distinct tactical advantages to the 15x25 combat grid where stealth, strategy, and firepower collide.</p>
+        </section>
+
+        <div class="cards-row">
+            <div class="card">
+                <h3>🎮 Target Audience</h3>
+                <p><strong>Primary:</strong> Strategy enthusiasts who crave tactical depth and methodical gameplay</p><br>
+                <p><strong>Secondary:</strong> Classic battleship fans seeking modern innovation</p><br>
+                <p><strong>Appeal:</strong> Perfect for players who enjoy chess-like thinking, naval warfare themes, and progressive challenge escalation</p>
+            </div>
+            <div class="card">
+                <h3>🎯 Game's Purpose</h3>
+                <p>Fulfills the fundamental human need for <strong>strategic mastery</strong> and <strong>tactical achievement</strong></p><br>
+                <p>Provides satisfying mental stimulation through complex decision-making and long-term planning</p><br>
+                <p>Delivers the reward of outsmarting opponents through superior positioning and fleet management</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Core Concept</h3>
+                <p>Enhanced grid-based naval combat where <strong>every ship matters</strong> and <strong>every shot counts</strong></p><br>
+                <p>Progressive fleet mechanics create escalating tactical complexity as battles unfold</p><br>
+                <p>Electronic warfare systems add layers of deception and counter-strategy</p>
+            </div>
+        </div>
+
+        <div class="story-image-section">
+            <div class="story-image"></div>
+        </div>
+
+        <section class="overview">
+            <h2>🌌 Lore & Story</h2>
+            <p>In the year 2387, humanity has colonized the outer reaches of local interstellar space known as the <strong>Helios Sector</strong>, an area of space within the Milky Way Galaxy's Orion Arm of about 50 star systems. The Stealth Sector represents different contested regions of space - nebula-shrouded battlegrounds where visibility is limited and electronic warfare reigns supreme.</p>
+            <br>
+            <p>As an <strong>Admiral of a Terran Fleet</strong>, you command cutting-edge warships that blend centuries of naval tactical doctrine with advanced space-age technology. Each vessel in your task force represents the pinnacle of their class - from nimble corvettes equipped with quantum targeting systems to massive obliterator-class vessels wielding planet-cracking firepower.</p>
+            <br>
+            <p>The <strong>Covert Battleship Wars</strong> emerged when traditional space combat proved inadequate in the nebula's sensor-dampening environment. Ships must rely on tactical positioning, electronic warfare suites, and coordinated salvo strikes to eliminate enemies they cannot directly observe. Victory belongs to commanders who master the delicate balance between aggressive offense and strategic patience.</p>
+            <br>
+            <p>Your opponents are cunning enemy terran admirals, each commanding identical fleets but employing vastly different tactical doctrines. Some favor aggressive hunter-killer strategies, while others excel at defensive positioning and counter-attacks. In the depths of the Stealth Sector, only superior tactical thinking and adaptive command decisions separate victory from defeat in these deadly games of interstellar cat-and-mouse.</p>
+        </section>
+
+        <section class="controls-section">
+            <h2>🕹️ Controls & Interface</h2>
+            <p><strong>Salvo Targeting System:</strong> Click and drag to aim devastating 5-missile salvos across the tactical grid. Missiles wrap around map edges for strategic positioning advantages.</p>
+            <br>
+            <p><strong>Fleet Command Interface:</strong> Progress through your fleet systematically - from swift corvettes to devastating obliterators. Each ship type offers unique firing patterns and tactical opportunities.</p>
+            <br>
+            <p><strong>Visual Feedback:</strong> Advanced targeting reticles, damage heat signatures, and ship reveals create immersive combat awareness. Experience smooth easing animations that make every interaction feel responsive and impactful.</p>
+            <br>
+            <p><strong>Electronic Warfare Controls:</strong> Deploy sensor probes, defensive countermeasures, and tactical abilities that add strategic depth beyond basic ship-to-ship combat.</p>
+        </section>
+
+        <div class="vignette-section">
+            <div class="vignette-image">
+                <div class="vignette-quote">
+                    "Click-drag targeting with 5-missile salvos and edge-wrapping mechanics - precision meets tactical innovation."
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <h2>🏗️ Game Layers</h2>
+            <div class="wide-card">
+                <h3>⚔️ Moment-to-Moment Gameplay</h3>
+                <p>Turn-based tactical combat where players alternate between fleet ships, each with distinct firing patterns. Corvettes fire precise 2-missile lines, while obliterators unleash devastating 3x3 area attacks. Every decision matters as you balance offensive pressure with defensive positioning, using electronic warfare abilities to gain tactical advantages through stealth, reconnaissance, and area denial.</p>
+            </div>
+            <div class="wide-card">
+                <h3>🎖️ Low Metagame</h3>
+                <p>Campaign progression through increasingly challenging AI opponents with advanced behavioral patterns. Unlock new electronic warfare capabilities, ship customization options, and tactical abilities. Each victory adds to your naval command experience, opening access to specialized fleet configurations and advanced combat doctrines that enhance your strategic arsenal.</p>
+            </div>
+            <div class="wide-card">
+                <h3>🌌 High Metagame</h3>
+                <p>Persistent admiral ranking system tracking long-term tactical performance across multiple engagements. Build a legacy through victory statistics, preferred tactical approaches, and signature combat strategies. Access historical battle replays, analyze tactical decisions, and develop your personal naval command doctrine that evolves with your growing expertise in space-age warfare.</p>
+            </div>
+            <div class="wide-card">
+                <h3>⏱️ Practical Game Flow</h3>
+                <p>Launch directly into tactical combat with minimal setup time. Each engagement lasts 15-30 minutes, providing perfect session length for strategic satisfaction without time commitment pressure. Pause and resume functionality ensures battles fit into busy schedules, while immediate tactical feedback keeps engagement high throughout each encounter.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎮 Game Modes</h2>
+            <div class="wide-card">
+                <h3>⚔️ Tactical Command Mode</h3>
+                <p>The core single-player experience against progressively intelligent AI admirals. Each opponent employs distinct tactical doctrines - from aggressive hunters to defensive strategists to unpredictable wildcards. The AI adapts its targeting based on previous hits, creating dynamic tension as battles evolve from exploration to focused tactical pressure.</p>
+                <br>
+                <p><strong>Session Types:</strong> Quick skirmishes (10-15 minutes) for tactical practice, or extended campaigns (30-45 minutes) for full strategic depth. Perfect for both lunch-break gaming and evening tactical sessions.</p>
+            </div>
+        </section>
+
+        <div class="features-grid">
+            <section>
+                <h2>🔧 Game Features & Mechanics</h2>
+                
+                <div class="feature-card">
+                    <h3>🎯 Advanced Salvo System</h3>
+                    <p>Revolutionary 5-missile targeting system transforms traditional single-shot battleship into tactical area denial. Click-and-drag interface allows precise salvo placement across the 15x25 tactical grid. <strong>Edge-wrapping mechanics</strong> create unique strategic opportunities - missiles that would exit the grid continue from the opposite side, enabling surprise flanking attacks and complex tactical maneuvers.</p>
+                    <br>
+                    <p>Each salvo creates visual impact through smooth easing animations, building tension as targeting reticles highlight affected cells before devastating strikes illuminate the battlefield. This system rewards spatial thinking and pattern recognition while maintaining the satisfying uncertainty of naval combat.</p>
+                </div>
+                <br>
+                <div class="feature-card">
+                    <h3>⚓ Progressive Fleet Mechanics</h3>
+                    <p>Command 8 distinct warship classes, each with unique firing patterns and tactical roles. Progress systematically through your fleet - corvettes (1x2 line), frigates (1x3 line), destroyers (1x4 line), battleships (1x5 line), gunships (V-pattern), cruisers (+pattern), dreadnoughts (large +pattern), and obliterators (3x3 area).</p>
+                    <br>
+                    <p>This progression system creates natural tactical escalation. Early turns require precise positioning with smaller ships, while later turns unleash devastating area attacks that can turn battles dramatically. <strong>Fleet composition strategy</strong> becomes crucial as each ship type serves distinct tactical purposes in your overall battle plan.</p>
+                </div>
+                <br>
+                <div class="feature-card">
+                    <h3>📡 Electronic Warfare Systems</h3>
+                    <p>Advanced battlefield control through sensor probes, stealth capabilities, and tactical countermeasures. Deploy <strong>sensor probes</strong> to reveal enemy positions in limited areas, or use <strong>smoke screens</strong> to conceal your fleet positioning. Mine deployment creates area denial, while teleportation systems allow strategic repositioning.</p>
+                    <br>
+                    <p>These systems add layers of deception and counter-strategy beyond basic ship combat. Healing and masking abilities provide tactical recovery options, while hazard deployment creates dynamic battlefield conditions that both players must navigate strategically.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="mermaid-container">
+            <h3>📊 Fleet Progression & Combat Flow</h3>
+            <div class="mermaid">
+                graph TD
+                    A[Corvette: 1x2 Line] --> B[Frigate: 1x3 Line]
+                    B --> C[Destroyer: 1x4 Line]
+                    C --> D[Battleship: 1x5 Line]
+                    D --> E[Gunship: V-Pattern]
+                    E --> F[Cruiser: + Pattern]
+                    F --> G[Dreadnought: Large +]
+                    G --> H[Obliterator: 3x3 Area]
+                    
+                    I[Turn Start] --> J[Select Target]
+                    J --> K[Position Salvo]
+                    K --> L[Fire Missiles]
+                    L --> M[Evaluate Hits]
+                    M --> N[Electronic Warfare]
+                    N --> O[End Turn]
+                    O --> I
+                    
+                    style A fill:#00ff41
+                    style H fill:#ff00ff
+                    style I fill:#00ffff
+                    style O fill:#00ffff
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🤖 Intelligent AI Opponent</h3>
+                <p>Adaptive artificial intelligence that evolves its targeting strategy based on battlefield success. When no enemy ships are detected, the AI explores randomly across the tactical grid. Once it scores hits on your fleet, it switches to <strong>focused hunting mode</strong>, systematically targeting adjacent cells to locate and destroy damaged vessels.</p>
+                <br>
+                <p>This behavioral system creates realistic naval combat tension - periods of tense exploration punctuated by intense focused pressure once the enemy finds your position. The AI's tactical evolution keeps battles engaging throughout all phases of combat.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🗺️ Tactical Grid Combat</h3>
+                <p>Expansive 15x25 battlefield grid provides ample maneuvering space for complex tactical formations and strategic positioning. Unlike traditional 10x10 battleship grids, this enhanced battlefield allows for sophisticated fleet deployments and multiple engagement vectors simultaneously.</p>
+                <br>
+                <p>The larger grid creates opportunities for <strong>tactical depth</strong> - concentrated defensive formations, dispersed survival strategies, or aggressive forward positioning all become viable approaches. Combined with edge-wrapping missile mechanics, every cell becomes tactically significant.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💥 Visual Damage System</h3>
+                <p>Sophisticated ship revelation mechanics create dramatic combat narrative. Enemy vessels remain invisible until completely destroyed, building suspense through <strong>heat signature tracking</strong> as individual cells take damage. When the final cell of an enemy ship is destroyed, spectacular explosion effects reveal the complete vessel outline.</p>
+                <br>
+                <p>This system maintains classic battleship mystery while providing satisfying visual feedback. Players can track their tactical success through accumulating heat signatures, building anticipation for the dramatic moment when enemy ships are fully revealed and eliminated.</p>
+            </div>
+        </div>
+
+        <div class="feature-image-section">
+            <div class="feature-image">
+                <div class="vignette-quote">
+                    "Progressive fleet system: Corvette's 2-missile lines to Obliterator's devastating 3x3 area strikes."
+                </div>
+            </div>
+        </div>
+
+        <section class="trivia">
+            <h2>🎲 Naval Combat Trivia</h2>
+            <ul>
+                <li><strong>Tactical Realism:</strong> The progressive fleet system mirrors real naval task force composition, from scouting vessels to capital ships</li>
+                <li><strong>Grid Mathematics:</strong> The 15x25 battlefield contains 375 tactical cells, with maximum fleet occupancy of 45 cells (12% coverage)</li>
+                <li><strong>Salvo Innovation:</strong> Edge-wrapping missile mechanics simulate advanced targeting computers that calculate optimal strike vectors</li>
+                <li><strong>Electronic Warfare:</strong> Stealth and sensor systems reflect modern naval combat's emphasis on information superiority</li>
+                <li><strong>AI Adaptation:</strong> The hunting behavior algorithm mimics real tactical doctrine for locating and engaging detected threats</li>
+            </ul>
+        </section>
+
+        <div class="boxart-section">
+            <div class="boxart-image"></div>
+            <div class="boxart-content">
+                <h2>AAL Stealth Sector</h2>
+                <h3 style="color: var(--title-secondary); margin-bottom: 1rem;">Covert Battleship Wars</h3>
+                <p>Command the ultimate naval task force in space-age warfare where strategy meets firepower. Eight distinct warship classes, advanced salvo systems, and electronic warfare capabilities create the most sophisticated battleship experience ever designed.</p>
+                <br>
+                <p>Every engagement becomes a masterclass in tactical thinking as you progress through your fleet, unleashing devastating coordinated strikes while defending against intelligent enemy admirals. Will your strategic doctrine prevail in the depths of the Stealth Sector?</p>
+                <br>
+                <p><strong>🎯 Turn-based tactical mastery</strong><br>
+                <strong>⚔️ 8 unique warship classes</strong><br>
+                <strong>📡 Electronic warfare systems</strong><br>
+                <strong>🤖 Adaptive AI opponents</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#00ffff',
+                primaryTextColor: '#e1e5e9',
+                primaryBorderColor: '#ff00ff',
+                lineColor: '#00ff41',
+                secondaryColor: '#1a1a2e',
+                tertiaryColor: '#16213e',
+                background: '#0a0a0a',
+                backgroundSecondary: '#1a1a2e',
+                backgroundTertiary: '#16213e',
+            }
+        });
+    </script>
+</body>
+</html>

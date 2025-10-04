@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactorcore's Game Design Portfolio - Indie Game Concepts & Creative Collaboration</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of handcrafted game designs by indie developer Reactorcore from Finland. Features innovative strategy games, physics simulations, sandbox experiences, and collaboration opportunities for programmers and artists.">
+    <meta name="keywords" content="game design portfolio, indie game developer, game concepts, collaborative development, physics simulation, strategy games, sandbox games, remote collaboration, Finland gamedev">
+    <meta name="author" content="Reactorcore Games">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Reactorcore's Game Design Showcase">
+    <meta property="og:description" content="Handcrafted game designs by Finnish indie developer • Strategy • Physics • Sandbox • Creative collaboration opportunities with programmers and artists">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reactorcoregames.github.io/">
+    <meta property="og:image" content="ReactorcoreCollageBanner.jpg">
+    <meta property="og:image:width" content="1500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:site_name" content="Reactorcore Games">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Reactorcore's Game Design Showcase">
+    <meta name="twitter:description" content="Handcrafted game designs by Finnish indie developer • Strategy • Physics • Sandbox • Creative collaboration opportunities with programmers and artists">
+    <meta name="twitter:image" content="ReactorcoreCollageBanner.jpg">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Reactorcore",
+        "jobTitle": "Game Designer",
+        "url": "https://reactorcoregames.github.io/",
+        "sameAs": [
+            "https://twitter.com/ReactorcoreDev",
+            "https://github.com/ReactorcoreGames",
+            "https://reactorcore.itch.io/",
+            "https://patreon.com/ReactorcoreGames"
+        ],
+        "knowsAbout": ["Game Design", "Indie Game Development", "Physics Simulation", "Collaborative Development", "Creative Direction", "Game Mechanics Design"]
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Bar -->
+    <header class="header" id="header">
+        <a href="https://github.com/ReactorcoreGames/" target="_blank" class="header-title">Reactorcore Games</a>
+        <div class="header-controls">
+            <button class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</button>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Game Design Portfolio</h1>
+            <p>Reactorcore's Personal Design Projects Showcase</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-area" id="contentArea">
+            <!-- Project Cards Grid -->
+            <div class="projects-grid">
+                <!-- AAL Stealth Sector Card -->
+                <div class="project-card" onclick="window.open('projects/AAL-Stealth-Sector.html', '_blank')">
+                    <div class="status-dot"></div>
+                    <h3>AAL Stealth Sector: Covert Battleship Wars ⚔️🚢</h3>
+                    <img src="projects/thumbnails/stealth_sector_2_vignette_thumb.jpg" alt="AAL Stealth Sector" class="project-thumbnail">
+                    <p>Enhanced grid-based naval combat with advanced tactical combat systems and futuristic naval warfare. Command 8 specialized warships with unique firing patterns in intense tactical battles where every ship matters and every shot counts.</p>
+                    <div class="project-hashtags">
+                        <span class="hashtag">#TacticalStrategy</span>
+                        <span class="hashtag">#NavalCombat</span>
+                        <span class="hashtag">#TurnBased</span>
+                        <span class="hashtag">#FleetCommand</span>
+                        <span class="hashtag">#StealthMechanics</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="visit-button">Click to View Page</div>
+                    </div>
+                </div>
+
+                <!-- Tactical Arsenal Command Card -->
+                <div class="project-card" onclick="window.open('projects/AALSW.html', '_blank')">
+                    <div class="status-dot"></div>
+                    <h3>Tactical Arsenal Command: Strategic Squad Combat 🎯🔫</h3>
+                    <img src="projects/thumbnails/aalsw_2_vignette_thumb.jpg" alt="Tactical Arsenal Command" class="project-thumbnail">
+                    <p>Physics-driven tactical combat where you directly control well-equipped combat operatives through destructible environments. Features infinite customization through modular loadout systems, realistic ballistics, and a persistent galactic conquest metagame.</p>
+                    <div class="project-hashtags">
+                        <span class="hashtag">#PhysicsCombat</span>
+                        <span class="hashtag">#SquadTactics</span>
+                        <span class="hashtag">#Customization</span>
+                        <span class="hashtag">#TurnBased</span>
+                        <span class="hashtag">#DestructibleEnvironments</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="visit-button">Click to View Page</div>
+                    </div>
+                </div>
+
+                <!-- AAL Superweapon Card -->
+                <div class="project-card" onclick="window.open('projects/AALSuperweapon.html', '_blank')">
+                    <div class="status-dot"></div>
+                    <h3>AAL Superweapon: Physics Combat Devastation 💥🔬</h3>
+                    <img src="projects/thumbnails/AALSuperweapon_2_vignette_thumb.jpg" alt="AAL Superweapon" class="project-thumbnail">
+                    <p>Intense 2D action-platformer where you embody an immortal galactic agent wielding devastating physics-driven combat in vast alien weapons laboratories. Experience true empowerment through unrestricted destruction and modular weapon systems.</p>
+                    <div class="project-hashtags">
+                        <span class="hashtag">#2DAction</span>
+                        <span class="hashtag">#PhysicsDestruction</span>
+                        <span class="hashtag">#PowerFantasy</span>
+                        <span class="hashtag">#ModularWeapons</span>
+                        <span class="hashtag">#AlienTechnology</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="visit-button">Click to View Page</div>
+                    </div>
+                </div>
+
+                <!-- Admiral Wars Beyond Card -->
+                <div class="project-card" onclick="window.open('projects/admiralwars.html', '_blank')">
+                    <div class="status-dot"></div>
+                    <h3>Admiral Wars Beyond: Strategic Warfare Evolution 🌍⚔️</h3>
+                    <img src="projects/thumbnails/admiralwars_2_vignette_thumb.jpg" alt="Admiral Wars Beyond" class="project-thumbnail">
+                    <p>Ultimate evolution of turn-based tactical warfare combining Advance Wars mechanics with four simultaneous battlefield layers - orbit, air, surface, and underground. Every tactical decision ripples through a persistent, procedurally-generated universe.</p>
+                    <div class="project-hashtags">
+                        <span class="hashtag">#TurnBasedStrategy</span>
+                        <span class="hashtag">#MultiLayer</span>
+                        <span class="hashtag">#ProceduralCampaigns</span>
+                        <span class="hashtag">#PersistentUniverse</span>
+                        <span class="hashtag">#AdvanceWars</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="visit-button">Click to View Page</div>
+                    </div>
+                </div>
+
+                <!-- Astro Industry Freelancer Card -->
+                <div class="project-card" onclick="window.open('projects/astro_industry.html', '_blank')">
+                    <div class="status-dot"></div>
+                    <h3>Astro Industry Freelancer: Engineering Sandbox Simulation 🏭🚁</h3>
+                    <img src="projects/thumbnails/astro_industry_2_vignette_thumb.jpg" alt="Astro Industry Freelancer" class="project-thumbnail">
+                    <p>Ultimate industrial engineering fantasy in a peaceful universe where you pilot powerful vehicles, shape terrain, and solve creative problems. Build factories, explore space, and help beings across infinite star systems without pressure.</p>
+                    <div class="project-hashtags">
+                        <span class="hashtag">#Sandbox</span>
+                        <span class="hashtag">#IndustrialVehicles</span>
+                        <span class="hashtag">#ProcGeneration</span>
+                        <span class="hashtag">#Automation</span>
+                        <span class="hashtag">#Exploration</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="visit-button">Click to View Page</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <!-- Tab Navigation -->
+            <div class="sidebar-tabs">
+                <button class="tab-button active" onclick="switchTab('about')">📖 About</button>
+                <button class="tab-button" onclick="switchTab('work')">🤝 Work</button>
+                <button class="tab-button" onclick="switchTab('connect')">🔗 Connect</button>
+            </div>
+
+            <!-- About Tab Content -->
+            <div class="tab-content active" id="about-tab">
+                <!-- Always Visible Quick Intro -->
+                <div class="sidebar-section">
+                    <div class="quick-intro">
+                        <p>I share game design concepts and offer collaboration opportunities through my handcrafted game projects.</p>
+                        <div class="cta-highlight">🎮 Click on the Projects!</div>
+                    </div>
+                </div>
+
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('about-next')">
+                        <span>What is this site?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="about-next">
+                        <p><strong>Step 1:</strong> Look at the different game designs below - they're all handmade by me</p>
+                        <p><strong>Step 2:</strong> Pick one you like and want to work on</p>
+                        <p><strong>Step 3:</strong> Contact me about it via email (fastest), Discord, or check the Connect tab</p>
+                        <p><strong>Alternative:</strong> Check the Work tab if you're interested in revenue share teamwork or hiring me</p>
+                    </div>
+                </div>
+
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('about-who')">
+                        <span>Who is Reactorcore?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="about-who">
+                        <p>First of all, hello, I'm an adult from Finland, I've played games since the age of 4, built and released a lot of mods and tried to make games too for the last decade. Its harder than it looks and required a lot of preparatory work, but now I'm closer than ever to making it finally happen, thanks to the new AI technology.</p>
+                        <p>I'm an introvert so I get more along with computers than I do with people and I'm not particularly charismatic, so I let my work do the talking. I like to remain private but if I trust you enough, I can open up more, I hope you can respect that.</p>
+                    </div>
+                </div>
+
+                <!-- Accordion Sections -->
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('about-what-is-design')">
+                        <span>What is game design?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="about-what-is-design">
+                        <p>Game design is like being a construction architect but for the UX/UI of real-time interactive software. It's about creating the structure, systems, and rules that make games fun and engaging - not writing the code to implement them.</p>
+                        <p>A game designer focuses on holistic structure, mechanics, balance, and player experience rather than programming or technical implementation.</p>
+                        <p>And no, I'm not an "idea person". Real game design is about figuring out difficult problems of how to set things up and how should things work together from a player's perspective. It also touches on taking into account all the things that happen outside a game too; marketing, monetization, business plan, publishing, packaging, ongoing promotion, community shaping and a whole lot more. It is very hard and complicated work.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Work Tab Content -->
+            <div class="tab-content" id="work-tab">
+                <!-- Always Visible Quick Intro -->
+                <div class="sidebar-section">
+                    <div class="quick-intro">
+                        <p>You and I have an opportunity to team up to create these projects together. I can also be hired for full-time work as a professional game designer or asset artist (2D and 3D).</p>
+                    </div>
+                </div>
+
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('work-collaboration')">
+                        <span>Wanna team up and work with me?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="work-collaboration">
+                        <p>We can team up where you, as a coder, handles programming while I handle art, design, audio, writing, marketing and publishing. We work as a global introvert dev team with no deadlines and revenue shared equally among core team members.</p>
+                        <p>After an initial working prototype, we can expand the team with more people (audio, graphics, writer, content dev, etc.) as the project will have something tangible to rally around.</p>
+                        <p>I'm passionate about AI technology and welcome AI coders, vibecoders, and AI artists of all kinds! Note that all designs here are handmade by me (not AI generated), apart from minor assistance with written story and titles.</p>
+                        <p>I care more about holistic structure than specific content, which creates great opportunities for collaborators to inject their own creativity.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('work-need')">
+                        <span>What skills are needed?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="work-need">
+                        <p><strong>Programming Skills:</strong> You should be able to showcase somehow that you have the coding skills needed so I can trust you to handle your part of the work.</p>
+                        <p><strong>AI Tools Welcome:</strong> Whether handmade code or using AI coding tools like Claude Code/Windsurf - I'm passionate about both handmade and AI tech alike! If it works, its valid. If its fun, its cool.</p>
+                        <p><strong>Project Interest:</strong> Tell me what project motivates you and why - money is a valid reason too, don't worry.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('work-business')">
+                        <span>How does the business work?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="work-business">
+                        <p><strong>Revenue:</strong> Shared equally among core team members. Monetization methods depend on the project itself.</p>
+                        <p><strong>Documentation:</strong> Upon request I'll develop any needed technical specifications or implementation roadmaps.</p>
+                        <p><strong>My Role:</strong> I provide all creative assets (audio, graphics, writing), metagame, UX, UI and mechanics related design directions, and handle marketing while you focus on coding. We can later bring in other artists, but getting a working program built first is top priority and it will make it easier for a later artist to grasp on how to format their assets without wasting their time and effort.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('work-hire')">
+                        <span>"Can I hire you directly?"</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="work-hire">
+                        <p>Yes! I'm available for full-time paid work as a game designer for remote work. I specialize in game mechanics, systems, metagame and content design.</p>
+                        <ul class="sidebar-links">
+                            <li>
+                                <a href="hire_me/hire_me.html" target="_blank">
+                                    🧾 View Resume / CV
+                                    <div class="link-desc">Detailed info on what I can work on and rates</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://artistree.io/request/reactorcore" target="_blank">
+                                    🎨 Commission Art
+                                    <div class="link-desc">Custom pixel art and tactical weapon voxel models</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('work-commitment')">
+                        <span>Work style and commitment</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="work-commitment">
+                        <p><strong>Remote & Flexible:</strong> Work at your own pace without pressure of timezones or deadlines.</p>
+                        <p><strong>Introvert-Friendly:</strong> Perfect for global introverts who get work done efficiently.</p>
+                        <p><strong>Loyalty:</strong> I'm loyal - if you'll have my back, I'll have yours. A motivated team can make great things happen quickly with a good plan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connect Tab Content -->
+            <div class="tab-content" id="connect-tab">
+                <!-- Always Visible Quick Intro -->
+                <div class="sidebar-section">
+                    <div class="quick-intro">
+                        <p>I'm available through various platforms for updates, community interaction, and direct contact.</p>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Accordion -->
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('connect-quick')">
+                        <span>Contact Channels</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="connect-quick">
+                        <ul class="sidebar-links">
+                            <li>
+                                <a href="mailto:reactorcoregames@gmail.com">
+                                    📧 Direct Email (fastest)
+                                    <div class="link-desc">reactorcoregames@gmail.com</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/UdRavGhj47" target="_blank">
+                                    💬 Join The RCG Discord
+                                    <div class="link-desc">Community hub for discussions</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://patreon.com/ReactorcoreGames" target="_blank">
+                                    💡 Become a Patron / Devblog (Free)
+                                    <div class="link-desc">Exclusive content, early access, articles</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.buymeacoffee.com/reactorcoregames" target="_blank">
+                                    🍊 Buy Me An Orange
+                                    <div class="link-desc">One-time donation to help me keep going</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Released Works Accordion -->
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('connect-works')">
+                        <span>My Released Works</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="connect-works">
+                        <ul class="sidebar-links">
+                            <li>
+                                <a href="https://reactorcore.itch.io/" target="_blank">
+                                    🎮 Releases on Itch.io
+                                    <div class="link-desc">Games, software, Doom mods, experiments</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.moddb.com/members/reactorcore" target="_blank">
+                                    🧰 ModDB/IndieDB Profile
+                                    <div class="link-desc">Various game mods, addons and files I've published</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.deviantart.com/reactorcore3/" target="_blank">
+                                    🎨 Deviant Art Gallery
+                                    <div class="link-desc">Pixel art, voxel models, AI experiments</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://rebrickable.com/users/Reactorcore/" target="_blank">
+                                    🧱 LEGO Mechs PDFs
+                                    <div class="link-desc">Custom tactical combat mecha builds</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://assetstore.unity.com/publishers/3412" target="_blank">
+                                    🧩 Unity Assets
+                                    <div class="link-desc">Professional game dev asset packs</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Social Media Accordion -->
+                <div class="accordion-section">
+                    <button class="accordion-header" onclick="toggleAccordion('connect-social')">
+                        <span>My Social Media Channels</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="connect-social">
+                        <ul class="sidebar-links">
+                            <li>
+                                <a href="https://x.com/ReactorcoreDev" target="_blank">
+                                    🐦 Follow on X
+                                    <div class="link-desc">@ReactorcoreDev - Development updates</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://bsky.app/profile/reactorcoregames.bsky.social" target="_blank">
+                                    🦋 Follow on Bluesky
+                                    <div class="link-desc">Same content as X, but on Bluesky</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCP3mctF-V1aq7HVmBE9KZ3A" target="_blank">
+                                    ▶️ YouTube Channel
+                                    <div class="link-desc">Videos and audio content</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linktr.ee/reactorcore" target="_blank">
+                                    🔗 Complete Link Collection
+                                    <div class="link-desc">Everything I've made so far</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://linktr.ee/reactorcore" target="_blank">🔗 Everything</a>
+            <a href="https://reactorcore.itch.io/" target="_blank">🎮 Releases</a>
+            <a href="http://patreon.com/ReactorcoreGames" target="_blank">💡 Devblog</a>
+        </div>
+        <p>Reactorcore Games - <span id="currentYear"></span></p>
+        <p>I do a bit of everything! Games, software, automation tools, Doom mods, game assets, pixel art, 3D models, LEGO mecha build instructions, random generators, AI projects, experiments, and more to come! 🚀</p>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Header scroll behavior
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const sidebar = document.getElementById('sidebar');
+            
+            // Only apply hide/show effect if sidebar is not open
+            if (!sidebar.classList.contains('open')) {
+                if (scrollTop > lastScrollTop && scrollTop > 60) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Sidebar toggle functionality
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const contentArea = document.getElementById('contentArea');
+            
+            sidebar.classList.toggle('open');
+            contentArea.classList.toggle('sidebar-open');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !sidebarToggle.contains(event.target) && 
+                sidebar.classList.contains('open')) {
+                toggleSidebar();
+            }
+        });
+
+        // Tab switching functionality
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            const selectedTab = document.getElementById(tabName + '-tab');
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+            
+            // Activate selected tab button
+            const selectedButton = document.querySelector(`[onclick*="${tabName}"]`);
+            if (selectedButton) {
+                selectedButton.classList.add('active');
+            }
+        }
+
+        // Accordion toggle functionality
+        function toggleAccordion(accordionId) {
+            const content = document.getElementById(accordionId);
+            const header = content.previousElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            
+            if (content.classList.contains('active')) {
+                // Close accordion
+                content.classList.remove('active');
+                icon.textContent = '+';
+                header.classList.remove('active');
+            } else {
+                // Open accordion
+                content.classList.add('active');
+                icon.textContent = '−';
+                header.classList.add('active');
+                
+                // Auto-scroll the opened accordion into view within the sidebar
+                setTimeout(() => {
+                    header.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100); // Small delay to ensure accordion is fully opened
+            }
+        }
+    </script>
+</body>
+</html>

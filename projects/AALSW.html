@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactical Arsenal Command: Strategic Squad Combat</title>
+    
+    <!-- IMAGE REQUIREMENTS:
+    aalsw_1_title.jpg - Tactical squad in combat formation with physics effects and military vehicles
+    aalsw_2_vignette.jpg - Dynamic combat scene showing projectiles, explosions, and realistic physics interactions
+    aalsw_3_feature.jpg - Close-up of physics-based tactical combat with destructible environment details
+    aalsw_4_boxart.jpg - Professional tactical warfare game cover with squad silhouettes (2:3 ratio)
+    aalsw_5_story.jpg - Zoomed out overworld view of galactic civilization with space colonies and starships (16:9 ratio)
+    -->
+    
+    <style>
+        :root {
+            /* Primary - Military Green */
+            --primary-dark: #1a2e0a;
+            --primary-base: #4a5d23;
+            --primary-light: #5c7233;
+            --primary-accent: #3d4f1c;
+            
+            /* Secondary - Steel Metallic */
+            --steel-dark: #374151;
+            --steel-base: #6b7280;
+            --steel-light: #9ca3af;
+            --steel-bright: #d1d5db;
+            
+            /* Tertiary - Dark Red Accents */
+            --red-dark: #450a0a;
+            --red-base: #7c2d12;
+            --red-light: #991b1b;
+            
+            /* Background & Surfaces */
+            --background: #0f1419;
+            --surface-dark: #1c2b16;
+            --surface-base: #243018;
+            --surface-light: #2d3b21;
+            
+            /* Text Colors */
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --text-muted: #9ca3af;
+            
+            /* Borders & Shadows */
+            --border-primary: var(--steel-base);
+            --shadow-primary: rgba(74, 93, 35, 0.3);
+            --shadow-steel: rgba(107, 114, 128, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: var(--surface-dark);
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--steel-base);
+            font-size: 0.85rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            opacity: 1;
+        }
+
+        .patreon-link a {
+            color: var(--steel-light);
+            text-decoration: none;
+        }
+
+        /* Title Section */
+        .hero-section {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--surface-dark) 100%);
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Images/aalsw_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 46, 10, 0.8) 0%, rgba(28, 43, 22, 0.6) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            text-shadow: 
+                0 0 20px var(--primary-base),
+                0 0 40px var(--primary-light),
+                2px 2px 4px rgba(0,0,0,0.8);
+            animation: tacticalGlow 3s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--steel-light);
+            text-shadow: 0 0 10px var(--steel-base), 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        @keyframes tacticalGlow {
+            0% {
+                text-shadow: 
+                    0 0 20px var(--primary-base),
+                    0 0 40px var(--primary-light),
+                    2px 2px 4px rgba(0,0,0,0.8);
+            }
+            100% {
+                text-shadow: 
+                    0 0 30px var(--primary-light),
+                    0 0 60px var(--primary-base),
+                    0 0 80px rgba(74, 93, 35, 0.5),
+                    2px 2px 4px rgba(0,0,0,0.8);
+            }
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--text-primary);
+            text-shadow: 
+                0 0 15px var(--primary-base),
+                0 0 25px var(--primary-light);
+            animation: tacticalGlow 3s ease-in-out infinite alternate;
+        }
+
+        /* Card Layouts */
+        .card-grid {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card-grid.three-col {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card-grid.single-col {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            background: linear-gradient(135deg, var(--surface-base) 0%, var(--surface-light) 100%);
+            border: 2px solid var(--steel-base);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px var(--shadow-primary);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--primary-light);
+            box-shadow: 0 12px 48px var(--shadow-primary);
+            transform: translateY(-4px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-base), var(--steel-base), var(--red-base));
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-content {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .card-content strong {
+            color: var(--steel-light);
+        }
+
+        /* Game Overview Section */
+        .overview-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.8;
+        }
+
+        /* Controls Section */
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .control-item {
+            background: var(--surface-base);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--red-base);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .control-key {
+            font-weight: 600;
+            color: var(--steel-light);
+            font-family: monospace;
+            background: var(--primary-dark);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .control-desc {
+            color: var(--text-secondary);
+            flex: 1;
+            margin-left: 1rem;
+        }
+
+        /* Image Sections */
+        .image-section {
+            position: relative;
+            margin: 4rem 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 64px rgba(0,0,0,0.4);
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem;
+        }
+
+        .image-quote {
+            background: rgba(28, 43, 22, 0.9);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-base);
+            color: var(--text-primary);
+            font-style: italic;
+            font-size: 1.1rem;
+            max-width: 500px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--surface-dark) 0%, var(--surface-base) 100%);
+            border: 2px solid var(--steel-base);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 12px 48px var(--shadow-steel);
+        }
+
+        .feature-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px var(--primary-base);
+        }
+
+        .feature-content {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .feature-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* Box Art Section */
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--surface-dark) 0%, var(--primary-dark) 100%);
+            border-radius: 20px;
+            border: 2px solid var(--steel-base);
+        }
+
+        .boxart-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+            border: 3px solid var(--steel-base);
+        }
+
+        .boxart-content {
+            color: var(--text-secondary);
+        }
+
+        .boxart-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px var(--primary-base);
+        }
+
+        .boxart-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 2px solid var(--steel-base);
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--steel-light);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .card-grid.three-col {
+                grid-template-columns: 1fr;
+            }
+
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+        }
+
+        /* Utility Classes */
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--red-light);
+            font-weight: 600;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Patreon Link -->
+    <div class="patreon-link">
+        <a href="https://www.patreon.com/ReactorcoreGames" target="_blank">Reactorcore's Personal Game Design Project</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="main-title">Tactical Arsenal Command</h1>
+            <p class="subtitle">Strategic Squad Combat</p>
+        </div>
+    </section>
+
+    <!-- Game Overview -->
+    <section class="section">
+        <div class="container">
+            <p class="overview-text">
+                Command up to 7 tactical units through physics-driven 2D combat scenarios where every projectile, explosion, and environmental interaction follows realistic physics laws. <strong>AALSW</strong> combines deep tactical squad management with turn-based strategic campaigns, featuring infinite customization through modular loadout systems and brand-based equipment doctrines.
+                <br><br>
+                Experience the evolution of tactical warfare gaming through procedurally generated campaigns, destructible environments, and a persistent galactic conquest metagame where your strategic decisions shape entire star systems.
+            </p>
+
+            <div class="card-grid three-col">
+                <div class="card">
+                    <div class="card-title"><span class="emoji">🎯</span>Target Audience</div>
+                    <div class="card-content">
+                        <strong>Strategy & Tactics Enthusiasts</strong> who appreciate deep customization, realistic physics simulation, and complex decision-making. Appeals to players who enjoy games like <strong>Cortex Command, Advance Wars,</strong> and <strong>XCOM</strong> but crave more tactical control and physics-based combat interactions.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="emoji">⚡</span>Game's Purpose</div>
+                    <div class="card-content">
+                        Fulfills the human need for <strong>mastery and competence</strong> through tactical skill development, <strong>creative expression</strong> via infinite customization options, and <strong>strategic planning</strong> satisfaction through long-term campaign progression and galactic conquest.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="emoji">🔧</span>Core Concept</div>
+                    <div class="card-content">
+                        Physics-driven tactical combat where <strong>every decision has realistic consequences</strong>. Players command squads through authentic military scenarios using customizable equipment, realistic ballistics, and destructible environments that respond to real physics laws.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Image Section -->
+    <section class="container">
+        <div class="image-section">
+            <img src="Images/aalsw_5_story.jpg" alt="Galactic Civilization Overview">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    "In the golden age of galactic civilization, tactical agents maintain peace across countless star systems, confronting threats that could destabilize the harmony achieved after the great wars."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lore & Story -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">📖 Lore & Story</h2>
+            
+            <div class="overview-text">
+                <strong>The Golden Age of Galactic Civilization</strong> - AALSW takes place in humanity's greatest era, where advanced technology, biological immortality, and peaceful cooperation have created a thriving multi-species society spanning countless star systems.
+            </div>
+
+            <div class="card-grid single-col">
+                <div class="card">
+                    <div class="card-title"><span class="emoji">🌌</span>The Setting</div>
+                    <div class="card-content">
+                        <strong>A Post-War Utopia:</strong> Centuries after the devastating Eradication Wars that nearly destroyed civilization, humanity and allied alien species have evolved into the Homo Mugen—an advanced, immortal, and highly adaptable species capable of biological and technological enhancement.<br><br>
+                        
+                        <strong>Galactic Administration:</strong> The combined galactic race operates through a massive administration agency that coordinates peaceful expansion, resource management, and threat response across multiple galaxies. Technology has eliminated scarcity, crime, and most forms of conflict.<br><br>
+                        
+                        <strong>Advanced Military Technology:</strong> AAL (Alteisen Arsenal Laboratories) provides standardized, physics-based military equipment to all factions. Their technology emphasizes realistic ballistics, modular customization, and sustainable tactical operations.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="emoji">⚔️</span>The Conflict</div>
+                    <div class="card-content">
+                        <strong>Emerging Threats:</strong> Despite achieving galactic peace, dangerous entities still threaten the stability of civilization. Space monsters, rogue AI systems, dimensional anomalies, and remnant hostile forces require tactical intervention.<br><br>
+                        
+                        <strong>Tactical Response Teams:</strong> Specialized agents equipped with customizable loadouts and mobile command bases (bunkerships) respond to these threats through precision operations, strategic infiltration, and physics-based combat.<br><br>
+                        
+                        <strong>Brand-Based Military Doctrine:</strong> Different tactical philosophies and equipment manufacturers provide varied approaches to problem-solving, from direct assault to stealth operations to technological superiority.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="emoji">🎯</span>Your Role</div>
+                    <div class="card-content">
+                        <strong>Elite Tactical Agent:</strong> You command specialized response teams for the galactic administration, tasked with maintaining peace and security across star systems. Each mission contributes to the greater goal of galactic stability.<br><br>
+                        
+                        <strong>Campaign Liberation:</strong> Your tactical successes directly impact galactic conquest progression, clearing threats from entire regions and contributing to the administration's peaceful expansion efforts.<br><br>
+                        
+                        <strong>Strategic Impact:</strong> Success advances civilization's reach to new galaxies, while mission failures create delays that require other agents to compensate—but never result in permanent setbacks to the greater cause.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controls & Interface -->
+    <section class="section" style="background: var(--surface-dark);">
+        <div class="container">
+            <h2 class="section-title">🎮 Controls & Interface</h2>
+            
+            <div class="card mb-2">
+                <div class="card-content">
+                    <p>AALSW features a <strong>hybrid control system</strong> that seamlessly blends direct unit control with tactical squad command. Players can directly control any squad member like an FPS character while issuing strategic commands to AI-controlled teammates.</p>
+                </div>
+            </div>
+
+            <div class="controls-grid">
+                <div class="control-item">
+                    <div class="control-key">A/D</div>
+                    <div class="control-desc">Move Left/Right or Direction Swap</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">W</div>
+                    <div class="control-desc">Jump/Jetpack/Up Movement</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">S</div>
+                    <div class="control-desc">Crouch/Drop/Down Movement</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Mouse</div>
+                    <div class="control-desc">Aim Direction & Camera Control</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">M1</div>
+                    <div class="control-desc">Primary Fire/Activate Item</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">M2</div>
+                    <div class="control-desc">Tactical Pie Menu/Inventory</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Z/C</div>
+                    <div class="control-desc">Previous/Next Squad Member</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">X</div>
+                    <div class="control-desc">Buy Menu/Mission Menu</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">F</div>
+                    <div class="control-desc">Quick Pickup/Loot</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">G</div>
+                    <div class="control-desc">Drop/Throw Item</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">E</div>
+                    <div class="control-desc">Use/Interact/Context Action</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">1-9</div>
+                    <div class="control-desc">Hotkey Quick Equipment Slots</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>Camera System:</strong> Mouse aiming shifts camera position (Soldat-style) for enhanced tactical awareness. Characters can duck to half-size, go prone (rotate 90°), and perform advanced mobility maneuvers through destructible tile-based environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vignette Image Section -->
+    <section class="container">
+        <div class="image-section">
+            <img src="Images/aalsw_2_vignette.jpg" alt="AALSW Combat Vignette">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    "Command your squad through physics-driven tactical combat where every shot, explosion, and movement follows realistic laws of physics—your tactical decisions have tangible, realistic consequences."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Layers -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🏗️ Game Architecture</h2>
+            
+            <div class="card-grid single-col">
+                <div class="card">
+                    <div class="card-title"><span class="emoji">⚔️</span>Moment-to-Moment Gameplay</div>
+                    <div class="card-content">
+                        <strong>Physics-driven 2D tactical combat</strong> where players control up to 7 units (4 infantry + 1 command unit + 2 vehicles) in destructible environments. Every projectile, explosion, and interaction follows realistic physics. Characters can swap equipment, dual-wield weapons, use advanced mobility (ducking, prone, jetpacks), and interact with semi-destructible tile-based terrain. Ammunition is limited but resupplied through tactical logistics.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="emoji">🗺️</span>Campaign Layer (Low Metagame)</div>
+                    <div class="card-content">
+                        <strong>Turn-based overworld tactics</strong> on square grid maps reminiscent of Advance Wars, but with enhanced stealth, resource management, and base building. Players move units first, then choose context-sensitive actions. Build bunkers, manage bunkerships (mobile command bases), capture strategic locations, and eliminate enemy faction cores through direct assault, infiltration, or systematic attrition campaigns.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="emoji">🌌</span>Galactic Conquest (High Metagame)</div>
+                    <div class="card-content">
+                        <strong>Persistent universe progression</strong> where completed campaigns contribute to galactic liberation as an agent of a massive administration agency. Each victory advances galaxy-wide conquest, while failures create delays but never permanent setbacks. Manage farming overworlds for resource production, choose priority threat responses, and shape the strategic direction of entire star systems through your tactical successes.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="emoji">🎯</span>Practical Game Flow</div>
+                    <div class="card-content">
+                        Sessions flow from <strong>loadout preparation</strong> in the tactical garage (selecting brand licenses, customizing squads, designing bunkerships) to <strong>mission briefings</strong> on star maps, then into <strong>tactical execution</strong> through physics-based combat or stealth infiltration. Players can pause at natural stopping points or continue through connected campaign chains, with automated saves preserving progress between sessions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modes -->
+    <section class="section" style="background: var(--surface-dark);">
+        <div class="container">
+            <h2 class="section-title">🎮 Game Modes</h2>
+            
+            <div class="card-grid three-col">
+                <div class="card">
+                    <div class="card-title"><span class="emoji">⭐</span>Campaign Mode</div>
+                    <div class="card-content">
+                        <strong>Long-term strategic progression</strong> through interconnected overworld campaigns. Build persistent bases, manage resources across multiple star systems, and contribute to galactic liberation efforts. Sessions can last several hours with deep strategic planning and tactical execution.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="emoji">⚡</span>Skirmish Mode</div>
+                    <div class="card-content">
+                        <strong>Quick tactical battles</strong> for 1-10 minute sessions. Single combat scenarios, squad vs squad eliminations, or focused assault missions without the overworld layer. Perfect for testing loadouts, learning mechanics, or quick tactical satisfaction.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="emoji">🧩</span>Challenge Mode</div>
+                    <div class="card-content">
+                        <strong>Physics puzzle scenarios</strong> and specialized tactical challenges. Break-the-targets courses, stealth infiltration tests, resource management challenges, and creative destruction scenarios that push the physics engine to its limits.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Features & Mechanics -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🔧 Features & Mechanics</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">🎯 Physics-Based Combat System</h3>
+                    <div class="feature-content">
+                        <p><strong>Every interaction follows realistic physics laws.</strong> Projectiles have authentic ballistics, explosions create realistic shockwaves and debris, and environmental destruction affects tactical positioning. Characters can duck to half-size, go prone horizontally, and use physics-based movement through destructible tile-based terrain (8x8 or 16x16 tiles).</p>
+                        
+                        <p>Ammunition has weight and inertia, cover can be destroyed strategically, and tactical decisions create cascading physical consequences. The semi-destructible world responds authentically to explosions, projectile impacts, and environmental manipulation.</p>
+                        
+                        <!-- SVG Diagram: Physics System -->
+                        <svg viewBox="0 0 400 200" style="width: 100%; height: 200px; background: var(--surface-dark); border-radius: 8px; margin: 1rem 0;">
+                            <defs>
+                                <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="var(--steel-light)" />
+                                </marker>
+                            </defs>
+                            
+                            <!-- Trajectory Arc -->
+                            <path d="M50 150 Q200 50 350 130" stroke="var(--red-base)" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+                            <circle cx="50" cy="150" r="4" fill="var(--primary-light)"/>
+                            <circle cx="350" cy="130" r="6" fill="var(--red-light)"/>
+                            
+                            <!-- Debris Pattern -->
+                            <circle cx="340" cy="120" r="2" fill="var(--steel-base)"/>
+                            <circle cx="355" cy="125" r="1.5" fill="var(--steel-base)"/>
+                            <circle cx="345" cy="140" r="1" fill="var(--steel-base)"/>
+                            
+                            <!-- Force Vectors -->
+                            <line x1="200" y1="50" x2="180" y2="30" stroke="var(--steel-light)" stroke-width="2" marker-end="url(#arrow)"/>
+                            <line x1="200" y1="50" x2="220" y2="30" stroke="var(--steel-light)" stroke-width="2" marker-end="url(#arrow)"/>
+                            
+                            <!-- Labels -->
+                            <text x="200" y="20" text-anchor="middle" fill="var(--text-secondary)" font-size="12">Realistic Ballistics</text>
+                            <text x="350" y="115" text-anchor="middle" fill="var(--text-secondary)" font-size="12">Impact & Debris</text>
+                            <text x="50" y="170" text-anchor="middle" fill="var(--text-secondary)" font-size="12">Unit Position</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">🛠️ Modular Squad Customization</h3>
+                    <div class="feature-content">
+                        <p><strong>Infinite tactical possibilities through modular design.</strong> Characters can swap, loot, drop, and throw any equipment they hold. Dual-wield weapons, equip multiple gadgets, and customize loadouts for specific mission requirements. The tactical garage system allows pre-mission planning and squad template creation.</p>
+                        
+                        <p>Equipment includes weapons (Call of Duty-style weapon groups), wearable armor, utility gadgets, special abilities, and mobility enhancements. Each piece of gear affects gameplay mechanics, weight distribution, and tactical options available during combat.</p>
+                        
+                        <!-- SVG Diagram: Customization Tree -->
+                        <svg viewBox="0 0 400 180" style="width: 100%; height: 180px; background: var(--surface-dark); border-radius: 8px; margin: 1rem 0;">
+                            <!-- Central Unit -->
+                            <rect x="175" y="80" width="50" height="40" rx="5" fill="var(--primary-base)" stroke="var(--steel-base)" stroke-width="2"/>
+                            <text x="200" y="105" text-anchor="middle" fill="var(--text-primary)" font-size="12">UNIT</text>
+                            
+                            <!-- Equipment Categories -->
+                            <rect x="50" y="20" width="60" height="25" rx="3" fill="var(--red-base)" stroke="var(--steel-base)"/>
+                            <text x="80" y="37" text-anchor="middle" fill="var(--text-primary)" font-size="10">Weapons</text>
+                            
+                            <rect x="320" y="20" width="60" height="25" rx="3" fill="var(--red-base)" stroke="var(--steel-base)"/>
+                            <text x="350" y="37" text-anchor="middle" fill="var(--text-primary)" font-size="10">Armor</text>
+                            
+                            <rect x="50" y="140" width="60" height="25" rx="3" fill="var(--red-base)" stroke="var(--steel-base)"/>
+                            <text x="80" y="157" text-anchor="middle" fill="var(--text-primary)" font-size="10">Gadgets</text>
+                            
+                            <rect x="320" y="140" width="60" height="25" rx="3" fill="var(--red-base)" stroke="var(--steel-base)"/>
+                            <text x="350" y="157" text-anchor="middle" fill="var(--text-primary)" font-size="10">Abilities</text>
+                            
+                            <!-- Connection Lines -->
+                            <line x1="110" y1="33" x2="175" y2="90" stroke="var(--steel-light)" stroke-width="2"/>
+                            <line x1="320" y1="33" x2="225" y2="90" stroke="var(--steel-light)" stroke-width="2"/>
+                            <line x1="110" y1="153" x2="175" y2="120" stroke="var(--steel-light)" stroke-width="2"/>
+                            <line x1="320" y1="153" x2="225" y2="120" stroke="var(--steel-light)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">🏷️ Brand License System</h3>
+                    <div class="feature-content">
+                        <p><strong>Choose tactical doctrines and equipment philosophies.</strong> Before each campaign, select 1-5 equipment brands (similar to Cortex Command factions) that define your tactical options. Each brand offers unique weapons, vehicles, systems, and tactical approaches with distinct gameplay styles.</p>
+                        
+                        <p>Fewer brands selected means better discounts and operational benefits, while omni-pass access provides maximum flexibility at higher costs and potential reliability issues. Apron's military contractor service occasionally faces supply disruptions, forcing tactical adaptation.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">🏭 Bunkership Design System</h3>
+                    <div class="feature-content">
+                        <p><strong>Design and build mobile command bases.</strong> Bunkerships serve as tactical headquarters with modular internal systems: airlocks, weapons, hangars, barracks, resource silos, manufacturing facilities, sensors, and defensive systems. Each module affects operational capabilities and tactical options.</p>
+                        
+                        <p>Design philosophy varies by AI archetype opponent (based on 7 sins/virtues), creating distinct visual and functional differences. Bunkerships can be captured, stolen, or destroyed, adding strategic depth to overworld campaigns.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">🗺️ Turn-Based Overworld Tactics</h3>
+                    <div class="feature-content">
+                        <p><strong>Strategic movement and positioning on grid-based maps.</strong> Move units first, then choose context-sensitive actions based on discovered circumstances. Features include fog of war systems, stealth mechanics, electronic warfare (ECM/ECCM), fake installations, and multi-faction battles.</p>
+                        
+                        <p>Advanced mechanics include prisoner capture, resource extraction, weather effects, terraforming, superweapons, and kaiju-scale space monsters. The strategic layer seamlessly integrates with tactical combat through direct engagement triggers.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">🏗️ Resource & Industry Management</h3>
+                    <div class="feature-content">
+                        <p><strong>Sustainable tactical operations through resource mastery.</strong> Manage diverse resource types: standard materials (wood, metal, rare earth), exotic crystals (bavarium, tiberium), and ultimate fuels (uranium, antimatter). Resources exist in renewable and non-renewable variants.</p>
+                        
+                        <p>Establish farming overworlds that operate like relaxed 4X games, providing steady supply chains to support tactical operations. Balance exploitation with restoration (Terra Nil-style environmental healing) for long-term sustainability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlight Image -->
+    <section class="container">
+        <div class="image-section">
+            <img src="Images/aalsw_3_feature.jpg" alt="Physics-Based Combat Feature">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    "Every projectile follows authentic ballistics, every explosion creates realistic debris patterns, and every tactical decision generates tangible physical consequences in the destructible environment."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Box Art Section -->
+    <section class="container">
+        <div class="boxart-section">
+            <div>
+                <img src="Images/aalsw_4_boxart.jpg" alt="AALSW Box Art" class="boxart-image">
+            </div>
+            <div class="boxart-content">
+                <h3 class="boxart-title">Tactical Arsenal Command: Strategic Squad Combat</h3>
+                <p class="boxart-description">
+                    <strong>Master the art of tactical warfare</strong> where physics meets strategy. Command customizable squads through destructible environments using realistic combat mechanics and infinite equipment combinations.
+                    <br><br>
+                    <span class="highlight">Campaign Mode:</span> Deep strategic progression through galactic liberation campaigns with persistent base building and resource management.
+                    <br><br>
+                    <span class="highlight">Physics-Driven Combat:</span> Every shot, explosion, and movement follows authentic physics laws with full environmental destruction.
+                    <br><br>
+                    <span class="highlight">Infinite Customization:</span> Modular equipment system with brand-based tactical doctrines and procedurally generated challenges.
+                    <br><br>
+                    Experience tactical gaming where every decision matters and every battle tells a unique physics-driven story.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank">https://linktr.ee/reactorcore</a></p>
+            <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank">https://reactorcore.itch.io/</a></p>
+            <p style="margin-top: 1rem; color: var(--steel-base);">Reactorcore Games - 2025</p>
+        </div>
+    </footer>
+</body>
+</html>

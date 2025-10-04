@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Superweapon: Physics Combat Devastation</title>
+    
+    <!-- Image References:
+    AALSuperweapon_1_title.jpg - Futuristic warrior in an abandoned alien weapons laboratory with glowing technology
+    AALSuperweapon_2_vignette.jpg - Intense physics-driven combat scene with explosions and weapon debris
+    AALSuperweapon_3_feature.jpg - Close-up of modular firing frame weapons adapting and transforming
+    AALSuperweapon_4_boxart.jpg - Epic poster showing the immortal agent against a massive alien laboratory complex
+    AALSuperweapon_5_story.jpg - Zoomed out overworld view of the greater setting the game takes place in
+    -->
+    
+    <style>
+        :root {
+            --background-color: #0a0e1a;
+            --container-bg: #1a2332;
+            --border-color: #ff6b35;
+            --text-color: #e8ecf2;
+            --accent-color: #ff6b35;
+            --secondary-accent: #4ecdc4;
+            --title-glow: #ff6b35;
+            --card-shadow: rgba(255, 107, 53, 0.3);
+            --heading-color: #ffffff;
+            --subtext-color: #b8c4d1;
+            --dark-overlay: rgba(10, 14, 26, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #161f30 50%, var(--background-color) 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--container-bg);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            background: var(--border-color);
+            color: var(--background-color);
+        }
+
+        .hero-section {
+            position: relative;
+            height: 500px;
+            background: url('Images/AALSuperweapon_1_title.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--dark-overlay);
+        }
+
+        .title-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px var(--title-glow), 0 0 40px var(--title-glow), 0 4px 8px rgba(0,0,0,0.8);
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            color: var(--secondary-accent);
+            text-shadow: 0 0 15px var(--secondary-accent), 0 2px 4px rgba(0,0,0,0.8);
+            animation: breathingGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 20px var(--title-glow), 0 0 40px var(--title-glow), 0 4px 8px rgba(0,0,0,0.8); }
+            50% { text-shadow: 0 0 30px var(--title-glow), 0 0 60px var(--title-glow), 0 4px 8px rgba(0,0,0,0.8); }
+        }
+
+        @keyframes breathingGlow {
+            0%, 100% { text-shadow: 0 0 15px var(--secondary-accent), 0 2px 4px rgba(0,0,0,0.8); }
+            50% { text-shadow: 0 0 25px var(--secondary-accent), 0 2px 4px rgba(0,0,0,0.8); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin: 3rem 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 15px var(--title-glow);
+            animation: colorShiftGlow 6s ease-in-out infinite;
+        }
+
+        @keyframes colorShiftGlow {
+            0%, 100% { text-shadow: 0 0 15px var(--title-glow); }
+            33% { text-shadow: 0 0 15px var(--secondary-accent); }
+            66% { text-shadow: 0 0 15px #9b59b6; }
+        }
+
+        .game-overview {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--card-shadow);
+            font-size: 1.1rem;
+        }
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-accent);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .controls-section {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(26, 35, 50, 0.9);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        .game-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .layer-card {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .layer-title {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .feature-title {
+            font-size: 1.6rem;
+            color: var(--secondary-accent);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .svg-diagram {
+            margin: 1.5rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .final-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 2rem;
+            margin: 3rem 0;
+            align-items: center;
+        }
+
+        .boxart-container {
+            text-align: center;
+        }
+
+        .boxart {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 12px 48px var(--card-shadow);
+        }
+
+        .description-card {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .final-title {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--container-bg);
+            border-top: 2px solid var(--border-color);
+            margin-top: 3rem;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .final-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .cards-row {
+                grid-template-columns: 1fr;
+            }
+            
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="title-container">
+            <h1 class="main-title">AAL Superweapon</h1>
+            <div class="subtitle">Physics Combat Devastation</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <div class="game-overview">
+                <p>An intense 2D action-platformer where you embody an immortal galactic agent wielding devastating physics-driven combat in a vast alien weapons laboratory. Experience true empowerment through unrestricted destruction, modular weapon systems, and infinitely replayable campaigns that break the mold of traditional single-player progression.</p>
+                
+                <p>Set in a mysterious planet-wide laboratory complex, this game delivers the ultimate power fantasy through satisfying physics interactions, explosive combat mechanics, and a revolutionary metagame structure that ensures every playthrough offers fresh chaos and discovery.</p>
+                
+                <p>Drawing inspiration from Soldat and Cryptark, AAL Superweapon transforms the classic 2D action formula into an abundance-based experience where limitations are replaced with endless tactical possibilities and destructive creativity.</p>
+            </div>
+        </section>
+
+        <div class="cards-row">
+            <div class="info-card">
+                <div class="card-title"><span class="emoji">🎯</span>Target Audience</div>
+                <p>Action game enthusiasts seeking true empowerment experiences, physics simulation fans, and players frustrated by artificial restrictions in traditional campaigns. Appeals to those who enjoy Soldat, Cortex Command, and Super Metroid's freedom of movement and weapon variety.</p>
+            </div>
+            <div class="info-card">
+                <div class="card-title"><span class="emoji">💪</span>Game's Purpose</div>
+                <p>Fulfills the fundamental human need for genuine empowerment and mastery. Provides a safe space for experiencing overwhelming power without meaninglessness, offering stress relief through controlled destruction and creative expression through tactical chaos.</p>
+            </div>
+            <div class="info-card">
+                <div class="card-title"><span class="emoji">⚡</span>Core Concept</div>
+                <p>You ARE the superweapon. Through physics-driven combat, modular weapon systems, and environmental destruction, players experience authentic power fantasy while engaging with infinitely varied scenarios that respect their time and intelligence.</p>
+            </div>
+        </div>
+
+        <div class="vignette-section">
+            <img src="Images/AALSuperweapon_5_story.jpg" alt="Overworld view of alien laboratory complex" class="vignette-image">
+        </div>
+
+        <section class="section">
+            <h2>Lore & Story</h2>
+            <div class="controls-section">
+                <p><strong>The Setting:</strong> Deep in an uncharted galaxy lies a mysterious planet-wide laboratory complex, built by a long-vanished alien civilization. These vast technological ruins house weapons research facilities of unimaginable scale and power.<br>
+                <br>
+                <strong>Your Mission:</strong> You are an immortal galactic agent of the united Milky Way civilization, genetically enhanced and equipped with the most advanced technology available. Your species has achieved biological immortality, abundant resources, and peaceful coexistence across countless star systems.<br>
+                <br>
+                <strong>The Crisis:</strong> Space monsters - ancient horrors from the deep universe - threaten to annihilate all civilized life. Conventional weapons cannot stop them. Only the alien superweapons hidden within this laboratory complex hold the key to galactic salvation.<br>
+                <br>
+                <strong>What's At Stake:</strong> Every moment you spend navigating these dangerous halls brings the monster fleets closer to inhabited worlds. Millions of lives across dozens of species depend on your success in retrieving the technology needed to turn the tide of this cosmic war.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Controls & Interface</h2>
+            <div class="controls-section">
+                <p><strong>Movement:</strong> Full freedom with speedy locomotion, wall-climbing, infinite flight, and omni-directional dashing. Your immortal agent moves like liquid lightning through the environment.</p>
+                
+                <p><strong>Combat Systems:</strong> Choose between two weapon paradigms - simultaneous quad-wielding with individual hotkeys for each weapon slot, or cycling through a 20-weapon inventory stack with instant switching and disposal mechanics.</p>
+                
+                <p><strong>Special Abilities:</strong> On-demand slow-motion control for tactical precision, nuclear revenge blast upon defeat, and unlimited environmental destruction capabilities. Every interaction emphasizes your overwhelming advantage.</p>
+                
+                <p><strong>Interface Philosophy:</strong> Minimal UI that never obscures the action. All information is conveyed through visual feedback, particle effects, and intuitive physics responses rather than cluttered status displays.</p>
+            </div>
+        </section>
+
+        <div class="vignette-section">
+            <img src="Images/AALSuperweapon_2_vignette.jpg" alt="Intense physics combat" class="vignette-image">
+            <div class="vignette-quote">
+                "Every explosion tells a story, every collision breeds opportunity, and every moment pulses with the raw satisfaction of unrestrained power meeting infinite possibility."
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>Game Layers</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <div class="layer-title"><span class="emoji">⚔️</span>Moment-to-Moment Gameplay</div>
+                    <p>Pure physics-driven combat where every action creates cascading reactions. Weapons provide knockback and recoil, explosions chain through environments, and ragdoll enemies respond realistically to your devastating arsenal. Environmental hazards become tools, debris becomes ammunition, and momentum becomes your greatest ally in creating spectacular destruction sequences.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <div class="layer-title"><span class="emoji">🗺️</span>Campaign Structure</div>
+                    <p>Hand-crafted levels arranged in randomized sequences with dynamic content distribution. Each campaign run features the same high-quality environments but with randomized weapon spawns, enemy compositions, and environmental hazards. This creates familiar yet unpredictable experiences that maximize the value of every created asset.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <div class="layer-title"><span class="emoji">🌌</span>Persistent Metagame</div>
+                    <p>Your actions across campaigns build a persistent legacy of destruction and discovery. Completed runs unlock new content for future randomization pools, while detailed replay systems let you revisit and share your most spectacular moments. The universe remembers your path of devastation and grows richer with each playthrough.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <div class="layer-title"><span class="emoji">🎮</span>Session Flow</div>
+                    <p>Launch directly into action - no tedious tutorials or forced progression gates. Each session begins with full power and escalates into greater chaos. Natural stopping points emerge organically through level completion, while the slow-motion ability lets you savor particularly spectacular moments before gracefully concluding your rampage.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-title"><span class="emoji">🔧</span>Modular Firing Frames</div>
+                    <p>Revolutionary weapon system built around universal "firing frames" - adaptable platforms that transform into any weapon configuration. These high-tech frameworks can fire any projectile type in any pattern, scale from handheld to vehicle-mounted, and accept unlimited attachments for infinite customization possibilities.</p>
+                    
+                    <div class="svg-diagram">
+                        <svg viewBox="0 0 480 240" style="width: 100%; height: 240px;">
+                            <defs>
+                                <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="30" y="90" width="110" height="60" fill="url(#frameGrad)" stroke="#fff" stroke-width="2" rx="5"/>
+                            <text x="85" y="126" fill="#fff" text-anchor="middle" font-size="14">Base Frame</text>
+                            <rect x="204" y="30" width="110" height="36" fill="#4ecdc4" stroke="#fff" stroke-width="1" rx="3"/>
+                            <text x="260" y="53" fill="#fff" text-anchor="middle" font-size="12">Rifle Config</text>
+                            <rect x="204" y="102" width="110" height="36" fill="#9b59b6" stroke="#fff" stroke-width="1" rx="3"/>
+                            <text x="260" y="125" fill="#fff" text-anchor="middle" font-size="12">Cannon Config</text>
+                            <rect x="204" y="174" width="110" height="36" fill="#e74c3c" stroke="#fff" stroke-width="1" rx="3"/>
+                            <text x="260" y="197" fill="#fff" text-anchor="middle" font-size="12">Launcher Config</text>
+                            <line x1="150" y1="108" x2="204" y2="48" stroke="#aff" stroke-width="1"/>
+                            <line x1="150" y1="120" x2="204" y2="120" stroke="#aff" stroke-width="1"/>
+                            <line x1="150" y1="132" x2="204" y2="192" stroke="#aff" stroke-width="1"/>
+                            <text x="350" y="48" fill="#4ecdc4" font-size="14">Instant</text>
+                            <text x="350" y="66" fill="#4ecdc4" font-size="14">Adaptation</text>
+                            <text x="350" y="125" fill="#9b59b6" font-size="14">Unlimited</text>
+                            <text x="350" y="143" fill="#9b59b6" font-size="14">Scaling</text>
+                            <text x="350" y="197" fill="#e74c3c" font-size="14">Infinite</text>
+                            <text x="350" y="215" fill="#e74c3c" font-size="14">Variety</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-title"><span class="emoji">🌪️</span>Physics-Driven Destruction</div>
+                    <p>Every object responds realistically to force and momentum. Explosions create authentic debris patterns, weapon recoil affects your movement, and environmental destruction persists throughout levels. The physics engine serves the fantasy - you're not fighting the simulation, you're conducting a symphony of controlled chaos.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-title"><span class="emoji">🎲</span>Dynamic Campaign Generation</div>
+                    <p>Hand-crafted levels recombined through intelligent randomization systems. Level order, weapon placement, enemy composition, and environmental hazards shuffle between playthroughs while maintaining narrative coherence and pacing. This multiplies content value exponentially while preserving design quality.</p>
+                    
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-title"><span class="emoji">🎨</span>Community Asset Integration</div>
+                    <p>Built to embrace the massive libraries of community-created pixel art through standardized asset pipelines. New sprites automatically gain physics properties, animation sequences, and gameplay behaviors, transforming the game into a collaborative celebration of pixel art creativity.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-title"><span class="emoji">💥</span>Authentic Power Fantasy</div>
+                    <p>Unlike games that merely claim to be power fantasies, every system reinforces your overwhelming capability. High damage tolerance, revenge mechanics, environmental supremacy, and infinite utility options ensure you always feel genuinely powerful rather than artificially restricted.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-title"><span class="emoji">⚙️</span>Expandable Content Architecture</div>
+                    <p>Every new asset exponentially increases gameplay possibilities. Adding a single weapon creates new tactical combinations across all levels, enemies, and scenarios. This architecture makes the game a living platform that grows richer with each content addition, ensuring long-term engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="vignette-section">
+            <img src="Images/AALSuperweapon_3_feature.jpg" alt="Modular firing frame weapons" class="vignette-image">
+            <div class="vignette-quote">
+                "Watch as universal firing frames reshape themselves in real-time, adapting from precision instruments to instruments of mass destruction at the speed of thought."
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>Game Modes</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <div class="layer-title"><span class="emoji">🚀</span>Campaign Mode</div>
+                    <p>The core experience featuring randomized level progression through the alien laboratory complex. Each campaign run offers 15-20 levels with dynamic content distribution, ensuring familiar navigation with constantly surprising encounters. Perfect for extended play sessions where you want to lose yourself in systematic destruction.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <div class="layer-title"><span class="emoji">⚡</span>Rampage Mode</div>
+                    <p>Quick-play sessions focusing on individual levels with maximum chaos parameters. All weapons unlocked, all enemies present, all environmental hazards active. Ideal for stress relief, experimentation, or showcasing the game's destruction potential in concentrated bursts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="final-section">
+                <div class="boxart-container">
+                    <img src="Images/AALSuperweapon_4_boxart.jpg" alt="AAL Superweapon Box Art" class="boxart">
+                </div>
+                <div class="description-card">
+                    <div class="final-title">AAL Superweapon: Physics Combat Devastation</div>
+                    <p>When the galaxy faces annihilation, only an immortal agent wielding impossible weapons can retrieve the technology needed for salvation. Traverse vast alien laboratories where physics bend to your will and destruction becomes art.</p>
+                    
+                    <p>Experience authentic empowerment through revolutionary modular weapon systems, realistic physics interactions, and infinitely replayable campaigns that respect your intelligence and time. This isn't just another action game - it's a statement about what power fantasy can truly mean.</p>
+                    
+                    <p>Break free from artificial limitations. Embrace abundance-based design. Become the superweapon the galaxy needs.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+</body>
+</html>
