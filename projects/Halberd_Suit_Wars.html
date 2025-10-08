@@ -1,0 +1,694 @@
+<!--
+Required Images:
+stellarconflict_1_title.jpg - Space battlefield with mecha silhouettes, debris fields, and distant colonies
+stellarconflict_2_vignette.jpg - Close-quarters mecha duel showcasing physics-based limb destruction
+stellarconflict_3_feature.jpg - Detailed modular armor system with light/medium/heavy variants per limb
+stellarconflict_4_boxart.jpg - Military recruitment poster style with imposing mecha silhouette
+stellarconflict_5_story.jpg - Zoomed out overworld view of solar system with colonies, space stations, and mecha forces
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halberd Suit Wars: Ragdoll Mecha Combat - Game Design Showcase</title>
+    <style>
+        :root {
+            --background-color: #0d1421;
+            --container-bg: #1a2332;
+            --card-bg: #243342;
+            --border-color: #4a7c59;
+            --text-color: #e8f4f8;
+            --accent-color: #ffa500;
+            --secondary-accent: #dc143c;
+            --title-glow: #ff4400;
+            --section-shadow: rgba(0, 0, 0, 0.6);
+            --federation-green: #2d5016;
+            --zeon-red: #8b0000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #162030 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated title effects */
+        @keyframes electricBuzz {
+            0%, 100% { 
+                text-shadow: 0 0 10px var(--title-glow), 0 0 20px var(--title-glow), 0 0 30px var(--accent-color);
+            }
+            25% { 
+                text-shadow: 0 0 15px var(--title-glow), 0 0 25px var(--title-glow), 0 0 35px var(--accent-color);
+            }
+            50% { 
+                text-shadow: 0 0 8px var(--title-glow), 0 0 18px var(--title-glow), 0 0 28px var(--accent-color);
+            }
+            75% { 
+                text-shadow: 0 0 12px var(--title-glow), 0 0 22px var(--title-glow), 0 0 32px var(--accent-color);
+            }
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(26, 35, 50, 0.9);
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.8em;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            background: rgba(74, 124, 89, 0.9);
+        }
+
+        /* Title section */
+        .title-section {
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('images/stellarconflict_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .title-main {
+            font-size: 4em;
+            font-weight: bold;
+            color: var(--accent-color);
+            animation: electricBuzz 3s infinite;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .title-subtitle {
+            font-size: 1.8em;
+            color: var(--text-color);
+            font-weight: normal;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Container and sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--section-shadow);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--accent-color);
+            animation: electricBuzz 4s infinite;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        /* Three cards layout */
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid var(--federation-green);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            color: var(--accent-color);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Controls section */
+        .controls-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .controls-column h4 {
+            color: var(--secondary-accent);
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--secondary-accent);
+            padding-bottom: 5px;
+        }
+
+        .control-item {
+            margin-bottom: 8px;
+            padding: 5px 0;
+        }
+
+        .control-key {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-family: monospace;
+            background: rgba(255, 165, 0, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+
+        /* Vignette image section */
+        .vignette-section {
+            position: relative;
+            margin: 40px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px var(--section-shadow);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/stellarconflict_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            max-width: 60%;
+            color: var(--text-color);
+            font-style: italic;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Story image section */
+        .story-section {
+            position: relative;
+            margin: 40px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px var(--section-shadow);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/stellarconflict_5_story.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .story-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(13, 20, 33, 0.9);
+            padding: 20px;
+            border-left: 4px solid var(--secondary-accent);
+            border-radius: 4px;
+            max-width: 65%;
+            color: var(--text-color);
+            font-style: italic;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Game layers cards */
+        .layers-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .layer-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #2a3d4f 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .layer-card:hover {
+            transform: translateX(10px);
+        }
+
+        .layer-number {
+            color: var(--secondary-accent);
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Features grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(145deg, var(--card-bg) 0%, #1f2d3c 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--federation-green);
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(255, 165, 0, 0.2);
+        }
+
+        .feature-card h4 {
+            color: var(--accent-color);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Feature image section */
+        .feature-image-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px var(--section-shadow);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/stellarconflict_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .feature-quote {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background: rgba(13, 20, 33, 0.9);
+            padding: 25px;
+            border-left: 5px solid var(--secondary-accent);
+            border-radius: 6px;
+            max-width: 65%;
+            color: var(--text-color);
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        }
+
+        /* Box art section */
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+            margin: 50px 0;
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--section-shadow);
+        }
+
+        .boxart-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background: url('images/stellarconflict_4_boxart.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
+
+        .boxart-description {
+            padding: 20px;
+        }
+
+        .boxart-title {
+            font-size: 2.2em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--accent-color);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--background-color);
+            border-top: 2px solid var(--border-color);
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--title-glow);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .title-main {
+                font-size: 2.5em;
+            }
+            
+            .title-subtitle {
+                font-size: 1.3em;
+            }
+            
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .vignette-quote,
+            .feature-quote,
+            .story-quote {
+                max-width: 90%;
+                font-size: 1em;
+            }
+        }
+
+        /* Utility classes */
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+
+        .highlight {
+            background: linear-gradient(90deg, rgba(255, 165, 0, 0.2) 0%, rgba(255, 255, 0, 0.1) 100%);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <h1 class="title-main">Halberd Suit Wars</h1>
+        <div class="title-subtitle">Ragdoll Mecha Combat</div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>🚀 Game Overview</h2>
+            <p>In the aftermath of a devastating galactic conflict, two major factions continue their bitter struggle across star systems and celestial bodies. <span class="bold-text">Halberd Suit Wars</span> throws players into the cockpit of physics-based humanoid mecha, where every bolt, servo, and targeting calculation matters in brutal arena combat.</p>
+            <br>
+            <p>This isn't your typical mecha game with regenerating health and infinite ammunition. Here, <span class="bold-text">limbs destroyed in combat explode in fireballs</span>, leaving trails of hydraulic fluid and sparks. Pilots must rely on tactical positioning, careful resource management, and split-second decisions to survive encounters where a single beam rifle shot can end everything.</p>
+            <br>
+            <p>The game features a unique <span class="bold-text">dual-scale survival system</span> where players fight as heavily-armed mecha, but can eject as vulnerable human pilots when their machine is crippled. Victory comes not just from superior firepower, but from understanding the delicate balance between offensive capability, defensive positioning, and knowing when to retreat to fight another day.</p>
+        </div>
+
+        <div class="three-cards">
+            <div class="card">
+                <h4>🎯 Target Audience</h4>
+                <p><span class="bold-text">Mecha enthusiasts</span> who crave authentic giant robot combat with real consequences. <span class="bold-text">Tactical gamers</span> who appreciate physics-based systems where positioning and resource management matter more than reflexes. <span class="bold-text">Strategy fans</span> who enjoy long-term campaign planning with persistent consequences.</p>
+            </div>
+            <div class="card">
+                <h4>🎪 Game's Purpose</h4>
+                <p>Fulfills the human needs for <span class="bold-text">mastery through tactical thinking</span>, <span class="bold-text">competence via mechanical understanding</span>, and <span class="bold-text">meaningful choice</span> where every decision has lasting consequences. Provides the satisfaction of <span class="bold-text">strategic depth</span> combined with visceral physics-based combat.</p>
+            </div>
+            <div class="card">
+                <h4>⚡ Core Concept</h4>
+                <p>Physics-driven mecha combat where <span class="bold-text">limb targeting and resource management</span> create tactical depth. Players must balance offensive capability with defensive positioning, managing limited ammunition while protecting critical systems. <span class="bold-text">Real consequences</span> make every engagement meaningful.</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <div class="story-image">
+                <div class="story-quote">
+                    "Across the solar system, from Mars colonies to Pluto outposts, humanity wages endless wars with the same machines, the same faces, under different flags - a cycle as predictable as planetary orbits."
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📜 Lore & Story</h2>
+            <p>In the year 2387, humanity has spread throughout the solar system like seeds in fertile soil. <span class="bold-text">Massive O'Neill cylinder colonies</span> drift in stable orbits, while carved asteroid bases and sprawling settlements on Mars, Europa, Titan, and even distant Pluto house billions of souls seeking their fortunes among the stars.</p>
+            <br>
+            <p>What was once a unified human expansion has fractured into a <span class="bold-text">chaotic patchwork of competing factions</span> - mining consortiums, colonial governments, religious movements, corporate hegemonies, and military juntas. These groups rise and fall like tides, constantly merging, splitting, renaming themselves, and reshuffling allegiances based on the whims of politicians, resource disputes, and ancient grudges that most have forgotten the origins of.</p>
+            <br>
+            <p>At the heart of every conflict stands the <span class="bold-text">Halberd-class combat suit</span> - a standardized humanoid mecha with chunky, heavily-armored proportions reminiscent of medieval knights, equipped with massive jetpacks and vernier thrusters. Whether painted in the crimson and gold of the Martian Trade Federation or the stark white and blue of the Outer Rim Coalition, these machines represent the great equalizer in interplanetary warfare. Every faction uses the same design, the same weapons, the same tactics - only the colors change.</p>
+            <br>
+            <p>The bitter irony isn't lost on the <span class="bold-text">common soldiers and pilots</span> who find themselves fighting under different banners throughout their careers. Today's enemy becomes tomorrow's ally when political winds shift. Veterans speak quietly of fighting for the Liberation Front against Corporate Alliance forces, only to find themselves serving under Corporate Alliance command against the very Liberation Front they once called brothers. The colonies they fought to protect often change hands multiple times, their populations adapting to whoever currently holds power.</p>
+            <br>
+            <p><span class="highlight">The goal now is survival</span> - not just of individual battles, but of the soul itself in an endless cycle of meaningless conflicts. Each pilot who climbs into a Halberd suit knows they're part of something larger and more tragic than any single war: they're participants in humanity's inability to find peace even among the infinite expanse of space.</p>
+        </div>
+
+        <div class="section">
+            <h2>🕹️ Controls & Interface</h2>
+            <div class="controls-grid">
+                <div class="controls-column">
+                    <h4>🤖 Mecha Controls</h4>
+                    <div class="control-item"><span class="control-key">WASD</span> Float movement through arena</div>
+                    <div class="control-item"><span class="control-key">Mouse</span> Aim and rotate mecha to face direction</div>
+                    <div class="control-item"><span class="control-key">Spacebar</span> Flip facing left/right (1-3 second delay based on torso armor)</div>
+                    <div class="control-item"><span class="control-key">Q</span> Cycle through 4 weapons (1→2→3→4→1)</div>
+                    <div class="control-item"><span class="control-key">Mouse 1</span> Fire current weapon</div>
+                    <div class="control-item"><span class="control-key">Mouse 2</span> Tap for quick boost, hold for charged overboost</div>
+                    <div class="control-item"><span class="control-key">F</span> Generic melee attack with current weapon</div>
+                    <div class="control-item"><span class="control-key">E</span> Eject from mecha as human pilot</div>
+                    <div class="control-item"><span class="control-key">R</span> Cycle teammate AI modes (close/defensive/aggressive)</div>
+                    <div class="control-item"><span class="control-key">C</span> Summon reinforcement (max 3 per battle)</div>
+                    <div class="control-item"><span class="control-key">X</span> Toggle head defense system (shields, point defense, etc.)</div>
+                    <div class="control-item"><span class="control-key">Z 3x</span> Retreat from battle (save pilot and mecha)</div>
+                </div>
+                <div class="controls-column">
+                    <h4>👨‍🚀 Human Pilot Controls</h4>
+                    <div class="control-item"><span class="control-key">WASD</span> Float movement (slower than mecha)</div>
+                    <div class="control-item"><span class="control-key">Mouse</span> Aim direction</div>
+                    <div class="control-item"><span class="control-key">Spacebar</span> Flip facing (0.5 second cooldown)</div>
+                    <div class="control-item"><span class="control-key">Q</span> Switch weapon (bazooka ↔ SMG)</div>
+                    <div class="control-item"><span class="control-key">Mouse 1</span> Fire emergency weapon</div>
+                    <div class="control-item"><span class="control-key">Mouse 2</span> Jetpack thrust toward facing direction</div>
+                    <div class="control-item"><span class="control-key">F</span> Melee with vibrating blade (tap to deflect, hold to saw)</div>
+                    <div class="control-item"><span class="control-key">E</span> Enter nearby unoccupied mecha</div>
+                    <div class="control-item"><span class="control-key">X</span> Request new mecha from command</div>
+                    <div class="control-item"><span class="control-key">Z 3x</span> Retreat from battlefield as pilot</div>
+                </div>
+            </div>
+            <p>Players control <span class="bold-text">physics-based humanoid mecha</span> through intuitive movement and targeting systems. The dual-control scheme allows seamless transition between piloting heavily-armed war machines and surviving as vulnerable human pilots, each with distinct tactical advantages and limitations.</p>
+        </div>
+
+        <div class="vignette-section">
+            <div class="vignette-image">
+                <div class="vignette-quote">
+                    "Every beam rifle shot that connects, every limb severed by plasma blade, every tactical retreat under fire - this is where legends are forged and wars are decided."
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌌 Game Layers</h2>
+            <div class="layers-container">
+                <div class="layer-card">
+                    <div class="layer-number">1.</div>
+                    <h3>Moment-to-Moment Gameplay</h3>
+                    <p>Intense physics-based mecha duels in rectangular arenas representing space, planetary, or lunar battlefields. Players engage in <span class="bold-text">tactical limb targeting</span> using particle beam rifles, kinetic autocannons, and plasma swords. Each hit has permanent consequences - destroyed limbs explode in fireballs and cannot be repaired until after battle. Combat emphasizes <span class="bold-text">positioning over firepower</span>, with terrain cover and mobility being crucial for survival.</p>
+                </div>
+                <div class="layer-card">
+                    <div class="layer-number">2.</div>
+                    <h3>Low Metagame - Military Operations</h3>
+                    <p>Structured campaigns across 6-16 tactical nodes, each representing a specific battlefield engagement. Players deploy with 1-3 squad mates, managing limited mecha and pilot resources throughout the operation. <span class="bold-text">Human pilots are precious</span> - with a 5:1 ratio of mecha to pilots, keeping your team alive is as important as winning battles. Successful preservation of forces provides reinforcements for future engagements.</p>
+                </div>
+                <div class="layer-card">
+                    <div class="layer-number">3.</div>
+                    <h3>High Metagame - Celestial Campaigns</h3>
+                    <p>Grand strategic warfare across entire celestial regions - planets, moons, or space sectors. Each region features multiple military operations (low metagames) that can be tackled in any order. <span class="bold-text">Faction persistence system</span> means winning sides join a whitelist of recurring allies, while losing factions are permanently eliminated from future conflicts. The hidden message emerges: you may one day fight against the very forces you once fought alongside.</p>
+                </div>
+                <div class="layer-card">
+                    <div class="layer-number">4.</div>
+                    <h3>Practical Game Flow</h3>
+                    <p>Sessions begin with <span class="bold-text">tactical briefing and loadout selection</span>, choosing mecha configurations and weapon loadouts. Players deploy into arena-based engagements, managing ammunition and pilot survival. After each battle, assess casualties and resources. <span class="bold-text">Strategic retreat</span> preserves valuable assets for future fights. Campaign culminates in epic 8v8 final battles with all preserved reinforcements joining the decisive engagement.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚔️ Game Modes</h2>
+            <div class="three-cards">
+                <div class="card">
+                    <h4>🎯 Custom Skirmish</h4>
+                    <p><span class="bold-text">Single battle sandbox mode</span> where players design their perfect engagement. Choose your mecha, allied units, enemy configurations, and battlefield location. Perfect for <span class="bold-text">tactical experimentation</span> and testing new strategies. All settings can be randomized for unpredictable one-off battles that test adaptability and improvisational skills.</p>
+                </div>
+                <div class="card">
+                    <h4>🌟 Cyclical Campaign</h4>
+                    <p>The core strategic experience featuring <span class="bold-text">persistent faction warfare</span> across multiple celestial regions. Two randomly named and color-coded factions battle for control of planets, moons, and space territories. Winners join the permanent roster of future allies or enemies, while losers are eliminated forever. <span class="bold-text">Long-term consequences</span> create evolving political landscapes where former friends may become future foes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4><span class="feature-icon"></span>Physics-Based Limb Targeting</h4>
+                    <p>Revolutionary combat system where <span class="bold-text">every limb has individual armor and health</span>. Destroyed limbs explode in fireballs, leaving hydraulic sprays and sparks. Light armor enables fast movement but poor protection, while heavy armor slows rotation and acceleration but provides superior defense. <span class="highlight">Damaged limbs cannot be repaired during battle</span>, making every hit meaningful and tactical positioning crucial.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="feature-icon"></span>Strategic Resource Management</h4>
+                    <p>Limited ammunition and precious human pilots create <span class="bold-text">meaningful resource decisions</span>. Each mecha carries 4 weapons with finite ammo - once depleted, weapons become weak melee tools. Players must choose between aggressive engagement and conservation. <span class="highlight">5:1 mecha-to-pilot ratio</span> makes human life the most valuable resource, encouraging tactical retreats over heroic last stands.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="feature-icon"></span>Dual-Scale Combat</h4>
+                    <p>Seamlessly transition between <span class="bold-text">mecha warfare and human survival</span>. Ejected pilots can operate with emergency weapons, board new mecha, or retreat to safety. Human-scale combat involves weak but recharging bazooka weapons and SMGs for pilot-vs-pilot encounters. <span class="highlight">Pilots are instant casualties if hit by mecha weapons</span>, creating intense vulnerability dynamics.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="feature-icon"></span>Modular Weapon Systems</h4>
+                    <p>Authentic early-war arsenal featuring <span class="bold-text">particle beam rifles, kinetic autocannons, rocket launchers</span>, giant bazookas, pilebunkers, superheated axes, and plasma swords. Each weapon type offers distinct tactical advantages - beams for precision, kinetics for sustained fire, explosives for area denial. <span class="highlight">Weapon colliders can block incoming attacks</span>, adding defensive utility to every armament.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="feature-icon"></span>Persistent Faction Warfare</h4>
+                    <p>Dynamic political system where <span class="bold-text">victory and defeat have permanent consequences</span>. Winning factions enter a whitelist of recurring allies and enemies, while defeated forces are permanently eliminated from future campaigns. Over time, players witness the <span class="highlight">futility of endless conflict</span> as they fight former allies and mourn lost civilizations, delivering a powerful anti-war message.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="feature-icon"></span>Tactical Arena Combat</h4>
+                    <p>Battles occur in <span class="bold-text">spacious rectangular arenas</span> representing diverse battlefields - open space, planetary surfaces, lunar landscapes, or massive megastructures. Static terrain and destructible props provide cover and tactical opportunities. <span class="highlight">Friendly fire is always active</span>, requiring precise positioning and communication to avoid casualties from allied weapons.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-image-section">
+            <div class="feature-image">
+                <div class="feature-quote">
+                    "The modular armor system isn't just about protection - it's about understanding the delicate balance between mobility and survival in an environment where a single mistake means permanent loss."
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚡ Combat Philosophy</h2>
+            <p>Unlike traditional mecha games with regenerating systems and infinite resources, <span class="bold-text">Halberd Suit Wars</span> embraces the harsh realities of mechanized warfare. Every beam weapon discharge depletes limited energy reserves. Every kinetic impact risks critical system damage. Every tactical decision carries weight because <span class="highlight">there are no second chances once battle begins</span>.</p>
+            <br>
+            <p>The game rewards <span class="bold-text">tactical thinking over quick reflexes</span>. Players who understand positioning, resource management, and the complex interplay between different armor configurations will consistently outperform those who rely solely on firepower. Victory comes through careful planning, precise execution, and knowing when tactical retreat serves the greater strategic objective.</p>
+            <br>
+            <p>This design philosophy creates emergent storytelling where <span class="bold-text">every pilot has a story</span>, every mecha has a history, and every battle contributes to a larger narrative about the cost of conflict and the value of human life in mechanized warfare.</p>
+        </div>
+
+        <div class="boxart-section">
+            <div class="boxart-image"></div>
+            <div class="boxart-description">
+                <h3 class="boxart-title">Halberd Suit Wars</h3>
+                <p>In the depths of space, where colonies drift like scattered islands among the stars, two great powers clash in endless mechanized warfare. Here, in the cockpit of a Halberd-class combat suit, every decision echoes across the void.</p>
+                <br>
+                <p><span class="bold-text">Physics-based combat</span> where limbs shatter into fireballs of twisted metal and sparking electronics. <span class="bold-text">Strategic resource management</span> where ammunition is precious and human pilots are irreplaceable. <span class="bold-text">Tactical depth</span> that rewards planning over reflexes.</p>
+                <br>
+                <p>Command your squad across celestial battlefields. Manage limited resources. Make the hard choices. In Halberd Suit Wars, <span class="highlight">every battle tells a story, and every story matters</span>.</p>
+                <br>
+                <p><em>Will you preserve your forces for the greater good, or sacrifice everything for tactical advantage? The choice—and its consequences—are yours alone.</em></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>All my links:</strong> <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p><strong>All my releases:</strong> <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p><strong>Reactorcore Games - 2025</strong></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                darkMode: true,
+                primaryColor: '#ffa500',
+                primaryTextColor: '#e8f4f8',
+                primaryBorderColor: '#4a7c59',
+                lineColor: '#4a7c59',
+                secondaryColor: '#1a2332',
+                tertiaryColor: '#243342'
+            }
+        });
+    </script>
+</body>
+</html>

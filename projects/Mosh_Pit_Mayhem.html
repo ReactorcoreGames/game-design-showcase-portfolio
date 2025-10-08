@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosh Pit Mayhem: Heavy Metal Brawler</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+<!-- 
+Image Requirements:
+moshpit_1_title.jpg - Heavy metal concert stage with intense moshpit crowd silhouettes
+moshpit_2_vignette.jpg - Close-up action shot of ragdoll characters colliding in mid-air with blood effects
+moshpit_3_feature.jpg - Dynamic collision moment showing momentum-based combat with particle effects
+moshpit_4_boxart.jpg - Concert poster style artwork with band on stage and moshpit below (2:3 ratio)
+-->
+
+<style>
+:root {
+  --background-color: #0a0a0a;
+  --container-bg: #1a1a1a;
+  --card-bg: #2a2a2a;
+  --border-color: #444444;
+  --text-color: #e0e0e0;
+  --accent-purple: #8a2be2;
+  --accent-blue: #0066ff;
+  --blood-red: #cc0000;
+  --concert-gold: #ffd700;
+  --stage-white: #ffffff;
+  --title-gradient-1: #ff3366;
+  --title-gradient-2: #8a2be2;
+  --title-shadow: #ff0066;
+  --h2-color: #0099ff;
+  --h2-shadow: #0066cc;
+  --container-shadow: rgba(138, 43, 226, 0.3);
+  --card-shadow: rgba(0, 102, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial Black', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--background-color) 0%, #1a0a1a 100%);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.patreon-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 0.8em;
+  color: var(--text-color);
+  text-decoration: none;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.patreon-link:hover {
+  opacity: 1;
+  color: var(--concert-gold);
+}
+
+.title-section {
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: url('images/moshpit_1_title.jpg') center/cover;
+}
+
+.title-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+  z-index: 1;
+}
+
+.title-content {
+  position: relative;
+  z-index: 2;
+}
+
+.main-title {
+  font-size: clamp(2.5em, 6vw, 4.5em);
+  font-weight: 900;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--stage-white);
+  text-shadow: 
+    0 0 10px var(--title-shadow),
+    0 0 20px var(--title-shadow),
+    0 0 30px var(--title-shadow),
+    3px 3px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000;
+  animation: electricBuzz 2s ease-in-out infinite;
+}
+
+@keyframes electricBuzz {
+  0%, 100% { 
+    text-shadow: 
+      0 0 10px var(--title-shadow),
+      0 0 20px var(--title-shadow),
+      0 0 30px var(--title-shadow),
+      3px 3px 0 #000,
+      -3px -3px 0 #000,
+      3px -3px 0 #000,
+      -3px 3px 0 #000;
+  }
+  25% { 
+    text-shadow: 
+      0 0 15px var(--accent-purple),
+      0 0 25px var(--accent-purple),
+      0 0 35px var(--accent-purple),
+      3px 3px 0 #000,
+      -3px -3px 0 #000,
+      3px -3px 0 #000,
+      -3px 3px 0 #000;
+  }
+  50% { 
+    text-shadow: 
+      0 0 8px var(--blood-red),
+      0 0 18px var(--blood-red),
+      0 0 28px var(--blood-red),
+      3px 3px 0 #000,
+      -3px -3px 0 #000,
+      3px -3px 0 #000,
+      -3px 3px 0 #000;
+  }
+  75% { 
+    text-shadow: 
+      0 0 12px var(--accent-blue),
+      0 0 22px var(--accent-blue),
+      0 0 32px var(--accent-blue),
+      3px 3px 0 #000,
+      -3px -3px 0 #000,
+      3px -3px 0 #000,
+      -3px 3px 0 #000;
+  }
+}
+
+.subtitle {
+  font-size: clamp(1.2em, 3vw, 2em);
+  font-weight: 600;
+  color: var(--concert-gold);
+  text-shadow: 
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.section {
+  margin: 3em 0;
+  padding: 2em;
+  background: var(--container-bg);
+  border-radius: 15px;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 8px 32px var(--container-shadow);
+}
+
+.section h2 {
+  font-size: clamp(1.8em, 4vw, 2.5em);
+  margin-bottom: 1em;
+  color: var(--h2-color);
+  text-shadow: 
+    0 0 10px var(--h2-shadow),
+    0 0 20px var(--h2-shadow),
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px var(--h2-shadow),
+      0 0 20px var(--h2-shadow),
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000;
+  }
+  50% {
+    text-shadow: 
+      0 0 15px var(--h2-shadow),
+      0 0 30px var(--h2-shadow),
+      0 0 45px var(--h2-shadow),
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000;
+  }
+}
+
+.three-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5em;
+  border-radius: 10px;
+  border: 2px solid var(--accent-purple);
+  box-shadow: 0 4px 16px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px var(--card-shadow);
+  border-color: var(--blood-red);
+}
+
+.card h3 {
+  color: var(--concert-gold);
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card p {
+  margin-bottom: 1em;
+}
+
+.controls-section {
+  background: var(--card-bg);
+  padding: 2em;
+  border-radius: 10px;
+  border: 2px solid var(--accent-blue);
+  margin: 2em 0;
+}
+
+.controls-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  list-style: none;
+}
+
+.controls-list li {
+  padding: 0.8em;
+  background: var(--background-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--blood-red);
+}
+
+.controls-list strong {
+  color: var(--concert-gold);
+  text-transform: uppercase;
+}
+
+.vignette-section {
+  position: relative;
+  height: 600px;
+  margin: 3em 0;
+  border-radius: 15px;
+  overflow: hidden;
+  background: url('images/moshpit_2_vignette.jpg') center/cover;
+}
+
+.vignette-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  z-index: 1;
+}
+
+.vignette-quote {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+  background: rgba(0,0,0,0.8);
+  padding: 1.5em;
+  border-radius: 10px;
+  border-left: 4px solid var(--blood-red);
+}
+
+.vignette-quote p {
+  font-size: 1.2em;
+  font-style: italic;
+  color: var(--stage-white);
+  text-shadow: 1px 1px 2px #000;
+  margin: 0;
+}
+
+.game-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.layer-card {
+  background: var(--card-bg);
+  padding: 2em;
+  border-radius: 10px;
+  border: 2px solid var(--accent-purple);
+  border-left: 8px solid var(--blood-red);
+  transition: transform 0.3s ease;
+}
+
+.layer-card:hover {
+  transform: translateX(10px);
+  border-left-color: var(--concert-gold);
+}
+
+.layer-card h3 {
+  color: var(--concert-gold);
+  font-size: 1.3em;
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+}
+
+.layer-card strong {
+  color: var(--accent-blue);
+}
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.mode-card {
+  background: var(--card-bg);
+  padding: 2em;
+  border-radius: 10px;
+  border: 3px solid var(--accent-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.mode-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blood-red), var(--concert-gold), var(--accent-purple));
+}
+
+.mode-card h3 {
+  color: var(--concert-gold);
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.features-grid {
+  display: grid;
+  gap: 2em;
+  margin: 3em 0;
+}
+
+.feature {
+  background: var(--card-bg);
+  padding: 2.5em;
+  border-radius: 15px;
+  border: 2px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--blood-red), var(--accent-purple), var(--accent-blue));
+}
+
+.feature h3 {
+  color: var(--concert-gold);
+  font-size: 1.6em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  padding-left: 1em;
+}
+
+.feature p, .feature ul {
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+
+.feature ul {
+  list-style: none;
+}
+
+.feature li {
+  padding: 0.3em 0;
+  border-left: 2px solid var(--accent-blue);
+  padding-left: 1em;
+  margin: 0.5em 0;
+  background: rgba(0,102,255,0.1);
+  border-radius: 4px;
+}
+
+.feature strong {
+  color: var(--blood-red);
+}
+
+.feature-image-section {
+  position: relative;
+  height: 600px;
+  margin: 3em 0;
+  border-radius: 15px;
+  overflow: hidden;
+  background: url('images/moshpit_3_feature.jpg') center/cover;
+}
+
+.feature-image-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  z-index: 1;
+}
+
+.feature-quote {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+  background: rgba(42,42,42,0.9);
+  padding: 1.5em;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-purple);
+}
+
+.feature-quote p {
+  font-size: 1.3em;
+  font-style: italic;
+  color: var(--stage-white);
+  text-shadow: 1px 1px 2px #000;
+  margin: 0;
+}
+
+.diagram-section {
+  background: var(--card-bg);
+  padding: 2em;
+  border-radius: 15px;
+  border: 2px solid var(--accent-purple);
+  margin: 3em 0;
+  text-align: center;
+}
+
+.boxart-section {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 2em;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 2em;
+  border-radius: 15px;
+  border: 3px solid var(--concert-gold);
+  margin: 3em 0;
+}
+
+.boxart-image {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: url('images/moshpit_4_boxart.jpg') center/cover;
+  border-radius: 10px;
+  border: 3px solid var(--blood-red);
+}
+
+.boxart-content {
+  padding: 1em;
+}
+
+.boxart-content h2 {
+  color: var(--concert-gold);
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  animation: none;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.boxart-description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background-color);
+  padding: 1.5em;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-blue);
+}
+
+.footer {
+  text-align: center;
+  padding: 3em 2em;
+  background: var(--background-color);
+  border-top: 3px solid var(--concert-gold);
+  margin-top: 3em;
+}
+
+.footer p {
+  margin: 0.5em 0;
+  color: var(--text-color);
+}
+
+.footer a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--concert-gold);
+}
+
+.emoji {
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1em;
+  }
+  
+  .three-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .boxart-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .controls-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .modes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bold-text {
+  color: var(--blood-red);
+  font-weight: bold;
+}
+
+br {
+  margin-bottom: 1em;
+}
+</style>
+
+<a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+
+<div class="title-section">
+  <div class="title-content">
+    <h1 class="main-title">Mosh Pit Mayhem</h1>
+    <div class="subtitle">Heavy Metal Brawler</div>
+  </div>
+</div>
+
+<div class="container">
+  
+  <section class="section">
+    <h2><span class="emoji">🤘</span>Game Overview</h2>
+    <p><strong class="bold-text">Mosh Pit Mayhem</strong> is a lighthearted physics-based brawler set in the chaotic world of heavy metal concerts. Players control ragdoll characters in intense moshpit battles, using momentum and physics to slam into opponents while metal bands rock the stage.</p><br>
+    
+    <p>This isn't about permanent violence – it's about <strong class="bold-text">cathartic release through controlled chaos</strong>. Participants get dismembered in over-the-top fashion, but paramedics sew everyone back together between songs. It's demolition derby with humans, set to thunderous metal soundtracks.</p><br>
+    
+    <p>Experience the <strong class="bold-text">primal joy of the moshpit</strong> without real-world consequences, where momentum mastery and positioning determine victory in this celebration of metal culture and controlled mayhem.</p>
+  </section>
+
+  <div class="three-cards">
+    <div class="card">
+      <h3><span class="emoji">🎯</span>Target Audience</h3>
+      <p><strong class="bold-text">Primary:</strong> Heavy metal music enthusiasts who appreciate the culture and energy of live concerts and moshpits.</p><br>
+      <p><strong class="bold-text">Secondary:</strong> Physics-based game fans who enjoy titles like Gang Beasts, Human Fall Flat, or Toribash for their emergent gameplay.</p><br>
+      <p><strong class="bold-text">Tertiary:</strong> Party gamers seeking accessible, laugh-inducing multiplayer experiences with simple controls but deep emergent possibilities.</p>
+    </div>
+    
+    <div class="card">
+      <h3><span class="emoji">🎸</span>Game's Purpose</h3>
+      <p>Provides <strong class="bold-text">safe cathartic release</strong> for pent-up energy and aggression through ritualized, consequence-free combat in a celebratory atmosphere.</p><br>
+      <p>Fulfills fundamental human needs for <strong class="bold-text">play, physical expression, community bonding, and controlled risk-taking</strong> within the metal music cultural framework.</p><br>
+      <p>Offers <strong class="bold-text">social connection through shared chaos</strong> - participants bond through mutual experience of over-the-top violence followed by healing and celebration.</p>
+    </div>
+    
+    <div class="card">
+      <h3><span class="emoji">⚡</span>Core Concept</h3>
+      <p><strong class="bold-text">Momentum-driven ragdoll combat</strong> where players master physics-based movement to deliver devastating collisions while protecting vulnerable body parts.</p><br>
+      <p>The game transforms aggressive impulses into <strong class="bold-text">strategic positioning and timing challenges</strong>, channeling destructive energy into skillful play within a supportive metal community context.</p><br>
+      <p>Victory comes through <strong class="bold-text">understanding momentum, damage multipliers, and tactical body positioning</strong> rather than button-mashing or reflexes.</p>
+    </div>
+  </div>
+
+  <section class="section controls-section">
+    <h2><span class="emoji">🎮</span>Controls & Interface</h2>
+    <p><strong class="bold-text">Mosh Pit Mayhem</strong> uses an elegant <strong class="bold-text">mouse-only control scheme</strong> designed for accessibility and intuitive physics manipulation:</p><br>
+    
+    <ul class="controls-list">
+      <li><strong>Mouse Aim:</strong> Control character rotation - your character faces toward the mouse cursor</li>
+      <li><strong>Mouse 1 (Left Click):</strong> Accelerate forward in your current facing direction</li>
+      <li><strong>Mouse 2 (Right Click):</strong> Tap for quick dash burst with cooldown, or hold and release for charged power dash</li>
+      <li><strong>Wall-Assisted Boosts:</strong> Perform dashes near arena walls for 1.5x to 4.0x momentum multipliers</li>
+    </ul><br>
+    
+    <p>Players control their <strong class="bold-text">ragdoll metalhead</strong> floating in a microgravity moshpit arena. The physics system handles all collision detection, momentum transfer, and dismemberment mechanics. <strong class="bold-text">Strategic positioning</strong> and <strong class="bold-text">momentum management</strong> replace complex combo inputs, making the game accessible while maintaining tactical depth.</p><br>
+    
+    <p>The interface focuses on the action - <strong class="bold-text">no complex HUD elements</strong> distract from the kinetic experience. Damage numbers, power-up notifications, and score updates appear dynamically during gameplay, while the concert atmosphere remains the primary visual focus.</p>
+  </section>
+
+  <div class="vignette-section">
+    <div class="vignette-quote">
+      <p>"Like being launched from a catapult into a wall of screaming metalheads, where every collision is a thunderous celebration of beautiful chaos."</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <h2><span class="emoji">🏗️</span>Game Layers</h2>
+    <div class="game-layers">
+      
+      <div class="layer-card">
+        <h3>1. Moment-to-Moment Active Gameplay</h3>
+        <p><strong class="bold-text">Physics-Based Collision Combat:</strong> Players navigate their ragdoll character through a 3-4 minute song, building momentum and strategically colliding with opponents. Each impact triggers damage calculations based on <strong class="bold-text">body part targeting</strong> (head 1.5x damage, torso 1.0x, limbs 0.5x) and momentum dynamics.</p><br>
+        <p><strong class="bold-text">Real-time tactical decisions:</strong> Choose whether to use arms/legs for safer impacts, target opponent weak points, grab power-up relics, or position for wall-assisted boost combinations. The arena gradually becomes painted with blood and dirt, creating a unique battle canvas.</p>
+      </div>
+
+      <div class="layer-card">
+        <h3>2. Low Metagame</h3>
+        <p><strong class="bold-text">Concert Experience Progression:</strong> Each low metagame consists of a <strong class="bold-text">10-song metal concert</strong> where players accumulate points across multiple moshpit battles. Between songs, intermission screens provide narrative context while paramedics heal and randomly reposition all participants.</p><br>
+        <p><strong class="bold-text">Scoring system drives progression:</strong> Points earned through damage dealt (every 10 HP = 1 point), finishing moves (+5 points), survival bonuses (+5 for last standing, +2 for apocalyptic battles). The player with highest cumulative score becomes the <strong class="bold-text">Lord of the Moshpit</strong> and receives celebration from both crowd and band.</p>
+      </div>
+
+      <div class="layer-card">
+        <h3>3. High Metagame</h3>
+        <p><strong class="bold-text">Multi-Venue Championship Circuit:</strong> The high metagame connects multiple concert experiences across different venues, metal subgenres, and moshpit communities. Each completed concert unlocks new venues with different characteristics - underground clubs, massive festivals, intimate basement shows, outdoor amphitheaters.</p><br>
+        <p><strong class="bold-text">Legacy and Reputation System:</strong> Player achievements, signature moves, and memorable moments are recorded in a <strong class="bold-text">Hall of Metal Fame</strong>. Particularly impressive performances unlock special customization options, exclusive venues, and recognition within the metal community ecosystem.</p>
+      </div>
+
+      <div class="layer-card">
+        <h3>4. Practical Game Flow</h3>
+        <p><strong class="bold-text">Session Structure:</strong> Players launch the game, select a venue/concert, customize their metalhead appearance, and dive into the first song. Each 3-4 minute battle provides complete satisfaction with clear win/lose conditions and immediate score feedback.</p><br>
+        <p><strong class="bold-text">Natural break points:</strong> Between songs, intermission screens provide perfect pause opportunities. Players can quit after any song with progress saved, or continue through the full concert. The healing mechanic ensures every song starts fresh, preventing frustration buildup while maintaining consequences within individual battles.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><span class="emoji">🎵</span>Game Modes</h2>
+    <div class="modes-grid">
+      
+      <div class="mode-card">
+        <h3><span class="emoji">🎤</span>Concert Mode</h3>
+        <p><strong class="bold-text">Full 10-Song Experience:</strong> The complete moshpit championship experience featuring a full metal concert. Players battle through an entire setlist, accumulating points across multiple songs to become the ultimate Lord of the Moshpit.</p><br>
+        <p><strong class="bold-text">Progressive intensity:</strong> Song selection and participant count vary throughout the concert, creating natural pacing with high-energy openers, intense middle battles, and epic finale showdowns. Between-song intermissions provide story context and allow for strategic recovery.</p><br>
+        <p><strong class="bold-text">Epic conclusion:</strong> The final song determines overall victory, with bonus multipliers and celebration ceremonies for the champion. Perfect for extended gaming sessions and competitive play.</p>
+      </div>
+
+      <div class="mode-card">
+        <h3><span class="emoji">⚡</span>Quick Mosh</h3>
+        <p><strong class="bold-text">Single Song Battles:</strong> Immediate action for players wanting quick bursts of moshpit mayhem. Choose any unlocked song and dive straight into a 3-4 minute battle with randomly selected opponents.</p><br>
+        <p><strong class="bold-text">Perfect for casual play:</strong> Ideal for short gaming sessions, warm-up battles, or practicing specific techniques. No long-term commitment required - just pure, concentrated moshpit action.</p><br>
+        <p><strong class="bold-text">Skill development focus:</strong> Experiment with different strategies, test power-up combinations, or master momentum techniques without the pressure of a full concert progression.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><span class="emoji">⚙️</span>Game Features & Mechanics</h2>
+    <div class="features-grid">
+
+      <div class="feature">
+        <h3><span class="emoji">💥</span>Momentum-Based Combat System</h3>
+        <p>The core combat revolves around <strong class="bold-text">physics-driven momentum management</strong> rather than traditional health bars or button combinations. Players build speed through acceleration and strategic wall-bouncing, then convert that momentum into devastating impacts.</p><br>
+        <p><strong class="bold-text">Tactical positioning system:</strong> Victory depends on understanding how to position your body during collisions. Leading with arms or legs reduces self-damage while still dealing impact damage to opponents, while head-first or torso impacts deal maximum damage to both parties.</p><br>
+        <ul>
+          <li>Wall-assisted boosts multiply momentum by 1.5x to 4.0x depending on charge time</li>
+          <li>Quick dash provides 1.25x speed burst with cooldown management</li>
+          <li>Momentum carries through collisions, creating chain-reaction scenarios</li>
+          <li>Environmental physics affect movement - concert lighting, stage effects, crowd pressure</li>
+        </ul>
+      </div>
+
+      <div class="feature">
+        <h3><span class="emoji">🎯</span>Strategic Damage Location System</h3>
+        <p>Combat damage is determined by <strong class="bold-text">which body parts collide</strong> rather than weapon types or complex stat calculations. This creates intuitive tactical decisions where players must balance offensive capability with self-preservation.</p><br>
+        <p><strong class="bold-text">Damage multiplier hierarchy:</strong></p><br>
+        <ul>
+          <li><strong>Head impacts:</strong> 1.5x damage multiplier - high risk, high reward targeting</li>
+          <li><strong>Torso collisions:</strong> 1.0x base damage - reliable but predictable</li>
+          <li><strong>Limb strikes:</strong> 0.5x damage - safer approach with reduced effectiveness</li>
+          <li><strong>666 HP pool distribution:</strong> Total health spread across all body parts</li>
+          <li><strong>Dismemberment mechanics:</strong> Lost limbs affect movement and combat options</li>
+        </ul><br>
+        <p>Players develop <strong class="bold-text">signature collision techniques</strong> and learn to read opponent positioning to maximize damage while minimizing retaliation.</p>
+      </div>
+
+      <div class="feature">
+        <h3><span class="emoji">🔮</span>Relic Powerup System</h3>
+        <p><strong class="bold-text">Mystical relics</strong> drop randomly into the moshpit every minute, providing 30-second temporary enhancements that can dramatically shift battle dynamics. Multiple relics can be collected and stacked for powerful combinations.</p><br>
+        <p><strong class="bold-text">Relic variety creates tactical depth:</strong></p><br>
+        <ul>
+          <li><strong>Relic of Strength:</strong> Double damage output for devastating combinations</li>
+          <li><strong>Relic of Defense:</strong> 75% damage reduction for aggressive positioning</li>
+          <li><strong>Relic of Haste:</strong> 1.5x acceleration for superior mobility</li>
+          <li><strong>Relic of Boost:</strong> Double dash power for massive momentum gains</li>
+          <li><strong>Relic of Knockback:</strong> Send opponents flying with enhanced impact force</li>
+          <li><strong>Relic of Translocation:</strong> Teleport away from powerful incoming attacks</li>
+        </ul><br>
+        <p>Relic management becomes a <strong class="bold-text">strategic mini-game</strong> - do you grab the defensive relic to survive longer, or risk everything for the offensive boost that could secure victory?</p>
+      </div>
+
+      <div class="feature">
+        <h3><span class="emoji">🩸</span>Dynamic Arena Staining System</h3>
+        <p>Each moshpit battle creates a <strong class="bold-text">unique visual narrative</strong> through persistent blood spatters, dirt smears, and collision marks. The arena becomes a canvas painted by the chaos of battle, with each impact leaving permanent traces.</p><br>
+        <p><strong class="bold-text">Progressive visual storytelling:</strong> As the 10-song concert progresses, previous battle stains accumulate and darken, creating increasingly dramatic backdrops. Blood stays bright red during active combat, then darkens to brown between songs.</p><br>
+        <ul>
+          <li>Projectile impact fractures appear on arena walls with FIFO cleanup</li>
+          <li>Dismembered limbs leave blood trails as they fly through the air</li>
+          <li>High-intensity battles create more vivid staining patterns</li>
+          <li>Final arena state serves as unique backdrop for victory celebration</li>
+          <li>Each concert venue develops its own characteristic staining pattern</li>
+        </ul><br>
+        <p>The staining system transforms each concert into a <strong class="bold-text">collaborative art piece</strong> created through competitive chaos.</p>
+      </div>
+
+      <div class="feature">
+        <h3><span class="emoji">🔢</span>HP Pool Distribution Mechanics</h3>
+        <p>The <strong class="bold-text">666 HP total</strong> is distributed across all body parts, creating tactical decisions about which parts to sacrifice and which to protect. Unlike traditional health systems, players must manage multiple damage states simultaneously.</p><br>
+        <p><strong class="bold-text">Dismemberment consequences:</strong> Lost limbs affect combat capabilities - missing arms reduce grab range, missing legs affect mobility, but core torso and head remain critical. Players can continue fighting effectively even after significant dismemberment.</p><br>
+        <ul>
+          <li>Each body part has individual HP tracking</li>
+          <li>Dismembered parts become physics objects that can be used as improvised weapons</li>
+          <li>Strategic limb sacrifice can provide tactical advantages</li>
+          <li>Core survivability depends on protecting head and upper torso</li>
+          <li>Regeneration only occurs between songs via paramedic healing</li>
+        </ul><br>
+        <p><strong class="bold-text">Tactical depth emerges</strong> from the decision matrix of when to risk valuable body parts for potential victory versus preserving them for extended battle sustainability.</p>
+      </div>
+
+      <div class="feature">
+        <h3><span class="emoji">🏗️</span>Intermission Healing Mechanics</h3>
+        <p>Between each song, <strong class="bold-text">intermission screens</strong> provide narrative context while paramedics and janitors restore the battlefield. This system prevents frustration buildup while maintaining consequences within individual battles.</p><br>
+        <p><strong class="bold-text">Complete restoration process:</strong> All participants are healed, dismembered limbs reattached, and positions randomized for the next song. Old blood stains darken and remain while fresh combat begins on the partially cleaned arena.</p><br>
+        <ul>
+          <li>Story context introduces upcoming songs and venue atmosphere</li>
+          <li>Random repositioning prevents spawn camping or positional advantages</li>
+          <li>Healing ensures every song starts with equal opportunity</li>
+          <li>Intermission timing provides natural break points for players</li>
+          <li>Visual cleanup maintains performance while preserving battle history</li>
+        </ul><br>
+        <p>The intermission system creates <strong class="bold-text">episodic structure</strong> where each song feels like a complete mini-adventure within the larger concert experience.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="feature-image-section">
+    <div class="feature-quote">
+      <p>"The moment when two metalheads collide at maximum velocity, physics takes over, and beautiful chaos explodes across the moshpit in a symphony of momentum and mayhem."</p>
+    </div>
+  </div>
+
+  <section class="section diagram-section">
+    <h2><span class="emoji">📊</span>Combat & Scoring Mechanics</h2>
+    <div class="mermaid">
+      graph TD
+        A[Moshpit Battle Begins] --> B[Build Momentum]
+        B --> C{Target Selection}
+        C -->|Head 1.5x| D[High Risk/Reward]
+        C -->|Torso 1.0x| E[Balanced Approach]
+        C -->|Limbs 0.5x| F[Safe Strategy]
+        D --> G[Collision Impact]
+        E --> G
+        F --> G
+        G --> H{Damage Calculation}
+        H -->|10 HP Dealt| I[+1 Score Point]
+        H -->|Dismemberment| J[Physics Reaction]
+        H -->|Knockout| K[+5 Score Bonus]
+        I --> L[Continue Battle]
+        J --> L
+        K --> M{Last Standing?}
+        M -->|Yes| N[+5 Survival Bonus]
+        M -->|No| O[Song Timer Check]
+        N --> P[Song Complete]
+        O -->|Time Remaining| B
+        O -->|Song Ends| Q{Survivor Count}
+        Q -->|<50% Alive| R[+2 Apocalypse Bonus]
+        Q -->|≥50% Alive| P
+        R --> P
+        P --> S[Intermission & Healing]
+        S --> T{Concert Progress}
+        T -->|Songs Remaining| A
+        T -->|Concert Complete| U[Crown Lord of Moshpit]
+        
+        style A fill:#cc0000
+        style U fill:#ffd700
+        style G fill:#8a2be2
+        style S fill:#0066ff
+    </div><br>
+    <p><strong class="bold-text">Scoring System:</strong> Points accumulate across all 10 songs, with multiple paths to victory through damage dealing, tactical eliminations, survival skills, and creating apocalyptic scenarios where most participants are eliminated.</p>
+  </section>
+
+  <div class="boxart-section">
+    <div class="boxart-image"></div>
+    <div class="boxart-content">
+      <h2>Mosh Pit Mayhem</h2>
+      <div class="boxart-description">
+        <p><strong class="bold-text">Enter the Circle of Controlled Chaos</strong></p><br>
+        
+        <p>When the metal gods take the stage, the moshpit becomes a battleground of brotherhood. <strong class="bold-text">Mosh Pit Mayhem</strong> captures the primal energy of live metal concerts, where fans express their devotion through ritualized combat that bonds rather than divides.</p><br>
+        
+        <p>Master momentum-based physics to deliver bone-crushing impacts while the crowd roars and amplifiers shake the earth. Strategic dismemberment, relic power-ups, and wall-assisted devastation create emergent moments of beautiful destruction.</p><br>
+        
+        <p>No permanent harm, no lasting grudges - just pure cathartic release in service of the metal community. <strong class="bold-text">Join the pit. Feel the power. Become legend.</strong></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank">https://linktr.ee/reactorcore</a></p>
+  <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank">https://reactorcore.itch.io/</a></p>
+  <p><strong>Reactorcore Games - 2025</strong></p>
+</footer>
+
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
+
+</body>
+</html>

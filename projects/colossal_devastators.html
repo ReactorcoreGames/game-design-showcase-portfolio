@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colossal Devastators: Rampage Fighting Combat</title>
+    <style>
+        /* 
+        Image References:
+        - colossal_1_title.jpg: Industrial cityscape with battling mechs/kaiju
+        - colossal_2_vignette.jpg: Mid-destruction combat scene showing environmental chaos
+        - colossal_3_feature.jpg: Character creation interface or transformation sequence
+        - colossal_4_boxart.jpg: Epic poster-style composition of customizable titans
+        - colossal_5_story.jpg: Zoomed out overworld view of the greater setting the game takes place in
+        */
+
+        :root {
+            --background-color: #0f1419;
+            --container-bg: #1e2832;
+            --card-bg: #2a3441;
+            --border-color: #4a5d73;
+            --text-color: #e4e9f0;
+            --title-primary: #ff4444;
+            --title-secondary: #cc3333;
+            --accent-green: #4a7c59;
+            --accent-blue: #2c4663;
+            --steel-gray: #718096;
+            --hot-red: #ff2c2c;
+            --section-shadow: rgba(0, 0, 0, 0.4);
+            --glow-red: rgba(255, 68, 68, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #1a2332 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--card-bg);
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.8em;
+            z-index: 100;
+            transition: background 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            background: var(--accent-green);
+            border-color: var(--hot-red);
+        }
+
+        .title-section {
+            height: 750px;
+            background: url('images/colossal_1_title.jpg') center/cover;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .title-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 44, 44, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(74, 124, 89, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        .title-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 4em;
+            font-weight: bold;
+            text-shadow: 
+                0 0 20px var(--glow-red),
+                0 0 40px var(--glow-red),
+                0 0 60px var(--glow-red),
+                2px 2px 0px rgba(0, 0, 0, 0.8);
+            color: var(--title-primary);
+            margin-bottom: 0.2em;
+            animation: electricPulse 3s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            color: var(--steel-gray);
+            text-shadow: 
+                0 0 10px rgba(113, 128, 150, 0.8),
+                1px 1px 0px rgba(0, 0, 0, 0.8);
+            animation: subtleGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes electricPulse {
+            0% {
+                text-shadow: 
+                    0 0 20px var(--glow-red),
+                    0 0 40px var(--glow-red),
+                    0 0 60px var(--glow-red),
+                    2px 2px 0px rgba(0, 0, 0, 0.8);
+            }
+            100% {
+                text-shadow: 
+                    0 0 30px var(--glow-red),
+                    0 0 60px var(--glow-red),
+                    0 0 90px var(--glow-red),
+                    2px 2px 0px rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        @keyframes subtleGlow {
+            0% {
+                text-shadow: 
+                    0 0 10px rgba(113, 128, 150, 0.6),
+                    1px 1px 0px rgba(0, 0, 0, 0.8);
+            }
+            100% {
+                text-shadow: 
+                    0 0 20px rgba(113, 128, 150, 0.9),
+                    1px 1px 0px rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            background: var(--container-bg);
+            margin: 40px 0;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            box-shadow: 
+                0 8px 32px var(--section-shadow),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                var(--hot-red) 0%, 
+                var(--accent-green) 50%, 
+                var(--accent-blue) 100%);
+            border-radius: 10px 10px 0 0;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--title-primary);
+            margin-bottom: 20px;
+            text-shadow: 
+                0 0 15px var(--glow-red),
+                0 0 25px var(--glow-red);
+            animation: headerGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes headerGlow {
+            0% {
+                text-shadow: 
+                    0 0 15px var(--glow-red),
+                    0 0 25px var(--glow-red);
+            }
+            100% {
+                text-shadow: 
+                    0 0 20px var(--glow-red),
+                    0 0 35px var(--glow-red);
+            }
+        }
+
+        .overview-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 16px var(--section-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--hot-red), var(--accent-green));
+        }
+
+        .card h3 {
+            color: var(--hot-red);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(255, 44, 44, 0.5);
+        }
+
+        .card-emoji {
+            font-size: 2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .game-layers .card {
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--card-bg) 0%, #233441 100%);
+        }
+
+        .story-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 600px;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 100%;
+            background: url('images/colossal_5_story.jpg') center/cover;
+            position: relative;
+        }
+
+        .story-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(74, 124, 89, 0.2) 50%, transparent 100%);
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 600px;
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 100%;
+            background: url('images/colossal_2_vignette.jpg') center/cover;
+            position: relative;
+        }
+
+        .vignette-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.2) 0%, transparent 60%);
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(30, 40, 50, 0.9);
+            padding: 15px 20px;
+            border-radius: 5px;
+            border-left: 4px solid var(--hot-red);
+            max-width: 400px;
+            z-index: 2;
+        }
+
+        .vignette-quote::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 40, 50, 0.7);
+            z-index: -1;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 6px 24px var(--section-shadow);
+            position: relative;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-green), var(--hot-red));
+            border-radius: 10px 10px 0 0;
+        }
+
+        .feature-card h3 {
+            color: var(--accent-green);
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(74, 124, 89, 0.5);
+        }
+
+        .feature-image-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 600px;
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 100%;
+            background: url('images/colossal_3_feature.jpg') center/cover;
+            position: relative;
+        }
+
+        .feature-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 30px;
+            align-items: center;
+            margin: 50px 0;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+        }
+
+        .boxart-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background: url('images/colossal_4_boxart.jpg') center/cover;
+            border-radius: 8px;
+            border: 2px solid var(--hot-red);
+            box-shadow: 0 8px 32px rgba(255, 44, 44, 0.3);
+        }
+
+        .boxart-description h3 {
+            color: var(--title-primary);
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--glow-red);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--background-color);
+            border-top: 2px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--hot-red);
+            text-shadow: 0 0 5px var(--glow-red);
+        }
+
+        /* Greebles and heat vent decorative elements */
+        .greeble-decoration {
+            position: relative;
+        }
+
+        .greeble-decoration::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background: 
+                linear-gradient(45deg, var(--steel-gray) 0%, transparent 50%),
+                linear-gradient(-45deg, var(--accent-blue) 0%, transparent 50%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 70%, 0% 100%);
+            opacity: 0.3;
+        }
+
+        .heat-vent {
+            background: repeating-linear-gradient(
+                90deg,
+                var(--hot-red) 0px,
+                var(--hot-red) 2px,
+                transparent 2px,
+                transparent 8px
+            );
+            height: 3px;
+            width: 100%;
+            opacity: 0.6;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .three-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .vignette-quote {
+                position: static;
+                margin-top: 20px;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1>Colossal Devastators</h1>
+            <div class="subtitle">Rampage Fighting Combat</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2>🎮 Game Overview</h2>
+            <div class="overview-text">
+                <p>Command towering 20-meter galactic titans in brutal one-on-one combat for dominion over worlds. <strong>Colossal Devastators</strong> is pure competitive fighting action where two alien colossi battle to claim territory and establish supremacy over lesser civilizations.</p><br>
+
+                <p>Build and customize your perfect titan warrior using an innovative auto-balancing character system that ensures every creation remains competitively viable. Transform between humanoid mech and mythical beast forms as you engage in devastating duels against rival galactic conquerors.</p><br>
+
+                <p>Earth's cities and armies are mere environmental obstacles as titans clash for supremacy. Buildings collapse from stray hits, human military forces can only delay the inevitable, and entire landscapes reshape around your epic battles against other colossal beings.</p>
+            </div>
+        </section>
+
+        <div class="three-cards">
+            <div class="card greeble-decoration">
+                <span class="card-emoji">🎯</span>
+                <h3>Target Audience</h3>
+                <p>Competitive fighting game players seeking environmental interaction, mech anime fans craving authentic titan duels, and strategic players who want deep customization systems for one-on-one combat supremacy.</p>
+            </div>
+            
+            <div class="card greeble-decoration">
+                <span class="card-emoji">⚡</span>
+                <h3>Game's Purpose</h3>
+                <p>Fulfills the fundamental human needs for <strong>competitive mastery</strong>, <strong>creative expression</strong>, and <strong>epic scale combat</strong> through strategic titan duels and meaningful character customization systems.</p>
+            </div>
+            
+            <div class="card greeble-decoration">
+                <span class="card-emoji">🏗️</span>
+                <h3>Core Concept</h3>
+                <p>An intuitive auto-balancing system lets you build any titan imaginable - mass, sophistication, and output power automatically determine health, damage, mobility, and versatility while maintaining competitive fairness.</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <div class="story-image"></div>
+        </div>
+
+        <section class="section">
+            <h2>🌍 Lore & Story</h2>
+            <div class="heat-vent"></div>
+            <div class="overview-text">
+                <p><strong>The Galactic Pet Collection Wars:</strong> Across the galaxy, colossal titan-beings from various alien empires engage in ritualized combat to claim the most impressive planetary pets. These towering entities transform between humanoid mech and mythical beast forms, battling in one-on-one duels that determine which titan gets to keep an entire world's population as their personal collection.</p><br>
+
+                <p><strong>Earth: The Premium Terrarium:</strong> This blue marble has become a highly coveted prize where rival galactic titans clash for ownership rights. Humanity's endearing bratty behavior and amusing sprawling cities make them the galaxy's most sought-after pet species - whichever titan wins gets to keep billions of humans as their personal trophy terrarium.</p><br>
+
+                <p><strong>The Colossal Duels:</strong> You are among the elite titan warriors competing for the ultimate pet-keeping trophy. Your battles against other galactic colossi will determine who gets to pamper humanity in their own alien peculiar way - perhaps forcing them to perform embarrasing parades, build monuments to your greatness, or engage in amusing cultural displays for your entertainment.</p><br>
+
+                <p><strong>What's at Stake:</strong> Ownership of the galaxy's cutest planetary pet collection. Human military forces are like toy soldiers scattered across your battlefield as titans clash overhead. Cities become like dollhouses that crumble easily, armies can only dent your armor, and entire civilizations watch helpless, bewildered and confused as godlike beings battle to determine whom will win and forcibly adopt them as their pets.</p><br>
+
+                <p>This is conquest through affectionate domination where victory grants you a planet full of endearing bratty little humans to dote upon, discipline, and display proudly to other titan collectors across the galaxy.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🕹️ Controls & Interface</h2>
+            <div class="heat-vent"></div>
+            <div class="overview-text">
+                <p><strong>Movement:</strong> WASD for directional movement, including jumping and crouching/ducking/dropping through platforms</p><br>
+
+                <p><strong>Combat:</strong> Mouse to aim attacks, Left Click for primary attack, Right Click for secondary attack</p><br>
+
+                <p><strong>Abilities:</strong> Q and E keys activate your two equipped ability modules (can be offensive, defensive, or utility moves)</p><br>
+
+                <p><strong>Transformation:</strong> R key switches between humanoid mech form and mythical beast form - each form changes your available attacks and movement options</p><br>
+
+                <p><strong>Special Actions:</strong> F key for unique damage mitigation (dodge, shield, or other defensive ability specific to your character), X key activates super ability</p><br>
+
+                <p>The interface is designed for competitive precision - you control a massive alien titan equipped with three melee/ranged enhancer augments and two swappable special ability modules. Every control responds instantly to let you focus on tactical combat against your colossal opponent.</p>
+            </div>
+        </section>
+
+        <div class="vignette-section">
+            <div class="vignette-image">
+                <div class="vignette-quote">
+                    <em>"Devastate buildings to cause them to collapse, grab and throw vehicles as makeshift weapons, use abilities to unleash powerful attacks, and use the environment to your advantage."</em>
+                </div>
+            </div>
+        </div>
+
+        <section class="section game-layers">
+            <h2>🎲 Game Layers</h2>
+            
+            <div class="card">
+                <h3>🎯 Moment-to-Moment Gameplay</h3>
+                <p>One-on-one competitive fighting with environmental interaction. Use buildings as weapons against your opponent, grab and hurl debris, create tactical opportunities through terrain destruction. Every duel reshapes the battlefield as two titans struggle for dominance.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🌍 Campaign Progression</h3>
+                <p>Duel across diverse arenas including sprawling cities, dense forests, scorched deserts, mountainous regions, coastal areas, underwater facilities, and post-apocalyptic wastelands. Each battlefield offers unique tactical opportunities for titan combat.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🔧 Persistent Character Evolution</h3>
+                <p>Discover new parts and abilities through victorious duels that temporarily enhance your titan. Components have limited lifespan - after several matches they expire, forcing you to adapt your fighting style and seek fresh equipment from your collected stash or revert to character defaults.</p>
+            </div>
+            
+            <div class="card">
+                <h3>⚡ Practical Game Flow</h3>
+                <p>Quick competitive matches with immediate satisfaction. Launch the game, select your titan, face your opponent, engage in colossal combat, earn new parts through victory, and exit at natural stopping points. Every duel delivers meaningful progress and epic combat moments.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎮 Game Modes</h2>
+            <div class="heat-vent"></div>
+            
+            <div class="card">
+                <h3>💥 Destruction Arena</h3>
+                <p>Competitive titan duels where 2-4 colossal beings battle across destructible arenas. Quick 5-10 minute matches focused on pure fighting game mechanics and environmental utilization. Perfect for testing new character builds against skilled opponents.</p>
+            </div>
+            <br>
+            <div class="card">
+                <h3>🏛️ Siege Campaign</h3>
+                <p>Structured campaign where you face increasingly powerful rival titans in territorial disputes. Battle other galactic conquerors while human forces become environmental obstacles. Longer 20-30 minute experiences with conquest narratives.</p>
+            </div>
+            <br>
+            <div class="card">
+                <h3>🛠️ Character Workshop</h3>
+                <p>Creative sandbox for building and testing titan designs. Experiment with different mass/sophistication/power combinations, test abilities against target dummies, and save your favorite builds for combat modes.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>⚙️ Game Features & Mechanics</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card greeble-decoration">
+                    <h3>🤖 Auto-Balancing Character System</h3>
+                    <p>Create any titan design imaginable through an intuitive system that automatically maintains competitive balance. Heavier builds get more health but less mobility, sophisticated designs gain versatility but require more skill, high-output builds deal massive damage but have resource management challenges.</p><br>
+                    <p>The system uses three core parameters - <strong>mass</strong>, <strong>sophistication</strong>, and <strong>output power</strong> - to automatically determine your titan's health pool, damage potential, movement speed, and special ability options. This ensures every player creation remains viable in combat.</p>
+                </div>
+                
+                <div class="feature-card greeble-decoration">
+                    <h3>🏗️ Physics-Based Environmental Destruction</h3>
+                    <p>Every element in the environment can be destroyed, grabbed, thrown, or weaponized. Buildings crumble realistically, vehicles become projectiles, and terrain deformation creates new tactical opportunities.</p><br>
+                    <p>The physics system responds to your titan's mass and strength - heavier builds can throw larger debris at opponents, while agile builds can use terrain for tactical advantages. Environmental storytelling emerges naturally from your epic duels.</p>
+                </div>
+                
+                <div class="feature-card greeble-decoration">
+                    <h3>🔄 Dual-Form Combat System</h3>
+                    <p>Transform instantly between humanoid mech and mythical beast forms during combat. Each form offers completely different attack patterns, movement options, and tactical approaches to environmental interaction.</p><br>
+                    <p>Your equipped augments and abilities function differently in each form - a melee weapon might become a ranged beam cannon, while a defensive shield could transform into a mobility-enhancing wing system. Master both forms to unlock your titan's full potential.</p>
+                </div>
+                
+                <div class="feature-card greeble-decoration">
+                    <h3>🎯 Grab-and-Throw Combat Mechanics</h3>
+                    <p>Every titan can grab environmental objects and other combatants using unique methods based on their design. Beam-equipped builds use tractor technology, claw-based builds use physical grappling, energy-based builds use magnetic fields.</p><br>
+                    <p>Throwing mechanics consider object weight, your titan's strength, and environmental factors like gravity and wind. A well-placed submarine throw can change the entire flow of battle.</p>
+                </div>
+                
+                <div class="feature-card greeble-decoration">
+                    <h3>⚡ Modular Equipment Loadouts</h3>
+                    <p>Equip three enhancer augments that modify your basic attacks and two special ability modules that provide unique powers. Equipment compatibility depends on your titan's design parameters and form configurations.</p><br>
+                    <p>Some augments work better with high-mass builds, others synergize with sophisticated energy systems. Ability modules can be combat-focused, defensive, utility-based, or environmental manipulation tools. Finding the right combination for your playstyle is part of the strategic depth.</p>
+                </div>
+                
+                <div class="feature-card greeble-decoration">
+                    <h3>⏰ Temporal Equipment System</h3>
+                    <p>Found equipment and abilities have limited lifespans - they expire after a set number of matches, preventing permanent power accumulation and encouraging constant adaptation.</p><br>
+                    <p>This system keeps gameplay fresh by forcing you to regularly experiment with new combinations rather than settling into one dominant build. Your collected stash becomes a treasure trove of tactical options to cycle through as equipment expires.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="feature-image-section">
+            <div class="feature-image">
+                <div class="vignette-quote">
+                    <em>"Each titan is unique and it can transform between two modes - usually humanoid and beast (but not exclusively!), both play differently, allowing you to adapt to the battlefield."</em>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>🎭 Fun Trivia</h2>
+            <div class="heat-vent"></div>
+            <div class="overview-text">
+                <p><strong>Narrative Perspective:</strong> You play as galactic titan pet-collectors competing for the ultimate prize - an entire planet of bratty humans to pamper and showcase in your own domineering, alien, odd, yet affectionate way.</p><br>
+
+                <p><strong>Anime Inspiration:</strong> Drawing from classic mech series like Voltes V, Power Rangers Megazord battles, Gundam, and kaiju films like Godzilla and Pacific Rim - but with a villainous twist.</p><br>
+
+                <p><strong>Development Philosophy:</strong> Uses standardized and massively simplified IMAJ sprites system (Idle 2x, Move 2x, Attack 1x, Jump 1x) with easy-to-apply and intercompatible universal visual effects systems that allows for rapid, easy, and efficient new character creation, even for absolutely beginners with minimal artistic or technical skills. This allows modders to focus on gameplay depth rather than be bottlenecked by tedious asset production, yet still provide just enough detail to look good and be satisfying to play.</p>
+            </div>
+        </section>
+
+        <div class="boxart-section">
+            <div class="boxart-image"></div>
+            <div class="boxart-description">
+                <h3>Colossal Devastators</h3>
+                <p>Command towering galactic titans in the ultimate pet-collecting competition. Create any colossal warrior imaginable through an auto-balancing character system, then engage in epic duels to determine who gains ownership of Earth's human population.</p><br>
+                
+                <p>Transform between forms, manipulate battlefield environments, and adapt constantly as your equipment expires and evolves. Every terrain feature becomes tactical opportunity in your quest to claim the galaxy's most coveted pet species.</p><br>
+                
+                <p>Experience the whimsical thrill of colossal combat with a twist: you're not fighting for territory, you're competing to become the proud owner of billions of tiny, adorable - if somewhat bratty and reluctant - humans who will become your exclusive prized pets.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+</body>
+</html>

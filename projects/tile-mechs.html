@@ -1,0 +1,691 @@
+<!--
+Image Requirements:
+tilemechs_1_title.jpg - Mech in tactical grid combat zone with environmental destruction and terrain transformation
+tilemechs_2_vignette.jpg - Real-time tactical grid combat showing buffered input system and destruction effects
+tilemechs_3_feature.jpg - Environmental transformation sequence showing terrain changing from grass to ash/lava/glass
+tilemechs_4_boxart.jpg - Heroic Type-3 Mecha posed against backdrop of tactical destruction and moral consequences
+tilemechs_5_story.jpg - Zoomed out overworld view showing the greater setting where conflicts between Type-3 and conventional forces take place
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Mechs: Tactical Grid Combat - Reactorcore Games</title>
+    <style>
+        :root {
+            --background-color: #080e0c;
+            --container-bg: #2d4a36;
+            --border-color: #4a6b5e;
+            --text-color: #e8f1ff;
+            --accent-blue: #50a2ff;
+            --accent-red: #f72f2f;
+            --accent-cobalt: #0ea5e9;
+            --card-shadow: rgba(0, 0, 0, 0.4);
+            --glow-blue: #38bdf8;
+            --glow-red: #ff4343;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            background-image: 
+                linear-gradient(rgba(0, 61, 184, 0.5) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 65, 194, 0.5) 1px, transparent 1px);
+            background-size: 100px 100px;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .branding-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            text-decoration: none;
+            z-index: 100;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .branding-link:hover {
+            opacity: 1;
+        }
+
+        /* Title Section with Background Image */
+        .title-section {
+            position: relative;
+            height: 700px;
+            background: linear-gradient(rgba(26, 45, 26, 0.3), rgba(26, 45, 26, 0.2)), url('images/tilemechs_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .title-container h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 
+                0 0 10px var(--glow-blue),
+                0 0 20px var(--glow-blue),
+                0 0 30px var(--glow-blue),
+                2px 2px 4px rgba(0, 0, 0, 0.8);
+            animation: electricBuzz 2s infinite alternate;
+        }
+
+        .title-container .subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: var(--accent-red);
+            font-weight: 600;
+            text-shadow: 
+                0 0 5px var(--glow-red),
+                0 0 10px var(--glow-red),
+                1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: electricBuzzSubtle 3s infinite alternate;
+        }
+
+        @keyframes electricBuzz {
+            0% { 
+                text-shadow: 
+                    0 0 10px var(--glow-blue),
+                    0 0 20px var(--glow-blue),
+                    0 0 30px var(--glow-blue),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            25% { 
+                text-shadow: 
+                    0 0 8px var(--accent-cobalt),
+                    0 0 16px var(--accent-cobalt),
+                    0 0 24px var(--accent-cobalt),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 12px var(--glow-blue),
+                    0 0 24px var(--glow-blue),
+                    0 0 36px var(--glow-blue),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            75% { 
+                text-shadow: 
+                    0 0 6px var(--accent-blue),
+                    0 0 12px var(--accent-blue),
+                    0 0 18px var(--accent-blue),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            100% { 
+                text-shadow: 
+                    0 0 14px var(--glow-blue),
+                    0 0 28px var(--glow-blue),
+                    0 0 42px var(--glow-blue),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        @keyframes electricBuzzSubtle {
+            0% { 
+                text-shadow: 
+                    0 0 5px var(--glow-red),
+                    0 0 10px var(--glow-red),
+                    1px 1px 2px rgba(0, 0, 0, 0.8);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 8px var(--accent-red),
+                    0 0 16px var(--accent-red),
+                    1px 1px 2px rgba(0, 0, 0, 0.8);
+            }
+            100% { 
+                text-shadow: 
+                    0 0 6px var(--glow-red),
+                    0 0 12px var(--glow-red),
+                    1px 1px 2px rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        /* Container and Section Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 
+                0 0 8px var(--glow-blue),
+                0 0 16px var(--glow-blue),
+                1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: electricBuzz 2.5s infinite alternate;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-cobalt);
+        }
+
+        .card h3 {
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* Game Overview Cards */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .overview-card {
+            background: linear-gradient(135deg, var(--container-bg), #1f3a1f);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transition: border-color 0.3s ease;
+        }
+
+        .overview-card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .overview-card .emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .overview-card h4 {
+            color: var(--accent-red);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Image Sections */
+        .image-section {
+            position: relative;
+            margin: 4rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 48px var(--card-shadow);
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 650px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 45, 26, 0.9);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+            max-width: 60%;
+            backdrop-filter: blur(10px);
+        }
+
+        .image-quote p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            border-left: 6px solid var(--accent-cobalt);
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transition: border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .feature-card h4 {
+            color: var(--accent-red);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Box Art Section */
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 3rem;
+            margin: 4rem 0;
+            align-items: center;
+        }
+
+        .boxart-image {
+            aspect-ratio: 2/3;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 48px var(--card-shadow);
+        }
+
+        .boxart-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .boxart-content {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .boxart-content h3 {
+            color: var(--accent-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Controls Section */
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .control-scheme {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .control-scheme h4 {
+            color: var(--accent-red);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .control-scheme ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .control-scheme li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .control-scheme li:last-child {
+            border-bottom: none;
+        }
+
+        .key {
+            background: var(--accent-cobalt);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--container-bg);
+            border-top: 2px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--glow-blue);
+        }
+
+        /* Text Styling */
+        p {
+            margin-bottom: 1rem;
+        }
+
+        strong {
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-quote {
+                position: static;
+                margin-top: 1rem;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="branding-link">Reactorcore's Personal Game Design Project</a>
+
+    <section class="title-section">
+        <div class="title-container">
+            <h1>AAL: Tile Mechs</h1>
+            <div class="subtitle">Tactical Grid Combat</div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Game Overview -->
+        <section class="section">
+            <h2>🎯 Game Overview</h2>
+            <p>AAL: Tile Mechs combines the strategic depth of turn-based tactics with the intensity of real-time combat. Command a Type-3 Mecha through grid-based battlefields where every action has environmental consequences and moral implications. Experience tactical combat that feels like Chess played at the speed of thought, where environmental destruction becomes both weapon and consequence.</p>
+            <br>
+            <p>This isn't just another mech game - it's a statement about the responsibility that comes with overwhelming firepower. Every campaign generates lasting changes to both the world and your reputation, creating a persistent universe where your choices echo through procedurally generated conflicts.</p>
+
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <span class="emoji">🎮</span>
+                    <h4>Target Audience</h4>
+                    <p>Tactical combat enthusiasts who appreciate strategic depth, mech customization fans, and players who enjoy games with meaningful moral choices and environmental storytelling.</p>
+                </div>
+                <div class="overview-card">
+                    <span class="emoji">🎯</span>
+                    <h4>Game's Purpose</h4>
+                    <p>Fulfills the human needs for <strong>strategic mastery</strong>, <strong>meaningful choice</strong>, and <strong>creative expression</strong> while exploring themes of power, responsibility, and environmental consequence.</p>
+                </div>
+                <div class="overview-card">
+                    <span class="emoji">⚡</span>
+                    <h4>Core Concept</h4>
+                    <p>Real-time grid combat with <strong>buffered inputs</strong> creates tactical precision without turn-based sluggishness. Environmental destruction and moral choices ensure every action matters beyond just winning battles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Image -->
+        <section class="image-section">
+            <img src="images/tilemechs_5_story.jpg" alt="Overworld view of the conflict zones">
+            <div class="image-quote">
+                <p>"In a universe where conventional forces face the dawn of Type-3 technology, every battlefield becomes a proving ground for the future of warfare itself."</p>
+            </div>
+        </section>
+
+        <!-- Lore & Story -->
+        <section class="section">
+            <h2>📖 Lore & Story</h2>
+            <div class="card">
+                <h3>🌍 The Age of Transition</h3>
+                <p>The universe stands at a critical technological threshold. For generations, warfare has been dominated by <strong>Type-1 and Type-2 mecha</strong> - lumbering giants with mounted weaponry and limited adaptability. These machines, while powerful, relied on predetermined loadouts and specialized roles, making them predictable and vulnerable to tactical countermeasures.</p>
+                <br>
+                <p>Everything changed with the development of <strong>Type-3 technology</strong>. These revolutionary machines represent the peak of conventional engineering, featuring fully articulated humanoid manipulators with opposable thumbs, internal reactor systems for extended operation, and modular design philosophy that allows real-time battlefield adaptation.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚔️ The Great Disruption</h3>
+                <p>The introduction of Type-3 mecha has created a <strong>massive tactical imbalance</strong>. A single Type-3 unit can outmaneuver, outgun, and outsmart entire squadrons of conventional forces through its ability to <strong>switch armaments on the fly</strong> and adapt to any battlefield condition. Where Type-1s lumber with fixed weapons and Type-2s excel in narrow specializations, Type-3s bring unprecedented versatility.</p>
+                <br>
+                <p>This technological leap has destabilized regions across inhabited space. <strong>Old power structures crumble</strong> as armies built around conventional mecha doctrine find themselves helpless against Type-3 intervention. Dictatorships, criminal syndicates, and oppressive regimes that once seemed unshakeable now face the possibility of liberation - or destruction - by a single pilot in the right machine.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎯 Your Mission</h3>
+                <p>You pilot one of the first operational <strong>prototype Type-3 Mecha</strong>, deployed from a mobile base with a small but dedicated crew. Your mission: field-test this revolutionary technology while using it to <strong>eliminate threats and liberate oppressed populations</strong> across the galaxy.</p>
+                <br>
+                <p>Each campaign represents a new <strong>proving ground</strong> where your Type-3's capabilities are tested against conventional forces, environmental hazards, and complex moral situations. The data from these conflicts will shape the future development of Type-3 technology and determine how this revolutionary capability is deployed throughout the universe.</p>
+                <br>
+                <p>But with great power comes great responsibility. Your actions don't just win battles - they <strong>establish precedents</strong> for how Type-3 technology should be used. Will you be remembered as a precise liberator who minimizes collateral damage, or as an unstoppable force that achieves objectives regardless of cost? The choice is yours, and the universe is watching.</p>
+            </div>
+        </section>
+
+        <!-- Controls & Interface -->
+        <section class="section">
+            <h2>🕹️ Controls & Interface</h2>
+            <p>Tile Mechs features a sophisticated yet accessible control system designed for precision tactical combat. The player controls a Type-3 Mecha using grid-based movement with buffered input systems that allow for complex tactical maneuvers to be executed smoothly in real-time.</p>
+
+            <div class="controls-grid">
+                <div class="control-scheme">
+                    <h4>🎯 Primary Control Scheme</h4>
+                    <ul>
+                        <li><span class="key">WASD</span> Move on grid (locked rotation)</li>
+                        <li><span class="key">R + WASD</span> Rotate and aim direction</li>
+                        <li><span class="key">HJKL</span> Fire/Use weapon slots 1-4</li>
+                        <li><span class="key">Y + HJKL</span> Grab/replace equipment</li>
+                        <li><span class="key">E</span> Interact with environment</li>
+                        <li><span class="key">Q</span> Character screen/inventory</li>
+                        <li><span class="key">M</span> Tactical map overview</li>
+                    </ul>
+                </div>
+                <div class="control-scheme">
+                    <h4>🖱️ Mouse + Keyboard Alternative</h4>
+                    <ul>
+                        <li><span class="key">WASD</span> Move on grid</li>
+                        <li><span class="key">Mouse</span> Aim direction relative to mech</li>
+                        <li><span class="key">M1/M2/M4/M5</span> Fire weapon slots</li>
+                        <li><span class="key">F + Click</span> Replace equipment</li>
+                        <li>Same utility keys as primary scheme</li>
+                    </ul>
+                </div>
+                <div class="control-scheme">
+                    <h4>♿ One-Handed Accessibility</h4>
+                    <ul>
+                        <li><span class="key">WASD</span> Move on grid</li>
+                        <li><span class="key">Space</span> Fire current weapon</li>
+                        <li><span class="key">Ctrl + WASD</span> Select weapon</li>
+                        <li><span class="key">Shift + WASD</span> Replace weapon</li>
+                        <li>Concentrated around WASD region for single-hand operation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vignette Image -->
+        <section class="image-section">
+            <img src="images/tilemechs_2_vignette.jpg" alt="Tactical grid combat gameplay">
+            <div class="image-quote">
+                <p>"Every tile matters, every shot counts, every explosion echoes through time. This is tactical combat where precision meets consequence."</p>
+            </div>
+        </section>
+
+        <!-- Game Layers -->
+        <section class="section">
+            <h2>🎲 Game Layers</h2>
+            <div class="card-stack">
+                <div class="card">
+                    <h3>⚡ Moment-to-Moment Gameplay</h3>
+                    <p>Real-time grid-based tactical combat where players control their Type-3 Mecha using buffered input systems. Every action - movement, rotation, weapon firing, equipment swapping - happens instantly but requires tactical forethought. NPCs move with deliberate delays and telegraphed actions, creating a chess-like battlefield where you can predict and counter enemy moves while executing your own strategies with precision.</p>
+                </div>
+                <div class="card">
+                    <h3>🌍 Low Metagame - Campaign Operations</h3>
+                    <p>Individual campaigns consist of 3-12 linked missions where you systematically <strong>obliterate regional threats</strong>. Between missions, customize your mech's top/bottom/internal parts, manage equipment durability, and prepare for varied environmental theaters (ground, air, space, underwater). Each campaign focuses on eliminating a specific threat or liberating a region, with tactical choices affecting both immediate success and long-term reputation.</p>
+                </div>
+                <div class="card">
+                    <h3>📰 High Metagame - Legacy System</h3>
+                    <p>The persistent universe tracks your <strong>reputation and methodology</strong> through procedurally generated news coverage. Civilian casualties and environmental destruction influence how future missions are framed - from "heroic liberator" to "devastating force of nature." This reputation system affects what types of missions are offered, how NPCs react to your presence, and shapes the narrative context of each new campaign generated by the system.</p>
+                </div>
+                <div class="card">
+                    <h3>🚀 Practical Game Flow</h3>
+                    <p>Launch the mobile base → Select from available campaign options → Customize mech loadout → Deploy to battlefield → Execute tactical missions → Return for debriefing and news coverage → Equipment maintenance and crew interaction → Repeat with evolved context. Sessions can range from quick 20-minute tactical scenarios to epic 3-hour campaign arcs, with natural stopping points after each mission.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Mode -->
+        <section class="section">
+            <h2>🌌 Persistent Metagame Campaign</h2>
+            <div class="card">
+                <h3>🎭 Dynamic Reputation & Consequences</h3>
+                <p>Tile Mechs features a single, continuously evolving game mode built around a <strong>persistent metagame system</strong>. The universe generates infinite tactical campaigns while maintaining a permanent record of your actions and their consequences.</p>
+                <br>
+                <p><strong>Moral Spectrum Gameplay:</strong> Every mission allows you to choose between <strong>surgical precision</strong> (minimizing civilian casualties and environmental damage) or <strong>overwhelming destruction</strong> (maximum efficiency regardless of consequences). Both approaches are fully supported and rewarded differently.</p>
+                <br>
+                <p><strong>Procedural News Generation:</strong> Your actions generate realistic news coverage that ranges from "Type-3 Mecha successfully liberates oppressed population with minimal collateral damage" to "Devastating military intervention leaves region scarred but threat eliminated." This coverage influences what future missions become available and how the world reacts to your presence.</p>
+                <br>
+                <p><strong>Evolving Campaign Context:</strong> Past actions influence future mission generation. Regions you've liberated may request your aid again, while areas where you caused significant destruction might harbor new threats or resistance movements. The metagame ensures that no two players will experience the same long-term narrative arc, even when facing similar tactical scenarios.</p>
+            </div>
+        </section>
+
+        <!-- Game Features & Mechanics -->
+        <section class="section">
+            <h2>⚙️ Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>🌍 Environmental Destruction System</h4>
+                    <p>The battlefield is your canvas for destruction and transformation. <strong>Grass burns to ash</strong>, spreading fire across the terrain. <strong>Plasma weapons turn sand to glass</strong>, creating slippery surfaces that affect movement. <strong>Explosive weapons create molten lava craters</strong> that solidify into permanent obsidian scarring.</p>
+                    <br>
+                    <p>Destructible objects include fuel tanks with cross-shaped explosions, electrical transformers that arc lightning in multiple directions, and pressure tanks that launch themselves as projectiles when damaged. The environment becomes both weapon and consequence, with each battlefield telling the story of the conflict through permanent terrain changes.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🤖 Modular Mech Customization</h4>
+                    <p>Build your Type-3 Mecha from <strong>interchangeable components</strong>: top sections (affecting weapon capacity and special abilities), bottom sections (determining mobility and terrain traversal), and internal components (managing stamina, hitpoints, and special systems).</p>
+                    <br>
+                    <p>Each configuration creates different tactical possibilities. <strong>Hover units</strong> move smoothly but suffer from recoil. <strong>Spider legs</strong> climb mountains but move slowly. <strong>Wheeled systems</strong> excel on roads but struggle in rough terrain. Component durability and fatigue systems force strategic rotation of equipment, preventing over-reliance on single optimal builds.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>⚡ Real-Time Grid Combat</h4>
+                    <p>Experience the <strong>precision of turn-based tactics</strong> with the <strong>intensity of real-time action</strong>. The buffered input system allows complex tactical maneuvers to be queued and executed smoothly, while NPCs move with deliberate delays and clear telegraphing of their intentions.</p>
+                    <br>
+                    <p>Combat feels like <strong>"Chess at the speed of thought"</strong> - you can see what enemies will do next, plan your counters, and execute precise tactical responses. The grid system ensures that positioning, timing, and resource management remain paramount, while the real-time execution maintains engagement and flow.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🚀 Multi-Environment Combat Theaters</h4>
+                    <p>Deploy across <strong>six distinct combat environments</strong>: ground operations with full terrain interaction, air combat with momentum and altitude mechanics, space battles with drift physics, underwater missions with reduced visibility and modified movement, underground operations in confined spaces, and hyperspace encounters with compressed dimensional mechanics.</p>
+                    <br>
+                    <p>Your base mech adapts to each environment through <strong>Strike Pack systems</strong> - modular additions that modify capabilities for specific theaters while maintaining core tactical systems. Each environment presents unique tactical challenges and opportunities for creative destruction.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>💥 Advanced Projectile Physics</h4>
+                    <p>Weapons feature <strong>complex interaction systems</strong> with 20+ parameters per weapon type. Projectiles can penetrate multiple targets, leave environmental trails (fire, plasma residue, toxic clouds), cause knockback effects, and interact with terrain in realistic ways.</p>
+                    <br>
+                    <p>The system supports everything from <strong>simple kinetic weapons</strong> to <strong>exotic energy systems</strong>. Weapons can ignite flammable gases, create temporary terrain effects, or even deploy persistent objects like laser prisms that redirect future attacks. This depth allows for emergent tactical combinations and creative problem-solving approaches.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>⚖️ Moral Consequence Framework</h4>
+                    <p>Every action carries weight beyond immediate tactical success. The game tracks <strong>civilian casualties</strong>, <strong>environmental damage</strong>, <strong>infrastructure preservation</strong>, and <strong>tactical efficiency</strong> to generate realistic consequences and reputation changes.</p>
+                    <br>
+                    <p>Neither "heroic" nor "destructive" approaches are judged as inherently right or wrong. Instead, the system presents <strong>authentic consequences</strong> for each approach, allowing players to explore different moral frameworks while experiencing the realistic outcomes of their tactical philosophy. Some scenarios may even reward or necessitate more aggressive approaches when facing particularly hostile or uncooperative situations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Image -->
+        <section class="image-section">
+            <img src="images/tilemechs_3_feature.jpg" alt="Environmental transformation mechanics">
+            <div class="image-quote">
+                <p>"The battlefield remembers every choice. Grass to ash, sand to glass, earth to lava - your actions reshape the world permanently."</p>
+            </div>
+        </section>
+
+        <!-- Box Art Section -->
+        <section class="boxart-section">
+            <div class="boxart-image">
+                <img src="images/tilemechs_4_boxart.jpg" alt="Tile Mechs Box Art">
+            </div>
+            <div class="boxart-content">
+                <h3>AAL: Tile Mechs - Tactical Grid Combat</h3>
+                <p>Command the legendary Type-3 Mecha through an infinite universe of tactical conflicts where every decision reshapes both battlefield and reputation. Experience the perfect fusion of strategic depth and real-time intensity, where environmental destruction becomes both weapon and consequence.</p>
+                <br>
+                <p><strong>Master precise grid combat</strong> with buffered input systems that reward tactical thinking. <strong>Customize modular mech configurations</strong> for diverse environmental theaters. <strong>Shape your legacy</strong> through moral choices that influence future conflicts and world state.</p>
+                <br>
+                <p>In a universe where overwhelming firepower comes with overwhelming responsibility, will you be remembered as a surgical liberator or a force of nature? The battlefield will remember your choice.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+</body>
+</html>

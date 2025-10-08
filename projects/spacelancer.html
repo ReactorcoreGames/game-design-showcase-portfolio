@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacelancer: Open World Explorer</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#00d4ff',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#7a8591',
+                lineColor: '#7a8591',
+                sectionBkgColor: '#1a1f3a',
+                altSectionBkgColor: '#2a2f4a',
+                gridColor: '#7a8591',
+                tertiaryColor: '#8b5cf6',
+                background: '#1a1f3a',
+                secondaryColor: '#8b5cf6'
+            }
+        });
+    </script>
+    <style>
+        /*
+        Image Names:
+        spacelancer_1_title.jpg - Epic space battle with multiple ship types engaged in combat around asteroid field
+        spacelancer_2_vignette.jpg - Close-up of a sleek fighter transforming from flight mode to shipmech mode
+        spacelancer_3_feature.jpg - Detailed view of modular ship hardpoints and weapon customization interface
+        spacelancer_4_boxart.jpg - Heroic freelancer ship silhouetted against nebula with distant space station
+        spacelancer_5_story.jpg - Wide panoramic view of the Andromeda frontier showing multiple star systems, trade routes, and faction territories
+        */
+
+        :root {
+            --background-color: #0f1419;
+            --container-bg: #1a1f3a;
+            --secondary-bg: #2a2f4a;
+            --border-color: #7a8591;
+            --text-color: #ffffff;
+            --primary-cyan: #00d4ff;
+            --accent-purple: #8b5cf6;
+            --steel-gray: #7a8591;
+            --title-shadow: #00d4ff;
+            --card-shadow: rgba(0, 212, 255, 0.3);
+            --purple-shadow: rgba(139, 92, 246, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--background-color) 0%, var(--container-bg) 100%);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(26, 31, 58, 0.9);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: var(--steel-gray);
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .patreon-link:hover {
+            color: var(--primary-cyan);
+            border-color: var(--primary-cyan);
+            box-shadow: 0 0 10px var(--card-shadow);
+        }
+
+        .hero-section {
+            height: 700px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('images/spacelancer_1_title.jpg') center/cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(15, 20, 25, 0.4) 0%,
+                rgba(26, 31, 58, 0.6) 50%,
+                rgba(42, 47, 74, 0.4) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            text-shadow: 
+                0 0 20px var(--title-shadow),
+                0 0 40px var(--title-shadow),
+                0 0 80px rgba(0, 212, 255, 0.5),
+                2px 2px 4px rgba(0, 0, 0, 0.8);
+            animation: electricGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes electricGlow {
+            0% {
+                text-shadow: 
+                    0 0 20px var(--title-shadow),
+                    0 0 40px var(--title-shadow),
+                    0 0 80px rgba(0, 212, 255, 0.5),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            100% {
+                text-shadow: 
+                    0 0 30px var(--title-shadow),
+                    0 0 60px var(--title-shadow),
+                    0 0 120px rgba(0, 212, 255, 0.8),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--accent-purple);
+            font-weight: 600;
+            text-shadow: 
+                0 0 10px var(--accent-purple),
+                1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--text-color);
+            text-shadow: 
+                0 0 15px var(--primary-cyan),
+                0 0 30px rgba(0, 212, 255, 0.6),
+                1px 1px 3px rgba(0, 0, 0, 0.8);
+            animation: electricGlow 3s ease-in-out infinite alternate;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--secondary-bg) 100%);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--primary-cyan);
+            box-shadow: 0 12px 48px var(--card-shadow);
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            color: var(--primary-cyan);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .controls-section {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .controls-section h3 {
+            color: var(--primary-cyan);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .image-section {
+            position: relative;
+            margin: 4rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, rgba(26, 31, 58, 0.95) 0%, rgba(42, 47, 74, 0.9) 100%);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .image-quote p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            margin: 0;
+        }
+
+        .layers-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .layer-card {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--secondary-bg) 100%);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .layer-card:hover {
+            border-color: var(--accent-purple);
+            box-shadow: 0 12px 48px var(--purple-shadow);
+        }
+
+        .layer-card h4 {
+            color: var(--accent-purple);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--secondary-bg) 100%);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary-cyan);
+            box-shadow: 0 12px 48px var(--card-shadow);
+        }
+
+        .feature-card h4 {
+            color: var(--primary-cyan);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .mermaid-section {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 4rem 0;
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 4rem 0;
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .boxart-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+        }
+
+        .boxart-content h3 {
+            color: var(--primary-cyan);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer {
+            background: var(--container-bg);
+            border-top: 2px solid var(--border-color);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--steel-gray);
+            margin: 0.5rem 0;
+        }
+
+        .footer a {
+            color: var(--primary-cyan);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-shadow: 0 0 5px var(--primary-cyan);
+        }
+
+        strong {
+            color: var(--primary-cyan);
+            font-weight: 700;
+        }
+
+        em {
+            color: var(--accent-purple);
+        }
+
+        @media (max-width: 768px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .patreon-link {
+                position: relative;
+                top: 0;
+                left: 0;
+                display: block;
+                text-align: center;
+                margin: 1rem;
+            }
+            
+            .hero-section {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+    
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Spacelancer</h1>
+            <div class="subtitle">Open World Explorer</div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section">
+            <p style="font-size: 1.2rem; text-align: center; color: var(--text-color); max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                Experience the ultimate freelancer fantasy in a living universe where every choice matters. Combine the open exploration of classic space sims with modern tactical depth in bite-sized campaign sessions. Whether you pursue wealth through trade, glory through combat, or legends through exploration, your path to retirement is yours to forge.
+            </p>
+        </section>
+
+        <section class="section">
+            <div class="overview-grid">
+                <div class="card">
+                    <h3>🎯 Target Audience</h3>
+                    <p>Space simulation enthusiasts seeking meaningful depth combined with newcomers wanting an accessible entry point. Perfect for players who enjoy strategic decision-making, character progression, and emergent storytelling in open-world environments.</p>
+                </div>
+                <div class="card">
+                    <h3>🎮 Game's Purpose</h3>
+                    <p>Fulfills fundamental human needs for <strong>autonomy</strong> through meaningful choice, <strong>mastery</strong> through skill development, and <strong>adventure</strong> through exploration and discovery. Creates genuine agency in a responsive, living universe.</p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Core Concept</h3>
+                    <p>A modular campaign system where each freelancer career offers multiple victory paths. Deep tactical combat meets intuitive exploration, supported by emergent narratives and persistent universe evolution across playthroughs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-section">
+            <img src="images/spacelancer_5_story.jpg" alt="Andromeda Frontier Overview">
+            <div class="image-quote">
+                <p>"Five centuries of settlement have forged a hundred star systems into a thriving frontier where every faction writes its own destiny."</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Lore & Story</h2>
+            <div class="controls-section">
+                <h3>🌌 The Andromeda Frontier</h3>
+                <p>Five hundred years ago, the <strong>Great Migration</strong> began when humanity's first functional FTL drives opened the path to Andromeda. Massive sleeper ships carried the brave and desperate across the void, seeking new lives in an untamed galaxy. What they found was a region of approximately <em>one hundred star systems</em> rich with resources, opportunities, and challenges that would forge a new chapter in human civilization.</p>
+                <br>
+                <p><strong>The Founding Era (2525-2580):</strong> Early colonists established the first settlements around stable stars, building infrastructure from salvaged sleeper ship components. The <em>Astro-Navigation Consortium</em> mapped the initial trade routes, while <em>Colonial Defense Forces</em> protected growing populations from radiation storms, asteroid collisions, and the occasional alien probe.</p>
+                <br>
+                <p><strong>The Faction Wars (2580-2650):</strong> As resources grew scarce and ideologies clashed, the original unified colony fragmented into six major factions. The <em>Corporate Syndicate</em> prioritized efficiency and profit, the <em>Free Traders Union</em> championed independent commerce, the <em>Stellar Navy</em> maintained military order, the <em>Research Collective</em> pursued technological advancement, the <em>Frontier Militia</em> defended outer settlements, and the <em>Neo-Terran Alliance</em> preserved Earth traditions. Today, these factions maintain complex relationships - sometimes allied, sometimes rival, always competing for influence.</p>
+                <br>
+                <p><strong>The Modern Frontier (2650-Present):</strong> The Andromeda region has evolved into a <strong>vibrant, multi-cultural civilization</strong> where legal and illegal enterprises coexist much like in Earth's ancient frontier days. Freelancers of all kinds - merchants, mercenaries, explorers, smugglers, researchers, and peacekeepers - navigate this complex web of opportunity and danger. <em>Your story is just one of millions</em> being written across these hundred stars, where every choice shapes both personal destiny and the greater tapestry of human expansion.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="controls-section">
+                <h3>🕹️ Controls & Interface</h3>
+                <p>Spacelancer features a <strong>hybrid flight control system</strong> designed for both accessibility and precision. Traditional <em>throttle-based flight</em> provides intuitive movement for exploration and travel, while the advanced <em>shipmech transformation mode</em> offers omni-directional control for tactical combat situations.</p>
+                <br>
+                <p>The interface supports multiple play styles through <strong>adaptive assistance systems</strong>: auto-pilot for navigation, VATS-style targeting for precision without micromanagement, and intelligent tractor beams that prioritize fresh loot. Players control their level of engagement - from hands-off strategic oversight to twitch-perfect dogfighting execution.</p>
+                <br>
+                <p><strong>Key Control Features:</strong> Seamless mode switching, context-sensitive targeting, energy management through weapon groups, and streamlined inventory with hotkey support for consumables and emergency equipment.</p>
+            </div>
+        </section>
+
+        <section class="image-section">
+            <img src="images/spacelancer_2_vignette.jpg" alt="Ship transformation sequence">
+            <div class="image-quote">
+                <p>"Transform your ship's configuration in real-time - switch from high-speed pursuit mode to precision tactical stance when the situation demands it."</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Game Layers</h2>
+            <div class="layers-grid">
+                <div class="layer-card">
+                    <h4>🎯 Moment-to-Moment Gameplay</h4>
+                    <p>Dynamic space combat featuring <strong>multi-layer defense systems</strong> (shields, armor, hull) where weapon choice matters. Players manage energy distribution, optimal positioning for weapon firing arcs, and real-time transformation between flight and shipmech modes. Combat rewards tactical thinking over reflexes, with intelligent assistance available for accessibility.</p>
+                </div>
+                <div class="layer-card">
+                    <h4>🚀 Campaign Layer</h4>
+                    <p>Each freelancer career spans <strong>5-20 hours of focused progression</strong> with multiple victory conditions. Players can retire as wealthy traders, faction leaders, legendary heroes, or master explorers. Campaigns feature branching opportunities, meaningful consequences, and natural story arcs that conclude satisfyingly rather than artificially extending playtime.</p>
+                </div>
+                <div class="layer-card">
+                    <h4>🌌 Persistent Universe</h4>
+                    <p>The universe evolves between campaigns through <strong>celestial movements and faction dynamics</strong>. Previous characters leave lasting impacts: retired freelancers become statues in the Hall of Fame, while fallen heroes may return as enhanced nemeses. Each new campaign inherits a world shaped by all previous adventures, creating genuine continuity and meaning.</p>
+                </div>
+                <div class="layer-card">
+                    <h4>⚙️ Session Flow</h4>
+                    <p>Designed for <strong>flexible engagement</strong> supporting both quick 30-minute missions and extended 3-hour exploration sessions. Robust save system preserves all progress with optional permadeath rewards. Players can seamlessly transition between active combat, peaceful trading, exploration, and strategic planning based on available time and energy levels.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>🔧 Modular Ship Customization</h4>
+                    <p>The <strong>hardpoint system</strong> combines tactical depth with intuitive "plug-and-play" simplicity. Ships feature energy, ballistic, missile, and utility hardpoints with size categories (small, medium, large, naval). Advanced hardpoint splitters allow creative configurations - convert large mounts to multiple smaller weapons or combine small mounts for heavier firepower. Every ship remains omni-capable while specialized loadouts excel in specific scenarios.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🚁 Dual Flight Modes</h4>
+                    <p><strong>Flight mode</strong> provides intuitive throttle-based movement perfect for exploration and travel, while <strong>shipmech mode</strong> transforms your vessel into a precision tactical platform with omni-directional control. Each mode has distinct advantages: flight mode for speed and efficiency, shipmech mode for combat maneuverability and precise positioning. Mode switching is instant and strategic, not cumbersome.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>💼 Dynamic Economy & Factions</h4>
+                    <p>A <strong>living economic system</strong> where supply and demand shift based on conflicts, discoveries, and player actions. Six major factions maintain complex relationships that evolve over time. Players can align with factions for unique benefits, remain independent for maximum flexibility, or even work multiple angles simultaneously. Reputation systems track relationships across the entire universe, opening and closing opportunities dynamically.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🛡️ Tactical Defense Layers</h4>
+                    <p>Combat features <strong>shields, armor, and hull</strong> as distinct defensive layers, each with different properties and optimal counters. Energy weapons excel against shields, ballistic weapons strip armor effectively, and specialized weapons target hull directly. This creates meaningful loadout decisions - do you prioritize shield-stripping for quick kills, armor-piercing for sustained damage, or balanced approaches for versatility?</p>
+                </div>
+                <div class="feature-card">
+                    <h4>👥 Nemesis & Legacy Systems</h4>
+                    <p>Since <strong>nobody dies in space combat</strong> (emergency teleport systems save all pilots), defeated enemies remember encounters and develop personal rivalries. Recurring nemeses adapt their tactics and equipment based on previous fights. Meanwhile, your retired characters become permanent fixtures in the universe - their achievements immortalized, their hidden stashes discoverable by future freelancers.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🏆 Multiple Victory Paths</h4>
+                    <p>Achieve retirement through <strong>diverse victory conditions</strong> inspired by classic strategy games. Accumulate vast wealth through trading, rise to faction leadership through military service or political maneuvering, become a legendary hero by eliminating alien menaces, complete cultural pilgrimages, lead major technological projects, or discover ancient treasures. Each path requires different skills and offers unique narrative satisfaction.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-section">
+            <img src="images/spacelancer_3_feature.jpg" alt="Modular hardpoint customization interface">
+            <div class="image-quote">
+                <p>"Every hardpoint tells a story - energy for shields, ballistics for armor, missiles for decisive strikes. Your loadout is your strategy."</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="mermaid-section">
+                <h2 class="section-title">Freelancer Career Progression</h2>
+                <div class="mermaid">
+                    flowchart TD
+                        A[New Freelancer] --> B{Choose Starting Path}
+                        B --> C[Corporate Contractor]
+                        B --> D[Independent Trader]  
+                        B --> E[Military Veteran]
+                        B --> F[Salvage Operator]
+                        
+                        C --> G{Early Success?}
+                        D --> G
+                        E --> G  
+                        F --> G
+                        
+                        G -->|Yes| H[Expand Operations]
+                        G -->|No| I[Adapt Strategy]
+                        
+                        H --> J{Victory Condition}
+                        I --> J
+                        
+                        J --> K[Wealth Accumulation]
+                        J --> L[Faction Leadership]
+                        J --> M[Legendary Hero]
+                        J --> N[Master Explorer]
+                        J --> O[Tech Pioneer]
+                        
+                        K --> P[Retirement Success]
+                        L --> P
+                        M --> P
+                        N --> P
+                        O --> P
+                        
+                        P --> Q[Hall of Fame]
+                        
+                        style A fill:#00d4ff,stroke:#ffffff,color:#000000
+                        style P fill:#8b5cf6,stroke:#ffffff,color:#ffffff
+                        style Q fill:#8b5cf6,stroke:#ffffff,color:#ffffff
+                </div>
+            </div>
+        </section>
+
+        <section class="boxart-section">
+            <img src="images/spacelancer_4_boxart.jpg" alt="Spacelancer box art" class="boxart-image">
+            <div class="boxart-content">
+                <h3>Spacelancer: Open World Explorer</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-color);">
+                    <strong>Command your destiny in the vast frontier of space.</strong> Pilot customizable spacecraft through a living universe where every decision shapes your legacy. Master tactical combat, build economic empires, forge political alliances, or pursue legendary discoveries.
+                </p>
+                <br>
+                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-color);">
+                    <em>Transform between flight and shipmech modes</em> for tactical superiority. Navigate complex faction relationships in a persistent universe that remembers every action. Choose your path to retirement: wealth, power, glory, or wisdom.
+                </p>
+                <br>
+                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-color);">
+                    Experience <strong>campaign-based progression</strong> with permadeath rewards, nemesis systems, and multiple victory conditions. Each freelancer's story becomes part of universal history, inspiring and challenging future spacelancers.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+            <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+            <p>Reactorcore Games - 2025</p>
+        </div>
+    </footer>
+</body>
+</html>

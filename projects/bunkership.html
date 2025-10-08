@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunkership Exhaust Port Breaker: Tactical Demolition Action</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+<!-- 
+Image Files Required:
+bunkership_1_title.jpg - Epic space battle scene with massive rocky bunkership under assault
+bunkership_2_vignette.jpg - Close-up tactical view of ball/projectile exploiting exhaust port weakness  
+bunkership_3_feature.jpg - Cross-section diagram showing procedural ship generation layers
+bunkership_4_boxart.jpg - Dramatic box art with spec ops ship vs imposing bunkership
+bunkership_5_story.jpg - Zoomed out overworld view of the Helios sector with gas giant and asteroid fields
+-->
+
+<style>
+:root {
+  --background-color: #2a1f3d;          /* Dark purple background */
+  --container-bg: #544c35;              /* Pale beige rock cards */
+  --container-dark: #1a1425;            /* Darker purple for contrast */
+  --accent-primary: #4bd0d7;            /* Desaturated teal */
+  --accent-secondary: #88d7db;          /* Lighter teal variant */
+  --metallic-frame: #c0b8a8;            /* Bright metallic frames */
+  --metallic-highlight: #d4cdb6;        /* Lighter metallic */
+  --text-primary: #d8e1db;              /* Dark brown for beige cards */
+  --text-secondary: #4a4637;            /* Medium brown */
+  --text-light: #e8dcc0;                /* Light text for dark backgrounds */
+  --border-color: #8a7f6e;              /* Muted border */
+  --shadow-color: rgba(26, 20, 37, 0.4); /* Purple shadow */
+  --glow-color: #48a0a3;                /* Teal glow */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, var(--background-color) 0%, var(--container-dark) 100%);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Reactorcore Label */
+.reactorcore-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  background: var(--container-dark);
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--metallic-frame);
+  z-index: 1000;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.reactorcore-label:hover {
+  opacity: 1;
+  color: var(--accent-primary);
+}
+
+/* Title Section */
+.title-section {
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.title-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/bunkership_1_title.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  z-index: 1;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(42, 31, 61, 0.2) 0%, rgba(26, 20, 37, 0.3) 100%);
+  z-index: 2;
+}
+
+.title-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.main-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+  animation: electricBuzz 3s ease-in-out infinite;
+}
+
+.subtitle {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--accent-secondary);
+  font-weight: 300;
+  text-shadow: 0 0 8px var(--glow-color);
+}
+
+@keyframes electricBuzz {
+  0%, 100% { 
+    text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+  }
+  25% { 
+    text-shadow: 0 0 8px var(--glow-color), 0 0 16px var(--glow-color), 0 0 24px var(--glow-color);
+  }
+  50% { 
+    text-shadow: 0 0 12px var(--glow-color), 0 0 24px var(--glow-color), 0 0 36px var(--glow-color);
+  }
+  75% { 
+    text-shadow: 0 0 6px var(--glow-color), 0 0 14px var(--glow-color), 0 0 20px var(--glow-color);
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Headers */
+.section-header {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--text-light);
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  text-shadow: 0 0 8px var(--glow-color);
+  animation: electricBuzz 3s ease-in-out infinite;
+}
+
+/* Cards */
+.card {
+  background: var(--container-bg);
+  border: 2px solid var(--metallic-frame);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--metallic-highlight);
+}
+
+/* Overview Section */
+.overview {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.overview p {
+  margin-bottom: 1.5rem;
+}
+
+/* Three Card Row */
+.three-card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Game Layers */
+.game-layers {
+  margin-bottom: 3rem;
+}
+
+.layer-card {
+  background: var(--container-bg);
+  border: 2px solid var(--metallic-frame);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.layer-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+/* Image Sections */
+.image-section {
+  position: relative;
+  margin: 3rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--metallic-frame);
+}
+
+.image-section img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-quote {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(26, 20, 37, 0.9));
+  padding: 2rem;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background: var(--container-bg);
+  border: 2px solid var(--metallic-frame);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-emoji {
+  font-size: 1.5rem;
+}
+
+/* Box Art Section */
+.box-art-section {
+  display: grid;
+  grid-template-columns: 390px 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+  align-items: stretch;
+}
+
+.box-art-image {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--metallic-frame);
+  width: 390px;
+  height: 585px;
+  aspect-ratio: 2 / 3;
+}
+
+.box-art-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-art-description {
+  background: var(--container-bg);
+  border: 2px solid var(--metallic-frame);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.box-art-description p {
+  margin-bottom: 1.5rem;
+}
+
+.box-art-description hr {
+  border: none;
+  height: 2px;
+  background: var(--metallic-frame);
+  margin: 2rem 0;
+}
+
+.box-art-description .quote {
+  font-style: italic;
+  text-align: center;
+  color: var(--accent-primary);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.box-art-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Mermaid Diagram Styling */
+.mermaid-container {
+  background: var(--container-bg);
+  border: 2px solid var(--metallic-frame);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* Footer */
+.footer {
+  background: var(--container-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-top: 2px solid var(--metallic-frame);
+}
+
+.footer a {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .three-card-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .box-art-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Bold text styling */
+strong {
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+</style>
+
+<a href="https://www.patreon.com/ReactorcoreGames" class="reactorcore-label">
+  Reactorcore's Personal Game Design Project
+</a>
+
+<div class="title-section">
+  <div class="title-background"></div>
+  <div class="title-overlay"></div>
+  <div class="title-content">
+    <h1 class="main-title">Bunkership Exhaust Port Breaker</h1>
+    <h2 class="subtitle">Tactical Demolition Action</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+  <!-- Game Overview -->
+  <section class="overview">
+    <div class="card">
+      <p><strong>Transform the abstract brick breaker genre into a meaningful, grounded experience.</strong> Command an experimental spec ops vessel to exploit the critical weakness of massive armored bunkerships - their exhaust ports. Each procedurally generated warship presents a unique tactical challenge requiring precision, timing, and strategic thinking.</p>
+      
+      <p><strong>Every bunkership tells a story through its scars.</strong> Carved from hollowed asteroid rock and bristling with defensive systems, these imposing vessels of an authoritarian regime must be dismantled from within. Use advanced energy orb technology to penetrate their defenses and trigger catastrophic internal damage.</p>
+      
+      <p><strong>Experience warfare as tactical puzzle-solving.</strong> Master the physics of ricocheting projectiles, exploit architectural weaknesses, and manage your energy resources while turrets rain fire around you. No two encounters are identical - procedural generation ensures infinite strategic variety.</p>
+    </div>
+  </section>
+
+  <!-- Three Cards Row -->
+  <div class="three-card-row">
+    <div class="card">
+      <div class="card-title">🎯 Target Audience</div>
+      <p><strong>Strategy-minded action enthusiasts</strong> who appreciate tactical depth beneath visceral gameplay. Players seeking meaningful challenge that rewards spatial reasoning, pattern recognition, and adaptive thinking.</p><br>
+      <p><strong>Brick breaker veterans</strong> frustrated by abstract, meaningless experiences. Gamers who want every element to serve a narrative and strategic purpose.</p><br>
+      <p><strong>Tactical combat fans</strong> drawn to asymmetric warfare scenarios where clever exploitation of weaknesses triumphs over brute force.</p>
+    </div>
+    
+    <div class="card">
+      <div class="card-title">🎮 Game's Purpose</div>
+      <p><strong>Fulfills the human need for competence and mastery</strong> through meaningful skill development. Each success feels earned through understanding rather than luck.</p><br>
+      <p><strong>Provides strategic satisfaction</strong> by transforming reflexive gameplay into tactical decision-making. Players experience the joy of finding elegant solutions to complex spatial puzzles.</p><br>
+      <p><strong>Creates narrative agency</strong> where player actions generate personal war stories against a backdrop of resistance warfare.</p>
+    </div>
+    
+    <div class="card">
+      <div class="card-title">⚡ Core Concept</div>
+      <p><strong>Precision beats power.</strong> Success comes from identifying structural weaknesses and exploiting them with surgical strikes rather than overwhelming firepower.</p><br>
+      <p><strong>Every ship is a unique puzzle.</strong> Procedural generation creates infinite tactical scenarios while maintaining logical consistency and strategic depth.</p><br>
+      <p><strong>Physics as strategy.</strong> Master the art of projectile trajectory, timing, and momentum to achieve maximum damage with minimal resources.</p>
+    </div>
+  </div>
+
+  <!-- Story Image -->
+  <div class="image-section">
+    <img src="images/bunkership_5_story.jpg" alt="The Helios sector - gas giant surrounded by asteroid fields and warring factions">
+    <div class="image-quote">
+      "Sixty star systems under the shadow of tyranny - time to bring them into the light."
+    </div>
+  </div>
+
+  <!-- Lore & Story -->
+  <section>
+    <h2 class="section-header">📖 Lore & Story</h2>
+    <div class="card">
+      <p><strong>The Helios Sector - A Region Under Siege:</strong> Within approximately sixty star systems surrounding a massive gas giant, an authoritarian nation has devolved into thousands of brutal gangs and clans. These militaristic factions control vast asteroid fields, planetoids, and moons, ruling through fear, force, and abuse while their society crumbles under the weight of the seven deadly sins.</p><br>
+      
+      <p><strong>From Unity to Chaos:</strong> What was once a unified human colonial government has fractured into crude, mafia-like organizations that prioritize territorial control over civilization. Their bunkerships - massive warships carved from hollowed asteroid rock - prowl the sector conducting raids against neighboring peaceful systems, spreading misery wherever they venture.</p><br>
+      
+      <p><strong>The Elite Response:</strong> Neighboring star nations, exhausted by constant raids and diplomatic failures, have authorized the creation of an elite task force equipped with experimental technology. Rather than costly capital ship battles that would devastate entire systems, this surgical approach targets the enemy's military infrastructure directly.</p><br>
+      
+      <p><strong>Your Mission Begins:</strong> Command one of these advanced spec ops vessels, purpose-built to exploit the critical design flaw in enemy bunkerships - their exhaust ports. Each successful mission weakens the authoritarian grip on the Helios sector, bringing hope to oppressed populations and demonstrating that even the mightiest fortress can fall to precision and courage.</p><br>
+      
+      <p><strong>A War of Liberation:</strong> This is not conquest but liberation - dismantling a military machine that terrorizes the innocent while giving the people of the Helios sector a chance to rebuild something better from the ashes of tyranny.</p>
+    </div>
+  </section>
+
+  <!-- Controls & Interface -->
+  <section>
+    <h2 class="section-header">⚙️ Controls & Interface</h2>
+    <div class="card">
+      <p><strong>Mouse-Primary Control Scheme:</strong> Navigate your spec ops paddle ship with fluid mouse movement while managing energy orb trajectory and weapon systems through intuitive mouse button controls.</p><br>
+      
+      <p><strong>Adaptive Ship Configuration:</strong> Dynamically widen or contract your vessel's profile to optimize for different tactical situations. Soften your ship's surface to decelerate incoming orbs for precision control, or harden it to dramatically amplify momentum for devastating impact.</p><br>
+      
+      <p><strong>Temporal Mastery:</strong> Control the flow of battle itself with timescale manipulation ranging from 25% slowmo for precise targeting to 200% acceleration for rapid execution. Strategic pacing becomes a tactical tool.</p><br>
+      
+      <p><strong>Energy Management System:</strong> Each orb launch consumes significant energy that regenerates slowly, encouraging tactical precision over wasteful spam. Your vessel's rounded edges allow for sophisticated trajectory manipulation through careful positioning.</p>
+    </div>
+  </section>
+
+  <!-- Vignette Image -->
+  <div class="image-section">
+    <img src="images/bunkership_2_vignette.jpg" alt="Tactical exploitation of bunkership exhaust port">
+    <div class="image-quote">
+      "Every bunkership has a weakness - find it, exploit it, obliterate it."
+    </div>
+  </div>
+
+  <!-- Game Layers -->
+  <section class="game-layers">
+    <h2 class="section-header">🏗️ Game Layers</h2>
+    
+    <div class="layer-card">
+      <div class="layer-title">⚡ Moment-to-Moment Active Gameplay</div>
+      <p><strong>Tactical demolition through physics mastery.</strong> Control your spec ops vessel as you launch energy orbs toward massive bunkerships, using precise positioning and timing to exploit exhaust ports and structural weaknesses. Navigate defensive turret fire while managing energy resources and weapon systems.</p><br>
+      
+      <p><strong>Dynamic threat response.</strong> Adapt to procedurally placed turrets, environmental hazards, and unexpected structural configurations. Each shot requires consideration of trajectory, momentum, and potential chain reactions within the target vessel.</p><br>
+      
+      <p><strong>Progressive escalation.</strong> As bunkership defenses crumble, internal explosions create new opportunities and dangers. Falling debris becomes both obstacle and tactical opportunity in the evolving battlefield.</p>
+    </div>
+    
+    <div class="layer-card">
+      <div class="layer-title">🏴‍☠️ Low Metagame: Clan Fleet Campaigns</div>
+      <p><strong>Systematic dismantling of gang fleets.</strong> Each campaign targets a specific clan's armada within the Helios sector. Face 5-15 procedurally generated bunkerships per campaign, each reflecting that clan's unique construction philosophy and combat doctrine.</p><br>
+      
+      <p><strong>Escalating complexity and rewards.</strong> Early missions feature simpler vessels perfect for learning enemy patterns. Later encounters deploy heavily fortified command ships with experimental defensive systems and multiple exhaust port configurations.</p><br>
+      
+      <p><strong>Tactical intelligence gathering.</strong> Each successful demolition provides insight into clan engineering practices, informing strategy for subsequent encounters and unlocking specialized equipment optimized for specific enemy architectures.</p>
+    </div>
+    
+    <div class="layer-card">
+      <div class="layer-title">🌌 High Metagame: Helios Sector Liberation</div>
+      <p><strong>Strategic warfare across 60 star systems.</strong> Your tactical successes reshape the political landscape as authoritarian clans lose military capability and territorial control. Witness the collapse of oppressive regimes through accumulated campaign victories.</p><br>
+      
+      <p><strong>Emergent narrative consequences.</strong> Receive procedurally generated news reports detailing how your actions affect civilian populations, leadership changes, and territorial shifts. Each clan's destruction creates power vacuums filled by neighboring factions.</p><br>
+      
+      <p><strong>Endless conflict evolution.</strong> After approximately 100 campaigns, hunt down remnant forces with increasingly desperate and experimental ship designs. New procedural parameters ensure fresh challenges even after sector-wide victory.</p>
+    </div>
+    
+    <div class="layer-card">
+      <div class="layer-title">🎮 Practical Game Flow</div>
+      <p><strong>Seamless session flexibility.</strong> Launch the application to immediate mission selection with no forced tutorials or artificial barriers. Choose from available clan targets or continue existing campaigns based on your available time and energy.</p><br>
+      
+      <p><strong>Natural completion rhythms.</strong> Each bunkership demolition provides satisfying closure in 3-10 minutes, while complete clan campaigns offer 30-90 minute experiences. Progress saves automatically at every logical checkpoint.</p><br>
+      
+      <p><strong>Tactical preparation and reflection.</strong> Mission briefings provide essential intelligence about target vessel characteristics. Post-mission analysis reviews performance and unlocks new equipment or tactical options for future encounters.</p>
+    </div>
+  </section>
+
+  <!-- Game Modes -->
+  <section>
+    <h2 class="section-header">🎯 Game Modes</h2>
+    <div class="card">
+      <div class="card-title">⚔️ Campaign Warfare (Primary Mode)</div>
+      <p><strong>Strategic depth meets tactical execution.</strong> The core experience focuses on systematic dismantling of clan fleets through procedurally generated campaigns. Each campaign offers 5-15 unique bunkership encounters with escalating difficulty and complexity.</p><br>
+      
+      <p><strong>Adaptive challenge scaling.</strong> Campaigns generate with varied pacing patterns - some build intensity gradually, others alternate between overwhelming assaults and tactical respite. The procedural system ensures no two campaigns follow identical difficulty progressions.</p><br>
+      
+      <p><strong>Complete narrative integration.</strong> Every tactical decision contributes to the larger story of resistance warfare against authoritarian forces. Mission outcomes influence future campaign generation, creating a personalized war narrative that reflects your strategic approach and tactical preferences.</p><br>
+      
+      <p><strong>Infinite replayability through systemic variety.</strong> The combination of procedural bunkership generation, dynamic campaign pacing, and evolving clan doctrines ensures that mastery comes through understanding systems rather than memorizing predetermined sequences.</p>
+    </div>
+  </section>
+
+  <!-- Game Features & Mechanics -->
+  <section>
+    <h2 class="section-header">🔧 Game Features & Mechanics</h2>
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <div class="feature-title">
+          <span class="feature-emoji">🏗️</span>
+          Procedural Bunkership Generation
+        </div>
+        <p><strong>Multi-stage algorithmic construction</strong> creates unique warships from hollowed asteroid rock. Each vessel begins with 1-4 overlapping rectangular zones that form the basic hull structure, maintaining 20% clear operational space for tactical maneuvering.</p><br>
+        
+        <p><strong>Logical architectural progression:</strong> Rock shells are carved, interiors filled with randomized ship components, defensive turrets strategically placed, then exhaust shafts and vulnerabilities created through systematic tunneling processes.</p><br>
+        
+        <p><strong>Emergent tactical opportunities</strong> arise from the interaction between defensive systems and structural weaknesses. No pre-designed solutions exist - success requires real-time analysis and adaptive strategy.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-title">
+          <span class="feature-emoji">⚡</span>
+          Dynamic Ball Physics & Powerups
+        </div>
+        <p><strong>Energy orb mastery through momentum management.</strong> Your projectiles gain damage potential through velocity, creating risk/reward decisions between safe, controlled shots and high-impact devastating strikes.</p><br>
+        
+        <p><strong>Tactical enhancement systems:</strong> Temporary powerups like ultra balls (increased speed/damage), explosion impacts, size modification, and specialized munitions (rail balls, thunder balls, asteroid balls) that transform your tactical options mid-engagement.</p><br>
+        
+        <p><strong>Physics-based problem solving</strong> where understanding projectile behavior, ricochets, and momentum transfer becomes as important as targeting accuracy. Mastery emerges through experimentation and observation.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-title">
+          <span class="feature-emoji">🎯</span>
+          Tactical Exhaust Port Exploitation
+        </div>
+        <p><strong>Inspired by Death Star vulnerability mechanics</strong> - identify and exploit critical weakness points in heavily armored vessels. Successful penetration of exhaust systems triggers devastating internal chain reactions.</p><br>
+        
+        <p><strong>Architectural analysis under pressure.</strong> Study bunkership layouts in real-time while avoiding defensive fire, identifying optimal entry angles for maximum internal damage propagation.</p><br>
+        
+        <p><strong>Satisfying tactical execution</strong> where successful exhaust port exploitation creates spectacular destruction sequences as internal systems overload and structural integrity collapses from within.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-title">
+          <span class="feature-emoji">🛡️</span>
+          Modular Tile & Turret Systems
+        </div>
+        <p><strong>Component-based structural variety:</strong> Ship interiors built from modular tiles including normal components, multi-hit systems, hardened armor, explosive fuel tanks, electrical capacitors, and missile systems.</p><br>
+        
+        <p><strong>Intelligent defensive networks.</strong> Turret systems coordinate their firing patterns, from basic blasters to tracking artillery, plasma launchers, and roaming drone defenders that adapt to your tactical approach.</p><br>
+        
+        <p><strong>Cascading destruction mechanics</strong> where explosive components trigger chain reactions, electrical systems discharge into nearby tiles, and structural failures create new tactical opportunities and hazards.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-title">
+          <span class="feature-emoji">🌪️</span>
+          Environmental Hazards & Events
+        </div>
+        <p><strong>Dynamic space weather phenomena</strong> that affect battlefield conditions. Gravitational anomalies, electromagnetic storms, and debris fields create additional tactical considerations beyond basic ship-to-ship combat.</p><br>
+        
+        <p><strong>Anomaly floater entities</strong> that traverse the battlefield independently, offering potential tactical advantages, dangerous obstacles, or unpredictable interactions with your energy weapons and defensive systems.</p><br>
+        
+        <p><strong>Atmospheric battlefield evolution</strong> through procedural environmental selection. Each engagement occurs within carefully chosen cosmic contexts that enhance rather than distract from the core tactical experience.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-title">
+          <span class="feature-emoji">⚔️</span>
+          Progressive Clan Warfare Campaigns
+        </div>
+        <p><strong>Narrative-driven procedural generation.</strong> Each of the dozens of gangs/clans possesses distinct ship construction philosophies, defensive doctrines, and technological preferences that influence their vessel characteristics.</p><br>
+        
+        <p><strong>Strategic campaign variety:</strong> Variable length operations (3-35+ objectives) with dynamic difficulty curves - some campaigns emphasize consistent challenge, others create intense peaks followed by tactical recovery periods.</p><br>
+        
+        <p><strong>Long-term progression and mastery.</strong> Successful clan eliminations unlock intelligence about remaining factions, specialized equipment, and advanced tactical options while generating news reports chronicling the liberation of the Helios sector.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Feature Image -->
+  <div class="image-section">
+    <img src="images/bunkership_3_feature.jpg" alt="Procedural generation cross-section diagram">
+    <div class="image-quote">
+      "No two warships are alike - infinite tactical challenges await."
+    </div>
+  </div>
+
+  <!-- Technical Innovation Section with Mermaid Diagram -->
+  <section>
+    <h2 class="section-header">🔬 Procedural Ship Generation System</h2>
+    <div class="mermaid-container">
+      <p style="margin-bottom: 2rem; color: var(--text-primary);"><strong>The algorithmic process that creates unique tactical challenges:</strong></p>
+      
+      <div class="mermaid">
+        flowchart TD
+          A[Define 1-4 Hull Zones] --> B[Create Rock Shell Borders]
+          B --> C[Hollow Interior Spaces] 
+          C --> D[Fill with Random Components]
+          D --> E[Place 5-15 Turret Systems]
+          E --> F[Carve Exhaust Shafts]
+          F --> G[Add Structural Weaknesses]
+          G --> H[Apply Color Schemes]
+          H --> I[Select Space Weather]
+          I --> J[Generate Tactical Challenge]
+          
+          style A fill:#4a7c7e,stroke:#c0b8a8,color:#fff
+          style J fill:#6b8e90,stroke:#c0b8a8,color:#fff
+          style E fill:#e8dcc0,stroke:#8a7f6e,color:#2d2419
+          style F fill:#e8dcc0,stroke:#8a7f6e,color:#2d2419
+      </div>
+      
+      <p style="margin-top: 2rem; color: var(--text-primary);">This systematic approach ensures that every bunkership presents logical defensive layouts while maintaining infinite variety in tactical solutions. The algorithm balances structural integrity with exploitable weaknesses, creating vessels that feel both realistic and strategically engaging.</p>
+    </div>
+  </section>
+
+  <!-- Box Art Section -->
+  <section class="box-art-section">
+    <div class="box-art-image">
+      <img src="images/bunkership_4_boxart.jpg" alt="Bunkership Exhaust Port Breaker Box Art">
+    </div>
+    <div class="box-art-description">
+      <div class="box-art-title">Bunkership Exhaust Port Breaker</div>
+      
+      <p><strong>Transform brick breaker from abstract puzzle into tactical warfare simulation.</strong> Command experimental spec ops technology to exploit the critical vulnerabilities of massive armored bunkerships carved from asteroid rock.</p>
+      
+      <p><strong>Every warship tells a story through its destruction.</strong> Procedural generation creates infinite unique vessels, each demanding fresh tactical analysis and strategic adaptation. Master the art of precision demolition in the fight to liberate the Helios sector.</p>
+      
+      <p><strong>Physics meets strategy in asymmetric space combat</strong> where clever exploitation of architectural weaknesses achieves what brute force cannot. Experience warfare as tactical puzzle-solving with meaningful narrative consequences.</p>
+      
+      <hr>
+      
+      <p class="quote">"Every fortress has a weakness. Every tyrant has a weakness. Find it. Exploit it. Victory."</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+  <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+  <p>Reactorcore Games - 2025</p>
+</div>
+
+<script>
+mermaid.initialize({ 
+  startOnLoad: true,
+  theme: 'base',
+  themeVariables: {
+    primaryColor: '#4a7c7e',
+    primaryTextColor: '#2d2419',
+    primaryBorderColor: '#c0b8a8',
+    lineColor: '#8a7f6e',
+    secondaryColor: '#e8dcc0',
+    tertiaryColor: '#6b8e90'
+  }
+});
+</script>
+
+</body>
+</html>

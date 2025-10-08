@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick Blade: Vigilante Action Game</title>
+    <style>
+        /*
+        Required Images:
+        kickblade_1_title.jpg - Vibrant stylish banner image of white-pink cutecore heroine against the backdrop of a industrial-corporate city world.
+        kickblade_2_vignette.jpg - Heroine in her white-pink cutecore outfit kicking a suited industrial-corporate ceo in the face.
+        kickblade_3_feature.jpg - Suited industrial-corporate corporate ceo flying knocked-out through the air out of a broken window with the heroine seen in the background who sent them flying.
+        kickblade_4_boxart.jpg - A maverick-cool heroine looking to the side with a smug look, industrial-corporate background (2:3 ratio)
+        kickblade_5_story.jpg - Zoomed out rooftop view of industrial-corporate cityscape, heroine standing on the edge of a building overlooking it all, with a ethereal spotlight shining over her. (16:9 aspect ratio)
+        */
+
+        :root {
+            --industrial-bg: #3a3a3a;
+            --industrial-dark: #2a2a2a;
+            --corporate-silver: #8bb3d6;
+            --corporate-blue: #5d8bb3;
+            --cutecore-pink: #ff69b4;
+            --cutecore-light-pink: #ffb3d9;
+            --cutecore-white: #ffffff;
+            --text-cutecore: #ff69b4;
+            --text-industrial: #b0b0b0;
+            --shadow-pink: rgba(255, 105, 180, 0.6);
+            --shadow-industrial: rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--industrial-bg) 0%, var(--shadow-pink) 100%);
+            color: var(--text-industrial);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--cutecore-light-pink);
+            padding: 8px 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--cutecore-white);
+            font-size: 0.8em;
+            border: 2px solid var(--cutecore-pink);
+            transition: all 0.3s ease;
+            z-index: 100;
+            text-shadow: 0 0 8px var(--shadow-pink);
+        }
+
+        .patreon-link:hover {
+            background: var(--cutecore-pink);
+            color: var(--cutecore-white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow-pink);
+        }
+
+        .title-section {
+            height: 750px;
+            background: url('images/kickblade_1_title.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .title-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(58, 58, 58, 0.5), rgba(42, 42, 42, 0.7));
+        }
+
+        .title-content {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .main-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--cutecore-white);
+            text-shadow: 2px 2px 0 var(--cutecore-pink), 4px 4px 0 rgba(223, 6, 114, 0.8), 0 0 20px var(--shadow-pink);
+            margin-bottom: 0.5rem;
+            animation: heartPulse 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--cutecore-light-pink);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 15px var(--shadow-pink);
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { 
+                text-shadow: 2px 2px 0 var(--cutecore-pink), 4px 4px 0 rgba(255, 105, 180, 0.8),
+                           0 0 20px var(--shadow-pink);
+            }
+            50% { 
+                text-shadow: 2px 2px 0 var(--cutecore-pink), 4px 4px 0 rgba(255, 105, 180, 0.8),
+                           0 0 35px var(--shadow-pink), 0 0 50px rgba(255, 105, 180, 0.9);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--cutecore-white);
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 2px 2px 0 var(--cutecore-pink), 4px 4px 0 rgba(255, 105, 180, 0.8), 0 0 20px var(--shadow-pink);
+            animation: heartPulse 3s ease-in-out infinite;
+        }
+
+        .overview-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-industrial);
+            background: var(--industrial-dark);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 3px solid var(--corporate-silver);
+            box-shadow: 0 8px 25px var(--shadow-industrial);
+        }
+
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: var(--industrial-dark);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 3px solid var(--corporate-silver);
+            box-shadow: 0 8px 25px var(--shadow-industrial);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px var(--shadow-industrial), 0 0 20px var(--shadow-pink);
+            border-color: var(--cutecore-pink);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cutecore-pink);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--shadow-pink);
+        }
+
+        .card-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .controls-section {
+            background: var(--industrial-dark);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 3px solid var(--corporate-silver);
+            box-shadow: 0 8px 25px var(--shadow-industrial);
+            margin: 3rem 0;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .control-item {
+            background: linear-gradient(135deg, var(--industrial-bg), var(--industrial-dark));
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--corporate-silver);
+        }
+
+        .control-key {
+            font-weight: 700;
+            color: var(--cutecore-pink);
+            font-size: 1.2rem;
+            text-shadow: 0 0 8px var(--shadow-pink);
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 4rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px var(--shadow-industrial);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 550px;
+            background: url('images/kickblade_2_vignette.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 3px solid var(--cutecore-pink);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--cutecore-pink);
+            font-style: italic;
+            max-width: 400px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px var(--shadow-pink);
+            text-shadow: 0 0 5px var(--shadow-pink);
+        }
+
+        .layers-section {
+            margin: 4rem 0;
+        }
+
+        .layer-card {
+            background: var(--industrial-dark);
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 3px solid var(--corporate-silver);
+            box-shadow: 0 8px 25px var(--shadow-industrial);
+            transition: all 0.3s ease;
+        }
+
+        .layer-card:hover {
+            border-color: var(--cutecore-pink);
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px var(--shadow-industrial), 0 0 15px var(--shadow-pink);
+        }
+
+        .layer-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--cutecore-pink);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--shadow-pink);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--industrial-dark);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 3px solid var(--corporate-silver);
+            box-shadow: 0 8px 25px var(--shadow-industrial);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.02);
+            border-color: var(--cutecore-pink);
+            box-shadow: 0 15px 35px var(--shadow-industrial), 0 0 20px var(--shadow-pink);
+        }
+
+        .feature-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--cutecore-pink);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--shadow-pink);
+        }
+
+        .feature-image-section {
+            position: relative;
+            margin: 4rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px var(--shadow-industrial);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 550px;
+            background: url('images/kickblade_3_feature.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 550px;
+            background: url('images/kickblade_5_story.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .svg-diagram {
+            background: var(--industrial-dark);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 3px solid var(--corporate-silver);
+            box-shadow: 0 8px 25px var(--shadow-industrial);
+            margin: 4rem 0;
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: var(--industrial-dark);
+            border-radius: 20px;
+            border: 3px solid var(--corporate-silver);
+            box-shadow: 0 8px 25px var(--shadow-industrial);
+        }
+
+        .boxart-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2), 0 0 15px var(--shadow-pink);
+            border: 3px solid var(--cutecore-pink);
+        }
+
+        .boxart-content {
+            padding-left: 2rem;
+        }
+
+        .boxart-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--cutecore-white);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 0 var(--cutecore-pink), 4px 4px 0 rgba(255, 105, 180, 0.8), 0 0 20px var(--shadow-pink);
+            animation: heartPulse 3s ease-in-out infinite;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, var(--cutecore-light-pink), var(--cutecore-pink));
+            padding: 3rem;
+            text-align: center;
+            color: var(--cutecore-white);
+            margin-top: 5rem;
+            text-shadow: 0 0 10px var(--shadow-pink);
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .three-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .boxart-content {
+                padding-left: 0;
+                padding-top: 2rem;
+            }
+            
+            .vignette-quote {
+                position: static;
+                margin-top: 2rem;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1 class="main-title">Kick Blade</h1>
+            <h2 class="subtitle">Vigilante Action Game</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <div class="overview-text">
+                <strong>Kick Blade</strong> is an ultra-accessible arcade action game designed for pure cathartic satisfaction. Armed with nothing but your kicks and a utility knife, you play as an ordinary civilian taking on corrupt CEOs and their loyal corporate goons in fast-paced, physics-driven combat.
+                <br><br>
+                This isn't about complex combos or artificial difficulty - it's about the immediate, visceral pleasure of sending enemies flying with perfectly timed kicks while navigating moving elevators, speeding trains, and corporate penthouses. Every opponent goes down in one satisfying hit, creating instant feedback that respects your time and delivers consistent dopamine rewards.
+                <br><br>
+                With complete one-handed playability and a focus on accessibility over complexity, Kick Blade proves that meaningful social commentary and satisfying gameplay can coexist in a package that anyone can enjoy, regardless of gaming experience or physical limitations.
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="three-cards">
+                <div class="card">
+                    <span class="card-emoji">🎮</span>
+                    <h3 class="card-title">Target Audience</h3>
+                    <p><strong>Casual action fans</strong> seeking accessible, cathartic gameplay. Perfect for players who want immediate satisfaction without complex mechanics, lengthy tutorials, or time-consuming progression systems. Ideal for stress relief during work breaks or commute gaming.</p>
+                </div>
+                <div class="card">
+                    <span class="card-emoji">💪</span>
+                    <h3 class="card-title">Game's Purpose</h3>
+                    <p><strong>Empowerment and stress relief</strong> through direct action against perceived injustice. Fulfills the human need for autonomy and competence by providing a safe space to confront corporate corruption and experience immediate, meaningful consequences for your actions.</p>
+                </div>
+                <div class="card">
+                    <span class="card-emoji">⚡</span>
+                    <h3 class="card-title">Core Concept</h3>
+                    <p><strong>Physics-based catharsis</strong> - Every kick translates directly into satisfying enemy trajectories and environmental destruction. No artificial barriers between intention and action, creating an unfiltered expression of player agency through accessible, responsive combat.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="feature-image-section">
+            <div class="story-image"></div>
+            <div class="vignette-quote">
+                "In a world of suits and lies, sometimes justice needs a kick and a blade to set things right."
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Lore & Story</h2>
+            <div class="overview-text">
+                <strong>The Setting:</strong> Neo-York's towering corporate district - a gleaming maze of glass towers connected by high-speed trains and cargo elevators that ferry workers between endless floors of cubicles and executive penthouses.
+                <br><br>
+                <strong>The Problem:</strong> Behind the polished facades, corporate CEOs have grown drunk on power and greed. They steal wages from workers, poison communities for profit, exploit children in overseas factories, and manipulate markets while their victims suffer in silence. The legal system is bought and paid for - justice has been commodified and sold to the highest bidder.
+                <br><br>
+                <strong>The Heroine:</strong> Enter our unlikely champion - a young woman with a cutecore aesthetic who's had enough of watching corporate corruption destroy lives. Despite her sweet appearance and pastel outfits, she possesses an unwavering sense of justice and surprisingly effective combat skills with nothing more than her trusty feet and a utility knife.
+                <br><br>
+                <strong>What's At Stake:</strong> Each corporate villain represents thousands of real victims - workers denied fair wages, families poisoned by toxic products, communities destroyed by corporate greed. Our heroine infiltrates their strongholds via the very transportation systems they use to move their wealth: elevators between floors of corporate towers and high-speed trains connecting their empire of exploitation.
+                <br><br>
+                <strong>The Mission:</strong> Using guerrilla tactics and the element of surprise, she systematically works her way up the corporate food chain, dispatching waves of loyal security goons before confronting each CEO directly. Her goal isn't destruction - it's delivering immediate, personal consequences to those who've hidden behind money and power while causing immeasurable harm to innocent people.
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Controls & Interface</h2>
+            <div class="controls-section">
+                <h3 style="color: var(--cutecore-pink); margin-bottom: 1.5rem; font-size: 1.8rem; text-shadow: 0 0 10px var(--shadow-pink);">Complete One-Handed Control Scheme</h3>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-industrial);">
+                    <strong>Kick Blade</strong> is designed for complete accessibility - you can play the entire game using only your left hand on WASD + EQX keys, making it perfect for players with physical limitations or anyone preferring relaxed one-handed play.
+                </p>
+                
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <div class="control-key">A/D</div>
+                        <p>Move left/right - Double tap and hold to sprint</p>
+                    </div>
+                    <div class="control-item">
+                        <div class="control-key">W</div>
+                        <p>Jump (double jump available in air)</p>
+                    </div>
+                    <div class="control-item">
+                        <div class="control-key">S</div>
+                        <p>Plunge down when airborne</p>
+                    </div>
+                    <div class="control-item">
+                        <div class="control-key">E</div>
+                        <p>Kick attack in facing direction</p>
+                    </div>
+                    <div class="control-item">
+                        <div class="control-key">Q</div>
+                        <p>Blade attack in facing direction</p>
+                    </div>
+                    <div class="control-item">
+                        <div class="control-key">X</div>
+                        <p>Dodge (stationary defensive move)</p>
+                    </div>
+                </div>
+
+                <h4 style="color: var(--cutecore-pink); margin: 2rem 0 1rem 0; font-size: 1.4rem; text-shadow: 0 0 8px var(--shadow-pink);">Advanced Combinations</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 0.8rem 0; padding: 0.8rem; background: var(--industrial-bg); border-radius: 10px; border: 1px solid var(--corporate-silver);"><strong style="color: var(--cutecore-pink); text-shadow: 0 0 5px var(--shadow-pink);">Sprint + Attack:</strong> Powered attacks with extra force and range</li>
+                    <li style="margin: 0.8rem 0; padding: 0.8rem; background: var(--industrial-bg); border-radius: 10px; border: 1px solid var(--corporate-silver);"><strong style="color: var(--cutecore-pink); text-shadow: 0 0 5px var(--shadow-pink);">Falling + Attack:</strong> Devastating plunge attacks with increased damage</li>
+                    <li style="margin: 0.8rem 0; padding: 0.8rem; background: var(--industrial-bg); border-radius: 10px; border: 1px solid var(--corporate-silver);"><strong style="color: var(--cutecore-pink); text-shadow: 0 0 5px var(--shadow-pink);">Dodge + Attack:</strong> Parry/special moves with cooldown timer</li>
+                    <li style="margin: 0.8rem 0; padding: 0.8rem; background: var(--industrial-bg); border-radius: 10px; border: 1px solid var(--corporate-silver);"><strong style="color: var(--cutecore-pink); text-shadow: 0 0 5px var(--shadow-pink);">Sprint + Jump + Attack:</strong> Flying powered attacks for maximum impact</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="vignette-section">
+            <div class="vignette-image"></div>
+            <div class="vignette-quote">
+                "Easy characters controls reminiscent of Kirby/Smash Bros platformer games mixed with fast paced one-hit kill combat."
+            </div>
+        </div>
+
+        <section class="section layers-section">
+            <h2 class="section-title">Game Layers</h2>
+            
+            <div class="layer-card">
+                <h3 class="layer-title">1. Moment-to-Moment Gameplay</h3>
+                <p>Fast-paced room clearing where every enemy dies in one satisfying hit. You control a nimble character navigating single-screen arenas (moving elevators, speeding trains, corporate offices) while dispatching waves of baton-wielding corporate goons. Physics-based trajectories mean kicked enemies fly realistically into walls, ceilings, and environmental hazards for maximum impact satisfaction. Combat is immediate and responsive - no HP sponges, no artificial difficulty, just pure cathartic action.</p>
+            </div>
+
+            <div class="layer-card">
+                <h3 class="layer-title">2. Low Metagame</h3>
+                <p><strong>8+1 Stage Gauntlets</strong> - Each campaign consists of 8 regular stages plus 1 CEO boss encounter. Stages feature randomized enemy spawn patterns, room layouts (elevator shafts, train cars, penthouse offices), and environmental challenges. Progressive difficulty ramps up enemy aggression and spawn rates, but always maintains the core promise of immediate, satisfying combat. Failure resets you to the beginning, encouraging mastery of the core mechanics rather than grinding through incremental progress.</p>
+            </div>
+
+            <div class="layer-card">
+                <h3 class="layer-title">3. High Metagame</h3>
+                <p><strong>CEO Trophy Collection</strong> - Your long-term progression comes from building a permanent gallery of defeated corporate villains. Each CEO is procedurally generated with randomized names, industries, and specific crimes ("embezzled employee pensions," "knowingly sold toxic products," "exploited child labor"). This creates an ongoing narrative of justice served while providing endless content variation. The trophy system serves as both achievement collection and social commentary, giving weight to each victory against corporate corruption.</p>
+            </div>
+
+            <div class="layer-card">
+                <h3 class="layer-title">4. Practical Game Flow</h3>
+                <p><strong>Quick Session Design</strong> - Each gauntlet takes 10-15 minutes to complete, perfect for lunch breaks or commute gaming. Launch the game, select difficulty, and immediately jump into action without lengthy menus or setup. Natural stopping points after each CEO defeat provide satisfying conclusion moments. Health regeneration between stages and clear victory conditions mean every session ends with either triumph or a clear understanding of what to improve for the next attempt.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Game Modes</h2>
+            
+            <div class="three-cards">
+                <div class="card">
+                    <span class="card-emoji">⚔️</span>
+                    <h3 class="card-title">Story Gauntlet</h3>
+                    <p>The primary game mode featuring 8+1 stage campaigns with escalating difficulty. Each gauntlet targets a specific corporate villain with their own generated backstory of crimes and corruption. Designed for 10-15 minute high-intensity sessions with clear beginning, middle, and end structure.</p>
+                </div>
+                <div class="card">
+                    <span class="card-emoji">🏆</span>
+                    <h3 class="card-title">Trophy Gallery</h3>
+                    <p>Review your collection of defeated CEOs with their randomized names, industries, and specific crimes. This mode serves as both achievement showcase and ongoing narrative of justice served, allowing players to reflect on their impact against corporate corruption and plan future targets.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Game Features & Mechanics</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="card-emoji">💥</span>
+                    <h3 class="feature-title">One-Hit Enemy System</h3>
+                    <p>Every enemy goes down in exactly one hit, creating immediate satisfaction and preventing frustrating HP sponge encounters. This design respects player time while delivering consistent dopamine rewards. Enemies explode on impact with surfaces, creating visceral feedback that makes every successful attack feel impactful and meaningful.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-emoji">🎯</span>
+                    <h3 class="feature-title">Physics-Based Combat</h3>
+                    <p>Realistic trajectory calculations determine where kicked enemies fly based on your position, their position, and attack angle. Environmental kills become puzzle-like challenges as you position yourself to send enemies into walls, off platforms, or into each other. The physics system creates emergent gameplay moments that feel both natural and satisfying.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-emoji">♿</span>
+                    <h3 class="feature-title">Accessible Controls</h3>
+                    <p>Complete one-handed gameplay using only WASD + EQX keys makes the game accessible to players with physical limitations. Simple control scheme reduces barriers to entry while maintaining depth through timing and positioning. No complex combo requirements or rapid input sequences - accessibility and satisfaction go hand in hand.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-emoji">🏢</span>
+                    <h3 class="feature-title">Anti-Corporate Narrative</h3>
+                    <p>Procedurally generated CEOs with realistic corporate crimes create ongoing social commentary. Each villain represents real-world corporate malfeasance: wage theft, environmental destruction, worker exploitation, consumer fraud. The game channels legitimate frustration with corporate power into cathartic virtual action.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-emoji">🚊</span>
+                    <h3 class="feature-title">Environmental Variety</h3>
+                    <p>Moving elevators, speeding trains, and static corporate offices each create unique physics challenges. Elevator fights feature vertical walls for ricochets, trains have ground hazards that instantly defeat enemies, and penthouses offer environmental storytelling through luxury contrasted with worker exploitation. Each environment type demands different tactical approaches.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-emoji">🔥</span>
+                    <h3 class="feature-title">Cathartic Feedback</h3>
+                    <p>Visceral gibbing system and impact effects create maximum satisfaction from every successful hit. Blood particle effects, screen shake, and explosive sound design amplify the feeling of meaningful action. The feedback loop between input and visual/audio response is carefully tuned to deliver consistent emotional satisfaction.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="feature-image-section">
+            <div class="feature-image"></div>
+            <div class="vignette-quote">
+                "Use the environment to your advantage to kick or bait opponents into hazards for spectacular results."
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="svg-diagram">
+                <h2 class="section-title">Combat Flow System</h2>
+                <svg width="100%" height="400" viewBox="0 0 800 400">
+                    <!-- Background -->
+                    <rect width="800" height="400" fill="#f8f4f0"/>
+                    
+                    <!-- Player Input -->
+                    <rect x="50" y="50" width="120" height="60" rx="10" fill="#ff9ec7" stroke="#ff69b4" stroke-width="3"/>
+                    <text x="110" y="85" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Player Input</text>
+                    <text x="110" y="130" text-anchor="middle" fill="#2d3748" font-size="12">WASD + EQX</text>
+                    
+                    <!-- Arrow 1 -->
+                    <path d="M 180 80 L 220 80" stroke="#4a90e2" stroke-width="4" marker-end="url(#arrowhead)"/>
+                    
+                    <!-- Attack Processing -->
+                    <rect x="240" y="50" width="120" height="60" rx="10" fill="#4a90e2" stroke="#2d3748" stroke-width="3"/>
+                    <text x="300" y="85" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Attack Type</text>
+                    <text x="300" y="130" text-anchor="middle" fill="#2d3748" font-size="12">Kick / Blade</text>
+                    
+                    <!-- Arrow 2 -->
+                    <path d="M 370 80 L 410 80" stroke="#4a90e2" stroke-width="4" marker-end="url(#arrowhead)"/>
+                    
+                    <!-- Physics Calculation -->
+                    <rect x="430" y="50" width="120" height="60" rx="10" fill="#6c7b8a" stroke="#2d3748" stroke-width="3"/>
+                    <text x="490" y="85" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Physics Calc</text>
+                    <text x="490" y="130" text-anchor="middle" fill="#2d3748" font-size="12">Trajectory</text>
+                    
+                    <!-- Arrow 3 -->
+                    <path d="M 560 80 L 600 80" stroke="#4a90e2" stroke-width="4" marker-end="url(#arrowhead)"/>
+                    
+                    <!-- Environmental Impact -->
+                    <rect x="620" y="50" width="120" height="60" rx="10" fill="#ffd1dc" stroke="#ff9ec7" stroke-width="3"/>
+                    <text x="680" y="85" text-anchor="middle" fill="#2d3748" font-size="16" font-weight="bold">Impact</text>
+                    <text x="680" y="130" text-anchor="middle" fill="#2d3748" font-size="12">Explosion!</text>
+                    
+                    <!-- Room Types -->
+                    <text x="400" y="180" text-anchor="middle" fill="#2d3748" font-size="20" font-weight="bold">Room Environment Types</text>
+                    
+                    <!-- Elevator -->
+                    <rect x="100" y="220" width="150" height="120" rx="10" fill="#ffffff" stroke="#ff9ec7" stroke-width="3"/>
+                    <text x="175" y="245" text-anchor="middle" fill="#4a90e2" font-size="14" font-weight="bold">Moving Elevator</text>
+                    <text x="175" y="265" text-anchor="middle" fill="#2d3748" font-size="12">• Vertical walls</text>
+                    <text x="175" y="285" text-anchor="middle" fill="#2d3748" font-size="12">• Ricochet physics</text>
+                    <text x="175" y="305" text-anchor="middle" fill="#2d3748" font-size="12">• Enclosed combat</text>
+                    <text x="175" y="325" text-anchor="middle" fill="#2d3748" font-size="12">• Ceiling impacts</text>
+                    
+                    <!-- Train -->
+                    <rect x="300" y="220" width="150" height="120" rx="10" fill="#ffffff" stroke="#ff9ec7" stroke-width="3"/>
+                    <text x="375" y="245" text-anchor="middle" fill="#4a90e2" font-size="14" font-weight="bold">Speeding Train</text>
+                    <text x="375" y="265" text-anchor="middle" fill="#2d3748" font-size="12">• Ground hazards</text>
+                    <text x="375" y="285" text-anchor="middle" fill="#2d3748" font-size="12">• Fall damage</text>
+                    <text x="375" y="305" text-anchor="middle" fill="#2d3748" font-size="12">• Moving platform</text>
+                    <text x="375" y="325" text-anchor="middle" fill="#2d3748" font-size="12">• Speed dynamics</text>
+                    
+                    <!-- CEO Office -->
+                    <rect x="500" y="220" width="150" height="120" rx="10" fill="#ffffff" stroke="#ff9ec7" stroke-width="3"/>
+                    <text x="575" y="245" text-anchor="middle" fill="#4a90e2" font-size="14" font-weight="bold">CEO Penthouse</text>
+                    <text x="575" y="265" text-anchor="middle" fill="#2d3748" font-size="12">• Glass windows</text>
+                    <text x="575" y="285" text-anchor="middle" fill="#2d3748" font-size="12">• Luxury furniture</text>
+                    <text x="575" y="305" text-anchor="middle" fill="#2d3748" font-size="12">• Boss encounters</text>
+                    <text x="575" y="325" text-anchor="middle" fill="#2d3748" font-size="12">• Final confrontation</text>
+                    
+                    <!-- Arrow marker definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </section>
+
+        <section class="section boxart-section">
+            <div>
+                <img src="images/kickblade_4_boxart.jpg" alt="Kick Blade Box Art" class="boxart-image">
+            </div>
+            <div class="boxart-content">
+                <h2 class="boxart-title">Kick Blade</h2>
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+                    <strong>Take Justice Into Your Own Hands</strong><br><br>
+                    
+                    In a world where corporate corruption runs unchecked, one ordinary citizen decides to take direct action. Armed with nothing but determination, swift kicks, and a trusty blade, you'll infiltrate corporate strongholds and bring justice to the greedy CEOs who've profited from others' suffering.
+                    <br><br>
+                    
+                    <strong>Key Features:</strong><br>
+                    ✨ Complete one-handed accessibility<br>
+                    ✨ Instantly satisfying physics-based combat<br>
+                    ✨ No artificial difficulty or time-wasting mechanics<br>
+                    ✨ Meaningful anti-corporate social commentary<br>
+                    ✨ Quick 15-minute sessions perfect for any schedule<br>
+                    ✨ Procedurally generated villains with realistic crimes<br><br>
+                    
+                    <em>"Sometimes the system needs more than a vote - it needs a kick."</em>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p><strong>All my links:</strong> <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p><strong>All my releases:</strong> <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p><strong>Reactorcore Games - 2025</strong></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megalodon Firefighter: Tactical Crisis Response</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        /* 
+        Image Files Required:
+        megalodon_1_title.jpg: Time-traveling mecha-helicopter arriving at a burning city scene with meteorites falling from a ruptured sky
+        megalodon_2_vignette.jpg: Intense cellular automata physics moment showing water pixels extinguishing fire pixels with visible material state changes
+        megalodon_3_feature.jpg: Close-up of dual weapon system - water cannon and kinetic autocannon - targeting falling space debris
+        megalodon_4_boxart.jpg: The anomalous azure mecha-copter emerging from a space-time vortex above a crisis scene
+        megalodon_5_story.jpg: Overworld view showing multiple temporal crisis zones scattered across a fractured timeline landscape
+        */
+
+        :root {
+            --background-color: #1a1a2e;
+            --container-bg: #16213e;
+            --border-color: #0f4c75;
+            --text-color: #e5e5e5;
+            --accent-azure: #71c6ff;
+            --accent-fire: #ff6b35;
+            --accent-earth: #8d5524;
+            --title-gradient-1: #3282b8;
+            --title-gradient-2: #bb2d3b;
+            --shadow-color: #ff6b35;
+            --card-shadow: rgba(50, 130, 184, 0.3);
+            --fire-glow: #ff4500;
+            --water-blue: #4682b4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .reactorcore-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(22, 33, 62, 0.9);
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9em;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: background-color 0.3s;
+        }
+
+        .reactorcore-label:hover {
+            background: rgba(50, 130, 184, 0.9);
+            color: white;
+        }
+
+        .title-section {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(26, 26, 46, 0.6), rgba(26, 26, 46, 0.4)),
+                        url('images/megalodon_1_title.jpg') center/cover;
+        }
+
+        .title-content {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .main-title {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 0.2em;
+            color: white;
+            text-shadow: 
+                0 0 10px var(--fire-glow),
+                0 0 20px var(--fire-glow),
+                0 0 30px var(--fire-glow),
+                0 0 40px var(--fire-glow);
+            animation: emberGlow 3s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            color: var(--accent-azure);
+            text-shadow: 0 0 10px var(--accent-azure);
+            animation: emberGlow 3s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes emberGlow {
+            0% {
+                text-shadow: 
+                    0 0 5px var(--fire-glow),
+                    0 0 10px var(--fire-glow),
+                    0 0 15px var(--fire-glow),
+                    0 0 20px var(--fire-glow);
+            }
+            100% {
+                text-shadow: 
+                    0 0 10px var(--fire-glow),
+                    0 0 20px var(--fire-glow),
+                    0 0 30px var(--fire-glow),
+                    0 0 40px var(--fire-glow);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: var(--accent-azure);
+            text-shadow: 0 0 10px var(--accent-azure);
+            animation: emberGlow 3s ease-in-out infinite alternate;
+        }
+
+        .overview {
+            font-size: 1.2em;
+            line-height: 1.8;
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 16px var(--card-shadow);
+        }
+
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 16px var(--card-shadow);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-azure);
+            box-shadow: 0 12px 24px var(--card-shadow);
+        }
+
+        .card h3 {
+            color: var(--accent-fire);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px var(--accent-fire);
+        }
+
+        .controls-section {
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 16px var(--card-shadow);
+        }
+
+        .weapon-system {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .weapon-card {
+            background: rgba(50, 130, 184, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-azure);
+        }
+
+        .weapon-card.autocannon {
+            background: rgba(255, 107, 53, 0.1);
+            border-left-color: var(--accent-fire);
+        }
+
+        .story-section {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px var(--card-shadow);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/megalodon_5_story.jpg') center/cover;
+            position: relative;
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px var(--card-shadow);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/megalodon_2_vignette.jpg') center/cover;
+            position: relative;
+        }
+
+        .image-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(22, 33, 62, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-azure);
+            font-style: italic;
+            font-size: 1.1em;
+            text-shadow: 0 0 5px var(--text-color);
+        }
+
+        .layers-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .layer-card {
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 6px solid var(--accent-azure);
+            box-shadow: 0 8px 16px var(--card-shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .layer-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 12px 24px var(--card-shadow);
+        }
+
+        .layer-card h3 {
+            color: var(--accent-fire);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px var(--accent-fire);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 16px var(--card-shadow);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-azure);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-azure);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px var(--accent-azure);
+        }
+
+        .feature-highlight {
+            background: linear-gradient(135deg, var(--accent-azure), var(--accent-fire));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
+        .feature-image-section {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px var(--card-shadow);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/megalodon_3_feature.jpg') center/cover;
+            position: relative;
+        }
+
+        .mermaid-container {
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            margin: 60px 0;
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 12px 24px var(--card-shadow);
+        }
+
+        .boxart-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background: url('images/megalodon_4_boxart.jpg') center/cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        }
+
+        .boxart-description h3 {
+            color: var(--accent-fire);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px var(--accent-fire);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--container-bg);
+            border-top: 2px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: var(--accent-azure);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-shadow: 0 0 5px var(--accent-azure);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5em;
+            }
+            
+            .subtitle {
+                font-size: 1.3em;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .boxart-image {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .three-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="reactorcore-label">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1 class="main-title">Megalodon Firefighter</h1>
+            <div class="subtitle">Tactical Crisis Response</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <div class="overview">
+                <p><strong>Megalodon Firefighter</strong> combines the emergent physics of cellular automata with the precision of light-gun arcade action, creating a unique tactical firefighting experience. Command a time-displaced azure mecha-helicopter through crisis scenarios where every water droplet and kinetic round matters.</p><br>
+
+                <p>Navigate the dual challenge of intercepting falling meteorites while managing cascading fire emergencies across procedurally generated cityscapes. Your anomalous craft, trapped between dimensions after a space-time incident, serves as humanity's guardian against temporal fire disasters that threaten to rewrite history.</p><br>
+
+                <p>Master the interplay of realistic material physics where wood burns, stone heats up and melts into lava, and water strategically deployed can mean the difference between salvation and catastrophe.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="three-cards">
+                <div class="card">
+                    <h3>🎯 Target Audience</h3>
+                    <p>Strategy and simulation enthusiasts who appreciate physics-based systems and crisis management scenarios. Players who enjoy light-gun arcade experiences and tactical decision-making under pressure.</p>
+                </div>
+                <div class="card">
+                    <h3>🎮 Game's Purpose</h3>
+                    <p>Fulfills human needs for <strong>competence</strong> (mastering complex physics systems), <strong>autonomy</strong> (strategic weapon and timing choices), and <strong>purpose</strong> (heroic time-guardian protecting history itself).</p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Core Concept</h3>
+                    <p>Merges falling sand cellular automata with light-gun tactical shooting, creating emergent firefighting gameplay where physics simulation drives authentic crisis response strategies.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="story-section">
+            <div class="story-image">
+                <div class="image-quote">
+                    "Across fractured timelines and burning worlds, one guardian stands between chaos and history"
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>Lore & Story</h2>
+            <div class="overview">
+                <p><strong>The Temporal Guardian Crisis:</strong> In the year 2387, humanity's first experimental space-time research facility suffered a catastrophic rupture during deep timeline analysis. The breach didn't just tear space—it fractured history itself, creating unstable temporal zones where past disasters resurface as reality-threatening anomalies.</p><br>
+
+                <p><strong>The Megalodon Incident:</strong> Your advanced crisis response mecha-helicopter, designation "Megalodon," was investigating routine space debris when it became caught in the facility's collapse vortex. Instead of destruction, the temporal energies bonded with your craft's quantum core, granting it an anomalous ability to phase between timeline fractures—but at a cost. You're now permanently displaced from linear time, appearing wherever and whenever history's most critical fire disasters need intervention.</p><br>
+
+                <p><strong>The Mission:</strong> Each manifestation brings you to a moment where meteorite impacts threaten to burn away crucial historical developments. Your goal is clear: minimize damage to preserve the timeline's integrity. Whether it's protecting the library of Alexandria from space debris, saving Renaissance workshops from cosmic bombardment, or defending modern cities from temporal meteorite storms, every crisis you face has already shaped the world you once knew.</p><br>
+
+                <p><strong>Current Crisis:</strong> The game focuses on a series of nine interconnected space debris events threatening a critical urban center. Each successful intervention stabilizes one fracture in the timeline, but failure could unravel decades of technological and cultural progress. The clock isn't just ticking—it's fracturing.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Controls & Interface</h2>
+            <div class="controls-section">
+                <p><strong>Light-Gun Style Gameplay:</strong> Like Virtua Cop or Time Crisis, but instead of protecting yourself from danger, you're protecting the scene from destruction. Play from the cockpit perspective of your time-traveling mecha-helicopter with dual weapon systems.</p>
+
+                <div class="weapon-system">
+                    <div class="weapon-card">
+                        <h4>💧 Water Cannon System</h4>
+                        <p><strong>Mouse 1:</strong> Rapid-fire water shots<br>
+                        <strong>Alt-Fire:</strong> Charged water blast<br>
+                        <strong>Mouse 2:</strong> Replenish water reserves<br>
+                        <em>Creates explosion areas of extinguishing water pixels</em></p>
+                    </div>
+                    <div class="weapon-card autocannon">
+                        <h4>🔫 Kinetic Autocannon</h4>
+                        <p><strong>Tab to Switch:</strong> Kinetic AP-HE munitions<br>
+                        <strong>Quick Fire:</strong> Rapid meteorite interception<br>
+                        <strong>Charged Shot:</strong> Electromagnetic acceleration for hardened targets<br>
+                        <em>Demolishes obstacles and incoming threats</em></p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 20px;"><strong>Tactical Crosshair Control:</strong> Mouse cursor positions targeting reticle for precision deployment of suppression systems across the crisis zone.</p>
+            </div>
+        </section>
+
+        <div class="vignette-section">
+            <div class="vignette-image">
+                <div class="image-quote">
+                    "Every pixel has purpose - water finds fire, heat travels through stone, and time itself depends on the cascade of tiny decisions"
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>Game Layers</h2>
+            <div class="layers-section">
+                <div class="layer-card">
+                    <h3>1. Moment-to-Moment Gameplay</h3>
+                    <p>Light-gun style tactical aiming with real-time cellular automata physics. Every shot creates rippling consequences as water pixels extinguish fires, stone absorbs and transfers heat, and lava flows according to gravity and terrain. Choose between intercepting meteorites or direct fire suppression based on immediate tactical assessment.</p>
+                </div>
+                <div class="layer-card">
+                    <h3>2. Low Metagame</h3>
+                    <p>Navigate a 9-level crisis gauntlet representing a single temporal disaster event. Each level features 3-7 procedurally generated buildings with escalating complexity and meteorite cluster patterns. Success depends on minimizing total damage while managing finite but generous water reserves across the entire crisis sequence.</p>
+                </div>
+                <div class="layer-card">
+                    <h3>3. High Metagame</h3>
+                    <p>Maintain a temporal mission log of completed crisis interventions. Each completed gauntlet generates a unique seed that allows perfect recreation of that specific scenario for score improvement attempts. Like retaking an exam, players can revisit historical crises to achieve better damage prevention scores and master optimal intervention strategies.</p>
+                </div>
+                <div class="layer-card">
+                    <h3>4. Practical Game Flow</h3>
+                    <p>Quick session startup leads directly into crisis briefing → intense 5-10 minute tactical firefighting → immediate mission assessment with damage statistics → choice to replay for better score or advance to next temporal crisis. Sessions respect player time while maintaining high-intensity engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Game Mode</h2>
+            <div class="card">
+                <h3>⏰ Temporal Crisis Response</h3>
+                <p>The core and only game mode focuses on <strong>high-intensity crisis management</strong> across varied temporal disasters. Each of the 9 levels presents a unique space debris emergency with procedurally generated building layouts ensuring no two crisis scenarios play identically.</p><br>
+                
+                <p><strong>Session Design:</strong> Short, intense 5-10 minute levels perfect for quick tactical gaming sessions. The light-gun arcade heritage means immediate action without complex setup or lengthy tutorials.</p><br>
+                
+                <p><strong>Replayability:</strong> Procedural building generation and varied meteorite patterns create infinite tactical variations. Seed-based replay system allows score improvement on specific scenarios that challenged you.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🧬 Cellular Automata Physics Engine</h3>
+                    <p>Authentic falling sand simulation where <span class="feature-highlight">every pixel matters</span>. Wood burns and spreads fire at 1 pixel per second, stone accumulates heat and transforms into flowing lava at 100 heat points, and water pixels sacrifice themselves to extinguish fires and cool heated materials. The physics create emergent tactical scenarios where material behavior drives strategic decisions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>⚡ Dual-Targeting Strategy System</h3>
+                    <p>Master the critical decision: <span class="feature-highlight">intercept meteorites mid-flight or fight fires directly</span>. Shooting meteorites creates harmless ash with momentum, but missing allows cluster bomb impacts that spray lava across the scene. Balance offensive interception with defensive suppression based on real-time crisis assessment.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🏗️ Procedural Building Generation</h3>
+                    <p>Algorithm-driven architecture creates <span class="feature-highlight">realistic yet varied structures</span> using rectangle primitives and detail patterns. Each level generates 3-7 connected buildings with logical layouts that feel authentic while providing fresh tactical challenges every playthrough.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🚁 Anomalous Mecha-Helicopter Platform</h3>
+                    <p>Command a unique <span class="feature-highlight">dual-weapon crisis response vehicle</span> displaced in time. Water cannon system provides rapid-fire and charged suppression capabilities, while kinetic autocannon delivers precision meteorite interception and obstacle demolition. Resource management between weapons creates tactical depth.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📚 Temporal Guardian Narrative</h3>
+                    <p>Experience the story of <span class="feature-highlight">history's protector caught between dimensions</span>. Your mecha-helicopter, altered by a space-time rupture, now warps to different times and locations to prevent catastrophic fires from changing the course of history. Each crisis represents a critical moment that must be preserved.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🎯 Light-Gun Crisis Adaptation</h3>
+                    <p>Innovative twist on arcade shooting: <span class="feature-highlight">protect the scene instead of yourself</span>. No player health or lives - success measured by minimizing environmental destruction. Creates unique tension where every missed shot costs civilian infrastructure rather than player progress.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="feature-image-section">
+            <div class="feature-image">
+                <div class="image-quote">
+                    "Dual weapons, dual purpose - kinetic force breaks the threat, flowing water heals the wound"
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>Player Tactical Decision Flow</h2>
+            <div class="mermaid-container">
+                <div class="mermaid">
+                    flowchart TD
+                        A[Meteorite Detected] --> B{Assess Threat Level}
+                        B -->|High Threat| C[Switch to Autocannon]
+                        B -->|Low Threat| D[Maintain Water Cannon]
+                        C --> E{Target Hardness}
+                        E -->|Standard| F[Quick Fire Mode]
+                        E -->|Hardened| G[Electromagnetic Charge Shot]
+                        F --> H[Monitor Impact Zone]
+                        G --> H
+                        D --> I{Fire Spreading?}
+                        I -->|Yes| J[Immediate Water Response]
+                        I -->|No| K[Allow Controlled Impact]
+                        H --> L[Assess Damage]
+                        J --> L
+                        K --> L
+                        L --> M[Adjust Strategy for Next Threat]
+                        
+                        style A fill:#ff6b35
+                        style L fill:#3282b8
+                        style M fill:#8d5524
+                </div>
+            </div>
+        </section>
+
+        <section class="section boxart-section">
+            <div class="boxart-image"></div>
+            <div class="boxart-description">
+                <h3>Megalodon Firefighter</h3>
+                <p><strong>Experience physics-driven crisis response like never before.</strong> When time itself becomes the battlefield and every pixel tells a story of destruction or salvation, only precise tactical thinking and mastery of dual weapon systems can preserve history.</p><br>
+
+                <p>Command the anomalous azure mecha-helicopter through temporal fire disasters where cellular automata physics create authentic material interactions. Water extinguishes, stone heats and melts, ash spreads with momentum - and your choices determine whether civilization's greatest moments survive or burn.</p><br>
+
+                <p><strong>Key Features:</strong><br>
+                • Unique cellular automata firefighting gameplay<br>
+                • Light-gun style tactical combat system<br>
+                • Procedural crisis scenarios with infinite replayability<br>
+                • Dual weapon system: water suppression + kinetic interception<br>
+                • Time-traveling narrative with historical preservation stakes<br>
+                • Quick sessions perfect for intense tactical gaming</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                darkMode: true,
+                background: '#16213e',
+                primaryColor: '#3282b8',
+                primaryTextColor: '#e5e5e5',
+                primaryBorderColor: '#0f4c75',
+                lineColor: '#3282b8',
+                secondaryColor: '#ff6b35',
+                tertiaryColor: '#8d5524'
+            }
+        });
+    </script>
+</body>
+</html>

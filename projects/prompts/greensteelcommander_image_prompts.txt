@@ -1,0 +1,22 @@
+Here are the five detailed image generation prompts for Green Steel Commander:
+
+Title Image: (16:9)
+Wide-angle establishing shot from low angle perspective. Massive industrial military command center with towering steel girders and reinforced concrete walls. Central focus on holographic tactical displays casting green light across weathered metal surfaces. Rows of monitoring stations with glowing green interface panels. Steam vents and mechanical infrastructure create atmospheric depth. Dramatic spotlighting from overhead creates strong shadows between the structural elements. Industrial concept art style, photorealistic rendering, detailed textures, atmospheric lighting, military precision, weathered materials. Deep forest green accents, gunmetal steel grays, dark industrial blacks, bright emerald interface glows.
+
+Vignette Image: (16:9)
+Aerial drone camera angle over tactical battlefield terrain. Multiple armored vehicle units positioned strategically across undulating metallic landscape with defensive barriers and fortified positions. Hexagonal steel plating mixed with natural earth creates varied tactical terrain. Unit formations demonstrate turn-based positioning with clear sight lines and cover points. Atmospheric haze suggests recent combat activity with subtle smoke trails. Industrial concept art style, photorealistic rendering, detailed textures, atmospheric lighting, military precision, weathered materials. Deep forest green accents, gunmetal steel grays, dark industrial blacks, bright emerald interface glows.
+
+Feature Image: (16:9)
+Dynamic medium shot capturing moment of impact during tactical engagement. Heavy combat vehicles colliding with realistic physics effects - metal deformation, debris scatter, terrain cratering from explosive forces. Foreground unit pushed sideways by blast wave while background terrain shows destructible environment with fractured steel plating. Particle effects and dust clouds add kinetic energy to the scene. Industrial concept art style, photorealistic rendering, detailed textures, atmospheric lighting, military precision, weathered materials. Deep forest green accents, gunmetal steel grays, dark industrial blacks, bright emerald interface glows.
+
+Box Art Cover: (2:3)
+Heroic portrait shot from slightly low angle. Military commander in tactical gear with integrated technology displays on armor plating. Face partially shadowed by tactical helmet with green HUD reflection visible in visor. Background shows blurred command center with glowing tactical screens and steel infrastructure. Strong directional lighting creates dramatic contrast across the figure's armor and equipment. Industrial concept art style, photorealistic rendering, detailed textures, atmospheric lighting, military precision, weathered materials. Deep forest green accents, gunmetal steel grays, dark industrial blacks, bright emerald interface glows.
+
+Story Overworld Image: (16:9)
+Sweeping aerial establishing shot from high altitude perspective. Vast terraformed landscape showing integration of industrial zones with restored natural environments. Geometric patterns of green energy infrastructure weave through valleys and hills. Massive processing facilities with distinctive architectural profiles dot the horizon. Living infrastructure visible as hybrid organic-mechanical structures. Atmospheric perspective creates depth through multiple landscape layers. Industrial concept art style, photorealistic rendering, detailed textures, atmospheric lighting, military precision, weathered materials. Deep forest green accents, gunmetal steel grays, dark industrial blacks, bright emerald interface glows.
+
+Unified Art Style (for all five, already included in prompts):
+Industrial concept art style, photorealistic rendering, detailed textures, atmospheric lighting, military precision, weathered materials.
+
+Unified Color Scheme (for all five, already included in prompts):
+Deep forest green accents, gunmetal steel grays, dark industrial blacks, bright emerald interface glows.

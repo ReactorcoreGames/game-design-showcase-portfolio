@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazard Mission Team: Settlement Crisis Response</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        /* 
+        Image Files Needed:
+        - images/hazardteam_1_title.jpg
+        - images/hazardteam_2_vignette.jpg  
+        - images/hazardteam_3_feature.jpg
+        - images/hazardteam_4_boxart.jpg
+        - images/hazardteam_5_story.jpg
+
+        Image Descriptions:
+        - Title: Hazard mission team members in protective gear working together in a dangerous underground environment
+        - Vignette: Team coordinating rescue operation with vehicles and equipment in a natural disaster scenario
+        - Feature: Dynamic mission briefing screen showing procedurally generated crisis scenarios across different environments
+        - Box Art: Heroic team portrait with diverse specialists against backdrop of restored civilization
+        - Story: Zoomed out overworld view showing the vast galactic civilization network with connected worlds and systems
+        */
+
+        :root {
+            --background-color: #1a1611;
+            --container-bg: #2d2722;
+            --warning-black: #0a0a0a;
+            --warning-yellow: #ffdd00;
+            --dirt-brown: #8b4513;
+            --grass-green: #228b22;
+            --border-color: #ffdd00;
+            --text-color: #f5f5dc;
+            --accent-light: #ffeaa7;
+            --accent-dark: #5a4a2a;
+            --glow-yellow: #ffdd00;
+            --card-shadow: rgba(255, 221, 0, 0.2);
+            --header-gradient-1: #ffdd00;
+            --header-gradient-2: #ffa500;
+            --brown-accent: #a0522d;
+            --green-accent: #32cd32;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Patreon Link */
+        .patreon-link {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 12px;
+            color: var(--accent-light);
+            text-decoration: none;
+            z-index: 1000;
+            padding: 5px 10px;
+            background: rgba(45, 39, 34, 0.8);
+            border-radius: 5px;
+            border: 1px solid var(--warning-yellow);
+            transition: all 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            color: var(--warning-yellow);
+            background: rgba(45, 39, 34, 1);
+        }
+
+        /* Title Section */
+        .hero-section {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--warning-black) 0%, var(--dirt-brown) 100%);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/hazardteam_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
+            filter: blur(1px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .main-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 
+                0 0 10px var(--glow-yellow),
+                0 0 20px var(--glow-yellow),
+                0 0 30px var(--glow-yellow),
+                3px 3px 0 var(--warning-black);
+            animation: breathing-glow 3s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            color: var(--grass-green);
+            font-weight: 600;
+            text-shadow: 2px 2px 0 var(--warning-black);
+        }
+
+        @keyframes breathing-glow {
+            0% {
+                text-shadow: 
+                    0 0 10px var(--glow-yellow),
+                    0 0 20px var(--glow-yellow),
+                    0 0 30px var(--glow-yellow),
+                    3px 3px 0 var(--warning-black);
+            }
+            100% {
+                text-shadow: 
+                    0 0 15px var(--glow-yellow),
+                    0 0 25px var(--glow-yellow),
+                    0 0 35px var(--glow-yellow),
+                    3px 3px 0 var(--warning-black);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--warning-yellow);
+            text-shadow: 
+                0 0 8px var(--glow-yellow),
+                0 0 15px var(--glow-yellow),
+                2px 2px 0 var(--warning-black);
+            animation: breathing-glow 3s ease-in-out infinite alternate;
+        }
+
+        /* Overview Section */
+        .overview {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 3px solid var(--warning-yellow);
+            box-shadow: 0 8px 25px var(--card-shadow);
+            margin-bottom: 50px;
+        }
+
+        .overview p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Three Core Cards */
+        .core-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .core-card {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--accent-dark) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--warning-yellow);
+            box-shadow: 0 6px 20px var(--card-shadow);
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .core-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--grass-green);
+        }
+
+        .core-card h3 {
+            color: var(--warning-yellow);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .core-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Controls Section */
+        .controls-section {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 3px solid var(--dirt-brown);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+            margin-bottom: 50px;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .control-category h4 {
+            color: var(--warning-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .control-list {
+            list-style: none;
+        }
+
+        .control-list li {
+            background: var(--accent-dark);
+            padding: 8px 12px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border-left: 4px solid var(--grass-green);
+        }
+
+        /* Story Image */
+        .story-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/hazardteam_5_story.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .story-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(45, 39, 34, 0.9) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid var(--dirt-brown);
+            max-width: 450px;
+            backdrop-filter: blur(5px);
+        }
+
+        .story-quote p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--warning-yellow);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* Vignette Image */
+        .vignette-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/hazardteam_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(45, 39, 34, 0.9) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid var(--warning-yellow);
+            max-width: 400px;
+            backdrop-filter: blur(5px);
+        }
+
+        .vignette-quote p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--warning-yellow);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* Game Layers */
+        .game-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .layer-card {
+            background: linear-gradient(90deg, var(--container-bg) 0%, var(--accent-dark) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--dirt-brown);
+            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.2);
+            transition: border-color 0.3s ease;
+        }
+
+        .layer-card:hover {
+            border-color: var(--warning-yellow);
+        }
+
+        .layer-card h3 {
+            color: var(--warning-yellow);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .layer-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Mission Types */
+        .mission-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .mission-card {
+            background: linear-gradient(135deg, var(--dirt-brown) 0%, var(--container-bg) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid var(--grass-green);
+            box-shadow: 0 6px 20px rgba(34, 139, 34, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .mission-card h4 {
+            color: var(--warning-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 3px solid var(--warning-yellow);
+            box-shadow: 0 8px 25px var(--card-shadow);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--grass-green);
+        }
+
+        .feature-card h3 {
+            color: var(--warning-yellow);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Mermaid Diagram Styling */
+        .mermaid-container {
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--dirt-brown);
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .mermaid {
+            background: transparent !important;
+        }
+
+        /* Feature Image */
+        .feature-image-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/hazardteam_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .feature-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(45, 39, 34, 0.9) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid var(--grass-green);
+            max-width: 450px;
+            backdrop-filter: blur(5px);
+        }
+
+        .feature-quote p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--warning-yellow);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* Trivia Section */
+        .trivia-section {
+            background: linear-gradient(135deg, var(--dirt-brown) 0%, var(--container-bg) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--grass-green);
+            margin-bottom: 50px;
+        }
+
+        .trivia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .trivia-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .trivia-item h4 {
+            color: var(--warning-yellow);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* Box Art Section */
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 3px solid var(--warning-yellow);
+            box-shadow: 0 10px 30px var(--card-shadow);
+            margin-bottom: 50px;
+        }
+
+        .boxart-image {
+            aspect-ratio: 2/3;
+            background-image: url('images/hazardteam_4_boxart.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            border: 2px solid var(--dirt-brown);
+        }
+
+        .boxart-content h3 {
+            color: var(--warning-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .boxart-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--warning-black);
+            border-top: 3px solid var(--warning-yellow);
+            margin-top: 50px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            color: var(--accent-light);
+        }
+
+        .footer a {
+            color: var(--warning-yellow);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--grass-green);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .core-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-types {
+                grid-template-columns: 1fr;
+            }
+            
+            .trivia-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .vignette-quote,
+            .feature-quote,
+            .story-quote {
+                position: relative;
+                max-width: none;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="main-title">Hazard Mission Team</h1>
+            <p class="subtitle">Settlement Crisis Response</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Game Overview -->
+        <section class="overview">
+            <h2 class="section-header">Game Overview</h2>
+            <p>Command the galaxy's most elite crisis response specialists in this thrilling real-time logistics action game! As the legendary Hazard Mission Team, you'll launch into heart-pounding adventures across countless exotic worlds, tackling impossible missions that only the best of the best can handle. Every deployment is a chance to showcase cutting-edge technology and unmatched expertise in the most spectacular environments the universe has to offer.</p>
+            
+            <p>This isn't your ordinary action game—it's high-stakes problem-solving where split-second decisions and brilliant strategy turn certain disaster into triumphant success. Your elite android operators fearlessly tackle challenges that would be impossible for humans, using state-of-the-art equipment to achieve the extraordinary. Each mission victory becomes part of galactic legend, building a civilization network that spans the stars.</p>
+            
+            <p>Experience the rush of being the ultimate professionals—the specialists who turn "impossible" into "mission accomplished." When the galaxy's toughest crises arise, there's only one team they call. Every success opens new frontiers, every mission pushes the boundaries of what's possible, and every crisis conquered proves once again why you're the best in the business.</p>
+        </section>
+
+        <!-- Core Cards -->
+        <section class="core-cards">
+            <div class="core-card">
+                <h3>🎯 Target Audience</h3>
+                <p>Problem-solvers who enjoy logistics puzzles, builders who like seeing their impact on the world, and players who find satisfaction in helping others overcome challenges. Perfect for those who prefer meaningful progress over competitive rankings.</p>
+            </div>
+            <div class="core-card">
+                <h3>🌟 Game's Purpose</h3>
+                <p>Fulfills fundamental human needs for competence (mastering complex systems), contribution (helping civilizations thrive), autonomy (choosing missions and approaches), and meaning (visible long-term impact on the universe).</p>
+            </div>
+            <div class="core-card">
+                <h3>⚡ Core Concept</h3>
+                <p>Real-time crisis response gameplay where quick thinking and efficient resource management solve emergencies, wrapped in a persistent universe that remembers and builds upon every successful mission you complete.</p>
+            </div>
+        </section>
+
+        <!-- Story Image -->
+        <section class="story-section">
+            <div class="story-image">
+                <div class="story-quote">
+                    <p>"From scattered worlds to unified civilization - the network grows stronger with every crisis overcome."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lore & Story -->
+        <section class="overview">
+            <h2 class="section-header">Lore & Story</h2>
+            <p>In the glorious age of galactic expansion, the Helios System's network of thriving worlds represents humanity's greatest achievement—a testament to courage, innovation, and the unstoppable drive to explore the unknown. This magnificent civilization emerged from centuries of bold exploration, where visionary pioneers pushed beyond every boundary to establish humanity's stellar empire among the stars.</p>
+            
+            <p>But with great adventure comes spectacular challenges! The most exotic and dangerous locations in the galaxy demand extraordinary expertise. From toxic worlds with failing equipment to research stations caught in stellar storms, from emergency evacuations on frontier worlds to high-stakes resource extraction in volatile environments—these are the moments when the galaxy calls upon its most elite specialists. When conventional solutions fail, when the stakes are highest, when everyone else says "impossible"—that's when the pros get the call.</p>
+            
+            <p>You are the commander of the legendary Hazard Mission Team—the absolute best of the best! Operating from cutting-edge mobile command ships equipped with the most advanced technology in known space, you deploy teams of sophisticated human-operated android bodies that can accomplish feats no biological team could survive. These aren't sacrificial missions—they're precision operations by master specialists using revolutionary technology to achieve the impossible. Every spectacular success strengthens the galactic civilization network, unlocks incredible new territories, and discovers fantastic resources that propel our stellar society to ever-greater heights of achievement and wonder!</p>
+        </section>
+
+        <!-- Controls & Interface -->
+        <section class="controls-section">
+            <h2 class="section-header">Controls & Interface</h2>
+            <div class="controls-grid">
+                <div class="control-category">
+                    <h4>🎮 Movement Controls</h4>
+                    <ul class="control-list">
+                        <li><strong>WASD:</strong> Move character in 2D sidescroll environment</li>
+                        <li><strong>W:</strong> Jump (context-sensitive height)</li>
+                        <li><strong>S:</strong> Crouch/Duck/Climb down</li>
+                        <li><strong>Shift:</strong> Sprint (limited stamina)</li>
+                        <li><strong>Alt:</strong> Walk slowly for precision</li>
+                    </ul>
+                </div>
+                <div class="control-category">
+                    <h4>🔧 Action Controls</h4>
+                    <ul class="control-list">
+                        <li><strong>Mouse:</strong> Aim and interact with environment</li>
+                        <li><strong>Left Click:</strong> Primary action (dig, build, grab)</li>
+                        <li><strong>Right Click:</strong> Secondary action (throw, place)</li>
+                        <li><strong>Middle Click:</strong> Quick-examine objects</li>
+                        <li><strong>F:</strong> Context menu for complex interactions</li>
+                    </ul>
+                </div>
+                <div class="control-category">
+                    <h4>📋 Management Controls</h4>
+                    <ul class="control-list">
+                        <li><strong>Tab:</strong> Inventory and equipment management</li>
+                        <li><strong>R:</strong> In-game mission briefing and map</li>
+                        <li><strong>E:</strong> Quick equipment swap</li>
+                        <li><strong>Space:</strong> Activate specialized equipment</li>
+                        <li><strong>Ctrl+Click:</strong> Auto-collect nearby resources</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vignette Image -->
+        <section class="vignette-section">
+            <div class="vignette-image">
+                <div class="vignette-quote">
+                    <p>"Where others see crisis, legends see their next spectacular victory!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Layers -->
+        <section>
+            <h2 class="section-header">Game Layers</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <h3>🏃 Moment-to-Moment Gameplay</h3>
+                    <p>Direct character control in real-time 2D environments, managing multiple team members as they gather resources, construct solutions, and adapt to changing conditions. Navigate hazardous terrain, operate specialized equipment, and coordinate complex logistics operations to achieve mission objectives.</p>
+                </div>
+                <div class="layer-card">
+                    <h3>🎯 Mission Layer</h3>
+                    <p>Individual crisis scenarios with specific objectives ranging from resource extraction and infrastructure construction to disaster relief and exploration. Each mission presents unique challenges based on environment, available resources, and local conditions, requiring strategic planning and adaptive execution.</p>
+                </div>
+                <div class="layer-card">
+                    <h3>🌐 Regional Network</h3>
+                    <p>Completed missions expand civilization's reach and capabilities, unlocking new mission types, equipment, and regions. Success creates permanent improvements: new settlements, trade routes, research stations, and defensive installations that provide ongoing benefits and mission variety.</p>
+                </div>
+                <div class="layer-card">
+                    <h3>🚀 Universal Expansion</h3>
+                    <p>Long-term progression opens new star systems, alien civilizations, and exotic environments. The growing galactic network creates increasingly complex mission chains, mega-projects spanning multiple worlds, and the opportunity to shape the development of entire sectors of space.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Types -->
+        <section>
+            <h2 class="section-header">Mission Types</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">Across the galaxy's most spectacular and challenging environments, elite Hazard Teams tackle missions that showcase the very best of human ingenuity and cutting-edge android technology:</p>
+            <div class="mission-types">
+                <div class="mission-card">
+                    <h4>🏗️ Infrastructure Development</h4>
+                    <p>Deploy to untamed worlds and construct magnificent installations that become the cornerstone of galactic civilization! Master advanced construction technologies and orchestrate complex logistics to transform hostile environments into thriving centers of progress and innovation.</p>
+                </div>
+                <div class="mission-card">
+                    <h4>🚨 Emergency Response</h4>
+                    <p>When disaster strikes and time is running out, only the best emergency response specialists can save the day! Race against the clock using state-of-the-art equipment to stabilize critical systems, rescue endangered populations, and turn catastrophe into triumph through brilliant tactical execution.</p>
+                </div>
+                <div class="mission-card">
+                    <h4>🔬 Scientific Exploration</h4>
+                    <p>Venture into the galaxy's most mysterious and exotic locations to uncover secrets that expand the frontiers of knowledge! Use cutting-edge scientific equipment to investigate incredible phenomena, collect priceless samples, and make discoveries that unlock revolutionary technologies for all of civilization.</p>
+                </div>
+                <div class="mission-card">
+                    <h4>🌿 Environmental Restoration</h4>
+                    <p>Transform environmental disasters into ecological triumphs using advanced restoration technologies! Deploy sophisticated systems to heal damaged worlds, neutralize contamination, and create stunning sustainable ecosystems that perfectly balance industrial progress with natural beauty.</p>
+                </div>
+                <div class="mission-card">
+                    <h4>👥 Rescue & Recovery</h4>
+                    <p>Execute daring rescue operations in the galaxy's most perilous environments! Navigate extreme hazards with precision teamwork and advanced technology to extract personnel from impossible situations, recover critical equipment, and deliver life-saving aid to isolated populations against all odds.</p>
+                </div>
+                <div class="mission-card">
+                    <h4>🌌 Frontier Expansion</h4>
+                    <p>Lead humanity's bold expansion into uncharted space! Pioneer new frontiers by establishing advanced forward bases in unexplored territories, using cutting-edge reconnaissance technology to map unknown worlds and prepare spectacular new regions for the next wave of galactic colonization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features & Mechanics -->
+        <section>
+            <h2 class="section-header">Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🎲 Dynamic Mission Generation</h3>
+                    <p>Every crisis is unique, generated by intelligent systems that consider your past successes, current galactic state, and emerging needs. No two missions are exactly alike, ensuring constant variety and fresh challenges.</p>
+                    <p><strong>Technical Implementation:</strong> Context-aware algorithms analyze the persistent universe state to create logical, coherent scenarios that feel naturally connected to your previous actions and the evolving galactic situation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔧 Modular Equipment System</h3>
+                    <p>Customize your team's loadout based on mission requirements and personal preference. Mix and match specialized tools, vehicles, and support equipment to create optimal solutions for specific challenges.</p>
+                    <p><strong>Deep Customization:</strong> Thousands of equipment combinations allow for multiple viable approaches to any situation, encouraging experimentation and personal problem-solving styles.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌪️ Environmental Hazard Management</h3>
+                    <p>Dynamic weather systems, geological instability, and atmospheric conditions create ongoing challenges that require adaptive strategies. Environmental factors aren't just obstacles—they're puzzle elements to understand and leverage.</p>
+                    <p><strong>Systematic Approach:</strong> Each environmental factor follows consistent rules that can be learned, predicted, and used to your advantage with proper preparation and understanding.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏛️ Civilization Network Growth</h3>
+                    <p>Watch the galaxy transform as your successes enable permanent improvements. New settlements provide advanced equipment, research stations unlock technologies, and trade routes create resource abundance that enhances future missions.</p>
+                    <p><strong>Meaningful Progress:</strong> Every successful mission contributes to visible, permanent changes that provide tangible benefits and open new possibilities for exploration and development.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Multi-Character Team Coordination</h3>
+                    <p>Manage a diverse team of specialists with complementary skills. Coordinate multiple characters simultaneously to tackle complex multi-part objectives requiring different expertise and approaches.</p>
+                    <p><strong>Strategic Depth:</strong> Team composition and coordination become crucial elements of mission planning, with different specialist combinations enabling entirely different solution approaches.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📦 Resource Chain Logistics</h3>
+                    <p>Complex but intuitive supply and construction systems where raw materials are processed through multiple stages to create increasingly sophisticated solutions. Plan resource flows to maximize efficiency and minimize waste.</p>
+                    <p><strong>Economic Gameplay:</strong> Resource management becomes a satisfying puzzle of optimization and forward planning, rewarding players who think systematically about material flows and production chains.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mermaid Diagram -->
+        <div class="mermaid-container">
+            <h3 style="color: var(--warning-yellow); margin-bottom: 20px;">Mission Flow and Universe Integration</h3>
+            <div class="mermaid">
+                graph TD
+                    A[Select Mission from Universe Map] --> B[Choose Team & Equipment]
+                    B --> C[Deploy to Crisis Zone]
+                    C --> D[Assess Situation & Resources]
+                    D --> E[Execute Solution Strategy]
+                    E --> F{Mission Objectives Met?}
+                    F -->|No| G[Adapt Strategy & Continue]
+                    G --> E
+                    F -->|Yes| H[Mission Complete]
+                    H --> I[Universe State Updates]
+                    I --> J[New Regions/Technologies Unlocked]
+                    J --> K[New Mission Types Available]
+                    K --> A
+                    
+                    style A fill:#ffdd00,stroke:#0a0a0a,color:#0a0a0a
+                    style H fill:#228b22,stroke:#0a0a0a,color:#0a0a0a
+                    style I fill:#8b4513,stroke:#ffdd00,color:#f5f5dc
+                    style J fill:#228b22,stroke:#ffdd00,color:#0a0a0a
+            </div>
+        </div>
+
+        <!-- Feature Image -->
+        <section class="feature-image-section">
+            <div class="feature-image">
+                <div class="feature-quote">
+                    <p>"With cutting-edge technology and legendary expertise, no mission is impossible!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trivia Section -->
+        <section class="trivia-section">
+            <h2 class="section-header">Development Insights</h2>
+            <div class="trivia-grid">
+                <div class="trivia-item">
+                    <h4>🌍 Scalable Universe</h4>
+                    <p>The persistent universe system can expand to encompass thousands of star systems, each with unique characteristics and challenges that emerge from your collective actions.</p>
+                </div>
+                <div class="trivia-item">
+                    <h4>🔄 Infinite Missions</h4>
+                    <p>Every successful mission creates ripple effects that generate new opportunities, ensuring the game never runs out of meaningful content to explore and develop.</p>
+                </div>
+                <div class="trivia-item">
+                    <h4>🏗️ Real Impact</h4>
+                    <p>Unlike traditional games where progress resets, every structure you build and every problem you solve becomes a permanent part of the galactic civilization network.</p>
+                </div>
+                <div class="trivia-item">
+                    <h4>🎯 Purpose-Driven Design</h4>
+                    <p>Inspired by real emergency response protocols and logistics operations, the game emphasizes competence, contribution, and meaningful problem-solving over competitive conflict.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box Art Section -->
+        <section class="boxart-section">
+            <div class="boxart-image"></div>
+            <div class="boxart-content">
+                <h3>Hazard Mission Team</h3>
+                <p><strong>When the impossible calls, legends answer!</strong></p>
+                
+                <p>Command the galaxy's most elite crisis response specialists and experience the thrill of high-stakes adventure across the cosmos! Deploy cutting-edge android operators to tackle spectacular missions that push the boundaries of technology and heroism. Every triumph becomes part of galactic legend, every success unlocks new worlds of possibility.</p>
+                
+                <p>This is real-time logistics action at its most exhilarating—where brilliant strategy and split-second decisions turn certain disaster into glorious victory! Command the ultimate professionals who transform "mission impossible" into "mission accomplished" using the most advanced technology in known space.</p>
+                
+                <p><em>Featuring infinite mission variety, revolutionary android technology, and a persistent universe where your legendary achievements echo across the stars for all time.</em></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#ffdd00',
+                primaryTextColor: '#0a0a0a',
+                primaryBorderColor: '#228b22',
+                lineColor: '#ffdd00',
+                sectionBkgColor: '#2d2722',
+                altSectionBkgColor: '#1a1611',
+                gridColor: '#8b4513',
+                secondaryColor: '#228b22',
+                tertiaryColor: '#8b4513'
+            }
+        });
+    </script>
+</body>
+</html>

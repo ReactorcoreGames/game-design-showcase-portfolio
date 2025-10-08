@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chain Reaction Demolition Punch - Game Design Showcase</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        /* 
+        Required Images:
+        chainreaction_1_title.jpg - A one-eyed superhero in work clothes preparing to punch a concrete building, with geometric building silhouettes
+        chainreaction_2_vignette.jpg - Mid-punch action showing the moment of impact with stone fragments and heat trails spreading outward in a chain reaction  
+        chainreaction_3_feature.jpg - Cross-section technical view showing the heat transfer system with glowing temperature spreads through building materials
+        chainreaction_4_boxart.jpg - Professional demolition company poster showing the cyclops hero with clipboard and hard hat, city backdrop
+        chainreaction_5_story.jpg - Zoomed out overworld view of the greater setting where the game takes place, 16:9 aspect ratio
+        */
+
+        :root {
+            --background-color: #2b0909;
+            --container-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --border-color: #4a5568;
+            --text-color: #e2e8f0;
+            --heading-color: #f7fafc;
+            --accent-color: #e53e3e;
+            --accent-secondary: #a0aec0;
+            --shadow-color: rgba(0, 0, 0, 0.8);
+            --glow-color: #ff6b47;
+            --glow-secondary: #ff8566;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #63190b 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 12px;
+            color: var(--accent-secondary);
+            text-decoration: none;
+            background: var(--container-bg);
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .hero-section {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('images/chainreaction_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 
+                0 0 10px var(--glow-color),
+                0 0 20px var(--glow-color),
+                0 0 30px var(--glow-color),
+                3px 3px 6px var(--shadow-color);
+            animation: emberGlow 3s ease-in-out infinite alternate;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--accent-secondary);
+            text-shadow: 2px 2px 4px var(--shadow-color);
+        }
+
+        @keyframes emberGlow {
+            0% {
+                text-shadow: 
+                    0 0 10px var(--glow-color),
+                    0 0 20px var(--glow-color),
+                    0 0 30px var(--glow-color),
+                    3px 3px 6px var(--shadow-color);
+            }
+            100% {
+                text-shadow: 
+                    0 0 15px var(--glow-secondary),
+                    0 0 25px var(--glow-secondary),
+                    0 0 35px var(--glow-secondary),
+                    3px 3px 6px var(--shadow-color);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin: 60px 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--heading-color);
+            text-shadow: 
+                0 0 8px var(--glow-color),
+                0 0 15px var(--glow-color),
+                2px 2px 4px var(--shadow-color);
+            animation: emberGlow 3s ease-in-out infinite alternate;
+        }
+
+        .overview {
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-color);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .overview p {
+            margin-bottom: 20px;
+        }
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--shadow-color);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+            text-shadow: 1px 1px 2px var(--shadow-color);
+        }
+
+        .card p {
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('images/chainreaction_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            max-width: 400px;
+            box-shadow: 0 4px 16px var(--shadow-color);
+        }
+
+        .vignette-quote p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--heading-color);
+            text-shadow: 1px 1px 2px var(--shadow-color);
+        }
+
+        .game-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .layer-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 6px solid var(--accent-color);
+            box-shadow: 0 4px 16px var(--shadow-color);
+        }
+
+        .layer-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .layer-card .layer-number {
+            font-size: 0.9rem;
+            color: var(--accent-secondary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--shadow-color);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .feature-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+            text-shadow: 1px 1px 2px var(--shadow-color);
+        }
+
+        .feature-image {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.01)), url('images/chainreaction_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            max-width: 450px;
+            box-shadow: 0 4px 16px var(--shadow-color);
+        }
+
+        .feature-quote p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--heading-color);
+            text-shadow: 1px 1px 2px var(--shadow-color);
+        }
+
+        .story-section {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('images/chainreaction_5_story.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .story-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            max-width: 450px;
+            box-shadow: 0 4px 16px var(--shadow-color);
+        }
+
+        .story-quote p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--heading-color);
+            text-shadow: 1px 1px 2px var(--shadow-color);
+        }
+
+        .controls-section {
+            background: var(--container-bg);
+            border-radius: 12px;
+            padding: 40px;
+            border: 2px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .control-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .control-item h4 {
+            color: var(--accent-color);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 40px;
+            margin: 60px 0;
+            align-items: center;
+        }
+
+        .boxart-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background: url('images/chainreaction_4_boxart.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            border: 3px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--shadow-color);
+        }
+
+        .boxart-content {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--shadow-color);
+        }
+
+        .boxart-content h3 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px var(--shadow-color);
+        }
+
+        .boxart-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-color);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--container-bg);
+            margin-top: 80px;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .footer p {
+            margin: 8px 0;
+            color: var(--accent-secondary);
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .mermaid-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--shadow-color);
+        }
+
+        .mermaid {
+            background: transparent !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .cards-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .vignette-quote,
+            .feature-quote,
+            .story-quote {
+                position: static;
+                margin-top: 20px;
+                max-width: none;
+            }
+        }
+
+        .emoji {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Chain Reaction Demolition Punch</h1>
+            <div class="subtitle">Cyclops Building Destruction</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="overview">
+                <p><strong>Experience the satisfying precision of alien-powered demolition!</strong> As Wreks, a friendly one-eyed extraterrestrial running Earth's most enthusiastic demolition company, use cosmic strength and physics-based destruction to turn entire buildings into perfectly recycled materials.</p>
+                
+                <p>Every superhero punch creates a cascade of spectacular physics interactions, where alien heat transfer and momentum combine to create chain reactions that would make any Galactic Demolition Academy proud!</p>
+                
+                <p>Master the art of strategic destruction across randomly generated building contracts, building your intergalactic demolition company's reputation one perfectly executed (and surprisingly affordable) job at a time.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="cards-row">
+                <div class="card">
+                    <h3><span class="emoji">🎯</span> Target Audience</h3>
+                    <p>Physics simulation enthusiasts, fans of destruction games, and players who enjoy satisfying cause-and-effect gameplay. Appeals to those who appreciate technical depth wrapped in accessible mechanics.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⚡</span> Game's Purpose</h3>
+                    <p>Provides stress relief through superhero-powered destruction and satisfies the universal (Earth and beyond!) need for mastery through precision-based gameplay. Offers the satisfaction of complex physics systems responding to enthusiastic alien punches.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔬</span> Core Concept</h3>
+                    <p>Strategic targeting combined with alien-enhanced physics creates cascading destruction. Players learn to channel Wreks's cosmic perspective to read building structures and use otherworldly heat transfer mechanics to achieve maximum demolition efficiency with surprisingly minimal effort.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <div class="story-quote">
+                <p>"CRASH! BOOM! *THUD* ...Sorry about your parking lot! I think I punched my spaceship dashboard too hard."</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Lore & Story</h2>
+            <div class="card">
+                <h3>Origin Story: Galactic Demolition Expert</h3>
+                <p><strong>Four months ago, a mysterious spaceship crash-landed in downtown Metro City!</strong> Out stepped Wreks, a friendly one-eyed alien superhero with an unusual passion: punching really, REALLY hard things until they turn into smaller, more manageable pieces. Earth's first reaction? Panic. Wreks's first reaction? "Yoo, look at all these hard punchable buildings!"</p>
+                <br>
+                <p><strong>The Accidental Hero:</strong> Much to everyone's relief (and slight concern), Wreks wasn't here to conquer Earth—they just really, REALLY love demolition work! After accidentally helping clear a condemned building with one enthusiastic punch, the mayor realized this alien's destructive enthusiasm could solve the city's mounting demolition backlog. Thus, "Cyclops Demolition Services" was born!</p>
+                <br>
+                <p><strong>Superhero Business Owner:</strong> Powered with alien strength, surprisingly competitive pricing, and an infectious enthusiasm for turning buildings into rubble, Wreks quickly built a loyal customer base. Sure, they're a bit reckless and sometimes forget human safety protocols, but their heart's in the right place and their demolition results speak for themselves!</p>
+                <br>
+                <p><strong>Current Mission:</strong> Business is booming! Every day brings new customers with unwanted structures that need to become wanted piles of recyclable materials. From abandoned warehouses to stubborn old hotels, Wreks approaches each job with the same alien optimism: "If it's standing up and shouldn't be, I can fix that!"</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Controls & Interface</h2>
+            <div class="controls-section">
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <h4>Mouse Targeting</h4>
+                        <p>Click anywhere on the building to set your punch target. Visual indicators show blast radius preview.</p>
+                    </div>
+                    
+                    <div class="control-item">
+                        <h4>Power Charging</h4>
+                        <p>Hold mouse button to charge power meter. Longer charge = larger blast radius (10-100 pixels) and greater destructive force.</p>
+                    </div>
+                    
+                    <div class="control-item">
+                        <h4>Physics Feedback</h4>
+                        <p>Watch real-time heat distribution and shrapnel momentum. Learn to predict chain reactions for optimal demolition efficiency.</p>
+                    </div>
+                    
+                    <div class="control-item">
+                        <h4>Demolition Interface</h4>
+                        <p>Clean, minimal UI focuses attention on the destruction spectacle. Clear progress indicators show building integrity and job completion status.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vignette-section">
+            <div class="vignette-quote">
+                <p>"Watch physics transform solid stone into cascading destruction"</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Game Layers</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <div class="layer-number">1. Moment-to-Moment Gameplay</div>
+                    <h4>Superhero Demolition Action</h4>
+                    <p>Target building weak points with alien precision, charge your cosmic power meter, and execute perfectly timed super-punches. Watch as otherworldly physics create spectacular destruction through galactic heat transfer and momentum-based shrapnel interactions that would impress even seasoned space demolition crews.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <div class="layer-number">2. Low Metagame</div>
+                    <h4>Demolition Contracts</h4>
+                    <p>Complete individual demolition jobs featuring 1-5 randomly generated buildings per contract. Each contract presents unique structural challenges requiring adaptive demolition strategies and efficient resource management.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <div class="layer-number">3. High Metagame</div>
+                    <h4>Persistent Business Management</h4>
+                    <p>Build your alien demolition company's reputation through a persistent contract generation system. Maintain detailed logs of completed Earth jobs, track performance metrics across multiple campaigns, and watch Wreks's enthusiastic demolition service grow through spectacularly successful (and surprisingly affordable) building removals.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <div class="layer-number">4. Practical Game Flow</div>
+                    <h4>Quick Satisfaction Sessions</h4>
+                    <p>Jump in for 2-5 minute demolition sessions with immediate gratification. Perfect for quick stress relief breaks or extended company-building campaigns. Natural stopping points after each completed contract.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Game Modes</h2>
+            <div class="card">
+                <h3>Campaign Mode: Professional Demolition Services</h3>
+                <p><strong>9 stages of random complexity</strong> featuring 1-5 buildings per demolition contract. Each stage presents unpredictable building layouts and structural challenges, ensuring no two jobs feel the same.</p>
+                <br>
+                <p><strong>Purpose:</strong> Provides varied challenges that test your understanding of physics systems and demolition efficiency. Random generation keeps the experience fresh while building your expertise in structural analysis and strategic destruction planning.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>Physics-Based Destruction System</h4>
+                    <p>Realistic falling sand cellular automata powers every interaction. Materials behave according to natural physics laws, creating authentic destruction patterns that respond to force, momentum, and environmental conditions in believable ways.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Heat Transfer Chain Reactions</h4>
+                    <p>Advanced temperature mechanics create cascading destruction effects. Shrapnel generates heat based on velocity, stone melts at specific thresholds, and excess heat transfers to adjacent materials, triggering secondary explosions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Procedural Building Generation</h4>
+                    <p>Sophisticated algorithms create unique building structures for every contract. Geometric patterns combine rectangles and detail lines to generate everything from small workshops to complex multi-story structures, all properly grounded.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Material Property System</h4>
+                    <p>Four distinct materials each behave differently: durable terrain that resists damage, explosive stone that transfers heat, high-velocity shrapnel that penetrates and spreads heat, and inert ash that settles naturally under gravity.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Momentum-Based Shrapnel</h4>
+                    <p>Shrapnel velocity directly affects penetration damage and heat distribution. Faster-moving fragments pierce deeper and transfer more thermal energy, while air resistance gradually slows particles, creating realistic ballistic behavior.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Power Scaling Mechanics</h4>
+                    <p>Hold-and-release charging system scales both blast radius and destructive force. Longer charges create larger destruction zones with more intense effects, allowing strategic choices between precision strikes and overwhelming force.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-image">
+            <div class="feature-quote">
+                <p>"Temperature and momentum create unstoppable chain reactions"</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Physics System Visualization</h2>
+            <div class="mermaid-container">
+                <div class="mermaid">
+                    graph TD
+                        A[Player Punch Input] --> B[Blast Radius Calculation]
+                        B --> C[Shrapnel Generation]
+                        C --> D[Momentum Assignment]
+                        D --> E[Heat Generation]
+                        E --> F{Stone Collision?}
+                        F -->|Yes| G[Heat Transfer]
+                        F -->|No| H[Continue Flight]
+                        G --> I{Melting Point Reached?}
+                        I -->|Yes| J[Convert to Ash]
+                        I -->|No| K[Heat Distribution]
+                        K --> L{Adjacent Stone?}
+                        L -->|Yes| M[Transfer Excess Heat]
+                        L -->|No| N[Secondary Explosion]
+                        M --> I
+                        N --> O[Queue Delayed Blast]
+                        J --> P[Gravity Settlement]
+                        H --> Q[Air Resistance]
+                        Q --> R{Speed > 0?}
+                        R -->|Yes| F
+                        R -->|No| S[Particle Stops]
+                        
+                        style A fill:#e53e3e,stroke:#fff,stroke-width:2px,color:#fff
+                        style N fill:#ff6b47,stroke:#fff,stroke-width:2px,color:#fff
+                        style J fill:#a0aec0,stroke:#fff,stroke-width:2px,color:#000
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="boxart-section">
+                <div class="boxart-image"></div>
+                <div class="boxart-content">
+                    <h3>Chain Reaction Demolition Punch</h3>
+                    <p>Master the art of controlled destruction in this physics-based demolition simulator. As a professional cyclops demolition expert, use precision targeting and realistic physics to bring down buildings with spectacular chain reactions.</p>
+                    <br>
+                    <p>Every punch triggers cascading heat transfer systems that melt stone into ash through momentum-based shrapnel interactions. Build your demolition company through 9 stages of randomly generated contracts, each presenting unique structural challenges.</p>
+                    <br>
+                    <p>Experience the satisfaction of complex physics systems responding to simple inputs, where strategic planning meets spectacular destruction in the most efficient demolition service in the business.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><a href="https://linktr.ee/reactorcore">All my links: https://linktr.ee/reactorcore</a></p>
+        <p><a href="https://reactorcore.itch.io/">All my releases: https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#e53e3e',
+                primaryTextColor: '#f7fafc',
+                primaryBorderColor: '#4a5568',
+                lineColor: '#a0aec0',
+                sectionBkgColor: '#2d2d2d',
+                altSectionBkgColor: '#1a1a1a',
+                gridColor: '#4a5568',
+                secondaryColor: '#a0aec0',
+                tertiaryColor: '#ff6b47'
+            }
+        });
+    </script>
+</body>
+</html>

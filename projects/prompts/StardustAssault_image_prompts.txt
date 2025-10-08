@@ -1,0 +1,19 @@
+Here are the five detailed image generation prompts for Stardust Assault:
+
+Title Image: (16:9)
+Extreme wide shot from low angle showing vast deep space battlefield with angular mecha silhouettes advancing through swirling cosmic dust clouds. Massive alien geometric formations lurk in background darkness while brilliant particle explosions cascade like falling stars across the void. Advanced starfighters weave between enemy formations as colorful energy blasts streak through space debris. Epic sci-fi digital painting, volumetric lighting, neon particle effects, cinematic composition, highly detailed mechanical designs, dynamic action poses. Deep space color palette with electric orange, cyan blue, and violet particle trails against dark starfield.
+
+Vignette Image: (16:9)
+Medium shot at dramatic angle capturing intense mecha combat with sleek angular pilot-controlled war machine firing tri-weapon arsenal at swarming alien geometric enemies. Brilliant particle trails arc across frame as destroyed foes dissolve into cascading colorful sand-like effects. Secondary explosions bloom in background while energy shields deflect incoming projectiles. Epic sci-fi digital painting, volumetric lighting, neon particle effects, cinematic composition, highly detailed mechanical designs, dynamic action poses. Deep space color palette with electric orange, cyan blue, and violet particle trails against dark starfield.
+
+Feature Image: (16:9)
+Close-up cinematic shot showing enemy alien geometric ships mid-dissolution as particle destruction system transforms them into streams of brilliant flowing sand-like particles. Colorful quantum matter cascades like liquid light in zero gravity while remaining ship fragments glow with residual energy. Foreground mecha weapon systems visible with targeting reticles and energy readings. Epic sci-fi digital painting, volumetric lighting, neon particle effects, cinematic composition, highly detailed mechanical designs, dynamic action poses. Deep space color palette with electric orange, cyan blue, and violet particle trails against dark starfield.
+
+Box Art Cover: (2:3)
+Heroic low angle shot of lone advanced mecha pilot standing defiantly against massive alien horde backdrop. Sleek angular war machine silhouetted against spectacular cosmic particle explosion field with countless geometric enemy formations approaching through swirling stellar debris. Dramatic lighting emphasizes pilot's determination while particle effects create ethereal glow around mechanical frame. Epic sci-fi digital painting, volumetric lighting, neon particle effects, cinematic composition, highly detailed mechanical designs, dynamic action poses. Deep space color palette with electric orange, cyan blue, and violet particle trails against dark starfield.
+
+Story Overworld Image: (16:9)
+Sweeping orbital view showing multiple star systems with diverse planetoids connected by glowing trade routes while alien-infested dark worlds spread like viral infections across the galaxy map. Human colonies shine as points of light while hive-world installations cast ominous shadows between stars. Distant mecha fleets prepare for assault missions against corrupted sectors. Epic sci-fi digital painting, volumetric lighting, neon particle effects, cinematic composition, highly detailed mechanical designs, dynamic action poses. Deep space color palette with electric orange, cyan blue, and violet particle trails against dark starfield.
+
+Unified Art Style (for all five, already included in prompts): 
+Epic sci-fi digital painting, volumetric lighting, neon particle effects, cinematic composition, highly detailed mechanical designs, dynamic action poses. Deep space color palette with electric orange, cyan blue, and violet particle trails against dark starfield.

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyssal Caretaker: Environmental Survival Action</title>
+</head>
+<body>
+
+<!--
+Image Requirements:
+- abyssal_1_title.jpg: Ancient frogman caretaker in abyssal depths surrounded by bioluminescent deep-sea creatures and mysterious ancient architecture
+- abyssal_2_vignette.jpg: Mid-action scene showing the caretaker using cleanup tools to restore polluted ocean environment with containers and debris
+- abyssal_3_feature.jpg: Detailed visualization of the suit upgrade progression system showing transformation from basic shell to advanced amphibious exosuit
+- abyssal_4_boxart.jpg: Dramatic portrait-style scene of the caretaker facing massive pollution crisis with sunken containers in dark oceanic depths
+- abyssal_5_story.jpg: frogman ancient underwater civilization of harmony of ocean floor caretaking
+-->
+
+<style>
+:root {
+    --abyss-deep: #0a1628;
+    --abyss-mid: #1e3a5f;
+    --abyss-light: #2d4d73;
+    --bio-cyan: #00ffcc;
+    --bio-blue: #0099ff;
+    --toxic-orange: #ff6600;
+    --surface-foam: #e8f4f8;
+    --text-light: #ffffff;
+    --text-muted: #b8d4f0;
+    --container-bg: rgba(45, 77, 115, 0.8);
+    --border-glow: #00ccaa;
+    --shadow-deep: rgba(10, 22, 40, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, var(--abyss-deep) 0%, var(--abyss-mid) 50%, var(--abyss-light) 100%);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.patreon-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--container-bg);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-glow);
+    font-size: 0.8em;
+    z-index: 1000;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.patreon-link:hover {
+    border-color: var(--bio-cyan);
+    color: var(--bio-cyan);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+}
+
+.title-section {
+    position: relative;
+    height: 600px;
+    background: url('images/abyssal_1_title.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.title-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(10, 22, 40, 0.6), rgba(30, 58, 95, 0.5));
+    z-index: 1;
+}
+
+.title-content {
+    position: relative;
+    z-index: 2;
+}
+
+.main-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-light);
+    text-shadow: 
+        0 0 10px var(--bio-cyan),
+        0 0 20px var(--bio-cyan),
+        0 0 30px var(--bio-cyan);
+    animation: breathingGlow 4s ease-in-out infinite alternate;
+}
+
+.subtitle {
+    font-size: 1.8em;
+    color: var(--bio-blue);
+    font-weight: 300;
+    text-shadow: 0 0 15px var(--bio-blue);
+}
+
+@keyframes breathingGlow {
+    0% {
+        text-shadow: 
+            0 0 10px var(--bio-cyan),
+            0 0 20px var(--bio-cyan),
+            0 0 30px var(--bio-cyan);
+    }
+    100% {
+        text-shadow: 
+            0 0 15px var(--bio-cyan),
+            0 0 25px var(--bio-cyan),
+            0 0 35px var(--bio-cyan),
+            0 0 45px var(--bio-cyan);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-light);
+    text-shadow: 
+        0 0 10px var(--bio-blue),
+        0 0 20px var(--bio-blue);
+    animation: breathingGlow 4s ease-in-out infinite alternate;
+}
+
+.overview {
+    background: var(--container-bg);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--border-glow);
+    box-shadow: 0 10px 30px var(--shadow-deep);
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+}
+
+.overview p {
+    margin-bottom: 20px;
+}
+
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.card {
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--border-glow);
+    box-shadow: 0 10px 30px var(--shadow-deep);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--bio-cyan);
+    box-shadow: 0 15px 40px var(--shadow-deep), 0 0 20px rgba(0, 255, 204, 0.3);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--bio-cyan);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-icon {
+    font-size: 1.5em;
+}
+
+.controls-section {
+    background: var(--container-bg);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--border-glow);
+    box-shadow: 0 10px 30px var(--shadow-deep);
+}
+
+.controls-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(45, 77, 115, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.controls-table th {
+    background: var(--abyss-mid);
+    color: var(--bio-cyan);
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 2px solid var(--border-glow);
+}
+
+.controls-table td {
+    padding: 12px 15px;
+    color: var(--text-light);
+    border-bottom: 1px solid rgba(0, 204, 170, 0.2);
+}
+
+.controls-table tr:hover {
+    background: rgba(0, 255, 204, 0.1);
+    transition: background 0.3s ease;
+}
+
+.controls-table td:first-child {
+    color: var(--bio-blue);
+    font-weight: bold;
+    width: 20%;
+}
+
+.controls-table td:nth-child(2) {
+    color: var(--text-muted);
+    width: 50%;
+}
+
+.controls-table td:nth-child(3) {
+    color: var(--bio-cyan);
+    font-size: 0.9em;
+    width: 30%;
+}
+
+.controls-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.controls-section-header {
+    background: rgba(0, 255, 204, 0.1);
+    color: var(--bio-cyan);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 15px;
+    border: none;
+    text-align: center;
+    border-top: 2px solid var(--bio-cyan);
+    border-bottom: 2px solid var(--bio-cyan);
+}
+
+.controls-section-header td {
+    border-bottom: 2px solid var(--bio-cyan) !important;
+}
+
+.vignette-section {
+    position: relative;
+    height: 600px;
+    background: url('images/abyssal_2_vignette.jpg') center/cover;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 50px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.vignette-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10, 22, 40, 0.9));
+    padding: 40px;
+}
+
+.vignette-quote {
+    font-size: 1.3em;
+    font-style: italic;
+    color: var(--surface-foam);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.game-layers {
+    background: var(--container-bg);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--border-glow);
+    box-shadow: 0 10px 30px var(--shadow-deep);
+}
+
+.layer-card {
+    background: rgba(45, 77, 115, 0.6);
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--bio-cyan);
+}
+
+.layer-card h4 {
+    color: var(--bio-cyan);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.feature-card {
+    background: var(--container-bg);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--border-glow);
+    box-shadow: 0 10px 30px var(--shadow-deep);
+}
+
+.feature-card h3 {
+    color: var(--bio-cyan);
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-icon {
+    font-size: 2em;
+}
+
+.upgrade-diagram {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.upgrade-path {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.upgrade-stage {
+    background: rgba(0, 153, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--bio-blue);
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.upgrade-stage h5 {
+    color: var(--bio-cyan);
+    margin-bottom: 5px;
+}
+
+.upgrade-arrow {
+    color: var(--bio-blue);
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+.feature-image-section {
+    position: relative;
+    height: 600px;
+    background: url('images/abyssal_3_feature.jpg') center/cover;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 50px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.feature-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10, 22, 40, 0.9));
+    padding: 40px;
+}
+
+.feature-quote {
+    font-size: 1.3em;
+    font-style: italic;
+    color: var(--surface-foam);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.trivia-section {
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--toxic-orange);
+    box-shadow: 0 10px 30px var(--shadow-deep);
+    margin: 40px 0;
+}
+
+.trivia-section h3 {
+    color: var(--toxic-orange);
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.trivia-list {
+    list-style: none;
+    padding: 0;
+}
+
+.trivia-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 102, 0, 0.3);
+    color: var(--text-muted);
+}
+
+.trivia-list li::before {
+    content: "⚠️ ";
+    margin-right: 10px;
+}
+
+.boxart-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    background: var(--container-bg);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--border-glow);
+    box-shadow: 0 10px 30px var(--shadow-deep);
+    margin: 50px 0;
+    align-items: stretch;
+}
+
+.boxart-image {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+.boxart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px;
+    padding: 10px 0;
+}
+
+.boxart-content h3 {
+    color: var(--bio-cyan);
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--bio-cyan);
+}
+
+.boxart-content p {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.boxart-content p:last-child {
+    margin-bottom: 0;
+    font-style: italic;
+    color: var(--bio-cyan);
+    text-align: center;
+    border-top: 1px solid var(--border-glow);
+    padding-top: 20px;
+    margin-top: auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: var(--abyss-deep);
+    border-top: 2px solid var(--border-glow);
+    margin-top: 60px;
+}
+
+.footer a {
+    color: var(--bio-cyan);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-shadow: 0 0 10px var(--bio-cyan);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5em;
+    }
+    
+    .subtitle {
+        font-size: 1.3em;
+    }
+    
+    .section-title {
+        font-size: 2em;
+    }
+    
+    .cards-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .boxart-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .boxart-image {
+        width: 250px;
+        height: 375px;
+        margin: 0 auto;
+    }
+    
+    .boxart-content {
+        min-height: auto;
+    }
+    
+    .upgrade-path {
+        flex-direction: column;
+    }
+    
+    .upgrade-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .controls-table {
+        font-size: 0.9em;
+    }
+    
+    .controls-table th,
+    .controls-table td {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+    
+    .overview, .card, .controls-section, .game-layers, .feature-card, .trivia-section, .boxart-section {
+        padding: 20px;
+    }
+    
+    .main-title {
+        font-size: 2em;
+    }
+    
+    .title-section {
+        height: 300px;
+    }
+    
+    .controls-table {
+        font-size: 0.8em;
+    }
+    
+    .controls-table th,
+    .controls-table td {
+        padding: 8px 6px;
+    }
+    
+    .controls-table td:nth-child(3) {
+        display: none;
+    }
+}
+</style>
+
+<a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+    Reactorcore's Personal Game Design Project
+</a>
+
+<section class="title-section">
+    <div class="title-content">
+        <h1 class="main-title">Abyssal Caretaker</h1>
+        <p class="subtitle">Environmental Survival Action</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="overview">
+        <p>🌊 <strong>Rise from the crushing abyss as an ancient oceanic guardian</strong> in this reverse-Subnautica experience. Begin your journey in the deepest ocean trenches and ascend through five distinct zones toward the polluted surface, upgrading your suit to survive each new environment.</p>
+        
+        <p>As the last of the Abyssal Caretakers, experience the ocean's pollution crisis from bottom to top - from mysterious deep-sea container graveyards to toxic surface oil slicks. Salvage human technology and combine it with natural resources to craft the upgrades needed for your upward journey.</p>
+        
+        <p>⚡ <strong>This is environmental action gaming reimagined</strong> - a 2D side-scrolling adventure where every cleaned habitat, every sealed container leak, and every restored ecosystem creates a path of healing that follows you from the abyss to humanity's doorstep.</p>
+    </div>
+
+    <div class="cards-row">
+        <div class="card">
+            <h3><span class="card-icon">🎯</span> Target Audience</h3>
+            <p><strong>Environmentally-conscious gamers</strong> who enjoyed Subnautica's exploration but want meaningful environmental impact. Players seeking survival-crafting experiences with deeper purpose than mere resource accumulation.</p>
+            <br>
+            <p>Appeals to those interested in <strong>ocean conservation</strong>, ancient mythology, and games that blend entertainment with environmental awareness.</p>
+        </div>
+        
+        <div class="card">
+            <h3><span class="card-icon">🌍</span> Game's Purpose</h3>
+            <p>Fulfills the fundamental human needs for <strong>competence</strong> (mastering complex survival systems), <strong>purpose</strong> (meaningful environmental restoration), and <strong>connection</strong> (healing relationship between humanity and nature).</p>
+            <br>
+            <p>Provides cathartic experience of <strong>undoing environmental damage</strong> while fostering real-world ocean awareness.</p>
+        </div>
+        
+        <div class="card">
+            <h3><span class="card-icon">⚡</span> Core Concept</h3>
+            <p>Experience the <strong>ultimate environmental power fantasy</strong> - you have the tools, knowledge, and ancient authority to actually fix the ocean's pollution. Each cleanup action has visible, lasting impact on marine ecosystems.</p>
+            <br>
+            <p>Unlike typical survival games focused on hoarding resources, this game is about <strong>giving back to the environment</strong> and seeing it thrive in response.</p>
+        </div>
+    </div>
+
+    <div class="feature-image-section" style="background: url('images/abyssal_5_story.jpg') center/cover;">
+        <div class="feature-image-overlay">
+            <p class="feature-quote">"Before the great pollution, the abyssal depths held ancient cities where caretakers maintained the ocean's delicate balance - now only you remain to bridge the forgotten wisdom of the deep with the desperate need of the surface."</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2 class="section-title">Lore & Story</h2>
+        <div class="game-layers">
+            <div class="layer-card">
+                <h4>🏛️ The Ancient Covenant</h4>
+                <p>Long before humanity discovered the ocean's depths, the Abyssal Caretakers maintained a sacred covenant with the planetary water system. These amphibious guardians, evolved from the deepest trenches, served as living immune systems for the ocean - detecting, isolating, and neutralizing threats to marine equilibrium.</p>
+            </div>
+            
+            <div class="layer-card">
+                <h4>⚡ The Great Forgetting</h4>
+                <p>As human civilization expanded, the surface world forgot the ancient partnership that once existed between land and sea. Industrial pollution began overwhelming the caretakers' ability to heal, forcing most into deep hibernation in thermal vent sanctuaries. The ocean's health declined rapidly without its guardians' active protection.</p>
+            </div>
+            
+            <div class="layer-card">
+                <h4>🚢 The Container Crisis</h4>
+                <p>The final catastrophe arrived with the shipping container era. Thousands of metal boxes carrying unknown chemicals now litter the ocean floor, their contents slowly poisoning entire ecosystems. The crisis has reached critical mass - even the deepest abyssal plains show signs of contamination that threaten all marine life.</p>
+            </div>
+            
+            <div class="layer-card">
+                <h4>🌊 Your Awakening</h4>
+                <p>You are the last caretaker to emerge from the dying thermal vents, awakening to find an ocean in unprecedented crisis. Your mission is both clear and desperate: rise through the five oceanic zones, restore what can be saved, and establish a new balance between human activity and ocean health before complete ecosystem collapse occurs.</p>
+            </div>
+            
+            <div class="layer-card">
+                <h4>🔱 The Surface Revelation</h4>
+                <p>The journey upward will reveal the true scope of humanity's impact on the ocean, but also their potential for change. Your actions in the depths create ripple effects that reach the surface world - can you bridge two civilizations that have forgotten they share the same planet?</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Controls & Interface</h2>
+        <div class="controls-section">
+            <p>Experience <strong>2D side-scrolling action</strong> as you embody an ancient oceanic caretaker. Navigate vast underwater landscapes with precision controls that adapt from the crushing abyss to the chaotic surface environment.</p>
+            
+            <table class="controls-table">
+                <thead>
+                    <tr>
+                        <th>Control</th>
+                        <th>Action</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="controls-section-header">
+                        <td colspan="3">🎮 CORE MOVEMENT</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WASD</strong></td>
+                        <td>Swimming and walking movement</td>
+                        <td>Basic Navigation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mouse</strong></td>
+                        <td>Aim tools and weapons</td>
+                        <td>Precision Targeting</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Shift</strong></td>
+                        <td>Boost swimming speed</td>
+                        <td>Enhanced Mobility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Space</strong></td>
+                        <td>Vertical thrust/jump</td>
+                        <td>Depth Control</td>
+                    </tr>
+                    <tr class="controls-section-header">
+                        <td colspan="3">🛠️ ENVIRONMENTAL TOOLS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Left Click</strong></td>
+                        <td>Primary tool (cutting/repair beam)</td>
+                        <td>Active Restoration</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Right Click</strong></td>
+                        <td>Secondary tool (vacuum/spray)</td>
+                        <td>Active Restoration</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Q/E</strong></td>
+                        <td>Cycle through tool modes</td>
+                        <td>Tool Management</td>
+                    </tr>
+                    <tr>
+                        <td><strong>F</strong></td>
+                        <td>Environmental scanner</td>
+                        <td>Analysis & Detection</td>
+                    </tr>
+                    <tr class="controls-section-header">
+                        <td colspan="3">🚢 VEHICLE CONTROLS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Enter/Exit</strong></td>
+                        <td>Board vehicles</td>
+                        <td>Vehicle Access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WASD</strong></td>
+                        <td>Vehicle movement</td>
+                        <td>Vehicle Navigation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mouse</strong></td>
+                        <td>Vehicle-specific abilities</td>
+                        <td>Vehicle Actions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tab</strong></td>
+                        <td>Vehicle equipment menu</td>
+                        <td>Vehicle Management</td>
+                    </tr>
+                    <tr class="controls-section-header">
+                        <td colspan="3">⚗️ INTERFACE & CRAFTING</td>
+                    </tr>
+                    <tr>
+                        <td><strong>I</strong></td>
+                        <td>Inventory and crafting menu</td>
+                        <td>Resource Management</td>
+                    </tr>
+                    <tr>
+                        <td><strong>M</strong></td>
+                        <td>Zone map and depth tracker</td>
+                        <td>Navigation Interface</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C</strong></td>
+                        <td>Suit status and upgrades</td>
+                        <td>Character Progression</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1-5</strong></td>
+                        <td>Quick-access tool hotkeys</td>
+                        <td>Quick Commands</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="vignette-section">
+        <div class="vignette-overlay">
+            <p class="vignette-quote">"Navigate through stunning 2D underwater landscapes as you rise from the abyss, watching ecosystems transform from polluted wastelands to thriving marine sanctuaries in your wake."</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2 class="section-title">Game Layers</h2>
+        <div class="game-layers">
+            <div class="layer-card">
+                <h4>🌊 Moment-to-Moment Gameplay</h4>
+                <p>Side-scrolling through polluted underwater landscapes, using mouse-aimed tools to clean contamination, platforming through wreckage fields, and salvaging container technology. Each area presents 2D environmental puzzles that require the right tool combinations and suit upgrades to solve.</p>
+            </div>
+            
+            <div class="layer-card">
+                <h4>🗺️ Zone-Based Progression (Low Metagame)</h4>
+                <p>Progress through five distinct oceanic environments: <strong>Abyssal Plains → Continental Slope → Continental Shelf → Coastal Waters → Surface Ports</strong>. Each zone requires specific suit upgrades and presents unique pollution challenges, from deep-sea container graveyards to toxic surface oil slicks.</p>
+            </div>
+            
+            <div class="layer-card">
+                <h4>🌍 Ocean Health Persistence (High Metagame)</h4>
+                <p>Areas you clean stay clean and continue to recover over time. Return to previously restored zones to see thriving marine life, natural healing processes, and new opportunities for deeper environmental work. Your actions create a <strong>living, breathing ocean recovery system</strong>.</p>
+            </div>
+            
+            <div class="layer-card">
+                <h4>⏱️ Practical Game Flow</h4>
+                <p>Sessions begin with suit diagnostics and zone selection. Spend 30-90 minutes exploring, cleaning pollution, and gathering upgrade materials. Natural stopping points occur when completing zone restoration goals or achieving major suit upgrades, leaving you with clear progress and anticipation for the next depth.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Game Features & Mechanics</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3><span class="feature-icon">🤿</span> Depth-Based Suit Progression System</h3>
+                <p><strong>Reverse-Subnautica Progression:</strong> Your journey from the crushing abyss to the hostile surface requires systematic suit upgrades crafted from salvaged container technology and natural oceanic resources. Each upgrade unlocks access to higher zones while maintaining the delicate balance of your ancient biology.</p>
+                
+                <div class="upgrade-diagram">
+                    <div class="upgrade-path">
+                        <div class="upgrade-stage">
+                            <h5>Ancient Shell</h5>
+                            <p>Abyss Only</p>
+                        </div>
+                        <span class="upgrade-arrow">→</span>
+                        <div class="upgrade-stage">
+                            <h5>Pressure Liner</h5>
+                            <p>+Upper Slope</p>
+                        </div>
+                        <span class="upgrade-arrow">→</span>
+                        <div class="upgrade-stage">
+                            <h5>Toxin Filter</h5>
+                            <p>+Midwater</p>
+                        </div>
+                        <span class="upgrade-arrow">→</span>
+                        <div class="upgrade-stage">
+                            <h5>Surface Respirator</h5>
+                            <p>+Coastal</p>
+                        </div>
+                        <span class="upgrade-arrow">→</span>
+                        <div class="upgrade-stage">
+                            <h5>Landwalker Rig</h5>
+                            <p>+Ports</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>Unlike traditional games where you dive deeper, here you must <strong>rise toward the light</strong> - each upgrade bringing new challenges as you approach the chaotic, polluted surface world that threatens the ocean's very existence.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="feature-icon">🌿</span> Environmental Restoration Mechanics</h3>
+                <p>Deploy advanced caretaker tools to neutralize chemical spills, extract microplastics, disperse oil slicks, and restore damaged habitats. Watch ecosystems respond in real-time as marine life returns to areas you've healed.</p>
+                
+                <p><strong>Cleanup Tools Include:</strong></p>
+                <ul style="margin: 15px 0; padding-left: 20px; color: var(--text-muted);">
+                    <li>🔧 Multi-beam for cutting debris and sealing container leaks</li>
+                    <li>🧪 Bioremediation spray to deploy cleaning bacteria</li>
+                    <li>💨 Vacuum filtration for microplastic removal</li>
+                    <li>🌱 Habitat restoration seeds and coral revival systems</li>
+                </ul>
+                
+                <p>The satisfaction comes from seeing <strong>immediate, visible impact</strong> - waters clear, fish return, coral regrows, and bioluminescent life illuminates areas that were once dead zones.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="feature-icon">⚙️</span> Salvage-Based Crafting System</h3>
+                <p>Combine advanced technology from sunken cargo containers with natural oceanic materials to create hybrid upgrades that serve your ancient biology while granting access to human-polluted environments.</p>
+                
+                <p><strong>Crafting Examples:</strong></p>
+                <ul style="margin: 15px 0; padding-left: 20px; color: var(--text-muted);">
+                    <li>Container insulation + volcanic minerals → Thermal regulation</li>
+                    <li>Ship ballast tanks + natural gas bladders → Buoyancy control</li>
+                    <li>Synthetic filters + kelp enzymes → Chemical resistance</li>
+                    <li>UV plastics + coral pigments → Light protection</li>
+                </ul>
+                
+                <p>This system creates meaningful choices between different upgrade paths while emphasizing the <strong>symbiosis between human technology and natural wisdom</strong> needed to heal the damaged ocean.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="feature-icon">👁️</span> Stealth & Discovery Investigation</h3>
+                <p>Navigate carefully around human shipping activity while investigating pollution sources. Use your ancient oceanic senses to discover hidden container graveyards, trace chemical leaks to their origins, and uncover the full scope of environmental damage.</p>
+                <br>
+                <p>Your advanced environmental scanner reveals the <strong>true extent of ocean pollution</strong> invisible to human detection - tracking chemical plumes through deep currents, identifying contaminated sediment layers, and mapping the spread of microplastics through the food web.</p>
+                <br>
+                <p>Balance the need for stealth against opportunities to <strong>directly intervene</strong> in ongoing pollution events - can you stop a ship from dumping waste without revealing your existence?</p>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="feature-icon">🚁</span> Specialized Vehicle Traversal</h3>
+                <p>Command three distinct vehicles designed for different oceanic environments, each reflecting your ancient caretaker heritage while incorporating salvaged human technology for enhanced capability.</p>
+                
+                <p><strong>Vehicle Fleet:</strong></p>
+                <ul style="margin: 15px 0; padding-left: 20px; color: var(--text-muted);">
+                    <li>🌊 <strong>Abyssal Skimmer:</strong> Manta ray-inspired deep-sea exploration vessel</li>
+                    <li>🦎 <strong>Midwater Climber:</strong> Frog-legged walker for navigating wreckage fields</li>
+                    <li>🏄 <strong>Surface Hopper:</strong> Amphibious craft for coastal operations</li>
+                </ul>
+                
+                <p>Each vehicle features <strong>cargo pods for rescued wildlife</strong>, cleanup equipment storage, and the ability to deploy your tadpole drone swarm for coordinated environmental restoration efforts.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="feature-icon">📜</span> Ancient Guardian Mythology</h3>
+                <p>Uncover the deep lore of the Abyssal Caretakers through environmental storytelling, ancient workbenches, and cryptic sites scattered throughout the oceanic depths. Learn how your people once maintained perfect oceanic balance.</p>
+                <br>
+                <p>Discover that the current pollution crisis isn't the first time the ocean has faced catastrophic contamination - ancient carvings reveal previous ecological disasters and how the caretakers responded, providing both hope and warnings for your current mission.</p>
+                <br>
+                <p>Your journey reveals the <strong>interconnected relationship</strong> between oceanic health and planetary survival, suggesting that healing the ocean may be the key to preventing a larger global ecological collapse.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="feature-image-section">
+        <div class="feature-image-overlay">
+            <p class="feature-quote">"The suit progression system transforms you from a creature of the deep into a bridge between worlds - ancient wisdom meets modern technology in the fight to save our ocean."</p>
+        </div>
+    </div>
+
+    <section class="section trivia-section">
+        <h3>⚠️ Environmental Crisis Facts</h3>
+        <ul class="trivia-list">
+            <li>Over 10,000 shipping containers are lost at sea annually, many containing hazardous materials that leach into marine ecosystems</li>
+            <li>Calcium carbide (featured in the MSC Elsa 3 incident) reacts with seawater to produce highly flammable acetylene gas, creating underwater fire hazards</li>
+            <li>Microplastics have been found in the deepest ocean trenches, including the Mariana Trench at depths exceeding 10,000 meters</li>
+            <li>Chemical spills at 50-meter depths can reach coastal ecosystems within days, while abyssal contamination persists for centuries</li>
+            <li>Deep-sea mining and shipping pollution threaten chemosynthetic communities that exist nowhere else on Earth</li>
+            <li>The game's five-zone depth system mirrors real oceanic pollution layers, from surface oil slicks to abyssal sediment contamination</li>
+        </ul>
+    </section>
+
+    <div class="boxart-section">
+        <img src="images/abyssal_4_boxart.jpg" alt="Abyssal Caretaker Box Art" class="boxart-image">
+        <div class="boxart-content">
+            <h3>Abyssal Caretaker</h3>
+            <p>Rise from the crushing depths as humanity's last hope for oceanic salvation. Armed with ancient wisdom and salvaged technology, you are the bridge between a dying ocean and a world that has forgotten its dependence on the sea.</p>
+            
+            <p><strong>Every container you seal, every toxin you neutralize, every habitat you restore brings the ocean one step closer to its former glory.</strong> But time is running out - how deep will you go to save the world above?</p>
+            
+            <p>Experience environmental action gaming where your choices create lasting change, your tools serve healing rather than destruction, and your mission connects the deepest ocean trenches to the fate of all life on Earth.</p>
+            
+            <p><em>The abyss calls. The ocean remembers. Will you answer?</em></p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+    <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+    <p>Reactorcore Games - 2025</p>
+</footer>
+
+</body>
+</html>

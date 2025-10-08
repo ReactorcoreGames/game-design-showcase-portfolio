@@ -1,0 +1,22 @@
+Here are the five detailed image generation prompts for AALSW (Tactical Arsenal Command):
+
+Title Image: (16:9)
+Wide cinematic shot, low angle perspective. Tactical squad of four armored android soldiers in military formation advancing through semi-destructible surface bunker complex terrain. Lead soldier in olive_green tactical gear is aiming modular rifle, flanked by teammates with varied gritty hard-scifi equipment loadouts. Background shows aerial dropship command vehicle and physics debris from recent combat. Smoke and particle effects from red laser weapons create atmospheric depth. Realistic military sci-fi art style, muted green titanium with sharp red accents color palette, dramatic tactical lighting, highly detailed equipment, authentic ballistics effects, photorealistic rendering, sharp focus
+
+Vignette Image: (16:9) 
+Dynamic medium shot, tilted camera angle. Intense firefight scene with multiple projectiles frozen mid-flight showing realistic ballistic trajectories. Central robot warrior figure ducking behind destructible cover while dual-wielding gauss rifle weapons. Environmental destruction with tile-based debris pattern, sparks, and shockwave effects from nearby explosion. Secondary android soldiers visible in tactical positions. Physics-driven combat emphasized through visible force vectors and impact patterns. Realistic military sci-fi art style, muted green titanium with sharp red accents color palette, dramatic tactical lighting, highly detailed equipment, authentic ballistics effects, photorealistic rendering, sharp focus
+
+Feature Image: (16:9)
+Close-up macro shot, slightly elevated angle. Detailed view of realistic ballistic impact creating authentic debris patterns in destructible tile-based wall. Projectile trail visible with physics-accurate trajectory curve. Tactical android soldier's gloved hand and weapon barrel in foreground. Background shows tactical HUD elements and environmental physics interactions. Dust particles and material fragments follow realistic physics laws. Realistic military sci-fi art style, muted green titanium with sharp red accents color palette, dramatic tactical lighting, highly detailed equipment, authentic ballistics effects, photorealistic rendering, sharp focus
+
+Box Art Cover: (2:3)
+Portrait composition, heroic low angle. Commanding tactical android agent in full combat gear holding customizable weapon system, positioned in front of mobile bunkership. Squad android silhouettes visible in middle distance. Background shows galactic civilization with space colonies and tactical installations. Military insignia and modular equipment details prominently displayed. Professional game cover composition with depth of field focusing on main character. Realistic military sci-fi art style, muted green titanium with sharp red accents color palette, dramatic tactical lighting, highly detailed equipment, authentic ballistics effects, photorealistic rendering, sharp focus
+
+Story Overworld Image: (16:9)
+Establishing wide shot, elevated orbital perspective. Vast galactic civilization spanning multiple star systems with interconnected space colonies, orbital platforms, and peaceful starships. Advanced megastructures and space stations show post-war golden age prosperity. Distant galaxies visible in background suggesting scope of galactic administration. Subtle space monster threats at galaxy edges. No combat, focus on civilizational scale and peaceful expansion. Realistic military sci-fi art style, muted green titanium with sharp red accents color palette, dramatic tactical lighting, highly detailed equipment, authentic ballistics effects, photorealistic rendering, sharp focus
+
+Unified Art Style (for all five, already included in prompts):
+Realistic military sci-fi art style, muted green titanium with sharp red accents color palette, dramatic tactical lighting, highly detailed equipment, authentic ballistics effects, photorealistic rendering, sharp focus
+
+
+Todo: make others more hard-scifi if they arent already

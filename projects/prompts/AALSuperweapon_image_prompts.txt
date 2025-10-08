@@ -1,0 +1,19 @@
+Here are the five detailed image generation prompts for AAL Superweapon:
+
+Title Image: (16:9)
+Wide-angle establishing shot from low perspective looking up at a lone armored crimson red battlesuit devastator standing in a vast alien laboratory corridor. The immortal agent wears sleek futuristic combat battlesuit with glowing cyan energy lines, dual-wielding modular weapons that emit bright particle effects. Endless hallways of a vast tech base complex and holographic displays line the walls, casting ethereal cyan and red light throughout the metallic chamber. Sci-fi concept art, cyberpunk aesthetics, dramatic lighting, neon glows, metallic textures, particle effects, high contrast shadows, detailed machinery
+
+Vignette Image: (16:9)
+Dynamic mid-action shot capturing intense combat from a tilted Dutch angle. The immortal crimson battlesuit agent leaps through explosive debris while firing quad-wielded weapons simultaneously, creating cascading physics destruction around them. Enemy fragments and weapon parts fly in realistic cyan arcs through the air as explosions illuminate the scene. Sparks and energy blasts streak across the frame while environmental hazards crumble under the physics-driven chaos. Sci-fi concept art, cyberpunk aesthetics, dramatic lighting, neon glows, metallic textures, particle effects, high contrast shadows, detailed machinery
+
+Feature Image: (16:9)
+Extreme close-up macro shot focusing on modular crimson red firing frame weapons mid-transformation. The universal weapon platforms reshape their geometric forms in real-time, mechanical components sliding and reconfiguring while glowing with cyan internal energy. Technical diagrams and holographic blueprints float around the weapons, showing their adaptability. The background features blurred tech base laboratory equipment with soft bokeh effects highlighting the weapon's intricate details and transformation mechanics. Sci-fi concept art, cyberpunk aesthetics, dramatic lighting, neon glows, metallic textures, particle effects, high contrast shadows, detailed machinery
+
+Box Art Cover: (2:3)
+Heroic close up portrait composition showing the immortal agent in a crimson red battlesuit doing a dynamic pose in orbit of a ashen blue moon, wielding devastating superweapons against a backdrop of the moon-wide laboratory complex. The figure dominates the foreground with imposing armored red energy-wreathed weapons. Ominous space monsters lurk amongst the craters. Sci-fi concept art, cyberpunk aesthetics, dramatic lighting, neon glows, metallic textures, particle effects, high contrast shadows, detailed machinery
+
+Story Overworld Image: (16:9)
+Sweeping aerial establishing shot revealing the true scale of the mysterious planet-wide laboratory complex. The camera pulls back to show continent-spanning geometric structures, massive research facilities, energy transmission towers, and interconnected technological networks stretching to the horizon. Ancient alien architecture blends organic curves with angular metallic construction. The ashen blue cratered planet's surface glows with technological activity beneath a star-filled cosmos. Sci-fi concept art, cyberpunk aesthetics, dramatic lighting, neon glows, metallic textures, particle effects, high contrast shadows, detailed machinery
+
+Unified Art Style (for all five, already included in prompts):
+Sci-fi concept art, cyberpunk aesthetics, dramatic lighting, neon glows, metallic textures, particle effects, high contrast shadows, detailed machinery

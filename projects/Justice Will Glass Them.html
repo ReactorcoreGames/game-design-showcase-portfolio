@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice Will Glass Them: Orbital Vengeance Obliteration - Reactorcore Games</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        /* 
+        Image Requirements:
+        justice_1_title.jpg - Space warship above fortified underground complex with ominous atmosphere
+        justice_2_vignette.jpg - Mid-combat scene showing beam drilling through terrain layers with violet-red lighting
+        justice_3_feature.jpg - Close-up of falling sand physics with terrain destruction and ember effects
+        justice_4_boxart.jpg - Dramatic cover art showing orbital vengeance theme with dark violet to red gradient
+        justice_5_story.jpg - Zoomed out overworld view of the greater setting (16:9 aspect ratio)
+        */
+
+        :root {
+            --background-dark: #1a0d2e;
+            --background-mid: #2d1a4e;
+            --background-light: #4a2c6a;
+            --container-bg: rgba(45, 26, 78, 0.9);
+            --container-border: #8b3a62;
+            --text-color: #e8d5f0;
+            --text-secondary: #c8a8d8;
+            --accent-primary: #ff4757;
+            --accent-secondary: #ff6b7a;
+            --glow-ember: #ff6b3a;
+            --glow-secondary: #d63031;
+            --card-shadow: rgba(255, 107, 58, 0.3);
+            --border-glow: #8b3a62;
+            --hellish-red: #cc2e2e;
+            --dark-violet: #2d1a4e;
+            --h2-color: #fdfff0;
+            --h2-glow: #0099cc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, var(--dark-violet) 0%, var(--background-mid) 50%, var(--hellish-red) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(45, 26, 78, 0.8);
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 12px;
+            border: 1px solid var(--border-glow);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .patreon-link:hover {
+            background: var(--container-bg);
+            color: var(--accent-secondary);
+            border-color: var(--accent-primary);
+        }
+
+        .title-section {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background: url('images/justice_1_title.jpg') center/cover;
+            background-blend-mode: multiply;
+            overflow: hidden;
+        }
+
+        .title-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(45, 26, 78, 0.4) 0%, rgba(204, 46, 46, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .title-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--glow-ember), 0 0 20px var(--glow-ember), 0 0 30px var(--glow-ember);
+            animation: emberGlow 3s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--accent-secondary);
+            font-weight: 300;
+            text-shadow: 0 0 8px var(--glow-secondary);
+        }
+
+        @keyframes emberGlow {
+            0% {
+                text-shadow: 
+                    0 0 5px var(--glow-ember),
+                    0 0 10px var(--glow-ember),
+                    0 0 15px var(--glow-ember),
+                    0 0 20px var(--glow-secondary);
+            }
+            25% {
+                text-shadow: 
+                    0 0 8px var(--glow-ember),
+                    0 0 16px var(--glow-ember),
+                    0 0 24px var(--glow-ember),
+                    0 0 32px var(--glow-secondary);
+            }
+            50% {
+                text-shadow: 
+                    0 0 4px var(--glow-ember),
+                    0 0 8px var(--glow-ember),
+                    0 0 12px var(--glow-ember),
+                    0 0 16px var(--glow-secondary);
+            }
+            75% {
+                text-shadow: 
+                    0 0 10px var(--glow-ember),
+                    0 0 20px var(--glow-ember),
+                    0 0 30px var(--glow-ember),
+                    0 0 40px var(--glow-secondary);
+            }
+            100% {
+                text-shadow: 
+                    0 0 6px var(--glow-ember),
+                    0 0 12px var(--glow-ember),
+                    0 0 18px var(--glow-ember),
+                    0 0 24px var(--glow-secondary);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--container-bg);
+            border-radius: 10px;
+            border: 2px solid var(--container-border);
+            box-shadow: 0 8px 32px var(--card-shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            margin-bottom: 1.5rem;
+            color: var(--h2-color);
+            text-shadow: 0 0 10px var(--h2-glow);
+            animation: emberGlow 3s ease-in-out infinite alternate;
+        }
+
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: rgba(45, 26, 78, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid var(--border-glow);
+            box-shadow: 0 4px 20px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .card strong {
+            color: var(--accent-primary);
+        }
+
+        .game-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .layer-card {
+            background: rgba(45, 26, 78, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid var(--border-glow);
+            border-left: 6px solid var(--accent-primary);
+            box-shadow: 0 4px 20px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .layer-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .layer-card h4 {
+            color: var(--accent-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: rgba(45, 26, 78, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid var(--border-glow);
+            box-shadow: 0 4px 20px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .feature-card h4 {
+            color: var(--accent-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .image-section {
+            margin: 3rem 0;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem;
+        }
+
+        .image-quote {
+            background: rgba(45, 26, 78, 0.9);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+            color: var(--text-color);
+            font-style: italic;
+            font-size: 1.1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+        }
+
+        .final-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 2rem;
+            margin: 3rem 0;
+            align-items: start;
+        }
+
+        .boxart-container {
+            position: relative;
+        }
+
+        .boxart {
+            width: 100%;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .description-card {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid var(--container-border);
+            box-shadow: 0 8px 32px var(--card-shadow);
+            height: fit-content;
+        }
+
+        .description-card h3 {
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            text-shadow: 0 0 8px var(--glow-ember);
+        }
+
+        .controls-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .control-item {
+            background: rgba(139, 58, 98, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-glow);
+        }
+
+        .control-key {
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        .mermaid-container {
+            background: rgba(45, 26, 78, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid var(--border-glow);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(45, 26, 78, 0.9);
+            margin-top: 3rem;
+            border-top: 2px solid var(--container-border);
+        }
+
+        .footer a {
+            color: var(--accent-secondary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--accent-primary);
+        }
+
+        @media (max-width: 768px) {
+            .final-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .three-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1 class="main-title">Justice Will Glass Them</h1>
+            <p class="subtitle">Orbital Vengeance Obliteration</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2>🚀 Game Overview</h2>
+            <p>Command a high-tech space police warship in atmospheric orbit, raining down precise justice upon entrenched criminal fortresses hidden deep underground. <strong>Justice Will Glass Them</strong> combines falling sand physics with tactical orbital combat, creating a uniquely satisfying experience of methodical destruction and strategic targeting.</p>
+            <br>
+            <p>Using advanced drilling beams and defensive systems, systematically penetrate layered fortress defenses while avoiding anti-aircraft fire. Each campaign targets a specific group of criminals who thought they could hide from justice in their underground bunkers. <strong>No sanctuary is deep enough.</strong></p>
+        </section>
+
+        <div class="three-cards">
+            <div class="card">
+                <h3>🎯 Target Audience</h3>
+                <p><strong>Action Strategy Enthusiasts</strong> who enjoy physics-based destruction, tactical positioning, and satisfying progression. Appeals to players who appreciate both precise control and spectacular results, combining the methodical satisfaction of puzzle-solving with the immediate gratification of explosive action.</p>
+            </div>
+            <div class="card">
+                <h3>⚖️ Game's Purpose</h3>
+                <p>Fulfills fundamental human needs for <strong>justice, mastery, and competence</strong>. Provides a safe outlet for righteous anger while developing strategic thinking and precision skills. Creates deep satisfaction through the combination of moral clarity and tactical execution.</p>
+            </div>
+            <div class="card">
+                <h3>🔥 Core Concept</h3>
+                <p><strong>Precise orbital bombardment through physics-based terrain destruction.</strong> Unlike traditional shooters, victory requires methodical drilling through realistic material layers while managing defensive threats. Every shot matters, every angle counts.</p>
+            </div>
+        </div>
+
+        <div class="image-section">
+            <img src="images/justice_5_story.jpg" alt="Galactic justice enforcement overview">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    "Across the galaxy, criminal organizations believe distance and fortification can shield them from consequences. The Orbital Justice Division exists to prove them wrong."
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>📖 Lore & Story</h2>
+            <p>In the sprawling expanse of the <strong>Terran Colonial Authority</strong>, criminal syndicates have evolved beyond simple piracy and smuggling. Massive underground fortress complexes now dot inhabited worlds, housing everything from slave trafficking operations to illegal weapons manufacturing. Traditional ground forces prove inadequate against these deeply entrenched networks - by the time authorities breach surface defenses, evidence is destroyed and key targets have escaped through underground tunnels.</p>
+            <br>
+            <p>The <strong>Orbital Justice Division</strong> was formed as the Authority's answer to this escalating threat. Equipped with advanced space-to-surface drilling technology and real-time intelligence gathering systems, OJD warships patrol the void above colonial worlds, ready to deliver precision justice from beyond the atmosphere. No criminal sanctuary runs deep enough to escape orbital bombardment - every bunker becomes a tomb when justice descends from the stars.</p>
+            <br>
+            <p><strong>Your mission:</strong> Command the OJD warship <em>Righteous Fury</em> in systematic enforcement operations against identified criminal networks. Each target represents years of investigation, intelligence gathering, and legal proceedings. By the time your ship enters orbit, guilt has been established - your role is to ensure consequences are delivered with surgical precision and overwhelming force.</p>
+        </section>
+
+        <section class="section">
+            <h2>🎮 Controls & Interface</h2>
+            <div class="controls-list">
+                <div class="control-item">
+                    <span class="control-key">WASD</span><br>
+                    Ship positioning and movement
+                </div>
+                <div class="control-item">
+                    <span class="control-key">Mouse Aim</span><br>
+                    Precision weapon targeting
+                </div>
+                <div class="control-item">
+                    <span class="control-key">Left Click</span><br>
+                    Charge beam (terrain destruction)
+                </div>
+                <div class="control-item">
+                    <span class="control-key">Right Click</span><br>
+                    Point defense (projectile interception)
+                </div>
+            </div>
+            <br>
+            <p>Command your orbital warship with deliberate precision as you balance positioning for optimal firing angles while maintaining defensive coverage. The interface emphasizes <strong>tactical awareness</strong> - your ship moves deliberately, requiring strategic positioning rather than frantic dodging. Weapons require careful aiming and timing, making every shot a calculated decision in your campaign of orbital justice.</p>
+        </section>
+
+        <div class="image-section">
+            <img src="images/justice_2_vignette.jpg" alt="Orbital bombardment in progress">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    "There is something deeply satisfying about methodically cutting through layers of fortification, knowing that justice draws closer with every precisely aimed beam."
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>🏗️ Game Layers</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <h4>⚡ Moment-to-Moment Gameplay</h4>
+                    <p>Active ship maneuvering and precision targeting while managing incoming projectiles. <strong>Strategic positioning</strong> to optimize drilling angles while maintaining defensive coverage. Real-time physics simulation creates dynamic challenges as terrain collapses and new defensive positions are revealed.</p>
+                </div>
+                <div class="layer-card">
+                    <h4>🎯 Low Metagame: Criminal Hunt Campaigns</h4>
+                    <p>Each campaign targets a specific criminal organization with <strong>2-8 randomized fortress locations</strong>. Megaman-style selection screen allows pursuing targets in any order, with each fortress featuring unique defensive layouts and environmental challenges. Complete intel gathering reveals the scope of each criminal network.</p>
+                </div>
+                <div class="layer-card">
+                    <h4>📰 High Metagame: Trophy Hall of Justice</h4>
+                    <p>Persistent collection of <strong>obliterated criminal organizations</strong> displayed as news headlines celebrating successful justice operations. Each completed campaign adds to your legacy as an orbital enforcer, creating a growing testament to methodical justice delivery across the galaxy.</p>
+                </div>
+                <div class="layer-card">
+                    <h4>🚀 Practical Game Flow</h4>
+                    <p>Quick-start tactical sessions with <strong>clear victory conditions</strong> and natural stopping points. Each fortress assault is a complete tactical challenge lasting 10-20 minutes, perfect for focused gameplay sessions. Campaign selection provides flexibility for both quick action and extended justice campaigns.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎯 Game Mode: Criminal Hunt Campaigns</h2>
+            <p><strong>Single core game mode</strong> with deep tactical variety through procedural generation and target selection. Each campaign begins with intelligence revealing a criminal network's fortress locations - your job is to systematically eliminate each stronghold until the organization is completely neutralized.</p>
+            <br>
+            <p>The <strong>Megaman-style selection interface</strong> presents fortress locations as tactical objectives, allowing you to plan your approach and tackle threats in your preferred order. Some fortresses may be more heavily defended but offer strategic advantages for subsequent assaults. Others might be isolated outposts perfect for testing new tactics.</p>
+        </section>
+
+        <div class="mermaid-container">
+            <div class="mermaid">
+                graph TD
+                    A["🎯 Campaign Start"] --> B["📊 Intel Report"]
+                    B --> C["🗺️ Fortress Selection Screen"]
+                    C --> D["⚔️ Tactical Assault"]
+                    D --> E{"🏆 Mission Status"}
+                    E -->|Success| F["📰 News Headline Added"]
+                    E -->|Failure| G["🔄 Tactical Retry"]
+                    G --> D
+                    F --> H{"🎯 Targets Remaining?"}
+                    H -->|Yes| C
+                    H -->|No| I["🏅 Campaign Complete"]
+                    I --> J["🗂️ Trophy Hall Updated"]
+                    J --> K["🚀 New Campaign Available"]
+                    
+                    style A fill:#8b3a62
+                    style I fill:#1a4d2e
+                    style J fill:#3d2a4e
+                    style F fill:#b8860b
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>⚙️ Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>🌊 Falling Sand Physics Engine</h4>
+                    <p>Real-time <strong>cellular automata simulation</strong> drives terrain destruction with realistic material properties. Sand flows, concrete crumbles, metal melts, and structures collapse according to physics principles. Each material responds differently to your weaponry, requiring tactical adaptation and creating emergent destruction patterns that feel genuinely satisfying.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🏰 Procedural Fortress Generation</h4>
+                    <p><strong>Algorithmic fortress design</strong> creates unique defensive layouts with randomized layered materials, hidden air pockets containing anti-air weapons, and underground bunker networks. No two fortresses are identical, ensuring each assault requires fresh tactical thinking and approach strategies.</p>
+                </div>
+
+                <div class="mermaid-container">
+                    <div class="mermaid">
+                        graph TD
+                            A["🏗️ Fortress Generation Start"] --> B["🌍 Generate Base Terrain"]
+                            B --> C["📏 Define Depth Layers"]
+                            C --> D["🪨 Layer 1: Soft Materials<br/>(Sand, Dirt, Gravel)"]
+                            D --> E["🧱 Layer 2: Medium Materials<br/>(Concrete, Stone)"]
+                            E --> F["⚙️ Layer 3: Hard Materials<br/>(Reinforced Steel, Armor)"]
+                            F --> G["💎 Layer 4: Ultra-Hard Core<br/>(Quantum Alloy, Shield Matrix)"]
+                            
+                            G --> H["🕳️ Generate Air Pockets"]
+                            H --> I["🚀 Place Anti-Air Weapons"]
+                            I --> J["🏢 Generate Surface Buildings"]
+                            J --> K["🎯 Place Underground Bunkers"]
+                            K --> L["💣 Position Core Target"]
+                            L --> M["🔍 Apply Fog of War"]
+                            M --> N["✅ Fortress Complete"]
+                            
+                            H --> O["📊 Pocket Size Algorithm<br/>Small: 10-20% coverage<br/>Medium: 5-15% coverage<br/>Large: 2-8% coverage"]
+                            I --> P["⚔️ Weapon Placement Logic<br/>Surface: Heavy Turrets<br/>Shallow: Missile Launchers<br/>Deep: Point Defense"]
+                            
+                            style A fill:#8b3a62
+                            style N fill:#1a4d2e
+                            style L fill:#cc2e2e
+                            style O fill:#4a2c6a
+                            style P fill:#4a2c6a
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h4>⛏️ Strategic Drilling Mechanics</h4>
+                    <p>Multi-tiered material system with <strong>soft, medium, hard, and ultra-hard</strong> terrain types requiring different drilling approaches. Strategic path-planning becomes crucial as you balance speed of penetration against defensive exposure. Finding optimal drilling routes separates tactical masters from casual bombardiers.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🚀 Dynamic Anti-Air Combat</h4>
+                    <p><strong>Reactive defense systems</strong> emerge from hidden positions as you drill deeper, creating escalating threat levels. Surface turrets fire slow cannon projectiles while underground missile systems launch seeking projectiles. Your point defense systems must constantly adapt to changing threat patterns.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🌫️ Fog of War Exploration</h4>
+                    <p><strong>Progressive target revelation</strong> through systematic destruction creates genuine exploration rewards. Hidden chambers, secret passages, and concealed defensive positions are discovered through methodical drilling. Intelligence gathering becomes part of the tactical challenge.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>💥 Explosive Chain Reactions</h4>
+                    <p><strong>Cascading destruction systems</strong> reward precision targeting and tactical planning. Fuel depots, ammunition stores, and structural weak points create spectacular chain reactions when properly exploited. The ultimate target's destruction provides a satisfying finale with escape sequence timing.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="image-section">
+            <img src="images/justice_3_feature.jpg" alt="Falling sand physics destruction">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    "Every particle of destroyed fortress represents another step toward justice delivered. The physics don't lie - criminal strongholds cannot hide from orbital precision."
+                </div>
+            </div>
+        </div>
+
+        <div class="final-section">
+            <div class="boxart-container">
+                <img src="images/justice_4_boxart.jpg" alt="Justice Will Glass Them Box Art" class="boxart">
+            </div>
+            <div class="description-card">
+                <h3>Justice Will Glass Them</h3>
+                <p><strong>Orbital Vengeance Obliteration</strong></p>
+                <br>
+                <p>When criminals think they can hide from justice in underground fortresses, they haven't considered <strong>orbital bombardment precision</strong>. Command advanced space police technology to deliver methodical justice through layers of concrete, metal, and desperation.</p>
+                <br>
+                <p>• <strong>Physics-driven terrain destruction</strong> with realistic material properties<br>
+                • <strong>Procedural fortress generation</strong> ensures unique tactical challenges<br>
+                • <strong>Strategic drilling mechanics</strong> reward planning and precision<br>
+                • <strong>Dynamic defense systems</strong> create escalating combat complexity<br>
+                • <strong>Campaign progression</strong> through criminal organization elimination<br>
+                • <strong>Trophy system</strong> celebrating successful justice delivery</p>
+                <br>
+                <p><em>"No bunker runs deep enough. No fortress stands strong enough. Justice will glass them all."</em></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#2d1a4e',
+                primaryTextColor: '#e8d5f0',
+                primaryBorderColor: '#8b3a62',
+                lineColor: '#ff6b7a',
+                secondaryColor: '#2d1a4e',
+                tertiaryColor: '#4a2c6a',
+                background: '#1a0d2e',
+                mainBkg: '#2d1a4e',
+                secondBkg: '#4a2c6a',
+                tertiaryBkg: '#8b3a62'
+            }
+        });
+    </script>
+</body>
+</html>

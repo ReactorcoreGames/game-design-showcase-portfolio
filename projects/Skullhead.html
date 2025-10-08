@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skullhead: Death Journal Vengeance - Game Design Showcase</title>
+    
+    <!-- 
+    Image Files Needed:
+    skullhead_1_title.jpg - Skullhead wielding chainsaw in destroyed mall food court with blood sprays
+    skullhead_2_vignette.jpg - Physics-based dismemberment combat in school hallway showing gameplay mechanics  
+    skullhead_3_feature.jpg - Detailed view of dismemberment system mechanics in office environment
+    skullhead_4_boxart.jpg - Skullhead triumphant over pile of enemies in shopping mall
+    skullhead_5_story.jpg - Zoomed out overworld view of the greater setting the game takes place in
+    -->
+    
+    <style>
+        :root {
+            --background-color: #2e2e2e;
+            --container-bg: #3e3e3e;
+            --border-color: #8b0000;
+            --text-color: #f2ddd4;
+            --title-main: #ee0000;
+            --title-shadow: #220000;
+            --subtitle-color: #bbbbbb;
+            --blood-red: #8b0000;
+            --institutional-beige: #a4c4a0;
+            --urban-green-gray: #707066;
+            --card-bg: #553237;
+            --card-border: #7b645a;
+            --accent-red: #cc0000;
+            --dark-red: #660000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Patreon Link */
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(78, 72, 66, 0.9);
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.85rem;
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            background: rgba(78, 72, 66, 1);
+            border-color: var(--blood-red);
+        }
+
+        /* Title Section */
+        .title-section {
+            position: relative;
+            height: 700px;
+            background-image: url('images/skullhead_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .title-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(50, 33, 44, 0.3) 0%, rgba(75, 40, 50, 0.4) 100%);
+        }
+
+        .title-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .main-title {
+            font-size: 6rem;
+            font-weight: bold;
+            color: var(--title-main);
+            text-shadow: 
+                0 8px 8px var(--title-shadow),
+                0 16px 16px var(--title-shadow),
+                0 0 24px var(--dark-red);
+            margin-bottom: 0.5rem;
+            animation: drippingBlood 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: var(--subtitle-color);
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+        }
+
+        @keyframes drippingBlood {
+            0%, 100% {
+                text-shadow: 
+                    0 4px 8px var(--title-shadow),
+                    0 8px 16px var(--title-shadow),
+                    0 0 20px var(--dark-red);
+            }
+            50% {
+                text-shadow: 
+                    0 6px 12px var(--title-shadow),
+                    0 12px 24px var(--title-shadow),
+                    0 0 30px var(--dark-red),
+                    0 20px 10px rgba(74, 0, 0, 0.6);
+            }
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--title-main);
+            text-shadow: 
+                0 2px 4px var(--title-shadow),
+                0 0 15px var(--dark-red);
+            margin-bottom: 2rem;
+            text-align: center;
+            animation: drippingBlood 3s ease-in-out infinite;
+        }
+
+        /* Game Overview */
+        .overview {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--card-bg) 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Three Cards */
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--container-bg) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--card-border);
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--blood-red);
+            box-shadow: 0 8px 30px rgba(139, 0, 0, 0.4);
+        }
+
+        .card h3 {
+            color: var(--accent-red);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Controls Section */
+        .controls {
+            background: var(--container-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--urban-green-gray);
+            margin: 3rem 0;
+        }
+
+        .controls h3 {
+            color: var(--accent-red);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .control-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .control-item {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--blood-red);
+        }
+
+        .control-key {
+            color: var(--title-main);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Story Image */
+        .story-image-container {
+            position: relative;
+            margin: 4rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/skullhead_5_story.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .story-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(44, 42, 38, 0.9);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--blood-red);
+        }
+
+        .story-quote p {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+            margin: 0;
+        }
+
+        /* Vignette Image */
+        .vignette-container {
+            position: relative;
+            margin: 4rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/skullhead_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(44, 42, 38, 0.9);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--blood-red);
+        }
+
+        .vignette-quote p {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text-color);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+            margin: 0;
+        }
+
+        /* Game Layers */
+        .layers-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .layer-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--container-bg) 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .layer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--blood-red);
+        }
+
+        .layer-card h3 {
+            color: var(--title-main);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .layer-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--blood-red);
+            opacity: 0.3;
+        }
+
+        /* Game Modes */
+        .modes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .mode-card {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--card-bg) 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .mode-card h3 {
+            color: var(--accent-red);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--container-bg) 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .feature-card h3 {
+            color: var(--title-main);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-number {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--blood-red);
+            opacity: 0.2;
+        }
+
+        /* Feature Image */
+        .feature-image-container {
+            position: relative;
+            margin: 4rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/skullhead_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Box Art Section */
+        .box-art-section {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            margin: 4rem 0;
+            align-items: center;
+        }
+
+        .box-art-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-image: url('images/skullhead_4_boxart.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(139, 0, 0, 0.5);
+            border: 3px solid var(--border-color);
+        }
+
+        .box-art-content {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--card-bg) 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+        }
+
+        .box-art-content h3 {
+            color: var(--title-main);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .box-art-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--container-bg);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 3px solid var(--border-color);
+            margin-top: 6rem;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .footer a {
+            color: var(--accent-red);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--title-main);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .three-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .box-art-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .modes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .patreon-link {
+                position: static;
+                display: block;
+                text-align: center;
+                margin: 1rem;
+            }
+
+            .title-section {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <div class="title-overlay"></div>
+        <div class="title-content">
+            <h1 class="main-title">Skullhead</h1>
+            <p class="subtitle">Death Journal Vengeance</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="section">
+            <div class="overview">
+                <p>A cathartic 2D physics-based action game where you play as Skullhead, a devil-contracted vigilante systematically eliminating society's worst people across American towns and cities. Navigate horizontal environments using chainsaws, blades, and firearms to brutally dispatch enemies while regenerating health through dark supernatural powers. Create your personal "Death Journal" of eliminated locations or jump into quick carnage sessions for immediate therapeutic violence.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="three-cards">
+                <div class="card">
+                    <span class="card-emoji">🎯</span>
+                    <h3>Target Audience</h3>
+                    <p>Adults seeking stress relief from societal frustrations, fans of old violent Flash games, players who appreciate dark cathartic humor and therapeutic revenge fantasies</p>
+                </div>
+                <div class="card">
+                    <span class="card-emoji">😈</span>
+                    <h3>Game's Purpose</h3>
+                    <p>Provides therapeutic release of anger toward society's bullies and assholes in a safe, consequence-free environment with supernatural guarantee of eventual victory</p>
+                </div>
+                <div class="card">
+                    <span class="card-emoji">⚡</span>
+                    <h3>Core Concept</h3>
+                    <p>Supernatural revenge fantasy - Devil's contract ensures you always win, eventually. Turn real-world frustrations into pixelated justice through personalized vengeance geography</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="story-image-container">
+            <div class="story-image">
+                <div class="story-quote">
+                    <p>"The early 1990s American landscape becomes your hunting ground - towns and cities where society's worst flourish, now marked for supernatural justice."</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>Lore & Story</h2>
+            <div class="overview">
+                <p>Set in the early 1990s, you play as SkullHead - once an ordinary young American man of mixed heritage who endured life's worst cruelties. Unloved by parents, bullied at school, abused at work, manipulated by friends, victimized by criminals, and crushed by corrupt systems, his accumulated suffering became an all-consuming hatred.</p>
+                <br>
+                <p>In his darkest moment, he made the ultimate bargain - trading his soul to the Devil in exchange for power and immortality. His transformation stripped away his humanity, leaving only a skeletal skull atop a spine where his head once was, forever marking him as the Devil's instrument of vengeance.</p>
+                <br>
+                <p>Now, SkullHead roams American towns and cities as an immortal agent of chaos, hunting society's worst people with supernatural guarantee of victory. His mission is not heroism but cathartic revenge - to systematically eliminate the bullies, abusers, and corrupt individuals who make life hell for others. The Devil's contract ensures he always wins, eventually, making every location he targets inevitably fall to his brutal justice.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="controls">
+                <h3>🎮 Controls & Interface</h3>
+                <div class="control-grid">
+                    <div class="control-item">
+                        <span class="control-key">WASD</span> - Move up/left/down/right through levels
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">Mouse</span> - Aim character rotation and crosshair targeting
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">M1</span> - Fire/use current weapon (chainsaw rev, gun fire, blade swing)
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">M2</span> - Dash in direction character is facing
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">Q</span> - Swap between your two carried weapons
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">E</span> - Pickup items, activate objects, or swap for new weapon
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">Space</span> - Brace for impact to minimize damage taken
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">Mouse Wheel</span> - Zoom in/out with slow-motion effect during zoom
+                    </div>
+                </div>
+                <p><strong>Player Experience:</strong> You control Skullhead directly through physics-based 2D environments, aiming weapons with precision while managing positioning, weapon swapping, and tactical movement. The devil's contract powers activate automatically when you eliminate enemies, instantly restoring any damage you've taken as reward for aggressive play.</p>
+            </div>
+        </section>
+
+        <div class="vignette-container">
+            <div class="vignette-image">
+                <div class="vignette-quote">
+                    <p>"Let off some steam and take control Skullhead, an edgy ragdoll antihero in brutal combat against condensending assholes throughout various urban environments."</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>Game Layers</h2>
+            <div class="layers-container">
+                <div class="layer-card">
+                    <span class="layer-number">1</span>
+                    <h3>Moment-to-Moment Gameplay</h3>
+                    <p>Physics-based ragdoll combat using chainsaws, knives, axes, and American firearms. Strategic dismemberment targeting to disable different enemy types efficiently. Dark magical health regeneration through eliminating enemies - the devil's contract rewards aggressive play by instantly restoring any damage when you kill or dismember opponents. Environmental destruction using randomly-placed destructible props throughout levels.</p>
+                </div>
+                <div class="layer-card">
+                    <span class="layer-number">2</span>
+                    <h3>Low Metagame (Location Elimination)</h3>
+                    <p>Target specific buildings and places for revenge through 5-15 procedurally generated levels. You type in the actual name of the real place you want to attack, then choose from location presets like office buildings, schools, malls, or restaurants. The devil's contract ensures checkpoints - death simply rewinds time until victory is achieved, making failure impossible.</p>
+                </div>
+                <div class="layer-card">
+                    <span class="layer-number">3</span>
+                    <h3>High Metagame (Death Journal)</h3>
+                    <p>Persistent revenge map showing towns and city areas you're systematically targeting. Features a Doom (1993) style intermission screen with blood splats marking eliminated locations and a "You are here" indicator showing your next target. You enter real town and city names to create your personal revenge geography. Completed locations can be replayed but are marked as "canonically eliminated."</p>
+                </div>
+                <div class="layer-card">
+                    <span class="layer-number">4</span>
+                    <h3>Practical Game Flow</h3>
+                    <p>Launch → Choose mode → (Death Journal: Select town → Name target location → Choose preset) OR (Quick Gauntlet: Jump into random carnage) → Equip starting weapons → Navigate levels → Eliminate all targets → Victory screen → Mark location eliminated. Sessions flow seamlessly from personal revenge planning to cathartic action execution.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Game Modes</h2>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <h3>🗒️ Death Journal Mode</h3>
+                    <p>Persistent revenge campaign where you systematically eliminate personally-named locations across chosen towns and cities. Build your own geography of vengeance by targeting real places that have caused you frustration. Each eliminated location becomes part of your permanent trophy collection, creating a deeply personal narrative of supernatural justice.</p>
+                </div>
+                <div class="mode-card">
+                    <h3>⚔️ Quick Gauntlet Mode</h3>
+                    <p>Throwaway 10-level randomized carnage session for immediate cathartic gameplay without persistent progression. Perfect for quick stress relief when you just want to jump into brutal action without dealing with the Death Journal's personal investment system.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-number">1</span>
+                    <h3>Dynamic Dismemberment Combat</h3>
+                    <p>Strategic body part targeting with realistic blood spray physics and limb separation mechanics. Each enemy type has different weak points and dismemberment strategies. Arms can be severed to disable weapon use, legs removed to limit mobility, and head removal for instant elimination. The physics system makes every impact feel meaningful and visceral.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-number">2</span>
+                    <h3>Devil's Contract Power System</h3>
+                    <p>Death triggers supernatural time rewind to previous checkpoint - Devil's contract ensures you always eventually succeed. Additionally, eliminating or dismembering enemies instantly restores any damage you've suffered through dark magical regeneration, rewarding aggressive play and making retreat unnecessary.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-number">3</span>
+                    <h3>Deadly Arsenal System</h3>
+                    <p>Chainsaws for close brutal work with revving mechanics and blood spray effects. Knives and axes for silent precision takedowns and throwing attacks. American firearms including pistols, shotguns, and rifles for ranged elimination. Each weapon type excels in different tactical situations and enemy encounters.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-number">4</span>
+                    <h3>Destructible Environment Library</h3>
+                    <p>Randomly placed interactive props including desks, lockers, vending machines, copy machines, and office furniture that can be destroyed, weaponized, or used for cover. Environmental destruction creates dynamic battlefields and additional tactical options during combat encounters.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-number">5</span>
+                    <h3>Personal Death Journal System</h3>
+                    <p>Create your own geography of revenge by naming real places you want to see Skullhead eliminate. The system generates appropriate level layouts based on your chosen location type (office, school, mall, etc.) while preserving the personal emotional connection that makes each elimination feel meaningful and cathartic.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-number">6</span>
+                    <h3>Societal Enemy Archetypes</h3>
+                    <p>Different enemy types representing various levels of society's worst people - from workplace bullies to corrupt executives, school administrators to mall security guards. Each archetype has unique AI behaviors, weapon preferences, and dismemberment vulnerabilities that require different tactical approaches to eliminate effectively.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="feature-image-container">
+            <div class="feature-image">
+                <div class="vignette-quote">
+                    <p>"Combat is driven by floaty physics ragdolls, where you can dismember enemy ragdoll characters limb by limb until either their torso is broken or their head is dismembered."</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="box-art-section">
+                <div class="box-art-image"></div>
+                <div class="box-art-content">
+                    <h3>Skullhead: Death Journal Vengeance</h3>
+                    <p>Enter a world where your frustrations become fuel for supernatural justice. Armed with Devil's contract and an arsenal of brutal weapons, systematically eliminate society's worst people across personally-named locations.</p>
+                    <br>
+                    <p>Create your Death Journal of revenge. Target real places that have caused you pain. Watch physics-based dismemberment deliver the justice that society never could.</p>
+                    <br>
+                    <p><strong>Your revenge awaits. Devil guarantees your victory.</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+</body>
+</html>

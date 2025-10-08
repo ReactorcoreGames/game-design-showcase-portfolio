@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underground Brawl: Ragdoll Combat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+
+<!--
+Image files needed:
+underground_1_title.jpg - Underground fight venue with two fighters facing off in dimly lit basement with neon lighting
+underground_2_vignette.jpg - Mid-fight action with one fighter's arm visibly damaged/bruised while throwing a punch
+underground_3_feature.jpg - Close-up showing the physics-based collision system in action with realistic impact effects
+underground_4_boxart.jpg - Classic fighting game cover with customized fighters showing different hairstyles in fighting stances
+underground_5_story.jpg - Zoomed out overworld view showing the greater urban setting with multiple underground venues across the city
+-->
+
+<body>
+    <style>
+        :root {
+            --background-color: #1a1a1a;
+            --container-bg: #2d2d2d;
+            --border-color: #ff4444;
+            --text-color: #e0e0e0;
+            --title-primary: #ff4444;
+            --title-secondary: #ffaa44;
+            --accent-color: #44ffff;
+            --shadow-color: rgba(255, 68, 68, 0.5);
+            --glow-color: #ff4444;
+            --card-bg: #333333;
+            --card-border: #555555;
+            --hover-color: #ff6666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #0f0f0f 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 0.8rem;
+            color: #888;
+            text-decoration: none;
+            z-index: 1000;
+            transition: color 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            color: var(--accent-color);
+        }
+
+        .title-section {
+            position: relative;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('images/underground_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        .title-content h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: var(--title-primary);
+            text-shadow: 0 0 20px var(--shadow-color), 0 0 40px var(--shadow-color), 2px 2px 4px rgba(0,0,0,0.8);
+            animation: electricBuzz 2s infinite alternate;
+        }
+
+        .title-content .subtitle {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            color: var(--title-secondary);
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 170, 68, 0.5), 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        @keyframes electricBuzz {
+            0% { text-shadow: 0 0 20px var(--shadow-color), 0 0 40px var(--shadow-color), 2px 2px 4px rgba(0,0,0,0.8); }
+            25% { text-shadow: 0 0 30px var(--shadow-color), 0 0 50px var(--shadow-color), 2px 2px 4px rgba(0,0,0,0.8); }
+            50% { text-shadow: 0 0 15px var(--shadow-color), 0 0 30px var(--shadow-color), 2px 2px 4px rgba(0,0,0,0.8); }
+            75% { text-shadow: 0 0 35px var(--shadow-color), 0 0 60px var(--shadow-color), 2px 2px 4px rgba(0,0,0,0.8); }
+            100% { text-shadow: 0 0 25px var(--shadow-color), 0 0 45px var(--shadow-color), 2px 2px 4px rgba(0,0,0,0.8); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin: 60px 0;
+        }
+
+        .section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            color: var(--title-primary);
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-shadow: 0 0 15px var(--shadow-color), 1px 1px 2px rgba(0,0,0,0.8);
+            animation: electricBuzz 3s infinite alternate;
+        }
+
+        .overview {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .info-card:hover {
+            border-color: var(--hover-color);
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .controls-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            margin: 40px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .controls-section h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .controls-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--background-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .controls-table th,
+        .controls-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .controls-table th {
+            background: var(--title-primary);
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .controls-table td:first-child {
+            color: var(--title-primary);
+            font-weight: bold;
+            width: 30%;
+        }
+
+        .controls-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .story-section {
+            position: relative;
+            margin: 60px 0;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/underground_5_story.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 60px 0;
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/underground_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .vignette-quote {
+            background: rgba(0,0,0,0.8);
+            color: var(--title-secondary);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            font-style: italic;
+            font-size: 1.1rem;
+            border-left: 4px solid var(--title-primary);
+            max-width: 600px;
+        }
+
+        .game-layers {
+            display: grid;
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .layer-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .layer-card:hover {
+            border-color: var(--hover-color);
+            transform: translateX(10px);
+        }
+
+        .layer-card h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .layer-number {
+            color: var(--title-primary);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .features-grid {
+            display: grid;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .feature-card:hover {
+            border-color: var(--hover-color);
+        }
+
+        .feature-card h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--title-primary);
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-emoji {
+            margin-right: 15px;
+            font-size: 2rem;
+        }
+
+        .feature-image-section {
+            position: relative;
+            margin: 60px 0;
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/underground_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .combat-diagram {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            margin: 50px 0;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .modes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .mode-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .mode-card:hover {
+            border-color: var(--hover-color);
+            transform: scale(1.02);
+        }
+
+        .mode-card h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .trivia-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            margin: 50px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .trivia-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .trivia-list li {
+            background: var(--background-color);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--title-primary);
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .trivia-list li::before {
+            content: "🥊";
+            position: absolute;
+            left: 20px;
+            font-size: 1.2rem;
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--card-border);
+            margin: 50px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .boxart-cover {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background: url('images/underground_4_boxart.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .boxart-description h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: var(--title-primary);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .boxart-description p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--background-color);
+            border-top: 2px solid var(--card-border);
+            margin-top: 80px;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--hover-color);
+        }
+
+        @media (max-width: 768px) {
+            .title-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .title-content .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .vignette-quote {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .controls-table {
+                font-size: 0.9rem;
+            }
+
+            .modes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title-content h1 {
+                font-size: 2rem;
+            }
+
+            .title-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .section {
+                margin: 40px 0;
+            }
+
+            .story-image {
+                height: 300px;
+            }
+        }
+    </style>
+
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1>Underground Brawl</h1>
+            <div class="subtitle">Ragdoll Combat</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="overview">
+                <p>Step into the underground fighting scene where physics meets strategy in visceral hand-to-hand combat. Control ragdoll fighters in dimly lit venues, using realistic collision mechanics to outmaneuver opponents.</p>
+                <br>
+                <p>Every punch matters, every bruise tells a story, and every knockout is earned through tactical positioning rather than button mashing. This is fighting where your brain matters as much as your reflexes.</p>
+                <br>
+                <p>Pure fist combat with physics-based consequences - no weapons, no gimmicks, just you, your opponent, and the laws of motion.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>🎯 Target Audience</h3>
+                    <p>Fighting game enthusiasts who appreciate strategic depth, physics simulation fans seeking realistic combat mechanics, and players looking for cathartic stress relief through controlled competition.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎪 Game's Purpose</h3>
+                    <p>Provides healthy stress release through competitive combat, develops tactical thinking and spatial awareness, offers mastery-based progression that rewards skill over button combinations.</p>
+                </div>
+                <div class="info-card">
+                    <h3>⚡ Core Concept</h3>
+                    <p>Traditional fighting game enhanced with realistic ragdoll physics, where strategic positioning and limb management create deeper tactical gameplay than conventional fighting mechanics.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <div class="story-image"></div>
+        </div>
+
+        <div class="section">
+            <h2>Lore & Story</h2>
+            <div class="overview">
+                <p>In the sprawling urban landscape, beneath the polished surface of corporate buildings and busy streets, lies a network of underground venues where people gather to reclaim something essential that modern life has stripped away - the primal satisfaction of physical challenge and genuine human connection.</p>
+                <br>
+                <p><strong>The Underground Circuit</strong> exists in basements, abandoned warehouses, converted parking garages, and forgotten spaces throughout the city. These aren't criminal enterprises or illegal operations - they're consensual fighting clubs where stressed office workers, frustrated laborers, restless students, and anyone feeling disconnected from their own vitality can step into the ring.</p>
+                <br>
+                <p>Every participant signs waivers, follows safety protocols, and enters with mutual respect. The goal isn't to harm or humiliate - it's to feel alive again. To test yourself against another person in the most fundamental way humans have always resolved tension: through controlled, respectful combat.</p>
+                <br>
+                <p>You play as fighters navigating this underground world, seeking venues that match your skill level and fighting style. Some locations cater to beginners learning to channel their frustration productively. Others host seasoned practitioners who've turned stress relief into an art form. All share the same core principle: <em>consensual combat as a path to personal wellness and authentic human connection.</em></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Controls & Interface</h2>
+            <div class="controls-section">
+                <h3>🕹️ Mouse + Keyboard Combat System</h3>
+                <p>Intuitive physics-based control scheme that puts you in direct command of your fighter's movement and actions:</p>
+                <table class="controls-table">
+                    <thead>
+                        <tr>
+                            <th>Control</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M1 (Left Click)</td>
+                            <td>Move toward cursor position</td>
+                        </tr>
+                        <tr>
+                            <td>M2 (Right Click)</td>
+                            <td>Rotate to face cursor direction</td>
+                        </tr>
+                        <tr>
+                            <td>E / M4</td>
+                            <td>Throw punches (both hands)</td>
+                        </tr>
+                        <tr>
+                            <td>W / Shift / Spacebar</td>
+                            <td>Boost acceleration toward cursor</td>
+                        </tr>
+                        <tr>
+                            <td>Mouse Wheel</td>
+                            <td>Zoom in/out (triggers slow motion)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Combat Mechanics:</strong> Your ragdoll fighter responds to physics - momentum affects your strikes, positioning determines effectiveness, and damaged limbs reduce your defensive options. Master the interplay between movement, timing, and spatial awareness.</p>
+            </div>
+        </div>
+
+        <div class="vignette-section">
+            <div class="vignette-image">
+                <div class="vignette-quote">
+                    "When your left arm goes numb, you better hope your right hook still works"
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Game Layers</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <h3><span class="layer-number">1.</span>Moment-to-Moment Gameplay</h3>
+                    <p>Real-time physics combat where every collision matters. Manage your fighter's limb health while strategically positioning for strikes. Damaged arms and legs become liabilities, forcing you to adapt your fighting style mid-match. Timing, spacing, and physics momentum determine victory or defeat.</p>
+                </div>
+                <div class="layer-card">
+                    <h3><span class="layer-number">2.</span>Low Metagame</h3>
+                    <p>Progress through tournament brackets and ranking systems. Each victory earns reputation points and unlocks new underground venues. Build your fighter's legacy through consistent performance across multiple fights, with each match contributing to your overall standing in the underground circuit.</p>
+                </div>
+                <div class="layer-card">
+                    <h3><span class="layer-number">3.</span>High Metagame</h3>
+                    <p>Establish dominance across the entire underground fighting network. Unlock exclusive venues, face legendary opponents, and build a reputation that opens doors to the most prestigious (and dangerous) fighting circuits. Your achievements become part of underground fighting folklore.</p>
+                </div>
+                <div class="layer-card">
+                    <h3><span class="layer-number">4.</span>Practical Game Flow</h3>
+                    <p>Quick 3-5 minute matches for casual stress relief, or extended tournament runs for deep engagement. Natural break points between fights allow for real-life interruptions, while tournament modes provide structured long-form challenges that can span multiple gaming sessions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Game Modes</h2>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <h3>🏆 Tournament Mode</h3>
+                    <p>Classic bracket-style progression through underground fighting circuits. Face increasingly skilled opponents as you advance through elimination rounds. Each tournament has its own venue theme and difficulty curve, providing structured challenges with clear victory conditions.</p>
+                </div>
+                <div class="mode-card">
+                    <h3>⚡ Quick Fight</h3>
+                    <p>Jump straight into action with customizable 1v1 matches. Select your opponent's difficulty, venue, and even customize their appearance. Perfect for practicing specific techniques, stress relief, or just enjoying pure physics-based combat without commitment.</p>
+                </div>
+                <div class="mode-card">
+                    <h3>🎯 Training Mode</h3>
+                    <p>Hone your skills against AI opponents with adjustable behavior patterns. Practice advanced techniques, experiment with positioning strategies, and master the physics system at your own pace. Includes replay analysis and move practice tools.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><span class="feature-emoji">🤖</span>Ragdoll Physics Combat</h3>
+                    <p>Every fighter is a fully articulated ragdoll with realistic joint constraints and momentum physics. Strikes create genuine physical reactions - no canned animations or predetermined outcomes. The physics engine ensures every fight feels unique and organic, with emergent combat situations arising naturally from the interaction of two physics-based characters.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3><span class="feature-emoji">💪</span>Limb Damage System</h3>
+                    <p>Individual body parts take damage and become progressively less effective. Bruised arms can't guard as well or throw punches with full force. Damaged legs affect mobility and stance stability. This creates evolving tactical situations where both fighters must adapt their strategies as the fight progresses and their capabilities change.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3><span class="feature-emoji">🎯</span>Strategic Positioning</h3>
+                    <p>Victory comes from understanding angles, distance, and timing rather than memorizing combos. Use physics momentum to your advantage - a well-timed dodge can set up a devastating counter-strike. Master the art of creating openings through superior positioning and spatial awareness.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3><span class="feature-emoji">✂️</span>Character Customization</h3>
+                    <p>Express your fighting personality through diverse hairstyle options and vibrant hair colors. All customization is purely cosmetic - every fighter has identical capabilities, ensuring victories are earned through skill rather than character stats. Create a look that intimidates opponents or reflects your fighting spirit.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3><span class="feature-emoji">🏠</span>Underground Venues</h3>
+                    <p>Fight in atmospheric locations that capture the gritty essence of underground combat. From basement clubs to abandoned warehouses, each venue has its own distinct mood and crowd energy. Environmental storytelling through venue design adds immersion to every bout.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3><span class="feature-emoji">🧠</span>Physics-Based Strategy</h3>
+                    <p>Success requires understanding momentum, leverage, and collision mechanics. A fighter moving backward takes less impact from frontal strikes, while forward momentum can turn a glancing blow into a knockout punch. Master these physical principles to gain tactical advantages over opponents.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-image-section">
+            <div class="feature-image">
+                <div class="vignette-quote">
+                    "It's not about hitting hard - it's about hitting smart when your opponent can't guard anymore"
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="combat-diagram">
+                <h3 style="color: var(--accent-color); margin-bottom: 20px;">Combat Flow System</h3>
+                <div class="mermaid">
+                flowchart TD
+                    A[Fighter Throws Punch] --> B{Contact Made?}
+                    B -->|Yes| C[Calculate Impact Force]
+                    B -->|No| D[Miss - Reset Position]
+                    C --> E[Apply Damage to Target Limb]
+                    E --> F{Limb Health Critical?}
+                    F -->|Yes| G[Limb Becomes Bruised/Disabled]
+                    F -->|No| H[Reduced Limb Effectiveness]
+                    G --> I[Opponent Loses Defensive Option]
+                    H --> I
+                    I --> J{Opponent Can Continue?}
+                    J -->|Yes| K[Fight Continues - Tactical Adaptation]
+                    J -->|No| L[Knockout Victory]
+                    K --> A
+                    D --> A
+                    
+                    style A fill:#ff4444,stroke:#fff,color:#fff
+                    style L fill:#44ff44,stroke:#fff,color:#000
+                    style G fill:#ffaa44,stroke:#fff,color:#000
+                    style I fill:#44ffff,stroke:#000,color:#000
+                </div>
+                <p style="margin-top: 20px; font-style: italic;">Each collision affects both fighters' tactical options, creating an evolving combat puzzle that requires constant adaptation.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fun Combat Trivia</h2>
+            <div class="trivia-section">
+                <ul class="trivia-list">
+                    <li><strong>Pure Physics Creates Unique Stories:</strong> No two fights are identical due to the realistic physics engine. Even fighting the same opponent twice will produce completely different combat dynamics and memorable moments.</li>
+                    <li><strong>Cosmetic Equality:</strong> All customization is purely visual - every fighter has identical stats and capabilities. Victory comes from player skill and tactical thinking, not character advantages or equipment bonuses.</li>
+                    <li><strong>Underground Atmosphere:</strong> Each venue features its own crowd behavior and ambient details that react to fight intensity. The audience becomes part of the experience, cheering for spectacular moves and gasping at brutal impacts.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="boxart-section">
+            <div class="boxart-cover"></div>
+            <div class="boxart-description">
+                <h3>Underground Brawl: Ragdoll Combat</h3>
+                <p>Enter the underground fighting scene where physics meets strategy in visceral hand-to-hand combat. Every punch has weight, every bruise tells a story, and every victory is earned through superior positioning and tactical thinking.</p>
+                <br>
+                <p>Master the art of ragdoll physics combat, where damaged limbs change your fighting capabilities and force constant tactical adaptation. No weapons, no gimmicks - just pure fighting skill enhanced by realistic collision mechanics.</p>
+                <br>
+                <p>Customize your appearance, master the physics, and build your reputation in the most authentic underground fighting experience ever created.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </div>
+</body>
+</html>

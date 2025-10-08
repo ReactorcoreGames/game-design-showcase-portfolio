@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russki Biomonster Neighbourhood: Apartment Ragdoll Rumble</title>
+    <style>
+        /*
+        AI Generated Images Required:
+        russibio_1_title.jpg - Crimson-tinted Russian apartment building exterior with ominous atmosphere
+        russibio_2_vignette.jpg - Flesh monster tentacle grappling through a cramped apartment room
+        russibio_3_feature.jpg - Close-up of tentacle mechanics pulling objects and people in apartment setting
+        russibio_4_boxart.jpg - Horror cover art showing flesh monster silhouette against apartment building backdrop
+        */
+
+        :root {
+            --background-color: linear-gradient(135deg, #2c0505 0%, #1a0000 50%, #0a0000 100%);
+            --container-bg: rgba(40, 15, 15, 0.9);
+            --card-bg: rgba(60, 20, 20, 0.8);
+            --border-color: #8b2635;
+            --text-color: #e8ddd4;
+            --title-color: #ff4757;
+            --subtitle-color: #c44569;
+            --accent-color: #ff6b7d;
+            --shadow-color: rgba(139, 38, 53, 0.4);
+            --glow-color: #ff4757;
+            --bone-white: #f1f2f6;
+            --decay-yellow: #feca57;
+            --flesh-pink: #ff9ff3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            text-decoration: none;
+            opacity: 0.7;
+            z-index: 100;
+            transition: opacity 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title-section {
+            position: relative;
+            text-align: center;
+            padding: 250px 20px 250px;
+            margin-bottom: 40px;
+            background-image: url('images/russibio_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .title-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(20, 5, 5, 0.4);
+            z-index: 1;
+        }
+
+        .title-section * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 
+                0 0 10px var(--glow-color),
+                0 0 20px var(--glow-color),
+                0 0 30px var(--glow-color),
+                2px 2px 0px rgba(0,0,0,0.8);
+            animation: emberGlow 3s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: var(--subtitle-color);
+            font-weight: 300;
+            text-shadow: 
+                0 0 5px var(--subtitle-color),
+                1px 1px 0px rgba(0,0,0,0.8);
+            animation: emberGlow 3s ease-in-out infinite alternate 0.5s;
+        }
+
+        @keyframes emberGlow {
+            0% {
+                text-shadow: 
+                    0 0 10px var(--glow-color),
+                    0 0 20px var(--glow-color),
+                    0 0 30px var(--glow-color),
+                    2px 2px 0px rgba(0,0,0,0.8);
+            }
+            100% {
+                text-shadow: 
+                    0 0 15px var(--glow-color),
+                    0 0 25px var(--glow-color),
+                    0 0 40px var(--glow-color),
+                    2px 2px 0px rgba(0,0,0,0.8);
+            }
+        }
+
+        .overview {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+            margin-bottom: 40px;
+        }
+
+        .overview p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 6px 20px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-color);
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            color: var(--title-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px var(--glow-color);
+            animation: emberGlow 4s ease-in-out infinite alternate;
+        }
+
+        .controls-section {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+            margin-bottom: 40px;
+        }
+
+        .controls-section h2 {
+            color: var(--title-color);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            text-align: center;
+            text-shadow: 0 0 15px var(--glow-color);
+            animation: emberGlow 4s ease-in-out infinite alternate;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .control-item {
+            background: rgba(80, 25, 25, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .control-key {
+            color: var(--bone-white);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/russibio_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            color: var(--bone-white);
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 400px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .game-layers {
+            margin: 50px 0;
+        }
+
+        .section-title {
+            color: var(--title-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px var(--glow-color);
+            animation: emberGlow 5s ease-in-out infinite alternate;
+        }
+
+        .layer-card {
+            background: var(--card-bg);
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+        }
+
+        .layer-card h3 {
+            color: var(--accent-color);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px var(--accent-color);
+        }
+
+        .layer-card .layer-number {
+            display: inline-block;
+            background: var(--glow-color);
+            color: black;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .game-modes {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+            margin: 50px 0;
+        }
+
+        .features-section {
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+        }
+
+        .feature-card h3 {
+            color: var(--title-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px var(--glow-color);
+            animation: emberGlow 6s ease-in-out infinite alternate;
+        }
+
+        .feature-highlight {
+            background: var(--glow-color);
+            color: black;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .feature-image-section {
+            position: relative;
+            margin: 50px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/russibio_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .trivia-section {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+            margin: 50px 0;
+        }
+
+        .trivia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .trivia-item {
+            background: rgba(80, 25, 25, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--decay-yellow);
+        }
+
+        .trivia-item .trivia-icon {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 50px 0;
+            align-items: center;
+        }
+
+        .boxart-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-image: url('images/russibio_4_boxart.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .boxart-description {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+        }
+
+        .boxart-title {
+            color: var(--title-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px var(--glow-color);
+        }
+
+        .footer {
+            background: rgba(20, 5, 5, 0.9);
+            padding: 40px;
+            text-align: center;
+            border-top: 2px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--glow-color);
+            text-shadow: 0 0 10px var(--glow-color);
+        }
+
+        .ability-diagram {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .svg-container {
+            background: rgba(40, 15, 15, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .boxart-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .three-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trivia-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .title-section {
+                padding: 80px 15px 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+
+    <div class="title-section">
+        <h1 class="main-title">Russki Biomonster Neighbourhood</h1>
+        <p class="subtitle">Apartment Ragdoll Rumble</p>
+    </div>
+
+    <div class="container">
+        <section class="overview">
+            <p>Take control of an amorphous flesh monster as it systematically devours the residents of a Russian apartment building. Use tentacles, bone spikes, and a grinding maw to eliminate tough-as-nails tenants who fight back with hidden weapons stashed throughout their homes.</p>
+            <br>
+            <p>Navigate cramped apartment rooms, adapt to desperate resistance, and consume your victims to grow stronger in this dark tactical horror experience that puts you in the role of the nightmare itself.</p>
+            <br>
+            <p>Uncover the disturbing truth behind your rampage as government propaganda reveals the sinister purpose driving your monstrous mission through the concrete corridors of urban Russia.</p>
+        </section>
+
+        <div class="three-cards">
+            <div class="card">
+                <h3>🎯 Target Audience</h3>
+                <p>Horror game enthusiasts who appreciate tactical combat mechanics, mature players seeking dark narrative themes, and gamers who enjoy role-reversal experiences where they embody the monster rather than fight it.</p>
+            </div>
+            <div class="card">
+                <h3>🧠 Game's Purpose</h3>
+                <p>Provides cathartic power fantasy through monstrous agency, develops strategic thinking via tactical dismemberment combat, and delivers thought-provoking commentary on government corruption and displacement.</p>
+            </div>
+            <div class="card">
+                <h3>💀 Core Concept</h3>
+                <p>Fulfill the need for agency and control by playing as the predator in a confined environment, while satisfying strategic thinking through physics-based combat and resource management in tight apartment spaces.</p>
+            </div>
+        </div>
+
+        <section class="controls-section">
+            <h2>🕹️ Controls & Interface</h2>
+            <div class="controls-grid">
+                <div class="control-item">
+                    <div class="control-key">Mouse Aim</div>
+                    <div>Direction for all blob abilities</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Mouse 1</div>
+                    <div>Tentacle Grappling (click/release)</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Mouse 2</div>
+                    <div>Harden (defensive mode)</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">D</div>
+                    <div>Launch Heavy Bone Harpoon</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">S</div>
+                    <div>Fire Light Bone Dart</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">A</div>
+                    <div>Deploy Retractable Spikes</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">W</div>
+                    <div>Open Grinding Maw</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Q/E</div>
+                    <div>Roll Counter/Clockwise</div>
+                </div>
+            </div>
+            <p><strong>Player Control:</strong> You embody a 1-meter diameter amorphous flesh monster that can only move via tentacle grappling or rolling. Every surface becomes a potential anchor point for strategic positioning and prey manipulation in the claustrophobic apartment environment.</p>
+        </section>
+
+        <div class="vignette-section">
+            <div class="vignette-image">
+                <div class="vignette-quote">
+                    "The thrill of being the nightmare that haunts the night"
+                </div>
+            </div>
+        </div>
+
+        <section class="game-layers">
+            <h2 class="section-title">🏗️ Game Layers</h2>
+            
+            <div class="layer-card">
+                <span class="layer-number">1</span>
+                <h3>Moment-to-Moment Gameplay</h3>
+                <p>Tactical physics-based combat in cramped apartment rooms. Use tentacle grappling to position yourself and manipulate enemies while they scramble to arm themselves from furniture stashes. Deploy bone spikes to impale multiple targets, launch harpoons to pin enemies to walls, or activate your grinding maw to consume nearby victims. Each ability has tactical considerations - hardening provides defense but limits mobility, while the maw and spikes are mutually exclusive, forcing strategic choice in the heat of battle.</p>
+            </div>
+            
+            <div class="layer-card">
+                <span class="layer-number">2</span>
+                <h3>Low Metagame - Apartment Assault</h3>
+                <p>Progress room-by-room through a single apartment building, facing 3-12 rooms of escalating resistance. Tenants become more prepared and better armed as you advance, pulling AK-47s from couches and RPGs from cabinets. Each consumed victim makes you larger and stronger, providing damage reduction and increased attack power. Victory requires clearing the entire building before accumulating too much damage from the increasingly desperate residents.</p>
+            </div>
+            
+            <div class="layer-card">
+                <span class="layer-number">3</span>
+                <h3>High Metagame - Propaganda Campaign</h3>
+                <p>An eerie achievements log presented as government propaganda bulletins tracks each building you've cleared. Each success is reported as making way for industrial development - coal mines, war factories, industrial plants. The cheerful bureaucratic tone creates unsettling cognitive dissonance as you realize you're not a rogue monster, but a government bioweapon used to displace stubborn residents for corporate interests.</p>
+            </div>
+            
+            <div class="layer-card">
+                <span class="layer-number">4</span>
+                <h3>Practical Game Flow</h3>
+                <p>Quick 15-30 minute sessions of intense monster rampage with satisfying completion. Start the app, select from randomly generated apartment buildings with different layouts and tenant types. Battle through rooms with growing power and size, culminate in victory or defeat. End with propaganda bulletin entry that reveals the industrial facility planned for that location, creating a disturbing moment of reflection before closing the game.</p>
+            </div>
+        </section>
+
+        <section class="game-modes">
+            <h2 class="section-title">🎮 Game Modes</h2>
+            <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 20px;">🏢 Apartment Assault</h3>
+            <p>The core and only game mode - a fast-paced, brutal gauntlet through procedurally varied Russian apartment buildings. Each run features different building layouts, tenant distributions, weapon placements, and resistance levels. Buildings range from 3-room quick raids to 12-room extended campaigns.</p>
+            <br>
+            <p><strong>Intensity Options:</strong> Choose your preferred challenge level from desperate survival (scarce victims, well-armed tenants) to power fantasy (abundant prey, minimal resistance). The procedural system adapts room layouts, enemy equipment, and victory conditions to match your selected intensity.</p>
+            <br>
+            <p><strong>Replayability:</strong> Random apartment addresses, tenant personalities, weapon stashes, and architectural layouts ensure each assault feels unique while maintaining the core tactical monster gameplay.</p>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">⚙️ Game Features & Mechanics</h2>
+            
+            <div class="feature-card">
+                <h3>🐙 Tentacle Grappling System</h3>
+                <p>The core movement and tactical system. Launch retractable tentacles at any surface - walls, furniture, enemies - to pull yourself toward them or pull objects toward you. <span class="feature-highlight">Physics-based momentum</span> means strategic positioning and timing matter. Use furniture as shields by pulling them between you and armed tenants, or drag screaming victims directly into your maw.</p>
+                <br>
+                <p>Grappling creates dynamic combat scenarios where every surface becomes a tactical option. Swing from ceiling lights, yank rugs out from under enemies, or use tentacles to collapse furniture onto fleeing residents.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🦴 Modular Monster Arsenal</h3>
+                <p>Six distinct abilities that can be combined tactically: <span class="feature-highlight">Retractable bone spikes</span> for impaling multiple enemies, <span class="feature-highlight">heavy harpoons</span> for pinning targets to walls, <span class="feature-highlight">light darts</span> for rapid harassment, <span class="feature-highlight">hardening</span> for defense, and the <span class="feature-highlight">grinding maw</span> for close-range consumption.</p>
+                <br>
+                <p>Strategic exclusions force meaningful choices - you can't use spikes and maw simultaneously, hardening limits mobility, harpoons must be retrieved to reuse. Each ability serves different tactical situations in the cramped apartment environment.</p>
+            </div>
+
+            <div class="svg-container">
+                <svg width="100%" height="200" viewBox="0 0 800 200">
+                    <defs>
+                        <radialGradient id="blobGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#ff4757;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2c0505;stop-opacity:1" />
+                        </radialGradient>
+                    </defs>
+                    
+                    <!-- Central blob -->
+                    <circle cx="400" cy="100" r="40" fill="url(#blobGradient)" stroke="#8b2635" stroke-width="2"/>
+                    
+                    <!-- Tentacles -->
+                    <path d="M 400 100 Q 350 80 300 60" stroke="#ff6b7d" stroke-width="4" fill="none"/>
+                    <path d="M 400 100 Q 450 80 500 60" stroke="#ff6b7d" stroke-width="4" fill="none"/>
+                    <path d="M 400 100 Q 380 140 360 180" stroke="#ff6b7d" stroke-width="4" fill="none"/>
+                    <path d="M 400 100 Q 420 140 440 180" stroke="#ff6b7d" stroke-width="4" fill="none"/>
+                    
+                    <!-- Ability labels -->
+                    <text x="280" y="50" fill="#e8ddd4" font-size="14" text-anchor="middle">Grapple</text>
+                    <text x="520" y="50" fill="#e8ddd4" font-size="14" text-anchor="middle">Harpoon</text>
+                    <text x="340" y="195" fill="#e8ddd4" font-size="14" text-anchor="middle">Spikes</text>
+                    <text x="460" y="195" fill="#e8ddd4" font-size="14" text-anchor="middle">Maw</text>
+                    
+                    <text x="400" y="30" fill="#ff4757" font-size="16" text-anchor="middle" font-weight="bold">Monster Ability System</text>
+                </svg>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🏠 Dynamic Tenant AI & Apartment Systems</h3>
+                <p>Tenants react intelligently to your presence - fleeing when unarmed, seeking weapons from randomized furniture stashes, then returning to fight with <span class="feature-highlight">authentic Russian weaponry</span> from Soviet-era firearms to improvised kitchen weapons.</p>
+                <br>
+                <p>Each apartment room contains procedurally placed furniture with hidden weapon caches. Tenants might pull a Kalashnikov from a sofa, an RPG from a wardrobe, or a frying pan from behind a toilet. This creates emergent tactical scenarios where you must predict and counter their arming attempts.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📈 Growth Through Consumption</h3>
+                <p>Each devoured victim increases your mass, size, and power. <span class="feature-highlight">Damage reduction scaling</span> means larger monsters shrug off small arms fire, while <span class="feature-highlight">increased attack force</span> allows you to smash through furniture and pin stronger enemies.</p>
+                <br>
+                <p>Visual and mechanical progression as you grow from 1-meter diameter to 2+ meters, filling rooms and requiring different tactical approaches. Early game emphasizes stealth and precision; late game becomes unstoppable rampage.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🏗️ Apartment Building Randomization</h3>
+                <p>Procedural room layouts, furniture placement, and architectural features create unique tactical challenges each playthrough. <span class="feature-highlight">Narrow hallways</span> favor tentacle navigation, while <span class="feature-highlight">open living rooms</span> become chaotic battlefields with multiple cover options.</p>
+                <br>
+                <p>Environmental storytelling through apartment details - family photos, personal belongings, architectural decay - creates emotional context that contrasts with your monstrous mission.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📰 Propaganda Meta-Narrative System</h3>
+                <p>Victory achievements are recorded in <span class="feature-highlight">disturbing government bulletins</span> that reveal the true purpose behind your rampages. Each cleared building becomes a cheerful announcement about new industrial development, creating profound cognitive dissonance.</p>
+                <br>
+                <p>The propaganda system transforms individual tactical victories into a larger horror narrative about government displacement of citizens for corporate interests, adding psychological depth to the monster gameplay.</p>
+            </div>
+        </section>
+
+        <div class="feature-image-section">
+            <div class="feature-image">
+                <div class="vignette-quote">
+                    "Every surface becomes a weapon when you can pull the world toward you"
+                </div>
+            </div>
+        </div>
+
+        <section class="trivia-section">
+            <h2 class="section-title">📚 Development Trivia</h2>
+            <div class="trivia-grid">
+                <div class="trivia-item">
+                    <div class="trivia-icon">🏭</div>
+                    <h4 style="color: var(--decay-yellow); margin-bottom: 10px;">Real Location Inspiration</h4>
+                    <p>Set in Chelyabinsk, Russia - a real city known for severe industrial pollution and the infamous 1957 Kyshtym nuclear disaster, adding authentic environmental horror context.</p>
+                </div>
+                <div class="trivia-item">
+                    <div class="trivia-icon">☢️</div>
+                    <h4 style="color: var(--decay-yellow); margin-bottom: 10px;">Lake Karachay Origins</h4>
+                    <p>The monster originates from Lake Karachay, Earth's most polluted body of water. Standing on its shore for one hour would deliver a lethal dose of radiation - perfect bioweapon origin story.</p>
+                </div>
+                <div class="trivia-item">
+                    <div class="trivia-icon">🎭</div>
+                    <h4 style="color: var(--decay-yellow); margin-bottom: 10px;">Government Conspiracy Theme</h4>
+                    <p>The game explores themes of forced displacement, corporate land grabs, and government abuse of power - drawing from real-world urban development controversies.</p>
+                </div>
+                <div class="trivia-item">
+                    <div class="trivia-icon">🎨</div>
+                    <h4 style="color: var(--decay-yellow); margin-bottom: 10px;">Horror-Comedy Balance</h4>
+                    <p>Tenants pulling RPGs from kitchen cabinets and AK-47s from sofas creates dark comedy moments that offset the horror atmosphere with absurdist Russian stereotypes.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="boxart-section">
+            <div class="boxart-image"></div>
+            <div class="boxart-description">
+                <h2 class="boxart-title">Russki Biomonster Neighbourhood</h2>
+                <p style="margin-bottom: 20px;"><strong>Apartment Ragdoll Rumble</strong></p>
+                <p>Become the nightmare lurking in urban Russia's concrete corridors. Master tentacle-based combat as you systematically devour apartment building residents who fight back with improvised arsenals.</p>
+                <br>
+                <p>• <strong>Physics-based monster combat</strong> with tentacle grappling and bone weaponry</p>
+                <p>• <strong>Procedural apartment buildings</strong> with dynamic enemy AI and weapon placement</p>
+                <p>• <strong>Growth through consumption</strong> - become larger and deadlier with each victim</p>
+                <p>• <strong>Dark narrative</strong> revealing government conspiracy through propaganda bulletins</p>
+                <br>
+                <p style="font-style: italic; color: var(--subtitle-color);">Experience the disturbing thrill of being the monster in this tactical horror experience that challenges players to confront themes of power, displacement, and moral complicity.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+
+    <script>
+        // Add subtle parallax effect to title background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const titleSection = document.querySelector('.title-section');
+            if (titleSection) {
+                titleSection.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+            }
+        });
+
+        // Add interaction feedback for cards
+        document.querySelectorAll('.card, .feature-card, .layer-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

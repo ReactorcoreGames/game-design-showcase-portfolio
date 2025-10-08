@@ -1,0 +1,770 @@
+<!--
+Image Files Needed:
+- EradicationWars 1_title.jpg: Epic battle scene with Type-3 Mechas fighting in an apocalyptic war zone with Arms Forts in the background
+- EradicationWars 2_vignette.jpg: Intense mecha-vs-mecha combat showing the fast-paced Soldat-style gameplay with boost dashing and weapon swapping
+- EradicationWars 3_feature.jpg: Dynamic transformation sequence showing a mecha switching between bipedal and waverider forms mid-combat
+- EradicationWars 4_boxart.jpg: Dramatic poster-style image of a Type-3 Mecha pilot in the cockpit with the reflection of an enemy mecha in their visor
+- EradicationWars 5_story.jpg: Zoomed out overworld view of the greater setting showing star systems connected by jumpgates in the Sirius sector
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Eradication Wars: Apocalyptic Mecha Warfare</title>
+    <style>
+        :root {
+            --background-color: #0a0a0a;
+            --container-bg: #1a1a1a;
+            --accent-bg: #2a2a2a;
+            --border-color: #ff0033;
+            --text-color: #ffffff;
+            --secondary-text: #cccccc;
+            --title-gradient-1: #ff0000;
+            --title-gradient-2: #0095ff;
+            --subtitle-color: #ff8800f2;
+            --card-shadow: rgba(220, 20, 60, 0.3);
+            --glow-color: #f60031;
+            --warning-color: #e74c3c;
+            --success-color: #27ae60;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #1a0a0a 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(220, 20, 60, 0.1);
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            background: rgba(220, 20, 60, 0.2);
+            border-color: var(--subtitle-color);
+        }
+
+        .title-section {
+            position: relative;
+            height: 500px;
+            background: url('Images/EradicationWars 1_title.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .title-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(26, 10, 10, 0.8) 100%);
+        }
+
+        .title-content {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--title-gradient-1);
+            text-shadow: 
+                0 0 10px var(--title-gradient-2),
+                0 0 20px var(--title-gradient-1),
+                0 0 30px var(--title-gradient-2),
+                0 0 40px var(--glow-color);
+            animation: titleGlow 3s ease-in-out infinite;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: var(--subtitle-color);
+            font-weight: 300;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 10px var(--subtitle-color);
+                    0 0 20px var(--title-gradient-1),
+                    0 0 30px var(--subtitle-color);
+                    0 0 40px var(--glow-color);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 15px var(--title-gradient-1),
+                    0 0 25px var(--subtitle-color);
+                    0 0 35px var(--title-gradient-1),
+                    0 0 50px var(--glow-color);
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--title-gradient-1);
+            text-shadow: 
+                0 0 8px var(--subtitle-color);
+                0 0 16px var(--title-gradient-1),
+                0 0 24px var(--subtitle-color);
+            animation: titleGlow 3s ease-in-out infinite;
+            margin: 3rem 0 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .overview {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px var(--card-shadow);
+        }
+
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--subtitle-color);
+            box-shadow: 0 15px 30px rgba(220, 20, 60, 0.4);
+        }
+
+        .card h3 {
+            color: var(--title-gradient-1);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .emoji {
+            font-size: 1.8rem;
+        }
+
+        .controls-section {
+            background: var(--accent-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .control-item {
+            background: var(--container-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--border-color);
+        }
+
+        .control-key {
+            color: var(--title-gradient-1);
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background: url('Images/EradicationWars 2_vignette.jpg') center/cover;
+        }
+
+        .vignette-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 2rem;
+        }
+
+        .vignette-quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--subtitle-color);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.5rem;
+            margin-left: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--border-color);
+        }
+
+        .game-layers {
+            margin: 3rem 0;
+        }
+
+        .layer-card {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px var(--card-shadow);
+        }
+
+        .layer-card h4 {
+            color: var(--title-gradient-1);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .layer-number {
+            background: var(--border-color);
+            color: var(--background-color);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .features-section {
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 25px var(--card-shadow);
+        }
+
+        .story-image {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background: url('Images/EradicationWars 5_story.jpg') center/cover;
+        }
+
+        .feature-image {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background: url('Images/EradicationWars 3_feature.jpg') center/cover;
+        }
+
+        .svg-diagram {
+            background: var(--accent-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .modes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .mode-card {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .mode-card:hover {
+            border-color: var(--subtitle-color);
+            transform: translateY(-5px);
+        }
+
+        .mode-card h4 {
+            color: var(--title-gradient-1);
+            margin-bottom: 1rem;
+        }
+
+        .final-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 2rem;
+            margin: 3rem 0;
+            align-items: stretch;
+        }
+
+        .boxart {
+            background: url('Images/EradicationWars 4_boxart.jpg') center/cover;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            min-height: 400px;
+            aspect-ratio: 2/3;
+        }
+
+        .description-card {
+            background: var(--container-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .description-card h3 {
+            color: var(--title-gradient-1);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: var(--accent-bg);
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--title-gradient-1);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--subtitle-color);
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: var(--title-gradient-1);
+            font-weight: bold;
+        }
+
+        .warning-text {
+            color: var(--warning-color);
+            font-weight: bold;
+        }
+
+        .tech-spec {
+            background: var(--accent-bg);
+            border-left: 4px solid var(--border-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.3rem; }
+            h2 { font-size: 2rem; }
+            .container { padding: 1rem; }
+            .three-cards { grid-template-columns: 1fr; }
+            .final-section { 
+                grid-template-columns: 1fr; 
+                gap: 1rem;
+            }
+            .controls-grid { grid-template-columns: 1fr; }
+            .modes-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1>AAL Eradication Wars</h1>
+            <div class="subtitle">Apocalyptic Mecha Warfare</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="overview">
+            <h2>🔥 Game Overview</h2>
+            <p>
+                <strong>AAL Eradication Wars</strong> delivers the ultimate apocalyptic mecha combat experience, combining the fast-paced intensity of Soldat with the strategic depth of Armored Core. 
+                Command powerful Type-3 Mechas in brutal token-driven warfare across dynamic battlefields where massive Arms Forts provide tactical support and every death carries weight.
+            </p>
+            <p>
+                Experience a universe where two factions have abandoned all restraint in their quest for total annihilation. No mercy, no surrender, no civilians spared - only complete eradication of the enemy. 
+                Master advanced mobility systems, devastating weaponry, and tactical positioning in battles that seamlessly blend intimate mecha duels with epic fleet warfare backdrops.
+            </p>
+            <p>
+                This isn't just another mecha game - it's a comprehensive warfare simulator where your piloting skills determine the survival of entire civilizations. 
+                Every battle contributes to a larger campaign of extinction, where victory means watching helpless populations fall to your weapons.
+            </p>
+        </div>
+
+        <div class="three-cards">
+            <div class="card">
+                <h3><span class="emoji">🎯</span> Target Audience</h3>
+                <p><strong>Core Players:</strong> Fans of fast-paced arena shooters (Soldat, Quake), mecha enthusiasts (Armored Core, Gundam), and tactical combat lovers seeking skill-based gameplay.</p>
+                <p><strong>Secondary:</strong> Strategy gamers who appreciate persistent campaign consequences and emergent battlefield narratives.</p>
+                <p><strong>Complexity Level:</strong> High - demands mastery of movement, weapon systems, and tactical awareness in chaotic environments.</p>
+            </div>
+            
+            <div class="card">
+                <h3><span class="emoji">🧠</span> Core Human Needs</h3>
+                <p><strong>Mastery & Competence:</strong> Complex control schemes and weapon systems reward dedicated practice and skill development.</p>
+                <p><strong>Stimulation & Challenge:</strong> Intense, unpredictable combat scenarios provide constant engagement and adrenaline.</p>
+                <p><strong>Expression & Creativity:</strong> Tactical decision-making and loadout customization allow personal combat style development.</p>
+            </div>
+            
+            <div class="card">
+                <h3><span class="emoji">⚔️</span> Purpose & Fulfillment</h3>
+                <p><strong>Ultimate Power Fantasy:</strong> Experience the thrill of piloting devastating war machines in apocalyptic scenarios without real-world consequences.</p>
+                <p><strong>Skill Mastery Journey:</strong> Provides a deep, replayable system for developing reflexes, tactical thinking, and mechanical precision.</p>
+                <p><strong>Cathartic Release:</strong> Safe outlet for aggressive impulses through intense, consequential virtual warfare.</p>
+            </div>
+        </div>
+
+        <div class="story-image">
+            <div class="vignette-overlay">
+                <div class="vignette-quote">
+                    "Only the complete eradication of the enemy can halt a genetic metamorphosis dividing humanity, making mercy impossible as billions fight for complete genocide of the other faction."
+                </div>
+            </div>
+        </div>
+
+        <div class="overview">
+            <h2>📖 Lore & Story</h2>
+            <p>
+                <strong>Helios Sector:</strong> Set within humanity's expanding colonial sphere in the smaller region of the Milky Way in the Orion Arm, encompassing our original Sol system and approximately fifty colonized star systems. 
+                Connected by a network of jumpgates, these colonies represent humanity's first major expansion beyond Earth and the Solar System, with no faster-than-light travel available beyond these crucial gate networks that were set up the old fashion way.
+            </p>
+            <br>
+            <p>
+                <strong>The Ideological Fracture:</strong> Following humanity's discovery of initial alien species and the revolutionary genetic transformation technology, two irreconcilable worldviews emerged. 
+                Years of growing tensions between domination-hierarchy minded factions and collaboration-freedom oriented groups have reached a breaking point. The introduction of genetic enhancement that could fundamentally alter humanity itself became the final catalyst for war.
+            </p>
+            <br>
+            <p>
+                <strong>Total War Declaration:</strong> Tensions have boiled over to the point of existential warfare where only one side will survive. 
+                Both factions command equal military strength, identical technology, and the same devastating Mechs and massive Arms Forts. 
+                With a deliberate genetic metamorphosis virus actively already dividing humanity, complete eradication of the enemy becomes the only way to stop the change.
+            </p>
+            <br>
+            <p>
+                <strong>The Stakes:</strong> Billions of lives hang in the balance as regional campaigns determine access to civilian megashelters. 
+                Each battlefield victory grants the winner a step closer to methodically exterminate enemy populations without mercy - 
+                turning war into overkill genocide until one side ceases to exist entirely across the colonial space of the Helios Sector.
+            </p>
+        </div>
+
+        <div class="controls-section">
+            <h2>🎮 Controls & Interface</h2>
+            <p>
+                <strong>Dual-Form Combat System:</strong> Seamlessly transform between agile Mecha mode for precision combat and high-speed Waverider mode for tactical repositioning. 
+                Master momentum-based movement with advanced techniques like boost-dashing, wall-jumping, and aerial maneuvers.
+            </p>
+            <p>
+                <strong>Dynamic Loadout Management:</strong> Drop, throw, and retrieve weapons mid-combat. Loot fallen equipment from allies and enemies. 
+                Manage finite ammunition reserves while maintaining combat effectiveness under pressure.
+            </p>
+            
+            <div class="controls-grid">
+                <div class="control-item">
+                    <div class="control-key">WASD</div>
+                    <div>Movement & Mecha Control / Waverider Navigation</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Mouse</div>
+                    <div>Aim Weapons / Direct Boost Dash / Mode Rotation</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Spacebar</div>
+                    <div>Boost Dash (Tap/Hold for Power Control)</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Mouse 2</div>
+                    <div>Omnidirectional Flight / Waverider Thrusters</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">F</div>
+                    <div>Drop/Throw Weapon / Wire Retrieval System</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">X</div>
+                    <div>Transform: Mecha ↔ Waverider</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">C/Mouse 4</div>
+                    <div>Melee Attacks / Rifle Buttstock / Bayonet</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">G</div>
+                    <div>Grenade Throw (Context-Sensitive)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vignette-section">
+            <div class="vignette-overlay">
+                <div class="vignette-quote">
+                    "Combat is a deadly dance between movement and marksmanship. Hurl yourself beyond enemy firing arcs, spin to deliver devastating salvos, then boost away before they can retaliate. Every battle is won through split-second decisions and perfect timing."
+                </div>
+            </div>
+        </div>
+
+        <div class="game-layers">
+            <h2>🏗️ Game Architecture</h2>
+            
+            <div class="layer-card">
+                <h4><span class="layer-number">1</span> Moment-to-Moment Combat</h4>
+                <p>
+                    <strong>Core Gameplay Loop:</strong> Intense mecha-vs-mecha skirmishes where every pilot has equal capabilities. 
+                    Master advanced movement techniques like boost-dashing, aerial maneuvering, and form transformation while managing weapon loadouts, ammunition, and tactical positioning.
+                </p>
+                <p>
+                    <strong>Combat Depth:</strong> No fall damage, momentum-based physics, and environmental interaction create a three-dimensional battlefield. 
+                    Weapon weight affects movement speed, reload times impact vulnerability windows, and battlefield hazards add unpredictable elements.
+                </p>
+            </div>
+
+            <div class="layer-card">
+                <h4><span class="layer-number">2</span> Battle Campaign Structure</h4>
+                <p>
+                    <strong>Token-Based Warfare:</strong> Each battle depletes a finite pool of combatants (100-1000 tokens depending on map scale). 
+                    Victory requires systematically eliminating enemy forces while preserving your own through superior tactics and individual skill.
+                </p>
+                <p>
+                    <strong>Dynamic Battlefield Events:</strong> Massive Arms Forts traverse predetermined routes, devastating enemy emplacements while providing resupply opportunities. 
+                    Weather hazards, supply drops, and background fleet warfare create evolving combat conditions.
+                </p>
+            </div>
+
+            <div class="layer-card">
+                <h4><span class="layer-number">3</span> Strategic Campaign Progression</h4>
+                <p>
+                    <strong>Regional Conquest System:</strong> Five major regions each containing six battles (5 standard + 1 fortress assault). 
+                    Victory in regional campaigns unlocks population centers for systematic elimination, directly impacting enemy civilization strength.
+                </p>
+                <p>
+                    <strong>Escalating Consequences:</strong> Each regional victory grants access to defenseless civilian megashelters where players can methodically exterminate enemy populations. 
+                    Campaign choices determine whether civilizations survive, flee, or face complete annihilation.
+                </p>
+            </div>
+
+            <div class="layer-card">
+                <h4><span class="layer-number">4</span> Session Flow Design</h4>
+                <p>
+                    <strong>Seamless Entry/Exit:</strong> Launch directly into combat with customizable session lengths (5 minutes to 2+ hours). 
+                    Save states allow pausing at any intermission screen without progress loss.
+                </p>
+                <p>
+                    <strong>Performance Tracking:</strong> Comprehensive statistics including kill streaks, weapon proficiency, mobility achievements, and civilian elimination counts. 
+                    Generate randomized "military honors" based on campaign performance for comedic relief after intense warfare.
+                </p>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <h2>⚙️ Core Features & Mechanics</h2>
+
+            <div class="feature-card">
+                <h3>🤖 Dual-Form Mecha System</h3>
+                <p>
+                    Transform instantly between bipedal Mecha mode for precision combat and streamlined Waverider mode for high-speed traversal. 
+                    Each form has distinct movement capabilities, weapon handling characteristics, and tactical applications.
+                </p>
+                
+            </div>
+
+            <div class="feature-card">
+                <h3>🎯 Dynamic Weapon Ecosystem</h3>
+                <p>
+                    Comprehensive arsenal ranging from standard kinetic weapons to exotic superweapons. Each weapon features unique handling characteristics including weight penalties, rotation speeds, 
+                    reload sequences, and ammunition constraints that dramatically affect combat flow.
+                </p>
+                <div class="tech-spec">
+                    <strong>Weapon Categories:</strong><br>
+                    • Primary Weapons: Full-power combat systems (rifles, cannons, beam weapons)<br>
+                    • Secondary Weapons: Specialized/lightweight options (pistols, tools, exotic tech)<br>
+                    • Contextual Grenades: Found on battlefield, varied effects and capacity limits<br>
+                    • Superweapons: Rare powerups with extreme capability and severe limitations
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>🏗️ Massive Arms Fort Support</h3>
+                <p>
+                    Colossal mobile weapons platforms lumber across battlefields on predetermined routes, systematically destroying enemy installations while providing resupply and tactical support to friendly units.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌪️ Environmental Warfare Systems</h3>
+                <p>
+                    Dynamic battlefield conditions including weather hazards, supply drops from orbital bombardments, and destructible terrain elements. 
+                    Background fleet warfare directly impacts battlefield events through stray projectiles and debris.
+                </p>
+                <div class="tech-spec">
+                    <strong>Hazard Categories:</strong><br>
+                    • Weather Events: Storms, radiation bursts, atmospheric distortions<br>
+                    • Orbital Bombardment: Stray shots from background fleet warfare<br>
+                    • Supply Drops: Equipment pods, medical supplies, exotic weapons<br>
+                    • Terrain Destruction: Collapsing structures, explosive props, debris fields
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-image">
+            <div class="vignette-overlay">
+                <div class="vignette-quote">
+                    "The transformation system isn't just movement - it's tactical survival. Switch to Waverider mid-combat to escape overwhelming firepower, then transform back to deliver a devastating counterattack from an unexpected angle."
+                </div>
+            </div>
+        </div>
+
+        <h2>🎲 Game Modes</h2>
+        
+        <div class="modes-grid">
+            <div class="mode-card">
+                <h4>📊 Campaign Mode</h4>
+                <p><strong>Session Length:</strong> 1-3 hours per region</p>
+                <p>
+                    The primary experience featuring systematic regional conquest across five major theaters of war. 
+                    Each victory grants access to civilian elimination phases where players methodically exterminate defenseless populations.
+                </p>
+                <p><strong>Purpose:</strong> Deep strategic progression with meaningful consequences and comprehensive narrative completion.</p>
+            </div>
+            
+            <div class="mode-card">
+                <h4>⚡ Quick Battle</h4>
+                <p><strong>Session Length:</strong> 5-15 minutes</p>
+                <p>
+                    Single-map token depletion battles with randomized conditions. Perfect for skill practice, specific scenario testing, 
+                    or quick combat sessions between other activities.
+                </p>
+                <p><strong>Purpose:</strong> Immediate combat gratification and mechanical skill development.</p>
+            </div>
+            
+            <div class="mode-card">
+                <h4>💀 Despair Match (Afterlife DM)</h4>
+                <p><strong>Session Length:</strong> 10-30 minutes</p>
+                <p>
+                    Trauma-induced deathmatches where psychologically damaged pilots fight endless battles seeking peace through combat mastery. 
+                    Chain multiple maps for extended gauntlet experiences.
+                </p>
+                <p><strong>Purpose:</strong> Pure skill-based competition with existential narrative framing.</p>
+            </div>
+            
+            <div class="mode-card">
+                <h4>☢️ Nuclear Hell</h4>
+                <p><strong>Session Length:</strong> 5-20 minutes</p>
+                <p>
+                    Superweapons-only chaos mode recreating the first week of war when restraints were abandoned. 
+                    Constant exotic weapon drops create apocalyptic battlefield conditions.
+                </p>
+                <p><strong>Purpose:</strong> Maximum destruction catharsis and experimental weapon gameplay.</p>
+            </div>
+            
+            <div class="mode-card">
+                <h4>🎯 Rambo/God Mode</h4>
+                <p><strong>Session Length:</strong> 3-10 minutes</p>
+                <p>
+                    Single-player power fantasy where enhanced capabilities allow domination of entire battlefields. 
+                    Designed for stress relief and confidence building.
+                </p>
+                <p><strong>Purpose:</strong> Empowerment fantasy and mechanical experimentation in low-pressure environment.</p>
+            </div>
+            
+            <div class="mode-card">
+                <h4>🏔️ Climbing Mecha</h4>
+                <p><strong>Session Length:</strong> 2-8 minutes</p>
+                <p>
+                    Environmental navigation challenges focusing on advanced movement techniques without combat pressure. 
+                    Procedurally generated obstacle courses test mobility mastery.
+                </p>
+                <p><strong>Purpose:</strong> Movement skill development and zen-like precision training.</p>
+            </div>
+        </div>
+
+        <div class="final-section">
+            <div class="boxart"></div>
+            <div class="description-card">
+                <h3>AAL Eradication Wars</h3>
+                <p>
+                    Command the ultimate war machines in humanity's darkest conflict. Master dual-form mechas, devastating weaponry, and tactical battlefield awareness as you participate in the complete annihilation of entire civilizations.
+                </p>
+                <p>
+                    <strong>Every shot matters.</strong> Every death carries weight. Every victory brings you closer to witnessing the extinction of billions.
+                </p>
+                <p>
+                    This is not heroism - this is the unflinching reality of apocalyptic warfare where mercy is extinct and only complete eradication ends the conflict.
+                </p>
+                <p class="warning-text">
+                    ⚠️ Contains extreme violence, civilian casualties, and themes of genocide. Includes educational materials about nonviolent communication as contrast to in-game brutality.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+</body>
+</html>

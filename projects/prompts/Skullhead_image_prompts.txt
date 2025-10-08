@@ -1,0 +1,22 @@
+Here are the five detailed image generation prompts for Skullhead:
+
+Title Image: (16:9)
+Dynamic low-angle shot of a skull-headed figure in khaki cargo pants and grey t-shirt wielding a blood-splattered chainsaw in a destroyed mall food court. The skeletal skull atop spinal vertebrae displays angry hollow eye sockets. Broken tables, scattered debris, and red blood sprays across white tile floors. Fluorescent lights flicker overhead casting harsh shadows. Hispanic skin tone visible on exposed arms holding the revving weapon. Edgy stylized dark comic book art, gritty linework, high contrast shadows, dramatic lighting effects, visceral gore details. Deep crimson blood-red dominant with dark charcoal greys, bone white highlights, and institutional beige accents.
+
+Vignette Image: (16:9)
+Close-up medium shot showcasing physics-based dismemberment combat in a school hallway. The skull-headed protagonist mid-swing with a bloodied axe, severed limbs and gore scattered across checkered linoleum floors. Lockers line the walls with dented metal surfaces reflecting emergency lighting. Ragdoll enemy bodies in various states of dismemberment demonstrate the brutal combat mechanics. The angry skull expression shows hollow sockets and exposed vertebrae connecting to the torso. Edgy stylized dark comic book art, gritty linework, high contrast shadows, dramatic lighting effects, visceral gore details. Deep crimson blood-red dominant with dark charcoal greys, bone white highlights, and institutional beige accents.
+
+Feature Image: (16:9)
+Detailed overhead isometric view of dismemberment system mechanics in an office environment. Multiple enemy ragdolls in business attire showing strategic body part targeting - arms severed near desks, legs removed near cubicles, heads detached near copy machines. The skull-headed figure stands centrally with weapons drawn. Office furniture like chairs, computers, and filing cabinets serve as destructible props. Blood spray patterns demonstrate physics-based combat across carpet and tile surfaces. Edgy stylized dark comic book art, gritty linework, high contrast shadows, dramatic lighting effects, visceral gore details. Deep crimson blood-red dominant with dark charcoal greys, bone white highlights, and institutional beige accents.
+
+Box Art Cover: (2:3)
+Heroic upward angle portrait of the skull-headed antihero standing triumphant over a pile of defeated enemies in a shopping mall setting. The clean white skull with angry expression sits atop visible spinal bones, wearing khaki cargo pants, grey t-shirt, and black-white sneakers. Hispanic skin tone on arms and hands gripping dual weapons. Mall storefronts and escalators visible in background with emergency lighting casting dramatic shadows. Bodies of various enemy archetypes lie scattered beneath his feet in defeat. Edgy stylized dark comic book art, gritty linework, high contrast shadows, dramatic lighting effects, visceral gore details. Deep crimson blood-red dominant with dark charcoal greys, bone white highlights, and institutional beige accents.
+
+Story Overworld Image: (16:9)
+Wide establishing aerial shot of early 1990s American suburban landscape at dusk. Small towns and cities sprawl across the horizon with shopping malls, office complexes, schools, and residential areas visible. Street lights beginning to flicker on as darkness approaches. Various institutional buildings like corporate offices and municipal structures dot the terrain. The ominous atmosphere suggests a hunting ground where society's worst elements lurk. No specific text or signage visible, just the general urban American sprawl of the era. Edgy stylized dark comic book art, gritty linework, high contrast shadows, dramatic lighting effects, visceral gore details. Deep crimson blood-red dominant with dark charcoal greys, bone white highlights, and institutional beige accents.
+
+Unified Art Style (for all five, already included in prompts):
+Edgy stylized dark comic book art, gritty linework, high contrast shadows, dramatic lighting effects, visceral gore details. Deep crimson blood-red dominant with dark charcoal greys, bone white highlights, and institutional beige accents.
+
+
+Skullhead character appearance: Otherwise an average looking human wearing khaki cargo pants, light grey t-shirt with short sleeves, exposed light hispanic skin color for arms, black and white sneakers, but instead of a neck, its just spinal bones that connect to a clean white skull that appears angry. Edgy stylized art style.

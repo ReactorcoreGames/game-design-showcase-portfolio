@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collidotron: Cascade Physics Processor</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { primaryColor: '#4a90e2', primaryTextColor: '#fcfef0', primaryBorderColor: '#3498db' } });
+    </script>
+</head>
+
+<!--
+AI Image Requirements:
+collidotron_1_title.jpg (16:9): Crystalline processing chamber with geometric patterns and subtle energy effects
+collidotron_2_vignette.jpg (16:9): Mid-cascade scene showing orbs ricocheting through breaking crystalline lattice  
+collidotron_3_feature.jpg (16:9): Slow-motion intervention visualization with trajectory lines and strategic overlay
+collidotron_4_boxart.jpg (2:3): The Collidotron machine as precision industrial equipment with kaleidoscopic slab loading
+collidotron_5_story.jpg (16:9): Zoomed out overworld view of the greater setting the game takes place in
+-->
+
+<body>
+    <style>
+        :root {
+            --background-color: #4f6ab7;
+            --container-bg: #e2f8f9;
+            --border-color: #4a90e2;
+            --text-color: #345;
+            --title-primary: #4a367d;
+            --title-secondary: #4a90e2;
+            --accent-color: #8498db;
+            --card-shadow: rgba(74, 144, 226, 0.15);
+            --hover-glow: #4ae275;
+            --subtle-bg: #b3d8fe;
+            --energy-blue: #00d4ff;
+            --crystal-teal: #47ffe6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #17396588 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .branding-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            background: var(--container-bg);
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--card-shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .branding-link:hover {
+            box-shadow: 0 0 15px var(--hover-glow);
+            border-color: var(--hover-glow);
+        }
+
+        .title-section {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(26, 54, 93, 0.6), rgba(52, 152, 219, 0.5)), url('images/collidotron_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .title-content h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: white;
+            text-shadow: 0 0 20px var(--energy-blue);
+            animation: pingPongGlow 3s ease-in-out infinite;
+        }
+
+        .title-content .subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 300;
+            color: var(--crystal-teal);
+            text-shadow: 0 0 15px rgba(0, 162, 160, 0.8);
+            letter-spacing: 0.1em;
+        }
+
+        @keyframes pingPongGlow {
+            0%, 100% { 
+                text-shadow: 0 0 20px var(--energy-blue), 0 0 40px var(--energy-blue); 
+            }
+            50% { 
+                text-shadow: 0 0 30px var(--crystal-teal), 0 0 60px var(--crystal-teal), 0 0 80px var(--crystal-teal); 
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+            color: var(--title-primary);
+            text-shadow: 0 0 15px var(--accent-color);
+            animation: pingPongGlow 4s ease-in-out infinite;
+        }
+
+        .overview {
+            background: var(--container-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--card-shadow);
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 6px 24px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px var(--hover-glow);
+            border-color: var(--hover-glow);
+        }
+
+        .card h3 {
+            color: var(--title-primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .controls-section {
+            background: var(--subtle-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            margin: 2rem 0;
+        }
+
+        .controls-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--container-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid var(--accent-color);
+        }
+
+        .controls-table th {
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .controls-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        .controls-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .controls-table tr:nth-child(even) {
+            background: var(--subtle-bg);
+        }
+
+        .controls-table .control-name {
+            color: var(--title-primary);
+            font-weight: 600;
+            min-width: 200px;
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px var(--card-shadow);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/collidotron_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(246, 249, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            max-width: 400px;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            box-shadow: 0 4px 16px var(--card-shadow);
+        }
+
+        .game-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .layer-card {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 6px solid var(--border-color);
+            box-shadow: 0 4px 16px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .layer-card:hover {
+            border-left-color: var(--hover-glow);
+            box-shadow: 0 0 20px var(--hover-glow);
+        }
+
+        .layer-card h4 {
+            color: var(--title-primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .layer-number {
+            background: var(--border-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 6px 24px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px var(--hover-glow);
+            border-color: var(--hover-glow);
+        }
+
+        .feature-card h4 {
+            color: var(--title-primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .diagram-section {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .feature-image-section {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px var(--card-shadow);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/collidotron_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .story-image-section {
+            position: relative;
+            margin: 3rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px var(--card-shadow);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 600px;
+            background: url('images/collidotron_5_story.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 1.1fr 1.8fr;
+            gap: 2rem;
+            background: var(--container-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--card-shadow);
+            margin: 3rem 0;
+        }
+
+        .boxart-image {
+            aspect-ratio: 2/3;
+            background: url('images/collidotron_4_boxart.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            border: 2px solid var(--border-color);
+        }
+
+        .boxart-content h3 {
+            color: var(--title-primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .boxart-content .description {
+            font-size: 1.045rem;
+            line-height: 1.65;
+            background: var(--subtle-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .boxart-content .description h3 {
+            color: var(--title-primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            margin-top: 0;
+        }
+
+        .footer {
+            background: var(--title-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--crystal-teal);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .three-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .vignette-quote, .feature-quote {
+                position: static;
+                margin-top: 1rem;
+                max-width: none;
+            }
+        }
+    </style>
+
+    <a href="https://www.patreon.com/ReactorcoreGames" class="branding-link">Reactorcore's Personal Game Design Project</a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1>Collidotron</h1>
+            <div class="subtitle">Cascade Physics Processor</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <div class="overview">
+                <p>Experience the mesmerizing beauty of controlled demolition in the 23rd century. Spark precision chain reactions to break down crystalline slabs of lithified landfill, watching as physics transforms environmental waste into valuable materials through cascading collisions.</p><br>
+                
+                <p>Combine strategic thinking with zen-like observation as reaction orbs ricochet through geometric lattices, creating unique kaleidoscopic patterns with every cascade. Master the art of timing and trajectory to achieve perfect slab collapse efficiency.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="three-cards">
+                <div class="card">
+                    <div class="icon">🎯</div>
+                    <h3>Target Audience</h3>
+                    <p><strong>Physics puzzle enthusiasts</strong> who enjoy strategic thinking combined with satisfying visual feedback. <strong>Relaxation seekers</strong> drawn to meditative gameplay experiences. <strong>Strategic thinkers</strong> who appreciate optimizing efficiency through careful planning and precise intervention.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🧘</div>
+                    <h3>Game's Purpose</h3>
+                    <p><strong>Stress relief</strong> through mesmerizing cascade observation and <strong>competence building</strong> via strategic optimization. Fulfills needs for <strong>beauty and wonder</strong> through kaleidoscopic physics patterns, <strong>autonomy</strong> through meaningful choice, and <strong>purpose</strong> through environmental restoration context.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⚡</div>
+                    <h3>Core Concept</h3>
+                    <p><strong>Spark controlled demolition</strong> with precise tile selection → <strong>Watch physics unfold</strong> in beautiful cascade patterns → <strong>Experience zen satisfaction</strong> as strategic interventions optimize the chain reaction flow for maximum efficiency and environmental benefit.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="story-image-section">
+            <div class="story-image"></div>
+            <div class="vignette-quote">
+                "In the sprawling industrial complexes of Neo-Geneva, where humanity's greatest challenge became its most beautiful solution - transforming the buried mistakes of centuries into the foundation of tomorrow."
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>📖 Lore & Story</h2>
+            <div class="overview">
+                <p><strong>The Year 2347 - The Great Reclamation Era</strong></p><br>
+                
+                <p>Humanity has inherited a planet layered with the compressed remnants of industrial civilization. Beneath sprawling cities like Neo-Geneva and New Singapore lie vast geological strata of "lithified landfill" - ancient waste deposits transformed by catalytic processes into valuable crystalline materials.</p><br>
+                
+                <p><strong>You are a Licensed Cascade Technician</strong>, operating humanity's most sophisticated material reclamation technology. The Collidotron processing chambers represent the pinnacle of 23rd-century physics engineering - precision machines capable of transforming environmental burdens into construction materials for humanity's expansion to the stars.</p><br>
+                
+                <p><strong>The Mission:</strong> Each crystalline slab contains compressed layers of plastic polymers, metallic composites, and organic compounds - the buried mistakes of previous centuries now serving as the raw materials for sustainable futures. Your expertise in cascade physics directly contributes to humanity's greatest environmental restoration project, turning the planet's industrial scars into the foundation of interstellar civilization.</p><br>
+                
+                <p><em>Master the ancient art of controlled demolition to heal a world and build the next chapter of human expansion.</em></p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>⚙️ Controls & Interface</h2>
+            <div class="controls-section">
+                <table class="controls-table">
+                    <thead>
+                        <tr>
+                            <th>Control</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="control-name">Mouse Button 1 (Primary)</td>
+                            <td>Initial tile spark to start cascade, or enter slow-motion mode for precise trajectory adjustment and ball redirection.</td>
+                        </tr>
+                        <tr>
+                            <td class="control-name">Mouse Button 2 (Secondary)</td>
+                            <td>Toggle 1.5x time acceleration for faster cascade observation, overriding any slow-motion effects.</td>
+                        </tr>
+                        <tr>
+                            <td class="control-name">Strategic Intervention</td>
+                            <td>Pause time, select any active ball, then click to redirect it along new trajectory for optimal cascade optimization.</td>
+                        </tr>
+                        <tr>
+                            <td class="control-name">Precision Machine Interface</td>
+                            <td>Clean 32×19 grid with titanium frame, minimal HUD design emphasizing the beautiful physics rather than complex menus.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="vignette-section">
+            <div class="vignette-image"></div>
+            <div class="vignette-quote">
+                "Watch as a single spark becomes a symphony of cascading energy, each collision a note in the beautiful music of physics unfolding."
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>🏗️ Game Layers</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <h4><span class="layer-number">1</span>Moment-to-Moment Gameplay</h4>
+                    <p>Strategic tile selection to initiate cascades, precision trajectory planning for optimal efficiency, and tactical slow-motion interventions to guide reaction orbs through complex crystalline lattices. Players experience immediate satisfaction from beautiful physics while building mastery of cascade optimization techniques.</p>
+                </div>
+                <div class="layer-card">
+                    <h4><span class="layer-number">2</span>Low Metagame - Loaf Processing</h4>
+                    <p>Each campaign processes one complete loaf of lithified material, sliced into 9 distinct slabs with varying sizes (16×9, 24×13, 32×18) and unique material properties. Progress through diverse cascade challenges with different quirks like magnetic fields, quantum instability, or volatile compounds, culminating in beautiful 3×3 gallery completion.</p>
+                </div>
+                <div class="layer-card">
+                    <h4><span class="layer-number">3</span>High Metagame - Processing Archive</h4>
+                    <p>Persistent archive of all processed loaves with procedurally generated names, complete cascade statistics, and seed-based replay capability. Discover increasingly anomalous materials with exotic physics behaviors as your expertise grows, building a personal catalog of industrial beauty and environmental restoration achievements.</p>
+                </div>
+                <div class="layer-card">
+                    <h4><span class="layer-number">4</span>Practical Game Flow</h4>
+                    <p>Quick session setup with immediate slab loading → Single-click cascade initiation → Meditative observation with optional strategic interventions → Efficiency analysis and pattern appreciation → Seamless archive integration with natural stopping points that respect player time and attention.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎮 Game Modes</h2>
+            <div class="three-cards">
+                <div class="card">
+                    <h3>⚗️ Standard Processing</h3>
+                    <p>Core campaign experience processing regular lithified slabs with efficiency tracking and cascade optimization. Perfect for both quick 5-minute sessions and longer strategic deep-dives into complex material configurations.</p>
+                </div>
+                <div class="card">
+                    <h3>🔬 Anomalous Materials</h3>
+                    <p>Rare slabs with exotic physics behaviors - quantum phase tiles, magnetic field distortions, and unstable compound reactions. Offers unique challenges for experienced players seeking novel cascade experiences.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Replay Analysis</h3>
+                    <p>Study previous cascades with full seed reproduction, experiment with alternative intervention strategies, and discover optimization opportunities in your processing archive. Perfect for mastery-focused players.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🔧 Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Physics-Based Chain Reactions</h4>
+                    <p>Authentic cascade physics with consistent velocity maintenance and realistic collision dynamics. Reaction orbs maintain fixed speeds while exhibiting natural bounce behaviors, creating predictable yet beautiful emergent patterns that reward strategic thinking and physics intuition.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h4>Strategic Intervention System</h4>
+                    <p>Unique slow-motion mechanics allowing precise trajectory adjustment of active cascade orbs. Players can pause time, select any moving ball, and redirect its path to optimize efficiency or access difficult areas - bridging strategic planning with zen observation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧱</div>
+                    <h4>Modular Material Properties</h4>
+                    <p>Different tile materials exhibit unique breaking behaviors and orb interactions. Steel tiles require multiple hits but produce penetrating balls, while compound tiles shatter easily but create standard orbs. Material variety creates strategic depth and visual diversity.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h4>Procedural Slab Generation</h4>
+                    <p>Kaleidoscopic and fractal patterns generated through sophisticated algorithms, ensuring every slab offers unique visual beauty and cascade challenges. Pockets of empty space create strategic routing opportunities while maintaining aesthetic coherence.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h4>Campaign Progression System</h4>
+                    <p>Structured progression through loaves containing 9 slabs each, with material quirks and size variations creating natural difficulty curves. Complete loaves are archived as 3×3 galleries, providing long-term collection goals and visual achievement records.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h4>Archive & Replay System</h4>
+                    <p>Seed-based cascade reproduction allows exact replay of any previous processing session. Study your techniques, share interesting configurations, and experiment with alternative approaches to previously completed slabs for continuous learning and mastery development.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="diagram-section">
+            <h3>🔄 Cascade Reaction Process</h3>
+            <div class="mermaid">
+                flowchart TD
+                    A[Initial Spark] --> B[Orb Release]
+                    B --> C[Physics Propagation]
+                    C --> D{Strategic Intervention?}
+                    D -->|Yes| E[Slow-Motion Targeting]
+                    D -->|No| F[Natural Cascade]
+                    E --> G[Trajectory Adjustment]
+                    G --> C
+                    F --> H[Tile Breaking]
+                    H --> I[New Orb Release]
+                    I --> C
+                    C --> J{All Tiles Broken?}
+                    J -->|No| C
+                    J -->|Yes| K[Material Collection]
+                    K --> L[Efficiency Analysis]
+                    L --> M[Archive Storage]
+            </div>
+        </div>
+
+        <div class="feature-image-section">
+            <div class="feature-image"></div>
+            <div class="vignette-quote">
+                "Master the art of temporal intervention - where split-second decisions in slow motion create cascading consequences in real time."
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>🛠️ Technical Excellence</h2>
+            <div class="card">
+                <p><strong>High-Performance Physics:</strong> Optimized to support up to 600 simultaneous reaction orbs with consistent collision detection and realistic bounce dynamics, ensuring smooth cascade experiences even in complex scenarios.</p><br>
+                
+                <p><strong>Efficient Visual Design:</strong> Elegant sprite-based graphics with color tinting systems for material variety, complemented by tasteful particle effects for tile breaking and orb trails. Minimal yet impactful visual feedback that emphasizes the beauty of physics over flashy distractions.</p><br>
+                
+                <p><strong>Modular Content System:</strong> Systematic asset reuse through procedural generation and color variation, allowing infinite visual variety from efficient development resources while maintaining consistent aesthetic quality and performance standards.</p>
+            </div>
+        </section>
+
+        <div class="boxart-section">
+            <div class="boxart-image"></div>
+            <div class="boxart-content">
+                <div class="description">
+                    <h3>Collidotron</h3>
+                    <p><strong>Transform chaos into order through the beautiful science of controlled demolition.</strong></p><br>
+                    
+                    <p>In the precision laboratories of the 23rd century, you are the master operator of humanity's most advanced material processing technology. Each crystalline slab holds the compressed history of human civilization - plastics, metals, and organics transformed through catalytic lithification into valuable building blocks for the future.</p><br>
+                    
+                    <p>Experience the zen of physics mastery as single sparks become cascading symphonies of energy. Guide reaction orbs through kaleidoscopic lattices with strategic precision, optimizing efficiency while witnessing the mesmerizing beauty of scientific progress.</p><br>
+                    
+                    <p><em>Environmental restoration meets meditative gameplay in this unique physics-based experience that celebrates both human ingenuity and the elegant simplicity of natural law.</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+
+    <script>
+        // Add some interactive hover effects
+        document.querySelectorAll('.card, .feature-card, .layer-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

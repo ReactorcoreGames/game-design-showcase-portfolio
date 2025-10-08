@@ -1,0 +1,22 @@
+Here are the five detailed image generation prompts for Astro Industry Freelancer:
+
+Title Image: (16:9)
+Wide-angle establishing shot of a massive industrial spaceport on an alien planet. Foreground shows towering mining excavators and construction mechs working on terraformed landscape, mid-ground features modular space stations and orbital platforms connected by transport tubes, background reveals star-filled cosmos with nebulae. Heavy machinery creates dramatic silhouettes against cosmic backdrop, with sparks and particle effects from active construction work. Digital concept art style, technical blueprint aesthetics, industrial sci-fi design, clean geometric forms, volumetric lighting effects, matte painting technique. Deep space blue backgrounds with bright cyan-orange industrial accent lighting and metallic silver details.
+
+Vignette Image: (16:9)  
+Low-angle dramatic shot focusing on massive terrain-shaping vehicle. Giant articulated excavator with multiple drill arms reshapes rocky alien mountainside, creating terraced mining platforms. Vehicle features modular design with glowing power cores and articulated limbs. Scattered resource deposits glow beneath surface, debris and dust clouds swirl around active dig site. Secondary smaller mining drones work in coordinated formation around main vehicle. Digital concept art style, technical blueprint aesthetics, industrial sci-fi design, clean geometric forms, volumetric lighting effects, matte painting technique. Deep space blue backgrounds with bright cyan-orange industrial accent lighting and metallic silver details.
+
+Feature Image: (16:9)
+Bird's-eye isometric view of complex procedural network visualization. Central hub connects to multiple branching pathways leading to diverse planetary environments. Each node shows different engineering scenarios: underwater facilities, orbital construction, asteroid mining, planetary terraforming. Glowing data streams flow between connections, creating dynamic web of opportunities. Holographic interface elements float above the network showing job parameters and resource flows. Digital concept art style, technical blueprint aesthetics, industrial sci-fi design, clean geometric forms, volumetric lighting effects, matte painting technique. Deep space blue backgrounds with bright cyan-orange industrial accent lighting and metallic silver details.
+
+Box Art Cover: (2:3)
+Three-quarter view heroic portrait of modular robot engineer. Humanoid chassis with interchangeable tool arms, one holding precision welder, other gripping heavy construction implement. Sleek helmet with glowing cyan visor reflects cosmic workshop environment. Background shows partially constructed space habitat with geometric framework. Tool belt contains various specialized equipment modules. Confident pose conveys competence and reliability. Digital concept art style, technical blueprint aesthetics, industrial sci-fi design, clean geometric forms, volumetric lighting effects, matte painting technique. Deep space blue backgrounds with bright cyan-orange industrial accent lighting and metallic silver details.
+
+Story Overworld Image: (16:9)
+Expansive wide shot of galactic civilization spanning multiple star systems. Foreground shows advanced mega-cities on terraformed worlds connected by orbital elevators. Mid-ground features massive space stations, ring habitats, and industrial complexes floating in star fields. Background reveals interconnected network of FTL lanes between distant galaxies with peaceful traffic flow. Advanced infrastructure demonstrates post-scarcity society with clean energy and sustainable design principles throughout. Digital concept art style, technical blueprint aesthetics, industrial sci-fi design, clean geometric forms, volumetric lighting effects, matte painting technique. Deep space blue backgrounds with bright cyan-orange industrial accent lighting and metallic silver details.
+
+Unified Art Style (for all five, already included in prompts):
+Digital concept art style, technical blueprint aesthetics, industrial sci-fi design, clean geometric forms, volumetric lighting effects, matte painting technique
+
+Unified Color Scheme (for all five, already included in prompts):
+Deep space blue backgrounds with bright cyan-orange industrial accent lighting and metallic silver details

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Space Robo Derby: Cellular Automata Celebrations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Audiowide&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        /* 
+        Image Requirements:
+        - zerobotderby_1_title.jpg - Space arena with floating robot ships and asteroid debris
+        - zerobotderby_2_vignette.jpg - Ship combat scene with spectacular particle explosions
+        - zerobotderby_3_feature.jpg - Close-up of cellular automata destruction with colorful pixels
+        - zerobotderby_4_boxart.jpg - Retro-futuristic game cover with celebratory fireworks theme
+        - zerobotderby_5_story.jpg - Wide space station view showing the community settlement where these celebrations take place
+        */
+
+        :root {
+            --background-color: #0a0a0f;
+            --container-bg: #1a1a2e;
+            --container-bg-light: #2a2a3e;
+            --border-color: #7c4dff;
+            --accent-color: #c778dd;
+            --text-color: #e8e8f0;
+            --text-secondary: #b8b8c8;
+            --gradient-start: #7c4dff;
+            --gradient-end: #c778dd;
+            --glow-color: #7c4dff;
+            --shadow-color: rgba(124, 77, 255, 0.3);
+            --card-shadow: rgba(124, 77, 255, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #1a0a1a 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(124, 77, 255, 0.2);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .patreon-link a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .patreon-link:hover {
+            background: rgba(124, 77, 255, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .hero-section {
+            position: relative;
+            height: 700px;
+            background: url('images/zerobotderby_1_title.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.3) 0%, rgba(26, 10, 26, 0.4) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .game-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4.2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+            text-shadow: 
+                0 0 10px var(--glow-color),
+                0 0 20px var(--glow-color),
+                0 0 30px var(--glow-color),
+                2px 2px 4px rgba(0,0,0,0.8);
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        .game-subtitle {
+            font-family: 'Audiowide', sans-serif;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 
+                0 0 8px var(--accent-color),
+                1px 1px 2px rgba(0,0,0,0.8);
+            animation: subtitleGlow 2.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 30px var(--glow-color), 2px 2px 4px rgba(0,0,0,0.8); }
+            100% { text-shadow: 0 0 15px var(--glow-color), 0 0 25px var(--glow-color), 0 0 35px var(--glow-color), 2px 2px 4px rgba(0,0,0,0.8); }
+        }
+
+        @keyframes subtitleGlow {
+            0% { text-shadow: 0 0 8px var(--accent-color), 1px 1px 2px rgba(0,0,0,0.8); }
+            100% { text-shadow: 0 0 12px var(--accent-color), 1px 1px 2px rgba(0,0,0,0.8); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin: 60px 0;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.7rem;
+            color: var(--gradient-start);
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 
+                0 0 10px var(--glow-color),
+                0 0 20px var(--glow-color);
+            animation: headerGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes headerGlow {
+            0% { text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color); }
+            100% { text-shadow: 0 0 15px var(--glow-color), 0 0 25px var(--glow-color); }
+        }
+
+        .overview {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--container-bg-light) 100%);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--card-shadow);
+            text-align: center;
+        }
+
+        .overview p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .core-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--container-bg-light) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--card-shadow);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            font-family: 'Audiowide', sans-serif;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px var(--accent-color);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .controls-section {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--container-bg-light) 100%);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--card-shadow);
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(124, 77, 255, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .control-icon {
+            background: var(--gradient-start);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+
+        .image-section {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px var(--shadow-color);
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 650px;
+            object-fit: cover;
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 30px;
+        }
+
+        .image-quote {
+            background: rgba(26, 26, 46, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+            max-width: 500px;
+        }
+
+        .image-quote p {
+            font-style: italic;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .game-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .layer-card {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--container-bg-light) 100%);
+            padding: 35px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--card-shadow);
+            position: relative;
+        }
+
+        .layer-number {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .layer-card h3 {
+            font-family: 'Audiowide', sans-serif;
+            color: var(--accent-color);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            margin-left: 30px;
+            text-shadow: 0 0 8px var(--accent-color);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--container-bg-light) 100%);
+            padding: 35px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px var(--accent-color);
+        }
+
+        .feature-card h3 {
+            font-family: 'Audiowide', sans-serif;
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px var(--accent-color);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .mermaid-container {
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            margin: 40px 0;
+            overflow-x: auto;
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 40px;
+            align-items: center;
+            background: linear-gradient(135deg, var(--container-bg) 0%, var(--container-bg-light) 100%);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--card-shadow);
+        }
+
+        .boxart-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px var(--shadow-color);
+        }
+
+        .boxart-description h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--accent-color);
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .boxart-description p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: var(--container-bg);
+            margin-top: 80px;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .footer p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-shadow: 0 0 8px var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .game-title {
+                font-size: 2.5rem;
+            }
+            
+            .game-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .core-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="patreon-link">
+        <a href="https://www.patreon.com/ReactorcoreGames">Reactorcore's Personal Game Design Project</a>
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="game-title">Zero Space Robo Derby</h1>
+            <h2 class="game-subtitle">Cellular Automata Celebrations</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <div class="overview">
+                <p><strong>Zero Space Robo Derby</strong> transforms competitive combat into a spectacular celebration of physics and community. Players pilot customized robot ships in zero-gravity arenas, wielding charging blaster weapons that create stunning cellular automata fireworks displays when ships are destroyed.</p><br>
+                
+                <p>This isn't about domination—it's about creating beautiful moments of destruction together. Each victory culminates in a community-wide celebration featuring massive procedural fireworks shows that serve as both entertainment and commemoration of the fun times shared.</p><br>
+                
+                <p>With elegant mouse-only controls and physics-driven gameplay, every match becomes a unique spectacle where skill, timing, and a little chaos combine to create unforgettable visual experiences.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="core-cards">
+                <div class="card">
+                    <h3>🎯 Target Audience</h3>
+                    <p>Casual arcade enthusiasts who appreciate elegant controls, physics simulation fans fascinated by emergent visual systems, and players seeking competitive experiences with a celebratory twist rather than toxic rivalry.</p>
+                </div>
+                <div class="card">
+                    <h3>🎪 Game's Purpose</h3>
+                    <p>Fulfills human needs for <strong>play and joy</strong> through spectacular destruction, <strong>mastery and competence</strong> via skill-based physics controls, and <strong>community connection</strong> through shared celebratory experiences that emphasize fun over domination.</p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Core Concept</h3>
+                    <p>Simple mouse controls create complex emergent gameplay through physics interactions, while cellular automata destruction transforms competitive defeats into beautiful visual celebrations, reframing "losing" as contributing to collective spectacle.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="image-section">
+            <img src="images/zerobotderby_5_story.jpg" alt="Orbital space station community with docking bays and celebration arenas">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    <p>"In the vast frontier colonies, these robot derbies became more than entertainment—they became the heart of community life, bringing distant neighbors together in shared celebration of skill and spectacle."</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">🌌 Lore & Story</h2>
+            <div class="card">
+                <h3>🏔️ The Frontier Colonies</h3>
+                <p><strong>Setting:</strong> Deep space frontier settlements scattered across asteroid fields and orbital stations, where hardy colonists have built thriving communities among the stars. These remote outposts, connected by dangerous travel routes, developed unique traditions to maintain social bonds across vast distances.</p><br>
+                
+                <p><strong>The Birth of Robot Derby:</strong> What began as practical training exercises for asteroid mining equipment evolved into beloved community celebrations. Early colonists discovered that their industrial robots could be modified for recreational combat, transforming necessary equipment maintenance into spectacular entertainment that brought entire settlements together.</p><br>
+                
+                <p><strong>Cultural Significance:</strong> In isolated frontier communities where survival depends on cooperation, the Robot Derby tradition serves a crucial social function. These events aren't about individual glory—they're celebrations of community spirit, shared craftsmanship, and the joy of creating something beautiful together in the harsh emptiness of space.</p><br>
+                
+                <p><strong>Present Day Goal:</strong> Today's Robot Derby events continue this proud tradition, where colonists from across the sector gather to celebrate their ingenuity, strengthen community bonds, and create spectacular displays that light up the darkness between worlds. Each tournament serves as both entertainment and reaffirmation of the values that keep these frontier communities thriving: cooperation, creativity, and shared celebration.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">🎮 Controls & Interface</h2>
+            <div class="controls-section">
+                <div class="controls-grid">
+                    <div>
+                        <div class="control-item">
+                            <div class="control-icon">🖱️</div>
+                            <div>
+                                <strong>Mouse Aim:</strong> Rotate ship to face cursor direction
+                            </div>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-icon">🔥</div>
+                            <div>
+                                <strong>Left Click:</strong> Hold to charge weapon, release to fire
+                            </div>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-icon">🚀</div>
+                            <div>
+                                <strong>Right Click:</strong> Apply forward thrust
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>The beauty of Zero Space Robo Derby lies in its elegant simplicity. <strong>One-handed gameplay</strong> that anyone can learn in seconds, yet the physics-based movement and charging weapon mechanics create surprising depth.</p><br>
+                        
+                        <p>Players control momentum-driven ships that drift realistically through space, requiring prediction and planning rather than twitch reflexes. The charging weapon system creates natural tension between safety and power, while automatic speed limiting and air resistance prevent overwhelming complexity.</p><br>
+                        
+                        <p><em>"Easy to learn, hard to master"</em> - a dandy game of exciting physics-driven fun.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="image-section">
+            <img src="images/zerobotderby_2_vignette.jpg" alt="Ships engaged in spectacular combat with particle effects">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    <p>"Every destruction becomes a work of art—watching your ship explode in a cascade of colorful cellular automata pixels feels more like setting off fireworks than suffering defeat."</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">🏗️ Game Layers</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <div class="layer-number">1</div>
+                    <h3>Moment-to-Moment Gameplay</h3>
+                    <p>Players maneuver physics-driven ships through asteroid fields, timing weapon charges while managing momentum and positioning. Combat requires prediction, spatial awareness, and risk assessment as charged shots can deal 5-60 damage depending on timing. Asteroid cover adds tactical depth while powerups introduce dynamic strategy shifts every 15 seconds.</p>
+                </div>
+                <div class="layer-card">
+                    <div class="layer-number">2</div>
+                    <h3>Low Metagame - Tournament Celebration</h3>
+                    <p>Each session consists of 3, 6, or 9 stage tournaments where points accumulate across multiple arena battles. Victory isn't just about winning—it's about earning the honor of triggering the spectacular community fireworks display. Tied scores result in shared victory celebrations, emphasizing the communal joy over individual dominance.</p>
+                </div>
+                <div class="layer-card">
+                    <div class="layer-number">3</div>
+                    <h3>High Metagame - Celebration Archive</h3>
+                    <p>Players build a personal archive of unique fireworks displays, each generated with reproducible seeds. This collection becomes a visual diary of tournaments won and spectacular moments shared. Each entry preserves the context: who won, final scores, and the specific cellular automata pattern that commemorated the event—creating lasting memories of community fun.</p>
+                </div>
+                <div class="layer-card">
+                    <div class="layer-number">4</div>
+                    <h3>Practical Game Flow</h3>
+                    <p>Sessions begin with tournament selection, flow through quick-paced arena battles with escalating powerup chaos, and climax in spectacular victory celebrations. Whether playing for 10 minutes or an hour, each session concludes with satisfying visual spectacle that makes every participant feel they contributed to something beautiful, regardless of competitive outcome.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">🎯 Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌌</div>
+                    <h3>Physics-Based Ship Movement</h3>
+                    <p>Realistic momentum and drift mechanics create natural gameplay depth. Ships accelerate and decelerate according to physics laws, requiring players to predict and plan rather than react instantly. Automatic speed limiting and air resistance prevent overwhelming complexity while maintaining authentic zero-gravity feel that makes every maneuver meaningful.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Risk/Reward Charging System</h3>
+                    <p>Weapons charge from 1-5 seconds, delivering 5-60 damage respectively. This creates constant tactical decisions: fire quickly for guaranteed hits or risk longer exposure for devastating damage. The quarter-second firing delay adds anticipation and requires target prediction, transforming simple point-and-click into strategic timing challenges.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔮</div>
+                    <h3>Stackable Powerup System</h3>
+                    <p>Six distinct weapon modifications (phase, scatter, homing, warp, triple, hypervelocity) appear every 15 seconds and stack for 60-second durations. This creates escalating tactical possibilities and ensures no two battles feel identical. Players must adapt strategies as their arsenal transforms, keeping gameplay fresh and unpredictable.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Cellular Automata Spectacle</h3>
+                    <p>Ship destruction spawns physics-driven particle systems that behave as independent cellular automata. Each ship contains unique "firework cores" that explode into spectacular displays lasting 1-5 seconds. These aren't just visual effects—they're procedural art pieces that make every destruction feel celebratory rather than punitive.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🪨</div>
+                    <h3>Dynamic Asteroid Cover</h3>
+                    <p>Floating asteroids provide pushable cover that splits multiple times when hit, creating evolving tactical landscapes. These environmental elements add strategic depth without overwhelming complexity, serving as both protection and physics puzzles that players can manipulate to gain advantages or create escape routes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎆</div>
+                    <h3>Seed-Based Victory Celebrations</h3>
+                    <p>Tournament victories trigger massive community fireworks displays generated from reproducible seeds. Each celebration is unique but repeatable, allowing players to revisit and share spectacular moments. The scale increases with tournament length (+30% per additional stage), ensuring greater effort yields proportionally grander celebrations.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="mermaid-container">
+            <div class="mermaid">
+                graph TD
+                    A[Powerup Appears Every 15s] --> B{Player Collision?}
+                    B -->|Yes| C[Add Powerup to Stack]
+                    B -->|No| D[Continue Bouncing]
+                    C --> E[60 Second Timer Starts]
+                    E --> F{Fire Weapon?}
+                    F -->|Yes| G[Apply All Active Effects]
+                    G --> H[Phase: Pass Through Objects]
+                    G --> I[Scatter: 6x 50% Shrapnel]
+                    G --> J[Homing: 20° Curve Tracking]
+                    G --> K[Warp: Screen Edge Teleport]
+                    G --> L[Triple: 3x 75% Power]
+                    G --> M[Hypervelocity: 2x Damage + Speed]
+                    H --> N[Calculate Final Impact]
+                    I --> N
+                    J --> N
+                    K --> N
+                    L --> N
+                    M --> N
+                    E --> O{Timer Expired?}
+                    O -->|Yes| P[Remove Powerup]
+                    O -->|No| F
+                    
+                    style A fill:#7c4dff,stroke:#c778dd,color:#fff
+                    style G fill:#c778dd,stroke:#7c4dff,color:#fff
+                    style N fill:#7c4dff,stroke:#c778dd,color:#fff
+            </div>
+        </div>
+
+        <div class="image-section">
+            <img src="images/zerobotderby_3_feature.jpg" alt="Close-up of cellular automata destruction effects">
+            <div class="image-overlay">
+                <div class="image-quote">
+                    <p>"The cellular automata destruction system transforms every defeat into visual poetry—each ship explosion becomes a unique, physics-driven art piece that celebrates the moment rather than punishing failure."</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">🎮 Game Modes</h2>
+            <div class="card">
+                <h3>🏆 Community Tournament Mode</h3>
+                <p><strong>Core Experience:</strong> The single game mode focuses entirely on community celebration tournaments available in three lengths: 3 stages (quick fun), 6 stages (standard experience), or 9 stages (epic celebration).</p><br>
+                
+                <p><strong>Tournament Structure:</strong> Each stage consists of a free-for-all arena battle where points accumulate based on elimination performance. The mode emphasizes friendly competition where even losing contributes to the spectacle through beautiful destruction displays.</p><br>
+                
+                <p><strong>Victory Celebrations:</strong> Winners earn the honor of triggering community fireworks displays, with longer tournaments resulting in 30% larger celebrations per additional stage. Tied scores result in shared honors, reinforcing the community-first philosophy.</p><br>
+                
+                <p><strong>Lore Context:</strong> Framed as hobbyist community events where space colonists gather for recreational robot combat. The focus on celebration over domination reflects the game's core philosophy that competitive play should strengthen rather than divide communities.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">🎨 Box Art & Final Impression</h2>
+            <div class="boxart-section">
+                <img src="images/zerobotderby_4_boxart.jpg" alt="Zero Space Robo Derby box art" class="boxart-image">
+                <div class="boxart-description">
+                    <h3>Zero Space Robo Derby</h3>
+                    <p><strong>Experience the future of competitive celebration.</strong> Pilot custom robot ships through zero-gravity arenas where every battle becomes a community art show. Master physics-based combat while creating spectacular displays of cellular automata fireworks.</p><br>
+                    
+                    <p><strong>One mouse. Infinite possibilities.</strong> Elegant controls hide surprising depth as momentum, timing, and tactical positioning determine victory. Stackable powerups ensure no two battles feel the same.</p><br>
+                    
+                    <p><strong>Win together. Celebrate together.</strong> Transform competitive gaming into communal joy where even defeat contributes to beautiful shared experiences. Build your archive of unique victory celebrations and relive the most spectacular moments.</p><br>
+                    
+                    <p><em>For Windows PC • Arcade Combat • Physics Simulation • Community Celebration</em></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#7c4dff',
+                primaryTextColor: '#e8e8f0',
+                primaryBorderColor: '#c778dd',
+                lineColor: '#7c4dff',
+                sectionBkgColor: '#1a1a2e',
+                altSectionBkgColor: '#2a2a3e',
+                gridColor: '#7c4dff',
+                secondaryColor: '#c778dd',
+                tertiaryColor: '#2a2a3e'
+            }
+        });
+    </script>
+</body>
+</html>

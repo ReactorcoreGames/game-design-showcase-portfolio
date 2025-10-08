@@ -1,0 +1,29 @@
+Here are the five detailed image generation prompts for Kick Blade:
+
+Title Image: (16:9)
+Wide-angle cinematic shot of a young woman in white-pink cutecore outfit with pastel colors standing confidently in foreground, her utility knife glinting. Behind her sprawls a towering industrial cityscape of glass corporate towers connected by elevated trains and cargo elevators. Dramatic lighting casts long shadows while corporate logos glow ominously on building facades. Her sweet appearance contrasts sharply with the harsh urban environment around her. Dynamic urban photography, cyberpunk aesthetics, high contrast lighting, detailed environmental storytelling. Industrial gray-silver color scheme with hot pink and white accents, corporate blue highlights.
+A young woman with fair skin and light pink hair, wearing a white pleated skirt, pink and white striped long-sleeve top, a pink corset, white thigh-high stockings with pink bows, white fluffy leg warmers, and white high-top sneakers. Holding a pink utility knife. 
+
+
+Vignette Image: (16:9)
+Close-up action shot from low angle showing the cutecore heroine mid-kick, her white-pink outfit flowing with motion blur as her foot connects with a suited corporate executive's face. The CEO flies backward with exaggerated physics, briefcase and papers scattering. Corporate office environment visible in background with floor-to-ceiling windows. Heroine's expression shows determined satisfaction while CEO looks shocked and defeated. Dynamic urban photography,  motion blur effects, impact freeze-frame, detailed facial expressions, kinetic energy. Industrial gray-silver color scheme with hot pink and white accents, corporate blue highlights.
+A young woman with fair skin and light pink hair, wearing a white pleated skirt, pink and white striped long-sleeve top, a pink corset, white thigh-high stockings with pink bows, white fluffy leg warmers, and white high-top sneakers. Holding a pink utility knife. 
+
+
+Feature Image: (16:9)
+Medium shot captured from inside a corporate penthouse showing a suited CEO flying through the air out of a massive broken window, glass shards sparkling. The cutecore heroine stands in the background near the impact point, small but victorious, surrounded by scattered corporate documents and overturned luxury furniture. Cityscape visible through broken window. Dramatic lighting emphasizes the physics of the CEO's trajectory and the destruction. Dynamic urban photography, Cinematic wide-angle lens, dramatic environmental storytelling, shattered glass particle effects, physics-based action, architectural detail. Industrial gray-silver color scheme with hot pink and white accents, corporate blue highlights.
+A young woman with fair skin and light pink hair, wearing a white pleated skirt, pink and white striped long-sleeve top, a pink corset, white thigh-high stockings with pink bows, white fluffy leg warmers, and white high-top sneakers. Holding a pink utility knife. 
+
+
+Box Art Cover: (2:3)
+Portrait composition showing the cutecore heroine looking confidently to the side with a subtle smug expression, her white-pink outfit pristine and stylish. She holds her utility knife casually while standing against an imposing industrial-corporate cityscape backdrop. Corporate towers loom behind her with harsh angular architecture and cold lighting. Her soft, cute aesthetic creates striking visual contrast with the oppressive urban environment. Dynamic urban photography, Professional character portrait, detailed costume design, atmospheric background, confident pose, high-fashion photography style. Industrial gray-silver color scheme with hot pink and white accents, corporate blue highlights.
+A young woman with fair skin and light pink hair, wearing a white pleated skirt, pink and white striped long-sleeve top, a pink corset, white thigh-high stockings with pink bows, white fluffy leg warmers, and white high-top sneakers. Holding a pink utility knife. 
+
+
+Story Overworld Image: (16:9)
+Extreme wide shot from elevated perspective showing the cutecore heroine as a small silhouette standing on a rooftop edge overlooking a vast industrial cityscape at twilight. Ethereal spotlight beam shines down on her from above, creating dramatic rim lighting. Corporate towers stretch endlessly below with trains and elevators moving between them like glowing arteries. The scale emphasizes her role as lone vigilante against massive corporate power. Dynamic urban photography, Atmospheric landscape photography, dramatic environmental scale, silhouette composition, ethereal lighting effects, urban sprawl detail. Industrial gray-silver color scheme with hot pink and white accents, corporate blue highlights.
+A young woman with fair skin and light pink hair, wearing a white pleated skirt, pink and white striped long-sleeve top, a pink corset, white thigh-high stockings with pink bows, white fluffy leg warmers, and white high-top sneakers. Holding a pink utility knife. 
+
+
+Unified Art Style (for all five, already included in prompts): 
+Dynamic urban photography, cyberpunk aesthetics, high contrast lighting, detailed environmental storytelling. Industrial gray-silver color scheme with hot pink and white accents, corporate blue highlights.

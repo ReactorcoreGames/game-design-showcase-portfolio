@@ -1,0 +1,42 @@
+I need this entire document to be restyled to the following style:
+- rectangular grey concrete brutalism - everything is made from grey concrete except for the ragdoll, whom is made out of matte medium grey plastic
+- a greyscale segmented ragdoll without a face. Ragdoll is either standing, sitting or falling, not suspended or tied down to anything.
+- minimal traces of faint blood stains
+- a bright grey fog clouding the scene
+
+Here are the four detailed image generation prompts for Cathartic Dismount:
+
+Title Image: (16:9)
+Wide-angle cinematic shot from low angle, silhouetted primitive geometric ragdoll figure falling through industrial machinery backdrop. Simple capsule-shaped human form with basic limb joints suspended mid-air between massive geometric crusher plates, conveyor belts, and angular mechanical hazards. Atmospheric lighting creates dramatic shadows through steam and particle effects. Minimalist geometric environment with clean primitive shapes. Industrial brutalist photography, harsh dramatic lighting, geometric minimalism, stark contrasts, mechanical precision, primitive shapes aesthetic. Deep charcoal blacks with electric crimson red highlights, bright red accent glows, stark white geometric outlines.
+
+Vignette Image: (16:9)
+Close-up dynamic action shot capturing moment of impact, geometric ragdoll colliding with angular surface at high velocity. Primitive cylindrical torso and basic limb shapes deforming against geometric obstacle, motion blur trails showing trajectory path. Particle debris of simple geometric fragments exploding outward from impact point. Clean minimalist environment with basic shapes and industrial elements framing the collision zone. Industrial brutalist photography, harsh dramatic lighting, geometric minimalism, stark contrasts, mechanical precision, primitive shapes aesthetic. Deep charcoal blacks with electric crimson red highlights, bright red accent glows, stark white geometric outlines.
+
+Feature Image: (16:9)
+Medium shot from slightly elevated angle showing translucent ghosted prediction trails overlaying solid geometry. Primary ragdoll figure in solid form with secondary transparent versions showing possible trajectory paths through geometric obstacle course. Simple primitive shapes creating pathway with basic cubes, cylinders, and angular ramps. Precognition interface elements as glowing geometric wireframe overlays suggesting future positions and impact points. Industrial brutalist photography, harsh dramatic lighting, geometric minimalism, stark contrasts, mechanical precision, primitive shapes aesthetic. Deep charcoal blacks with electric crimson red highlights, bright red accent glows, stark white geometric outlines.
+
+Box Art Cover: (2:3)
+Portrait orientation tight framing on primitive ragdoll figure in dynamic falling pose, geometric limbs positioned dramatically against industrial backdrop. Simple capsule head, cylindrical torso, basic limb shapes composed in heroic action stance. Background features towering geometric machinery, angular conveyor systems, and brutalist industrial architecture creating depth. Atmospheric lighting emphasizes the figure's primitive geometric construction while suggesting impending destruction. Industrial brutalist photography, harsh dramatic lighting, geometric minimalism, stark contrasts, mechanical precision, primitive shapes aesthetic. Deep charcoal blacks with electric crimson red highlights, bright red accent glows, stark white geometric outlines.
+
+Unified Art Style (for all four, already included in prompts):
+Industrial brutalist photography, harsh dramatic lighting, geometric minimalism, stark contrasts, mechanical precision, primitive shapes aesthetic. Deep charcoal blacks with electric crimson red highlights, bright red accent glows, stark white geometric outlines.
+
+---
+
+
+Title Image (16:9)
+Wide-angle cinematic shot from a low angle showing a segmented, faceless matte grey plastic ragdoll in a mid-fall pose through a backdrop of massive rectangular grey concrete crusher plates, conveyor belts, and angular mechanical hazards. The environment is purely grey concrete, extruded to primitive shapes—brutalist and monolithic. Atmospheric lighting is muted by bright grey fog, with surfaces shrouded in dull steam and subtle particulate haze. Minimal traces of faint blood stains mark some areas. The minimalist composition emphasizes geometric precision, mechanical rigor, and industrial brutalism, with only the ragdoll showing faint medium grey plastic amidst the concrete. Harsh, dramatic lighting cuts through fog, creating deep charcoal shadows and stark white outlines. No color accents except rare, faint crimson or red hazard lights, echoed carefully and never competing with the greyscale palette.
+
+Vignette Image (16:9)
+Close-up dynamic shot capturing a faceless matte grey plastic ragdoll (segmented, geometric) colliding with a sharply angled grey concrete surface at visible velocity. The torso and limbs are simple primitive shapes rendered in matte mid-grey, visibly deforming against a brutalist concrete structure. Motion is suggested by ghosted blurs and a faint trail of blood splatter, kept subtle. Particle debris consists of fine geometric concrete fragments, maintaining the industrial aesthetic. The background is an industrial grey slab and block arrangement—a minimalist brutalist zone shrouded in bright grey fog. Lighting remains harsh but filtered by fog, with dramatic shadow play and clean white edge outlines on objects and the ragdoll. Accents of deep black and minimal red/red hazard lights serve as rare contrast.
+
+Feature Image (16:9)
+Medium shot from a slightly elevated perspective showing the matte grey plastic ragdoll posed amidst a pathway marked by rectangular grey concrete obstacles—cubes, cylinders, and angular ramps. Transparent ghosted prediction trails overlay the scene, indicating projected movements, constructed as translucent greyscale silhouettes. Pre-collision ragdoll figure is solid, faceless, segmented and plastic. Trajectory overlays glow faintly bright grey through the fog, never adding external color. All environmental elements are plain concrete—primitive, cold, brutalist, and geometric. Sparse traces of faint blood stains may mark previous impacts. Lighting is stark and dramatic, softened by pervasive bright grey fog, generating deep black shadows and harsh white outline highlights. Wireframe interface elements, if present, appear as minimalist white over geometric forms.
+
+Box Art Cover (2:3)
+Portrait frame tightly focused on a faceless, segmented matte grey plastic ragdoll in a dynamic falling or sitting pose, limbs positioned expressively for tension. The figure stands out for its plastic materiality, divided into geometric segments. Background is a looming composition of angular grey concrete machinery, brutalist conveyor slabs, and vertical blocks, all constructed from monolithic industrial materials. The atmosphere is bathed in bright grey fog, with dramatic, harsh lighting carving deep outlines and sharp contrasts across ragdoll and environment alike. Faint blood stains mark the concrete and, subtly, the ragdoll. The overall palette is strictly greyscale concrete with only the ragdoll providing contrast via its plastic medium grey. Any interface overlays, hazard highlights, or motion markers are rendered in stark white, with very rare accents of muted crimson or red.
+
+
+Unified Art Style (applies to all prompts):
+All scenes present industrial brutalism: rectangular grey concrete construction, geometric minimalism, mechanical precision, and severe visual contrasts. The only exception is the ragdoll, distinctly rendered in segmented matte medium grey plastic without a face. Every environment is enveloped in bright grey fog, clean white geometric outlines, and subdued minimalist blood traces. There are no warm colors, no suspended figures, and no soft forms—only hard, utilitarian monolithic geometry, precise lighting, and detached mechanical atmospheres. Accents of deep black, rare electric crimson, and bright red are present only in essential hazard indicators or interface detail, always subordinate to the dominant concrete and fog palette.
+(see the generated image above)

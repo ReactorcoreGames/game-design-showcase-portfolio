@@ -1,0 +1,16 @@
+Here are the detailed image generation prompts for Starforge Legion:
+
+Title Image: (16:9)
+Wide angle cinematic shot of a massive industrial transformable mecha silhouetted against a swirling nebula backdrop. The mecha hovers in space with visible wear patterns, exposed mechanical joints, and battle-scarred armor plating. Glowing orange thruster exhausts and blue plasma weapon ports illuminate intricate technical details. Asteroid debris drifts nearby while distant stars pierce through purple-tinted gas clouds. Industrial sci-fi concept art, hard surface modeling, realistic weathering, technical blueprints aesthetic, worn metal textures. Deep void black with industrial orange highlights, steel gray armor plating, plasma cyan weapon glows, worn metallic surfaces.
+
+Vignette Image: (16:9)
+Medium shot tracking a sleek fighter-mecha hybrid banking through a dense asteroid field firing precision energy bursts. The craft transforms mid-flight from streamlined fighter to humanoid mecha configuration, mechanical joints extending with hydraulic precision. Orange muzzle flashes illuminate carved asteroid surfaces while debris cascades from impacts. Space dust and micro-particles create atmospheric trails behind the craft's movements. Industrial sci-fi concept art, hard surface modeling, realistic weathering, technical blueprints aesthetic, worn metal textures. Deep void black with industrial orange highlights, steel gray armor plating, plasma cyan weapon glows, worn metallic surfaces.
+
+Feature Image: (16:9)
+Close-up dramatic angle showcasing detailed transformation sequence mechanics as fighter wings retract into mecha shoulder armor. Visible hydraulic pistons, exposed cabling, and articulated joint systems demonstrate the industrial engineering complexity. Orange warning lights flash across technical readouts while blue energy courses through power conduits. The pilot's helmet reflects holographic targeting displays against a backdrop of distant planetary rings. Industrial sci-fi concept art, hard surface modeling, realistic weathering, technical blueprints aesthetic, worn metal textures. Deep void black with industrial orange highlights, steel gray armor plating, plasma cyan weapon glows, worn metallic surfaces.
+
+Box Art Cover: (2:3)
+Portrait orientation heroic shot of an elite pilot in full environmental suit seated within an industrial mecha cockpit. The pilot's visor reflects complex holographic displays and targeting systems while gloved hands grip weathered control interfaces. Exposed mechanical systems surround the command seat with visible wear patterns and maintenance panels. Orange status lights and blue readouts create dramatic lighting across the pilot's helmeted silhouette. Industrial sci-fi concept art, hard surface modeling, realistic weathering, technical blueprints aesthetic, worn metal textures. Deep void black with industrial orange highlights, steel gray armor plating, plasma cyan weapon glows, worn metallic surfaces.
+
+Unified Art Style (for all four, already included in prompts):
+Industrial sci-fi concept art, hard surface modeling, realistic weathering, technical blueprints aesthetic, worn metal textures. Deep void black with industrial orange highlights, steel gray armor plating, plasma cyan weapon glows, worn metallic surfaces.

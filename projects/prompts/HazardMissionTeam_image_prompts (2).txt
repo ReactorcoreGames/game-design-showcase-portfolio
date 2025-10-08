@@ -1,0 +1,22 @@
+Here are the five detailed image generation prompts for Hazard Mission Team:
+
+Title Image: (16:9)
+Wide-angle low shot of four humanoid android operators in sleek protective suits with glowing orange visors working in unison within a crystalline underground cavern. Each android displays unique specialized equipment - one operates a drilling device, another handles construction materials, a third coordinates with holographic displays, and the fourth manages rescue equipment. Dangerous geological formations and energy emanations surround them, but their confident poses show mastery over the hostile environment. Cinematic sci-fi photography, dramatic rim lighting, high-tech details, metallic surfaces, heroic composition, dynamic teamwork poses. Deep earth tones with bright yellow warning accents and glowing amber android visors.
+
+Vignette Image: (16:9)
+Medium shot from elevated perspective showing android crisis response team coordinating a large-scale rescue operation during a spectacular natural disaster. Multiple humanoid androids in advanced protective gear operate sophisticated vehicles - hover platforms, rescue pods, and construction mechs - while evacuating civilians from a collapsing settlement. Dramatic storm clouds and environmental chaos provide backdrop, but the androids move with precise coordination and confidence. Advanced technology beam effects and rescue equipment dominate the scene. Cinematic sci-fi photography, dramatic rim lighting, high-tech details, metallic surfaces, heroic composition, dynamic teamwork poses. Storm grays and earth browns with bright yellow emergency lighting and glowing technological interfaces.
+
+Feature Image: (16:9)
+Close-up angled shot of a holographic mission briefing interface floating in a high-tech command center. Multiple translucent displays show different crisis scenarios - underground mining operations, space station emergencies, planetary surface disasters - with tactical overlays and resource management data. Android silhouettes visible in background operating the advanced command systems. Glowing interface elements and data streams create depth and complexity, emphasizing the strategic planning aspect of crisis response operations. Cinematic sci-fi photography, dramatic rim lighting, high-tech details, metallic surfaces, heroic composition, dynamic teamwork poses. Dark command center atmosphere with bright yellow holographic displays and warm amber interface glow.
+
+Box Art Cover: (2:3)
+Heroic medium shot portrait composition of five diverse android specialists standing confidently in formation against a backdrop of a thriving futuristic city with multiple connected worlds visible in the sky. Each android features distinct specialized equipment and unique color-coded details while maintaining consistent sleek design. The lead android in center holds advanced technological device. Behind them, magnificent architecture and transportation networks showcase the civilization they protect. Inspiring and professional poses convey elite competence and technological mastery. Cinematic sci-fi photography, dramatic rim lighting, high-tech details, metallic surfaces, heroic composition, dynamic teamwork poses. Rich civilization blues and greens with bright yellow technology accents and warm amber android details.
+
+Story Overworld Image: (16:9)
+Extreme wide aerial shot showing a vast network of interconnected star systems and planets with glowing transit routes and communication links. Multiple worlds of different types - industrial, agricultural, research stations, mining operations - connected by flowing energy streams and transportation corridors. Spectacular galactic vista with nebulae and stellar phenomena providing cosmic backdrop. The image conveys the massive scale of galactic civilization and the critical infrastructure that the hazard teams protect and expand through their missions. Cinematic sci-fi photography, dramatic rim lighting, high-tech details, metallic surfaces, heroic composition, dynamic teamwork poses. Deep cosmic purples and blues with bright yellow connection networks and warm civilization glow.
+
+Unified Art Style (for all five, already included in prompts): 
+Cinematic sci-fi photography, dramatic rim lighting, high-tech details, metallic surfaces, heroic composition, dynamic teamwork poses. 
+
+Color Scheme (for all five, already included in prompts):
+Earth tones with bright yellow accents and warm amber technology glow.

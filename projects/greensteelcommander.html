@@ -1,0 +1,749 @@
+<!--
+Image Files Needed:
+greensteelcommander_1_title.jpg - Industrial military command center with green HUD displays and steel infrastructure
+greensteelcommander_2_vignette.jpg - Turn-based tactical battlefield with units positioned strategically across metallic terrain
+greensteelcommander_3_feature.jpg - Physics-based combat scene showing unit collisions, terrain deformation, and tactical positioning
+greensteelcommander_4_boxart.jpg - Military commander portrait with green steel aesthetic and tactical displays in background
+greensteelcommander_5_story.jpg - Aerial overview of terraformed industrial zones with green energy infrastructure across 2060 landscape
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Steel Commander: Turn-Based RTS Hybrid</title>
+    <style>
+        :root {
+            --background-color: #0a1a0a;
+            --container-bg: #1a2d1a;
+            --card-bg: #2d3d2d;
+            --border-color: #4a8a4a;
+            --accent-green: #5aa55a;
+            --steel-gray: #6a7a6a;
+            --text-color: #e0f0e0;
+            --text-secondary: #c0d0c0;
+            --title-glow: #3a8a3a;
+            --shadow-color: rgba(90, 165, 90, 0.3);
+            --steel-accent: #8a9a8a;
+            --dark-steel: #3a4a3a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--background-color) 0%, var(--dark-steel) 100%);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .patreon-link {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--card-bg);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.85em;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .patreon-link:hover {
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .title-section {
+            position: relative;
+            height: 500px;
+            background-image: url('images/greensteelcommander_1_title.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .title-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(10, 26, 10, 0.8) 0%, rgba(45, 61, 45, 0.6) 100%);
+        }
+
+        .title-content {
+            position: relative;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 
+                0 0 10px var(--title-glow),
+                0 0 20px var(--title-glow),
+                0 0 30px var(--title-glow),
+                2px 2px 4px rgba(0, 0, 0, 0.8);
+            animation: steelGlow 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            color: var(--steel-accent);
+            font-weight: 600;
+            text-shadow: 
+                0 0 5px var(--steel-gray),
+                1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes steelGlow {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 10px var(--title-glow),
+                    0 0 20px var(--title-glow),
+                    0 0 30px var(--title-glow),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 15px var(--accent-green),
+                    0 0 30px var(--accent-green),
+                    0 0 45px var(--accent-green),
+                    2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin: 60px 0;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--accent-green);
+            font-weight: 700;
+            text-shadow: 
+                0 0 8px var(--title-glow),
+                0 0 16px var(--title-glow);
+            animation: steelGlow 3s ease-in-out infinite;
+        }
+
+        .overview {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--shadow-color);
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .overview p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-green);
+        }
+
+        .info-card h3 {
+            color: var(--accent-green);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .controls-section {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--shadow-color);
+            margin: 40px 0;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .control-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .control-item strong {
+            color: var(--accent-green);
+        }
+
+        .vignette-section {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px var(--shadow-color);
+        }
+
+        .vignette-image {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/greensteelcommander_2_vignette.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .vignette-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(45, 61, 45, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-green);
+            max-width: 400px;
+            backdrop-filter: blur(5px);
+        }
+
+        .vignette-quote p {
+            font-style: italic;
+            font-size: 1.1em;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .story-section {
+            margin: 60px 0;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/greensteelcommander_5_story.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px var(--shadow-color);
+            margin-bottom: 40px;
+        }
+
+        .story-content {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .story-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .timeline-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-green);
+            position: relative;
+        }
+
+        .timeline-year {
+            color: var(--accent-green);
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .current-stakes {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--steel-accent);
+            margin-top: 30px;
+        }
+
+        .current-stakes h4 {
+            color: var(--steel-accent);
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .game-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .layer-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+            transition: all 0.3s ease;
+        }
+
+        .layer-card:hover {
+            border-color: var(--accent-green);
+            transform: translateX(10px);
+        }
+
+        .layer-card h3 {
+            color: var(--accent-green);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-green);
+            box-shadow: 0 15px 40px var(--shadow-color);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-green);
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .svg-diagram {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .feature-image-section {
+            position: relative;
+            margin: 60px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px var(--shadow-color);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/greensteelcommander_3_feature.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .feature-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(45, 61, 45, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-green);
+            max-width: 450px;
+            backdrop-filter: blur(5px);
+        }
+
+        .trivia-section {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--shadow-color);
+            margin: 40px 0;
+        }
+
+        .trivia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .trivia-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--steel-accent);
+        }
+
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 40px;
+            align-items: center;
+            background: var(--container-bg);
+            padding: 50px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 15px 40px var(--shadow-color);
+            margin: 60px 0;
+        }
+
+        .boxart-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-image: url('images/greensteelcommander_4_boxart.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .boxart-content {
+            padding: 20px;
+        }
+
+        .boxart-content h3 {
+            color: var(--accent-green);
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer {
+            background: var(--dark-steel);
+            padding: 40px;
+            text-align: center;
+            border-top: 3px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: var(--accent-green);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">
+        Reactorcore's Personal Game Design Project
+    </a>
+
+    <div class="title-section">
+        <div class="title-content">
+            <h1 class="main-title">Green Steel Commander</h1>
+            <p class="subtitle">Turn-Based RTS Hybrid</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="overview">
+            <p><strong>What if Command & Conquer met Advance Wars?</strong> Green Steel Commander delivers the tactical depth of turn-based strategy with the visual flair and intuitive controls of real-time strategy games.</p>
+            
+            <p>Experience the satisfaction of carefully planned military operations without the stress of real-time pressure. Command your forces with RTS-style controls—hotkeys, control groups, waypoints—but execute your strategies in thoughtful, turn-based phases.</p>
+            
+            <p>Set in a grounded near-future military setting, this hybrid approach combines the best of both worlds: <strong>strategic patience meets tactical precision</strong>.</p>
+        </section>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <h3>🎯 Target Audience</h3>
+                <p><strong>Strategy enthusiasts</strong> who appreciate tactical depth but prefer thoughtful planning over twitch reflexes. Perfect for players who love the complexity of RTS games but want time to consider their moves.</p>
+            </div>
+            <div class="info-card">
+                <h3>🎮 Game's Purpose</h3>
+                <p>Fulfills the fundamental human need for <strong>mastery and strategic thinking</strong> without the stress of time pressure. Provides deep tactical satisfaction through careful planning and execution.</p>
+            </div>
+            <div class="info-card">
+                <h3>⚡ Core Concept</h3>
+                <p>Turn-based tactical combat enhanced with <strong>RTS-quality unit physics</strong>, terrain interaction, and intuitive control systems. Strategy gamers get the depth they crave with the accessibility they deserve.</p>
+            </div>
+        </div>
+
+        <section class="story-section">
+            <h2>📖 Lore & Story</h2>
+            <div class="story-image"></div>
+            <div class="story-content">
+                <p>The year is <strong>2060</strong>. Climate engineering and industrial terraforming have reshaped Earth's landscape, creating vast zones of hybrid ecosystems where nature and technology coexist in carefully maintained balance.</p>
+                <br>
+                <div class="story-timeline">
+                    <div class="timeline-card">
+                        <div class="timeline-year">2035-2045</div>
+                        <p><strong>The Green Steel Accords:</strong> Major industrial nations signed comprehensive climate recovery treaties, mandating the development of "living infrastructure"—industrial complexes that actively restore environmental balance while maintaining production capacity.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2045-2055</div>
+                        <p><strong>Territorial Reformation:</strong> Massive terraforming projects created new industrial territories, but disagreements over resource allocation and territorial control led to the formation of competing military coalitions.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2055-2060</div>
+                        <p><strong>The Strategic Balance:</strong> Regional conflicts emerged as different factions developed incompatible visions for managing the terraformed zones. Diplomatic solutions failed, leading to the current era of "controlled warfare."</p>
+                    </div>
+                </div>
+                <div class="current-stakes">
+                    <h4>🎯 What's at Stake Now</h4>
+                    <p><strong>Control of the Terraform Zones:</strong> These carefully engineered regions represent humanity's future—territories where industrial progress and environmental restoration are perfectly balanced. Victory means securing sustainable prosperity for your people.<br><br>
+                    
+                    <strong>Technological Heritage:</strong> Each faction possesses unique industrial technologies and terraforming techniques. Military defeat doesn't just mean losing territory—it means losing irreplaceable knowledge that took decades to develop.<br><br>
+                    
+                    <strong>The Living Infrastructure:</strong> Unlike traditional warfare, these battles take place in environments that are actively being maintained by complex ecological systems. Excessive destruction could collapse entire regional ecosystems, making victory meaningless.</p>
+                </div>
+                <br>
+                <p>As a <strong>Green Steel Commander</strong>, you must balance tactical victory with environmental stewardship. Your decisions shape not just the outcome of battles, but the future of Earth's carefully reconstructed landscape.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>⌨️ Controls & Interface</h2>
+            <div class="controls-section">
+                <p>Green Steel Commander employs familiar RTS control schemes adapted for turn-based play. During your turn, command your forces with the precision tools you expect from modern strategy games:</p>
+                
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <strong>Unit Selection:</strong> Box select, type select, control groups (1-9), additive/reductive selection with Shift/Ctrl
+                    </div>
+                    <div class="control-item">
+                        <strong>Movement & Orders:</strong> Waypoint system, rally points, formations, behavior modes (move/shoot/function)
+                    </div>
+                    <div class="control-item">
+                        <strong>Base Management:</strong> Build queues, priority system, automated construction with manual overrides
+                    </div>
+                    <div class="control-item">
+                        <strong>Combat Control:</strong> Guard positions, scatter commands, coordinated unit actions
+                    </div>
+                </div>
+                
+                <p><br><strong>You control a military commander</strong> overseeing battlefield operations through advanced tactical displays. Each turn represents a strategic phase where you issue comprehensive orders to all your forces before execution.</p>
+            </div>
+        </section>
+
+        <div class="vignette-section">
+            <div class="vignette-image">
+                <div class="vignette-quote">
+                    <p>"Set waypoints, assign control groups, queue formations—then watch your perfect tactical symphony execute without the pressure of real-time chaos."</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>🏗️ Game Layers</h2>
+            <div class="game-layers">
+                <div class="layer-card">
+                    <h3>🎯 Moment-to-Moment Gameplay</h3>
+                    <p>Tactical combat unfolds on detailed battlefields where every unit has realistic physics properties—collision boxes, pushable objects, destructible terrain. Combat resolution uses Advance Wars-style guaranteed hit calculations, eliminating RNG frustration while maintaining tactical depth. Units respond to explosions with knockback, terrain can be modified strategically, and formations matter for both defense and mobility.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <h3>📈 Low Metagame</h3>
+                    <p>Progress through interconnected campaigns where your tactical victories shape the larger conflict. Each operation consists of multiple linked battles with persistent consequences—damaged infrastructure remains damaged, captured territories provide ongoing benefits, and your reputation affects enemy AI behavior. Campaign progression emphasizes base building, logistics planning, and long-term resource cultivation.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <h3>🌍 High Metagame</h3>
+                    <p>The persistent universe evolves based on your actions across multiple campaigns. A nemesis system tracks recurring allies and enemies, regional events respond to your past decisions, and key locations become revisitable bases of operation. Your command center serves as a permanent hub where you manage research, unit customization, and strategic resource allocation between missions.</p>
+                </div>
+                
+                <div class="layer-card">
+                    <h3>⚙️ Practical Game Flow</h3>
+                    <p>Sessions begin at your command center where you review intelligence, customize your forces, and select your next operation. Battles can be saved at any point and resumed later. Most engagements last 30-90 minutes, with natural conclusion points that respect your real-world schedule. Victory provides immediate tactical satisfaction plus long-term strategic progression.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎲 Game Modes</h2>
+            <div class="overview">
+                <h3>🏛️ Strategic Campaign Mode</h3>
+                <p><strong>The primary experience:</strong> Command persistent forces through interconnected military operations. Your decisions in each battle affect the larger war effort, with consequences carrying forward through multiple engagements. Base construction, resource management, and unit development occur between battles, allowing you to prepare for increasingly complex challenges.</p>
+                <br>
+                <h3>⚡ Quick Tactical Engagements</h3>
+                <p><strong>Focused combat scenarios:</strong> Jump directly into standalone battles with pre-configured forces. Perfect for shorter sessions or testing new tactical approaches. These scenarios range from small-scale skirmishes to large multi-objective operations, each designed to highlight different aspects of the game's combat systems.</p>
+            </div>
+        </section>
+
+        <div class="feature-image-section">
+            <div class="feature-image">
+                <div class="feature-quote">
+                    <p>"Heavy tanks push lighter units aside, explosions create knockback chains, destructible terrain opens new flanking routes—every collision matters in the physics playground of war."</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>⚙️ Game Features & Mechanics</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🔄 Turn-Based RTS Hybrid System</h3>
+                    <p>Revolutionary gameplay that combines RTS control schemes with turn-based strategy depth. Issue complex orders using familiar hotkeys, control groups, and waypoint systems, then watch your carefully planned strategies execute with precision. No more frantic clicking or micro-management pressure—just pure tactical satisfaction.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>⚡ Physics-Based Combat & Terrain</h3>
+                    <p>Every unit exists as a physical object with collision detection, momentum, and environmental interaction. Explosions create realistic knockback effects, heavy units can push lighter ones out of position, and terrain becomes dynamically destructible. Strategic positioning gains new depth when physics actually matter.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🎮 Advanced Unit Control Systems</h3>
+                    <p>Professional-grade RTS control systems adapted for strategic play. Formation commands keep your units organized, behavior modes (defensive, aggressive, cautious) determine AI responses, and sophisticated waypoint systems allow complex multi-stage maneuvers. Mass selection and group commands eliminate tedious micro-management.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🏭 Modular Base Building</h3>
+                    <p>Construct facilities using a physics-based placement system inspired by Worms-style construction. Buildings materialize gradually as constructor units work, gaining functionality and durability as construction progresses. Smart build queues and priority systems let you focus on strategy rather than construction micro-management.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🌟 Persistent Universe Integration</h3>
+                    <p>Your actions create lasting consequences across interconnected campaigns. Nemesis characters remember your tactics and adapt their strategies, captured territories provide ongoing benefits, and your reputation influences diplomatic options. The world feels alive and responsive to your command decisions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📊 Streamlined Resource Management</h3>
+                    <p>Focus on strategic decisions rather than resource micro-management. Automated systems handle routine logistics while you concentrate on force composition, tactical positioning, and operational planning. Choose between roster-based continuous production or mission-specific resource allocation depending on your preferred play style.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="overview">
+                <h3>🔄 Turn-Based RTS Hybrid Workflow</h3>
+                <p>The revolutionary game flow that brings RTS control precision to turn-based strategy depth:</p>
+                
+                <div class="svg-diagram">
+                    <svg width="300" height="150" viewBox="0 0 300 150">
+                        <rect x="10" y="20" width="80" height="40" fill="#2d3d2d" stroke="#5aa55a" stroke-width="2" rx="5"/>
+                        <text x="50" y="45" text-anchor="middle" fill="#e0f0e0" font-size="12">Plan Phase</text>
+                        
+                        <rect x="110" y="20" width="80" height="40" fill="#2d3d2d" stroke="#5aa55a" stroke-width="2" rx="5"/>
+                        <text x="150" y="45" text-anchor="middle" fill="#e0f0e0" font-size="12">Execute Phase</text>
+                        
+                        <rect x="210" y="20" width="80" height="40" fill="#2d3d2d" stroke="#5aa55a" stroke-width="2" rx="5"/>
+                        <text x="250" y="45" text-anchor="middle" fill="#e0f0e0" font-size="12">Result Phase</text>
+                        
+                        <path d="M90 40 L110 40" stroke="#5aa55a" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        <path d="M190 40 L210 40" stroke="#5aa55a" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        
+                        <text x="150" y="90" text-anchor="middle" fill="#c0d0c0" font-size="11">RTS Controls + Turn-Based Depth</text>
+                        
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#5aa55a"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+                
+                <p><strong>Plan Phase:</strong> Use familiar RTS controls—hotkeys, control groups, waypoint systems—to issue comprehensive orders to all your forces. Take your time to analyze the battlefield and craft the perfect tactical response.</p>
+                <br>
+                <p><strong>Execute Phase:</strong> Watch your strategies unfold as units carry out their orders with realistic physics interactions. No frantic clicking or micro-management—just the satisfaction of seeing your plans come to life.</p>
+                <br>
+                <p><strong>Result Phase:</strong> Analyze the outcomes, adapt to new battlefield conditions, and begin planning your next tactical masterpiece. Every decision has weight, every move has consequence.</p>
+            </div>
+        </section>
+
+
+        <div class="boxart-section">
+            <div class="boxart-image"></div>
+            <div class="boxart-content">
+                <h3>Green Steel Commander</h3>
+                <p><strong>Command with confidence. Strike with precision.</strong></p>
+                <br>
+                <p>The ultimate fusion of real-time strategy control and turn-based tactical depth. Lead your forces through dynamic campaigns where every decision matters and every victory shapes the future battlefield.</p>
+                <br>
+                <p>Experience military strategy as it was meant to be—<em>thoughtful, decisive, and devastatingly effective</em>.</p>
+                <br>
+                <p><strong>Turn-Based RTS Hybrid • Strategic Campaign Mode • Physics-Based Combat</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank">https://linktr.ee/reactorcore</a></p>
+        <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank">https://reactorcore.itch.io/</a></p>
+        <p>Reactorcore Games - 2025</p>
+    </footer>
+</body>
+</html>

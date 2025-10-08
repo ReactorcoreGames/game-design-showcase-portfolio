@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberdungeon Rider: Megacorp Agent Motocross - Game Design Showcase</title>
+    <style>
+        /* 
+        Required Images:
+        cyberdungeon_1_title.jpg - Corporate reactor facility with Zoichi android agent in bike-to-robot transformation, security drones in background
+        cyberdungeon_2_vignette.jpg - Zoichi destroying security cameras and drones while navigating physics-based terrain obstacles  
+        cyberdungeon_3_feature.jpg - Electromagnetic combat: bike turret mode vs robot pistol mode, with reactor core explosion in background
+        cyberdungeon_4_boxart.jpg - Zoichi escaping massive reactor explosion in bike mode, Cyberghost rival taunting in the flames
+        cyberdungeon_5_story.jpg - Zoomed out overworld view of the greater setting the game takes place in (16:9 aspect ratio, uncropped)
+        */
+
+        :root {
+            --background-color: #0a0a0a;
+            --container-bg: #1a1a1a;
+            --border-color: #c0c0c0;
+            --text-color: #e5e5e5;
+            --violet-primary: #8b5cf6;
+            --violet-dark: #6d28d9;
+            --purple-glow: #a855f7;
+            --silver-accent: #c0c0c0;
+            --shadow-color: rgba(168, 85, 247, 0.4);
+            --card-shadow: rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Reactive Corner Link */
+        .reactorcore-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 12px;
+            color: var(--silver-accent);
+            text-decoration: none;
+            opacity: 0.8;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        }
+
+        .reactorcore-link:hover {
+            opacity: 1;
+            color: var(--violet-primary);
+        }
+
+        /* Title Section with Background */
+        .title-section {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('images/cyberdungeon_1_title.jpg') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .main-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            text-shadow: 
+                0 0 10px var(--purple-glow),
+                0 0 20px var(--purple-glow),
+                0 0 40px var(--purple-glow);
+            animation: electric-pulse 2s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--silver-accent);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @keyframes electric-pulse {
+            0% { text-shadow: 0 0 10px var(--purple-glow), 0 0 20px var(--purple-glow), 0 0 40px var(--purple-glow); }
+            100% { text-shadow: 0 0 15px var(--purple-glow), 0 0 25px var(--purple-glow), 0 0 50px var(--purple-glow); }
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: var(--violet-primary);
+            margin-bottom: 1rem;
+            text-align: center;
+            text-shadow: 0 0 8px var(--purple-glow);
+            animation: subtle-glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes subtle-glow {
+            0% { text-shadow: 0 0 8px var(--purple-glow); }
+            100% { text-shadow: 0 0 12px var(--purple-glow); }
+        }
+
+        /* Game Overview */
+        .overview-content {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .overview-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Card Grid Systems */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .card-grid-three {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: var(--container-bg);
+            border: 2px solid var(--silver-accent);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px var(--card-shadow);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--violet-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px var(--shadow-color);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--violet-primary);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 6px var(--purple-glow);
+        }
+
+        .card-content {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Controls Section */
+        .controls-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
+        .controls-diagram {
+            background: var(--container-bg);
+            border: 2px solid var(--silver-accent);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .control-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 4px;
+        }
+
+        .control-key {
+            font-weight: bold;
+            color: var(--violet-primary);
+            background: var(--background-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            border: 1px solid var(--silver-accent);
+        }
+
+        /* Image Sections */
+        .image-section {
+            position: relative;
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+            border: 2px solid var(--silver-accent);
+        }
+
+        .vignette-image {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('images/cyberdungeon_2_vignette.jpg') center/cover;
+        }
+
+        .feature-image {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('images/cyberdungeon_3_feature.jpg') center/cover;
+        }
+
+        .story-image {
+            background: url('images/cyberdungeon_5_story.jpg') center/cover;
+        }
+
+        .image-quote {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--violet-primary);
+        }
+
+        .image-quote p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--silver-accent);
+            margin: 0;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .feature-card {
+            background: var(--container-bg);
+            border: 2px solid var(--silver-accent);
+            border-radius: 8px;
+            padding: 2.5rem;
+            border-left: 6px solid var(--violet-primary);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(139, 92, 246, 0.05);
+            border-color: var(--violet-primary);
+        }
+
+        /* Box Art Section */
+        .boxart-section {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            margin-top: 1.5rem;
+            align-items: center;
+        }
+
+        .boxart-image {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                        url('images/cyberdungeon_4_boxart.jpg') center/cover;
+            border-radius: 8px;
+            border: 2px solid var(--silver-accent);
+            box-shadow: 0 8px 32px var(--card-shadow);
+        }
+
+        .boxart-content {
+            padding: 2rem;
+        }
+
+        .boxart-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--violet-primary);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 8px var(--purple-glow);
+        }
+
+        .boxart-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--container-bg);
+            border-top: 2px solid var(--silver-accent);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+            color: var(--silver-accent);
+        }
+
+        .footer a {
+            color: var(--violet-primary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-shadow: 0 0 6px var(--purple-glow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-grid, .card-grid-three {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .boxart-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .boxart-image {
+                height: 400px;
+            }
+            
+            .section {
+                padding: 2rem 0;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-violet { color: var(--violet-primary); font-weight: 600; }
+        .text-silver { color: var(--silver-accent); }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+    <a href="https://www.patreon.com/ReactorcoreGames" class="reactorcore-link">Reactorcore's Personal Game Design Project</a>
+    
+    <!-- Title Section -->
+    <section class="title-section">
+        <h1 class="main-title">CYBERDUNGEON RIDER</h1>
+        <p class="subtitle">Megacorp Agent Motocross</p>
+    </section>
+
+    <!-- Game Overview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">⚡ Game Overview</h2>
+            <div class="overview-content">
+                <p>Play as <span class="text-violet">Zoichi, a transforming android agent</span> mastering realistic bike physics and electromagnetic robot combat to destroy enemy reactor installations. Experience addictive Elastomania-inspired physics combined with tactical transformation and <span class="text-violet">dual-mode combat systems</span> across procedural corporate facilities.</p>
+                
+                <p>Battle through security facilities, drones, and automated defenses while the rival <span class="text-violet">Cyberghost harasses you with psychological warfare</span>. Each mission culminates in spectacular <span class="text-violet">reactor destruction</span> followed by epic high-speed escape sequences as facilities explode behind you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Info Cards -->
+    <section class="section">
+        <div class="container">
+            <div class="card-grid-three">
+                <div class="card">
+                    <h3 class="card-title">🎯 Target Audience</h3>
+                    <div class="card-content">
+                        <strong>Action-physics hybrid fans</strong> who love Elastomania-style bike mastery combined with tactical 2D platforming combat. Players seeking motivational gameplay about overcoming obstacles and adversity through skill and determination.
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">🎪 Game's Purpose</h3>
+                    <div class="card-content">
+                        Fulfills the human needs for <strong>overcoming adversity and self-doubt</strong> through skill mastery, plus <strong>heroic achievement</strong> by conquering corporate evil despite psychological harassment and overwhelming obstacles.
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">⚙️ Core Concept</h3>
+                    <div class="card-content">
+                        <strong>Combat-physics hybrid</strong> where success requires mastering bike physics, electromagnetic combat, and tactical transformation to infiltrate corporate facilities, destroy reactor cores, and escape explosive destruction sequences.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Image -->
+    <section class="section">
+        <div class="container">
+            <div class="image-section story-image">
+                <div class="image-quote">
+                    <p>"The Megastructure stretches endlessly in all directions - a sprawling corporate cyberdungeon where freedom fighters like Zoichi battle against the tyrannical expansion of the ruling megacorp."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lore & Story -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">📖 Lore & Story</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="card-title">The Megastructure Cyberdungeon</h3>
+                    <p>In the far future, humanity lives within <strong>The Megastructure</strong> - an endless labyrinth of interconnected corporate facilities, industrial complexes, and urban settlements stretching across multiple continents. What began as organized city planning has devolved into a chaotic cyberdungeon of towering spires, underground networks, and sprawling reactor facilities built layer upon layer by automated construction systems.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">Corporate Tyranny & The Great Expansion</h3>
+                    <p>The dominant <strong>Hegemony Megacorp</strong> has seized control of the construction systems, ruthlessly expanding their infrastructure while crushing smaller communities. Their reactor installations power massive surveillance networks and automated security forces, transforming the Megastructure into an Orwellian nightmare where dissent is eliminated by drones and corporate agents.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">Resistance & Zoichi's Mission</h3>
+                    <p><strong>Zoichi</strong> is a transforming bike & humanoid android operative working for <strong>Liberation Dynamics</strong> - one of the few remaining corporations that still serves the common people. Armed with advanced coilgun weapons and a transforming bike-robot body, Zoichi assaults Hegemony facilities to sabotage their reactors and disrupt their expansion plans.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">The Stakes: Freedom vs Total Control</h3>
+                    <p>Every reactor destroyed weakens Hegemony's grip on the Megastructure, but their rival agent <strong>Cyberghost</strong> relentlessly pursues Zoichi with psychological warfare and overwhelming force. The battle isn't just for territory - it's for the soul of humanity itself. Will the Megastructure become a corporate prison, or can the resistance reclaim it as a home for free people?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controls & Interface -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🎮 Controls & Interface</h2>
+            <div class="controls-grid">
+                <div class="controls-diagram">
+                    <h3 class="text-violet mb-2">Bike Mode Controls</h3>
+                    <div class="control-item">
+                        <span class="control-key">W/S</span>
+                        <span>Accelerate / Brake / Reverse</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">A/D</span>
+                        <span>Lean Back / Lean Forward</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">SPACE</span>
+                        <span>Change Facing Direction</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">Q</span>
+                        <span>Transform to Robot</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">MOUSE</span>
+                        <span>Aim & Fire Turret (Coilgun)</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">R</span>
+                        <span>Slow Motion (Toggle)</span>
+                    </div>
+                </div>
+                <div class="controls-diagram">
+                    <h3 class="text-violet mb-2">Robot Mode Controls</h3>
+                    <div class="control-item">
+                        <span class="control-key">WASD</span>
+                        <span>Move Left / Right</span>
+                    </div>
+					<div class="control-item">
+                        <span class="control-key">WS</span>
+                        <span>Jump / Drop Down</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">SPACE</span>
+                        <span>Flip + Reverse Gravity</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">Q</span>
+                        <span>Transform to Bike</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">MOUSE</span>
+                        <span>Aim & Fire Gauss Pistol + Grapple Hook</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">R</span>
+                        <span>Slow Motion (Toggle)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vignette Image -->
+    <section class="section">
+        <div class="container">
+            <div class="image-section vignette-image">
+                <div class="image-quote">
+                    <p>"Plow through security drones, defy gravity, ride like a badass, and destroy the reactor."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Layers -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🏗️ Game Structure</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="card-title">Moment-to-Moment: Combat Physics Flow</h3>
+                    <p>Master bike physics while engaging security systems: plow through lesser threats in bike mode, transform to robot for precision combat against drones and cameras. Cyberghost's psychological harassment adds pressure - overcome doubt through skill mastery and electromagnetic firepower.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">Mission Structure: Infiltration to Destruction</h3>
+                    <p>Infiltrate procedural corporate facilities to reach and destroy reactors. Navigate mixed terrain (outdoor hills, underground caves, indoor corridors) while battling automated defenses. Each mission climaxes with spectacular reactor destruction followed by high-speed escape sequences.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">Corporate Warfare Campaign: Reactor Takedowns</h3>
+                    <p>Progress through increasingly defended corporate installations. Health bar system allows skill development while facing escalating security measures. Unlock access to heavily fortified facilities as Zoichi dismantles the evil megacorp's global infrastructure one reactor at a time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">Mission Session Flow</h3>
+                    <p>Infiltrate facility → Battle through security systems → Navigate mixed terrain using physics mastery → Destroy reactor core → Escape explosive destruction sequence. Sessions range from quick 3-minute raids to complex 9-minute heavily fortified installations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Features -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🚀 Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="card-title">🏍️ Elastomania-Inspired Bike Physics</h3>
+                    <p>Master realistic motocross physics: lean forward/backward to control landings, manage acceleration to prevent wheelies, use elastic frame dynamics for advanced techniques. Wheelies, stoppies, and momentum conservation create deep skill-based gameplay reminiscent of the cult classic.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">🤖 Gravity Manipulation Robot Mode</h3>
+                    <p>Revolutionary robot controls: spacebar flips orientation AND reverses gravity direction. Navigate ceiling sections, wall-climb with grappling hook, access areas impossible for bike mode. Precise platforming mechanics complement bike mode's horizontal speed-focused traversal.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">🌍 Mixed Terrain Combat Zones</h3>
+                    <p>Outdoor terrain favors bike mode for plowing through security drones and obstacles, while indoor facilities demand robot precision for turret destruction and vertical navigation. Procedural environments blend physics challenges with tactical combat across hills, caves, and corporate installations.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="card-title">⚡ Electromagnetic Dual-Mode Combat</h3>
+                    <p>Wield electromagnetic accelerator weapons: turret mode while biking for high-speed drone elimination, hand-held gauss pistol mode as robot for precision omnidirectional targeting. Slow-motion mode (R key) enables tactical weapon control during intense physics sequences and enemy encounters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Image -->
+    <section class="section">
+        <div class="container">
+            <div class="image-section feature-image">
+                <div class="image-quote">
+                    <p>"Zoichi's unique bike-humanoid transformation ability lets him adapt to indoor and outdoor combat seamlessly."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modes -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🎯 Game Modes</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3 class="card-title">💥 Corporate Sabotage Campaign</h3>
+                    <div class="card-content">
+                        <p>Infiltrate and destroy enemy reactor installations across various fortified corporate facilities. Battle Cyberghost's psychological warfare while mastering physics-combat hybrid gameplay. Each successful reactor destruction weakens the evil megacorp's global infrastructure.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">⏱️ Reactor Destruction Speedruns</h3>
+                    <div class="card-content">
+                        <p>Master completed facility raids for optimal destruction times. Advanced physics-combat techniques and optimal transformation strategies enable faster infiltration routes. Faster reactor elimination times give a bigger kaboom at the end.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Box Art Section -->
+    <section class="section">
+        <div class="container">
+            <div class="boxart-section">
+                <div class="boxart-image"></div>
+                <div class="boxart-content">
+                    <h3 class="boxart-title">Cyberdungeon Rider</h3>
+                    <p class="boxart-description">
+                        As android agent Zoichi, master addictive Elastomania-inspired physics combined with powerful coilgun combat to destroy corporate reactor installations. Battle through security systems while the rival Cyberghost wages psychological warfare against your determination.
+                        <br><br>
+                        Every lean, every shot, every transformation is a statement of defiance against corporate tyranny. Overcome doubt through skill mastery, crush automated defenses with gauss firepower, and escape spectacular reactor explosions in epic high-speed sequences.
+                        <br><br>
+                        <strong>Will you conquer your fears and detonate the megacorp's evil infrastructure?</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
+            <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
+            <p>Reactorcore Games - 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
