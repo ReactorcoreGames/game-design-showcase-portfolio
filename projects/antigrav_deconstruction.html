@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antigrav Deconstruction: Therapeutic Brick Breaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style>
         /* 
@@ -43,8 +46,9 @@
             box-sizing: border-box;
         }
 
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, var(--background-color) 0%, var(--container-bg) 100%);
             color: var(--text-color);
             line-height: 1.6;
@@ -75,8 +79,8 @@
 
         .title-section {
             position: relative;
-            height: 600px;
-            background: url('images/antigrav_1_title.jpg') center/cover;
+            height: 700px;
+            background: url('./images/antigrav_1_title.jpg') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -90,7 +94,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(rgba(26, 10, 31, 0.2), rgba(45, 27, 53, 0.3));
+            background: linear-gradient(rgba(26, 10, 31, 0.2), rgba(45, 27, 53, 0.1));
             z-index: 1;
         }
 
@@ -101,8 +105,10 @@
         }
 
         .main-title {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 4em;
             font-weight: bold;
+            letter-spacing: 2px;
             margin-bottom: 0.2em;
             text-shadow: 0 0 10px var(--glow-primary), 0 0 20px var(--glow-secondary), 0 0 30px var(--glow-primary);
             animation: electricBuzz 3s infinite;
@@ -141,7 +147,10 @@
         }
 
         .section h2 {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 2.5em;
+            font-weight: 600;
+            letter-spacing: 1px;
             margin-bottom: 30px;
             text-shadow: 0 0 8px var(--glow-primary), 0 0 15px var(--glow-secondary);
             animation: electricBuzz 3s infinite;
@@ -217,7 +226,7 @@
             height: 600px;
             border-radius: 15px;
             overflow: hidden;
-            background: url('images/antigrav_2_vignette.jpg') center/cover;
+            background: url('./images/antigrav_2_vignette.jpg') center/cover;
         }
 
         .vignette-section::before {
@@ -248,7 +257,7 @@
             height: 600px;
             border-radius: 15px;
             overflow: hidden;
-            background: url('images/antigrav_5_story.jpg') center/cover;
+            background: url('./images/antigrav_5_story.jpg') center/cover;
         }
 
         .story-section::before {
@@ -337,7 +346,7 @@
             height: 600px;
             border-radius: 15px;
             overflow: hidden;
-            background: url('images/antigrav_3_feature.jpg') center/cover;
+            background: url('./images/antigrav_3_feature.jpg') center/cover;
         }
 
         .feature-image-section::before {
@@ -670,7 +679,7 @@
 
         <div class="final-section">
             <div class="boxart-container">
-                <img src="images/antigrav_4_boxart.jpg" alt="Antigrav Deconstruction Box Art" class="boxart-image">
+                <img src="./images/antigrav_4_boxart.jpg" alt="Antigrav Deconstruction Box Art" class="boxart-image">
             </div>
             <div class="game-description">
                 <h3>Antigrav Deconstruction</h3>

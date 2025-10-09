@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spacelancer: Open World Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Audiowide&family=Exo:wght@300;400;600;700&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
         mermaid.initialize({
@@ -56,8 +59,9 @@
         body {
             background: linear-gradient(135deg, var(--background-color) 0%, var(--container-bg) 100%);
             color: var(--text-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Rajdhani', sans-serif;
             line-height: 1.6;
+			letter-spacing: 1px;
             min-height: 100vh;
         }
 
@@ -83,7 +87,7 @@
         }
 
         .hero-section {
-            height: 700px;
+            height: 750px;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -101,7 +105,7 @@
             background: linear-gradient(
                 135deg,
                 rgba(15, 20, 25, 0.4) 0%,
-                rgba(26, 31, 58, 0.6) 50%,
+                rgba(26, 31, 58, 0.2) 50%,
                 rgba(42, 47, 74, 0.4) 100%
             );
         }
@@ -113,16 +117,20 @@
         }
 
         h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-family: 'Orbitron', monospace;
+            font-size: 6rem;
             font-weight: 900;
             margin-bottom: 0.5rem;
             color: var(--text-color);
             text-shadow: 
                 0 0 20px var(--title-shadow),
                 0 0 40px var(--title-shadow),
-                0 0 80px rgba(0, 212, 255, 0.5),
-                2px 2px 4px rgba(0, 0, 0, 0.8);
+                0 0 80px rgba(0, 212, 255, 0.8),
+                2px 2px 4px rgba(0, 0, 0, 0.9);
             animation: electricGlow 3s ease-in-out infinite alternate;
+			background: rgba(30, 20, 60, 0.8);
+            padding: 25px;
+            border-radius: 6px;
         }
 
         @keyframes electricGlow {
@@ -143,12 +151,19 @@
         }
 
         .subtitle {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            color: var(--accent-purple);
+            font-family: 'Audiowide', cursive;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--primary-cyan);
             font-weight: 600;
-            text-shadow: 
-                0 0 10px var(--accent-purple),
-                1px 1px 2px rgba(0, 0, 0, 0.8);
+			text-shadow: 
+                0 0 3px #000,
+                0 0 6px #000,
+                0 0 9px #000,
+                2px 2px 0px #000;
+			background: rgba(30, 20, 60, 0.8);
+            padding: 25px;
+            border-radius: 4px;
+            display: inline-block;
         }
 
         .container {
@@ -162,7 +177,8 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
             font-weight: 700;
             margin-bottom: 2rem;
             text-align: center;
@@ -197,8 +213,9 @@
         }
 
         .card h3 {
+            font-family: 'Exo', sans-serif;
             color: var(--primary-cyan);
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
@@ -218,6 +235,7 @@
         }
 
         .controls-section h3 {
+            font-family: 'Audiowide', cursive;
             color: var(--primary-cyan);
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
@@ -279,6 +297,7 @@
         }
 
         .layer-card h4 {
+            font-family: 'Exo', sans-serif;
             color: var(--accent-purple);
             font-size: 1.4rem;
             margin-bottom: 1rem;
@@ -305,6 +324,7 @@
         }
 
         .feature-card h4 {
+            font-family: 'Exo', sans-serif;
             color: var(--primary-cyan);
             font-size: 1.6rem;
             margin-bottom: 1.5rem;

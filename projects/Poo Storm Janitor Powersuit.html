@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poo Storm Janitor Powersuit - Game Design Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Russo+One&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style>
         /*
@@ -21,7 +24,7 @@
             --border-color: #442e09;
             --accent-color: #22db3d;
             --text-color: #f4f1ea;
-            --title-primary: #8b4513;
+            --title-primary: #bba513;
             --title-secondary: #e67e22;
             --card-shadow: rgba(139, 69, 19, 0.3);
             --green-accent: #2ecc71;
@@ -38,10 +41,11 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Exo 2', 'Arial', sans-serif;
             background: linear-gradient(135deg, var(--background-color) 0%, #596f6f 100%);
             color: var(--text-color);
             line-height: 1.6;
+			letter-spacing: 1px;
             min-height: 100vh;
         }
 
@@ -69,7 +73,7 @@
 
         .hero-section {
             position: relative;
-            height: 700px;
+            height: 750px;
             background: url('images/poostorm_1_title.jpg') center/cover;
             display: flex;
             align-items: center;
@@ -84,7 +88,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(205, 205, 205, 0.4);
+            background: rgba(205, 205, 205, 0.2);
             z-index: 1;
         }
 
@@ -95,10 +99,14 @@
         }
 
         .main-title {
+            font-family: 'Orbitron', monospace;
             font-size: 3.5em;
-            font-weight: bold;
+            font-weight: 900;
             margin-bottom: 10px;
             color: var(--title-primary);
+            background: rgba(50, 60, 20, 0.9);
+            padding: 30px;
+            border-radius: 4px;
 			text-shadow: 
 				4px 4px 0 #000,
 				-4px -4px 0 #000,
@@ -108,8 +116,13 @@
         }
 
         .subtitle {
+            font-family: 'Russo One', sans-serif;
             font-size: 1.8em;
             color: var(--clean-white);
+            background: rgba(50, 60, 20, 0.9);
+            padding: 20px;
+            border-radius: 4px;
+            display: inline-block;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px var(--hazmat-yellow);
         }
 
@@ -139,7 +152,9 @@
         }
 
         .section-title {
+            font-family: 'Orbitron', monospace;
             font-size: 2.5em;
+            font-weight: 700;
             color: var(--title-primary);
             text-align: center;
             margin-bottom: 40px;
@@ -178,6 +193,7 @@
         }
 
         .card-title {
+            font-family: 'Russo One', sans-serif;
             font-size: 1.5em;
             color: var(--hazmat-yellow);
             margin-bottom: 15px;

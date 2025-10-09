@@ -1,0 +1,19 @@
+Here are the five detailed image generation prompts for AAL Eradication Wars:
+
+Title Image: (16:9)
+Wide cinematic shot with dramatic low angle, epic battle scene showing red and blue faction Type-3 mechas engaged in intense aerial combat over devastated industrial landscape, massive green background structures housing civilians caught in crossfire, colossal Arms Forts lumber through middle distance firing heavy artillery, enormous fireballs from nuclear detonations create apocalyptic dark sky of pure fire and destruction consuming horizon. Gritty science fiction military aesthetic, harsh lighting contrasts, metallic textures, explosive particle effects, dynamic motion blur. Deep red and electric blue color scheme with toxic green accents and orange nuclear fire highlights.
+
+Vignette Image: (16:9)
+Dynamic close-up action shot from tilted camera angle, two Type-3 mechas locked in devastating mid-air combat with boost thrusters blazing, red faction mecha firing large futuristic rifle while blue faction mecha transforms between bipedal and waverider forms, green industrial structures exploding in background, massive Arms Fort weapons platforms visible through smoke and debris, nuclear fire illuminating dark apocalyptic sky overhead. Gritty science fiction military aesthetic, harsh lighting contrasts, metallic textures, explosive particle effects, dynamic motion blur. Deep red and electric blue color scheme with toxic green accents and orange nuclear fire highlights.
+
+Feature Image: (16:9)
+Dynamic side-view action shot capturing transformation sequence, sleek starfighter-inspired waverider mecha morphing into bipedal combat form mid-flight against dramatic sky, powerful thrusters creating energy trails, large futuristic rifles attached to transforming arms, green military installations burning below, enormous Arms Forts firing artillery in background, massive nuclear explosions creating hellish fire-filled sky of pure destruction. Gritty science fiction military aesthetic, harsh lighting contrasts, metallic textures, explosive particle effects, dynamic motion blur. Deep red and electric blue color scheme with toxic green accents and orange nuclear fire highlights.
+
+Box Art Cover: (2:3)
+Intense close-up portrait shot of human pilot in mecha cockpit wearing advanced tactical helmet with reflective visor, enemy Type-3 mecha reflection visible in visor glass, pilot gripping controls with determined expression, green military installation lights glowing through cockpit windows, massive Arms Fort silhouette looming in background, nuclear fire and destruction reflecting across helmet surface creating apocalyptic lighting. Gritty science fiction military aesthetic, harsh lighting contrasts, metallic textures, explosive particle effects, dynamic motion blur. Deep red and electric blue color scheme with toxic green accents and orange nuclear fire highlights.
+
+Story Overworld Image: (16:9)
+Sweeping orbital perspective showing multiple star systems connected by glowing jumpgate networks, red and blue fleet formations positioned across colonial space, green industrial stations scattered throughout sectors, massive Arms Fort silhouettes drifting between systems, nuclear fire and explosions erupting across multiple worlds simultaneously, dark space filled with weapon fire and destruction creating nightmarish view of galactic warfare. Gritty science fiction military aesthetic, harsh lighting contrasts, metallic textures, explosive particle effects, dynamic motion blur. Deep red and electric blue color scheme with toxic green accents and orange nuclear fire highlights.
+
+Unified Art Style (for all five, already included in prompts): 
+Gritty science fiction military aesthetic, harsh lighting contrasts, metallic textures, explosive particle effects, dynamic motion blur. Deep red and electric blue color scheme with toxic green accents and orange nuclear fire highlights.

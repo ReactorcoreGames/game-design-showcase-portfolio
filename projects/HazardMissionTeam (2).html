@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hazard Mission Team: Settlement Crisis Response</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style>
         /* 
@@ -47,9 +50,10 @@
             box-sizing: border-box;
         }
 
+
         body {
             background-color: var(--background-color);
-            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-family: 'Titillium Web', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             overflow-x: hidden;
@@ -79,7 +83,7 @@
         /* Title Section */
         .hero-section {
             position: relative;
-            height: 600px;
+            height: 700px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -109,8 +113,11 @@
         }
 
         .main-title {
+            font-family: 'Exo 2', sans-serif;
             font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: bold;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 10px;
             text-shadow: 
                 0 0 10px var(--glow-yellow),
@@ -121,10 +128,13 @@
         }
 
         .subtitle {
+            font-family: 'Exo 2', sans-serif;
             font-size: clamp(1.4rem, 3vw, 1.8rem);
             color: var(--grass-green);
             font-weight: 600;
             text-shadow: 2px 2px 0 var(--warning-black);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         @keyframes breathing-glow {
@@ -132,12 +142,12 @@
                 text-shadow: 
                     0 0 10px var(--glow-yellow),
                     0 0 20px var(--glow-yellow),
-                    0 0 30px var(--glow-yellow),
+                    0 0 30px var(--grass-green),
                     3px 3px 0 var(--warning-black);
             }
             100% {
                 text-shadow: 
-                    0 0 15px var(--glow-yellow),
+                    0 0 15px var(--grass-green),
                     0 0 25px var(--glow-yellow),
                     0 0 35px var(--glow-yellow),
                     3px 3px 0 var(--warning-black);
@@ -153,14 +163,17 @@
 
         /* Section Headers */
         .section-header {
+            font-family: 'Exo 2', sans-serif;
             font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: bold;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             margin-bottom: 30px;
             text-align: center;
             color: var(--warning-yellow);
             text-shadow: 
-                0 0 8px var(--glow-yellow),
-                0 0 15px var(--glow-yellow),
+                0 0 8px var(--grass-green),
+                0 0 15px var(--grass-green),
                 2px 2px 0 var(--warning-black);
             animation: breathing-glow 3s ease-in-out infinite alternate;
         }
@@ -205,10 +218,13 @@
         }
 
         .core-card h3 {
+            font-family: 'Exo 2', sans-serif;
             color: var(--warning-yellow);
             font-size: 1.4rem;
             margin-bottom: 15px;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .core-card p {
@@ -233,9 +249,12 @@
         }
 
         .control-category h4 {
+            font-family: 'Exo 2', sans-serif;
             color: var(--warning-yellow);
             font-size: 1.2rem;
             margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         .control-list {
@@ -348,10 +367,13 @@
         }
 
         .layer-card h3 {
+            font-family: 'Exo 2', sans-serif;
             color: var(--warning-yellow);
             font-size: 1.3rem;
             margin-bottom: 15px;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .layer-card p {
@@ -381,9 +403,13 @@
         }
 
         .mission-card h4 {
+            font-family: 'Exo 2', sans-serif;
             color: var(--warning-yellow);
             font-size: 1.2rem;
             margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         /* Features Grid */
@@ -409,10 +435,13 @@
         }
 
         .feature-card h3 {
+            font-family: 'Exo 2', sans-serif;
             color: var(--warning-yellow);
             font-size: 1.3rem;
             margin-bottom: 15px;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .feature-card p {
@@ -522,10 +551,13 @@
         }
 
         .boxart-content h3 {
+            font-family: 'Exo 2', sans-serif;
             color: var(--warning-yellow);
             font-size: 1.8rem;
             margin-bottom: 20px;
-            font-weight: bold;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .boxart-content p {

@@ -13,6 +13,9 @@ tilemechs_5_story.jpg - Zoomed out overworld view showing the greater setting wh
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tile Mechs: Tactical Grid Combat - Reactorcore Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Electrolize:wght@400&family=Michroma:wght@400&family=Share+Tech+Mono:wght@400&display=swap" rel="stylesheet">
     <style>
         :root {
             --background-color: #080e0c;
@@ -34,14 +37,16 @@ tilemechs_5_story.jpg - Zoomed out overworld view showing the greater setting wh
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Electrolize', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--background-color);
             background-image: 
                 linear-gradient(rgba(0, 61, 184, 0.5) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 65, 194, 0.5) 1px, transparent 1px);
             background-size: 100px 100px;
             color: var(--text-color);
+			letter-spacing: 1px;
             line-height: 1.6;
+			font-size: 1.2em;
             overflow-x: hidden;
         }
 
@@ -64,8 +69,8 @@ tilemechs_5_story.jpg - Zoomed out overworld view showing the greater setting wh
         /* Title Section with Background Image */
         .title-section {
             position: relative;
-            height: 700px;
-            background: linear-gradient(rgba(26, 45, 26, 0.3), rgba(26, 45, 26, 0.2)), url('images/tilemechs_1_title.jpg');
+            height: 750px;
+            background: linear-gradient(rgba(26, 45, 26, 0.1), rgba(26, 45, 26, 0.2)), url('images/tilemechs_1_title.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -76,26 +81,40 @@ tilemechs_5_story.jpg - Zoomed out overworld view showing the greater setting wh
         }
 
         .title-container h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
+            font-family: 'Michroma', monospace;
+            font-size: 4rem;
+            font-weight: 400;
             margin-bottom: 1rem;
             text-shadow: 
                 0 0 10px var(--glow-blue),
                 0 0 20px var(--glow-blue),
                 0 0 30px var(--glow-blue),
-                2px 2px 4px rgba(0, 0, 0, 0.8);
+                3px 3px 6px rgba(0, 0, 0, 0.9);
             animation: electricBuzz 2s infinite alternate;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: rgba(8, 14, 12, 0.8);
+            padding: 30px 50px;
+            border-radius: 10px;
+            border: 2px solid var(--glow-blue);
         }
 
         .title-container .subtitle {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            color: var(--accent-red);
-            font-weight: 600;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 3rem;
+            color: var(--glow-blue);
+            font-weight: 400;
             text-shadow: 
-                0 0 5px var(--glow-red),
-                0 0 10px var(--glow-red),
-                1px 1px 2px rgba(0, 0, 0, 0.8);
+                0 0 8px var(--glow-red),
+                0 0 16px var(--glow-red),
+                2px 2px 4px rgba(0, 0, 0, 0.8);
             animation: electricBuzzSubtle 3s infinite alternate;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: rgba(8, 14, 12, 0.7);
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin-top: 15px;
         }
 
         @keyframes electricBuzz {
@@ -169,15 +188,18 @@ tilemechs_5_story.jpg - Zoomed out overworld view showing the greater setting wh
         }
 
         .section h2 {
-            font-size: 2.5rem;
+            font-family: 'Orbitron', monospace;
+            font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 2rem;
             text-align: center;
             text-shadow: 
                 0 0 8px var(--glow-blue),
                 0 0 16px var(--glow-blue),
-                1px 1px 2px rgba(0, 0, 0, 0.8);
+                2px 2px 4px rgba(0, 0, 0, 0.8);
             animation: electricBuzz 2.5s infinite alternate;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         /* Card Styles */

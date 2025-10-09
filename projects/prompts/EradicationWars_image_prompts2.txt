@@ -1,0 +1,31 @@
+Based on the EradicationWars.html file and the specified aesthetic requirements, here are the five detailed image generation prompts:
+
+
+Title Image: (16:9)
+
+Wide-angle aerial shot capturing red-faction bipedal armored combat mecha wielding massive energy rifles engaged in fierce battle against blue-faction Type-3 combat mechas in sprawling apocalyptic wasteland. Colossal arms fortress mobile weapons platform lumbers through background spewing cannon fire. Enormous nuclear fireballs illuminate dark sky creating nightmarish hellscape of pure destruction. Cinematic digital painting, military sci-fi realism, dynamic particle effects, intense battle photography, dramatic lighting, gritty textures. Dark charcoal black with crimson red glows, electric blue weapon traces, neon green energy bursts.
+
+
+Vignette Image: (16:9)
+
+Dynamic low-angle action shot of red-faction Type-3 armored combat mecha boost-dashing through devastating weapon crossfire while rotating to fire massive futuristic rifle at pursuing blue-faction combat mechas. Mid-air transformation sequence showing bipedal form shifting to streamlined waverider configuration. Green industrial structures crumble from explosive impacts. Cinematic digital painting, military sci-fi realism, dynamic particle effects, intense battle photography, dramatic lighting, gritty textures. Dark charcoal black with crimson red glows, electric blue weapon traces, neon green energy bursts.
+
+
+Feature Image: (16:9)
+
+High-speed tracking shot of sleek waverider-configuration combat starfighter with triangular wing profile and aerodynamic fuselage mid-transformation into bipedal mecha form during aerial combat. Delta-wing aerospace design with angular surfaces and weapon hardpoints. Nuclear explosions create blazing orange sky backdrop. Cinematic digital painting, military sci-fi realism, dynamic particle effects, intense battle photography, dramatic lighting, gritty textures. Dark charcoal black with crimson red glows, electric blue weapon traces, neon green energy bursts.
+
+
+Box Art Cover: (2:3)
+
+Dramatic close-up portrait of human pilot in mecha cockpit wearing full combat helmet with reflective visor showing enemy Type-3 combat mecha reflection. Detailed mechanical cockpit controls and weapon systems visible. Intense expression beneath helmet. Background shows apocalyptic battlefield through cockpit canopy. Nuclear fire illuminates scene from behind. Cinematic digital painting, military sci-fi realism, dynamic particle effects, intense battle photography, dramatic lighting, gritty textures. Dark charcoal black with crimson red glows, electric blue weapon traces, neon green energy bursts.
+
+
+Story Overworld Image: (16:9)
+
+Epic wide establishing shot of multiple star systems connected by glowing jumpgate networks across deep space. Helios sector colonial territories with approximately fifty illuminated planets and space stations. Massive fleet warfare happening between star systems with weapon traces crossing vast distances. Nuclear explosions creating brilliant flashes across cosmic battlefield. Cinematic digital painting, military sci-fi realism, dynamic particle effects, intense battle photography, dramatic lighting, gritty textures. Dark charcoal black with crimson red glows, electric blue weapon traces, neon green energy bursts.
+
+---
+Unified Art Style (for all five, already included in prompts):
+
+Cinematic digital painting, military sci-fi realism, dynamic particle effects, intense battle photography, dramatic lighting, gritty textures. Dark charcoal black with crimson red glows, electric blue weapon traces, neon green energy bursts.

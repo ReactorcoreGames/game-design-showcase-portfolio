@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admiral Wars Beyond: Strategic Warfare Evolution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /*
         Image filenames needed:
@@ -36,7 +39,7 @@
         }
 
         body {
-            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-family: 'Roboto Condensed', 'Arial', 'Helvetica', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background: linear-gradient(135deg, var(--background-color) 0%, #0f1b2a 100%);
@@ -65,7 +68,7 @@
 
         .hero-section {
             position: relative;
-            height: 500px;
+            height: 700px;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -79,8 +82,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('images/admiralwars_1_title.jpg') center center/cover;
-            filter: brightness(0.6);
+            background: url('./images/admiralwars_1_title.jpg') center center/cover;
         }
 
         .hero-overlay {
@@ -89,7 +91,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(10, 20, 32, 0.3) 0%, rgba(26, 45, 64, 0.4) 100%);
+            background: linear-gradient(135deg, rgba(10, 20, 32, 0.3) 0%, rgba(26, 45, 64, 0.2) 100%);
         }
 
         .hero-content {
@@ -100,8 +102,9 @@
         }
 
         .main-title {
-            font-size: 3.5rem;
-            font-weight: bold;
+            font-family: 'Titillium Web', 'Roboto Condensed', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
             margin-bottom: 1rem;
             color: var(--title-gradient-1);
             text-shadow: 
@@ -113,7 +116,7 @@
         }
 
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 3rem;
             color: var(--accent-secondary);
             text-shadow: 0 0 8px var(--accent-secondary), 2px 2px 4px rgba(0, 0, 0, 0.6);
             font-weight: 300;
@@ -146,6 +149,7 @@
         }
 
         .section h2 {
+            font-family: 'Titillium Web', 'Roboto Condensed', sans-serif;
             font-size: 2.2rem;
             color: var(--title-gradient-1);
             text-shadow: 0 0 8px var(--glow-color), 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -190,6 +194,7 @@
         }
 
         .card h3 {
+            font-family: 'Titillium Web', 'Roboto Condensed', sans-serif;
             font-size: 1.4rem;
             color: var(--accent-primary);
             margin-bottom: 1rem;
@@ -240,8 +245,7 @@
         .vignette-bg {
             width: 100%;
             height: 100%;
-            background: url('images/admiralwars_2_vignette.jpg') center center/cover;
-            filter: brightness(0.6);
+            background: url('./images/admiralwars_2_vignette.jpg') center center/cover;
         }
 
         .vignette-quote {
@@ -288,8 +292,7 @@
         .feature-bg {
             width: 100%;
             height: 100%;
-            background: url('images/admiralwars_3_feature.jpg') center center/cover;
-            filter: brightness(0.6);
+            background: url('./images/admiralwars_3_feature.jpg') center center/cover;
         }
 
         .feature-quote {
@@ -311,7 +314,7 @@
         }
 
         .boxart-image {
-            background: url('images/admiralwars_4_boxart.jpg') center center/cover;
+            background: url('./images/admiralwars_4_boxart.jpg') center center/cover;
             border-radius: 12px;
             border: 2px solid var(--border-color);
             box-shadow: 0 8px 32px var(--card-shadow);
@@ -466,7 +469,7 @@
             <h2><span class="emoji">📖</span>Story & Lore</h2>
             
             <div class="vignette-section">
-                <div class="vignette-bg" style="background: url('images/admiralwars_5_story.jpg') center center/cover;"></div>
+                <div class="vignette-bg" style="background: url('./images/admiralwars_5_story.jpg') center center/cover;"></div>
                 <div class="vignette-quote">
                     <div class="quote-overlay">
                         <div class="quote-text">"In a galaxy where humanity has made the stars routine, every conflict tells a story"</div>

@@ -13,6 +13,9 @@ thunderstrike_5_story.jpg - Zoomed out overworld view showing global operations 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thunderstrike Justice: Fighter Jet Mech Combat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Bank+Gothic:wght@400;700&family=Teko:wght@400;500;600;700&family=Saira+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style>
         :root {
@@ -34,10 +37,12 @@ thunderstrike_5_story.jpg - Zoomed out overworld view showing global operations 
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Saira Condensed', 'Arial', sans-serif;
             background: linear-gradient(135deg, var(--sky-blue) 0%, var(--steel-blue) 100%);
             color: var(--text-dark);
             line-height: 1.6;
+			letter-spacing: 1px;
+			font-size: 1.3em;
         }
 
         .project-link {
@@ -62,7 +67,7 @@ thunderstrike_5_story.jpg - Zoomed out overworld view showing global operations 
         }
 
         .title-section {
-            height: 650px;
+            height: 750px;
             background-image: url('images/thunderstrike_1_title.jpg');
             background-size: cover;
             background-position: center;
@@ -108,19 +113,40 @@ thunderstrike_5_story.jpg - Zoomed out overworld view showing global operations 
         }
 
         .main-title {
-            font-size: 3.5em;
-            font-weight: bold;
+            font-family: 'Orbitron', monospace;
+            font-size: 4em;
+            font-weight: 900;
             color: var(--cloud-white);
-            text-shadow: 3px 3px 6px var(--accent-gold), 0 0 20px var(--steel-blue);
+            text-shadow: 
+                3px 3px 6px var(--accent-gold), 
+                0 0 20px var(--steel-blue),
+                0 0 30px var(--accent-gold),
+                5px 5px 10px rgba(0, 0, 0, 0.8);
             margin-bottom: 10px;
             animation: titleGlow 3s ease-in-out infinite alternate;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: rgba(47, 79, 79, 0.7);
+            padding: 30px 50px;
+            border-radius: 10px;
+            border: 3px solid var(--accent-gold);
         }
 
         .subtitle {
-            font-size: 1.8em;
+            font-family: 'Teko', sans-serif;
+            font-size: 3.5em;
             color: var(--accent-gold);
-            text-shadow: 2px 2px 4px var(--accent-gold);
-            font-weight: 300;
+            text-shadow: 
+                2px 2px 4px var(--accent-gold),
+                0 0 15px var(--accent-gold),
+                3px 3px 6px rgba(0, 0, 0, 0.8);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: rgba(47, 79, 79, 0.6);
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin-top: 15px;
         }
 
         @keyframes titleGlow {
@@ -144,12 +170,18 @@ thunderstrike_5_story.jpg - Zoomed out overworld view showing global operations 
         }
 
         .section-title {
-            font-size: 2.5em;
+            font-family: 'Orbitron', monospace;
+            font-size: 2.8em;
             color: var(--accent-gold);
             text-align: center;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 3px var(--steel-blue);
+            text-shadow: 
+                1px 1px 3px var(--steel-blue),
+                0 0 15px var(--accent-gold),
+                2px 2px 4px rgba(0, 0, 0, 0.8);
             animation: headerGlow 4s ease-in-out infinite alternate;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         @keyframes headerGlow {

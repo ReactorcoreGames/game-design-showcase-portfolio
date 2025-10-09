@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbital City Buster: Sand Breaker Ball - Game Design Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;600;700;900&family=Russo+One&display=swap" rel="stylesheet">
     <style>
         /*
         Required Images:
@@ -37,12 +40,14 @@
             box-sizing: border-box;
         }
 
+
         body {
-            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-family: 'Saira Condensed', 'Arial', 'Helvetica', sans-serif;
             background: linear-gradient(135deg, var(--background-color) 0%, #0f3540 100%);
             color: var(--text-color);
             line-height: 1.6;
             min-height: 100vh;
+			letter-spacing: 1px;
         }
 
         .container {
@@ -77,10 +82,10 @@
             text-align: center;
             padding: 60px 0 40px 0;
             margin-bottom: 40px;
-            background: linear-gradient(rgba(26, 61, 69, 0.4), rgba(26, 61, 69, 0.5)), url('images/citybuster_1_title.jpg');
+            background: linear-gradient(rgba(26, 61, 69, 0.4), rgba(26, 61, 69, 0.3)), url('./images/citybuster_1_title.jpg');
             background-size: cover;
             background-position: center;
-            height: 600px;
+            height: 700px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -90,8 +95,10 @@
         }
 
         .title-main {
+            font-family: 'Russo One', sans-serif;
             font-size: 4rem;
             font-weight: bold;
+            letter-spacing: 3px;
             color: var(--title-primary);
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px var(--shadow-color);
@@ -99,7 +106,7 @@
         }
 
         .title-subtitle {
-            font-size: 2rem;
+            font-size: 3rem;
             color: var(--title-secondary);
             font-weight: 300;
             text-shadow: 1px 1px 3px var(--shadow-color);
@@ -131,7 +138,10 @@
         }
 
         h2 {
+            font-family: 'Russo One', sans-serif;
             font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
             margin-bottom: 20px;
             color: var(--title-primary);
             text-align: center;
@@ -175,7 +185,10 @@
         }
 
         .card h3 {
+            font-family: 'Saira Condensed', sans-serif;
             font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
             margin-bottom: 15px;
             color: var(--red-bright);
             display: flex;
@@ -237,7 +250,7 @@
             border-radius: 12px;
             overflow: hidden;
             height: 600px;
-            background: url('images/citybuster_2_vignette.jpg');
+            background: url('./images/citybuster_2_vignette.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -266,7 +279,7 @@
             border-radius: 12px;
             overflow: hidden;
             height: 600px;
-            background: url('images/citybuster_5_story.jpg');
+            background: url('./images/citybuster_5_story.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -360,7 +373,7 @@
             border-radius: 12px;
             overflow: hidden;
             height: 600px;
-            background: url('images/citybuster_3_feature.jpg');
+            background: url('./images/citybuster_3_feature.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -418,7 +431,7 @@
         }
 
         .boxart-image {
-            background: url('images/citybuster_4_boxart.jpg');
+            background: url('./images/citybuster_4_boxart.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 12px;

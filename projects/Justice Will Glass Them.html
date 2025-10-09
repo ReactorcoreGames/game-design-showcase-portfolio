@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justice Will Glass Them: Orbital Vengeance Obliteration - Reactorcore Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style>
         /* 
@@ -41,12 +44,14 @@
             box-sizing: border-box;
         }
 
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Orbitron', monospace;
             background: linear-gradient(180deg, var(--dark-violet) 0%, var(--background-mid) 50%, var(--hellish-red) 100%);
             background-repeat: no-repeat;
             background-size: 100% 100%;
             color: var(--text-color);
+			letter-spacing: 1px;
             line-height: 1.6;
             min-height: 100vh;
         }
@@ -74,7 +79,7 @@
 
         .title-section {
             position: relative;
-            height: 600px;
+            height: 700px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -92,7 +97,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(180deg, rgba(45, 26, 78, 0.4) 0%, rgba(204, 46, 46, 0.3) 100%);
+            background: linear-gradient(180deg, rgba(45, 26, 78, 0.2) 0%, rgba(204, 46, 46, 0.3) 100%);
             z-index: 1;
         }
 
@@ -103,7 +108,9 @@
 
         .main-title {
             font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: bold;
+            font-weight: 900;
+			color: #fff;
+            letter-spacing: 2px;
             margin-bottom: 1rem;
             text-shadow: 0 0 10px var(--glow-ember), 0 0 20px var(--glow-ember), 0 0 30px var(--glow-ember);
             animation: emberGlow 3s ease-in-out infinite alternate;
@@ -112,7 +119,8 @@
         .subtitle {
             font-size: clamp(1.2rem, 3vw, 1.8rem);
             color: var(--accent-secondary);
-            font-weight: 300;
+            font-weight: 400;
+            letter-spacing: 1px;
             text-shadow: 0 0 8px var(--glow-secondary);
         }
 
@@ -176,6 +184,8 @@
             color: var(--h2-color);
             text-shadow: 0 0 10px var(--h2-glow);
             animation: emberGlow 3s ease-in-out infinite alternate;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .three-cards {
