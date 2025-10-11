@@ -84,23 +84,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Saira:wght@300;400;600;700&display=optional" rel="stylesheet">
     
-    <script>
-        // Ensure images load even if fonts fail in Firefox
-        document.addEventListener('DOMContentLoaded', function() {
-            // Force image loading after short delay to avoid font loading conflicts
-            setTimeout(function() {
-                const images = document.querySelectorAll('img');
-                images.forEach(img => {
-                    if (!img.complete || img.naturalWidth === 0) {
-                        const src = img.src;
-                        img.src = '';
-                        img.src = src;
-                    }
-                });
-            }, 100);
-        });
-    </script>
-    
     <!-- IMAGE REQUIREMENTS:
     aalsw_1_title.jpg - Tactical squad in combat formation with physics effects and military vehicles
     aalsw_2_vignette.jpg - Dynamic combat scene showing projectiles, explosions, and realistic physics interactions
