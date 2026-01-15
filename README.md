@@ -4,8 +4,9 @@
 
 This repository hosts the source code for my personal game design portfolio website.
 
-**Please view the live site here:**  
-https://reactorcoregames.github.io/game-design-showcase-portfolio/
+**View the live site here:**  
+Mirror 1: https://reactorcoregames.github.io/game-design-showcase-portfolio/
+Mirror 2: https://rc-game-design-portfolio.pages.dev/
 
 ## About
 
