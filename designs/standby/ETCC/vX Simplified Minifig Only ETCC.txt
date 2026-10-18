@@ -1,0 +1,1 @@
+TODO: In this document, make a simplified version of ETCC that only focuses on minifigs. If possible, omit character slips and only have a central ref sheet for weps, equips, abilities, ranges, damage, armor, chances, etc.

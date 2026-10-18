@@ -1,0 +1,269 @@
+
+███████╗██████╗░██╗░█████╗░  ████████╗░█████╗░██╗░░░██╗      _ 
+██╔════╝██╔══██╗██║██╔══██╗  ╚══██╔══╝██╔══██╗╚██╗░██╔╝     [_] 
+█████╗░░██████╔╝██║██║░░╚═╝  ░░░██║░░░██║░░██║░╚████╔╝░   /:   :\
+██╔══╝░░██╔═══╝░██║██║░░██╗  ░░░██║░░░██║░░██║░░╚██╔╝░░  ()'---'()
+███████╗██║░░░░░██║╚█████╔╝  ░░░██║░░░╚█████╔╝░░░██║░░░    | | |
+╚══════╝╚═╝░░░░░╚═╝░╚════╝░  ░░░╚═╝░░░░╚════╝░░░░╚═╝░░░    [=|=]
+
+
+░█████╗░░█████╗░░█████╗░██╗░░░░░  ░█████╗░░█████╗░███╗░░░███╗██████╗░░█████╗░████████╗
+██╔══██╗██╔══██╗██╔══██╗██║░░░░░  ██╔══██╗██╔══██╗████╗░████║██╔══██╗██╔══██╗╚══██╔══╝
+██║░░╚═╝██║░░██║██║░░██║██║░░░░░  ██║░░╚═╝██║░░██║██╔████╔██║██████╦╝███████║░░░██║░░░
+██║░░██╗██║░░██║██║░░██║██║░░░░░  ██║░░██╗██║░░██║██║╚██╔╝██║██╔══██╗██╔══██║░░░██║░░░
+╚█████╔╝╚█████╔╝╚█████╔╝███████╗  ╚█████╔╝╚█████╔╝██║░╚═╝░██║██████╦╝██║░░██║░░░██║░░░
+░╚════╝░░╚════╝░░╚════╝░╚══════╝  ░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░
+
+
+Epic Toy Cool Combat
+
+A tabletop game using lego, action figures, toys or diy creations
+
+
+████████████████████████████████████████████████████████████████████████
+█▄─▄█▄─▀█▄─▄█─▄─▄─█▄─▄▄▀█─▄▄─█▄─▄▄▀█▄─██─▄█─▄▄▄─█─▄─▄─█▄─▄█─▄▄─█▄─▀█▄─▄█
+██─███─█▄▀─████─████─▄─▄█─██─██─██─██─██─██─███▀███─████─██─██─██─█▄▀─██
+▀▄▄▄▀▄▄▄▀▀▄▄▀▀▄▄▄▀▀▄▄▀▄▄▀▄▄▄▄▀▄▄▄▄▀▀▀▄▄▄▄▀▀▄▄▄▄▄▀▀▄▄▄▀▀▄▄▄▀▄▄▄▄▀▄▄▄▀▀▄▄▀
+
+
+
+
+▒▒▒▒▒▒▐███████▌
+▒▒▒▒▒▒▐░▀░▀░▀░▌
+▒▒▒▒▒▒▐▄▄▄▄▄▄▄▌
+▄▀▀▀█▒▐░▀▀▄▀▀░▌▒█▀▀▀▄
+▌▌▌▌▐▒▄▌░▄▄▄░▐▄▒▌▐▐▐▐
+============================
+Description:
+
+This game is played in real life - virtually anywhere; on the floor, on a table, on a bed or even outdoors!
+
+Do battle with a group of customized warriors, beasts, robots and vehicles - all armed with numerous weapons, abilities and armor - in fun tactical turn-based combat.
+
+Players take turns to move up to 3 units at a time, each capable of doing 3 actions in any combination.
+
+List of available actions include: 
+- move
+- attack 
+- use an ability
+- recover lost health
+- and more!
+
+A player can choose to use these and many more functions to move-move-move, move-attack-move, attack-attack-move - in any order in any combination.
+
+This game system supports a variety of mission types and even a campaign system.
+
+The game can be player with other people both competitively and cooperatively - even in teams with allies or in a free-for-all brawl!
+
+It can also be played completely solo using a dice driven AI system - throw the dice and let it command the opponent's actions!
+
+--
+
+Earliest age to play this game is 7 years old, but there is no upper limit. Anyone that likes any of the following can enjoy the game:
+Lego
+Action Figures
+Toys you can play with
+Toys you can pose
+Basic maturity and comprehension
+Creativity and imagination
+Warhammer 40K / Games Workshop
+Dungeons and Dragons
+Tabletop Games
+Collectible Card Games
+Turn Based Tactics
+XCOM Games / Tactical Squads
+
+
+
+
+░░░░░░░░░░░░░░░░▄▓▄
+░░░░▄█▄░░░░░░░░▄▓▓▓▄
+░░▄█████▄░░░░░▄▓▓▓▓▓▄
+░▀██┼█┼██▀░░░▄▓▓▓▓▓▓▓▄
+▄▄███████▄▄▄▄▄▄▄▄█▄▄▄▄
+============================
+All you need is: 
+- Dice (6 sides) or a Coin to flip.
+- Retractable tape measure from a hardware store (3 meter lenght is ideal)
+- Paper notepad
+- Pen or pencil
+- Lego models, Lego minifigures or other equivalent toys or creations that you've built and prepared for the game.
+
+Even one character/unit per side is enough to play, but this game can technically support endless amounts of forces on both sides and even an endless amount of players/teams.
+
+That said, I would recommend limiting the number of characters per side to keep the game managable.
+For a fast duel - 1 vs 1 units.
+For a standard quick battle - 3 vs 3 units.
+For a an indepth tactical battle - 9 vs 9 units.
+For a lenghty strategic battle - 15 vs 15 units.
+For a giant epic super war that will leave you exhausted - 30 vs 30 units.
+
+Players don't have to be equal, you can even play battles of 2 vs 5, 6 vs 8, 14 vs 3 or any other style. A weaker player can still defeat a stronger opponent through smart strategy and with a bit of luck - in theory.
+
+
+
+
+▐▓█▀▀▀▀▀▀▀▀▀█▓▌░▄▄▄▄▄░
+▐▓█░░▀░░▀▄░░█▓▌░█▄▄▄█░
+▐▓█░░▄░░▄▀░░█▓▌░█▄▄▄█░
+▐▓█▄▄▄▄▄▄▄▄▄█▓▌░█████░
+░░░░▄▄███▄▄░░░░░█████░
+============================
+Features:
+
+Quick to setup and play - almost no preparation needed, just pick your starting locations and get to battle right away.
+
+Simplified and Casual - easy to learn, no convoluted rules or needing to memorize.
+
+No arbitrary stat sheets - each unit is represented by their actual physical model.
+
+Physics driven gameplay - knock away weapons, abilities and armor off of your opponents and pickup any weapons or armor you lost to heal yourself.
+
+Personal customized armies - your units are built by you the way you want them, including any weapons, armor and abilities they have.
+
+Any theme allowed - use mecha, use dinosaurs, use starships, use magical girls, use cyborgs - anything you want and anything you can build - in any combination and mix.
+
+Minimal mess - just bring readily assembled models to play, reattach any parts that are knocked off during gameplay. Easy to pack up once done playing.
+
+Fair and driven by player consent - attacker must roll dice to hit, defender gets to roll dice to dodge the hit if succeeded.
+
+Total freedom - no arbitrary restriction on what you can and cannot be used at any given time.
+
+Standardized systems - creating units, weapons and campaigns is easy, guided and ensures consistency, yet is robust and flexible enough to allow any fantasy to work.
+
+Robust and varied gameplay - support for a diverse types of character and weapon sizes. Fight as small foot soldiers or ride into battle in a giant mech suit!
+
+Not confined to a grid - all actions are calculated in centimeters and allow for full 360' degrees of freedom in regards to movement. Units can even move up or down!
+
+Infinite meaningful play - every battle is unique and all battles can be part of a greater metagame that fuels an ongoing narrative.
+
+Budget scalable - at its best the game allows you to utilize your entire lego/toy collection, but you can craft valid playable characters from any kinds of scraps.
+
+
+
+
+─▀▀▌───────▐▀▀
+─▄▀░◌░░░░░░░▀▄
+▐░░◌░▄▀██▄█░░░▌
+▐░░░▀████▀▄░░░▌
+═▀▄▄▄▄▄▄▄▄▄▄▄▀═
+============================
+Cost:
+
+If you don't already have them, a new 3 meter tape measure, a dice and a notebook + pen can be acquired under 9 euros total. (in 2023 in Finland)
+
+Originally, this game was primarily meant to be played using lego bricks and lego minifigures but it has grown beyond that.
+
+If you have no Lego to begin with, a satisfactory starter squad it is possible to find an affordable set that includes a minifigure or two, few weapons and a small vehicle for 10 euros.
+
+Larger sets are more expensive, but give you more options and bigger weapons of war that you can add to your squad. At best, you may have a group of fully armed foot soldiers, supported by some smaller vehicles or creatures, a couple big vehicles/monsters with heavy weaponry and finally a flagship titan unit that eclipses them all, having the power to demolish entire armies on its own!
+
+Be warned - if you go down this route, the cost can rise to about 300 euros or more per army/player/side. Normally you'd start with a small squad for 10 euros and find yourself being excited to expand it with more sets. Please be responsible and do not buy more than what you need. Try the game with fewer units at the smallest budget you can to see how it feels. It is far too easy to go buy new Lego or toys and spend way more money than you first intended, so please be careful.
+
+If you do not have money to buy new Lego or other toys, you can make your own creations using clean scrap - cardboard, wood, plastic bottles, tin cans, empty jars, pieces of fabric, useless cables, office/school supplies, string/rope, sticky tape, glue, metal nails, tin foil, putty (Blu Tack or similar), sticky notes and other art-crafting supplies.
+
+Lego sets make it easy to create visually cool characters and vehicles that have interactive functionality and detachable components, but it costs money.
+Do-it-yourself creations - also known as "DIY Crafts" - cost time and effort instead, but using clever art techniques - such as origami, kirigami, paper models, knitting, stick craft (match sticks, popsicle sticks), cardboard craft and many more - you can create results that rival Lego models in style.
+
+Scrap creations can be as simple or complex as you want - at the end of the day the only thing that matters is that it has the necessary functionality to work as a unit in the game. The Designer documents lay out the basics, but beyond that it doesn't matter if your character is a mere box with eyes drawn on it. The important part is that you're still having fun with what you have.
+
+
+
+
+▒▒▄▀▀▀▀▀▄▒▒▒▒▒▄▄▄▄▄▒▒▒
+▒▐░▄░░░▄░▌▒▒▄█▄█▄█▄█▄▒
+▒▐░▀▀░▀▀░▌▒▒▒▒▒░░░▒▒▒▒
+▒▒▀▄░═░▄▀▒▒▒▒▒▒░░░▒▒▒▒
+▒▒▐░▀▄▀░▌▒▒▒▒▒▒░░░▒▒▒▒
+============================
+Lore:
+By the will of immortal battle gods, a strong desire to engage in EPIC TOY COOL COMBAT was manifested, to bring inanimate creations to life!
+
+The gods used a surge of their miraculous power to assemble, weaponize and resurrect customized heroes, steeds, vehicles and titans to do battle, awakening these mighty customized warriors from their graves and bestow upon them the honor to fight the opposing gods creations for everlasting glory and epic cool memories.
+
+You are one such god. Take command of your forces and engage in EPIC TOY COOL COMBAT.
+
+The gods may will into existence any creature, person, machine, robot, thing through a physical toy - be it Lego bricks, action figures, barbie dolls, teddy bears or any other toys or construction sets or do-it-yourself creations. 
+
+The main point is that they have the ability to move, can mount easily detachable weapons and armor - using brick connections, Blu Tack or similar, or other methods - and are EPIC, which can mean absolutely anything to each god as long as they love the idea themselves.
+
+Two or more gods challenge each other to engage in COOL COMBAT with the goal to create COOL situations, regardless of victory or loss.
+
+Sometimes COOL COMBAT can be used to solve disputes, sometimes to create COOL memories through COOL COMBAT moments, sometimes to compete for a rare prize that isn't possible to share or to tell an COOL story that everyone can learn from!
+
+
+
+
+───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───
+───█▒▒░░░░░░░░░▒▒█───
+────█░░█░░░░░█░░█────
+─▄▄──█░░░▀█▀░░░█──▄▄─
+█░░█─▀▄░░░░░░░▄▀─█░░█
+============================
+Metagame:
+
+ETCC can be played as quick individual battles or as a string of missions that form a campaign.
+
+Both can tie into a greater metagame where exploits, moments/memories, outcomes, victories and defeats are all recorded and persistent, with each battle and campaign contributing towards an bigger narrative that ties everything together into a single massive universe.
+
+This works via a log/diary that records the history of the past and creates future scenarios. Its similar to a television cartoon show format.
+There are arcs/seasons/chapters/albums that are a full war. Every campaign in that war is an episode, meanwhile each battle is a scene that happens within that episode.
+Using a dice and a set of heuristic decision tree sheets that are controlled/decided by said dice - or by popular vote - the next episode or season are then generated based on these rules.
+
+Campaigns are generated in chains that makes sense - with continuation that often picks up where the previous battle left off.
+
+Individual battles, while more free to be anything that players want it to be, still has relation to the arc/season in some way, thus possible one-off battles will also be chosen by a heuristics roll.
+
+Furthermore, the specifics of battles or campaigns may also be procedurally generated via dice roll. Starting conditions, army or even individual unit strenths/ratio/balance/imbalance, special events (like weather - strong wind that automatically pushes all/some/one units 10cm to the left) or even main objectives or side objectives.
+
+
+--
+
+Index of documents:
+
+Introduction - gives an overview of the game.
+Unit Designer - helps you build characters, vehicles and titans for your team.
+Weapon Designer - helps you build weapons and abilities that your units have equipped.
+Game Rules - how to play the game; how it flows from start to end.
+AI Control - how to operate an Artificial Intelligence driven player for playing solo or for spectating two AI opponents fight each other.
+Campaign Maker - helps you make campaigns and string them together into a continuous persistent metagame.
+Print Sheet - a helpful condensed A4 paper you can print out - contains distance information for movement, weapons so that you don't have to memorize them.
+
+Continue to the Unit Designer next to begin learning how to craft your epic army!
+
+
+
+░░░░░░░░░░░░░░░░░░░░░░█████████
+░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███
+░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███
+░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░░░░█▒▒▒▒▒█░░░██▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒███
+░░░░░█▒▒▒█░░░█▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒▒▒██
+░░░█████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░░░█▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒██
+░██▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██
+██▒▒▒███████████▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒██
+█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒████████▒▒▒▒▒▒▒██
+██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░█▒▒▒███████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░██▒▒▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+░░████████████░░░█████████████████
+
+Credits to fsymbols.com for ASCII art
+Game Design by Reactorcore
+
+
+
+
+▀█▀ █▀▀▄ ▀▀█▀▀ █▀▀█ █▀▀█ █▀▀▄ █──█ █▀▀ ▀▀█▀▀ ─▀─ █▀▀█ █▀▀▄ 
+░█─ █──█ ──█── █▄▄▀ █──█ █──█ █──█ █── ──█── ▀█▀ █──█ █──█ 
+▄█▄ ▀──▀ ──▀── ▀─▀▀ ▀▀▀▀ ▀▀▀─ ─▀▀▀ ▀▀▀ ──▀── ▀▀▀ ▀▀▀▀ ▀──▀
+
+
+▀█▀ █▀▀▄ ▀▀█▀▀ █▀▀█ █▀▀█ █▀▀▄ █──█ █▀▀ ▀▀█▀▀ ▀█▀ █▀▀█ █▀▀▄ 
+░█─ █──█ ──█── █▄▄▀ █──█ █──█ █──█ █── ──█── ░█─ █──█ █──█ 
+▄█▄ ▀──▀ ──▀── ▀─▀▀ ▀▀▀▀ ▀▀▀─ ─▀▀▀ ▀▀▀ ──▀── ▄█▄ ▀▀▀▀ ▀──▀
+
+
+█ █▄░█ ▀█▀ █▀█ █▀█ █▀▄ █░█ █▀▀ ▀█▀ █ █▀█ █▄░█
+█ █░▀█ ░█░ █▀▄ █▄█ █▄▀ █▄█ █▄▄ ░█░ █ █▄█ █░▀█

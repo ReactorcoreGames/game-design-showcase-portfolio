@@ -1,0 +1,3 @@
+Kinetic Minifig Fights
+
+(minifig only version of ETCC, using the original V1 idea of physics gameplay. No need for custom character sheets, use one reference info sheet for weapon classification, use one tape measure to measure distances, use one dice (per player for convenience, but one dice only is possible too))

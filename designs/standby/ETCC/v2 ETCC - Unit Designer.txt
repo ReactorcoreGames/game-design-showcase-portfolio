@@ -1,0 +1,490 @@
+
+███████╗██████╗░██╗░█████╗░  ████████╗░█████╗░██╗░░░██╗      _ 
+██╔════╝██╔══██╗██║██╔══██╗  ╚══██╔══╝██╔══██╗╚██╗░██╔╝     [_] 
+█████╗░░██████╔╝██║██║░░╚═╝  ░░░██║░░░██║░░██║░╚████╔╝░   /:   :\
+██╔══╝░░██╔═══╝░██║██║░░██╗  ░░░██║░░░██║░░██║░░╚██╔╝░░  ()'---'()
+███████╗██║░░░░░██║╚█████╔╝  ░░░██║░░░╚█████╔╝░░░██║░░░    | | |
+╚══════╝╚═╝░░░░░╚═╝░╚════╝░  ░░░╚═╝░░░░╚════╝░░░░╚═╝░░░    [=|=]
+
+
+░█████╗░░█████╗░░█████╗░██╗░░░░░  ░█████╗░░█████╗░███╗░░░███╗██████╗░░█████╗░████████╗
+██╔══██╗██╔══██╗██╔══██╗██║░░░░░  ██╔══██╗██╔══██╗████╗░████║██╔══██╗██╔══██╗╚══██╔══╝
+██║░░╚═╝██║░░██║██║░░██║██║░░░░░  ██║░░╚═╝██║░░██║██╔████╔██║██████╦╝███████║░░░██║░░░
+██║░░██╗██║░░██║██║░░██║██║░░░░░  ██║░░██╗██║░░██║██║╚██╔╝██║██╔══██╗██╔══██║░░░██║░░░
+╚█████╔╝╚█████╔╝╚█████╔╝███████╗  ╚█████╔╝╚█████╔╝██║░╚═╝░██║██████╦╝██║░░██║░░░██║░░░
+░╚════╝░░╚════╝░░╚════╝░╚══════╝  ░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░
+
+
+Epic Toy Cool Combat
+
+A tabletop game using lego, action figures, toys or diy creations
+
+
+██████████████████████████████████████████████████████▀█████████████████████
+█▄─██─▄█▄─▀█▄─▄█▄─▄█─▄─▄─███▄─▄▄▀█▄─▄▄─█─▄▄▄▄█▄─▄█─▄▄▄▄█▄─▀█▄─▄█▄─▄▄─█▄─▄▄▀█
+██─██─███─█▄▀─███─████─██████─██─██─▄█▀█▄▄▄▄─██─██─██▄─██─█▄▀─███─▄█▀██─▄─▄█
+▀▀▄▄▄▄▀▀▄▄▄▀▀▄▄▀▄▄▄▀▀▄▄▄▀▀▀▀▄▄▄▄▀▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▀▄▄▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀
+
+
+There are two main types of characters...
+
+1. Minifigures:
+░░░░░░░▄█▄▄▄█▄
+▄▀░░░░▄▌─▄─▄─▐▄░░░░▀▄
+█▄▄█░░▀▌─▀─▀─▐▀░░█▄▄█
+░▐▌░░░░▀▀███▀▀░░░░▐▌
+████░▄█████████▄░████
+
+░▄░█░░░▄▀▀▀▀▀▄░░░█░▄░
+▄▄▀▄░░░█─▀─▀─█░░░▄▀▄▄
+░░░░▀▄▒▒▒▒▒▒▒▒▒▄▀░░░░
+░░░░░█────▀────█░░░░░
+░░░░░█────▀────█░░░░░
+People, humans, androids, robots, aliens... anyone with two arms that can enter inside or get on top of a machine or creature to ride it, to control it.
+They're usually about 4cm tall.*
+
+...and
+
+2. Machines or Creatures:
+Anything larger than a Minifigure. 
+░░░░░░░░░░█					
+░░░░░░░░▄▄█▄▄				
+░░░░▀▀▀██▀▀▀██▀▀▀			
+▄▄▄▄▄▄▄███████▄▄▄▄▄▄▄		
+░░█▄█░░▀██▄██▀░░█▄█		
+It can be a vehicle that requires a pilot or an autonomous robot that can act on its own.
+
+░░░░░▄▄▄▄▄░▄░▄░▄░▄
+▄▄▄▄██▄████▀█▀█▀█▀██▄
+▀▄▀▄▀▄████▄█▄█▄█▄█████
+▒▀▀▀▀▀▀▀▀██▀▀▀▀██▀▒▄██
+▒▒▒▒▒▒▒▒▀▀▒▒▒▒▀▀▄▄██▀▒
+It can also be a large animal, monster or any other living creature - be it wild or intelligent. It can be organic, artificial, magical or cyborg.
+(smaller animals don't apply because they're often used as weapons or abilities instead, sort of like pets or companions that a minifig commands.)
+
+--
+
+Machines/Creatures are further split into 3 size classes:
+
+
+Steed:
+───────────▀▄
+──█▄▄▄▄▄███▀▄─▄▄
+▄▀──▀▄─▀▀█▀▀▄▀──▀▄
+▀▄▀▀█▀▀████─▀▄──▄▀
+──▀▀──────────▀▀
+
+░░░░░░░░░░░░░░░░▄██
+░░░░▄████▄▄▄▄▄▄███████
+░░▄█▀████████████▀
+░▄▀░██▀██▀▀▀▀▀██▀▀▄
+░░░░█▄░▀█▄░░░░▀█▄▀▀
+
+A lesser vehicle, mount or creature that is nevertheless larger, tougher or stronger than an average person but not too big. 
+Often they have an exposed driver seat.
+Examples - Horse, bike, motorcycle, small car, jetski, small boat, crocodile, bear, cart, small power armor/exosuit, small gun turret, wheelchair, golems, small dragons, compact space fighters, forklift, ultralight airplane, tent, hut, camp.
+Between 5cm to 10cm in size.*
+These are commonly lego sets that cost 5-10 euros.
+
+
+Vehicle:
+───────▓▓╬▓
+──────▓▓▓║▓▓
+─────▓▓▓▓╬▓▓▓▓
+░░▄░▓▓▓▓▓║▓▓▓▓▓░░░░░
+░▀████████████████▀░░
+
+▄█▀─▄▄▄▄▄▄▄─▀█▄
+▀█████████████▀
+────█▄███▄█
+─────█████
+─────█▀█▀█
+
+A proper full sized vehicle or creature. Larger, longer, bulkier, powerful, tougher or more complex than the average steed. 
+Often they have a closed and protected driver seat. Can also carry multiple passengers.
+Examples - Jetfighter, big sized dragon/dinosaur, main battle tank, armored personnel carrier, medium cars/trucks/boats/planes, stationary cannon turret, mobile artillery, medium sized mecha, battle robot, attack helicopter, UFO, big mutant monster, oversized super animals, starfighters, frigates, lesser capital naval ships or space ships, train cars or locomotive, submarine, bionicle characters, action figures, bus, airliner, bomber, a regular house, hovercraft, combat mechs, heavy construction vehicles.
+Between 10cm to 20cm in size.*
+These are commonly lego sets that cost 15-50 euros.
+
+
+Titan:
+
+──────▄▌▐▀▀▀▀▀▀▀▀▀▀▀▀▌
+───▄▄██▌█░░░░░░░░░░░░▐
+▄▄▄▌▐██▌█░░░░░░░░░░░░▐
+███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▌
+▀❍▀▀▀▀▀▀▀❍❍▀▀▀▀▀▀❍❍▀
+
+─────▄████▀█▄
+───▄█████████████████▄
+─▄█████.▼.▼.▼.▼.▼.▼▼▼▼
+▄███████▄.▲.▲▲▲▲▲▲▲▲
+████████████████████▀▀
+
+Gigantic mega machines or massive creatures that push the limits of reality. Far larger than vehicles and overwhelmingly more powerful than any other unit in the entire game.
+Heavily protected, can potentially carry a lot of things.
+Examples - Giant mecha, huge battlemechs, naval battleships, mobile fortresses, carrier ship, heavy lift dropship, assault gunship, big super robots, mythical mega monster/ultra dragon/animal beast, colossal giants, heavy weapons platform, fortified bunker base, large multi floor building, large submarines, starships, space stations, huge aircraft/boat/land vehicle.
+Anything that clearly exceeds 20cm or approaches/surpasses 30cm in size.*
+These are commonly lego sets that cost 60-200 euros.
+
+--
+
+*Note1: these scales are merely suggestions, rough estimates. Once you start building Units with the parameters further on, you'll get to evaluate for yourself if something belongs more to another machine/creature class despite its size being smaller or bigger than the guideline suggests.
+
+As an example, things like blimps, long boats, long trucks, civilian airliners may be large, but they're not necessarily designed for combat - lacking both in armor and hardpoints for weapons/abilities so they would better suit the vehicle class rather than the titan class.
+
+Meanwhile something like a compact yet dense battle machine with a lot of weapons and modules may be small enough to fit in the Steed class, but functionality wise it would work better as a Vehicle class unit.
+
+Generally, functionality takes priority over size considerations when determining if something is a Steed, Vehicle or Titan.
+
+--
+
+*Note2: these are merely the original scale this game was designed with, it is fully possible to use the same ruleset of this game for smaller/compact scale characters and vehicles - like fleet vehicles that are essentially tiny miniatures of giant vehicles, battleships and spacecraft.
+
+For example, theres this tabletop Lego wargame called 'Mobile Frame Zero: 001 Rapid Attack' where a human minifig is merely a 1x1 brick, while the mecha are compact, less than 10cm in size.
+
+Or even more extreme case, theres 'Mobile Frame Zero: 002 Intercept Orbit' which is about starship combat where the mecha are mere a 1x1 brick, while even large capital starships are usually less than 15cm in size.
+
+The the latter example, original ranges can be used or they can be halved to make the game fit into a smaller space.
+
+--
+
+
+
+█░█ █▄░█ █ ▀█▀ █▀
+█▄█ █░▀█ █ ░█░ ▄█
+Units:
+
+I call any characters/minifigs/machines/vehicles/creatures/monsters/robots a "unit". 
+They're a 'combat unit' that you may control - either directly or by riding/piloting them through another unit.
+
+
+Each unit commonly has an armor class, built-in weapons or abilities, special functionality and hardpoints to attach addons that are externally mounted weapons or abilities.
+
+
+--
+
+
+█▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█   ▀█▀ █░█ █▀█ █▄░█   ▄▀█ █▀▀ ▀█▀ █ █▀█ █▄░█ █▀
+█▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄   ░█░ █▄█ █▀▄ █░▀█   █▀█ █▄▄ ░█░ █ █▄█ █░▀█ ▄█
+Player turn actions:
+
+This game uses a 3 Unit and 3 Action Turn System.
+
+Each turn, player may select up to 3 of their unit that want to command for that turn while the rest will remain dormant. 
+
+Once selected, they commit to using only those for that turn. Each turn you can select any 3 units from your deployed army again. 
+
+Per each of these 3 units, each unit has 3 actions it can take.
+
+--
+
+List of available actions:
+
+Move
+Attack
+Use Ability 
+Regenerate
+Grab/Install/Operate/Mount/Board/Bail 
+
+These can be combined and used in any order, any quantity.
+
+Here are some tactical examples:
+
+Situation:
+Actions used:
+
+Situation:
+Actions used:
+
+Situation:
+Actions used:
+
+Situation:
+Actions used:
+
+
+During an attack, first the attacking player tries to roll dice for a successful hit - if they succeed, the targeted defending player must roll to dodge. Dodge rolls are free and they happen with each attack roll - even if a single attack hits multiple times per action - every hit has a chance to dodge and requires a seperate dodge roll.
+
+--
+
+The idea/logic behind this 3 Unit & 3 Action system is that it forces player turns to stay short, even if a player has a lot of units in their army (9, 20, 45 or more). This keeps the game fast paced and tactical, giving both players enough options but preventing each player turn from taking too long, especially if their army is numerous.
+
+--
+
+
+▄▀█ ▀█▀ ▀█▀ ▄▀█ █▀▀ █░█ █▀▄▀█ █▀▀ █▄░█ ▀█▀ █▀
+█▀█ ░█░ ░█░ █▀█ █▄▄ █▀█ █░▀░█ ██▄ █░▀█ ░█░ ▄█
+-or-
+▄▀█ █▀▄ █▀▄ █▀█ █▄░█ █▀
+█▀█ █▄▀ █▄▀ █▄█ █░▀█ ▄█
+Addons/Attachments: 
+(note, I use both terms interchangably - addon and attachment in this game are the same thing, its up to you to choose which you want to call it.)
+
+Addons/attachments are central to this game - they determine the health of a unit but also act as dynamic physics influenced objects that can be knocked off a unit.
+
+As an example, a regular minifig consist of a torso with arms and head, as well as legs.
+For each arm, a minifig can equip a single weapon - as an attachments weapon.
+For the head, a minifig can equip a hat - as an attachments armor plate piece.
+
+In combat, when an opponent hits the minifig with an attack, the defending player - if they failed to dodge the attack - they must choose one of their precious attachments and physically remove it from the minifig, then place them according to the distance of the attacker's weapon's knockback distance.
+
+In this way, after 3 succesful hit a fully armed minifig has lost all their attachments. They can still move and use fists to attack the opponent but they lost both the functionality of the attachements they once had as well as the protection that they offered to the minifig.
+
+The next shot will disable the minifig's method of propulsion - legs - and force the minifig to crawl, becoming slow to move.
+
+And the final shot will kill and remove the minifig permanently from the battle.
+
+--
+
+The cool thing about attachments is that they can be retrieved to heal the unit back to its original starting condition. Doing so costs an action and requires a dice roll to succeed. A minifig must first move itself to be close enough to its lost part, so theres an element of risk involved if the enemy still has a line of sight on your unit.
+
+Furthermore, the opponent can also choose to deny an item from their target trying to recover their lost attachment; they can attack that loose attachment directly to knock it away further, beyond the reach of the minifig, forcing the target to chase after it and waste more actions if they still want to retrieve it.
+
+--
+
+For machines/creatures, its the same mechanics, except they can carry more attachments and have far more diverse functions than a limited minifig can. Where a minifig may only carry 3 addons, a machine/creature may carry 5(steed), 10(vehicle) or 20(titan) - depending on size class, respectively.
+
+--
+
+The entire game relies on is for players to create units that have easily removable and reattachable components. This is important as it is the measure of health for a unit.
+
+
+█░█░█ █▀▀ ▄▀█ █▀█ █▀█ █▄░█ █▀ ░░▄▀ ▄▀█ █▄▄ █ █░░ █ ▀█▀ █ █▀▀ █▀
+▀▄▀▄▀ ██▄ █▀█ █▀▀ █▄█ █░▀█ ▄█ ▄▀░░ █▀█ █▄█ █ █▄▄ █ ░█░ █ ██▄ ▄█
+Weapons/Abilities:
+
+Virtually a single machine/creature can have unlimited amount of built-in weapons or abilities - however, they should be visible and clearly identifiable as a weapon for the opposing player to accept and consent to a weapon's or ability's validity.
+
+Representing components, weapons and functions physically on a unit is an important part of the game as the unit themselves act as the visual feedback that tells all participating players about the capabilities and parameters of a unit. In other tabletop wargames, these are often defined by an arbitrary stat card/sheet, but here that is not the case - everything works on the logic of "what you see is what you have".
+
+--
+
+Weapons and abilities come in two varieties; built-in and as an attachment/addon. 
+
+Attachment/addon based equipment is superior to a built-in weapon/ability and addons come with several benefits that built-in weapons lack. They're often more versatile or otherwise better than a built-in counterpart. As the main drawback, addon weapons/abilities can be lost but also recovered during combat.
+
+Built-in weapons/abilities cannot be detached from the unit and they can be used regardless of damage to the unit, but they often require a unit to rotate to face the target to be able to use them, costing more actions and thus being able to attack less often while leaving blindspots/weakspots exposed for the enemy to exploit.
+
+--
+
+What is a weapon?
+
+Weapons deal damage. They have a size class, they have a range, they have optional knockback.
+
+A weapon may either require a direct line of sight, or it can be an indirect weapon that requires enough height or lenght to fly/curve over an obstacle to hit a target.
+
+Lorewise, performing an attack will fire a complete salvo of the weapon, regardless of what it is nor how it functions; as long as the range requirement is met, theres a clear path for the projectile to reach the target and the target's armor class is not stronger than the weapon - then the weapon will shoot/project/swing enough firepower to deal enough damage to make the opponent lose a single attachement/addon.
+
+Commonly: One attack = one attachement loss.
+
+Some weapons can attack multiple times and cause multiple hits per action, but the universal logic of 1 attack = 1 hit still applies here too.
+
+--
+
+Additionally, a weapon may also have special attributes: 
+
+Blast radius/bounce/electric arc - for things like explosions, smart weapons, lightning guns. Also known as Area of Effect (AoE).
+
+Penetrating - pierce through multiple units or even penetrate through walls, hitting anything in a straight line - for things like railguns, super lasers, beam cannons.
+
+These attributes are only available to higher tier weapons. Weapons below a certain size cannot use them. The highest weapon size can even combine to have both Penetrating *and* a Blast Radius/Bounce/Arc effect applied, firing in a straight line and causing an explosion/bounce/arc at every target that was along the line of attack.
+
+--
+
+There are also special types of weapons:
+
+Ejecting - willingly launch/throw/toss a weapon at the opponent with the potential to deal multiplied damage. This is the equivalent of sacrificing your own health to score a big hit on the opponent. Only weapons that are designed to be thrown/launched are valid - things like rocket fists, spears, axes, knives. The amount of damage depends on the size class. 
+
+Minion/pet/critter attack - Send out a drone, cat, bees, dog, spider, parrot, ghost, elemental or any other thing that isn't itself a unit and command it to go damage the opponent - then promptly returning back to their owner. Functionally it works both as a direct line of sight *and* an indirect weapon, capable of adapting to attack either way.
+
+Ejecting Minion - combining both of the above, send out a minion that doesn't automatically come back.
+
+All these are exclusively an attachment; they cannot be a built-in weapon.
+
+--
+
+What is an ability?
+
+Abilities allow a unit to perform a special action with useful effects. 
+
+They can be used as weapons too - like a ramming dash melee attack, an aura explosion, or some other unusual kind of weapon.
+
+But aside from that, abilities can help a unit move farther than normal movement can, they can alter battlefield conditions or perform special utility actions that can give a benefit to your own team or ally.
+
+--
+
+Abilities may alter the following parameters:
+
+Location of self - move farther than regular move action (rocket booster, nitro/turbo fuel, super jump, use wings)
+Location of target/ally/opponent/neutral/object - relocate something else on the battlefield (gravity gun, grappling hook, tractor beam, rope yank, push force)
+
+Deal Damage Around (originating in radius from self - i.e exhaust flame vent burst, anti-personnel grenades, defence laser matrix) - become an explosion yourself, hitting other units around you.
+Deal Damage Directed (use a built-in weapon of a unit or something that resembles a weapon - potentially combining other ability effects too.)
+
+Create/relocate temporary terrain - spawn an obstacle to deny line of sight, providing protection from a future enemy attack.
+Move existing permanent terrain/real life furniture - create advantageous ground for yourself or make the opponent's units exposed to a better attack.
+
+Assume control of opponent for how many remaining actions you have left. Cannot be used to suicide a unit - only to attack and move like a regular unit as if it was your own.
+
+--
+
+Both weapons and abilities have size/tier classes. 
+
+Bigger tiers are more overall powerful. 
+
+As weapons, they can defeat lesser or equal armor levels, create larger blast radii, cause further knockback, they can even perform multiple attacks using a single action and they can combine different special effects that lesser tiers either don't have access to or may only use one by comparison.
+
+As abilities, they can perform longer jumps, move/pull/push things further, move/pull/push larger and heavier things, take control of larger targets, hit more targets at once and/or do it more easily - requiring a lower threshold to succeed at a dice roll.
+
+Bigger tiers do have drawbacks however - they're easier to hit due to being large/wide/tall - making an attacker's accuracy grow larger at shorter distances. The largest tiers also give the opponent the choice to choose which attachment/addon should be removed if they scored a successful hit and the defender failed to dodge it - normally for smaller tiers the choice of what to remove belongs to the defender.
+
+--
+
+
+▀█▀ █ █▀▀ █▀█ █▀   █▀ █ ▀█ █▀▀ █▀   █▀▀ █░░ ▄▀█ █▀ █▀ █▀▀ █▀
+░█░ █ ██▄ █▀▄ ▄█   ▄█ █ █▄ ██▄ ▄█   █▄▄ █▄▄ █▀█ ▄█ ▄█ ██▄ ▄█
+Weapon/Ability Tiers/Sizes/Classes:
+
+--
+
+Minifig Tiers
+(Can be used by Steeds/Vehicles/Titans too.)
+
+--
+
+T1 Light Weapon
+Examples: pistols, fists, shivs, knives, sticks, rocks, knuckles, small or crude weapons. 
+Limitations: Cannot harm armored minifigs. Useless against machines/creatures. Cannot destroy super shields.
+Benefits: Does two attacks for the price of one action - attack an unprotected minifig twice. Can freely rotate to face any direction after moving and shoot/attack in any direction, even if facing away from opponent.
+
+T1 Light Ability
+Examples:
+Limitations:
+Benefits: 
+
+--
+
+T2 Medium
+Examples: blasters, rifles, swords, axes, shotguns, SMGs, ARs, machineguns, sniper rifles, chainwhips, fireball magic staff, flamethrowers and other "regular" weapons.
+Limitations: Unable to damage machines/creatures. Cannot destroy super shields.
+Benefits: Can damage armored minifigs. Can freely rotate to face any direction after moving and shoot/attack in any direction, even if facing away from opponent.
+
+T3 Heavy
+Examples: bazookas, rocket launchers, chainguns, miniguns, anti-armor rifles, recoilless cannons, "two-handed" large swords/spears/axes/hammers (note: minifigs can carry them in one hand, two-handed weapon do not exist in this game except for visual purposes), heavy grenade launchers, anti-tank weapons, mortars, large boulders, lightning strikes, fire blasts, high pressure harpoons, orange transparent chainsaw, laser cannons, plasma launchers - anything that would definitely wreck an ordinary civilian car.
+Limitations: Cannot harm heavy vehicle armor. Makes the minifig slow; see the section about unit movement action distances later on. Cannot destroy super shields.
+Benefits: Can damage light vehicle armor, hit armored minifigs. Can freely rotate to face any direction after moving and shoot/attack in any direction, even if facing away from opponent.
+
+T4 Ultra
+Examples: portable railgun, shoulder mounted ion cannon, BFG-9000, micro-nuke catapult, cruise missile launcher, giant buster sword, big gravity hammer, mega tesla coil, excalibur laser sword, multiple bundled orange transparent chainsaws. Basically oversized weapons that seem to belong more to a vehicle rather than a minifig.
+Limitations: Makes a minifig slow. Can't rotate after moving; rotating must be done as a seperate action. Must face opponent to shoot/attack them. Cannot destroy super shields.
+Benefits: Can damage heavy vehicle armor and anything weaker than that. Does two attacks for the price of one action - attack both minifigs and machines/creatures twice, even if they have heavy vehicle armor.
+
+--
+
+Machine/Creature Tiers 
+(Shared by Steed/Vehicle/Titan units - cannot be used by minifigs at all)
+
+T5 Light
+Examples: Same as T3 Minifig Heavy weapons, except optimized for a vehicle. These are essentially "light vehicle weapons" that are meant for destroying light vehicle armor and shredding minifigs. Things like .50 caliber heavy machineguns, small rockets, micro missiles, smaller claws/fangs/talons of a creature, basic exosuit/power-armor melee weapons like a spikes, smaller blades, saws, metal fists for punching, light metal kicks, lesser exosuit laser rifles and other power-armor sized firearms/energy weapons.
+Limitations: Cannot harm heavy vehicle armor.
+Benefits: double attack per one action,
+
+T6 Medium
+Examples:
+Limitations:
+Benefits: triple attack
+
+T7 Heavy
+Examples:
+Limitations:
+Benefits: quadruple attack
+
+T8 Ultra
+Examples:
+Limitations:
+Benefits: quintuple attack
+
+--
+
+
+
+Weapon classes
+
+Minifig:
+Light - pistols, fists, shivs, knives, sticks, rocks, knuckles, small or crude weapons. 
+Cannot harm armored minifigs. 
+
+
+Medium - blasters, rifles, swords, axes, effective against armored minifigs
+Heavy - anything notably bulkier than medium, effective against light/unarmored vehicles can use penetrating, arcing/ricochet, AoE elements in solo.
+Ultra - oversized absurd mega weapon, can seriously damage heavy/armored vehicles, can use penetrating, arcing/ricochet, AoE elements in multi-combination. Automatically makes a minifig slow. And makes turning around cost an action - though can still fire at a 90 degree angle. Does a double attack per action too.
+
+:
+Light - .50 cal firearm power equivalent weaponry. Same as minifig heavy. No effect on heavy vehicle armor.
+Medium - autocannons, chainguns, laser cannons, small rockets/missiles/bombs/projectiles. Same as minifig ultra.
+Heavy - plasma guns, railguns, large rockets/missiles/bombs/projectiles. Minimum necessary power to deal damage through super armor.
+Ultra - superweapons, oversized mega rockets/missiles/bombs/projectiles, mass destruction potential. Do a double hit to anything (lose two pieces per one succesful attack). Makes unit slow. Forces unit to use action to turn - though can still fire at a 90 degree angle - even if its a turret.
+
+Vehicles may also carry minifig-scale weaponry too.
+
+Steeds(not a minifig, but not a vehicle - something in between) - they can carry up to medium vehicle weapons or just minifig weapons. These can also be minor vehicles, like small cars, ATVs, motorcycles, small power armor and small exosuits.
+
+Knockback amount is determined by weapon and uses blast radius sizes.
+
+
+
+█▀█ █▀█ █▀█ ▀█▀ █▀▀ █▀▀ ▀█▀ █ █▀█ █▄░█   █▀▀ █░░ ▄▀█ █▀ █▀ █▀▀ █▀
+█▀▀ █▀▄ █▄█ ░█░ ██▄ █▄▄ ░█░ █ █▄█ █░▀█   █▄▄ █▄▄ █▀█ ▄█ ▄█ ██▄ ▄█
+Protection Classes: NEW NAME Protection Level
+
+Protection class determines resistance against weapon class/sizes. If a weapon is smaller/weaker than the armor then no damage will occur. The unit is immune to that attack and doesn't even have to dodge. It is the equivalent of trying to hit a concrete wall with a wooden stick - it won't even make a dent.
+
+These are the available armor classes:
+
+minifig - unarmored, armored
+steed - armored(minifig tier), light vehicle armor, heavy vehicle armor
+vehicle/titan - light vehicle armor, heavy vehicle armor, super shield armor*
+
+Armor class means the general material the character is built with, not any particular addon pieces that serve as armor, like hats, canopies that can be shot off.
+Any vehicle weapon will defeat a minifig armor - minifig armor is only useful in minifig vs minifig combat.
+
+Built-in protection class causes the character to be slow. This can be cancelled with addon thrusters.
+Addon armor allows character to remain fast.
+(built-in speed or built-in armor?)
+(enhanced with addons to either make up things that are lacking or boost things that already exist with )
+
+Benefit of having Minifig armor on Steed vs light vehicle armor?
+Mention steed requirement vs polar bear being just a weapon (needs atleast two studs to connect stuff to)
+
+--
+
+*Super shield armor is a specialized armor type that is limited to only covering certain directions of a machine/creature.
+
+
+
+
+
+
+
+
+
+
+Driverless machines or wild untamed creatures may become dormant unless they have an autopilot function installed or can receive remote commands via antenna, transceiver or mind link artifact.
+
+█░█ █▄░█ █ ▀█▀   █▀▄ █▀▀ █▀ █ █▀▀ █▄░█ █▀▀ █▀█
+█▄█ █░▀█ █ ░█░   █▄▀ ██▄ ▄█ █ █▄█ █░▀█ ██▄ █▀▄
+
+
+
+░█─░█ █▀▀▄ ▀█▀ ▀▀█▀▀ 　 ░█▀▀▄ █▀▀ █▀▀ ▀█▀ █▀▀▀ █▀▀▄ █▀▀ █▀▀█ 
+░█─░█ █──█ ░█─ ──█── 　 ░█─░█ █▀▀ ▀▀█ ░█─ █─▀█ █──█ █▀▀ █▄▄▀ 
+─▀▄▄▀ ▀──▀ ▄█▄ ──▀── 　 ░█▄▄▀ ▀▀▀ ▀▀▀ ▄█▄ ▀▀▀▀ ▀──▀ ▀▀▀ ▀─▀▀
+
+
+░█─░█ █▀▀▄ ─▀─ ▀▀█▀▀ 　 ░█▀▀▄ █▀▀ █▀▀ ─▀─ █▀▀▀ █▀▀▄ █▀▀ █▀▀█ 
+░█─░█ █──█ ▀█▀ ──█── 　 ░█─░█ █▀▀ ▀▀█ ▀█▀ █─▀█ █──█ █▀▀ █▄▄▀ 
+─▀▄▄▀ ▀──▀ ▀▀▀ ──▀── 　 ░█▄▄▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀ ▀──▀ ▀▀▀ ▀─▀▀
+
+UNIT DESIGNER
+Unit Designer
