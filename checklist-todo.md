@@ -11,18 +11,18 @@ Everything left to finish the portfolio, in a sensible order. Tick items as they
 - [x] Switch GitHub Pages to deploy from GitHub Actions
 - [x] Connect Cloudflare Pages to the GitHub repo (build output `site`), replacing the wrangler deploy script
 - [x] Review the `restructure` branch, merge it into `main`, push, and check both mirrors still work
-- [ ] Rename or delete the old workspace folder `C:\ClaudeWorkspace\HTML Game Design Showcase Maker`
+- [x] Rename or delete the old workspace folder `C:\ClaudeWorkspace\HTML Game Design Showcase Maker` (Reactorcore handles this manually)
 
 ## 1. Nexus page overhaul (`site/index.html`)
 
 Done first, so every page finished afterwards only needs a one-line entry.
 
-- [ ] Project cards come from a single data list (title, subtitle, page, thumbnail, blurb, tags), not hand-written HTML
-- [ ] Badges telling concepts apart from released games, and ways to browse (genre/tags, AAL universe…)
-- [ ] Articles catalog subpage (`reference/outreach/article-links.md`)
-- [ ] Links sidebar (articles, itch.io, Patreon, linktree, Discord, contact/hire)
+- [x] Project cards come from a single data list (title, subtitle, page, thumbnail, blurb, tags), not hand-written HTML
+- [x] Badges telling concepts apart from released games, and ways to browse (genre/tags, AAL universe…)
+- [x] Articles catalog subpage (`reference/outreach/article-links.md`)
+- [x] Links sidebar (articles, itch.io, Patreon, linktree, Discord, contact/hire)
 - [ ] Visual refresh with Opus. The page is a showcase in its own right.
-- [ ] Fix its SEO head: `og:url` points at the wrong address, and `og:image` should be an absolute URL
+- [x] Fix its SEO head: `og:url` points at the wrong address, and `og:image` should be an absolute URL
 - [ ] Check `hire_me/hire_me.html` still says the right things
 
 ## 2. Pilot: set the quality bar

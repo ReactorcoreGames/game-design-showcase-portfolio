@@ -32,7 +32,7 @@ A few projects already exist as shipped games (marked `released` in the manifest
 1. Read the inputs. Then write a short plan for the user: the title, the section list with what each section will argue, the palette and typography, the title animation, the diagrams, and one line for each of the five images. **Wait for approval before building.** Reactorcore reviews and tweaks plans at this stage, and it's far cheaper than reworking a finished page.
 2. Build the page at `site/projects/<slug>.html`.
 3. Write the image spec at `image-prompts/<slug>.json` (see `workflow/image-brief.md`) and run `python tools/images.py check <slug>`.
-4. Add the project's entry to the nexus (`site/index.html`).
+4. Add the project's entry to `site/projects.js` (the field reference is at the top of that file; `status` is `concept` unless the game is released, and new entries usually go near the top since list order is the "Featured" sort), then run `python tools/sitemap.py`. Pick `genres` from the fixed list in that file; add a new genre only if the game truly fits none of them.
 5. Update its status in `designs/MANIFEST.md`. For a new project, move the design file(s) from `designs/standby/` to `designs/done/`.
 
 ## Page structure

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Design Articles by Reactorcore</title>
+
+    <meta name="description" content="Sixteen game design articles by Reactorcore: games as need satisfiers, infinite metagames, procedural campaigns, multiplicative content, scope maximization, and what a game designer really does.">
+    <meta name="keywords" content="game design articles, metagame design, infinite metagame, procedural campaigns, game designer career, scope creep, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Game Design Articles by Reactorcore">
+    <meta property="og:description" content="Sixteen articles on why games matter and how to design them: need satisfiers, infinite metagames, multiplicative content and more.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Game Design Articles by Reactorcore">
+    <meta name="twitter:description" content="Sixteen articles on why games matter and how to design them.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Game Design Articles by Reactorcore",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/articles.html",
+        "author": { "@type": "Person", "name": "Reactorcore", "url": "https://reactorcoregames.github.io/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#121426">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        (function () {
+            var closed = false;
+            try { closed = localStorage.getItem("rc-links") === "closed"; } catch (e) {}
+            if (window.innerWidth >= 1400 && !closed) document.documentElement.classList.add("links-open");
+        })();
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="./"><img src="favicon.svg" alt="" width="30" height="30">Reactorcore <span>Game Design Portfolio</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="./#designs">Designs</a>
+            <a href="articles.html" aria-current="page">Articles</a>
+            <a class="nav-optional" href="./#team-up">Team up</a>
+            <button class="drawer-toggle" type="button" data-drawer-toggle aria-controls="links-drawer" aria-expanded="false">See my work</button>
+        </nav>
+    </header>
+
+    <div class="page">
+        <main class="wrap">
+            <section class="page-hero">
+                <p class="eyebrow">Reactorcore · Game design writing</p>
+                <h1>The thinking behind the designs</h1>
+                <p>Every design in this portfolio rests on the ideas in these articles: that games are satisfiers of real human needs, that a game can keep giving through an infinite metagame instead of ending, and that the industry's defaults are worth questioning.</p>
+                <p>They're long-form and opinionated, written for designers, developers, employers, and anyone who wants games to be more than a way to pass time. Each one opens as a Google Doc.</p>
+            </section>
+
+            <div id="featured"></div>
+            <div id="shelves"></div>
+
+            <noscript><p class="empty">This catalog needs JavaScript to display. The articles are also listed on <a href="https://www.patreon.com/ReactorcoreGames">Patreon</a>.</p></noscript>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrap">
+                <div>
+                    <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                    <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                    <p>Homepage: <a href="https://reactorcoregames.github.io/" target="_blank" rel="noopener">reactorcoregames.github.io</a></p>
+                </div>
+                <div>
+                    <p>Reactorcore Games · <span data-year>2026</span></p>
+                    <p><a href="./">← Back to the design portfolio</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="articles.js"></script>
+    <script src="site.js"></script>
+    <script>
+        (function () {
+            const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+            const link = a => `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a>`;
+
+            const featured = ARTICLES.find(a => a.featured);
+            if (featured) {
+                document.getElementById("featured").innerHTML = `
+<article class="featured">
+  <img class="core-mark" src="favicon.svg" alt="" width="120" height="120">
+  <div>
+    <p class="eyebrow">Start here · ${featured.minutes} min read</p>
+    <h2>${link(featured)}</h2>
+    <p>${esc(featured.summary)}</p>
+    <span class="btn btn-primary" aria-hidden="true">Open the article</span>
+  </div>
+</article>`;
+            }
+
+            let n = 0;
+            document.getElementById("shelves").innerHTML = SHELVES.map(shelf => {
+                const list = ARTICLES.filter(a => a.shelf === shelf.id);
+                const cards = list.map(a => {
+                    n += 1;
+                    return `<article class="article">
+  <p class="num">${String(n).padStart(2, "0")}</p>
+  <h3>${link(a)}</h3>
+  <p>${esc(a.summary)}</p>
+  <div class="meta"><span>${a.minutes} min read</span><span class="open">Open ↗</span></div>
+</article>`;
+                }).join("");
+                return `<section class="shelf shelf-${shelf.id}" aria-labelledby="shelf-${shelf.id}">
+  <div class="shelf-head"><h2 class="section-title" id="shelf-${shelf.id}">${esc(shelf.label)}</h2><p>${esc(shelf.note)}</p></div>
+  <div class="articles" data-n="${list.length}">${cards}</div>
+</section>`;
+            }).join("");
+        })();
+    </script>
+</body>
+</html>

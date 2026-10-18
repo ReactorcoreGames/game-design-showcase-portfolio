@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reactorcoregames.github.io/game-design-showcase-portfolio/sitemap.xml
