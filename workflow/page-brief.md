@@ -17,6 +17,16 @@ The tone is professional yet blunt, layperson-friendly but with real technical d
 
 A design file can hold several games. The manifest says which part feeds which page. If you find a split the manifest doesn't cover, stop and ask.
 
+## Titles and outside IP
+
+- If the design names the game, use that name. If it doesn't, propose a title in the plan that fits the game's mood and feel. AAL-universe games get an `AAL` title.
+- Some designs grow out of someone else's game, IP or trademark (BLAME!, UNO, LEGO, Smash Bros, Metroid…). Credit the inspiration openly on the page ("inspired by…"), but the title and every in-game name (characters, weapons, factions, card or brick names) must be original stand-ins. The design doc's own shorthand for borrowed things doesn't carry onto the page.
+- Never target real-world groups, nationalities or identifiable people. Where a design's villains are drawn from real groups, turn them into fictional archetypes that keep the same dramatic function.
+
+## Released games
+
+A few projects already exist as shipped games (marked `released` in the manifest). Their page still presents the design: what the game is, why it's built the way it is, how it plays. On top of that it has a prominent link to play it, and it describes the game as released rather than as a concept. Use the game's real screenshots and promo art for the five image slots instead of generating images.
+
 ## Process
 
 1. Read the inputs. Then write a short plan for the user: the title, the section list with what each section will argue, the palette and typography, the title animation, the diagrams, and one line for each of the five images. **Wait for approval before building.** Reactorcore reviews and tweaks plans at this stage, and it's far cheaper than reworking a finished page.

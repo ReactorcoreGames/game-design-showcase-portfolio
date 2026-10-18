@@ -61,7 +61,4 @@ Only `tools/images.py gen` without `--dry-run` spends anything. Run it only when
 
 ## Status and next steps
 
-- 37 pages published, all due for an Opus rewrite (`revisit` in the manifest). 5 of them still lack a story image.
-- 29 standby projects identified, ~145 images to generate.
-- Nexus rework planned: make adding a project a one-line data entry rather than a hand-copied card. Also from the old plans (`reference/outreach/article-links.md`): an articles catalog subpage and a links sidebar.
-- Optional: `python tools/images.py recompress --apply` re-encodes the existing images at quality 82 (39 MB → 27 MB). Not yet run.
+Progress is tracked in `checklist-todo.md`, Reactorcore's own checklist. Tick items there as they're finished. The manifest records the per-project details.
