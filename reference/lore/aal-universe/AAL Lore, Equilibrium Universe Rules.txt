@@ -1,0 +1,387 @@
+Planet Warfare/PSRC - Equilibrium Universe Rules
+
+Everything within the universe has the goal of becoming stable / dormant / idle / settled.
+However forces within the universe still cause things to generate events or create dynamism in various ways.
+(Ex. gravity slows and forces things to clump up, but weather events, biology, life activity, anomalies and chemical processes cause erosion, growth, reshaping)
+The Wilderness is the exception to this, seeking to eventually eject anything that was sent into it, often reshuffled, combined, purified or corrupted.
+
+
+
+CHAOS INTERVENTION SYSTEM
+=========================
+
+Chaos prevents lag by a spectrum:
+
+|Full Perf + extra to spare
+|
+|Normal Perf
+|
+|Getting spicy
+|
+| <- between these two and also below, apply various Chaos System procedures to kill lag, discourage player action that leads to lag (but with benefits of sometimes doing so by abusing this system) and prevent further lag from manifesting. Such as forced fusing of clumps, teleportation of material into groups to clump them together, slowing down flow of time, 
+|
+|Lag start <- Never end up here or below at any cost! Always stay above this! Critical!
+|
+|Lag Medium (Becoming outright unplayable)
+|
+|Lag Severe 0.1 FPS
+
+
+
+PART OF THE UNIVERSE
+====================
+
+Clump System
+At the lowest chunk level that by maximum go down to 10m2 in size (32px/m standard, so 320px, so quarter of screen on 1280x wide resolution), digging / cutting beyond this point or beyond the point of a certain matter density value, the chunk will break down into clumps - small 1 meter or 1/2 meter balls, squares, triangles with the color and texture overlay determined by composition + possible paint/pigment.
+(maybe 8m2 or 4m2 though?)
+The small clumps are the smallest possible unit of solid terrain mass. However they are also the least stable and will automatically fuse into the surrounding terrain or air or nebula or field or sector if left unattended. Effectively they get pressed by gravity, radiation, entropy, microbacteria, nature, erosion and weather to dissolve back into surrounding chunks.
+
+Chunks System 8m-100m
+Larger than clumps, chunks are the most prominent and somewhat stable form of terrain / liquid / gas / plasma / other matter in the world at player level. Each chunk may be a square, circle or triangle and may overlap with other chunks. If they do overlap, then they're fused or connected to a larger mass entity, like a region.
+
+NOTE-Player view is usually 1280x1024, so 40 meters at default level, while 80 meters at max zoom out (2x vision when human, any vision past this range is mipmapped and simplified or done via virtual HUD representation). Player max zoom in is 40 / 6 = 6 meters (600% zoom in).
+
+Region System 100m-10000m
+Bigger than chunks, they're a collection of chunks. They also cast a "shadow background" - a larger vague shape of the collective region that could be considered "underground" or "within the bowels" of said region. If player starts to dig out chunks and goes deeper into the area and there are still chunks around them in their "tunnel" they've made, then a dynamic background will be generated and obscure farsight horizon vision. This "shadow background" may have a color and texture, but also has muted saturation and darker brigthness compared to actual solid chunks / terrain etc.
+
+NOTE- Regions differ from Continents and Celestials in that while the "shadow background" of a celestial and continent vanish as regions come into view, regions actually stay visible long after chunks and even clumps are visible on ground level. Regions are effectively the defacto "real shape" of whatever they are part of, be it planet, building or ship, with chunks defining the actual terrain, while regions providing the "web/net/frame/pinboard" that they're attached to and part of.
+
+Continent System 100m-10000km
+Even larger still than regions, these encompass regions. Usually they are only visible when they're far away and are used to breakdown large celestials into continents, to better narrow down which regions to load / unload / ignore when a player is traveling a celestial. They eclipse a region with their own "shadow background" that would appear in the horizon if an entire region were to be destroyed or removed on a celestial.
+
+NOTE- Above mentioned "shadow backgrounds" are somehow programmatically generated, thought I do not know how. Mainly I want it to be possible to gradually split a large celestial or make a really deep and large hole in them - where if you fall / go into it, you'd be underground and unable to see the farsight horizon, since the celestial eclipses the view in some way through this "shadow flanking background" thing.
+
+NOTE- Continents and regions can be as small as the minimum size and not even fill that. If this is the case and their mass is too low for a major gravity effect, then they are not classified as a celestial, but an entity, which is not a major galactic object that would play a role in the large scale gravitational fields of the star system, galaxy or a super cluster. Thats the difference between an entity and a celestial. Still, entities do behave similarly to celestials in terms of visual appearance; first as a dot, then as a square or circle, albeit much closer to the edge of the farsight horizon than a celestial, which appear more closer to the center instead. Because they are larger in size.
+
+Celestial System 100km-max width limit (1M km)
+Usually only visible very far away in the horizon on a clear star sky. These appear as a circle at medium distances and as a dot at far distances.
+
+NOTE-All the above do not only support planets and other round celestial or terrain objects. They also apply to megastructures and can be used to construct
+
+
+
+MISCELLANEOUS
+=============
+
+Time progression resolving reentry to unloaded areas. (effects of erosion, decay, regeneration, previous events decided, major events factored in etc.)
+
+Gravity operates on range limits and thresholds. If something is too far or too heavy (resisting the pull), then it doesn't get pulled in.
+
+What happens is that celestials tend to settle at a specific point in space and eventually stop moving. 
+
+Instead of stars being active 100% of the time, they pulse between cold and hot states, simulating daynight cycles. 
+
+Moving planets, stars and megastructures is possible and it is possible to crash a planet into another planet, with devastating results to anything at the point of contact and around the surfaces through second hand effects like extreme weather and geodisasters.
+
+The universe automatically tries to disperse regions, continents, celestials into less dense, less split configurations. Sometimes this causes circumstances that lead to a build-up and then a burst release, such as a quake, tsunami, explosion, eruption or anomaly, depending on what is the thing that is bursting.
+
+In celestials, the parts make up the whole, but the whole influences the parts. 
+(ex. chunks, regions and continents shape the celestial's attributes and appearance, but the celestial as a whole affects all these parts through gravity, compression, fusing, rearrangement and chaos stabilization measures)
+
+
+
+LOD SYSTEM
+==========
+Level of distance / Mipmapping (MIP = latin "much in small space") is a principle by which the entire universe is shown. Everything exists and is alive, but only things close to the player are most detailed and prioritised. That does not mean that the rest of the universe is inert or inactive or unloaded, but just operational at a much slower and basic level of detail. Far away celestials in the horizon only render as a tiny circle, while those even further render as a dot. Those beyond visual range are still alive as an abstract datapoint. Visually and functionally, as a player approaches the surface area of a celestial - from deep space to ground level - first they see a dot, then a circle, then that circle gains texture and gains saturation and brightness while it grows in the background, then it's continents come in to view as primitive shapes (circle or square (maybe triangle too)) from which the player will be more able to determine what type of celestial it is (a planet, star or a megastructure or some kind that is not a round circle uniform shape generally.).
+
+After this, as moving closer to one of the continents, its regions begin to become visible, also represented as collections of circles or squares (maybe triangles too) in various configurations and sizes depending on the celestial and its individual continents.
+
+Then, approaching a region, chunks - the actual terrain starts to become visible within a certain range of distance in the horizon.
+
+Closing in further, now things like main structs and sub structs come into view as generic primitive shapes (squares, circles, triangles)
+
+Getting even closer, now general larger components of these main/sub structs start to appear.
+NOTE- its worth noting that either main or substructs can become visible depending on how big they are. Its not main first, then sub after. Some subs can be bigger than mains, so its all based on actual size dimension on when they appear in the horizon. The difference between subs and mains is that subs can go inside of mains. (like a main struct could be a cargo carrier ship or hangar, while sub struct is a utility vehicle onboard said carrier / hangar.) Since subs being inside mains are by definition smaller than the main they are in (unless they're only partially inside of a smaller main), then visually it all still works out fine.
+
+These ^ "components" are essentially major features of a struct that are attached to them as addons. For buildings, these can be doors, windows, gates, antennas, machines, weapons and other things. Each of these appear based on their size, so some features will appear before others.
+
+Not yet at the ground level - visible just at the edge of the background farsight view, player can now see most objects almost fully detailed. Most major features and components are visible, along with texturing. Clumps may be visible at this level too.
+
+NOTE (all the above things mentioned in the LOD/MIPMAP section here are all rendered in the farview-horizon; a dynamic view rendered in the background, allowing the player a vision past the traditional limits of 2D sideview perspective. Objects based on size slowly shrink the farther they are from the player - eventually vanishing at a single horizon in the center. Players can see up, down, left and right. All 360' degrees.)
+
+Finally arriving to ground level - and in the actual present area - players can now see most things as intended with all details fully visible and the smallest of clumps also to be seen.
+
+Past this point, player can also use virtual interfaces to inspect individual objects in more detail for things that are not visible on the default LOD level (the one where the player is currently present in the game).
+
+
+
+MEGASTRUCTURES EXPANDED
+=======================
+
+Megastructure stabilized structure designs - resistance to celestial, continental, regional or chunk level fusing, gravity, erosion effects etc.
+Due to massive forces that attempt to settle anything in the universe, there are patterns and precautions a player can take to ensure that their megastructures will not collapse on themselves into a ball or random chunks and break anything within and around said megastructure - be it a colony, ringworld, dyson sphere, deathstar or an artificial layered planet fortress or megalopolis with hollow underground sectors.
+Its mostly to do with density of not having too tiny/small splits of parts of chunks, regions and continents. The bigger and more monolithic continents and regions, the better stability and idleness that will prevent a collapse of said continents and regions. 
+
+Same for chunks. Bigger chunks have a better time of resisting the test of time, erosion, chaos effects and decay. As a result, players can create worlds that are more peaceful and strong by building them out of less regions and continents. Or they can split and cut regions, chunks and continents in an area they want to destabilize, remix and collapse.
+
+There are consequences of things beyond a certain size and density however. If you pile too much stuff into a single area and cram it / compress it be dense, it can actually undergo a strong transformation physics/chemistry wise. A planet, moon, megastructure could collapse and begome a gas giant, a star, a black hole or even a big bang event.
+
+NOTE- big bang is not a "The" event, its an "a" event, meaning the universe is not created by a big bang, but is instead one extreme event that can happen within a universe. The universe was never created and will never end - being a perpetual thing (althought with limited space and surrounded by a wilderness area at its outer edges) - but things within the universe can lead to events like the big bang that will cause severe consequences over a large area within the universe's effective area. It is possible to survive or escape the effective radius of a big bang event, but even more so its also possible to defuse one before it goes critical. Naturally, big bang events are likely to never happen in a universe unless the player goes mad and just starts to pile more stars, blackholes, galaxies and quasars into a single location and compact them into a mass too big to stay stable. Dark areas of the universe may also become unstable and siphon material from their surroundings with more intensity, to sort of fight back against the pile up of materials in a single point in the universe.
+
+
+In regards to structs (main and sub), objects and characters, normally one would assume that they're the only mediums for representing vehicles, characters, bases, weapons and machines, but this is not the case. These objects have limits to how large they can be, since the regular screen space is 40 meters across only. Past that, you cannot build object using these components if you want to go bigger, like make godzilla or make an enormous battleship or a giant superweapon satellite. Instead, the chunks, regions, continents and even celestials are the tools for this.
+
+This means that there are size limits to how big default player LOD/Mipmap level objects can be. (relevant to PSRC!)
+For objects, the largest would be 10 meters either x or y or both. The number was derived from the minimum chunk size plus extra 2 meters, since anything larger than that should be utilizing the chunk system itself. And anything bigger than a chunk (>100 meters) should use the region, then continent and finally either a celestial or active variant of it called an Entity.
+
+
+
+PART MIN-MAX SIZES & DENSITY LIMITS
+===================================
+Basics : 
+32px / meter. 
+Average human 60px tall. 
+Screensize 1280x1024, thats 40 meters/tiles wide and 32 meters/tiles tall.
+(yes its 5:4 and not the usual 16:9 widescreen, but I need it to be more rectangular due to the omnidirectional 360' nature of the universe.)
+Min zoom 600%, max zoom 25%. Non mipmapped zoom range is 400% to 50% however. At 25%, lesser details unload.
+
+clumps & objects 0.2 to 10 meters
+chunks 4 meters to 100 meters
+regions 4 meters to 10km
+continents 1km to as big as possible.
+(celestials are a container for all continents, while continents are a container for all regions attached to it)
+entities - sizeless. They simply designate one entity as a whole, regardless of size. An entity can be an clump/object(reduced priority though), chunk, region or continent. Celestial is a type of an entity that is significant on the stellar scale of gravitational effects or other influences it may have over a wide area in space, be it radiation, civilization contents, biomass, anomalies, defences, light emission, large-scale phenomena that reach into space or would affect anything that would come into contact with the planet or its orbit.
+
+
+Celestial vs Entity system
+Things like massive space stations, battleships, cargo freighters, gigantic mecha, kaijus, mega monsters, mega fauna, mega flora, sky scrapers, megastructures, mobile nicoll-dyson star cannon fortresses, o'neill cylinders, planets, moons, stars, quasars, blackholes, asteroids, nebulae, ICBMs, cloths, signs and many others are to be possible to execute via this entire system of clumps, chunks, objects, regions and so on.
+
+From chunks and upwards - regions, continents and celestials, each of these are "containers", capable of holding things or having things attached to them. Celestials are things that have two or more continents on them. Entities are Continents on their lonesome, Regions on their lonesome or even Chunks on their lonesome. Effectively a Region (and others) that do not have a parent, activate their own flag of independent operation.
+
+That said, while celestials or other bigger than chunks may be referred to as "containers", they are actually much more than that. They have their own properties, attributes and effects that propagate to everything under and around them, such as global forces like gravity, magnetism, radiation, heat, emissions and many more.
+
+Due to the equilibrium universe and its original intent on respecting limited computer resources (memory, storage space and processing speed), there is a thing called the Density Monitor (cont below next VVV).
+
+
+
+DENSITY MONITOR
+===============
+This density monitor is the universe's self preservation mechanism against lag through the means of too many individuals splitting into existence at once at the player's level - both in the actual moment and also as a preventitive measure in the future, along with generally also settling and equalizing the universe into a more optimal form according to specific Density Limits that must not be breached.
+
+What it does in actuality, is look at how many celestials or entities or continents or regions or chunks or clumps or objects there are in a given radius - both around the player and also in the many levels of the universe, be it the region, the continent, the celestial, the solar system juristiction sector, the galactic juristiction sector, the supercluster juristiction sector and finally the universe juristiction sector as needed. The former happens more readily and actively, while the latter happens more as a passive process in the background, gradually making optimizations where there are hotspots that are too crowded and would predictibly cause lag if they were to stay there and keep growing. By gradually I mean literally its a routine that runs every 1-10 minutes, parsing through the universe zone-by-zone at a time, along side the other tasks of recalculating optimizations, extrapolating potential consequences of anything out there and executing events. Effectively as the universe is alive and breathes its events - even without the player's input or even the player being there in the "unloaded" areas, it also monitors its health against lag and other computing bottlenecks.
+
+
+
+PHYSICS FACTOR
+==============
+All clumps, chunks, objects and sprites are physics enabled. 
+Things collide and are affected by forces. 
+They may have joints (stiff or rotating or arc rotating). 
+They are also susceptible to a generic gib-centric destruction system via hit points and cohesion impulse limits. 
+Chunks in particular are susceptible to polygonal modification or atleast scale changes, while clumps can too change in size dynamically as they grow or shrink.
+
+
+
+MULTIPART MECHANISM / SYSTEM FACTOR
+===================================
+In mechanical systems, there are doors, hatches, cranes, elevators, lifters, crushers, rotators, movers, accelerators, pushers, pistons, slammers, flippers, wheels, impalers, claws(not for grabbing, use a cheaper solution for that like a "glue object" at the end of a stick that simulates the crushing pressure of claws or grabbing etc.), vibrators, agitators, shakers, wobblers, scoops, drills, spinblades, valve, gate, entertainment park rides, anything from People Playground (metronome, blender, pressure plate, button, conveyor (NOT PHYSICAL set of wheel or scrolling belts THOUGH! Too expensive. Simply use a rectangle that applies a force upon things that touch it. No wheels, no moving parts.)), catapults, trebuchets, rams, and many others.
+(no wings or aerodynamics - they are arbitrarily defined in the object mesh - be it a square, circle or triangle - as embedded attributes, but also influenced by material, size as modifiers etc.)
+
+In organic systems, there are jaws, pickers, grabbers, claws, stingers, arms, legs, tails, semi-tentacles (as little joints as possible), tongues, feelers, sensors, heads, necks, pistons, gates and other organic versions of mechanical mechanism.
+
+In general: The most important factor is to keep any mechanism - be it mechanic or organic - as cheap and basic as possible. Instead of double doors, use one door. Instead of 12 joint tentacle or tail, use 3-4 only. Failing to adhere to these things are subject to chaos system interventions, placing objects with limit violating mechanisms at a higher priority of being culled by the chaos prevention measures.
+
+The concrete different mechanics availables:
+-an object traveling along the line designated within another object (within chunk, object or region as parent).
+-an object spinning/rotating along a certain point on another parent object (again, chunk, object or region as parent).
+Variables: max speed, acceleration, explosive impulse speed, extend speed, return speed, rotational speed/accel/impulse, pathway vector2, pin point xy, collider type (phys, impale, cut, energy/ethereal/gas/field/rad)
+
+
+Lines (aka Ropes)
+
+For representing any sort of ropes, tethers, lines, strings, cables, wires and such, a simple vector line is used for all these cases. Unless there is a low-cost way to apply thickness and even texture upon said lines, they will remain as simple 1 pixel thick lines in whatever color their material is.
+
+Lines are also used as paths in mechanisms (as rails).
+
+In terms of max lenght, free lines (as ropes/cables) can be upto 20 meters only and also require both connecting point parents to be "loaded in". Meanwhile rail lines in mechanisms can be as long as a region's lenght. In such cases, this line is segmented and only the visible part is rendered, since lines become too small once they are more distant from the player.
+
+In bending lines/ropes - such as ninjaropes or corner twisting cables, I think Clonk Rage's solution (linekits) is a good one. Essentially there is a max limit of 5-10 "bend points" and exceeding them causes the line to reset and "break" if they are stretched further than their max distance allows or if they are bent more times than the bend limit allows. For lines without a bending feature and only a max lenght without any elasticity, they simply break if more force is applied upon them than they're capable of withstanding, since the lines are physical objects in a sense.
+
+
+
+LARGE LIQUID/GAS/PLASMA/ENERGY BODIES or CANVAS
+===============================================
+At the basic level, these bodies use the same parts as solid ones; clumps, chunks, regions, conts, celestials.
+The difference is that depending on the environment (gravity, pressure, )
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+WINDS, TSUNAMIS, QUAKES
+=======================
+Large-body chunk/region/continent/celestial level gas liquid solid shockwave(s) propagation.
+
+TODO++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ENERGY/MODIFIER FIELDS - MAGNETISM, RADIATION, MICROBES...
+==========================================================
+It is used for anything that 
+Global
+Attached to Region, Continent or Celestial
+
+Local
+Attached
+
+TODO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CLOUDS-FIELDS-EXCLUSION ZONES IN SOLAR SECTORS/GALAXIES
+
+
+JURISTICTIONS - LARGER THAN CELESTIAL AREAS
+===========================================
+
+SIZES:
+universe 1000Mly
+supercluster 100Mly (100Mly - 1Bly)
+local cluster 10Mly
+galaxy/cloud/starcluster 100ly - 10Mly
+quasar OR star system, any number of stars+/-planets or celestials 1 - 10ly
+celestial 0.0001ly (1000Mkm - biggest possible)
+
+
+[Universe]
+The top-most level of the world. 
+
+It has the "Wilderness" edge zones in 8 cardinal directions that scoop up, shuffle and toss out things into the universe either back at the border of the same sector they came in or randomly selected to appear via an anomaly teleportation event from within the deepest darkest voids that have been starved of any matter for a really long distance.
+
+Meanwhile in the center, there is a uniform, evenly distributed 7 super cluster circles of equal size. One at the center and Six around the center. It uses the Horizontal allignment of the circles. Between the circles, both at the edges and in the inner area there are empty voids. Nothing is there but the ambient void itself. It is the purest, darkest and cleanest areas of the universe.
+
+.OO
+OOO
+.OO
+
+
+[Super Clusters] =7
+
+Quite similar to above, but without the edge Wilderness within them. The main difference is that the 7 circles within a Super Cluster are Local Clusters and they are layed down in a Vertical allignment of the circles. To further differentiate between a SC, is that the center most Local Cluster is denser than the 6 other ones around it.
+
+OOO
+000
+.0
+
+
+[Local Clusters] 7*=49
+
+These contain a set of galaxies and voids. At this point, there are 7x7=49 total local clusters, so the amount of places for the game to remember and bring up is about to explode exponentially. This is something that needs to be kept in check. My proposal for this is to limit the amount of total galaxies in a local cluster; any more than the allowed density limit, up to a hard maximum limit, will result in chaos intervention of merging galaxies. Same for Voids.
+
+Voids are essentially just that, empty-ish deep space that have a minimum 50/50 ratio to galaxies in a local cluster.
+
+Both voids and galaxies are not of uniform size; instead they have a minimum and maximum size. Galaxies first get their size and then voids grow or shrink reacting to them.
+
+xOx
+OxO
+xOx
+
+=========================
+REDO VVVVVVVVVVVVV
+
+[Galaxies / Voids] 9*=441 (4:5 ratio split between galaxy/void, so 196/245)
+
+Inside of galaxies and voids, algorithmically distribute 8-128 points (64 on average), depending on galaxy/void size. (ALT 8-256 w/ avg 128 points)
+Points are split 50/50 between star-system/anti-star-system(smaller void).
+For galaxy, more bias on points in center + quasar at core. 
+(More dense in stars overall. More life, habitability, richer resources. Hot power[active fusion].)
+For void, more bias on points towards edges and nothing at core. 
+(Less dense in stars overall. More derelicts, anomalies, rogue celestials. Cold power[ambient higgs-boson].)
+Galaxies may optionally follow a pattern, but its not necessary. There can be clumps of stars (star clusters), spirals or tendrils of stars extending from core, forming various shapes, as long as the bias for point placement between center and edges is respected - be it galaxy or void.
+
+
+[Clouds / Voids-2]
+
+Uniform patterns and shapes that give the galaxy a symmetric fractal appearance. Defines which areas are clouded and which are clear, with a 40/60 ratio respectively.
+Depending on galaxy size, each arm may be consisting of 1-16 circles, first placed in a line, then offset to make it look like a spiral arm. But not always.
+
+
+
+[Star Systems / Smaller Voids] 8*=225792 (total celestials in universe)
+2-32 points, average 8 celestials/locations
+
+In star systems, a star of any kind is always at the core due to biggest gravity/mass (most stars are 10x times larger than a big gas giant - like jupiter - so they're dominantly larger heavier than anything else. Hence being the focal point), be it star, red giant, white dwarf, brown dwarf, neutron, pulsar or black hole.
+
+
+
+=========================
+REDO ^^^^^^^^^^^^^^^^
+
+
+[Extra: Fields, Clouds, Rings/Belts and Collections]
+
+
+
+
+
+UNIVERSAL CYCLE
+===============
+-big bang(extremenova*) event spreads material evenly across a super cluster (no bigger is possible and this is *the* hardest event to achieve in the game)
+-hypernova event levels a local group
+-giganova event levels a galaxy
+-meganova wipes out galactic-sector
+-supernova event wipes out a star system 
+-nova event wipes out a star (most likely to happen (by accident too) before any of the above are reached, nullifying the risk of above too.)
+-??? particle cool down, energy now non-destructive.
+-Time passes, gas, dust and energy clump, sometimes combine and eventually slowly accumulate
+-nebulae, vast asteroid fields
+-dwarfs, hot giants, planetoids, asteroids, comets, localized fields, clouds, debris, belts/rings ()
+-stars, planets, cool giants
+-neutron stars, pulsars, plamoons (planet moons), anomalies
+-quasars, black holes
+-stabilization reached.
+-life, civilizations, ruins, artifacts, experiments, corruption, mutation, relocations, catastrophies, disasters
+-past this point, player can interfere and accelerate or decelerate various cosmic operations, create new ones or defuse others
+-if player chooses to, they can use the final option and lead the situation back to any of the nova events, restarting that area of the universe from anew.
+Also
+-Material can be ejected via universe boundaries (just accelerate and fling stuff over the edge into the wilderness) or via anomalies/chaos that devour and warp stuff into the wilderness.
+-This material can reappear as borders ejecting material back into the main universe medium from the direction they initially went into the anomaly, from which the universe will then glide them along until they impact a super cluster, then a local cluster and gradually slow down on their own either settling into an empty spot (lucky) or colliding with a local galaxy (unlucky). The other method is appearing at dark voids - be it universe's gaps between super clusters or within local cluster's own dark void areas - via teleportation anomalies that spawn and hurl the object at a random direction and maybe even random speed (or same speed it had while traveling into the wilderness or during the chaos vanishing event).
+-More commonly universe's equilibrium operations and celestial age will bring about eventual events that may cause various shifts, mutations, disasters, changes or disruptions on many levels of the universe listed above.
+
+*'Nova' apparently means "new" in latin, but as far as I'm concerned, 'nova' means a goddamn big explosion in space. 
+*Then again, after a nova, things do actually begin anew, so it is sorta accurate in that way too.
+
+
+SOLAR SPAWN & CYCLE
+===================
+
+Order of stuff (during universe generation):
+1. Solar system size determined by its allocated diameter/size and total weight of material within the cloud or void.
+2. Then that material is randomly assigned to create any number of stars or any types, any sizes or similar sizes according to min-max thresholds, limited by the max budget alloted for stars. 
+3. More stars means less material for other non-star celestials like planets and gas giants and rings/belts.
+4. If multiple stars, then if one is sufficiently bigger than other, then it takes the center. If multiple stars are within the range of similar sizes, then they form a pair/ring in the middle with a random min-max spacing (up to 10% max distance from center of star system). If the stars are not of equal size exactly, then either two things will happen eventually with the passage of time: if the other sun is small enough, it gets absorbed into the bigger one(s). If its not small enough, it will siphon material from its not big enough friend to grow to be the same size as them. Eventually there will be an equilibrium - equally sized stars that are stable.
+5. The generated stars can be anything from a gas giant about to ignite in a giant cloud, to a dwarf in a lesser cloud, to a main sequence star of varying sizes and intensity (red - slow cool, yellow - cruise hotter, blue - fast burning ultra hot), to a red giant, red supergiant, white dwarf, black dwarf, planetary nebula, neutron star, pulsar, blackhole, supernova remnant. There can also be rogue configurations (more common in voids or edges of galaxies) with even more random configuration that normally wouldn't happen in a "ideal natural cycle" of a galaxy. Galaxies don't exist in a vacuum seperately, but instead recieve effects of their neighbours that can sometimes shuffle things around on a small or even large scale.
+6. During actual gameplay timeline, the universe would strive for equilibrium and thus do operation that gradually make things more flat, halted and equal. On a longer timescale, stars would undergo natural transformations due to age. If all the gas and dust have been formed into stable celestials and the star doesn't get any more external input from the star system or cloud/void or galaxy, then it will do what a star would do in real life; burn up its fuel, change into a red giant and collapse into a white dwarf -> black dwarf or neutron star or blackhole or super nova remnant.
+7. On rare occasions, various celestials (planets, stars, comets, asteroids, moons, clouds) might end up drifting into a star system or cloud or galaxy for whatever reasons and may shuffle the peaceful order of an otherwise naturally stable, changing the course of what future holds for that star system.
+8. Anyway back to point 5. After that, any leftover material is randomly assigned between 1-32 (minus the amount of stars) of celestials, be it planets, gas giants, clouds, rings, belts, asteroid fields, comets, individual orbiting large asteroids, moons. Plus debris fields, derelict space stations or other ruins from ancient times with possible loot and artifacts.
+9. During actual gameplay, things will form naturally over time if the conditions are right. In phases of just a cloud of dust and gas, there is some randomness where it will decide how to disperse those materials according to a dice throw(RNG), but past that things will gradually form into celestials that'll go through their cycles.
+10. Both during universe generation and actual gameplay, the universe will use its powers of equilibrium to eliminate density overflows (too many celestials in one location) or to resolve optimal positions of celestials in a star system (like moving stars to correct positions and adjusting their sizes). These mechanics also apply to the star system itself, as well as the clouds/voids, the galaxies/voids holding them and so on.
+
+
+
+SOLAR LIGHT and HABITABLE ZONES
+===============================
+
+In this 2D universe things a bit different. Its not like the real life 3D world - but something that is more optimized for a 2D world; doing things on 2D's terms instead of pretending to be 3D.
+
+Celestials do not spin. They also don't orbit. They don't move either unless already moving or moved by something. If moving and nothing is keeping the momentum up, they will gradually slow down while inside galaxies - at a slow rate, enough for them to drift quite far before they actually stop and settle.
+
+Stars do not project light constantly and they do not project it as a directional radiation. Instead, they pulse between hot/cold and light/dark cycles, gradually glowing brighter until a certain peak, then becoming dimmer until a certain low and then repeating the pattern infinitely.
+
+At a certain distance, stars are usually way too far to be more than just a dot in the sky among other dots. So from the maximum effective distance distance to the sun to the sun itself, in gradual sectors of intensity/strenght, the star will illuminate the entire zone uniformly and omnidirectionally. Essentially for a planet in the so called "luminant zone", which in itself also may have a "habitable zone" not too close to the sun and not too far away from the sun, when its "day" aka when the sun is bright, the entire planet will have this light, even the side that is turned away from the star.
+
+Its worth noting that the dark cycle is still emitting a faint light and some warmth that on earthlike planets, you still get nights with a starry sky and some warmth that can sustain life. A dark cycle of a star is not the same as the star not being there or being turned off or something. Instead its just a temporary dimmer state of the sun.
+
+This light/dark cycle can be randon on different stars in different star system, causing cool situations like some stars having really long cycles, causing month long days or short cycles, causing 2 minute days.
+
+NOTE-idea - tie the game's clock to real life's clock, so that sessions would synchronize the passage of time with the real world. (experimental, but probably not desirable feature due to risk of it infringing upon real life responsibilities. Not the right type of game for this kind of function.)
+
+
+
+INTERIOR - EXTERIOR, ENTERING OR EXITING MAIN/SUB STRUCTS + INTERACTIONS/DYNAMICS
+=================================================================================
+
+
+
+
+RENDERING LEVELS OF ELELEMENTS:
+===============================
+BG STUFF < ETHERIAL TERRAIN (GAS) < PROJECTILES < LIQUID TERRAIN < SOLID TERRAIN < OBJECTS < CHARACTERS < EFFECTS < HUD
+In that order. Effects on top of chars, but projectiles below chars.

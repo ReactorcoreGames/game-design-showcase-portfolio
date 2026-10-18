@@ -1,0 +1,59 @@
+Worms inspired clone 
+(bitmap mask destructible terrain)
+
+Title: Titanium Punk Orphans
+
+Colorful punk death metal themed kids and teenagers piloting a fusion of scrap+military mecha as a rag-tag team, taking down Rebedoan Imperial army inspired oppressor enemies (blue/green/purple skinned alien mix of brute orcs/zentraedi cyborgs/uptight elves/hybrids of these) that killed off nearly all adults of the orphans.
+
+The reason why the kids are alive is because they're essential in the Fallout 3 sense - literally unkillable due to censorship laws and moral contrivances - which allowed them to withstand the apocalypse that wiped out their parents/adults when the expansionist greedy alien Empire attacked their world. Much like in Fallout 3 though, once the kids turn 18 they become mortal again and either retire into safe support tasks (making more kids, repairing mechs, logistics, healthcare, education, etc.) or they can become a legend hero pilot with upgraded stats and abilities with the risk of permadeath.
+
+Going full Amuro Ray, the kids find the military weapons left by their parents, do crazy punk-style modifications to them like welding together multiple bazookas or duct taping twenty shotguns together, read all the manuals like gigachads and go on the offensive, knowing they're invincible. Unrelated, but the seriousness of this game can be summed up humorously as "Nanomachines, son." as a reference to Senator Armstrong from MGS Revengeance, dismissing the realism in his game.
+
+Note: the kids can still be hospilized, mildly bruised, run out of stamina and get knocked unconcious. They're not supermen, they can get tired and need rest but they are physically invulnerable. The only way to stop these menaces is to imprison them - typical 90' and 00's young teenage cartoon show tropes ala TMNT, Biker Mice from Mars, Power Rangers, Swat Kats, Dexter's Laboratory, Powerpuff Girls, etc.
+
+--
+
+Gameplay:
+Not fully refined vision yet, but generally these inspirations may be present:
+- Worms 2/Armageddon/World Party style base gameplay. Take turns to move worm, pick a weapon, shoot it, ending turn. Destructible bitmap mask terrain. Worm knockback on weapon/explosion hit. Mines, exploding oil barrels, map conventions and random map generation. Not sure about what to do with water though and player mech eliminations yet...
+- Scorched Earth/Tank Artillery Game. Alternative destructible terrain based on height, multitude of weapons, including cluster munition, dirt munitions, nukes, MIRVs, etc.
+- Super Smash Bros. Instead of crashing and burning, damaged mechs get progressively more vulnurable to knockback until eventually they are eliminated by flying out of the stage and yelling "AAAaaaAAaaaaa"
+- XCOM/Xenonauts/Long War. Persistent rag-tag squad of rotating members (punk orphan mech pilots) that sometimes get hospitilized, fatigued, removed, added, promoted. Maybe some of the abilities that let players do actions like overwatch, hunker, double move or something, but without the whole "move entire team per turn" stuff. Maybe more akin to that police spinoff, Chimera Squad maybe? Also fog of war, both hard and soft. Automatically reveal and see everything within a radius of a mech, plus line of sight vision that may only be limited by a fog or smoke mechanic (clears away on mech radius view).
+- Front Mission + Misc Ideas. Turn based wanzer combat, wanzer style weaponry but punkified/bundled/crazymode, ability to go airborne and stay afloat in air. Concussive weaponry that can cause destabilized flight and fall back to terrain. Anti-air. Area denial. Instead of manual worm control, select valid location ala Advance Wars move and shoot. Mechs can also anchor to terrain and prevent being knocked around. 
+- AAL Bunkerships. Maps feature turret emplacements, bunkers, static bunkership with various components and turrets on board, Forts style fortresses with guns/cannons/laser emplacements, armor, weakpoints, facilities and reactor to detonate. Slightly inspired by Aposimz and the floating ships of the Rebedoan Empire.
+- SDF Macross. Mainly the thematic aliens with mechs and starships attacking earth scenario, so its not about humans killing humans, but alien invaders that are cloned and don't have children vs unkillable human children.
+- Red Alert 2. Exploding props, unit designs for enemy.
+- Cortex Command B31. Fog of war, underground targets, digging.
+- Clonk Rage. Terrain - dirt, rock, hard rock, embedded chunks, chunks that spawn upon terrain damage and roll via gravity, affected by explosions, etc.
+- Cryptark. Pilot teleport tether to safety upon mech destruction.
+- (Lego) Epic Toy Cool Combat (ETCC). the movement/action system of that. Replaces regular worms movement with hops/jumps, maybe with ability to cling to surfaces (optionally?) to get around wacky devastated terrain.
+
+Gameplay is a bit goofy where both sides are heavily armed militaries, but both are incompetent. The kids are just kids, while the Rebedoan Empire is ruled by fear and corruption so nothing gets done properly, their equipment doesn't always do what it should, their designs have glaring weakpoints nobody bothered to fix and the soldiers are apathetic. Basically high quality US military crewed by motivated rebellious teenagers vs the CCP tofu dreg disposable meatwave hordes full of infighting and political backstabbing.
+
+I can have some levels where player can fight an equal force of mechs vs mechs similar to original worm vs worm skirmish gameplay, but generally the game is more aimed to be asymmetric where player uses their mechs to take out the enemy positions, bunkerships, mechs and bunkers with weapons that deal severe damage to terrain. I gotta think of how to do it where play is fair as normally in worms you play against an equal opponent and simply try to take out their team before they take out yours in a turn based combat shootout, but here there may be a need for a more dynamic move an shoot gameplay. 
+
+Maybe inspired by ETCC's 3 step moves? Like, it still has simulated moves, but you don't walk per se, but "hop/jump" to different positions, shoot your shot, hop back or elsewhere, maybe use all 3 moves to shoot shoot shoot or 3 moves to move move move. Depending on the usefulness of a single move (may its not enough to get where you need to with the same flexibility that original worms movement system allowed), maybe they can be split into different hops, like a small hop 3x that is worth single big hop, or provide mid-hop functions that users can trigger/toggle for free to augment the otherwise limited hop move system. Maybe have a crouch+hop to do a slide instead, with brakes. Generally ninja rope, parachute, bungee are freely triggered by mid-hop abilities. Blowtorch, drill, dragon punch, girder, dirt bomb, etc utility diggers or constructors are separate weapons as usual.
+
+Likewise enemy can use its 3 turns to move/fire/action one of its units, or fire 3 turrets in its connected turret system of a particular turret network belonging to a particular sector. Enemy may have multiple turret network that all count as a "separate playable whole unit".
+
+Weapons wise, similar crazy roster of guns but more grounded in themes. So something like Mole Bomb or Old Lady are replaced with something a bit more believable and less cartoony. There are things like Airstrikes, Homing missiles and Super Sheep too, even Concrete Donkey in some form. Theres more emphasis on Wanzer style weapons but multiplied, or Lost Planet VS Weapons that are slightly over the top, or Unreal Tournament 2k4, or Nali Weapons 3, including the super weapons.
+
+I envision usable weapons divided into some being tied to specific mechs, while the rest are usable by all via War Chest that any mech can access. Mechs can also have classes where they're better at one thing than another, similar to a later Worms entry that had fat worms, skinny worms, etc.
+
+Player weapon roster is somewhat rotating, inspired by the Super Core system where they can find/earn/steal weapons, use them themselves, while old weapons can degrade and break eventually, or run out of uses, needing to cycle them for new ones. Some can be found on the level as power ups, some can be grabbed from HQ before a mission as starting loadout additions, while others are rewards for completing a mission.
+
+Metagame wise, low metagame is about liberating a region from Rebedoan Invaders, while high metagame is about eventually eradicating the Rebedoans and other hostile aliens and space monsters throughout space and planets.
+
+Theres also room for zero-gravity and space battle scenes, not just the typical terrain planet ones.
+
+Pace and difficulty gameplay is mildly more relaxed than Worms, having no timers for movement, lending more to a tactical thoughtful XCOM/Advance Wars like pace, but still snappier and quicker due to only moving one unit at a time with ability to switch control between your units (at a cost maybe, not free?)
+
+Besides a weapon menu, player would also have an ability menu that is similarly large as the weapon inventory, mirroring that one of Worms 2 at its peak. It can contain similar elements as XCOM abilities, either with limited uses, cooldowns or on/off toggled passives. They can be mech specific or global applying to all your units. Players can earn super cores to steal abilities from opponent this way.
+
+Factions and expansion wise, I reckon I could have these factions: rebedoan empire, space monster (bugs, hive growth, robots, freaks, zombies, mutants, skeleton cyborgs, etc. each as a separate faction. with their own units, structures and map generator features.) Levels wise I can expand with theme packs (terrain textures, backgrounds with parallax, lighting filters), though mostly these are skins, not necessarily new terrain types or level generation rules or anything like that. Maybe new scattered hazard/obstacle objects could be a thing too.
+
+The game can support up to 4-way fights (4 different factions (or evil twin rogue split offs, like if two or more people choose the same character in Smash Bros and they're all recolors) against in a free-for-all on a single map), thought most common is 2-way fights, either as a us vs them set up (each start on opposite sides) or a drop pods mosh pit (classic Worms random spawns, everyone around each other.)
+
+Not sure what to do with water... it would no longer be like in Worms in terms of it being a hazard as I expect mechs to be able to float on water rather than sink or atleast not have it be an insta-kill thing, unless its lava or acid I guess.
+
+I think the multi-strenght terrain types of Clonk is worth exploring. regular dirt is normal worms terrain that anything can hit, but rock requires explosive type weapons to shatter it, meanwhile rock2 and rock3 require 2 hits or 3 hits before its fully destroyed (granite, obsidian). Maybe have a Starsector style Explo, Frag, Energy, Kinetic type weapon types that interact with different terrains perhaps? Maybe its too complex for a game like this...

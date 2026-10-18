@@ -1,0 +1,85 @@
+Elastomania clone
+Combine: 
+elastomania (bike)
+human fall flat (just how the hands work in that game)
+just cause 3's wingsuit/parachute/grapple mechanics
+ninja warrior styled courses
+soldat2d's camera view; zoomed out, small character and props
+switch between free hands from human fall flat and a gun that can be used to make (cyber) ghosts go away
+
+ideas:
+spawn flat terrain, drop big obstacles, drop small props, drop start, set checkpoint lines, drop end point.
+metagame is championship with a variable ghost that keeps harrasing you - allegory to doubts, haters and other mishaps, with theme of game of motivation and overcoming obstacles to fulfill your dreams despite the hardship.
+
+V2:
+Thruster Bike Transforming Robot
+Bike Controls:
+WS - accelerate/reverse
+AD - rotate left/right
+mouse 1 - boost towards this direction, mousepointer vs bike positions. Uses centered camera.
+
+Robot Controls:
+WASD fly/walk/jump/crouch
+mouse 1 - kick/punch/lunge in that direction (towards mouse pointer)
+
+Both controls:
+mouse 2 - slow mo
+Q - transform between bike and robot
+
+Bike is fast and great for long distances, can smash through obstacles.
+Robot can do platforming stuff better, but isn't as fast. Can also do hand-to-hand combat.
+
+Potentially, robot has a high velocity EM accelerator pistol with autofire and autotargeting/aim-assist against distant targets, while bike is shielded during thrusts past a certain speed threshold, making it unstoppable, but also has an auto-lockon lightning gun/laser discoball that will insta-zap lesser targets around it.
+
+Possible plot:
+Vengeance/guardian rider - inspired by Biomega, play as corporate agent android Zoichi, except that he's both the bike and a robot. Take down nefarious organizations looking to take over the world by evil means. Cyberghost is a rival from an evil corp, trying to taunt you while you fight droids and turrets on your way to blow up the evil corp's mega reactor. Sort of a 90's edgy anime vibe.
+
+
+---
+Art style and sensibilities is a mix of canabalt, nate adams freestyle motocross and butcher. Elastomania is still the king though.
+---
+
+Pretty awesome result overall. I like the page itself but I want to refine the game design a bit more, you went a bit harder on the canabalt angle than I anticipated.
+
+My vision was more leaning towards elastomania, I should have had you web search that in particular to get a sense for how that game plays since it is the most important core for this whole project, minus the instant failure state of hitting the players head upon terrain or hazards, in favor of a more lenient health bar system that allows mistakes and to resist damage.
+
+Controls are more akin to these:
+
+Motocross mode:
+W,S - accelerate, decelerate/brake/reverse drive, depeding on which direction facing.
+Spacebar - changes facing direction between left and right.
+Q - transform between bike and humanoid robot mode.
+A,D - lean back and lean forward.
+Mouse aim + Mouse buttons 1,2 - aim and shoot weapon or grappling hook.
+
+Robot mode:
+WASD - move left right, jump, drop down off platforms.
+Q - transform between bike and humanoid robot mode.
+Spacebar - changes robot between upright and upsidedown while also reversing gravity.
+Mouse aim - changing left/right facing direction while also aiming weapon or grappling hook.
+Mouse buttons 1,2 - shoot weapon or grappling hook.
+
+For levels I want them to be more like Nate Adams Freestyle Motocross levels where they're finite; they have a start and "finish line" Player will freely swap between bike and robot modes as needed to progress through levels that are procedurally generated; long stretches of hilly terrain, curves and caves, with occasional rectangular concrete interior sections. Outdoors and indoors have their own sets of hazards or shootable things that try to stop or prolong the players attempt to reach the finish line.
+
+Campaigns are about reaching the goal above all, with bonus celebration for speed and combat prowess (take less damage, deal more damage succefully upon baddies)
+
+Based on this, first go check out elastomania's gameplay via web search, then come back to create an updated plan that rewrites many parts of the existing content in the html with new ones, taking into account the above information.
+
+---
+
+Much better, albeit I still want some more changes. I want to inject a lite-combat aspect to the game besides the bike physics mastery. The robot is more of a dedicated combat mode as well as a fast method for vertical travel, meanwhile the bike is more suited for crossing wider horizontal stretches of land and also plowing through lesser obstacles and droids that normally the robot mode would collide against. The weapon is an electromagnetic accelerator gun that is in turret mode while in bike mode, and hand-held big pistol mode when in robot mode.
+
+Opponents range from security cameras with a rudimentary projectile gun, to slow FPV Drone style UAVs with guns or explosive mines attached to them. Player basically needs to plow the ones that arent hazardous to collide with and shoot down both those and the drones that are hazardous to collide with.
+
+Meanwhile, from the original game project document, I want to incorporate this stuff too:
+
+"Racing ghost that keeps harrasing you - allegory to doubts, haters and other mishaps, with theme of game of motivation and overcoming obstacles to fulfill your dreams despite the hardship."
+
+"Vengeance/guardian rider - inspired by the Manga called Biomega, play as corporate agent android Zoichi, except that he's both the bike and a robot. Take down nefarious organizations looking to take over the world by evil means. Cyberghost is a rival from an evil corp, trying to taunt you while you fight droids and turrets on your way to blow up the evil corp's mega reactor."
+
+Player's goal in most levels to reach the finish line which is actually a big reactor with a vulnurable core that causes a huge Beirut style explosion (like the one that happened in Lebanon). The level completes as soon as player succesfully lands a killing blow upon this reactor core - permanently shutting down the evil megacorp's installation in that region as Zoichi races away from the blast in his bike mode for an epic cool level completion moment.
+
+Also in the controls add this (for both bike and robot):
+R - turns on/off slow motion mode, reducing timescale of the gameworld to 15%, on demand anytime, for cool moments and better control of weapon aim and driving.
+
+Lets again do a plan to rewrite parts of the html, changing, expanding, as needed etc.

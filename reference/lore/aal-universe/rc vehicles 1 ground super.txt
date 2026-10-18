@@ -1,0 +1,1093 @@
+all-terrain vehicle
+ambulance
+armored personnel carrier
+armored recovery vehicle
+armored vehicle
+bicycle
+bus
+car
+police car
+taxi
+drill tank
+half-track
+motorcycle
+motor vehicle
+self-propelled artillery
+steamroller
+tank
+tank destroyer
+train
+armored train
+railway gun
+truck
+concrete mixer truck
+dump truck
+haul truck
+flatbed truck
+fire truck
+garbage truck
+monster truck
+pickup truck
+semi truck
+tank truck
+technical
+turretless tank
+van
+car
+motorcycle
+atv
+bus
+truck
+dump truck
+van
+suv
+pickup truck
+minivan
+convertible
+coupe
+sedan
+hatchback
+station wagon
+sports car
+luxury car
+electric car
+hybrid car
+diesel car
+crossover
+roadster
+limousine
+microcar
+campervan
+motorhome
+rv
+jeep
+snowmobile
+moped
+scooter
+dirt bike
+touring motorcycle
+cruiser motorcycle
+sports motorcycle
+sidecar motorcycle
+tractor
+agricultural vehicle
+forklift
+golf cart
+ambulance
+fire truck
+police car
+taxi
+school bus
+shuttle bus
+charter bus
+double-decker bus
+minibus
+city bus
+tour bus
+cargo van
+passenger van
+box truck
+flatbed truck
+tow truck
+cement mixer truck
+garbage truck
+refrigerated truck
+tanker truck
+logging truck
+car carrier
+armored truck
+utility truck
+street sweeper
+food truck
+ice cream truck
+mail truck
+delivery van
+horse trailer
+car trailer
+bike trailer
+travel trailer
+pop-up camper
+fifth wheel trailer
+utility trailer
+landscape trailer
+boat trailer
+snow plow
+street sweeper
+all-terrain vehicle
+utility task vehicle
+neighborhood electric vehicle
+electric scooter
+autonomous car
+shared electric scooter
+forklift
+pallet jack
+reach truck
+order picker
+side loader
+telehandler
+container handler
+straddle carrier
+cherry picker
+scissor lift
+boom lift
+tow tractor
+warehouse tugger
+electric pallet truck
+motorized hand truck
+hand truck
+platform truck
+utility cart
+golf cart
+stock chaser
+industrial tugger
+automated guided vehicle
+electric industrial vehicle
+diesel industrial vehicle
+gasoline industrial vehicle
+cng industrial vehicle
+lpg industrial vehicle
+warehouse robot
+conveyor system
+material handling cart
+drum handling truck
+stair climber hand truck
+work platform
+rolling ladder
+mobile crane
+overhead crane
+gantry crane
+tower crane
+truck-mounted crane
+rough terrain crane
+crawler crane
+industrial crane
+yard spotter
+terminal tractor
+container truck
+box truck
+flatbed truck
+refrigerated truck
+tanker truck
+logistics van
+delivery van
+parcel delivery truck
+freight truck
+semi-trailer truck
+curtain side trailer
+lowboy trailer
+dry van trailer
+refrigerated trailer
+tank trailer
+flatbed trailer
+side dump trailer
+end dump trailer
+roll-off truck
+utility truck
+maintenance truck
+service truck
+bucket truck
+cargo van
+panel van
+step van
+reefer van
+bulk cement truck
+asphalt paver
+road roller
+road grader
+concrete mixer truck
+concrete pump truck
+dump truck
+tipper truck
+bulk hauler
+livestock truck
+grain truck
+logging truck
+fuel delivery truck
+hazmat truck
+recovery truck
+hooklift truck
+street sweeper
+vacuum truck
+hydrovac truck
+jetting truck
+sewer cleaning truck
+rail car mover
+trackmobile
+railroad maintenance vehicle
+excavator
+backhoe loader
+bulldozer
+wheel loader
+skid steer loader
+mini excavator
+crawler loader
+motor grader
+trencher
+tunnel boring machine
+drill jumbo
+blasthole drilling rig
+surface drill rig
+underground drill rig
+continuous miner
+longwall miner
+roadheader
+rock breaker
+hydraulic hammer
+mining shovel
+mining truck
+haul truck
+articulated dump truck
+rigid dump truck
+track dump truck
+underground loader
+minecart
+mine railcar
+ore hauler
+rock hauler
+slusher
+shuttle car
+personnel carrier
+underground utility vehicle
+shotcrete machine
+concrete sprayer
+grout pump
+pipelayer
+dragline excavator
+clamshell excavator
+hydraulic mining shovel
+bucket-wheel excavator
+electric rope shovel
+surface miner
+highwall miner
+overburden removal truck
+sand dredger
+gravel conveyor
+screener
+crushing plant
+mobile crusher
+jaw crusher
+cone crusher
+impact crusher
+mobile screener
+vibratory screener
+stacker
+reclaimer
+bulk handling conveyor
+rock conveyor
+aggregate conveyor
+material feeder
+cement mixer
+cement truck
+paver
+asphalt paver
+compact track loader
+multi-terrain loader
+roller compactor
+vibratory roller
+tandem roller
+pneumatic tire roller
+crawler tractor
+scraper
+tunneling shield
+muck loader
+spoil conveyor
+mine scaler
+scaling rig
+underground bulldozer
+drift runner
+rock transporter
+mining robot
+subterranean drone
+asteroid miner
+lunar rover
+mars rover
+fantasy drilling machine
+magma diver
+crystal harvester
+golem constructor
+dwarven mine cart
+elven tunneler
+underground airship
+rock melter
+lava hauler
+subterranean explorer
+underworld digger
+earth burrower
+geomancer's drill
+magic-powered tunnel borer
+titanium mole machine
+fossil extractor
+treasure seeker
+miner's companion robot
+civilian mechs
+personal transport mech
+recreational mech
+sports mech
+hiking assist mech
+personal mobility mech
+service mech
+rescue mech
+medical assist mech
+construction assist mech
+agricultural mech
+utility mech
+personal assistant mech
+security mech
+firefighting mech
+police patrol mech
+surveillance mech
+cleaning mech
+delivery mech
+postal mech
+gardening mech
+elderly assist mech
+disaster relief mech
+search and rescue mech
+civil defense mech
+public works mech
+waste management mech
+event support mech
+tourism mech
+industrial mechs
+construction mech
+heavy lifting mech
+excavation mech
+mining mech
+demolition mech
+logging mech
+material handling mech
+assembly line mech
+welding mech
+painting mech
+quality control mech
+automated manufacturing mech
+precision mech
+fabrication mech
+maintenance mech
+inspection mech
+warehouse mech
+packaging mech
+palletizing mech
+sorting mech
+agricultural harvesting mech
+planting mech
+plowing mech
+seeding mech
+spraying mech
+forestry mech
+port handling mech
+shipyard mech
+oil rig mech
+pipeline inspection mech
+recycling mech
+scrap handling mech
+logistics mechs
+cargo handling mech
+automated delivery mech
+loading dock mech
+warehouse sorting mech
+inventory management mech
+parcel sorting mech
+automated guided mech
+freight handling mech
+container loading mech
+logistics support mech
+supply chain mech
+order fulfillment mech
+cross-docking mech
+stock replenishment mech
+transport mech
+distribution center mech
+logistics robot mech
+packaging mech
+warehouse transport mech
+picking mech
+packing mech
+route optimization mech
+customs processing mech
+freight forwarding mech
+inventory tracking mech
+supply distribution mech
+automated storage mech
+forklift mech
+pallet truck mech
+conveyor mech
+last mile delivery mech
+urban delivery mech
+rural delivery mech
+cold chain mech
+inventory drone mech
+steam locomotive
+diesel locomotive
+electric locomotive
+hybrid locomotive
+high-speed train
+passenger train
+freight train
+light rail vehicle
+commuter train
+regional train
+intercity train
+subway train
+metro train
+monorail
+tram
+trolley
+funicular
+cable car
+maglev train
+hyperloop
+bullet train
+railcar
+railbus
+rail motor car
+self-propelled railcar
+rail diesel car
+rail grinder
+track inspection vehicle
+ballast regulator
+track geometry car
+rail crane
+maintenance of way vehicle
+railroad speeder
+railroad handcar
+railroad push car
+switching locomotive
+shunting locomotive
+yard switcher
+heavy haul locomotive
+ore train
+coal train
+auto train
+container train
+double-stack train
+tank car train
+flatcar train
+hopper car train
+gondola car train
+refrigerated train
+livestock train
+circus train
+tourist train
+heritage train
+luxury train
+sleeper train
+dining car train
+observation car train
+mail train
+military train
+hospital train
+prison train
+firefighting train
+rescue train
+emergency response train
+remote-controlled train
+drone train
+automated train
+driverless train
+space train
+interplanetary train
+lunar train
+mars train
+asteroid mining train
+hovertrain
+antigravity train
+teleportation train
+quantum levitation train
+warp train
+time-travel train
+dimensional train
+energy beam train
+plasma rail train
+biomechanical train
+nanotech train
+sentient train
+cybertrain
+ai-controlled train
+virtual reality train
+augmented reality train
+holographic train
+solar-powered train
+wind-powered train
+fusion-powered train
+electric arc train
+crystal-powered train
+magic-powered train
+enchanted train
+mystic train
+phantom train
+ghost train
+elemental train
+dragon train
+golem train
+steampunk train
+dieselpunk train
+clockwork train
+fantasy locomotive
+futuristic monorail
+antique train
+vintage train
+flying train
+subterranean train
+underwater train
+sea train
+amphibious train
+jungle train
+desert train
+polar train
+volcanic train
+sky train
+atmospheric train
+cloud train
+starlight express train
+meteor train
+comet train
+solar express train
+galactic express train
+universal train
+dimensional gateway train
+wormhole train
+temporal train
+main battle tank
+armored personnel carrier
+infantry fighting vehicle
+self-propelled artillery
+armored car
+reconnaissance vehicle
+engineering vehicle
+mine-resistant ambush protected vehicle
+mobile anti-aircraft vehicle
+armored recovery vehicle
+command vehicle
+mobile rocket launcher
+self-propelled mortar
+mobile command post
+armored bulldozer
+mobile radar vehicle
+armored medical evacuation vehicle
+tactical truck
+self-propelled howitzer
+amphibious assault vehicle
+main battle tank
+armored personnel carrier
+infantry fighting vehicle
+self-propelled howitzer
+self-propelled anti-aircraft gun
+tank destroyer
+armored car
+reconnaissance vehicle
+light armored vehicle
+mine-resistant ambush protected vehicle
+armored recovery vehicle
+mobile gun system
+armored engineer vehicle
+mobile anti-aircraft vehicle
+self-propelled mortar
+bridgelayer tank
+command and control vehicle
+armored medical evacuation vehicle
+logistics vehicle
+amphibious assault vehicle
+combat engineering vehicle
+armored bulldozer
+armored combat earthmover
+armored vehicle-launched bridge
+multiple launch rocket system (mlrs)
+light utility vehicle
+armored logistics vehicle
+command post vehicle
+anti-tank guided missile carrier
+atgm carrier
+heavy equipment transporter
+armored command vehicle
+armored maintenance vehicle
+armored reconnaissance scout vehicle
+assault breacher vehicle
+armored supply vehicle
+battlefield surveillance vehicle
+chemical, biological, radiological, and nuclear protection vehicle
+cbrn defense vehicle
+light tank
+fire support vehicle
+armored train
+police armored vehicle
+riot control vehicle
+tactical armored vehicle
+armored riot control vehicle
+assault amphibious vehicle
+ballistic missile launcher
+tankette
+air defense vehicle
+armored fighting vehicle
+armored utility vehicle
+armored repair and recovery vehicle
+light reconnaissance vehicle
+armored mortar carrier
+counter-battery radar vehicle
+armored medical treatment vehicle
+armored ambulance
+tactical refueling vehicle
+battlefield radar vehicle
+armored infantry support vehicle
+armored fire control vehicle
+armored reconnaissance vehicle
+tactical missile launcher
+armored anti-tank vehicle
+armored signal vehicle
+electronic warfare vehicle
+armored command post
+armored surveillance vehicle
+combat support vehicle
+heavy armored vehicle
+light armored reconnaissance vehicle
+tactical armored patrol vehicle
+remote-controlled armored vehicle
+armored transport vehicle
+armored mobile command vehicle
+armored sensor vehicle
+special operations vehicle
+armored mobile workshop
+amphibious reconnaissance vehicle
+armored drone carrier
+counter-ied vehicle
+armored uav control vehicle
+armored escort vehicle
+armored security vehicle
+armored clearance vehicle
+armored tactical vehicle
+armored utility truck
+armored high mobility vehicle
+infantry mobility vehicle
+heavy armored personnel carrier
+light armored transport vehicle
+armored reconnaissance car
+tactical engineering vehicle
+armored communication vehicle
+armored demining vehicle
+armored eod vehicle
+armored search and rescue vehicle
+armored logistics support vehicle
+armored transport truck
+tactical command vehicle
+armored utility vehicle
+armored mobile radar vehicle
+armored counter-sniper vehicle
+armored traffic control vehicle
+armored scout car
+armored patrol vehicle
+armored recovery truck
+armored route clearance vehicle
+armored high mobility multipurpose wheeled vehicle (hmmwv)
+armored amphibious tank
+armored reconnaissance tank
+armored missile defense vehicle
+armored missile carrier
+tactical medical evacuation vehicle
+armored intelligence vehicle
+armored mine detection vehicle
+armored transporter
+armored fire support vehicle
+armored heavy equipment vehicle
+armored radar system vehicle
+armored surveillance and target acquisition vehicle
+armored combat support vehicle
+armored electronic countermeasure vehicle
+armored counter-insurgency vehicle
+armored battlefield management vehicle
+armored intelligence collection vehicle
+armored cyber warfare vehicle
+armored information warfare vehicle
+armored electronic intelligence vehicle
+armored ground surveillance vehicle
+armored tactical reconnaissance vehicle
+armored battle management vehicle
+armored psychological operations vehicle
+armored civil affairs vehicle
+armored military police vehicle
+armored chemical reconnaissance vehicle
+armored route clearance support vehicle
+armored unmanned ground vehicle (ugv)
+armored robotics control vehicle
+armored tactical explosive ordnance disposal vehicle
+armored hazmat vehicle
+armored fire control radar vehicle
+armored counter-mortar radar vehicle
+armored ground control station vehicle
+armored signals intelligence vehicle
+armored ground attack vehicle
+armored convoy protection vehicle
+armored tactical support vehicle
+armored weapon carrier
+armored defense vehicle
+armored counter-rocket, artillery, and mortar (c-ram) vehicle
+armored anti-drone vehicle
+armored command and communications vehicle
+armored missile launch vehicle
+armored uav launch vehicle
+armored amphibious reconnaissance and combat vehicle
+armored close combat vehicle
+armored minefield breaching vehicle
+armored surveillance radar vehicle
+armored perimeter defense vehicle
+armored combat command and control vehicle
+armored firefighting vehicle
+armored law enforcement vehicle
+armored infantry combat vehicle
+armored forward observer vehicle
+armored ground mobility vehicle
+armored disaster response vehicle
+armored bomb disposal vehicle
+armored mobile security vehicle
+armored border patrol vehicle
+armored defensive operations vehicle
+armored coastal defense vehicle
+armored riverine patrol vehicle
+armored deep reconnaissance vehicle
+armored forward operating base support vehicle
+armored emergency response vehicle
+armored special response vehicle
+armored remote weapon system carrier
+armored tactical operations vehicle
+armored interceptor vehicle
+armored joint operations vehicle
+armored defensive maneuver vehicle
+armored forward area air defense (faad) vehicle
+armored counter-reconnaissance vehicle
+armored surveillance and reconnaissance vehicle
+armored ground-based air defense vehicle
+armored coastal patrol vehicle
+armored military transport vehicle
+armored vehicle-mounted mine detector
+armored high mobility artillery rocket system (himars) vehicle
+armored counter-explosive ordnance vehicle
+armored counter-terrorism vehicle
+armored civil-military operations vehicle
+armored terrain dominance vehicle
+armored vehicle-mounted sensor system
+armored multirole vehicle
+armored tactical infrastructure protection vehicle
+armored mobile launch platform
+armored strategic transport vehicle
+armored mine roller vehicle
+armored combat support and combat service support vehicle
+railway artillery gun
+armored train
+railbound shuttle turret
+rail-based anti-aircraft gun
+rail-based missile launcher
+rail-based command post
+rail-based reconnaissance vehicle
+rail-based logistics vehicle
+rail-based hospital train
+rail-based mobile headquarters
+rail-based communications vehicle
+rail-based radar system
+rail-based electronic warfare vehicle
+rail-based surveillance vehicle
+rail-based armored troop transport
+rail-based fuel transport vehicle
+rail-based ammunition transport vehicle
+rail-based engineering vehicle
+rail-based signal interference vehicle
+rail-based cbrn defense vehicle
+cliff-climbing vehicle
+forest penetration vehicle
+jungle traversal vehicle
+amphibious hovercraft
+river crossing tank
+rock crawler armored vehicle
+all-terrain spider tank
+amphibious tank
+mountain assault vehicle
+swamp transport vehicle
+desert dune buggy
+snow and ice reconnaissance vehicle
+glacier traversing tank
+lava field patrol vehicle
+sandstorm-resistant vehicle
+modular bridge-laying vehicle
+air-cushion landing craft
+cave exploration vehicle
+underwater scout vehicle
+tunneling armored vehicle
+high-altitude assault vehicle
+marshland combat vehicle
+stealth forest vehicle
+subterranean operations vehicle
+floating armored platform
+rapid deployment bridge vehicle
+all-terrain bike for infantry
+concealed transport vehicle
+hybrid terrain assault vehicle
+waterfall climbing vehicle
+dense canopy recon vehicle
+avalanche-resistant transport
+cliff descent vehicle
+rapid terrain adapting vehicle
+dual-mode land and water vehicle
+volcanic terrain patrol vehicle
+high-altitude infantry carrier
+cross-country skier vehicle
+riverine combat vehicle
+canyon hopper vehicle
+silt terrain operations vehicle
+arctic snow drifter
+rocky terrain reconnaissance vehicle
+mangrove swamp vehicle
+dense underbrush assault vehicle
+high-speed desert reconnaissance vehicle
+hydrofoil assault vehicle
+glacial movement vehicle
+mudslide recovery vehicle
+riverine command center
+multi-environment tactical vehicle
+icebreaker armored vehicle
+floating siege platform
+fog-penetrating recon vehicle
+lava-resistant exploration vehicle
+cliff-side artillery platform
+all-terrain siege engine
+autonomous cliff-climber drone
+adaptive camouflage vehicle
+concealed forward operating base vehicle
+underwater assault vehicle
+riverine logistics vehicle
+marshland medical evacuation vehicle
+slope-climbing supply vehicle
+dense jungle engineering vehicle
+rapid riverine assault craft
+glacier expedition vehicle
+high-altitude logistics vehicle
+quick deployment forest vehicle
+stealth amphibious recon vehicle
+subterranean command post
+volcanic eruption response vehicle
+coastal defense hovercraft
+amphibious recovery vehicle
+dense foliage surveillance vehicle
+rapid mountain response vehicle
+avalanche rescue vehicle
+coastal infiltration vehicle
+mud terrain engineering vehicle
+canyon reconnaissance drone
+hover tank
+urban assault exoskeleton
+electromagnetic railgun tank
+nanomaterial armored vehicle
+cloaking stealth recon vehicle
+ai-piloted drone tank
+laser weapon carrier
+energy shielded apc
+hyper-agile scout vehicle
+quantum communication command vehicle
+vertical takeoff and landing (vtol) ground hybrid vehicle
+fusion-powered assault vehicle
+hyperloop rapid deployment vehicle
+neural interface command vehicle
+holographic decoy projector vehicle
+electrically charged defense vehicle
+swarm drone carrier
+nanobot repair vehicle
+plasma cutter engineering vehicle
+autonomous mobile artillery
+kinetic energy weapon vehicle
+emp resistant armored vehicle
+cryogenic assault vehicle
+biometric access control vehicle
+augmented reality tactical command vehicle
+vertical climbing combat vehicle
+magnetic levitation scout vehicle
+particle beam weapon carrier
+bioengineered terrain adaptation vehicle
+light-bending stealth vehicle
+integrated drone defense system vehicle
+high-energy laser defense vehicle
+cyber warfare operations vehicle
+enhanced reality maintenance vehicle
+adaptive camouflage recon vehicle
+solar-powered combat vehicle
+hyper-flexibility infantry support vehicle
+anti-gravity troop transport
+modular combat platform vehicle
+adaptive terrain mobility vehicle
+bio-armor infused vehicle
+zero-emission combat vehicle
+personal exosuit deployment vehicle
+tactical hologram projector vehicle
+self-healing armor vehicle
+anti-laser defense vehicle
+superconducting propulsion vehicle
+integrated cyber defense command vehicle
+fusion reactor powered tank
+silent operation stealth vehicle
+high-speed railgun artillery
+atmospheric energy harvester vehicle
+drone launch and recovery vehicle
+virtual reality training vehicle
+hardened quantum computer vehicle
+laser communication relay vehicle
+nanofiber reinforced armor vehicle
+plasma defense shield vehicle
+modular weapon system vehicle
+urban combat hoverbike
+augmented soldier transport vehicle
+self-sustaining energy vehicle
+cybernetically enhanced driver vehicle
+holographic interface command vehicle
+high-energy projectile vehicle
+kinetic barrier defense vehicle
+electrochromic camouflage vehicle
+magnetic disruption defense vehicle
+advanced sensor array recon vehicle
+ai-controlled autonomous infantry support vehicle
+tactical light projection vehicle
+gravitational manipulation vehicle
+smart armor assault vehicle
+integrated solar array combat vehicle
+neural network command vehicle
+tactical thermal cloak vehicle
+advanced emp weapon vehicle
+autonomous terrain analysis vehicle
+robotic infantry carrier
+tactical light spectrum control vehicle
+energy regeneration vehicle
+nanite swarm deployment vehicle
+cloaked autonomous recon vehicle
+high-velocity projectile defense vehicle
+ai-enhanced surveillance vehicle
+hyper-stealth recon drone carrier
+plasma cannon tank
+exosuit deployment and recovery vehicle
+self-sufficient biosphere vehicle
+quantum stealth assault vehicle
+energy field generator vehicle
+anti-matter powered vehicle
+lightweight composite armor vehicle
+energy redistribution shield vehicle
+cybernetic command link vehicle
+molecular armor repair vehicle
+integrated battlefield network vehicle
+reactive armor support vehicle
+adaptive response recon vehicle
+vertical assault drone carrier
+mobile fortress
+giant landcrawler citadel
+land aircraft carrier
+mobile artillery fortress
+super heavy siege tank
+armored mobile city
+rolling combat fortress
+mobile missile silo
+mobile anti-aircraft fortress
+land dreadnought
+mobile command citadel
+armored superheavy walker
+mobile orbital defense platform
+siege tower landcruiser
+mobile ballistic missile launcher
+heavy assault land carrier
+mobile coastal defense fortress
+mobile energy weapon platform
+mobile superheavy railgun platform
+tactical laser fortress
+mobile anti-satellite vehicle
+mobile heavy artillery platform
+mobile radar fortress
+armored mobile garrison
+mobile defense grid platform
+mobile rocket artillery base
+super heavy tanker fortress
+mobile amphibious assault base
+mobile drone control center
+mobile hypersonic missile launcher
+mobile air defense citadel
+mobile infantry deployment fortress
+mobile surface-to-orbit missile launcher
+mobile siege artillery citadel
+mobile electronic warfare fortress
+heavy armored land battleship
+mobile orbital strike platform
+mobile cyber warfare center
+mobile heavy mortar platform
+armored land fortress carrier
+mobile surface-to-surface missile launcher
+mobile coastal artillery platform
+mobile energy shield generator
+mobile heavy laser platform
+mobile defensive superstructure
+mobile command and control fortress
+mobile surveillance and recon fortress
+mobile advanced weapons platform
+mobile high-altitude defense fortress
+mobile strategic weapons launcher
+mobile ground-based aircraft launch platform
+mobile ground support fortress
+mobile tactical operations center
+mobile forward operating base
+mobile heavy armored siege engine
+mobile surface-to-air missile platform
+mobile kinetic energy weapon platform
+mobile long-range artillery fortress
+mobile heavy rocket launcher base
+mobile subterranean bunker buster launcher
+mobile high-power microwave weapon platform
+mobile advanced sensor array fortress
+mobile tactical missile launcher
+mobile airborne operations fortress
+mobile drone carrier and control center
+mobile anti-ship missile platform
+mobile heavy fire support base
+mobile orbital defense laser platform
+mobile strategic missile command base
+mobile armored infantry fortress
+mobile defensive weapons platform
+mobile air support command center
+mobile heavy plasma cannon platform
+mobile heavy combat support fortress
+mobile high-altitude anti-missile platform
+mobile underwater operations base
+mobile satellite communication fortress
+mobile intercontinental ballistic missile launcher
+mobile strategic defense command fortress
+mobile anti-orbital weapons platform
+mobile heavy artillery command center
+mobile airfield support base
+mobile land-based aircraft maintenance platform
+mobile space launch platform
+mobile advanced defense systems platform
+mobile multi-role combat fortress
+mobile coastal patrol fortress
+mobile high-energy laser defense platform
+mobile heavy drone carrier
+mobile suborbital launch platform
+mobile strategic defense platform
+mobile high-precision artillery platform
+mobile long-range missile defense fortress
+mobile heavy bombardment platform
+mobile deep strike command fortress
+mobile armored heavy carrier
+mobile advanced warfare center
+mobile orbital launch command center
+mobile space defense fortress
+mobile heavy armored combat base
+subterranean military vehicle
+tunnel boring machine
+underground armored vehicle
+subterranean troop transport
+burrowing drone
+subterranean reconnaissance vehicle
+underground combat vehicle
+tunnel excavation robot
+subterranean cargo transport
+mining vehicle
+subterranean command center
+earth-penetrating vehicle
+underground rescue vehicle
+subterranean surveillance vehicle
+subterranean construction vehicle
+underground artillery
+subterranean logistics vehicle
+subterranean escape vehicle
+underground maintenance vehicle
+subterranean repair vehicle
+tunnel defense system

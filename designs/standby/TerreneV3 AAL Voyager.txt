@@ -1,0 +1,40 @@
+TERRENE v3 REMIX, AAL Voyager: Robinson Survival Challenge
+--
+
+Subnautica Lite mixed with Adios Amigos, where an Ironman style sports challenge event has a person's mind inhabit a real-life robot body via VR headset as they try to travel and explore a series of remote locations in the style of Amazing Race.
+
+Goal is to reach a randomized unique/interest/impressive landmark/point of interest/extraction location/character/thing, be it a natural or artificial one.
+
+Its a solo survival experience where player has an inventory, ability to craft (imagine you are a walking subnautica fabricator(embedded into arms), eliminating the need for bases or reliance on droppods, but also skipping the need to go full minecraft tech tree nonsense of having to start with stone age tools etc.) and a versatile humanoid body to run, jump, swim, bg grid climb, rope climb(any direction vert/horiz), grab object/toss/drop, typical super mario stuff, etc.
+
+You still need stationary power sources to use the fabricator function of your body (install a generator at a geothermal vent and stand by it use its output, body batteries are limited so you can't store much energy portably), you cant fly or double jump/dash etc, you don't have any inbuilt weapons or tools, its just your humanoid hands. You may also need to construct machines that are stationary that need to be connected to a power source, limiting where you can set them up.
+
+Player usually has to travel light and their inventory is limited. they can carry an extra bag, push/pull a cart/luggage, have a vehicle with cargo space and maybe do some kind of hax thing of dragging a tethered bag to them while also carrying a bag, though that comes with some awkwardness and mobility issues. Most of what player constructs is disposable, has limited durability or simply can't be taken with them from one scenario to the next one.
+
+Unlike subnautica this game isn't limited to a nature robinson island survival scenario only. Player may end up visiting such places as:
+
+remote planets that are barren/wild/hazardous with abundant natural resources, but anything advanced needs to crafted from scratch.
+
+bustling cities run by capitalism and cyberpunk stuff, usually run by neutral/human-allied alien races/civilizations that aren't quite there yet with figuring out utopian empathy driven wellbeing societies. Kind of like modern day semi-dystopian yet peaceful american or asian cities. for resources, the only real option is either dumpster diving, shops, casinos, or warehouses with guards.
+
+mildly populated outskirts/frontiers/badlands/sectors that have villages/outposts/huts with similar aliens living as scavengers/farmers/rural folk/nomads. Usually these places have various medium grade materials surprisingly available, yet very basic components are actually scarce and highly sought after. Imagine an industrial junkyard with plenty of advanced components, yet pure copper or idk organic material is tought to find.
+
+Player may be given a hint what the next location may be and they can try to prepare what to take with them from the current world to that next one, helping them skip some parts, do something a bit easier or otherwise have a boosted options that normally would be unavailable/difficult to get.
+
+Game is played in campaigns where its customary for player to be dropped off onto the first location they must survive in.
+
+--
+
+Player Characters:
+Agent
+Small human/cyborg/android survival operative.
+
+--
+
+Other Characters:
+Fauna/flora
+Basically the same as Subnautica.
+--
+
+Motherlode style resource collection and mining style?
+world gen and navigation? Hazard zones? Lock and key area design ala super metroid? Heat, radiation, pressure, food, water, power, etc?

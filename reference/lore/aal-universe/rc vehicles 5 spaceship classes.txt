@@ -1,0 +1,116 @@
+Point Defence Craft
+Probe
+Drone
+Scout
+Attack Droid
+Fighter
+Interceptor
+Lancer
+Bomber
+Starfighter
+Assault Craft
+Clipper
+Gunship
+Gunboat
+Corvette
+Frigate
+Cruiser
+Destroyer
+Carrier
+Battleship
+Battlecruiser
+Dreadnaught (mega starship)
+Colossus (tall giga starship)
+Behemoth (thick giga starship)
+Leviathan (wide giga starship)
+Titan (mountain sized tera starship)
+Celestial (moon sized exa starship)
+Cosmic (star sized zetta starship)
+Omniversal (star system sized yotta starship)
+Stealth Infiltrator
+Marine Boarding Shuttle
+Cloak Submarine
+Phase Ship
+Raider
+Monitor Ship
+Mothership
+Von Neumann Probe
+Berserker Probe
+Proximity Sensor
+Telescope Sensor
+Turret Platform 
+Minelayer
+Minesweeper
+Space Mine
+Space Minefield
+Defense Field
+Space Ion Cannon Emplacement
+Planetary Defence Cannon
+Orbital Defence Cannon
+Orbital Strike Cannon
+Planetkiller Construct
+Superweapon Megastructure
+Outpost Space Station
+Space Fortress
+Star Command Mega Space Station
+Prison Complex Space Station
+Factory Complex Space Station
+Refinery Complex Space Station
+Biodome Space Station
+Space Colony
+Orbital Ring Megastructure
+Planetary Space Port
+Orbital Space Port
+Orbital Shipyard
+Planetary Shipyard
+Orbital satellite
+Warning beacon
+Comm Relay
+Nav Buoy
+Tradelane
+Hyperspace Jump Gate
+Stellar Converter
+Coronal Hypershunt
+Hyperspace Core Unit
+Space Traffic Control Tower
+CSV (Combat Service Vehicle)
+Armored Transport
+Atmospheric Lander Craft
+Re-entry Ship
+Heavy Lift Rocket
+Space Dropship
+Supply Ship
+Repair Ship
+Barge Ship
+Light Hauler
+Heavy Lifter
+Mover
+Salvage Vessel
+Electronic Warfare Ship
+Life Boat
+Space Tug
+Utility Craft
+Shuttle
+Transport
+Transporter
+Freighter
+Space Haul Train
+Cargoship
+VIP Shuttle
+Luxury Liner
+Hospital Ship
+Civilian Liner
+Prison Ship
+Galactic Explorer Ship
+Colony Ship
+Starship
+Seedship
+Expedition Ship
+Survey Ship
+Asteroid Miner
+Gas Miner
+Resource Collector
+Space Harvester
+Mobile Refinery
+Planet Cracker Ship
+Space Laboratory

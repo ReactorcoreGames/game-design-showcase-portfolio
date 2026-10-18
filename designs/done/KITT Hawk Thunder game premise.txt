@@ -1,0 +1,67 @@
+# 80s Bionic Vehicle Game
+===
+
+
+## Inspired by:
+Knight Rider - super car
+Street Hawk - super bike
+Blue Thunder/Airwolf - turbo helicopter
+
+
+## Summary:
+A transformable futuristic yet civilian-disguised vehicle piloted by a handsome dude vigilante. Sort of a SWAT KATS type of thing where this vehicle, lets call it KITT, launches out of a HQ or mobile carrier (truck or boat), with a goal to reach a location while surviving with as minimal damage as possible to reach the destination, maybe even eliminate whatever its pursuing if its a mobile target.
+
+Depending on the mission, it could be in helicopter mode, car mode or bike mode.
+
+Helicopter can fly, VTOL, go far, go over tall obstacles. Takes up a lot of space, limiting where it can go into.
+Car can go faster, go into tunnels or large building interiors. Takes less space than helicopter mode but bike is yet smaller.
+Bike/Motorcycle is basically the cockpit ejected from the car/heli, able to go into narrow spaces that car and heli would never be able to fit into and do trials-like parkour over objects not suitable for a car to drive on.
+
+All can land/drive on ground or water, floating on the latter either like a boat in normal mode or as a hydrofoil in pursuit mode. They cannot submerge.
+All can dodge/jump/dash with a turbo rocket boost function.
+All have 3 weapons: Laser, missile, machinegun. Limited ammo, although laser can be still fired in weak emergency mode if its main weapon power battery runs out.
+All needs fuel to move/fly. Power is supplied by a generator with limited operating time. Can float indefinetely on water, wont sink.
+All can enter pursuit/hyperthrust/cruise mode which give it extra high speed.
+
+## Can have special abilities like:
+EMP pulse (directed)
+Microwave (directed, incapacitates bio lifeforms, i.e. humans or animals.)
+Oil spray
+Countermeasures (magnesium)
+Smoke exhaust
+Sonic emitter
+Vision modes: optical, thermal, infrared, x-ray, "smell", acoustic, biosigns
+Analysis modes: material samples (chemical composition, type of energy, type of weapon from military/police database), lie/stress detector, 
+
+
+## Ideas of gameplay:
+Top down 2d semi-auto scroller pursuit game with Nova Drift style randomized enemy waves
+Road Rage style combat
+WASD + mouse combat with a slow rotating turret, so players fast mouse cursor vs actual rotation of the player weapon may be slower.
+Mission Types player can pursue in a campaign, laid out as a map player can do in any order before taking on the remnants (note player can take out the crime boss in any mission, even during the earlier ones, its only sometimes when they're in unlockable final mission per campaign, not every time): 
++ Rush (time attack or countdown blast wave run)
++ Prey (fight off a chaser)
++ Pursuit (chase to target, kill it)
++ Explore (go from A to B) 
+
+^- do all those without blowing up
+
+
+Enemies:
+goons - cars, bikes, vans, trucks
+bosses - killdozer, monster truck, gunship, tank, military vehicles, etc.
+
+
+Goal of game:
+Eradicate crime from city by city. Each city is a campaign with missions to clear out the corrupt, the bad, the crooked, the wicked.
+
+(drug gangs, corporate cunts, evil police, shadow organizations, mastermind villains, dictator mayors, rogue PMCs)
+
+
+Metagame Overarching:
+Catalog of cities saved - from whom and in what way.
+(only one game mode, overarching infinite narrative of street justice. It generated finite 8+1 stage campaign sessions that each is randomized)
+
+Supercores mechanic:
+Depends on final gameplay, but maybe focus on anonymous supporter of protagonist sending in friendly events that help out per mission as favors for good deeds in the past.
+(generally supercores as an idea is where player can go into a campaign with enemy having some unique bonus to them that the player can steal and turn it against them by taking that bonus for themselves and depriving the enemy of that campaign from having it, then being able to carry it over to another campaign as a persistent item that the player can use from the start of the next campaign. Player can stack up to 5 supercores before needing to discard a supercore when they steal a new one. For each game, I vary this mechanic in a way that suits the game more, so its up to you to tailor it to this game, Claude.)

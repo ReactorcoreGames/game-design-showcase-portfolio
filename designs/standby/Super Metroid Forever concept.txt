@@ -1,0 +1,91 @@
+# Super Metroid Forever concept
+a rough idea to make super metroid, ex vitro, azimuth, etc. better and endlessly playable.
+
+
+## Basics:
+Metroid is a game about exploring a complex room based world, encountering locks and keys - with the locks often being obstacles that require an ability, weapon, protection, mobility or special utility to open/bypass. These keys are often reusable in regular traversal, making the player stronger, faster, and better, or able to do more.
+
+The world is divided into distinct sectors which have their own network of rooms organized into large clusters. They may have connections for cross travel while some paths are dead ends, usually containing an upgrade/key.
+
+There are certain standards that make finding secrets not frustrating by implementing consistent, predictable rules so that the player doesn't have to bomb and probe every fucking inch of the room to find a secret passage. This means only certain walls are shootable or certain walls with overlays (cracks, visible erosion) are shootable and the player can safely ignore the rest. Player should also instantly identify what will affect a wall (missile, bomb, super missile, power bomb, speed booster, etc.)
+
+Any boss encounter ensures that if player is diligent with finding most/all available upgrades to that point, that they will be able to defeat it easily, while collecting bare minimum will be tough yet doable challenge.
+
+Every boss encounter will have foreshadowing in atleast prior room and maybe even in the sector. Boss being alive may also entail its influence creating blockages or hazards that go away after the boss is defeated (think the jungle boss is metroid fusion that covered the reactor core in vines and growth).
+
+Map screen will show a marker for unclaimed powerups (circle symbol as energy signature, dot if all claimed - whether its within the room or in an adjacent small dead-end compartment room), as well as icons for room connections and possible exits available so user doesn't have to look up a wiki to see what they missed or backtrack to places they're already forgetten about if it was a dead-end or a or an actual spot they should return to later once they've found upgrades. Its up to player memory to remember what that spot needed.
+
+Some enemies respawn, others have infinite spawners for enemies, while some have elites or special enemies that stay dead once killed once. They all drop resources to refuel player weapons/energy. Enemies are usually weak swarmers, medium regulars, uncommon bruisers and rare elites. Some rooms may have an enemy that would benefit from a specific weapon to take them down to get past them safely and reliably, even if sequence breaking is allowed.
+
+Player will eventually always become mostly overpowered and gameplay will mostly remain easy overall, with boss fights and final boss usually being an epic slugfest than a david vs goliath situation. Bosses are preset types (like Starsector ships), but they may have randomized extra components (abilities, weapons, passives or cosmetic extras).
+
+Unlike Azimuth which mostly offered side-grades in regards to weapons that are a hassle to switch between and require way more buttons than necessary to manage, I'd go for the 'unified empowered weapons with each upgrade' route, which combines effects, make the default weapon more powerful, etc. Bombs and missiles can be side weapons still though.
+
+Controls wise I'd go for WASD + Mouse controls for better movement and aiming capabilities. Relatively floaty gravity if even none (excluding force/gravity zones that push stuff).
+
+Bosses are always designed difficulty wise to be lenient in that if the fight is going poorly for you and you keep losing too much health and ammo, you can focus on defense and avoidance to replenish your HP and ammo instead of trying to land risky hits on the boss and literally be able to fully regain max hp and ammo by farming the boss as you frantically dance around. The "penalty" here is that it'll take longer for you to beat the boss this way and it will feel somewhat embarassing on an implicit level, meaning you'd feel better about yourself for having beaten the boss faster and with more finesse instead of being kicked around like a ragdoll too much.
+
+
+## Game Variants:
+- Typical powersuit
+- Cave Flyer
+- Metal Slug Vehicle (Android control)
+- Regular human that starts naked and unarmed, upgrades to powersuit by the end.
+- Metal Knights/Front Mission Gun Hazard style mech with tiny pilot that can exit vehicle.
+- Top down version of any of the above
+
+
+## Inspirations:
+- Cryptark (different ship types as entire map like a space hulk ala Dead Space 1 or a string of ships in space ala Dead Space 3 or System Shock 2).
+- Nova Drift (each run is based on a "build" - focusing on a specific weapon type, shield/armor type, player/ship type).
+- TOU (Tunnels of Underworld) for the cave flying, weapon arsenal and some environment/weapon mechanics.
+- Syndemic/My Remix - How rooms and networks are built by procgen.
+- Iji - world and secrets. Maybe some tech, weapons, enemies and how the narrative works (with choice that can affect ending or save someone during the adventure)
+
+
+## Lore Contexts:
+
+### Player:
+- Hazard Worker
+- Enemy Prisoner
+- Bounty Hunter
+- Scavenger
+- Explorer
+- Rescue Worker
+- Government Agent/Auditor/Inspector
+- Sheriff
+- Captive alien
+- Alien/human scout/spec ops unit
+- Hunter Killer Bot
+- Assassin
+- Researcher
+- Security Officer
+- Local hunter
+(Point is it has to someone that is alone and either doesn't have backup or is blocked from calling for backup or simply no one is coming to help or cant due to some obstacle or danger - you're on your own.)
+
+### Location:
+- Space lab complex
+- Planetary research bunker
+- Military fortress
+- Starship/ColonyShip/SpaceHulk
+- Asteroid/Moon/Planetoid/Megastructure base
+- Evil compound/hideout
+- Subnautica style open sector (anywhere, underwater, underground, toward mountains, mix of any of these.)
+- Island chain
+- Ancient ruins
+- Derelict debris field
+- Spaceship graveyard
+- Front mission style campaign (start in town, continue to city, end up in space elevator with final showdown above in orbit)
+(It needs to be a place with diverse sectors and caches of high technology - player needs to get their upgrades at location. Can be a mix of natural and artificial, but there needs to be a source of tech, even if its just scattered container boxes instead of a base or even outposts, letting the natural enviro offer all the locks.)
+
+
+## Misc notes:
+- I envision creating a Database of locks, keys, room templates, objects, enemies and bosses+boss modules. Especially the latter 4 use white sprites that are colored/tinted during generation so each will visually look interesting, akin to how Astroneer recolors its plants, objects and hazards to match or contrast the surrounding terrain.
+- For player, heavily lean on Nova Drift style mods as upgrades, albeit adjusted for metroid style play with some elemental/utility aspects baked in that would be either combat key or puzzle key or mobility key. Nova Drift has a motto "no matter what build you want, there IS a way to make it work". Using this philosophy, each campaign involves a fully fledged build that will leave the player fairly overpowered - depending how many optional upgrades they find. Unlike Nova Drift however, builds are predetermined by the campaign gen, but are atleast optimized to offer mods that are a beneficial for that build. They may focus on the body, primary weapon, secondary weapon, ability, shield or construct offering variants or alternative branches for that build focus per each campaign low metagame.
+- Generally speaking the entire game would be more akin to Oblige level gen that creates a new hero/antihero that enter a zone, clears it mostly alone, with a unique story/context/event per each campaign. Use wordless environmental storytelling with characters mostly nodding or saying simple phrases like "please/help" and "thank you" or "curses" or "directions (arrows <>^v, exclamation ! !! !!!, confusion ? ?? ???, enviro clue icon)" or "ok/clear/thumbs up" other simple terms that make sense per situation. NPC characters are usually stuck in one place and will first do one thing and upon change do another thing. High metagame wise, each story generates a text prompt based on what happened so user can go paste that into an image generator of their choice. It results in a movie poster style image. Perhaps existing sprites could be used to compose an image too, ala Oblige Covers, reminiscent of amateur platformer action pixel art games.
+- Each completed campaign will also provide a button to replay that particular seed so you can try to speedrun it or share that particular run with other people.
+- Unlike Nova Drift that only focuses on a single weapon or Super Metroid that has 3 (beam, missile, bomb), this project would have 2 any weapons. Their mods would unlock their capabilities like how rockets/bombs are designed for demolition, while beam gets a wide spread rapid fire upgrade to deal with mobs of smaller swarmer enemies. That said, only one weapon can be ammo driven, not both. My point is that normally in metroid beam is the 'light' weapon while rocket is the 'heavy' weapon, but in my game the beam weapon might be heavy weapon that opens doors while the rocket weapon is actually intended for clearing swarms. The algorithm for setting up builds and the database of mods/upgrades will ensure that whether primary or secondary is chosen as the lock opener/wall demolisher (or not even that, the algo starts with levelgen and it might choose not to have any weapon-locked areas - only movement or item/ability based doors/paths - it ultimately influences what weapons and upgrades that will be included or in what form they'll be made). Player loadout may include both weapons be melee, or one melee, one ranged, or both ranged, either either one maybe having ammo or not (even melee, think pilebunkers).
+- Unlike Super Metroid, there isn't a hyperbeam at the end, the fully upgraded/modded primary/secondary weapon will be plenty nice enough for that, but I do want to include a "hidden weapon technique" feature that requires the player to do something special to activate it. For the cost of the extra effort and perhaps a % of ammo supplies, player can unleash an offensive or defensive measure that is powerful and notably useful enough to justify its use. Problem with Super Metroid's hidden techniques is that most of them were too convoluted to use and the effort did not match the payoff, so they rarely saw any use outside of curiosity and surprise. This hidden technique could be a super special attack ala Marvel VS Capcom/Street Fighter 3 Alpha EX, that works close up, at range or activates a Crea Style defensive buff/damage field around the user for added protection or damage, taking in the parameters of the existing weapon/armor/shield and mods/upgrades to augment it.
+- Charge weapons are not a must and even if one is used, they can come in different varieties: Regular SM charge and fire, multistage charge ala Megaman X, e-cap limited charges that are resupplied by enemy drops, recharger that automatically refills uses of regular attacks that are considered charge-up tier powerful, recharger that refills uses for empowered attacks that are triggered by holding down/crouch/etc., recharger primary button tap fire that unleases powered attacks instantly but have limited uses that recharge by time or pickups, meanwhile holding down is required to use the basic tier attack.
+- Charging is an upgrade for an individual weapon and its possible to have a build that will involve both weapons be charge up types or just one of them, even just the secondary weapon.
+- Weapons themselves are generic archetypes inspired by Nova Drift, so stuff like Thermal Lance, Grenade, Missile Salvo, Blast, Blade, Railgun, Flak, etc. Except with much bigger variety and variants for each (grenade salvo, flak rail, blast lance, etc. each having their special affinity modifier for weapon benefit like velocity, size, blast radius, projectile count, rate of fire, and so on). Always design them in a way that will be compatible with generic upgrades like rate of fire, super mods, velocity, projectile size, spread, recoil, and so on. Avoid anything that causes self-damage -> prefer a heat mechanic instead (build up and vent).

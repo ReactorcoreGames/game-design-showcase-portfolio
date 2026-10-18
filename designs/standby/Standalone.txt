@@ -1,0 +1,170 @@
+Working Name: Standalone
+Engine: Any 2D or 3D engine
+
+
+
+Summary:
+Become a superweapon as you pilot a powerful and fast mecha and its strong versatile mothership against giant monsters and machines in a semi-permadeath assault game.
+
+Description:
+Player is an AI onboard an all-environment self-sustainable deep-space von-neumann probe assault battleship superweapon. It is equipped with a mecha bay and a linear catapult to launch a separate pilotable mecha superweapon.
+
+
+(Primarily, the player leads the assault using replaceable yet extremely powerful ReWaR; a Remote Warrior Robot. It is a transformable high mobility aerial mecha piloted by you, an AI soul. Because it can be built again at the mothership, you can be reckless with their ReWar.)
+
+The AI can split its consciousness into this mecha, allowing it to switch active control between the mecha and the battleship. During this control switch, the battleship goes into auto-pilot mode while it's not being actively controlled. If the mothership is ever lost, the unique AI being onboard it will permanently die with it.
+
+
+(Secondarily, the player commands the mighty mothership; a powerful warship capable of annihilating entire armies on its own and launching a plethora of powerful support fire to assist the ReWaR. You can switch control between the Mothership and ReWaR at will.)
+
+The mothership and mecha form a tandem superweapon combat unit dubbed "Standalone". 
+
+They were created by humanity as a final measure to fight back against a trans-galactic menace of various loose groups of so-called “Space Monsters” that threaten to destroy anything and everything in their path for no real reason.
+
+
+
+The Space Monsters are not one entity nor do they really belong to any one group or have the ability to reason. They are a collection of many rogue monsters, robots without masters, rabid animals, infected zombie fleets and other similar groups of beings that merely consume everything in their path, corrupt the worlds they touch, multiply uncontrollably and spread throughout the stars endlessly. If left unchecked, they will ruin the entire universe.
+
+
+
+Any intelligent race - humanity included - could eventually become extinct if they reach the milky way galaxy. That’s why the inhabitants of the milky way galaxy must attack and cleanse the universe from these monsters once and for all.
+
+
+
+Often, the origin of any particular Space Monster group is that of an experiment gone wrong, a rogue AI, a malfunctioning war machine, uncontrollable bioweapon or some other mistake by a long gone ancient civilization. 
+
+
+
+The only common thing is that they mostly originate from outside the milky way galaxy, but beyond that, they’re scattered around the universe in far away places, always advancing.
+
+
+
+The game is played in sessions where a campaign generator creates a new star system to cleanse of any space monsters. In this wide area there are locations in space and on planets/moons.
+
+
+
+One or more randomized groups of space monsters are scattered around the area and the player's mission is to travel within the star system, annihilating any all hostiles until the entire area is clear. The different monster groups may also infight each other which can lead to some crossfire and battlefield chaos.
+
+
+
+The goal of the monsters is to reach planets, stars, gas giants, asteroid belts, nebulae and moons in order to set up nests/replicators/factories to consume all material in the area, corrupt it to become unlivable for humanity and slowly multiply. In the long run they can eventually expand to other star systems and doom the entire galaxy.
+
+
+
+The player must use their superweapon-grade mecha and mothership to intercept, assault and destroy them all, safeguarding the star system for future human colonization and for creating backups of more Standalone units to join/continue the fight until all Space Monsters are defeated once and for all.
+
+
+(An example of a randomly generated tile-based star system, slightly reminiscent of Freelancer’s star maps, featuring clearly defined zones for nebulae, debris fields, planets, moons, stars and other major locations. This image shows the beginning of a campaign session; as it continues, the enemies will move about and spread, trying to corrupt locations into their favor. The player races to intercept and wipe them out to minimize the damage they’ll cause.)
+
+Each star system campaign is temporary and discardable, but the greater universe is persistent and is never reset. Players will get to name and customize their mecha before the start of the game and they will be locked to that name.
+
+
+
+The goal is to complete as many campaigns as possible without suffering the destruction of the mothership. If it does happen anyway, that particular Standalone unit, including its name/nicknames will be permanently enshrined to a list of casualties forever. The player will no longer be able to name another Standalone unit with that same name.
+
+
+
+Death will also not reset a campaign, but instead a new Standalone unit will have to finish the job of the old one, usually with the enemies having gained more ground in the absence. If a star system becomes too corrupt, it will have to be destroyed by detonating the sun and leave a permanent mark of shame in the game's logs - sort of like the memorial page/screen in XCOM to commemorate fallen heroes and the stories associated with them.
+
+
+
+Gameplay-wise, it's a third person shooter where the player can switch control between a transformable super powered mecha and a mighty mothership with strong armor and weapons. Players will have the ability of infinite flight, extreme speed and excessive firepower on their side. Both combat machines are state-of-the-art eradication machines with the ability to wipe out entire armies on their lonesome.
+
+Technically the game can be either made in 3D or 2D, each tailored to the specific format in a way that works best for it. 
+
+The general metagame structure is adaptable easily to either version as is, while the specific mechanics of a 3D or 2D version would still work upon the same underlying principles of real time fast paced combat with a central element of physics momentum based movement. The only real difference would be the camera view, while the action would *feel* the same in both.
+
+ 
+1. What purpose this project caters to:
+To any mecha fans that want to pilot an obscenely powerful mecha, this is a real treat; they get to experience the thrill of launching something of a mix of the Freedom Gundam and Wing Gundam Zero, except way more overpowered than either of the two.
+
+
+
+If you’re not familiar with either, those two giant war machines can fly fluidly through the air, perform impressive fast aerial acrobatics, fire obscenely powerful beam weapons, transform into a jet (Wing Zero), acquire a multiple weapon lock-on to wipe out an entire group of enemies all at once (Freedom). 
+
+
+(XXXG-00W0 Wing Gundam Zero, a famous mecha that can transform between a towering humanoid warrior robot and a space and atmosphere capable jet/star-fighter.)
+
+They’re also incredibly resilient to damage, are outfitted with multiple weapons and have virtually infinite operational time, not being limited by fuel or battery power thanks to their powerful reactor.
+
+
+
+In the game, the player would blast off from a linear catapult into a swiftly changing battlefield, do combat in varying theaters in space and planets while dealing with the environmental conditions of both. 
+
+You’d get to fight both up close and at a range with powerful diverse weapons. It is an empowerment game at its core, even with the element of semi-permadeath. 
+
+The player is never likely to die normally and is encouraged to be more and more reckless, which is usually when the player may make enough big mistakes to get blown up. 
+
+
+
+And even when they do, they go out with an epic thermonuclear bang. Ultimately, it's a game to blow off steam and kick ass, while enjoying piloting an amazing tandem superweapon, including the powerful lumbering mothership that also sports similar capabilities as the mecha, although not as nimble.
+
+2. How it achieves this:
+
+
+
+Mecha: excellent armor, mobility, weapons and versatility. It can accelerate to speeds so fast it can cover the entire battlefield in seconds. It has defensive capabilities to withstand a nuclear explosion using its shield. It has the offensive capabilities to fire a nuclear warhead, but also to quickly destroy groups of large enemies with its various standard weaponry.
+
+
+
+Mothership: Can print a new mecha if the old one is lost - though this requires resources that the mothership can gather using its helper drones. It can also repair, refuel and rearm both itself and the mecha - though with a resource cost too. The mothership is not as maneuverable as the mecha, but has more armor and bigger guns. It is capable of FTL travel and can annihilate entire armies with its arsenal. It also houses a powerful main cannon that can wipe out an entire fleet in one shot.
+
+
+
+Space Monsters: The enemy is numerous, but individually weak. Collectively they can still pose a challenge to the player, but usually the player's real source of danger will be logistics, not the space monsters themselves. Defeating a space monster using either the mecha or the mothership usually results in satisfying spectacle destruction as the elemental properties and mode of attack affect how the enemies break apart, making each kill feel unique.
+
+3. What is unique/new/special about the project:
+The sheer speed, mass destruction potential and versatility of both mecha and mothership have not been done before. In other games made by others, usually flight is limited, armor is weak, weapons are lackluster or some other drawback and restriction is often placed upon the player or their machines that greatly limit their empowerment. My game says no to all those restrictions and scarcity. 
+
+
+
+Instead, it delivers abundance, excess and overkill. This game is about the thrill of being truly overpowered and reveling in it, while listening to any kickass music and having an experience that one would have with games like Beat Saber, Audiosurf, Beat Hazard or Guitar Hero in terms of how it feels to play the game. No other pure combat game aims for this kind of "get into the flowstate" mindset as intently as this game does from the get go without it being some kind of a music driven game.
+
+
+
+There is also a lack of momentum driven movement in most mech/mecha games out there. Usually there is some kind of air friction, land friction, speed limits or absolute controls that instantly stop a character from moving forward the moment they stop pressing a movement key. 
+
+These feel unnatural, restrictive and like I'm being held back. This game instead features physics driven movement where player momentum is conserved and the player has to actively break to come to a stop. 
+
+
+
+Moreover, the player is given the ability to slide/skate/glide across surfaces and playfully "throw" themselves around in the air using rocket thrusters by merely adding force in the direction the player wants to go instead of how linear flight feels traditionally in game. Unlike planes, a mecha can turn around in the air or on the ground on a dime.
+
+
+
+Nuclear bombs, giant beam cannons and other superweapons are rarely given to the player as a regular weapon - especially not at the start of the game. This game will do just that and even allows multiple uses with no arbitrary restrictions. Everything ends up balanced since the core of the game will still be one lone unit outnumbered going up against many groups of alien armies.
+
+4. What is the potential of the project:
+Content wise, the game can be endlessly expanded with more new different Space Monsters - which can be anything at all, be it organic, artificial or hybrid. 
+
+
+
+New location elements can also be added nigh-endlessly, such as new terrain textures, new destructible scenery props, new liquid types, new gas types, new debris fields, new cloud formations, new wrecks and curiosities.
+
+
+
+The player's machines - mecha and mothership - it is possible to bring in new variants that play very differently or have them be customizable using modular components, leading to completely fresh experiences so you’re not stuck with one loadout only.
+
+Overall thanks to its infinite playability afforded by the randomized campaign generator, the game will never cease to offer a new gameplay experience. 
+
+
+(Endless combinations of mecha, monsters, and environments + physics driven chaotic gameplay + smart heuristics system and standardized yet flexible core content system = infinite variety and endless playability.)
+
+Any content updates will simply add new pieces into the pool for the generator to utilize in crafting the next campaign session.
+
+The persistent metagame and semi-permadeath will make each session tied together so player's efforts are remembered in a permanent log, along with their victories and failures, creating an interesting history that players will find fun to read through once a while and remember cool moments they had throughout their journey.
+
+In theory, the game could be possible to make coop too, where two Standalone units fight side by side.
+
+5. What inspired the project:
+I'm a big fan of mecha anime/games - Gundam, Macross, Lost Planet, Armored Core, Knights of Sidonia, etc - and I've always wanted to capture the epic feel of piloting a mecha; the startup sequence, the preparation for take off, the linear catapult launch, the majestic flight/walk/skate of a giant, battle conducted by a giant technologically advanced war machines that are at its peak of engineering and human ingenuity, the epic aftermath of massive weapons dealing damage to terrain, objects and characters in the area... all that stuff is so cool!
+
+
+
+It bothered me that most western mech games are usually about realistic yet awkward, slow lumbering giants that lacked mobility and speed. Meanwhile it also bothered me how japanese mecha games did have speed, but lacked momentum and physics, making piloting them feel so stiff and unenjoyable. 
+
+
+
+Japanese mecha games also tended to discount realism/believability in favor of simplifying a mecha to the point where it felt more like a reskinned human than an actual pilotable machine, lacking the noticeable weight and oomph like the realistic western mechs often did have.
+
+I wanted something that took the best of both worlds to create something that surpasses both.

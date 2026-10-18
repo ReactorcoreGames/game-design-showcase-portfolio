@@ -1,0 +1,56 @@
+Ground Forces Military Unit Sizes:
+ 
+	Ground Asset (A part of a unit)
+	Ground Unit / Element (former is combat, latter is support/logistics)
+    Ground Squad
+    Ground Platoon
+    Ground Company
+    Ground Battalion
+    Ground Regiment
+    Ground Brigade
+    Ground Division
+    Ground Corps
+	Army Command
+
+Air Forces Military Unit Sizes:
+	
+	Air Asset (A part of a unit)
+	Air Unit / Element (former is combat, latter is support/logistics)
+    Air Squadron
+    Air Wing Group
+    Air Battalion
+    Air Regiment
+    Air Brigade
+    Air Division
+    Air Force Command
+	
+
+Naval Forces Military Unit Sizes:
+
+	Naval Asset (A part of a unit)
+	Naval Unit / Element (former is combat, latter is support/logistics)
+	Naval Squadron
+    Naval Flotilla
+	Naval Task Force
+	Naval Strike Group
+	Naval Battle Fleet
+	Naval Division
+	Navy Command
+
+
+Realistic Military Unit Sizes for Space Forces:
+
+	Orbital Asset (A part of a unit)
+	Orbital Unit / Element (former is combat, latter is support/logistics)
+	Space Asset (A part of a unit)
+	Space Unit / Element (former is combat, latter is support/logistics)
+	Space Squadron
+    Space Flotilla
+	Space Task Force
+	Space Carrier Strike Group
+	Space Battle Fleet
+	Space Division
+	Space Command  
+    Interstellar Command
+	Galactic Command
+    Cosmic Command

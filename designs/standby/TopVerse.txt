@@ -1,0 +1,64 @@
+Working Name: TopVerse
+Engine: Any 2D engine
+
+
+
+Summary:
+
+Multiple themed yet standardized and robust top-down games weaved together into an all-in-one persistent open-world universe of procedurally generated adventure/action and excitement or relaxation and leisure - taking place on land, sea, air, space, underwater, underground, indoors, both on foot and on vehicles.
+
+
+
+Description:
+Utilizing a classic top-down twin-stick game as the foundation, the project aims to create multiple games with distinct themes. Each game will feature its own unique player character with specialized abilities and items, tailored to the specific theme.
+The core gameplay mechanics will remain consistent across all games: movement with a left stick or WASD, aiming/rotating the character with a right stick or mouse, basic fully destructible levels, simple physics-driven objects, and an interchangeable player character with a 10-active item slot inventory and auxiliary ability action buttons.
+
+To enhance the diversity of the games, a procedural level generator and campaign generator will be employed. These generators will create theme-specific levels and campaigns, ensuring that each game offers a distinct and immersive experience.
+
+
+
+
+Each of these games take place in a single persistent universe where all actions affect the world on a global/universal metagame map - creating consequences that alter the output of other themed game's level and campaign generators.
+
+
+
+Players will play as their "group" of people in the universe and try to live in this universe - sometimes by fighting opponents or hunting monsters, sometimes building settlements or by repairing infrastructure or creating new pathways to uncharted locations, sometimes adventuring within the established cities and having fun with water guns, foam dart blasters or by tending a garden, or by blowing off some steam by crashing cars together in a crash derby!
+
+
+1. What purpose this project caters to:
+The idea is to create a super game - an endlessly playable persistent universe that you can jump into and have it create a game experience of your choosing - each session creating an impact on the world, altering it permanently in some meaningful way.
+
+
+
+2. How it achieves this:
+By creating a single yet flexible standardized top down twin stick game where all the elements are interchangeable - the player, the items, the level objects, the level/campaign generating algorithm/heuristics, the objectives/goals. This core can be themed/contextualized through tailored content to create many different types of experiences. Once one game has been built, reusing the core for all the other subgames becomes trivial. Occasionally even some of the created content can be shared among the other subgames.
+
+
+
+This is then connected to a persistent world map that gets updated after each session in one the super game's "subgames" and then in turns creates options to start new sessions of those games with altered parameters created by previous sessions. Although the metagame is infinite, the sessions within each game could be considered campaigns with a clear start-middle-end structure, effectively making the entire program be a campaign generator or a set of campaign generators for multiple game types.
+
+3. What is unique/new/special about the project:
+It overcomes the problem of existing single player campaign games of being predictable and finite, often ending just as the player had unlocked everything and finally learned how to play, wasting the effort of the person's commitment to take the game seriously and getting good at it.
+
+
+
+It also overcomes the issue of many games being separate silos that cannot interact or communicate with one another, usually only offering that one specific experience and being incapable of sharing its content and mechanics in other games unless they're manually implemented there too. As an example, a game that takes place entirely on foot opts to view vehicle sequences as cutscenes instead of actual gameplay - and vise versa - or just shown as nothing more than a line of text. All these games that exist in their own separate silos are limited alone and can't leverage nor benefit from each other's systems as a cohesive whole that takes place in the same universe, contributing to the same metagame.
+
+4. What is the potential of the project:
+Content in this super game is data-driven or atleast soft-coded. It means it's not tied to any specific instance or scenario, but an interchangeable component - an intercompatible module - that can be reused, remixed and reorganized with every other piece of content in the game. 
+
+
+
+The particular phenomenon this creates is exponential multiplication of gameplay possibilities. Traditionally, most game content in old or present games use the wasteful method of "additive content" where a uniquely crafted piece or object takes ages to build, but is consumed within minutes by the player because it's only used in one specific moment or scenario it was built for.
+
+
+
+Generic customizable modular reusable content that is given context through circumstances is the foundation that creates the potential for even minimal game content to offer more gameplay hours than the time that went into creating them.
+
+5. What inspired the project:
+The general idea for a Super Game has been with me for over a decade since I used to create mods for the game Cortex Command which showed me the power of data driven content, where virtually anything I can imagine can be easily added into the game and have it show up in any scenario - both old and new - completely changing how that session would play out.
+
+
+The aspect of emergent gameplay was absolutely awesome on a local level. Thanks to physics, data driven content and a flexible “buy menu” system that allowed me as a player to spawn anything into the level - with costs, standardization, balance and rules, so none of it was a cheat or a creative mode type of thing either - I could play the same level over and over, each session being different and surprising. The controlled chaos and freedom was simply beautiful.
+
+What was lacking was a metagame structure that would accompany this content system to create a cohesive, continuous, persistent, standardized, unified world where each scenario isn't a disconnected session that gets reset to zero each time, nullifying any previous events, achievements and changes to the world. A perpetual universe simulator of sorts.

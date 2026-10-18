@@ -1,0 +1,56 @@
+AAL Stealth Sector - Covert Battleship Wars
+
+
+
+Could you make a simple optimized "Battleships" turn based game? (based on the classic board game). Make it futuristic french themed and gameplay wise let players fire a salvo of five rounds/missiles per turn, fired in a horizontal or vertical line, hitting 5 cells by clicking on a starting cell and dragging cursor relative to that cell up/down/left/right and then letting go of the mouse to launch the remaining 4 missiles into those cells. If used near borders where some of the missiles would go over border, have those missiles wrap around on to the other side cells. Use arcade neon style vector line graphics on a black background, giving it a mild synthwave feel. Have mouse hover over cells highlight the cell with a targeting reticle svg graphic, pressing left mouse down will highlight the cell with a color and cells that the other 4 missiles would hit would also be highlighted, but with a slightly dimmer color so that the initial launch cell is still clearly marked. After left mouse is lifted, animate all 5 cells with a easeOutCirc into bright red, then animate again into dark brown with easeOutQuad.
+
+Map grid per opponent should be 15x25 cells. User can see their grid on the left, opponent's grid on the right.
+
+Upon start of match, randomly place both players ships onto their respective grids.
+
+Both players have a fleet of these battleship sizes, one of each:
+size_1x3_corvette			fires 1x2, line pattern
+size_1x4_frigate			fires 1x3, line pattern
+size_1x5_destroyer			fires 1x4, line pattern
+size_1x6_battleship			fires 1x5, line pattern
+size_2x2_gunship			fires 1x3, v pattern, 1 cell middle and two diagonally adjacent cells.
+size_2x3_cruiser			fires 1x3x1, + pattern
+size_2x4_dreadnought		fires 2x5x2, + pattern
+size_3x3_obliterator		fires 3x3, square pattern (bomb)
+
+(potential for beam (every cell, default), salvo (every other cell), scatter (x pattern) and bomb variants(radial/square).)
+
+Players take turns, using one ship per turn, going through each ship in their fleet in that exact order as seen above. Always start with smallest one, then get to use the next bigger one, and so on.
+
+
+
+Ship destruction mechanic:
+- All ships begin invisible to the opponent, they can only see the grid.
+- If an opponent hits a ship successfully, those will be marked for them as heat signatures that designate destroyed cells.
+- As long as the ship hasn't had all of its cells destroyed, it will not be revealed to the opponent.
+- When the last remaining cell of a ship is hit, a visual effect explosion is shown coming from the center of the ship, and a greyed out husk of that ship becomes visible to the opponent.
+
+
+They can be placed anywhere on the map
+
+
+
+Electronic warfare - Hide or Reveal mechanics
+Warpin/Teleport/Move - move a ship to adjacent free cells or within a radius or anywhere on the grid, as long as it isn't occupied (by another ship).
+Heal/Mask damage - use an ability or item to heal a ship partially, to heal it fully or to resurrect it.
+Hazard objects in player's grid that ships need to avoid moving into or stay away from. Opponent can deploy them into your field, as you can too, as an ability/item. Item ideas: sensor probe: reveal ships adjacent, in a limited line, limited cross, or limited radius, player can move ship into it, causing it to break. mine: prevent movement or positioning onto that spot without taking any damage to ship. Smoke cloud (friendly) that itself is visible to opponent and has a wide zone, but hides enemy ships underneath it, even if sensor probes are present or even if a ship had been hit previously. Masks all damage signatures for X turns.
+Turns that allow player to move one ship(any), use one ability/item/consumable and fire weapon of (current active) ship
+
+
+- battleclash powerups
+- 
+
+AI opponent behavior and targetting:
+- If no live enemy ships are hit, AI opponent will pick a random cell on map as firing origin point, then pick a random up/down/left/right direction from that cell.
+- If theres a live enemy enemy that has taken a hit previously, then pick a cell adjacent to the hit that hasn't been hit before and use that as the firing origin point, then pick a random up/down/left/right direction from that cell.
+
+Use easings/tween animations to make the experience feel responsive whenever any kind of player interaction with the interface happens or when a game event is triggered.
+Reference: https://easings.net/
+
+
+Max 45 total cells occupied by full fleet.

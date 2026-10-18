@@ -1,0 +1,60 @@
+Claude, your task is written in:
+@1 MAIN Game Design Presentation HTML Generator.md
+
+That task doc will refer to a design bible file:
+@2 BIBLE Reactorcores Game Design Mentality Bible.md
+
+The completed HTML file will be placed in the folder called 'Ready HTML Pages'. Name that html file as '[game_project_name_without_subtitle].html'.
+
+The 'Game Project Files' folder contains the files that I want you to make the next game design showcase based on.
+
+Create a plan first, outlining the different sections you'll make and the theme you'll choose for it, but dont code it yet; I will review it first, then we will tweak it if necessary and then I'll give you the approval to proceed to build it.
+
+(Note, for Lore & context options, choose #4 this time, we will focus solely on that this session. Adapt any game mechanics that make more sense for that context instead of trying to cram mechanics that seem out of place for that context, replacing them or omitting them for a more tightly focused overall game design.)
+
+If you lack the knowledge for Mobile Suit Gundam, the Universal Century timeline the One Year War that takes place in it in particular, then do a web search to get that info; the game would take place in the equivalent setting to that world and that war, albeit renamed to something completely different. That info could be useful to get the technology, weaponry and tactics that happen from that universe more accurately for this spinoff game project.
+
+# Notable differences that are unique to this spinoff game:
+- limb dismemberment does not involve pieces of limbs detaching, they just explode into a fireball instead and are gone, while leaving a temporary spray of hydraulics, oil and sparks and fire at the point of detachment. Damaged or destroyed limbs cannot be fixed until after the battle has ended, player has to play carefully to hit and not get hit by using terrain cover and mobility. Weapons are indestructible and their colliders can be used to block some forms of incoming damage.
+- players are humanoid mecha, wielding large heavy-hitting handheld weapons, featuring particle beam rifles, kinetic autocannons, rocket launchers, giant bazookas, pilebunkers, thrown "anti-tank" mines (more like anti-giant-mech mines), superheated axes, plasma swords and similar big weapons common in the early Mobile Suit Gundam Universal Century warfare.
+- combat happens in wide spacious rectangular arenas that represent location in space, on planet, on moon or at a megastructure. There may be static terrain object, pushables props that are indestructible or destructible versions of those two.
+- player deploys with 1-3 squad mates with their own mecha, going up against 2-6 opponent mecha.
+- generally all mecha of the same size, but may have different armor pieces per each limb (light, medium, heavy) that affects mobility vs toughness of the mecha, depending where they are placed, like heavy armor on torso reduces acceleration for boost, heavy armor on legs reduces turning speed, heavy armor on arms reduces arm rotation speed and thus has fast the pilot can pivot to aim at their target. Heavy armor on head reduces weapon switch speed.
+- each mecha that carry 4 weapons, having one of them active at any given time, while others are stashed in the back. weapons can be cycled to next one by pressing Q.
+- weapons have limited ammo but hit hard. once ammo/energy runs out of a weapon, it becomes only good for bludgeoning opponents which is much weaker as an attack against an enemy mecha. Players are encouraged to be accurate to not run out of ammo.
+- whether player or opponents run out of ammo, they can choose to retreat, at the cost of losing that area but retaining their forces.
+- player can get out of their mecha as a tiny human in a spacesuit armed with a weak seal-recharging blaster bazooka that does about the same damage as weak out-of-ammo mech melee attack, but its far slower, mostly intended as a desperate emergency weapon use to destroy battlefield obstacles and debris to get away from the battlefield or to board a new pilotless mecha sent to you by high command to replace the previous one you lost.
+- low metagame campaigns are about specific limited military operations that take place in a smaller region consisting of a map of 6-16 nodes that player can choose to do in any order, each node being a rectangle area as mentioned before, while high metagame takes place in a greater celestial location (a planet, a moon, or region of deep space) where the low metagame campaigns are all nodes that the player too can do in any order they want. Each high metagame focuses on two randomly named and colored coded sides that are warring over that point of space. Whoever wins, will be added to a whitelist of recurring sides that player might end up playing as again or even against them. Those that lose are put on a permanent blacklist of sides that will never reoccur thereafter in any future campaigns. The player will be able to browse this blacklist and whitelist, but they cannot edit them. The hidden message of the game is to teach the player that wars are ultimately pointless as one day you may end up fighting against the very side you fought for prior.
+- theres a mild strategic layer to both the low and high metagame where per each low metagame campaign there is a limited amount of spare mecha and an even lesser amount of human pilots (about 5:1 ratio, so around 5 mecha per 1 human), meaning humans are encouraged to eject and either escape the battlefield or transition into a new spare mecha to continue a fight rather than die. Pilots can't be as easily replaced as machines of war or their weapons. The total amount of humans per each node in low metagame is 2 for player side and a random amount between 2 and 6 for opponent's side.
+- basically if player succeeds at staying alive during a fight and also keep their teammates intact, the combined remaining mecha and human tokens will be added to the low metagame campaign as reinforcements that can be summoned during future fights, up to a limit of 3 per battle. If a low metagame is won by player, any remaining humans and mecha are added to the greater pool in the high metagame towards the final big battle that will happen after all other low metagame campaign nodes on the high metagame overworld map have been cleared. It will start as an epic 8 vs 8 fight, with reinforcements coming to replace fallen characters or those whom ran out of all ammo and decided to evacuate the field, counting as a human "token loss" either way. The epic battle will conclude once either side runs out of tokens. Generally the enemy side will have anywhere between +20-100% more tokens compared to the players side, to compensate for players superior control, tactics and awareness on average against the AI that relies on superior numbers and tirelessness.
+- friendly fire is on and both player and AI have to be careful not to hit their own teammates. This goes for both teams, a skilled pilot can bait an enemy to fire their weapon at their comrade with clever positioning and smart use of boosting and momentum.
+- there is no healing or health regeneration in this spinoff game. Player is playing as a generic soldier pilot that upon death is simply replaced with another one from the remaining pool of available pilots, for that high metagame campaign.
+- generally fights are slug-fests when its mecha vs mecha. ejected humans are instant meat powder if they get hit even once by a mecha's attack. mecha are also generally faster than a human by about 50%, so human will have a tough time trying to outrun a mecha in the long run.
+
+## Player controls for mecha:
+WASD to float move the mecha through the arena.
+Mouse aim to rotate the mecha to face a direction.
+Spacebar to flip facing left or right (with a 1-3 second delay before it completes after initiated depending on equipped armor weight class on torso).
+Q to cycle to next weapon 1 > 2 > 3 > 4 > 1.
+Mouse 1 to fire current weapon.
+Mouse 2, tap to quick boost towards facing direction, hold to charge overboost release to f.ly far towards facing direction.
+F to perform a generic bludgeoning melee attack with currently held weapon, whatever it may be - usually less effective compared to an actual powered dedicated melee weapon, but with enough hits it can get the job done.
+E to exit/eject currently piloted mecha as a small human.
+R to cycle between team mate modes: stay close to player, stay back at spawn point, assault the enemy aggressively.
+C to summon a friendly reinforcement if one is available, up to a maximum of 3 per battle. (reinforcements are AI controller mecha allies, similar to player mecha).
+X to toggle, use, activate a defense system the current mecha randomly came equipped with, mounted in its head. Can be an automatic anti-missile point defence gun, a directional shield generator, a projectile redirector, smoke grenade launcher, grapple hook, after image generator, temporary energy barrier placer, etc. 
+Press Z three times to initiate a retreat from battle if close enough to own starting side edge of current battle arena, causing the mecha and its pilot to retire from the fight, saving both their human and mecha tokens for a future fight, hopefully having first destroyed enough enemies before doing so to weaken their forces in the grand scheme of the greater war at hand.
+
+## Player controls for small human pilot:
+WASD to float move the human through the arena.
+Mouse aim to rotate the human to face a direction.
+Spacebar to flip facing left or right (0.5 second cooldown per turn.)
+Q to switch between pilot weapon: anti-mecha bazooka > antipersonnel SMG (SMG is useless against mecha, its mainly for pilot vs pilot fights.)
+Mouse 1 to fire small human's emergency recharging bazooka weapon or SMG.
+Mouse 2 for jetpack thrust in facing direction.
+F to perform a melee attack with a vibrating blade knife. (tap for swipe that can deflect a small projectile if timed right or hold down for continuous drilling/sawing to dismantle an obstacles that is too close for bazooka use due to its blast radius hazard, even if its rather small.)
+E to enter a nearby unoccupied mecha as its small human pilot.
+R to cycle between team mate modes: stay close to player, stay back at spawn point, assault the enemy aggressively.
+C to summon a friendly reinforcement if one is available, up to a maximum of 3 per battle.
+X to request a new mecha.
+Press Z three times to initiate a retreat from battle if close enough to own starting side edge of current battle arena.

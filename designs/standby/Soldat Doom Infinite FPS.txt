@@ -1,0 +1,57 @@
+Soldat Doom Infinite
+
+Player respawns endlessly on death
+Weapons have infinite ammo, Start with All Weapons, Use original Stats.
+Special Weapons have limited ammo
+Ammo Pickups give grenades or slow motion juice, reset weapon cooldowns
+Jet Boots (Recharging)
+Advanced Movement Abilities (jump based momentum movement boosting, backflip, prone)
+Focus on judicious use of slow motion (as an on-demand ability ala Max Payne)
+UT2k4 Adrenalin style powers
+
+Lore:
+A bunch of guys decided to kill hell and you can be one of them. 
+(thats it.)
+
+
+Weapons:
+Deagles			- semi auto dual shot
+MP5				- fast flurry smg, wide spread
+Steyr			- fast burst assault rifle
+AK				- slow steady assault rifle
+Ruger			- semi auto precision rifle
+SPAS			- per shot reloading semi-auto shotgun, pushes hard, wide spread
+M79				- single shot instakill boom, dangerous to use
+Barrett			- slow piercing power shot, long range
+Minimi			- medium assault weapon
+XM Minigun		- relentless spray gun, pushes away, stuns
+
+(weapons get less powerful with range after they pass an a certain distance, prior to that, they have full power. All weapons projectile based, except minigun.)
+
+Socom			- quick finisher pistol
+Knife			- instakill stab or throw with cooldown on auto return or manual retrieve
+Saw				- rapidly lethal chainsaw, carve through hordes or individuals at risk of getting close
+LAW				- big fuck-off boom, very slow to reload, require grounded and crouched to fire
+
+Flamer			- short-medium range fire hose
+Rambo Bow		- semi-auto instakill (kills barons in one hit, cybers/masterminds go down in 4 hits)
++Blast Arrows	- a faster long range version of m79 with semi-auto fire
+M2 Stat gun		- BFG tier brutal autocannon-esque machine gun, but with a focus on limited piercing
+
+Grenade			- on demand anti-group explosive. short range. timer based.
+Cluster Gren.	- similar anti-group bomb but splits midair (airburst or impact) with devastating effects into 5 grenades in direction of flight. impact based.
+
+Plasma Rifle in 40watt range		- Shotgunnery(?) style weapon temporary LVL2 upgrade to turn every weapon to fire AoE plasma shots with 3x damage. (backpack, inventory item, temporary use of 300 seconds.)
+
+Basic melee attack (usable with any weapon, extra damage with knife and saw.)
+
+General weapon power is rated for HellKnight/Arachno/Fatso = Soldat time to kill. This means most enemies go down very fast and in few shots. Imps,zombies,pinkies are basically chow. Player themselves only has default 100hp, plus body armor pickups that provide 90% protection for 200(green) and 500(blue) points, but both are rare. Stimpacks heal 50%, Medkits 100%.
+
+health vials give slow mo
+kills and armor shards give ut2k4 style adrenaline to trigger those abilities (regen, speed(move and jump), flight (endless jet boots), rate of fire 2x)
+
+player start with random primary and secondary + grenades.
+
+All weapon pickups are randomized, except BFG that gives Special Weapons (with full ammo refill)
+
+powerups give predator (blur), flamegod (soul), rambo (invul), stat + heavy armor (mega), night vision (goggle), hazard protect (radsuit), berserk (6x damage, 30 secs) (ditto). All powerups are inventory pickups that player can choose when to use. Stats are adjusted for Doom gameplay (longer durations).

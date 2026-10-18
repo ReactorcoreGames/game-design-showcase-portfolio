@@ -1,0 +1,105 @@
+Working Name: Shape Smasher
+Engine: Any 2D engine
+
+
+
+Summary:
+Create art sculptures and have others (and yourself) critique them by breaking them using a big toolkit of various weapons and powers or altering them with stickers, graffiti, addons or flipping it upside down. It’s all physics enabled gameplay, designed specifically for mobile devices.
+
+Description:
+The game has two sides to it:
+
+
+
+
+CREATE: First is a level editor that lets you build art sculptures using geometric shapes made out of common materials like wood, glass, stone, metal, dirt, ice and so on. The primitive shapes can be piled on top of one another or glued together while they intersect. Everything can be painted to be any color. The background can be given a gradient, pattern or a solid color. The lighting can be adjusted in any way to be bright as day or dark as night - including moody colored light. Additional accessories like sprites, text, symbols, flags, props and stickers can be placed upon the shapes.
+
+
+
+
+DESTROY(?): Second is a physics driven playground where the sculptures built in the level editor become levels that players can "interact" with. "Interacting" is done via a large toolbox of physics-enabled weapons, gravitational forces, elemental powers, projectiles, bombs and markers. The player's goal is NOT necessarily to destroy the sculpture - although they can certainly do that - but instead to "critique" the sculpture by either of two means; by using their physical tools upon the sculpture and then screenshotting the aftermath or by choosing the appropriate feeling emoji that they felt from this sculpture.
+
+
+
+This is an asynchronous online social game at its core. It's a platform for people to express themselves, either by creating sculptures to tell a message to other people or to play the sculptures/messages created by others and react to them. Reacting can be done by leaving an emoji (happy, sad, shocked, confused, bored, angry) or by using various destruction/editing tools to leave a mark upon a sculpture and then send the resulting screenshot back to the original author as feedback.
+
+
+
+It's like an open art gallery platform mixed in with Angry Birds-like gameplay and facebook's post/comment emoji reactions. The community of players essentially create an infinite amount of levels that act both as a level to blow up in whichever way they like (shattering it, burning it, drawing graffiti all over it, placing a cute flower on it, enhancing/extending/modifying the sculpture with additional level editing, etc.) but also as a message to the world from the artist, letting others know how they feel or have the world hear out what the artist has to say about something that's important to them. Or just to spread memes and jokes for everyone's enjoyment and have a great time in blasting them to bits.
+
+
+
+A central part of the experience is an online portal/level browser where Creators can submit their sculptures and receive private feedback directly from players that decided to react to it in the form of a live “aftermath screenshot” or a count of emojis that players gave that sculpture. Creators can then choose to permanently save those screenshots and share them online on an external third-party social media platform to continue the discussion of their piece online.
+
+
+1. What purpose this project caters to:
+
+
+
+For Creators/Artists: Socialization, self-expression, sense of community, a place to vent, a place to educate, a place to be seen, heard and reacted to.
+
+For Destroyers/Critics: Satisfying empowerment, self-expression of voicing their opinions/feelings, have a space of creative expression through destruction/remix/modification of existing levels that they can screenshot, share online or upload as a new level.
+
+2. How it achieves this:
+
+
+
+First there's a robust level editor that offers easy-to-use tools, a wide palette of blocks/shapes/props, full color selector, many decorative patterns and options for backgrounds, simple but dramatic lighting options and multiple fonts for text input. 
+
+
+(This is somewhat a close representation for what players could build; sculptures made from triangles, rectangles, circles/ovals, lines and sticker decals. Backgrounds would be possible to adjust to any color or gradient, allowing for practically anything to be drawn and destroyed.)
+
+There's also a procedural generation tool for creating randomized complete or partial sculptures automatically; these can provide starting points for creators to customize if they don't wish to start from a blank canvas. Or this system can be used for generating infinite humorous nonsense levels for pure destruction gameplay purposes.
+
+Meanwhile, the game-side has two main game modes.
+
+
+
+First is the social critique mode where players are given a wide arsenal of various weapons, powers, art tools (spray paint, markers, paint brushes, paint buckets) and even the ability to temporarily open the current sculpture in the level editor to make changes as part of the critique.
+
+
+
+The second mode is a pure game oriented mode where the goal is to destroy a sculpture in a specific way with randomly generated objectives that make each level replayable in multiple different ways each time. This is for when the player doesn't want to engage with the social aspect, but just enjoy wrecking stuff in short meaningful sessions where the game provides some friction and goals to make the player feel some push-back as they "attack" each sculpture. It's sort of like a satisfying scratch card stress toy thing that is easy to pick up and enjoy to destress and relax to.
+
+3. What is unique/new/special about the project:
+It's an entirely new art platform essentially that features interactivity and feedback that has never been seen before in any kind of gallery. In most galleries reposting an edit of someone's work is frowned upon and rejected, meanwhile this project actively embraces and encourages visceral feedback from the viewers. 
+
+
+
+It's a platform that makes it normal to expect your work as an artist to be ripped apart in all kinds of creative ways - and it's something the artist is excited about to see how did the audience receive the art they made - how raw were their reactions to it?
+
+
+
+In a way, it's almost like working as a chef in a restaurant - you create a splendid piece of art out of your dish and then place it in front of a stranger whom will promptly devour and destroy your creation within minutes, making them have a reaction as they do so that is satisfying to witness; If it was good food, the stranger felt happy and you as the chef made someone feel good on that day - even though you spend an hour or more preparing that art. 
+
+The big difference is that a sculpture created in the level editor is infinitely multiplied to serve an audience of many people - potentially thousands if not millions of souls - who will all at once react to it like a powerful waterfall of feedback. The feeling of rush an artist would get out of that is huge.
+
+
+
+Moreover, I want the game to also reward level creators to give them the framework/tools/space that they can even earn money from the level they create. They can receive gifts/donations, they can promote their off-site website/social media profiles for marketing purposes, they can take on commissions for creating custom levels to those who pay them money and maybe even offer premium levels that become available to players that subscribe to the game's monthly premium pass. 
+
+So far, no other game that features a level editor has done such a thing even though many art gallery websites actually do these things I listed already to great effect with massive benefits to the artists there. Some people make a living with this alone - and I want to bring that to a game like this.
+
+4. What is the potential of the project:
+Infinite satisfying playability of smashing sculptures - the game would literally provide infinite content either via level editor's procedural generator and via user-made levels. Players will always find something new to see or try each time they turn on the game.
+
+Socially, this game would likely spawn a phenomenon of a new type of art platform with a new mentality of how artists and viewers interact/collide in a more hands-on approach that is more immediate, resulting in in-the-moment authentic reactions of viewers/critics that see the art that now have the ability the directly touch the art in some way - either positively or negatively.
+
+
+
+This is something you cannot do in an art museum gallery in real life and certainly most online artist gallery platforms don't do this either. Here it's literally possible to play with art like it was a dish of food prepared for you at a restaurant - that's bound to lead to new human experiences never seen before in an online game directly.
+
+I reckon this project might inspire new types of online art gallery services that are web based instead of mobile and for other types of art - like regular drawn 2D art or photos instead of the sculptures made out of simple shapes like in this game.
+
+5. What inspired the project:
+Originally I wanted an Angry Birds clone that wasn't about a puzzle with scarce resources, but more about abundant catharsis and destruction without restrictions - a stress relief toy that I could pull up anywhere and enjoy some spontaneous carnage.
+
+
+
+Specifically I wanted it to be a mobile game because there aren't that many simple physics driven tower/structure wrecking/chaos focused mobile games that I know of that are as simple as the early Angry Birds/Crush the Castle games, don’t have any player retention nonsense (xp systems, unlocks, shops/coins), don’t have intrusive monetization methods (advertisements, microtransactions, etc.) and don’t take up much space or need much in regards to phone performance to run. Such games that tick all those boxes are remarkably rare. I couldn’t find anything like this in the Free Open Source Software (FOSS) community either.
+
+Since the game would obviously need levels, a level editor was naturally the first thing I'd have to design, at least for myself to make the initial custom levels. Then I figured including the level editor as part of the game was needed, but I also had the challenges of how to motivate someone to make levels, since breaking stuff is thoughtless, satisfying, easy and takes only a few seconds, but creating stuff requires thinking, is hard and takes several minutes, maybe even an hour to do so - its work, not play for the most part.
+
+Making levels in itself is an artform and level elements can be arranged to convey meaning or symbolism through patterns, colors and silhouettes. This spawned the idea of levels being sculptures and level makers being artists/creators that "tell a story" with their art, their level they've created. Because art without feedback isn't valuable, I organically came up with the idea of players of levels giving emotion-based feedback that the artist could receive directly the same way a notification on a social media platform would deliver reader reactions into a neat scrollable list.
+
+This gave context for the entire project and the design for it shifted with it, spawning multiple ideas to support/improve it and shaping it to what it is today.

@@ -1,0 +1,31 @@
+# Resource Processing
+AAL has the technological capability to utilize most if not all matter, mediums and energy in the universe to craft anything that is needed.
+
+The caveat is that its always cheaper, faster and more efficient to use existing deposits of something, rather than to transmute into it from something else.
+
+There are these categories of stuff in the universe:
+.particles, energy, heat, baryons T1 (lightest)
+.gasses, basic atoms (periodic table 0-20) T2
+.liquids, intermediate atoms, solids T3
+(periodic table 20-80)
+.complex atoms, heavy solids, nuclides T4
+(periodic table 80+)
+.exotic matter, composites, alloys, weaves, hyper energy, extreme materials. T5 (heaviest)
+
+The rule of thumb is that its essentially following the periodic table, with basic- and ultra-energies at their respective ends.
+
+Transmuting matter to something is easier the closer its target matter - considering it's position in the periodic table - is, aka heavier / complex (T4-T5) converts to T3 better than into T1-T2. Atom 1 aka hydrogen converts easiest to atom 2, aka helium. The chain is like this: T1 + T2 + T3 + T4 + T5. 
+
+T stands for Tier (level of advancement).
+Heavier elements tend to be more rare.
+All matter degrades to lighter elements, especially if they're an unstable isotope (radioactive / volatile).
+Energy cost wise in transmutation, both light to heavy and heavy to light are same.
+Most natural heavy materials are created in extreme conditions (high forces of heat, gravity, pressure, electricity, energy, rays and/or very long durations of reverse erosion / anti-entropy created by unusual conditions or anomalies). The rest are artificially forged by beings. Lesser materials in nature come from heavier matter via breaking / eroding / entropy / annihilation / radiation / outgassing.
+
+Transmutation can happen chemically/organically (slow, cheap, simple) or energy/force wise (fast, expensive, complex).
+
+Homeworlds may have the industry and systems for powerful fast large-scale transmutation, but new uncharted worlds need to rely on existing matter deposits with only minimal transmutation and even then, in gradual steps along the chain.
+
+As a result, on new worlds mining / harvesting activities are quite similar to those today in 2020, where mineral deposits are searched, scanned, surveyed and utilized. The collected material is then brought to refineries and sent along the manufacturing chain. Very similar to Factorio.
+
+On homeworlds, all materials are already fully extracted and are merely recycled, kept in reservoirs / stockpiles and converted / used when and where needed. Only heat management, pollution and side effect factors are a concern, otherwise its sustainable abundance for a very long ass time. Apart from sending material offworld, but new matter comes from space anyway - naturally or otherwise, so its not like matter depletion is going to be a problem ever either.

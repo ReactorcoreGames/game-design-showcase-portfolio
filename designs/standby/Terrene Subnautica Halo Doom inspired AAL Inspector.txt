@@ -1,0 +1,151 @@
+Terrene X Interstellar Rogue x Subnautica x Halo Doom
+
+Title: 
+AAL Inspector: Planetary Explorer
+
+Lore:
+Taking place after events of 'AAL Standalone', human scouts are sent to the star systems that the Standalones had previously fought in and secured for humanity, exploring the places in more detail, clearing up any remaining isolated burrowed/dormant/cocooned Space Monsters (weakened) that could awaken in the future to pose a threat to that planet. Maybe also finding hints of previous civilizations or other interesting discoveries on the way.
+
+These Inspectors hop from planet to planet, moon to moon, sector to sector with specific signals/clues guiding them to points of interest to investigate and solve any issues that may be present or acquire any useful materials or other benefits from that spot.
+
+Normally its just flora, fauna and local environmental hazards that are an opponent, while said dormant space monsters are bosses or minibosses. Keep in mind, Standalone eradicated all of live ones from the area and also left behind copies of infrastructure outpost factories that have set up preliminary bases, crewed by automated bots that kept the peace in the area, so these places are generally safe and not under a major threat like they were during the events of 'AAL Standalone'.
+
+The inspectors are typical Jager-like operatives that are essentially immortal super warriors. Their bodies can be destroyed but their conciousness simply slips into a new body or another nearest soul bank. They're not clones btw, they literally just keep living, no matter what, thanks to a vast infrastructure with various facilities supporting it throughout the milkyway galaxy and beyond.
+
+
+Gameplay:
+
+Heavily inspired by these: Terrene X Interstellar Rogue x Subnautica x Halo Doom
+
+Terrene
+Primary inspiration for overall gameplay. Worlds that have block based terrain with random gen stuff, props, nests, mobile space station, fighter gunship, humanoid explorer, gun, secondaries, some powerups, planet types with depth, digging etc. (note: digging will load all the dirt/material into the factory of the area, not delete it permanently, so you don't effectively ruin planets like you do in Terrene.)
+
+
+Interstellar Rogue
+Star System campaigns, top down starship combat/flight (optional future update), 
+
+
+Subnautica
+Resource and crafting system, including dispersal style of resources, the vehicles system (simplified to the level of Terrene) and the exploration aspect.
+
+
+Halo Doom
+Combat system, weapons and gear, vehicles, controls.
+
+
+Super Metroid
+Thematical, powersuit, samus' ship, biomes/sectors, bosses, worlds, metroidvania lock and key elements, powers/upgrades.
+
+
+AAL Superweapon/Meltdown Jager McFist
+Jager weapon sprites. Character sizes (32px based tiles/blocks/everything)
+
+
+Other inspos:
+Motherlode
+Titan Fall
+Terraria
+Utopia Must Fall
+Halo's Sentinel Beam Popcorn
+Alien Invasion (javagameplay.com)
+
+
+
+General Tech:
+
+Closely following Terrene's main idea of a tile based room that represents a planet, from space, orbit, atmo, surface and all the way down to hard bedrock/crust. Use the starfighter(SF) to travel between surface, orbit and mobile space station(MSS). Walk around planetside/station with human agent operative(HA). Use the MSS to warp between planets/moons/locations/sectors/starsystems.
+
+Worlds are simple and a mix of AAL Standalone and Terrene, with elements of Subnautica. At certain heights certain effects kick in. Gravity begin at certain height and then caps at the planet's natural gravity level from surface to crust. Space is zero gravity. Player char detects this and uses a topdown control scheme. Atmosphere is a similar start-end height thing where going through it will slow down the SF, while above it the SF will fly faster due to no air resistance. Going from orbit to atmo will result in re-entry burn effects if going at a certain speed. Borders are hard walls, including ceiling and floor.
+
+Terrain is also generated below a certain height, composed of random typical terrain gen perlin noise or whatever other method there is to create simple terrain or patterns. Additionally, I'd also add a water height layer ala Hydro Plus, with exlusion rectangles for air pockets maybe.
+
+Player can dig through terrain just like in Terrene.
+
+Orbit and space may have floating objects like asteroids, derelict modules ala Adios Amigos, eggs/hives ala SPAZ, fields of gas/rocks/anomalies ala Freelancer.
+
+Unlike Terrene, SF has jet mode and mecha mode, replacing the hover mode with a more combat capable roam mode. Jet turns automatically into mecha upon contact with any hard surface like terrain or the MSS.
+
+Each run session is a randomized campaign with a set of celestial places to investigate a list of random points of interest/signals to discover. Encountering bosses is optional so not every campaign will even have them. And campaigns won't have any sort of "complete X worlds, then go up against big end challenge to seal the star system". Its more chill like pre-tourian Super Metroid in its pacing.
+
+
+Player (HA):
+
+V1 (too complex, nah)
+Modeled after Halo MC from Halo Doom CE. Primary held weapon fire, switch to secondary weapon, melee attack, dash/run, grenade/item throw/use, use to pickup/interact gun/vehicles/machines. regenerating shield, health pips, jump, zero G movement, grapple or/and jetpack/multijump. Maybe also a GunArms style hardshield mode that prevents shooting but protects against all direct hits, using energy/fuel in the process.
+
+Player also has an inventory for resource loot purposes, but weapons, usable items and supercores do not qualify for this inventory and simply use their own slots/mini inventories. Player may also use the E key to pick up large objects and toss them around.
+
+Each weapon only has one firing mode. Play can find guns thrown around everywhere by the outpost's bot's pods. oxygen and battery power is free, no need to refill. Or maybe yes.
+
+Resources:
+collected/found crafting resources (various, subnautica inspired, though simplified crafting chains and less types of resources)
+health
+
+V2 (mining beam focus)
+Modelled after the Terrene clone character, but no gun. Instead its only mining beam which doubles as a weapon. Modeled after the Halo Doom CE Sentinel Beam weapon where its sort of an Oscillator/Agitator beam weapon that you must hold upon a target to agitate/heatup/destabilize, causing it to explode/burst/crash. This pairs nicely with block/tile based terrain digging code limitations, but also lorewise where you're not expected to carry a multi-ton tunnel boring machine to go through terrain. You'll have the option to dig through individual blocks, kill weaker enemies in spectacular popcorn blasts with AoE (sentinel beam is really fun in HDE), while larger enemies with more mass and health pose a challenge where user needs to hold the beam onto them longer and consistently or the charge will rapidly dissipate if not building up. But the payoff is bigger satisfying blast with larger opponents.
+
+To support this primary weapon I'd also include JavaGamePlay's Alien Invasion style 3 secondary weapons. These devastate terrain and cause heavy flat hp damage unlike the oscillator mining beam primary weapon. I think there could be low-grade infinite versions that only damage enemies, and empowered versions that destroy terrain and use ammo. They'd be energy based too, only requiring the HA to carry catalyst charges to fire the empowered version when needed. These would also replace the equivalent of Dynamite, Mining Bot and Molotovs from Terrene.
+
+Dynamite: cluster bomb/nuke, expanding blast wave of X width. Actually use Super Metroid's Power Bomb.
+Mining bot: long piercer laser shot of X lenght. Plasma Beam from Super Metroid, but works like Alien Invasion's.
+Molotov: Mildly inspired by Cryptark's nukes, fire an area denial aura burner sticky orb floater with air brakes that keeps a zone crispy hot without damaging tiles, even through walls
+
+Note: all weapons are fire based and user is a super hero battle suit that is immune to heat/fire damage.
+
+HA uses a ZK-1 style multigun, slightly reminiscing the terrain tool gun from Astroneer, but held like a rifle or sort of arm mounted. Fires the beam, secondary weapons and more. Suit only focuses on mobility, armor and life support/comms/sensors/misc.
+
+...not sure... this is supposed to be the homing missile from alien invasion but I'd want an energy based weapon but also something that could provide a special digging function. Terrene's Super Molotovs had the excellent ability to provide area denial zone protection, giving breathing room to an area, allowing the user to block one area off or just have it covered while they focused on another incoming wave of enemies. Maybe the unpowered version projects an EM lattice bubble that is released to hover in an area for a given temporary time and the HA's suit fires a burning laser beam into it that automatically redirects
+
+The catalyst charge could also be available for the mining beam too, so its faster to agitate individual blocks but also when they crack it causes heavy detonations that destroy multiple tiles at once as if a dynamite blew up there. this allows for extremely fast and massive digging power.
+
+IDEA: Because the player is able to absolutely annihilate the entire terrain, I think its good to have a certain height that is designated as the global terrain surface which below everything else has a backwall texture. The SF cannot go below this line and while the HA is below it, they have infinite climb ability able to move freely using the backwall like a spider. A rather Motherlode style setup. This makes sure that the SF isn't used underground or become unreachable if HA doesn't have an infinite jetpack like the one in Terrene. tbh, I think Terrene's model is better and this whole setup isn't a good idea, apart from having the backwall thing.
+
+Note: No catalysts after all, just lump those things to super cores.
+
+
+Starfighter (SF):
+
+Weapon systems can be modelled as a mix of Utopia Must Fall and/or JavaGamePlay's Alien Invasion player ship.
+
+Basically a rapid fire railgun/mass driver that can fire accurate when mouse is further from player, and fire wide spreaded if holding cursor close to mecha/jet. Also autolaser turrets. Player can also configure both autolasers and the railgun with options. Railgun can switch between shotgun mode, rapid mode and charge mode. Turrets can switch between long/short range and target acquisition style (nearest, weakest, farthest. Line of sight ofcourse.)
+
+Secondary weapons include long pierce beam laser, tactical homing missile, cluster bomb (nuke).
+
+Also a hotkey for shield and maybe quick warp (same mechanics as in alien invasion by ben librojo).
+
+Jetmode gets an afterburner, while mech gets a tapering recharging boost dash.
+
+Resources:
+Railgun ammo (9999 pellets)
+Reactor fuel (autolasers use it and have cooldown/heat build up so theres a cost/limitation to using it. Player should activate it only when needed. Recharging shield also relies on this.)
+Secondary ammos (3 types, 9,9,9 each)
+
+Can find upgrades/supercores to boost the SF or its different weapons or capabilities. Super cores have durability that decreases with usage.
+
+
+Mobile Space Station (MSS):
+
+No artificial gravity. Player will float in zero g while outside SF, whether inside MSS or outside the MSS in outer space.
+
+MSS has these facilities:
+- hangar/fabricator for SF/DropPod
+- star map (player can freely complete any world in any order and even do one partially, go elsewhere, then return back to complete it.)
+- heal/recharge/reload
+- exists in background when in SF. Press E to dock. Locked down into defence support mode if spaceborne boss is floating around? Or does become tangible and assist in combat but can be blown up? Maybe nah. Player is supposed to be immortal.
+
+
+Planetside outposts:
+
+They may be at various levels of expansion. Some only starting, others more extensive, having bots created more infrastructure, tunnels, facilities and defences. Planetside outposts can provide gun packs, refuel/repair, new vehicles to ride, 
+
+
+
+Other possible vehicles:
+
+Digger, submarine, destroid combat machines (heavy assault tank, anti-air gunner, anti-orbit sniper, fast scout vehicle, elevator, heavy lift shuttle)
+
+That said, mostly these will be limited to utility based vehicles than combat ones, since the SF is already superior everywhere from surface to space.
+
+
+
+Consequences for losing SF are bigger, as player would have to contribute to rebuilding it or find another method to get back to the MSS or a planetside outpost to create one.

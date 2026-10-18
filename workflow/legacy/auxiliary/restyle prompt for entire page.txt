@@ -1,0 +1,14 @@
+Thank you. Can you redo the image text prompts file "EradicationWars_image_prompts.txt" too? Its also in the "fixes" folder.
+
+Keep the same structure of how the prompts are written as per instruction in the 3 prompt.md file, but upgrade/rewrite/totally overhaul the text prompts and the style addon thing at the end of each one using the new vibe and color theme of the updated site.
+
+
+---
+
+
+I want you to massively overhaul and upgrade the CSS styling of the html page I've placed into a folder called "fixes".
+
+- Redo the colors with a gritty red vs blue vs green color scheme.
+- Overhaul the way content paragraphs are spaced so they're not glued as a single block per each container, ensuring there is a blank line between paragraphs.
+- Generally the content itself is ok, but if you see some minor enhancements that would make it slightly better, then go for it.
+- Upgrade the fonts and typography for more badassness, coolness and epicness. Ensure the fonts are reliable so they would surely work on most computers on PC and linux, using chrome or firefox browsers.

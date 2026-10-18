@@ -1,0 +1,15 @@
+Claude, your task is written in:
+@1 MAIN Game Design Presentation HTML Generator.md
+
+That task doc will refer to a design bible file:
+@2 BIBLE Reactorcores Game Design Mentality Bible.md
+
+The completed HTML file will be placed in the folder called 'Ready HTML Pages'. Name that html file as '[game_project_name_without_subtitle].html'.
+
+The 'Game Project Files' folder contains the files that I want you to make the next game design showcase based on.
+
+Create a plan first, outlining the different sections you'll make and the theme you'll choose for it, but dont code it yet; I will review it first, then we will tweak it if necessary and then I'll give you the approval to proceed to build it.
+
+(Note, for Lore & context options, choose #5 this time, we will focus solely on that this session. Adapt any game mechanics that make more sense for that context instead of trying to cram mechanics that seem out of place for that context, replacing them or omitting them for a more tightly focused overall game design.)
+
+Be sure to check out the "Variant 5 moshpit spinoff additional design info.txt" file for more info for this particular spinoff.

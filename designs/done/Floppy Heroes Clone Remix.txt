@@ -1,0 +1,277 @@
+Floppy Heroes Simplex
+
+The game operates with 2D sideview ragdoll paper dolls with cartoony chunky proportions and these characters float freely in mid-air in a microgravity enclosed rectangle arena environment, controlled with WASD to push them up/down/left/right, taking part in gladiatorial battles while outfitted with armor on each body part and a weapon or shield in their hands, doing combat through collisions of bumping against opponent in specific ways while taking into account your own character and equipment vs the opponent.
+
+MOUSE+KEYB 1 (nah)
+WASD - move
+Q/E pick up new item for left/right hand in proximity of mouse
+M1/M2 use left/hand item
+Mouse aim - auto rotate character to face at the point, whether its left/right arm
+X - use character ability (if any)
+Shift - Sprint/move/accelerate faster have a higher top speed, eject harder (no sprint while ejecting), jump from surfaces (hold to charge, release to launch)
+
+MOUSE+KEYB 2 (Use this one, the other two are experimental ideas, maybe usable in some spinoffs that feel more appropriate for it.)
+M1 - move at pointer
+M2 - rotate towards pointer
+E/M4 - activate item function (both hands, or tap=primary hold=secondary)
+Q/M5 - throw existing item/pickup new item
+W/Shift/Spacebar - hold down for rocket mode: accelerate faster towards pointer, tap for boost (cooldown, similar to Cortex Command jetpack burst.)
+Mousewheel scroll up/down - zoom in/out, respectively. Triggering a zoom will cause slow motion timescale of 0.2 while
+
+Not moving = air brake/friction
+No hands = automatically eat with head if things are close enough; just nuzzle into them.
+Camera = Soldat style camera (follow a point between mouse crosshair cursor and player character. Mouse can only go away from player character as zoom level allows, so cursor can't go beyond visible screen edges) while clamped/contained by level borders, so camera can't pan past a certain area.
+
+KEYB-ONLY (maybe)
+WASD - move
+QE - rotate
+R - eject current item with boosted momentum (hold to charge, release to launch) / pickup nearest item
+F - activate item's main function (if any)
+X - use character ability (if any)
+Shift - Sprint/move/accelerate faster have a higher top speed, eject harder (no sprint while ejecting), jump from surfaces (hold to charge, release to launch)
+
+
+Character:
+Humanoid Ragdoll / Paperdoll
+
++ torso upper (core)
++- head
++- left arm upper
++-- left arm lower
++--- left hand
++- right arm upper
++-- right arm lower
++--- right hand
++- torso lower
++-- left leg upper
++--- left leg lower
++---- left foot
++-- left leg upper
++--- left leg lower
++---- left foot
+
+Each piece is connected with a physics joint with clamped rotation angles to mimic the range of motion a human naturally has.
+
+Head's face flips on the horizontal axis to face whichever side the player is aiming at with their mouse.
+
+
+Player can freely choose these head customizations (these are ideas, some interesting but might be too hassle/perfomance bad to implement):
+- Mouth frames: when idle, in pain (during hit or dismemberment), when near enemy/or firing a weapon. (default for all three is "neutral, wince, grit teeth", they're all just an image that is displayed on top of character)
+- Eyes will track in the direction of the mouse pointer. (support for cyclops, tri eyes or quad eyes would be troublesome)
+- Eye type frames, each come with closed and open versions. (in floppy heroes, impacts or death cause eyes to close (momentarily and permanently resp.))
+- Face features (makeup, facepaint, scars, glasses, implants, cyber/nano, dirt, madmax oil face, metal spray paint)
+
+Each part of ragdoll can wear a piece of armor. Hands will equip either two one-handed items or a single two-handed item.
+
+Armor system:
+TYPE1 Generic block material that applies to body parts.
+Small: arms, legs, hands, feet
+Medium: head
+Large: torso upper, torso lower
+Materials:
+wood, metal, stone, glass - each materials have hit points, weight, attack power (through bumps and collision)
+
+TYPE2 Hand armor, limb armor, torso armor, head armor
+Specific graphic per armor:
+hand - small square
+limb - medium rectangle
+torso - large rectangle
+head - medium square
+Each armor piece is named, has its own stats, including HP, weight, thorn damage, knockback force (to others), recoil force (to self), rarity.
+Also bonus multiplier mutator with color overlay trait system (5% chance to spawn):
+red, attack focus = HP 1, WG 1, DMG 3, KNB 2, REC 1
+green, defence focus = HP 3, WG 2, DMG 1, KNB 1, REC 1
+blue, speed focus = HP 1, WG 0.5, DMG 1, KNB 2, REC 1
+yellow, balance focus = HP 2, WG 3, DMG 2, KNB 1, REC 2
+orange, recoil focus = HP 1, WG 1, DMG 1, KNB 3, REC 0.5
+cyan, knockback focus = HP 1, WG 1, DMG 1, KNB 0.5, REC 3
+purple, recoil and knockback focus = HP 1, WG 2, DMG 2, KNB 2, REC 2
+brown, turtle focus = HP 5, WG 5, DMG 1, KNB 0.5, REC 0.5
+white, homerun focus = HP 1, WG 4, DMG 4, KNB 8, REC 2
+black, lethal strike focus = HP 0.5, WG 6, DMG 6, KNB 0.5, REC 3
+
+
+Item system:
+Items are either one-handed or two-handed. Usually they're a melee weapon, ranged weapon, a shield, a hybrid mix of any those.
+
+Two-handed equip both hands or whichever hand is remaining if either of them was dismembered. Pointing direction can be reverse depending on how pickup (hold vs tap) was made. Back hand is secondary support, while forward hand is primary. Each two-handed weapon has two offsets to which hands will dock/glue/magnetize with.
+One-handed are held in either hand. Same pointing direction thing can be done with these too.
+Normally during campaign start or between campaigns, player can fully customize their character, including name/callsign/alias, body color, head color, face, along with starting armor and held item loadouts. This allows equipping two single-handed items freely. However during the campaign gameplay action they'll likely lose their initial armor and items, with the need to scavenge items, but theres no opportunity or supported controls to equip two one-handed items individually.
+
+
+Weapon stats:
+HP/durability, weight, thorn damage, knockback force (to others), recoil force (to self), projectile type, firing cooldown, projectile launch speed, projectile launch count, weapon ammo supply (1 use = projectile payload, even if it launches many projectiles at once), projectile contact damage, projectile sticky flag (stick to wall if penetrator, or stick to ungibbed bodypart/armor/weapon/prop/wall if no penetrator flag active), projectile penetrator flag, projectile detonate submunition count, projectile detonate submunition damage, projectile vanish lifetime/detonation time, projectile detonate submunition lifetime(no recursive submunitions allowed), item rarity. Weapon primary hand offset, weapon secondary hand offset, two-handed flag, weapon projectile launch/muzzle offset, weapon sprite, projectile sprite, weapon collide sound, weapon firing sound, projectile break sound, weapon break sound, weapon detonate submunition count, weapon explode submunition damage. Projectile submunition sprite, weapon explode submunition sprite. weapon full auto flag (hold down key to keep firing, still adhere to firing cooldown). Projectile knockback, projectile recoil, submunition knockback. projectile weapon reload time after depleting ammo (0 means no reloads, other numbers mean that wait that many seconds to refill ammo supply back to full). projectile launch weapon use degrade/hp cost, one-handed weapon default holding angle, one-handed weapon minimum angle, one-handed weapon maximum angle.
+(Note: This game does not support AoE explosions - every combat interaction must be physical and individual.)
+(Note: Cannot hit self with own weapons, neither melee nor projectiles nor own submunitions. They just go through/past the player's ragdoll/held items.)
+(Note: Ranged weapon projectiles are generally slow, and both projectile shot count and submunition count should generally remain minimal, around 1-9 only. Atleast for the default floppy heroes style play.)
+
+Combat dynamics:
+Point of game is to bump against with your ragdoll character against opponent character(s) to cause them enough damage to disemember their limbs without losing your own in the process. This happens by trying to collide your held weapon or your feet against the opponents body parts, preferably targetting their head or upper torso piece. Each collision causes both knockback to opponent, but also recoil force to self, causing combat to have reactive physics movements that players can benefit from or need to manage.
+
+All pieces of the ragdoll besides upper torso and head are disposable, each piece has its own hit points that when breached will detach from the ragdoll with a briefly active particle emitter attached to the dismembered limb, spraying blood as it floats away from the rest of the body. If damaged further or overkilled by even more damage, it will burst into meatballs that have inherited momentum and splash blood too.
+
+
+Inflicting or avoiding damage works like this:
+As said before, each part of ragdoll can wear a piece of armor. Exposed body parts have a set of HP points, but those can only be damaged once the armor attached to that body part has been first removed. Each piece of armor has its own HP and will shatter once its HP goes below the value of 1.
+Hitting opponents weapon with your own weapon deals no damage to the ragdoll character but reduces the hitpoints/durability of both weapons. Weapons tend be a magnitude sturdier than armor or exposed limbs. Weapons also degrade with impacts against armor and exposed bodyparts, including feet.
+Hitting an opponent with feet anywhere except their feet or their weapon will cause damage to the opponent's armor or exposed bodyparts with no damage to self/own feet. however if you hit opponents feet with your own feet, then neither side damages anyone - it will show as 0 damage dealt, thought usual knockback and recoil effects still happen. If your feet collide with the opponent's weapon, then your feet take damage based on the weapon contact damage.
+if any other body part collides with opponents body, then both parties take equal damage - assuming they're both exposed bodypart wearing no armor. Some armor may have enhanced thorns damage value that inflicts more damage to opponent than another piece or armor or exposed body, so wearing armor is beneficial not only from a defensive aspect but also from an offensive standpoint too.
+Every weapon or projectile contact deals a preset amount of damage to damageable targets that is always the same, there are no momentum mechanics to enhance damage. Poking is a valid strategy just as much as swings are. Each weapon, armor, exposed body part collision between opponents always trigger a small force explosion of recoil and knockback to both parties pushing those specific colliding entities away from each other, a brief moment of slow motion and damage numbers for both parties that linger in the air.
+
+Players essentially manage their body, armor and weapons to think of the best tactics or strategy to rely on to come out on top. Melee weapons both protect and defend you, armor or body parts can be used to tackle the opponent at some sacrificial cost, ranged weapons allow attacking from a distance but have limited ammo and may break sooner if used as a melee weapon. A wide variety of weapons, shields, hybrids, armor pieces offer different styles of fighting that the player will adapt to.
+
+Combat gameplay is deliberately slow and methodical, carefully positioning and rotating your character to gradually remove the armor from the opponent or even disarm them, either literally by dismembering their hands or by damaging their weapon enough for it to break. Fastest way to defeat the opponent is to dismember the head, but its far from easy as the rest of the body, armor and weapons of the opponent may often end up getting in the way of the your attempts to do so.
+
+
+Managing equipped items:
+One handed items are designated primary and secondary, depending on the order they were picked up in.
+If both hands are empty and picking up a two-handed item, then it will occupy both hand slots.
+Two-handed weapons can still be picked up if only one hand is available. The two-handed weapon's hand offsets determine where the hand goes, whichever is available on the ragdoll. Drawback of having only one hand for a two-handed weapon is that it offers no stability and will flail around awkwardly.
+If both hands are empty and picking up two one-handed items, then first one will be assigned as primary, while second will be assigned as secondary. When discarding/throwing items, secondary item is the first one to be ejected, then primary. 'First In Last Out' principle.
+Items are picked up based on proximity - grab the closes from the upper torso center point of the player's ragdoll. If theres a bunch of items, player may need to grab, turn and throw the unwanted items until they get the one they desire, like sifting through a pile.
+
+
+Combat arena:
+The combat happens in an enclosed rectangle arena. There may be occasional props, hazards or items that are placed into the arena at start or spawn during the run. 
+
+Item spawns can happen during the match similar to how powerups drop in Liero/Worms at random. Maybe via crowd that is cheering outside the arena, throwing stuff in to stimulate the fight to be more existing. 
+
+Item types: armor, food (grab to fill up bar to regrow a lost limb), weapon, shield, hybrid shield weapon, healing items, repair items (weapon/armor versions), props, temporary hazards ala Nova Drift.
+
+
+Healing:
+Player Character can exclusively grow back lost limbs by devouring food items or left over limbs from corpses in the arena through cannibalism.
+If you have hands and they're free, pick up the food item or corpse meat, activate to devour it, fill up bar to fulfill quota to qualify a random limb growth. Food items and pieces of corpses from enemies can be used as weapons, albeit they're fragile and not that strong.
+If you don't have hands but you have your head, you can go into hungry berserker cannibal mode to chomp on edible things to devour them directly. Again, this only applies to food items and corpse limb pieces based on proximity to head. Benefit of head devouring is that its faster and skips the hassle of using hands, but has shorter range, requiring you to really press and nuzzle into the stuff you want to eat, whereas hand users can pick stuff up from farther away.
+Note that already damaged limbs will not heal through food or cannibalism unless the food item specifically does this. (kind of like minecraft regular apple vs rare golden apple - this is meant to make each impact have weight to it in combat so you cant easily heal damage as soon as you take it. Its a rare and powerful gift/loot. Such items will also heal all damaged non-dismembered limbs. Maybe something like that could exist for armor, maybe individual piece or all at once? hmm. Probably have both of each. Maybe even some repair kits for weapons/shields too.)
+If all your limbs are intact, even if damaged, then you cannot consume food to regrow them. Using healing/repair kits is ok.
+
+Allies:
+No friendlyfire nor self-damage. If an ally unit is on your team, its attacks will not harm you but they will still collide with you so you can't cheese battles. Same with your projectiles; they'll collide with allies but not harm them.
+
+
+Hazards:
+Exploding submunition barrels/mines
+Fireballs/Comets ala Nova Drift
+Chaos UT2 melee arena unhinged bullshit (think Pal_circle duel map, grinders, buzzsaws, impalement spikes with proximity sensors, pushing walls that pop out temporarily, or Robot Wars style hazards/traps)
+
+
+Low metagame (campaign gauntlet)
+Play through a gauntlet of 5-15 levels, starting off with your loadout and then trying best to survive each battle without dying. Dying means losing campaign, sort of like a roguelike experience.
+
+1v1
+1v1 midget
+1v2
+1v1 giant
+1v3
+1v1 mega giant
+1v1 titan
+
+opponent character loadout types: partially equipped (25%, 50%, 75%), fully equipped (100%)
+(idea: some variants of game can have player start with random loadout, maybe tied to a difficulty mode?)
+
+midget = half size, same speed, but half damage, half hp and half armor.
+giant = 2x size ragdoll, with double the body HP and armor HP, same damage output and speed as regular ragdoll character though.
+mega giant = 4x size. Same thing. 4x hp/armor, same dmg, same speed.
+titan = 8x size. Same as above.
+
+(ragdoll characters are scalable in size.)
+
+High metagame (slay the champion of X kingdom, write it down to achievements log, write down losses in graveyard, maybe implement some kind of nemesis system here?)
+Name your kingdom, give an alias to your disposable champion, let them fight battles in your name (by directly controlling them though), customize the colors, starting loadout and conquer the lands with your champion.
+
+---
+
+Lore & context options (NOTE to Claude: each of these below are separate games and would need their own HTML with changes to the content of the html to adapt to it, while also having a different color theme and style etc. Claude, I will tell you which one you'll choose in the main prompt so you'll focus on just that version):
+1. Fight club (let of some steam, handwave the whole dismember thing. location: various basements and parks, parking lots, etc.)
+2. Mafia takedown as vigilante ala 'Kick-ass', 'Skullkid' or 'Sin City' (location: corporations, office buildings, apartments, hideouts, compounds, malls.)
+3. Corporate takedown as vigilante ala 'Skull Kid' (location: corporations, office buildings, malls, fastfood places, farms.)
+4. Mech battle (like Zeon vs Feddies but renamed to something completely different for copyright reasons) (Locations: typical Gundam UC era battlegrounds on earth, on seas, in orbit, in open space, at lagrange points, on the moon, near debris fields/starship graveyards in space, at asteroids, at space colonies, or at asteroid bases).
+5. Mosh Pit (Kinda like fight club, but humorously taken to the extreme) (locations: music concerts of literally any kind, explore various music genres essentially, even country music moshpits or techno moshpits besides the typical heavy metal moshpit trope.)
+6. Super Mutant Love (In a bizarre version of a mad-max mixed with idiocracy (the movie) style world, the world has been bathed in strange radiation that has transformed humans into weird super mutants with unstable bodies and limbs that keep morphing and shifting every so often. Player plays as such a mutant in a quest to reach their Wasteland Tinder date.)
+7. Flesh Monster (Amorphous pulsating blob monster lurks in the city, entering random peoples apartments through doors, windows, ventilation shafts, sewer grates, toilet plumbing, etc. It uses its tentacles to pull itself around the room like a retractable grappling hook gun, unable to move itself any other way, aside from rolling. It systematically devours all people one by one from an entire apartment building it finds itself into.)
+
+(Make each above as different games with different sized ragdolls and different arsenals/armor/items in terms of stat behaviours. More tanky or more brutal and swift or more speed or regenerating limbs/health or factor in user momentum into damage calculated against enemy movement momentum vector. Character abilities ???. Enemy AI patterns. More focus on firearms vs melee or vise versa. Heal after battles or not? Recover limbs too? Underneath theres always the same general core systems that were talked about earlier in the document, but these spinoffs presented as standalone games mix the formula with some notable changes here and there as mentioned directly above.)
+
+High Metagame idea:
+Inspired by my Doom modded playthroughs where I kinda roleplay as a new character that has a personal mission to do in a local area, that once/if completed, the character will then live happily ever after. Then I'd move on to the next mod to play as the new character that is included with that mod, along with a new map pack. Sometimes I'd have recurring characters in different locations because I play the mod again but with a different map pack. Death in these cases is mainly a time-rewind of "oh no no, that didn't happen, lets rewind and do it right this time".
+
+Generally the time rewind as a mechanic feels like a 'god power', which I think cheapens the experience contextually, affecting the stakes and consequences, reducing the meaning of the effort as the player plays the game. It causes me to think: "Why does anything I do even matter if I can just disregard my failures during the gameplay like it didn't matter. If death or failures didn't matter, then I'm just doing a foretold prophecy where I will always succeed no matter what. That makes any of the events in the game feel like fake nonsense, like any of my efforts feel like they aren't my own and that the story has no possibility to take another turn. And no, walking away from the game doesn't count as a valid alternative choice."
+
+Time rewind has its place in long form adventures that are primarily about experiencing a story being told - a world being explored and poked at, where gameplay is merely a secondary (albeit fun) activity that gives player the agency to explore such games as interactive galleries at their own pace and put some effort to discover hidden things that feel delightful to notice (like show-don't-tell moments in Fallout 3 where you walk into an area and you can guess/deduct what happened there and even realize why it happened without anyone telling you about it in advance. Fallout 3 and similar narrative/exploration driven games like it are totally fine with relying on time rewind, especially if they're ridiculously long where a full 100% session could last tens if not hundreds of hours. Expecting either permadeath or even softdeath would be far too harsh.)
+
+Meanwhile, pure permadeath isn't a great solution either - far too punishing, causes gameplay to favor extreme caution lest you lose progress if you try to experiment or try to be reckless.
+
+So, I propose softdeath; the character DOES die permanently, but where they fell, someone else takes the mantle to continue their efforts. This is perfect for this game where its about an endless series of small low metagame campaigns generated by the high metagame. Low metagames are gauntlets of 5-15 rooms where you try to make it in one piece from start to end. If you fail, you gotta start over from room 1. However, its a game about dismemberment, killing and death so just as the opponent stay super dead, the player character does too.
+
+In particular this works with the Mafia Takedown where the player is a vigilante that tries to solo kill the entire criminal organization on their own because they're the only brave one to try it. In terms of low metagame, each campaign is about the personal story of a single vigilante taking up arms to defeat the thugs that are exclusive to that vigilante and the location the events take place. Its a self-contained story. Once you win, that vigilante retires, lives happily ever after. Both the specific location and that vigilante won't appear in the game anymore, case closed good work.
+
+On a grander scale, in regards to high metagame, its about countless struggles througout the world where different vigilantes take on the local thugs of their local area.
+
+However if the vigilante dies - which is very likely to happen in this tricky roguelite-ish game - they are replaced by one of the following:
+- their dad
+- their mom
+- their brother (up to 1-5, lets not get crazy here)
+- their sister (up to 1-5, lets not get crazy here)
+- their cousin (up to 1-5, lets not get crazy here)
+- their friend (many)
+- their friend of a friend (many)
+- a classmate/schoolmate (many)
+- a collegue from work (many)
+- their uncle (up to 1-5, lets not get crazy here)
+- their aunt (up to 1-5, lets not get crazy here)
+- their granmom/grandad of dad side
+- their granmom/grandad of mom side
+- their son/daughter (up to 1-5, lets not get crazy here)
+- an inspired fan (many)
+- a local activist (many)
+- a disgruntled like-minded person (many)
+- a local hobo/hooligan (many)
+- a former gang member/defector (many)
+- a bored youth/adult/senior (many)
+- a local police officer (many)
+- a local medic/rescue worker (many)
+- any one random person / mysterious stranger (many)
+- a crazy person/weirdo (many)
+
+They of course start from room one, trying to take out the whole organization until one of them finally defeats them by reaching and clearing the final room. Their name will be random and they all have their own appearance, some even mimicking the original vigilante, kind of like 'The Phantom' comic hero who had the myth of being immortal (he was just replaced by his son or someone else). The hero will have a random Alias that they'll all share, out of respect for the original vigilante.
+
+The thug org will also have their own gang name, like "tunnel snakes" or anything else that gives them a clear identifier.
+The location/town where the events take place too have a unique name.
+
+At the end of the low metagame, there will be a moment to commemorate those who lost their lives taking down the thug org (and/or a general moment of silence for those who suffered at the hands of the thug org prior to the vigilante assault, with the list of names that the player controlled added below them as "special mentions") and to celebrate the eradication of the thug org too, freeing the local area/town/location from the influence of the bad guys.
+
+Player will get a neat satisfying intermission with "thug org - DESTROYED" text and a cool background of smoldering ruins or a prosperous town/happy group of people.
+
+The success will be recorded to a list of achievements for every thug org annihilated. Maybe styled as a newspaper that is easy to browse and reminisce past victories and memories of the action. (maybe take a thumbnail screenshot of the final kill of that low metagame campaign)
+
+This would effectively be the high metagame for this game.
+
+While the above is tailored for the 'Mafia Takedown' variant, I think something similar could be possible for the other ones too. Maybe in the case of the mutant ones its always the same "vigilante" but they don't truly die, they get chopped up, thrown into trash, then they resurrect on their own or find themselves in a hospital (GTA V-style) and retry their task once again until their get it right.
+
+
+Difficulty:
+Generally the game is tricky but the player may be able to cheese some of it or generally be able to win thanks to the slow pace and (mostly) dumb AI opponents (its only fair since its a 1 vs horde, the player's gotta have an advantage in some way to make the battles fair, otherwise its a tough sell as a fun game experience).
+
+I'd also recommend the "choose one from these 3 scenarios, lock the ones you'd want to do later or dismiss them for the vigilante to handle on their own (you won't get any hall of fame rewards or memories generated from it though), and choose first-try intensity level" which will determine whom you'll fight and what your starting conditions or handicaps are. Subsequent characters that'll try to beat the mission can choose different intensity or keep it the same. That way the player can control if they want to lower the difficulty on this mission. Player can always also dismiss an ongoing low metagame campaign for whatever reason they want. Again, they won't get the clout for resolving it though.
+
+
+Audiovisuals:
+Use jager guns as weapons (melee and ranged), maybe upscaled with AI.
+Ragdoll is more styled as a stair dismount guy, maybe toribash or maybe same proportions as floppy heroes.
+Camera keeps action focused between all active combatants, panning and zooming as needed
+Projectile impacting against border walls creates a temporary fracture decal at impact point. There's a max limit of these decals and the older ones vanish in First-In-First-Out order as new ones are spawned that go over that limit.
+Whenever impacts that involve damage or boost happens
+Didmembered limbs/armor/weapons have a red outline to signify they're unusued and inert - colliding with them causes no damage and they're simply pushable as basic physics objects. 
+Active alive entities have a white outline.
+Ragdolls/characters wear a cape or have some HUD marker that shows which team they're on.
+projectiles have particle trails or glows or both. or impact glows.
+
+WIP Todo:
+- Camera + controls? (If levels have hazards, you gotta see where they are before you slam into them)
+- Scale of arenas? Arena terrain? Arena spawn zones? Maybe Symbiont/Topverse stuff? (depends per spinoff game context)
+- Low/High Metagame meaning?
+- Level Gen and Level Events?
+- Basic description of enemy AI (if carry melee, try to fly at player, rotate lazily towards player, after collision fly away from player for 1-3 seconds, then attempt to go slam into them again. Sometimes make a pause for 1-3 seconds to stay in position before continuing to do action. If only carrying ranged weaponry, trigger activation if lined up to fire (regardless of range) - without any predictive aim or such. Just do it. Goal of default AI is to be dumb and predictable albeit chaotic due to momentum and physics movement/rotation. Can be made smarter or dumber based on difficulty mode or better yet high/low metagame context, maybe tied to a nemesis system of sorts.
+- thrown items deal damage and after being thrown get a green outline or green glow and upon contact with a non-red outline object, will turn red outline. red outline objects don't collide with each other.
+

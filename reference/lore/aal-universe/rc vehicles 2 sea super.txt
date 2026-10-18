@@ -1,0 +1,910 @@
+amphibious car
+amphibious bus
+amphibious truck
+amphibious atv
+amphibious motorcycle
+amphibious bicycle
+amphibious van
+amphibious suv
+amphibious camper
+amphibious rv
+amphibious utv
+amphibious tank
+amphibious armored vehicle
+amphibious personnel carrier
+amphibious combat vehicle
+amphibious scout vehicle
+amphibious rescue vehicle
+amphibious firefighting vehicle
+amphibious ambulance
+amphibious hovercraft
+amphibious aircraft
+amphibious seaplane
+amphibious drone
+amphibious quad bike
+amphibious snowmobile
+amphibious golf cart
+amphibious forklift
+amphibious excavator
+amphibious bulldozer
+amphibious crane
+amphibious loader
+amphibious dredger
+amphibious mining vehicle
+amphibious construction vehicle
+amphibious agricultural vehicle
+amphibious harvester
+amphibious tractor
+amphibious plow
+amphibious sprayer
+amphibious seeder
+amphibious logger
+amphibious forestry vehicle
+amphibious transport vehicle
+amphibious cargo vehicle
+amphibious freight vehicle
+amphibious delivery vehicle
+amphibious postal vehicle
+amphibious utility vehicle
+amphibious maintenance vehicle
+amphibious exploration vehicle
+amphibious survey vehicle
+amphibious research vehicle
+amphibious scientific vehicle
+amphibious submarine
+amphibious rescue submarine
+amphibious tour bus
+amphibious tourist vehicle
+amphibious fishing vehicle
+amphibious hunting vehicle
+amphibious patrol vehicle
+amphibious police vehicle
+amphibious security vehicle
+amphibious surveillance vehicle
+amphibious disaster response vehicle
+amphibious military vehicle
+amphibious command vehicle
+amphibious communication vehicle
+amphibious medical vehicle
+amphibious hospital vehicle
+amphibious floating car
+amphibious jet ski
+amphibious sailboat
+amphibious kayak
+amphibious canoe
+amphibious rowboat
+amphibious yacht
+amphibious houseboat
+amphibious fishing boat
+amphibious speedboat
+amphibious cruiser
+amphibious pontoon boat
+amphibious raft
+amphibious pedal boat
+amphibious ferry
+amphibious barge
+amphibious tugboat
+amphibious cargo ship
+amphibious tanker
+amphibious container ship
+amphibious offshore supply vessel
+amphibious research vessel
+amphibious exploration vessel
+amphibious survey vessel
+amphibious drone boat
+amphibious fantasy vehicle
+amphibious sci-fi vehicle
+amphibious hover vehicle
+amphibious anti-gravity vehicle
+amphibious floating vehicle
+amphibious flying vehicle
+amphibious submersible vehicle
+amphibious spacecraft
+amphibious alien vehicle
+amphibious future vehicle
+amphibious concept vehicle
+amphibious prototype vehicle
+motorboat
+sailboat
+yacht
+speedboat
+fishing boat
+houseboat
+pontoon boat
+cabin cruiser
+deck boat
+jet boat
+bowrider
+wakeboard boat
+ski boat
+runabout
+dinghy
+kayak
+canoe
+rowboat
+paddle boat
+pedal boat
+inflatable boat
+rigid inflatable boat
+bass boat
+jon boat
+catamaran
+trimaran
+pontoon
+ferry
+water taxi
+tour boat
+glass-bottom boat
+party boat
+banana boat
+house yacht
+luxury yacht
+mega yacht
+super yacht
+explorer yacht
+liveaboard boat
+sport fishing boat
+center console boat
+dual console boat
+flats boat
+skiff
+bay boat
+offshore boat
+utility boat
+rescue boat
+police boat
+fireboat
+ambulance boat
+patrol boat
+research vessel
+survey vessel
+pilot boat
+crew boat
+dive boat
+charter boat
+eco-tour boat
+floating house
+floating restaurant
+floating hotel
+floating bar
+floating dock
+floating platform
+floating stage
+aquatic drone
+autonomous boat
+solar-powered boat
+electric boat
+hybrid boat
+hydrofoil boat
+amphibious boat
+hovercraft
+seaplane
+flying boat
+personal watercraft
+jet ski
+waverunner
+sea-doo
+water jet pack
+hoverboard
+hydro bike
+floating bicycle
+floating car
+self-healing boat
+shape-shifting boat
+solar sailboat
+magnetic levitation boat
+gravity-defying boat
+invisible boat
+quantum boat
+energy shield boat
+autonomous yacht
+ai-controlled boat
+smart boat
+nano-boat
+eco-friendly boat
+hydrogen-powered boat
+floating city boat
+luxury floating island
+floating laboratory
+sci-fi speedboat
+futuristic yacht
+alien watercraft
+stealth boat
+water replicator boat
+teleporting boat
+dimensional boat
+holographic boat
+plasma-powered boat
+sub-surface skimmer
+floating habitat
+oceanic cruiser
+seaborne cruiser
+water glider
+wave skimmer
+water hovercraft
+anti-gravity watercraft
+floating amusement park
+tidal-powered boat
+water surveillance drone
+floating wind turbine boat
+aquatic research drone
+floating farm
+floating greenhouse
+solar desalination boat
+floating energy plant
+floating cargo platform
+modular boat
+transforming boat
+floating emergency shelter
+floating medical facility
+floating power station
+interconnected floating modules
+floating entertainment hub
+smart grid boat
+eco-tourism boat
+sustainable living boat
+zero-emission boat
+cargo ship
+container ship
+bulk carrier
+tanker ship
+oil tanker
+lng carrier
+chemical tanker
+product tanker
+crude oil tanker
+freight ship
+barge
+pusher boat
+tugboat
+heavy lift ship
+roll-on roll-off ship
+car carrier
+livestock carrier
+timber carrier
+reefer ship
+refrigerated cargo ship
+general cargo ship
+multipurpose ship
+breakbulk carrier
+deck cargo ship
+feeder ship
+supply vessel
+platform supply vessel
+offshore supply vessel
+anchor handling tug supply vessel
+crew transfer vessel
+dredger
+hopper dredger
+cutter suction dredger
+backhoe dredger
+bucket dredger
+grab dredger
+trailing suction hopper dredger
+sand carrier
+aggregate dredger
+mining vessel
+research vessel
+survey vessel
+oceanographic research ship
+seismic survey vessel
+hydrographic survey vessel
+polar research vessel
+cable layer
+pipe layer
+heavy equipment transport vessel
+floating crane
+crane barge
+lifting ship
+jack-up barge
+drilling rig
+floating drilling unit
+semi-submersible rig
+jack-up rig
+drillship
+floating production storage and offloading unit
+floating liquefied natural gas unit
+modular platform
+floating dock
+floating workshop
+floating warehouse
+fish processing vessel
+factory ship
+fishing trawler
+purse seiner
+longliner
+gillnetter
+crabber
+shellfish boat
+aquaculture support vessel
+fish farm vessel
+live fish carrier
+fish transport vessel
+maintenance vessel
+service vessel
+utility vessel
+waste collection boat
+garbage scow
+pollution control vessel
+oil spill response vessel
+environmental monitoring vessel
+marine survey boat
+hydraulic dump barge
+ballast cleaner
+sludge tanker
+slop barge
+recovery vessel
+workboat
+pilot boat
+crew boat
+supply boat
+line handling boat
+firefighting boat
+rescue boat
+emergency response boat
+patrol boat
+security boat
+inspection boat
+salvage tug
+salvage barge
+subsea support vessel
+diving support vessel
+rov support vessel
+auv support vessel
+wind farm support vessel
+tidal energy support vessel
+hydroelectric support vessel
+floating power plant
+floating solar power station
+offshore wind turbine installation vessel
+subsea cable installation vessel
+marine construction vessel
+breakwater construction vessel
+marine demolition vessel
+coastal protection vessel
+beach nourishment vessel
+floating cement plant
+floating concrete batching plant
+mobile harbor crane
+floating bulk terminal
+mobile port solutions
+floating bridge construction vessel
+floating habitat
+offshore living quarters vessel
+floating medical facility
+offshore accommodation barge
+floating laboratory
+offshore research platform
+floating renewable energy platform
+hydrogen production vessel
+algae biofuel production vessel
+floating desalination plant
+floating water treatment plant
+modular floating infrastructure
+interconnected floating modules
+floating logistics hub
+ocean cleanup vessel
+marine debris collection vessel
+floating recycling plant
+floating marine observatory
+floating scientific station
+floating command center
+smart grid vessel
+autonomous cargo ship
+ai-controlled logistics vessel
+eco-friendly transport ship
+sustainable supply vessel
+zero-emission cargo ship
+renewable energy-powered vessel
+battery-electric ship
+hydrogen fuel cell ship
+hybrid-electric vessel
+aircraft carrier
+submarine
+destroyer
+frigate
+cruiser
+battleship
+corvette
+patrol boat
+amphibious assault ship
+minesweeper
+minehunter
+littoral combat ship
+fast attack craft
+torpedo boat
+gunboat
+landing ship
+supply ship
+hospital ship
+command ship
+surveillance ship
+icebreaker 
+missile boat
+hydrofoil
+hovercraft 
+fast combat support ship
+oceanographic research ship
+electronic warfare ship
+anti-submarine warfare ship
+fast attack submarine
+ballistic missile submarine
+dreadnought
+torpedo recovery vessel
+combat logistics ship
+training ship
+escort carrier
+helicopter carrier
+anti-aircraft cruiser
+submarine tender
+missile submarine
+replenishment oiler
+fleet oiler
+coastal defense ship
+riverine patrol boat
+motor torpedo boat
+motor gun boat
+landing craft
+dock landing ship
+tank landing ship
+attack submarine
+sealift ship
+offshore patrol vessel
+coastal patrol boat
+fleet tug
+cable layer
+salvage ship
+diving support vessel
+maritime prepositioning ship
+surveillance trawler
+harbor defense motor launch
+ocean surveillance ship
+deep submergence rescue vehicle
+guided missile destroyer
+guided missile cruiser
+guided missile frigate
+multi-mission vessel
+nuclear submarine
+ocean-going tug
+anti-submarine destroyer
+combat support ship
+offshore support vessel
+surveillance and reconnaissance vessel
+hydrographic survey ship
+experimental ship
+ice patrol ship
+heavy lift ship
+expeditionary mobile base
+joint high speed vessel
+littoral mission ship
+mine countermeasure vessel
+submarine rescue ship
+river monitor
+sea fighter
+small waterplane area twin hull ship
+swath ship
+special warfare support ship
+stealth ship
+surface combatant
+strategic sealift ship
+submersible craft
+troopship
+underwater support vessel
+manned submarine
+research submarine
+tourist submarine
+personal submarine
+luxury submarine
+recreational submarine
+diver propulsion vehicle
+swimmer delivery vehicle
+manned underwater vehicle
+deep-sea submersible
+bathyscaphe
+underwater habitat
+underwater drone
+remotely operated vehicle
+autonomous underwater vehicle
+hybrid underwater vehicle
+mini submarine
+micro submarine
+pocket submarine
+submersible scooter
+underwater glider
+unmanned underwater vehicle
+underwater work robot
+oceanographic submersible
+marine research submersible
+hydrographic survey submersible
+geological survey submersible
+environmental monitoring submersible
+marine archaeology submersible
+underwater inspection vehicle
+underwater construction vehicle
+underwater welding vehicle
+underwater cutting vehicle
+subsea maintenance vehicle
+pipeline inspection submersible
+cable inspection submersible
+oil and gas subsea vehicle
+subsea mining vehicle
+underwater dredging vehicle
+underwater trenching vehicle
+subsea excavator
+subsea drill rig
+underwater crane
+subsea lifting vehicle
+subsea rov support vessel
+subsea auv support vessel
+subsea construction vessel
+underwater salvage vehicle
+subsea recovery vehicle
+marine salvage submersible
+deep-water salvage submersible
+shipwreck exploration submersible
+underwater rescue vehicle
+submarine rescue vehicle (srv)
+diver support vehicle
+emergency response submersible
+subsea firefighting vehicle
+subsea security vehicle
+underwater patrol vehicle
+marine surveillance submersible
+underwater inspection drone
+subsea survey drone
+underwater photography drone
+underwater filmmaking drone
+marine biology submersible
+aquatic habitat submersible
+submersible fish farm
+underwater habitat support vehicle
+submersible laboratory
+underwater observation vehicle
+aquatic research vehicle
+underwater research station
+subsea research platform
+subsea monitoring station
+subsea data collection vehicle
+ocean exploration submersible
+deep ocean explorer
+mid-ocean explorer
+continental shelf explorer
+coral reef explorer
+arctic submarine
+antarctic submarine
+tropical submarine
+underwater transport vehicle
+submersible cargo transport
+underwater logistics vehicle
+underwater supply vehicle
+subsea freight transport
+submersible container transport
+underwater bulk transport
+submersible tanker
+underwater fuel transport
+subsea pipeline laying vehicle
+subsea cable laying vehicle
+subsea infrastructure support vehicle
+underwater repair vehicle
+underwater maintenance drone
+underwater cleaning vehicle
+subsea habitat maintenance vehicle
+underwater waste collection vehicle
+subsea waste management vehicle
+subsea renewable energy vehicle
+tidal energy submersible
+wave energy submersible
+underwater power generation vehicle
+subsea hydroelectric vehicle
+subsea solar power vehicle
+underwater energy storage vehicle
+submersible energy distribution vehicle
+marine renewable energy submersible
+sustainable underwater vehicle
+eco-friendly submarine
+zero-emission submersible
+battery-powered submarine
+hydrogen-powered submarine
+hybrid submarine
+solar-powered submarine
+electric submarine
+advanced subsea vehicle
+next-generation submarine
+innovative underwater vehicle
+underwater futuristic vehicle
+sci-fi submarine
+underwater exploration robot
+autonomous underwater robot
+intelligent underwater vehicle
+ai-controlled submarine
+subsea drone swarm
+underwater sensor network
+quantum submarine
+stealth submarine
+invisible submarine
+plasma-powered submarine
+magnetic propulsion submarine
+nanotech submarine
+bio-engineered submarine
+living submarine
+adaptable submersible
+shape-shifting submersible
+teleportation submarine
+dimensional submarine
+time-travel submarine
+holographic submarine
+cybernetic submarine
+interconnected underwater vehicles
+underwater command center
+aircraft carrier
+submarine
+destroyer
+frigate
+cruiser
+battleship
+corvette
+patrol boat
+amphibious assault ship
+minesweeper
+minehunter
+littoral combat ship
+fast attack craft
+torpedo boat
+gunboat
+landing ship
+supply ship
+hospital ship
+command ship
+surveillance ship
+military icebreaker
+missile boat
+hydrofoil
+military hovercraft
+fast combat support ship
+oceanographic research ship
+electronic warfare ship
+anti-submarine warfare ship
+fast attack submarine
+ballistic missile submarine
+dreadnought
+torpedo recovery vessel
+combat logistics ship
+training ship
+escort carrier
+helicopter carrier
+anti-aircraft cruiser
+submarine tender
+missile submarine
+replenishment oiler
+fleet oiler
+coastal defense ship
+riverine patrol boat
+motor torpedo boat
+motor gun boat
+landing craft
+dock landing ship
+tank landing ship
+attack submarine
+sealift ship
+offshore patrol vessel
+coastal patrol boat
+fleet tug
+cable layer
+salvage ship
+diving support vessel
+maritime prepositioning ship
+surveillance trawler
+harbor defense motor launch
+ocean surveillance ship
+deep submergence rescue vehicle
+guided missile destroyer
+guided missile cruiser
+guided missile frigate
+multi-mission vessel
+nuclear submarine
+ocean-going tug
+anti-submarine destroyer
+combat support ship
+offshore support vessel
+surveillance and reconnaissance vessel
+hydrographic survey ship
+experimental ship
+ice patrol ship
+heavy lift ship
+expeditionary mobile base
+joint high speed vessel
+littoral mission ship
+mine countermeasure vessel
+submarine rescue ship
+river monitor
+sea fighter
+small waterplane area twin hull ship
+swath ship
+special warfare support ship
+stealth ship
+surface combatant
+strategic sealift ship
+submersible craft
+troopship
+underwater support vessel
+floating fortress
+battle citadel ship
+amphibious crawling aircraft carrier
+anti-orbital attack ship
+floating anti-orbital defense platform
+submersible aircraft carrier
+mobile offshore base
+autonomous combat drone ship
+hybrid surface-submersible warship
+floating missile platform
+oceanic command center
+deep-sea combat submarine
+modular combat platform
+mobile coastal defense battery
+seaborne railgun platform
+anti-satellite laser ship
+drone mothership
+seastead defense colony
+floating drone swarm carrier
+naval cyber warfare ship
+combat logistics island
+floating barracks ship
+tactical energy weapon ship
+submersible logistics base
+floating airstrip
+oceanic robotics control ship
+multi-role combat platform
+high-speed attack trimaran
+floating dockyard ship
+seafloor mining combat support ship
+heavy frigate
+command and control ship
+oceanic surveillance platform
+advanced littoral combat ship
+tactical reconnaissance ship
+seafloor surveillance drone carrier
+rapid deployment vessel
+stealth missile corvette
+seabed operations vessel
+coastal mine laying ship
+nuclear-powered icebreaker
+high-speed insertion craft
+electronic warfare frigate
+sea-based ballistic missile defense ship
+high-capacity amphibious transport
+autonomous anti-submarine vehicle carrier
+long-range patrol vessel
+arctic operations vessel
+sea-based uav carrier
+underwater drone mothership
+floating fuel depot
+high-endurance cutter
+aegis combat system ship
+anti-mine drone carrier
+anti-swarm defense ship
+strategic missile submarine
+seabed sensor network deployment ship
+joint multi-mission ship
+maritime command platform
+heavy transport hovercraft
+multi-role support ship
+strategic defense cruiser
+advanced patrol frigate
+counter-piracy ship
+riverine assault craft
+remote operated vehicle carrier
+semi-submersible command ship
+airborne early warning ship
+mobile repair ship
+autonomous surface vehicle carrier
+high-speed littoral patrol ship
+amphibious operations command ship
+sea-based missile defense platform
+mobile landing platform
+forward command ship
+special operations support vessel
+heavy amphibious assault craft
+tactical stealth vessel
+sea-based drone command center
+network-centric warfare ship
+modular combat ship
+enhanced coastal patrol vessel
+maritime security cutter
+heavy-lift ship
+arctic patrol vessel
+littoral gunboat
+high-capacity hospital ship
+floating armory
+advanced search and rescue ship
+long-endurance uav carrier
+submersible logistics platform
+multi-domain command ship
+semi-submersible missile platform
+high-speed insertion vessel
+tactical amphibious support ship
+rapid reaction ship
+seabed warfare platform
+mobile surveillance ship
+coastal defense monitor
+advanced countermeasure ship
+strategic operations vessel
+long-range support ship
+modular logistics ship
+arctic operations platform
+multi-mission command ship
+sea-based radar platform
+autonomous combat surface ship
+networked defense frigate
+enhanced mine warfare ship
+advanced sealift ship
+anti-drone defense ship
+high-speed coastal interceptor
+submarine-launched uav carrier
+high-efficiency patrol ship
+tactical support catamaran
+networked surveillance vessel
+mobile command and control platform
+littoral defense cutter
+seabed reconnaissance ship
+enhanced rescue and salvage ship
+abyssal reconnaissance submarine
+deep-sea combat submarine
+high-pressure exploration submarine
+tactical abyssal warfare submarine
+deep-ocean surveillance submarine
+ultra-deep submersible attack submarine
+abyssal operations submarine
+deep-diving research submarine
+heavy deep-sea assault submarine
+submarine-launched abyssal drone carrier
+ultra-deep surveillance submarine
+deep-sea exploration submarine
+advanced abyssal defense submarine
+abyssal sensor deployment submarine
+deep-water insertion submarine
+high-pressure tactical submarine
+deep-ocean special operations submarine
+strategic abyssal submarine
+ultra-deep recon submarine
+abyssal communications submarine
+aircraft carrier
+battleship
+cruiser
+destroyer
+frigate
+corvette
+submarine
+amphibious assault ship
+patrol boat
+minesweeper
+supply ship
+hospital ship
+command ship
+fast attack craft
+landing ship
+submersible
+survey ship
+anti-submarine warfare ship
+littoral combat ship
+missile boat
+aquatic military vehicle
+attack submarine
+ballistic missile submarine
+rescue submarine
+research submarine
+mini-submarine
+autonomous underwater vehicle
+manned underwater vehicle
+diver delivery vehicle
+submersible drone
+underwater glider
+underwater surveillance vehicle
+submarine tender
+submarine support vessel
+deep submergence vehicle
+underwater construction vehicle
+underwater research drone
+unmanned underwater robot
+submarine rescue vehicle
+underwater mapping vehicle
+combat submersible

@@ -1,0 +1,65 @@
+Custom Dismount with Toribash Ragdoll
+
+Clone of Stair/Truck Dismount games, but using a toribash ragdoll and dismemberment/blood/gibs/gore/slicing effects. Almost like a Mortal Kombat random fatality generator, with small but meaningful choice and control, even if minimal.
+
+Introduce an element of randomization and effortlessness (no manual level editing, no setup, just get a randomized level with a randomized start, randomized strike method, merely choose how to alter initial strike, and then when to finish and how to finish(bodypart, direction, strenght between min-max)), inspired by the feeling/idea/concept of solo baseball; pitching a baseball upwards, then picking up a bat while the ball is still mid-air and hitting it off in a satisfying way as it comes down precisely when and how you want to, thought without the skill or stress factor of needing to be fast and agile enough to pull it off.
+
+Purpose: Cathartic venting of wrecking someone who's decidedly scum. Involves one of three modes:
+1. Directly Push/Hit/Launch/Jettison Ragdoll with chosen impact type (soft, hard, cutting) towards something hazardous.
+2. Have a ragdoll placed on a moving physics object/platform, which goes to crash into another, stationary object.
+3. Launch a projectile at ragdoll in an environment where it could be cool or hazardous.
+4. Similar to 3, but insta-impale with primitive projectile shape (hard glue to ragdoll at body part) and apply launch forces to object, forcing ragdoll with it.
+
+Features meaty impact sounds, gnarly voice grunts, suppressed screams of agony that are less dramatic and more "painful, oof, fucking hell thats grim" in a subtle subdued way, almost eerie.
+
+Inspirations:
+Katana Zero - each dismount is a precognition preview. Once chosen, actually happens for real. Have a camera affect that tells if something is precog, with a dreamlike filter.
+Watch Dogs - each person being wrecked is a random unique person that is irredeemable in terms of mentality and they also did something or are likely to do something heinous with a high probability. They have a name, set of random colors, (a thought they believe in, a bad thing they did in the past and are proud about it today, a thing they want to do soon).
+Revengeance - slomo finisher mode, usable to make a slice (X-cut, single cut, 5-35' degree variance double cut, either with katana, zweihander, buster sword), smash hit (kinetic force punch), launch at (shoot with physics prim to gib), blast (detonate body part with momentum), impale (insta embed prim, apply launch forces, a smear fx anim to suggest entry so it doesnt seem like pure teleported). Do these with snap-to-body part, set power between minimum lethal ouch hit and maximum holy shit overkill, optional follow up second and third hit too.
+Do precog to plan dismount, but get to do finisher only once. This is meant to drive home the idea that the target is truly dead and it was final, irreversible permadeath.
+
+Gameplay core:
+- Have a set of scenarios that have a randomizable "frame". i.e. train smash into ragdoll, but front of train can be random shape, shape with subshapes or multiple of single type shapes or multiple random shapes.
+- Begin ragdoll in a set pose with a randomized element, positioned to be guaranteed to be hit. i.e. sitting, standing, kneeling, prone, lying, handstanding, crouching, but torso, head, arms and hand positions are randomly rotated at their joints within their extents for poses that are sensible/real.
+- Choose launch vector/power/parameter for whichever of 3 modes is used.
+- At any time after initial launch, hit the ragdoll with a finisher attack.
+
+Scenario ideas:
+push into metro train off platform
+push off stairs
+push into busy traffic
+push into fan blades (dull/sharp)
+push into strong rotating machine/giant hitting bat
+launch into wall/obstacles/fence
+push/fall into grinder
+fall down a pit with bars (think DM_Gael in ut2k4, like a pachinko machine board except with a human ragdoll getting smacked around as they fall lower in the board)
+
+on pad, crusher/hydraulic/platform/grate press pancakes them (1 from above, 2 from sides, 4 from corners)
+on train tracks, train slams into them
+on a road (flat, downhill, uphill), isekai'd by truck-kun, car, bus, motorbike, formula 1, tunnel boring machine, 
+riding a mining cart, top exposed, into a tunnel/under a bridge too low that will rip the upper torso away
+riding/weakly glued to a vehicle (at seat, at front, on top, at back, on side, top front)
+all above, but in a tunnel/enclosed area
+
+
+A 3D (or even 2D) version of Stair/Truck Dismount games, but with more scenarios, using the ultra basic primitives both for environment and character just like the original games. No textures, no advanced models, just simple minimalism.
+
+
+
+
+
+
+==
+Wikipedia Finnish Language Article for Porrasturvat:
+
+Porrasturvat – Stair Dismount on suomalaisen demoskeneryhmän tAAtin vuonna 2002 julkaisema tietokonepeli.
+
+Pelin idea on poikkeuksellinen – tavoitteena on tyrkätä portaiden yläpäässä seisova mies portaita alas niin, että miehelle koituu kaatumisesta mahdollisimman paljon vammoja. Tälle erikoiselle idealle on jopa taustatarina – supersankari Spector havaitsee, että hän ei voi tehdä verovähennyksiä kaupungille tehtäviensä lomassa aiheuttamistaan vaurioista, ellei hän voi todistaa saaneensa vammoja myös itse. Pelaajan tehtävä on siis aiheuttaa hänelle nämä vammat.
+
+Pelin 3D-grafiikka on minimalistista, mutta selkeää. Pelaajalla on mahdollisuus kohdistaa iskunsa miehen eri ruumiinosiin, esimerkiksi jalkaan tai päähän, mutta itse kaatumisen tulokseen tällä ei ole merkittävästi vaikutusta. Äänitehosteet koostuvat huudoista, luiden katkeamisista ja tömähdyksistä, mutta pelissä on myös letkeä taustamusiikki.
+
+Pian pelin ilmestymisen jälkeen huomattiin, että pelin bugeja hyödyntämällä oli mahdollista saada valtavia pistemääriä.
+
+Pelin tekijät tekivät Porrasturville kolme jatko-osaa: Rekkaturvat – Truck Dismount (2003), Dismount Levels (2004) sekä Kiuasturvat – Sauna Dismount (2008), joista myös ensimmäinen voitti Assemblyn pelinkehityskilpailun.
+
+Rekkaturvat – Truck Dismount on tAAtin tekemä jatko-osa Porrasturville. Kuten edellisessä osassa, niin tässäkin on tarkoitus tuottaa supersankari Spectorille mahdollisimman paljon vahinkoa. Pelissä mies laitetaan rekan kyytiin ja rekka laitetaan liikkeelle kohti seinää. Matkan varrelle voi laittaa hyppyreitä. Peli on voittanut Assembly-tapahtuman pelinkehityskilpailun vuonna 2003.

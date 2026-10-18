@@ -1,0 +1,447 @@
+Casual Lego Combat - Quick ruleset for simplified easy tabletop style gameplay using legos/toys/creations.
+
+
+Needed to play:
+Per side: At least one character, be it minifig, vehicle, robot, monster or a stationary turret. Preassebled.
+One 6 sided dice or similar.
+Retractable tape measure roll - minimum 2 meters (you know, those handy hardware store ones that retract automatically when you press the button on them)
+(for ease, its better if each player has their own tape measure and one dice so they don't have to continuously pass it to each other.)
+Notepad or Piece of paper and pen (basic metagame purposes only, tracking campaign progress) or webapp
+These rules.
+
+
+Mechanics:
+Ultra fast combat - no arbitrary hitpoints; succesful attack will destroy something. Only physical addon/attachment/equipment based hit points.
+Using armor - hats, held weapons will take any hits first and character will drop them.
+Dismemberment - first hits upon an unarmed minifig or vehicle will make it lose its mobility - legs, wheels, ability to move (lay the vehicle on its side or upside down if you cant remove movement ability easily). Once those are gone, the next hit will be a killing blow; head decapitation or core/reactor breaking.
+Regeneration - if item is within range of character/structure, it can plop it back on, restoring functionality or even adding new.
+Knockback - each successful attack hit does two things to its target, push it backwards, then whatever piece is dismembered is moved double the distance of the knockback.
+Penetration - if a weapon has the ability to go straight through a target then player can move their character to line up as many opponents as they can and shoot away - provided their armor won't stop the beam/projectile, in such case only the first unit is hit. Just shoot through them all, causing damage to all in that line. Can be combined with AoE for every impact point for maximized casuality count.
+Arc/Ricochet attacks (lighting chain bolt or bounce bullet) - if target is hit, check for others within its range using the appropriate blast radius. If found, you must choose one additional target to harm - even if its an ally, except for the shooter whom is immune to their own weapon.
+Freeform movement - just use tape measure to show far a character/vehicle can move and let player decide how much they want to move.
+Attack aim - Line of sight or indirect. Indirect still requires a clear curved pathway that makes sense with the trajectory of the weapon in question - if a ceiling is too low or the target is in a tunnel, then the attack cannot be made.
+Area of effect - blast radius. Attacker can land a hit upon targeted character, but target gets two rolls to dodge. If either succeeds, AoE attack will miss them. Blast radius of AoE attack is measured from center of first target. If any other targets are close enough, they too will get to roll twice to dodge - even allies, so friendly fire is possible, even to yourself if you attacked someone with a AoE weapon while being within its blast radius, you daredevil.
+Super armor vs weak points - if a vehicle/robot/monster has super armor, it requires a weakpoint; exhaust port, soft tissue or exposed coil. To attack with inferior weapons that cannot hit and penetrate/destory super armor, attacker must first move to position where they can hit whichever sides are exposed - front, left, right, back, top or bottom. This attack will bypass super armor and destroy any other part that isn't super armor.
+3 Action Turn System - available options: Move, Attack, Use Ability, Regenerate, Grab/Install/Operate/Mount/Board/Bail. During attack, first player rolls to hit - if they succeed, targeted player must roll to dodge.
+Fight validation - to make a battle valid, both sides should have a chance at winning; have a sufficient weapon that can damage/destroy the opponent's armor class. So even if its minifig vs tank, the minifig should get an anti-tank weapon.
+Infinite ammo.
+No cooldowns.
+No keeping track of anything combat wise - everything is directly visible on the field physically.
+No stats - just look at the character/vehicle/monster and decide its most sensible attributes listed below per weapon/mobility/armor.
+Never detach or remove something that is awful to deal with to reattach etc. - minifig arms or hands.
+If a weapon is integrated into a chassis of a unit that is difficult to remove, then either add an component, capacitor, armor plate or whatever that can substitute its health. Losing that armor won't prevent using the weapon, but the next hit will kill the unit if it has no more armor left.
+Neither player can steal, hijack or touch each other's items, weapons, vehicles, steeds.
+
+--
+
+Minifig equipment:
+One hat (armor)
+Two guns for arms (works as armor too)
++1 reserve weapon attached via leg or backpack connection
+# body or attachments to body/legs determines armor type. Certain hats may provide armor type - which is lost if that hat it shot off, reverting the minifig to exposed/unarmored type.
+
+Steed equipment:
+No more than 5 detachable armor/weaopon/ability objects in total. Other may have virtually unlimited amount of functionality and weapons as long as they can give a believable reason and have other players not reject it/consent to its validity. This usually requires that said weapon or ability is clearly visible on the model and easily interpretable by others than the maker of the model that this is indeed a weapon obviously.
+
+Vehicles:
+No more than 10 detachable weapon/ability/armor systems in total. More than 10 items/armors can be deployed with, but first hit upon vehicle with over 10 weapons must keep removing its weapons of choosing until its at 9 weapon - from which the removal continues one by one. This is called a "vehicle stability" game mechanic to make fights have sensible
+canopy (armor, optional)
+directional super armor (For 3D games: no more than 3 directions - available directions front, left, right, back, top or bottom For 2D games: no more than 2 directions.)
+
+Titans:
+Same as vehicles, but has double the detachable budget than vehicles, so 20 pieces or weapons/armor/abilities.
+
+(Some vehicles/steeds/minifigs may have their bodies + limbs be a melee weapon itself, like a lion uses its hind legs for propulsion, front legs to swipe, tail to stay stabilized. Normally arms of mecha, minifig arms and steed arms are exempt from being a detachable component, so the thing that gets removed is only the weapon attached to the arm or hand.)
+
+(Detachable pieces)
+
+--
+
+Weapon classes
+
+Minifig:
+Light - pistols, fists, shivs, knives, sticks, rocks, knuckles, small or crude weapons. Cannot harm armored minifigs. Does two attacks for the price of one action - attack twice.
+Medium - blasters, rifles, swords, axes, effective against armored minifigs
+Heavy - anything notably bulkier than medium, effective against light/unarmored vehicles can use penetrating, arcing/ricochet, AoE elements in solo.
+Ultra - oversized absurd mega weapon, can seriously damage heavy/armored vehicles, can use penetrating, arcing/ricochet, AoE elements in multi-combination. Automatically makes a minifig slow. And makes turning around cost an action - though can still fire at a 90 degree angle. Does a double attack per action too.
+
+Vehicle/Mech/Turret:
+Light - .50 cal power equivalent weaponry. Same as minifig heavy. No effect on heavy armor.
+Medium - autocannons, chainguns, laser cannons, small rockets/missiles/bombs/projectiles. Same as minifig ultra.
+Heavy - plasma guns, railguns, large rockets/missiles/bombs/projectiles. Minimum necessary power to deal damage through super armor.
+Ultra - superweapons, oversized mega rockets/missiles/bombs/projectiles, mass destruction potential. Do a double hit to anything (lose two pieces per one succesful attack). Makes unit slow. Forces unit to use action to turn - though can still fire at a 90 degree angle - even if its a turret.
+
+Vehicles may also carry minifig-scale weaponry too.
+
+Steeds(not a minifig, but not a vehicle - something in between) - they can carry up to medium vehicle weapons or just minifig weapons. These can also be minor vehicles, like small cars, ATVs, motorcycles, small power armor and small exosuits.
+
+Knockback amount is determined by weapon and uses blast radius sizes.
+
+--
+
+Armor classes
+minifig; unarmored, armored
+steed; armored(minifig tier) or light vehicle armor or heavy armor
+vehicle; light vehicle armor, heavy vehicle armor, super shield armor
+
+Armor class means the general material the character is built with, not any particular addon pieces that serve as armor, like hats, canopies that can be shot off.
+Any vehicle weapon will hit a minifig armor - minifig armor is only useful in minifig vs minifig combat.
+
+--
+
+Size classes: (original intention)
+minifig - anything thats literally a minifig, but also outstanding things like minifig scale horses, small animals, bears, dragons, dinosaurs and other similar minifig-tier characters.
+small vehicle - usually around 10-20cm high or long or wide on average.
+large vehicle or titan - anything that clearly exceeds 20cm or approaches/surpasses 30cm in size.
+
+Note: these are merely the original intention, it is fully possible to use the same ruleset for smaller/compact scale characters and vehicles - like fleet vehicles that are essentially tiny miniatures of giant vehicles, battleships and spacecraft.
+
+For example, theres Mobile Frame Zero #01 where a minifig is merely a 1x1 brick, while the mecha are compact, less than 10cm in size.
+
+Or even more extreme case, theres Mobile Frame Zero #02 which is about starship combat where a mecha is a 1x1 brick, while ships are usually less than 15cm in size.
+
+The the latter example, original ranges can be used or they can be halved to make the game fit into a smaller space.
+
+--
+
+Attack Ranges:
+Close - 10cm - 4/6 dice roll success
+Medium - 25cm - 3/6 dice roll success
+Long - 50cm - 3/6 dice roll success
+Far - 100cm - double 3/6 dice roll success
+
+Above scale is minifigs. For vehicles, double these. 2 meters is the absolutely maximum range for even the most long range weapon, no matter how big the vehicle nor how big its weapon is.
+
+Certain targetting assisting components can increase diceroll chance by +1 at most, so the highest roll possible is 5/6 for close range. all others get 4/6, even the far one.
+
+Weapons, no matter what type, get more accurate the closer they are to the target.
+
+Blast Radius + knockback range:
+small explosion or minifig frag/he - 7cm (14cm diameter)
+medium explosion or artillery blast - 10cm (20cm diameter)
+big explosion or heavy rocket strike - 15cm (30cm diameter)
+huge explosion or giant conventional bomb - 25cm (50cm diameter)
+gigantic mega explosion or nuclear super blast - 40cm (80cm diameter)
+
+
+(measured outward from center of character in any direction in 360' direction)
+(note, equipment knockback is double for the dismembered piece/weapon/armor)
+
+--
+
+Move ranges (per action, thus can be theoretically done 3 times per turn):
+Minifig fast - 30cm
+Minifig slow - 15cm
+Vehicle/Titan fast - 40cm
+Vehicle/Titan slow - 20cm
+Boost/Jump/Dash ability fast 50cm
+Boost/Jump/Dash ability slow 30cm
+Crawl - 10cm (dismembered legs/wheels/etc)
+
+Vehicle Jetfast - 60cm
+Vehicle Jetfast boost = 100cm
+
+360 degree movement, even upwards/downwards.
+After move, choose facing direction of unit - thus taking advantage of armor coverage and hiding weakspots, or exposing one self to be able to fire a fixed/mounted weapon that cannot turn/swivel.
+
+--
+
+Armor vs Speed
+Character/unit can indeed have both heavy armor and fast speed - but the speed element usually causes the character to dedicate one or more armor direction to be a weakpoint that cannot house heavy armor. This applies to minifigs aswell - if an armored minifig is equipped with a jetpack behind them, then attacking from behind will be like the minifig doesn't have armor - so even light weapons can damage such an opponent and make short work of them.
+
+For vehicles and other larger assets, they usually will have some sort of propulsion or thrusters that make fast movement or a boost ability possible. Whichever way its facing, is the way that is designated a weakspot. If a unit has two thrusters on both sides, then both of those sides are vulnurable to weaker weapon fire.
+
+
+--
+
+Abilities:
+Abilities may alter the following parameters:
+Location of self - move farther than regular move (rocket booster, nitro/turbo fuel, super jump, wings)
+Location of target/ally/opponent/neutral/object (gravity gun, grappling hook, tractor beam, rope yank, push force)
+
+Deal Damage (originating in radius from self - i.e exhaust flame vent burst, anti-personnel grenades, defence laser matrix)
+Deal Damage (use built-in weapon of character that is indestructible/part of the character. Can be any weapon of any class, any type.)
+
+Create/relocate temporary terrain.
+Move existing permanent terrain/real life furniture.
+
+Assume control of opponent for how many remaining actions you have left. Cannot be used to suicide a unit - only to attack and move like a regular unit.
+
+Depending on how particularly powerful and ability is, it will determine its dice roll chances of success. Something like mind control would be 1/6 roll, while boost can be 4/6, a weapon can be 3/6. The main point is to think/feel what makes sense for how weak or powerful something is in terms of gameplay and assing it a roll value between 1/6 to 4/6. I think 4/6 is highest since 5/6 is too easy to achieve to feel like the roll is even worth doing.
+
+
+--
+
+Dicerolls:
+Attack Hit success
+Defend/Dodge success
+Recover/Grab equipment success OR Heal/regenerate/rebuild success
+Ability/power success
+Move Mistake success (experimental - the idea is to introduce a rare chance to accidently "trip over", causing the character to fail to move and lose that action. Might be annoying and sucks as a feature, so I might cut this.)
+
+(All use a regular 6-sided dice)
+(Dice can be substituted for a coin flip too. - this will render most situation 50/50 chance, so anything that is more difficult (2/6 chance rolls) should flip two coins.
+
+--
+
+Battle Scenario Objectives:
+Destroy Specific Enemy Unit (commander, leader, hero, ace, hivemind, controller)
+Destroy all enemy units
+Destroy Specific Enemy 3 times (they resurrect - they have finite lives/copies)
+
+Protect/Destroy non-army objective (reactor, core, machine, tech, pylon, crystal, artifact, commlink, radar, transmitter, turret, planetary gun, defence generator, etc.)
+Escort/Protect/Destroy neutral unit (Civilian, convoy, transport or carried object that cannot move by itself. It is under control of protecting player as a provisional unit that is outside the usual squad turn actions etc.)
+
+(grab feature)
+Delivery of X objects to location Y
+Assembly of A using XYZ components
+
+Reach a location (race)
+Reach a location (one/others assaults, one/others defends) - either as a escape scenario, or blockade breakthrough.
+
+
+Hold onto special object for X turns (point match)
+Capture X points/King of the hill (spend a turn to capture, hold X turns - cumulatively or consequtively - to win)
+
+--
+
+Playing a campaign
+Make sure each faction has atleast one weapon that is indeed effective to destroy the opponent's hardest unit.
+Any factions/parties should begin roughly 3 meters away from each other - outside of maximum weapon range. Ambush/standoff scenarios can be set up too if desired - this is where starting positions can be anything. I merely suggest 3 meters to make it possible for opposing factions to have some ability to prepare and move around before going into firing range - like in chess.
+Each faction takes a turn by using all of their available units. Each unit has three actions it can take. Its up to the player whether they move/move/move, move/attack/move, attack/attack/move or whatever. Once all units have moved, next faction takes over and does the same.
+Battle ends when objective is completed/failed.
+
+If playing a mere single battle skirmishes, then simply reset and play again.
+If playing a war campaign, then use a score board - a basic pen & paper with slots for 3,5,7 or up to 9 battles with names/marks to signify who won. Whoever won most matches, wins the war. 
+
+For additional progression, new units can be added to a roster for later battles or inversely old units can be retired from the war so that the later stages of the war happen with a diminished force. How this happens is up to player. Maybe which ever last unit got killed is the one that has to retire and sit out the rest of the war. Maybe a combination of both can happen.
+
+There is no limit to how many faction of players can participate in a single battle scenario - I'd say over 8 people would be perhaps too much, possibly 2-4 players/factions is preferable.
+
+There are no limits to how many or how little units - minifigs, vehicles, robots, monsters, titans - can be had per player/faction. Obviously having somewhat fair rosters would make for a balanced game, but if someone wants to play the underdog with less units and firepower against a superior foe - numerically or armor/weapon/mobility wise - then why not, go for it. I'd still recommend not having more than 9 units per team though, otherwise turns would get quite long.
+
+I could even suggest that if there are more than 3 units per team or more than 2 players/faction in battle, then perhaps a chess-like system where each player may only use one unit per turn is preferable.
+
+Even better, perhaps a hybrid of nuXCOM and chess could be a thing - each player may move 2 or 3 units per turn instead of their entire army. This prevents insane dog piling assaults if there are tons of units on one side. Since this game system does not have Overwatch/Retaliation/Counterattack mechanics due to its simplicity - and I don't want to add any since it'd get silly - I think the solution of allowing upto 2 or 3 units of choosing to move per turn is excellent in making the pace of the game flow better between all players. Of course, this 2-3 arbitrary number can be adjusted to higher if there are battallions of minifigs or epic armies on both sides.
+
+Of course, if the premise of a battle seems very one-sided and potentially outright unfair to a player with a lesser squad, there would need to be consent to even do that game to begin with. No point in doing a desperate match if one party knows its gonna suck for them and they don't want to try defeating such overwhelming odds. The game participants would need to accomodate and either remove some weapons or units from their roster or give the lesser player more stuff to balance it out.
+
+The entire game is a competitive match between two or more humans, with prepared units and weapons in advance - kind of like custom built decks of cards in a trading card game (pokemon tcg, magic the gathering, hearthstone, etc). 
+
+Its balanced for "bigger = better" logic. Vehicles are more powerful than minifigs, titans dominate the battlefield and larger/longer weapons are more powerful overall. In a way, its pay-to-win, if we're thinking of lego sets or other paid toys that could substitute them. There is thus incentive to bring out the best, biggest and most intricate models with the maximum amount of weapons and armor - but also apply thoughtful design or notice elements about the model that clearly suggest a function or attribute about itself - be it armor, speed, ability, weakpoint/super armor and strike a balance that is smart/tactital, fun and powerful.
+
+--
+
+Unit design
+
+The way things are constructed:
+
+Minifig - body + head (core), legs (propulsion), shoulder piece or heavy/large hat/helmet/hard body print (armoring), back/shoulder/leg mounted object (ability/booster or weapon 3), Hands (weapon 1 weapon 2). Only minifig tier weapons.
+
+Steed - body/chassis/head/interface/engine (core), legs/wheels/thrusters/propeller (propulsion), up to 4 mounted weapons or armor plates of any minifig tier or light/medium vehicle tier weapon. Armor determinted by body type, between minifig armor or light vehicle armor or heavy vehicle armor. Notably smaller than a proper combat vehicle.
+
+Regular Vehicle - any type of body/chassis/frame/structure (core), legs/arms/wheels/thrusters/propeller (propulsion). Notable mega armored shield section or obviously heavily reinforced area as a built-in feature that blocks own usage of propulsion and weapons from that side = can be interpreted as super armor.
+Up to 10 pieces of mounted weapon or armor plates, either seamlessly or bolted ontop where ever possible, even on one spot as a sandwich if no other area is available to distribute them. May carry any and all types of weapons, even minifig ones.
+
+Titan - same as vehicle but has the budget of upto 20 weapons or armor. Usually notably larger than the average vehicle.
+
+(Any hats, weapons or armor need to be readily and easily removable/detachable off the model/toy/unit. If they're deeply built-in/fused/integrated that they're practically part of the body of the unit, their hitpoint can be substituted by an armor plate - although this will not disable the weapon). Normally turrets that can swivel and turn usually can be easily removable, but fixed-direction weapons that cannot turn are likely to be part of the chassis that one cannot dissassemble them easily at all. As such, built-in weapon are balanced by lacking flexiblity compared to their turreted variants that can turn and attack more directions than one.)
+
+(All steeds and vehicles have a "slam" ability - use the body/arms as a weapon to either ram or slam an opponent within movement range. Ramming requires propulsion.)
+
+Usually the goal is to try to cram as many weapons as possible and if there aren't enough, fill the rest of the free slots of armor pieces put anywhere on the model.
+
+It is best to inspect and count what parts are present and make sure that they're easily detachable. Other players are free to refuse to play the game and disqualify the opponent if they're not following the ruleset.
+
+
+--
+
+Weapon, Ability, Tool, Booster design
+
+Generally any weapon or ability would be naturally balanced by the rule of believability. If something is large then its probably powerful but heavy. If something is lightweight, its probably either weak or lacks range.
+
+No matter what it - an ability, weapon, tool, booster - theres always the triangle of CHEAP=FAST=QUALITY where you can only have 2 benefits, but always have that one 1 negative trait. This applies to units - be it minifig, steed, vehicle or titan.
+
+
+
+--
+
+Lore:
+A strong desire to engage in EPIC TOY COOL COMBAT manifested by within groups of inanimate creations through the will of immortal battle gods. The gods use a surge of their power to assemble, weaponize and resurrect creations for battle, awakening these mighty customized warriors from their graves and bestow upon them the honor to fight the opposing gods creations for everlasting glory and epic cool memories.
+
+You are one such god. Take command of your forces and engage in EPIC TOY COOL COMBAT.
+
+The gods may will into existence any creature, person, machine, robot, thing through a physical toy - be it Lego bricks, action figures, barbie dolls, teddy bears or any other toys or construction sets or do-it-yourself creations. 
+
+The main point is that they have the ability to move, can mount easily detachable weapons and armor - using brick connections, Blu Tack or similar, or other methods - and are EPIC, which can mean absolutely anything to each god as long as they love the idea themselves.
+
+Two or more gods challenge each other to engage in COOL COMBAT with the goal to create COOL situations, regardless of victory or loss.
+
+Sometimes COOL COMBAT can be used to solve disputes, sometimes to create COOL memories through COOL COMBAT moments, sometimes to compete for a rare prize that isn't possible to share or to tell an COOL story that everyone can learn from!
+
+--
+
+Metagame:
+
+ETCC can be played as quick individual battles or as a string of missions that form a campaign.
+
+Both can tie into a greater metagame where exploits, moments/memories, outcomes, victories and defeats are all recorded and persistent, each battle and campaign contributing towards it.
+
+This works via a log/diary that records the history of the past and creates future scenarios.
+There are arcs/seasons that in themselves are a war, with each battle and campaign being an episode within that season.
+Using a dice, a set of heuristic decision tree sheets controlled/decided by said dice or by popular vote, the next episode or season are generated based on these rules.
+
+Usually campaigns are generated in chains that makes sense with continuation that picks up where the previous battle left off.
+
+Battles, while more free to be anything that players want it to be, still has relation to the arc/season in some way, thus possible one-off battles will also be chosen by a heuristics roll.
+
+Furthermore, the specifics of battles or campaigns may also be procedurally generated via dice roll. Starting conditions, army or even individual unit strenths/ratio/balance/imbalance, special events (like weather - strong wind that automatically pushes all/some/one units 10cm to the left) or even main objectives or side objectives.
+
+
+--
+
+TODO:
+Metagame sheet
+Robot components/weapons = unit value (battle balance?)
+vehicles must use action to actually rotate while minifig can rotate for free.
+multiple pilots/passengers per vehicle
+alliances/teams of players
+specific targeting of which part to lose done by victim, not attacker.
+nimble vs rigid vehicle movement/rotation (i.e mecha vs fighterjet), mecha can rotate around freely with every move but jet can travel double distance - and strafe up to 10 cm to either side, but requires an action to rotate/turn around.
+AI driven solo play with two modes; using chaos dice and intelligence dice.
+(Chaos: d6 = go north, west, east, south, towards nearest enemy, away from nearest enemy)
+(Smart: d6 = assault aggressively regardless of objective, do objective specifically, evade/hide/recover, patrol/relocate/maneuver to new position, support/help/join up or cautious attack if no one else, be chaotic(move/attack randomly)).
+Minor pets, sidekicks count as a weapon. Sure its alive, but it just a weapon - cannot act on its own and can be knocked away from player's hand.
+All measurements are done via center of mass or volume of unit, whichever makes most sense.
+Besides unit, players can also field custom obstacles to use as terrain or cover or mobility assistance (tower to get a higher ground than opponent to strike from above.) They can be "destroyed", making them lay sideways and thus become intangible, but if the owner come to fix it, they can set it back up right and make it tangible again if they succeed the dice roll. (dice chance depends on how big it is. 2/6 for large stuff, 3/6 for medium and 4/6 for small stuff.)
+How to use other toys besides lego stuff? Especially if no removable components are present? Maybe use bluetac or some kind of other attachable thing to say it lost a hit point and will die if all functional parts have been covered by the bluetac - like a green army dude has a gun and helmet, so first slap some bluetac on both, then kill them off on the next hit. Maybe limit them to 2 actions? Maybe instead of adding bluetac, remove it instead with each hit as pieces of armor are knocked off.
+Add vehicle melee weapons to weapon class mentions.
+Write basic lore.
+Give name to project that doesn't reference Lego.
+= Epic Toy Cool Combat = - Quick ruleset for simplified easy tabletop style gameplay using legos/toys/creations.
+Add legal disclaimer for Lego trademark etc.
+Dragging allies/tagging along/latching onto/moving as a group (?)
+ramming attacks as an ability, but also as a melee attack. Not applicable to minifigs. Steeds cannot ram vehicles, vehicles cannot ram titans. Titans can ram all.
+Ejecting weapons, rocketfists, throwing weapons as projectile attacks. (think DXM, but you don't lose it/it doesn't explode.) Does double or triple damage but requires manual retrieval.
+Unholy game rules that allow equipping armor plates, weapons and abilities dropped by opponents and even use them - even if it makes no sense. (dinosaur picking up a laser cannon despite lacking a reactor core to power it that the original owner has.)
+A 2D or even 3D video game version of this system, both as a standalone turn-based tactics fun, but also as an introductory tutorial to try it in real life with real objects where you can "create custom content" out of any toys, any legos, any diy stuff to make any sort of units to play with, with any type of surroundings and terrain that.
+How to determine speed or armor class of unit and how do they balance each other out etc.
+Titan class weapons?
+Peaceful gameplay metagame that doesn't involve combat, but merely obstacles, gauntlets, exploration and challenges?
+Transforming units?
+
+Multimode-systems/devices (particle cannon + flight thruster system + energy/solid shield)? Free to switch once per turn, every other will cost an action (have flight mode, move further with it costing an action, switch it to gun for free, fire it costing an action, switch back to shield mode also costing an action). (Device can switch between propulsion, shield, weapon, armor and/or ability)
+
+Holstered weapons, Foldable weapons (turn off their detriments? take action to pull out, but free to fold in so taking out quick pistols is fast?)
+Berserk-mode style abilities?
+
+Carryable Shields? (maybe its super armor? or better armor tier that works in 270 degree arc?)
+V2 Shields - only available as addon, allow player to roll dice to attempt to reflect the attack back at the opponent for equal damage dealt. If succeed, enemy is hit with its own attack. If fail, lose shield and any other parts if attack was multi-hit.
+Built-in shields - same principle, but user will take either +1 damage upon failure and must face in the direction of attack, where as addon shield can deflect any direction.
+
+No size limit to how small or big an addon can be.
+
+Pilotable steed/vehicle/titan benefits vs autonomous creature/robot?
+Simplify armor plate system to just be a stack of 2x2 lego plates stuck together like a stair or in a harmonica/zigzag pattern by 2x1 connections?
+Combinable vehicles? (steed + steed = vehicle / vehicle + vehicle = titan / steed + vehicle = vehicle+) combinable vehicle negatives? maybe easier to hit, can only shoot/move once like a solo vehicle despite having two or more units within.
+Titan benefits? vs lesser units? Titan drawbacks (easier to hit because its so big, but it hits hard and moves hard and is hard armored.)
+
+ERA memes due to armor system opportunity. (ERA = Explosive Reactive Armor, meme about comedic compulsive desire to slap as many ERA bricks onto military equipment to  achieve infinite/maximum protection against everything and anything.)
+
+Rocket/Jet/Race Car speed tier? (vehicle zoomies, powerful big propulsion) (maybe not available to titans, or if available to anyone then has weakness maybe?)
+Unit questionaire to determine its specs?
+
+Versatility of the armor plate system to adapt to any unit/model/creation in a way that suits its best, like a custom healthbar - besides the attachable weapons/abilities.
+Attachable benefits
+"Attempt exposed pilot/driver snipe/eject if canopy/hatch or just open cockpit - D1/6 if titan, D2/6 if vehicle, D3/6 if steed." Or snipe attempt, damage minifig inside directly = D1/6, attempt to force eject lostplanet style = D2/6, both vehicle and titan. Steed is 2 and 3 respectively. Model requires canopy that can physically open, via flip, slide, swing, fold or retract.
+Benefit of canopy = able to not die as minifig if vehicle/titan/steed destroyed - auto eject and continue fighting with stored weapons/equipment provided by titan/vehicle compartment/holder to auto-receive if vehicle goes bam.
+
+Terrain that decreases ranged accuracy when hit or hitting from (half cover, full cover, swamp/sandpit)
+Flashcards for minifig, steed, vehicle, titan - then a comparison reference sheet for all stats, then a lore doc, then a AI sheet for combat, AI sheet ally companion in peaceful, metagame sheet combat generator, metagame sheet peaceful exploration generator. Combat rules quick cheat sheet
+
+Deckbuilding inspired squad campaign budget / XCOM roster w/ revival of dead units with cost, homeworld style persistent fleet etc.
+
+Security fairness insurance - use character sheet to list the weapons/abilities/armor and their range, size, weapon/ability names, their special effects, knockback and other final stats - at the beginning of the game, these sheets are shared for everyone to view, admire, check and compare. Can be shared online with a photo, drawing or emblem/symbol + descriptor. Also list all location(s) of armor/shield plates and super shield directions if those are included.
+Add an extra rule for Ultra Tier vehicle weapons to not be targetable until all loose/addon armor plates are shot off first when opponent is choosing what to remove on the defender that owns an Ultra Tier 8 weapon on their unit.
+
+Armor plates - as long as you have one, they increase your protection tier to the next level than what the default is. They are what determines heavy armor.
+Slow canceller (addon main thrusters) - cancels the "heavy effect" of armor plates or heavy+ weapons. Allows a unit to move with "fast" parameters as long as these are on the vessel. Unlike built-in thrusters, these do not lower protection class to light vehicle armor for the direction they are pointing in.
+Rotation canceller (addon side thrusters or gyro) - allows a rotation restricted weapon - ultra or built-in - to be used straight away without first needing to spend an extra action to rotate.
+
+Dodge rolls - whether hit by multiattack or single attack, only roll once for entire batch of that action to determine if evasion worked or not. Do not roll for each damage point individually - it takes too long and is annoying.
+
+Alternative modes:
+Floor is Lava - use carpets, cardboard/boxes/objects/furniture as available terrain islands, everything else is inaccessible/instakill/deals 1 damage at start of each own turn.
+Hardcore - No dodge rolls. Makes game must faster, more lethal.
+No dismemberment, No mess, No detaching - Instead of detaching addons, only use knockback on characters and count their healthpoints using a small piece of paper with foldable cuts - 8 for steed, 16 for vehicle, 32 for titans. (draw lines vertically, about 1cm per row with middle, then middle of those two resulting portions and finally their subportions also middle - easily resulting in 8 slots. If vehicle, extend the lines to 2 rows deep and 3 rows deep if titan. This gives a neat grid that is easy to make and manage. On this grid, mark each square to correspond what "virtual" addon that is. In this mode, healing 1 point of health takes one entire turn - so 3 action cost. Ejecting weapons do not exist in this mode unless made an exception to allow only this.
+
+Easy cards with folded cuts more info:
+-Cards should have info of unit name, size class, short 5 keywords to describe it (plane, mech, boat, etc.), protection class, all built-in items listed and their directions via NSWE/FrontBackLeftRight+UpDown. In the foldable squares, designate removable pieces with NAME(Shotgun), TIER(5-8) - determines weight, knockback, anti-protection rating and damage per action, TYPE(W - weapon, P - propulsion, S - shield, A - ability, R - armor, RANGE/RATING (S,M,L,U or 1-4 or ABCD, determines accuracy between 100%, 75%, 50%, 25%, or no coinflip, two OR flips, one flip, two AND flips(doubleflip)), AIMTYPE (direct, indirect, smart/minion), Specials - Pierce, Explode/Bounce/Split (LP - Line Pierce, AoE - Area of Effect)).
+
+Examples of markings:
+weapon:
+Cannon
+W-T6-rS-Dir,AoE
+
+Booster
+A-T5-MoveSelf
+
+Armor
+R
+
+Shield
+S-T6
+
+TractorBeam
+A-T5-MoveOther
+
+
+Weapon accuracy:
+Melee and close range weapons are 100% accurate.
+Medium are 75%, so d6 4/6 or two coinflips - if either is heads than it succeeds.
+Long are 50% so d6 3/6 or one coinflip.
+Ultra are 25% so d6 2/6 or two consecutive coinflips - both have to be heads to succeed.
+
+
+
+Other names for game:
+Toy God Battles
+Toy God Wars
+Toy God Combat
+Battle Toy Gods
+Combat Toys
+Brick God Battles
+Brick God Wars
+Brick God Combat
+Battle Brick Gods
+Combat Bricks
+
+Epic Toy God Wars
+Epic Toy Battles
+
+Musings:
+Tabletop version is better with foldable cards.
+Videogame version might work better with dismemberment mechanics.
+Show a poorman's version of card with fold cuts and a more fancy printed version of card with picture, emblem and cool font/BG/color coding.
+
+--
+
+Inspirations:
+
+nuXCOM - 2 action move system, attacks are a full animation event where unit fires an entire volley regardless of what weapon it is.
+Cortex Command - MO/Actor attachments system
+Dead Space - RIG physical health bar
+Homeworld - fleet ship modular design, fleet command and formations, no ramming per se, ship sizes/classes. Persistent fleet.
+Mechwarrior/Battletech - cockpit sniping, mech abilities, weapon sensibilities
+Armored Core 3 - general combat feel, balancing, overboost, needing to rotate
+DaemonxMachina - folded weapons, pylon weapon holders, equipment/weapon feature ideas
+Lost Planet 2 - combining mechs, VitalSuit Mech carryable weapons on foot, force eject pilot with energy gun alt fire.
+Mobile Frame Zero 01 - mini mechs, 1x1 brick humans - smaller scale than minifig driven Brikwars games, unified mech squads.
+Mobile Frame Zero 02 - lego miniature fleet ship design, aircraft carriers, land carriers, micro bombers, micro cities, etc. 1x1 brick mechs.
+Mobile Suit Gundam - funnels/critter based weapons
+BrikWars - steed concept, aka minor/lesser vehicle compared to a full sized vehicle. The chaotic element of unrestricted themes.
+Red Alert 2: Yuri's Revenge - unit ideas/attacks/weapons/functions + unit abilities, deployment mechanic, super weapon structures.
+
+--
+
+END

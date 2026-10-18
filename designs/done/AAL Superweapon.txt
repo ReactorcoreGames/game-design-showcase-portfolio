@@ -1,0 +1,123 @@
+Working Name: AAL:Superweapon
+Engine: Any 2D engine
+
+
+
+Summary:
+Intense action game about empowerment involving physics enabled combat, a versatile, agile and heavily armed futuristic warrior and a vast weapons laboratory complex that needs to be raided for technology that could save a galaxy from an apocalypse.
+
+(The player character; a semi- immortal agent of a far future united milky way galaxy agency, tasked with finding alien technology in the far reaches of space that could prevent annihilation of all civilized life.)
+
+Description:
+It takes inspiration from Soldat, Cryptark - both games being a side view sprite based 2D action platformer shooter with a free-aiming keyboard+mouse control scheme. 
+
+
+(Gameplay similar to this; physics, particles, gibs, flexible characters, elemental effects…)
+
+Player characters can freely pick up, drop and throw weapons, dual/quad wield them and do combat with satisfying physics driven interactions like knockback, recoil, exploiting environmental hazards, projectile pushback, explosions, gravity and more. Gibs, ragdolls, slow motion, particle effect carnage, environmental destruction - all the good stuff!
+
+
+(...diverse weapons, hazards, unrestricted aiming, infinite tactical possibilities, environmental interactions, switchable loadouts on the fly, punchy combat with momentum and chaos.)
+
+The game uses a special metagame that randomizes level order, randomizes unlocks/pickups in levels, randomizes enemy types/decorations/hazards and their placement/quantities inside the levels. 
+
+
+(The game takes place on a distant mysterious planet in another galaxy, on a secret planet wide laboratory complex with extensive weapons research by a long gone civilization.)
+
+While the campaign would be a replayable affair with a total set of levels that have hand-designed terrain and spawn areas, each playthrough would be totally different because the order of the levels would be random, the order of what the player finds in levels is random, what they unlock is random and enemies/hazards/opportunities they face in what order would all be random.
+
+
+(Game is easy at its core since you play as an overpowered devastator. The fun comes from the thrill of witnessing carnage, surprising physics driven chaos and satisfying effects.)
+
+This core game structure is something that I've always wanted every single player campaign and roguelite to be like for any game out there. Normally I play a game once and then I know what it will be like for every next playthrough I'd want to do on it - every beginning is the same, the order of levels are the same, the items/weapons/upgrades/enemies/hazards/abilities... all are encountered always in the same order more or less. It's more or less the exact same session I just played. I have a need for variety and this sameness problem usually makes me abandon a game.
+
+
+(Despite the low difficulty of the game, enemies do still offer pushback and resistance both in combat and in the metagame. Overall it's a balanced scenario; a sole superhero vs giant horde of diverse enemies. You could say it's an exciting target rich environment.)
+
+This game does not use procedurally generated levels, at least not terrain wise - even if there is potential for it theoretically - no, instead my goal is to create an example for how to organize a old-style game and its uniquely hand-made content in a way that maximizes its lifetime and fully utilizes every permutation of how this content could appear in the game for best impact and value, lifting any restrictions that would normally make something scarce into something teeming with abundance in terms of surprise, replayability and a better structure for introducing new content that can enrich an old campaign massively.
+
+
+(While rigid terrain is indestructible, everything else can be eradicated. The player can leave a lasting mark on the level they rip through, destroying anything and everything in their path.)
+
+1. What purpose this project caters to:
+True feeling of power. The player by all means is overpowered from the start and will only get more varieties of overpower as the playthrough of a game progresses. A secondary purpose is to inspire the game industry to reconsider how they build their games to encourage developers to fully utilize any content they create instead of creating arbitrary limitations that drastically shorten the gameplay value and longevity of their games.
+
+
+
+2. How it achieves this:
+Regarding empowerment, the player character's warrior avatar is capable of speedy movement, jumping, climbing on walls, infinite flight, dashing in any direction. They can either wield 4 slots worth of weapons at once that all can be fired simultaneously through 4 individual hotkeys or collect, carry, use and discard a stack of about 20 weapons that the player can cycle through at the press of a button and keep using it until it breaks or runs out of ammo.
+
+Defensively, player can take a lot of damage before going down - and when they do, they blow up everyone around them with a small nuclear blast as revenge. Player can also activate an infinite slow-motion ability to slow down time for better control of hectic situations whenever they desire. 
+
+
+
+Any weapon, ability, item or function the player has access to is powerful enough to obliterate enemies within a second. Some weapons may be outright superweapons that can annihilate entire rooms or sections of a level just like that. Player may also receive outside support as supplies, artillery strikes, ICBM attacks or autonomous support drones.
+
+
+
+Regarding the metagame as an example for other developers, the idea is to talk about it in my blog, on the game's website, in social media and spread its illustrated/visualized design blueprint to anywhere where game developers may be on the internet.
+
+3. What is unique/new/special about the project:
+Many things. Unique weapon system, prolific use of free game assets, the metagame structure as already mentioned and the true fulfillment of an actual power fantasy.
+
+I've devised two different weapon usage systems I've already explained, but the weapons themselves use a unique concept of "firing frames"; a series of universal gun platforms or "firing frames" that have a box-like external vague shape with hidden internals.
+
+
+
+Visually this allows these firing frames to adapt to becoming any kind of gun that can fire any kind of projectile and fire said projectile(s) in any configuration. They're highly customizable high-tech futuristic variable weapons that can be easily modified with attachments or scaled up to fit vehicles, mechs or even battleships.
+
+
+
+Although the graphics for the firing frames are custom made by me, the rest of the graphics of the game are sourced from abundant free game asset packs. When it comes to pixel-art, there are certain established size standards that most art revolves around; like the 32x32 pixel grid. 
+
+What I have done is taken and adapted art to make it unified to that scale where necessary, created automated scripts to create a set of basic animations that need only a single image. 
+
+
+
+All this has the cool effect of creating a Mugen-like art style that one could find in a community-created mod collab and by making mass production of new game characters, props, hazards and items possible and fast.
+
+
+
+When there's already an enjoyable foundation of physics driven, gib enabled, particle effects boosted and destructible environment fueled gameplay, those seemingly basic pieces suddenly become quite exciting, since I can focus on giving them interesting parameters and behaviors without having to worry about art at any point. 
+
+It also has the bonus of being open to modding or community contributions, where I can turn people's pixel-art sprites into new enemies or objects that will appear in the game's infinitely replayable randomized campaigns.
+
+
+
+The last part about an actual power fantasy is something that paradoxically has been done so little in the games industry despite constant anecdotal mentions of how "this or that game is a power fantasy" when it really isn't. 
+
+Usually the player's movement is limited, players can die quickly and suddenly, players are placed upon a myriad of restrictions on what they can and cannot do, players are kept barely supplied enough to get past a challenge, players are not given choice or freedom regarding many things.
+
+Players may also start weak and are required to unlock or earn power, which may be fine for a first playthrough, but having to reset and redo the same experience again from ground up for any subsequent playthrough is not enjoyable. 
+
+
+
+My format and design aims to challenge that status quo by providing a true power fantasy without feeling meaningless by reframing where player enjoyment comes from during the game, hopefully inspiring future developers to see more potential in abundance-based game design.
+
+4. What is the potential of the project:
+The way the campaign and its world map is built makes it possible to add more and more levels into the campaign, virtually forever. 
+
+Same with enemies, items, weapons, props, hazards and backgrounds.
+
+
+
+(Never stop adding content; each new piece enriches the existing pile with more emergent combinations, increasing the potential for new fresh gameplay moments exponentially!)
+
+Any piece of content is just added to its specific list/pile that can keep growing infinitely, with each new content piece increasing the number of possible gameplay interactions in any campaign exponentially. 
+
+
+(Endlessly expandable with new content, be it levels, characters, weapons, hazards, interactive objects, decorations and more. The game doesn’t need to limit or restrict itself.)
+
+Even the addition of a single new weapon or enemy is enough to give a reason to replay the campaign again because of how big of an impact it has due to the game's metagame campaign generation system.
+
+5. What inspired the project:
+Side-scrolling 2D action games are my personal favorite. Super Metroid, Super Mario World, GBA/SNES Kirby games, Soldat, Cortex Command and many more, be it with pixel-art or otherwise, the third person gameplay in a side view perspective is really satisfying for some reason, especially if physics and momentum are involved. 
+
+
+
+I also love games that have a versatile character that can change themselves based on items they can find, pick up and discard at will - without being forced and locked to be one specific specialization for the entire game.
+
+
+(The golden age of timeless pixel art driven games. I’d stay stuff from the Game Boy Advance / Nintendo DS and Sega Genesis belong here too.)
+
+I'm also a great fan of pixel-art sprites and seeing the massive libraries and galleries of fan made pixel art assets in places like OpenGameArt.org or similar excites me a lot. I suspect there is a hidden hope that each asset author has, that some day those assets would be picked up and used in something really great and big - like an all-stars super game - fulfilling the desire that probably sparked the creation of those assets in the first place. I envision this game would be a platform for fulfilling that dream.

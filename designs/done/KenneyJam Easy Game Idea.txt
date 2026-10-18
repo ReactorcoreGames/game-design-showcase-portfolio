@@ -1,0 +1,84 @@
+I saw the Kenney Jam 2023 where it posed the challenge of only using Kenney Assets to make a jam game project within 48 hours.
+
+This gave an idea for a series of easy primitive Party Hard inspired games that I could create relatively easily and quickly within GDevelop and release them as Pay-what-you-want or free + useful irl DLC products.
+
+All I would need is to select a fairly complete asset pack that handles all aspects - chars, props, bg, terrain - then think of a Party Hard esque design for it.
+
+By this I mean a simple game where the goal is to have a level with free roaming - static or scrolling or whatever - with randomized prop/char spawn points and a simple mechanic of player trying to break/kill/destroy everything in any order without triggering a failure state. Play may either control an onscreen character or just have a god interface style set of buttons. 
+
+Theres usually a minor mechanic of consequences/escalation that players tries to avoid or compete against (wanted stars, police, security, stealth obstacles). Levels are structured in a way that allows play to complete them in any order and roam freely within them. The threat can diminish or increase during the level, with player successfully killing the final target giving them the ability to trigger/go to an exit and finish that level.
+
+Purpose of all the games is cathartic evil fantasy where player is simply there to wreck everything - be a bad guy and get away with it.
+
+Sound effects can either be sourced from DOM or sfx generators - same for music via Maestro or 1BitDragon or similar.
+
+Gameplay implementation wise only these systems are needed:
+- Simple WASD movement.
+- Press K to action1 (attack/trigger).
+- Press L to action2 (defend/avoid).
+- ESC to pause menu.
+- 10 map randomized micro campaign with increasing difficulty/amount of stuff, ala Floppy Heroes.
+- Reward screen, fail screen.
+- Gameplay mutator reward for campaign win.
+- Opponent/victim/prop object (killable).
+- Police object/mechanic (unkillable).
+- Ridiculous over-the-top Particle effect for destruction + juice.
+
+Once first game is built, most components are easily reusable for another one. Only difference is different asset pack, different particle effect and different context/win/fail.
+
+All would still have the common factor of having an element of absurdity or edgyness that normies would find inappropriate. That shock factor would be the main driving force for people to try the game.
+
+--
+
+Example games:
+
+https://kenney.nl/assets/tiny-ski
+Cause as much ecological damage by smashing into trees/nature/nests, destroying them and summoning more and more yetis that try to chase you down and eat you.
+
+https://kenney.nl/assets/tiny-town
+Vandalize a town and its people without getting caught.
+
+https://kenney.nl/assets/pixel-platformer-industrial-expansion
+Steal more and more chests/industrial equipment and dump it into the pit to ruin the environment. Seagulls try to harass you.
+
+https://kenney.nl/assets/pixel-platformer-farm-expansion
+Set the entire scene ablaze/on fire without getting burned yourself.
+
+https://kenney.nl/assets/tiny-dungeon
+Kill the humans one by one and set monster prisoners free. Monsters will feast on the corpses you killed.
+
+https://kenney.nl/assets/1-bit-pack
+You're a badly managed demolition company. Plant stupid amounts of explosives in inappropriate places without raising too much suspicion and then blow it all up.
+
+https://kenney.nl/assets/pixel-platformer-blocks
+Attempt to jam a warehouse sorting machine by shoving too many boxes into it at once, causing it to clog and break apart.
+
+https://kenney.nl/assets/1-bit-platformer-pack
+Play an unruly/rebellious asshole monster that flies around the level, picking up monsters and dropping them into a spike pit while the boss isn't looking. "Red light, green light" type of game.
+
+https://kenney.nl/assets/micro-roguelike
+Play as necromancer building a personal army by converting villages of people into orcs and skeletons. Storm a castle and take the throne as the ending.
+
+https://kenney.nl/assets/pixel-line-platformer
+Play as a swarm of bees and try to murder the armed hero rabbit who gets progressively more paranoid and dangerous with each level.
+
+https://kenney.nl/assets/pixel-shmup
+Commit warcrimes upon random villages and fields by ordering tanks and planes to hit targets that are out of range of patrolling hero planes.
+
+https://kenney.nl/assets/pixel-platformer
+Play as an asshole spike (literally) by placing yourself under a transportation pipe that an alien person tried to come down from. This is a waterpark and you're conveniently hiding underwater in a shallow pool.
+
+https://kenney.nl/assets/simple-space
+Disrupt drone traffic in a junction area by dragging/lobbing an inconvenient rock in their way using physics. Create chain crashes.
+
+https://kenney.nl/assets/rolling-ball-assets
+Play a dickhead key that moves around on its own and tries to lure balls that get in range of it into holes on the ground. Balls patrol and move towards key if they see it. Once all balls are dead the key will go to unlock the door and take the prize for itself instead.
+
+https://kenney.nl/assets/playing-cards-pack
+Take an UNO reverse card or draw +4 or blocked and blast it at some randomized character to make them explode in randomized ways, while having a huge font say "NO U" or "Draw this motherfucker" or "Blocked from life" or something edgy and stupid like that. The character will yell AAAAAaaaaaa while exploding for extra hilarity.
+
+--
+
+You get the gist; Look at an asset pack and think of a way to use it in some perverted/corrupted way to do something awful/evil with a stealth or escalation mechanic thrown in as a push back. Optionally use Pixel Composer or Juice FX for altering sprites to get animation frames out of them.
+
+3D assets or Kenneys programs can be used as long as they're rendered into 2D images.

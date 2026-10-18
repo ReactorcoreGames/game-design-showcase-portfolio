@@ -1,0 +1,65 @@
+Orbital: applicable at celestials with notable gravity, aka anything that is a moon or larger; planets, gas giants, stars, blackhole etc.
+
+There either is a landable surface or not. The suface, if solid, may still be too harsh, unstable, volatile or dangerous to be landable. Gas giants and stars are obviously not landable.
+
+Orbital tech can either be initiated from the surface or from space. Either build bottom to top or top to bottom.
+
+List of systems in the orbit-surface sphere:
+Comm / power link satellite, sensor / scan / monitoring / surveillance / spy / data collection / research satellite (planet or space aimed), ground attack / space defense military satellite (general, sw, non-lethal, disruptive, hacking, cloaking, shrouding, barrier shield, debris cleaning), orbital elevator, mass driver, cable car, skyhook (helping hand from space), elevated runway rail to space (launch loop), cargo railgun, robot unit cannon, tractor pull beam, space tether / anchor, gas collection siphon tethered bell (Halo 2), escalator / tube / ramp / driveway to space (vacuum tube), celestial orbit ring megastructure (energy collection array, orbital elevator connection, habitats, docks, platforms, guns, shield generators, storage, facilities), docking ring (dedicated laser beam assisted vacuum tunnel / corridor / weather or atmosphere negation pillar to make frictionless re-entry and launch possible), mooring fixture, orbital space colonies, orbital stations / asteroid bases, orbital spaceplane airports, planetary hyperwave uplink facility, orbital hyperwave hub node satellite network, escape pod sanctuaries for planetary disasters, orbital garbage collection and monitoring systems, weather control satellites, terraforming satellites, sky platforms, sky cities, floating structures, sea / ocean based space launches, orbital farms, cloud city, spaceports, star engines, shkadov thruster, nicoll-dyson beam, gas / plasma extractors, collectors, quarries, heavy lift vehicles, re-entry of spacecraft, landers, drop pods, assistance boost latch or carry drones / robots, ICBMs, area denial (surface or orbit), gas miner, asteroid thruster, fabricator drones, space balloon, solar sail / reflector / floater, tether conductive line electric field propulsion (light), elevated long magnetic tube launch system, orbital airship, kite + beamed propulsion, spaceshaft / skyscraper / space scraper, hybrid / combined launch systems.
+
+Top picks:
+
+Orbital rings
+Orbital elevators
+
+Skyway traffic network (Inward & outward)
+(Freelancer docking ring + BttF skyroads)
+(funnels (entry and exit), parking (orbital & surface side, automated, multilayer, integrated repair care resupply), floating markers, buoys, atmospheric damage prevention systems, monitoring, security & safety, drones)
+(Starships use this on homeworlds)
+(Balloons, clean engines, enclosed rotors)
+Small ships lane
+Medium ships lane
+Large ships lane
+Special XL ships zone
+(Can also be a minimal orbital + surface beacon)
+(Planet has dedicated huge clear zones for intense traffic ship landings)
+
+Mass drivers
+Maglev mountain tubes
+Spaceplanes
+Spaceports (above and below)
+(Cheaper, easier takeoff)
+
+Spacescrapers
+Arcologies
+Balloons
+(Reduced launch cost at top, escape pods / shuttles)
+
+Cargo railguns
+Unit cannons
+Heavy lift vehicles (HLV)
++ Atmosphere exclusion vertical barrier corridor
++ Orbital catchers, docks, platforms
+(Heavy traffic, ultra fast industrial matter shipping)
+(Includes weather, geo and nature stabilization)
+
+Notes:
+Different celestials have different levels of infrastructure implemented.
++ Homeworlds employ full rings, elevators, skyways, spaceports, industrial railgun arrays and vacuum corridors. Also full stabilization of weather, geo and nature activity, along with full terrain sculpting optimization, maximum land area utilization.
++ Remote outposts may only contain orbital + surface beacons, a mass driver without a corridor, and an orbiting station with tether hook.
+
+Saturation of orbital infra may also be superdense on homeworlds, spacing evenly along the entire planetary surface, requiring advanced traffic management, meanwhile an outpost may only have 1 or few, and even then only where pre-existing terrain permits it.
+Cleanliness standards for vehicle output, natural environment protection are high on homeworlds, while loose or unimportant on remote outposts. (as long as preliminary backups of all native unique flora, fauna, locations and phenomenon have been identified, secured and designated.
+Emergency protocols for evacuation are designed to not clash with skyway traffic, making escape safe and organized.
+In free areas between orbital rings, industrial vacuum corridors and skyway entry and exits are located. Other open air areas are reserved for cities, arcologies.
+
+New planet utilization process:
+1 Before any landings, a full scan, probing and analysis is conducted to discover unique factors that may be on the planet. A station may be assembled in orbit at this stage.
+2 Preliminary series of explorer bases are established on the surface to confirm orbital findings and access inaccessible areas. Minimal environmental utilization or even external interplanetary supplies only at this point are allowed, depending on how fragile / scarce the local forms are.
+3 All done to a satisfactory degree. This assumes that no intelligent life was discovered, planet does not require quarantine and purification or an exterminatus, nor there is anything particular that limits business on the planet or requires careful handling that otherwise any built colonies / structures could affect it or vise versa.
+PHASE 2
+1. First, planet is utilized as is, conforming to existing terrain, conditions, weather, geo activity, anomalies, flora, fauna, atmosphere, hazards and quirks. 
+2. Full organic saturation while also preparing framework for utopia conversion.
+3. Overhaul into stable, fully optimized, maximized, excellently designed / realized homeworld-class utopia.
+
+Not all planets are converted into utopias, and utopias themselves may also have preserves of wild. Utopias are the coolest places to be and not boring, given the immense source of art, culture and activities. While the general macroscale layout is going to be the same, the ground level is where the vibrancy and uniqueness shines brightest.

@@ -1,0 +1,469 @@
+Working Name: Planet Warfare
+Engine: ???
+
+
+
+Summary:
+Fully seamless 2D or 3D persistent universe open world set in the far future. Play as a reincarnating regular yet malleable person born into this world and set out for adventure, survival, warfare, exploration and become a legend.
+
+Description:
+To put it simply, I want to make a game where I could live out all those awesome fantasies seen in movies, anime, books, comics, cutscenes as a real-time playable experience without any limits, any smokescreens, nothing is scripted and have it all work out as an organic experience in which I am free to do anything, go anywhere, be anyone and have epic storylines driven by my own gameplay while the universe lives its own life regardless of me, creating ambient events in accordance to logic and nature.
+
+
+
+One particular fantasy that is driving this game is any Mobile Suit Gundam anime series or similar - a group of people onboard a mothership, traveling from place to place, fighting battles on land, sea, air and space, piloting massive vehicles and mecha, visiting enormous megastructures, teaming up with allies and deciding the fate of the galaxy.
+
+
+
+Mobile Suit Gundam can be replaced with anything - Star Wars, Halo, Star Trek, SDF Macross, The Expanse, Mass Effect, Cowboy Bebop - the main idea is that its an open world with complete freedom where the major elements that exist within these universes:
++ the versatile human beings that can use tools, interact with objects, pilot vehicles, operate machines, think and act independently or coordinate together as a group...
++ the physical world and its natural laws that offer terrain, materials/surfaces with different properties that have certain effects, applications and rules as to where and how they are created, how they manifest in the world, how rare they are and what they can shift into...
++ natural forces like gravity, radiation, thermodynamics, electromagnetic spectrum/light, weather phenomena, humidity, fauna/flora/organic life, wind, erosion/entropy, electricity, magnetism, nuclear physics, kinetic forces and more...
++ how manufacturing, industry and engineering works regarding the gathering of materials, their refinement into advanced materials, the assembly of objects, the logistics of it all, the requirements dictated by natural forces (electricity, cooling, heating, ventilation, supply of water or anything else such), the blueprints/knowledge needed to know what to build and how to build it...
++ machines/vehicles/systems - how they operate, what they require, how durable they are, how are they controlled, how many people/items they can store/carry/pull/push, what are their capabilities and limits…
+
+
+
+The point is to create a robust, fully standardized, intercompatible, modular and data-driven system that could represent the above and their subsystems in a way that is sufficient enough to "simulate" a live universe. 
+
+Technically to a degree, something like Minecraft, Starbound, Terraria, RimWorld, Subnautica, No Man's Sky and Astroneer are a glimpse of what it looks like. While none of these games are perfect, they have managed to effectively provide just enough necessary "simulation" of a universe to make it consistent, believable, flexible, infinitely expandable and dynamic regardless of player's actions. 
+
+This is in contrast to most other games that fully revolve around the player and rely on player input to continue existing.
+
+
+
+It's about finding just the right method for representing things like destructible terrain, liquid physics, atmospheres, construction mechanics, vehicle mechanics, player/NPC mechanics, universe event mechanics and other such things that is sufficient enough for the player to defacto have the fantasy I've described above possible to take place as an organic, spontaneous happening without me scripting it or forcing it.
+
+I merely create a world in which it is possible and nudge the player to just play the game by motivating them through the combined use of an infinite overarching goal that is never truly possible to satisfy but makes it clear what the player should be striving for (i.e "Seek out evil in this universe and banish it" or "cultivate this universe into well-kept garden") and a generator for endless finite local goals that gives player a clear objective to pursue that they can complete (i.e. "go there", "do that", "defeat those people", "create a city", "construct a mothership", etc.).
+
+
+(Solo persona endless adventure mode.)
+
+The game would feature two modes - one where you play as a single human that lives, dies, reincarnates after a timeskip and tries to finish what was started. 
+
+
+(Group of people endless adventure mode - freely switch between any at any time.)
+
+The other mode is a group-of-people mode where you can freely switch to any character of the group that is yours and as long as one human remains alive, any death would have the player immediately continue as another character of the same group without a timeskip. If the last one dies, the same reincarnation thing happens with a timeskip (although a far harsher and lengthier) and the player will begin with a new group, to continue where the last ones left off.
+
+
+
+As a human, the player has a body with arms and legs that allow the player to do anything a human body is capable of doing in the real world - moving around, manipulating objects, using items, controlling interfaces, using their body to exert physical force upon another object, equipping clothes/gadgets/accessories/pockets/bags, carrying stuff in their arms or wielding weapons/tools, ingesting foods and substances, creating noises and speaking as methods of communication - you get the point. 
+
+Even if it's just two hands with opposable thumbs, this human character is incredibly versatile in doing practically anything that is designed with it in mind. They're easy to control, but context allows them to become practically anything. When combined with vehicles, equipment and carried devices, this human character can do almost anything despite being so simple.
+
+
+
+The universe itself is very standardized and provides solutions for terrain, items, vehicles, mecha, megastructures, buildings, flora/fauna, environmental conditions and more. 
+
+The universe operates sort of in the background on a when-needed basis; if something is far away from the player, it only exists as a dormant data point; a node that is nothing more than a set of coordinates and properties in terms of code. This node is only updated and made live if it becomes relevant/important in the context of the player's surroundings.
+
+
+
+Most of the universe exists silently on the hard drive as a large library of text files that are loaded/unloaded as needed; only a fraction of it is alive in active memory of the computer - the part that matters for purposes of gameplay. 
+
+It's an intelligent, reactive system that has the game detect when a player approaches something close enough to make it "relevant" to the current state of the game and then calculates the time that it has been dormant and what has possibly affected it during all this time. 
+
+Once it has determined these factors, it will age and modify the object before it loads it into the game proper, making it appear like during all the time the player had been away from it the forces of nature and time itself has had an effect on it.
+
+When these changes are calculated, the universe may even be triggered to evoke an event based on the state of the content combined with the ambient pulse of the universe that periodically pokes and prods through the different things and objects that exist within the universe. 
+
+None of these events are random or arbitrary but something that usually has a basis based on actual objects, forces and elements that exist within the universe's library/database.
+
+
+(This bowl symbolizes the structure of the universe of this game quite accurately. In the middle is the proper universe, meanwhile the edges are the chaotic “wilderness zone” where things from the middle may end up in and then be ejected back, often reshuffled.)
+
+The universe is vast but finite and it follows the laws of equivalent exchange - no matter can be created and no matter can be destroyed, everything simply changes form. It has its own cycle by which it lives, evolves, transforms and mutates - also known as the greater cosmic forces are directly inspired from our real life universe and its proposed mechanisms like big bang events, formation of stars, lifecycle of stars/galaxies, supernovas and such.
+
+The universe is large enough for a player to truly appreciate the scale of things, yet it's small and compact enough to fit a computer’s hard drive and stay within its limited file size without spiraling out of control. It's also small enough not to feel meaningless or unused.
+
+The problem with Minecraft's or Factorio's infinite worlds is that player will usually never venture much outside their starting location and the exponential file size is a problem so bad that it actively makes it a bad idea to keep venturing outward - with some players even "deleting chunks" from their map to reclaim better loading times and smaller savefile file sizes.
+
+
+V V (Becomes) V V
+
+(A generic template given context, turning it into an interesting piece of unique content.)
+
+Everything in the universe is built using generic templates that the universe then parses through a procedural generator to give them uniqueness, context and meaning - all using a logical heuristics based algorithm. 
+
+In this manner, the universe generates its entire world and sub-areas too, creating places that naturally become what they would should be given the upper environmental factors (planet is affected by star's properties in the solar system, while a continent is affected by the region/atmosphere/composition on the planet, etc).
+
+Unlike most other games that lazily generate their worlds through a predefined "biome template" - like "forest, ocean, mountain, coral reef, volcano, tundra, green fields, beaches, deserts" - well my universe doesn't do that. Instead, it defines the conditions of a location (humidity, available materials, temperature, presence of life, hazards, weather/erosion, soil type) and organically ends up creating a biome with nuance, flexibility and variety. 
+
+The system is capable of thusly mixing biomes and even spawning new ones spontaneously without me hardcording or predefining them. This results in believable locations organically.
+
+
+
+The universe generates itself in an intelligent way using heuristics that is simply nothing more than a basic decision tree, starting with random dispersal of energy/matter using a basic perlin noise which will then become basis for superclusters, which then affect how/where/what galaxies/voids are located in what parts of a supercluster. 
+
+After that, whatever got generated at that level will affect galactic sectors, star systems, celestials (planets, moons, giants, stars, belts, other, etc), continents, regions, areas and finally local coordinates - the very screen that the player arrives at - are the ultimate result of a procedural generation that began with the creation of the universe itself at the lowest level.
+
+
+
+There is also an element of wildcard randomization in each step of the universe generation heuristics. There is always a random chance of random anomalies that mix up each location with things that normally would be unusual - something that happened as a result of a bizarre coincidence, be it natural or artificial. 
+
+An example of this is a huge mountain somewhere on a planet, but it got a massive hole punched through it by a sharp spike shaped meteor that accidently ended up there while flying through deep space as a supposed result of a distant nova. As a result, now that location is something completely unusual compared to all the other mountains in the area and in general.
+
+
+(Laggy high traffic situation being violently seized by the universe’s innate anti-lag systems.)
+
+The universe also has certain quirks to it that make it more adapted to the format of being a video game that is played on a computer. Unlike the real universe that doesn't have performance concerns of a computer, my universe does.
+
+There's this "Chaos System" that I call; sort of like the universe's self-regulation system - almost like a human body's immune system - specifically intended to target lag and performance bottlenecks. If the game detects that its lagging or an event that could result in lag is about to occur, a "chaos reaction" would erupt, causing a dimensional storm that violently and swiftly creates the necessary mending effect to avoid or eliminate the lag from taking place.
+
+Technically some games out there already do these kinds of performance saving measures, but they often try to hide it or feel ashamed of it instead of embracing and making it become a natural part of the game universe and its inherent laws of nature.
+
+Or they just don't bother hiding it and admit that "this is just a game, it's not real, don't take it so seriously" which harms immersion of that game, which I think is sad, lazy, unprofessional and unnecessary.
+
+
+(A laggy culprit situation being “resolved” by being absorbed by a dimensional anomaly.)
+
+In practice, possible Chaos System events could be about merging many objects into a single object, causing something to vanish into the shadowrealm, become dismantled/transformed/mutated into something simpler, become displaced into a faraway place where it will runs its course as a mere data node instead of a fully physics enabled game object with audiovisuals, particles and lighting. The event would often be accompanied by cool chromatic aberration screen effects, electrical arcs and black portals/spacetime tears.
+
+
+
+Meta/lore-wise the universe would start off in-motion, as it is timeless and infinite - without a beginning or end. There is no such concept as "heat death of a universe" or any kind of "endless expansion" type of stuff. The universe just is - it will never end or die. 
+
+The game would generate an already-alive universe, populated with stars, planets, life, civilizations, technologies, megastructures, ancient ruins, anomalies, monsters, armies, fleets, cosmic horrors, evil doers, neutral people, aliens, dimensional ghosts and friendly strangers.
+
+At the start of the game, the player would effectively be dropped off anywhere in the universe as someone's grown up child, given a backstory for that body/childhood they have now received and are now awakened to be a player character that can decide to do anything and go anywhere.
+
+
+
+Metagame/big picture wise the game gives a general idea for what the player is supposed to strive for and thus sets them on the path to fulfill that destiny; usually it involves either uplifting their existing community/family to become a major force of change in the universe that can take on the dangers, prevent threats or discover and solve other mysteries in the universe. 
+
+
+
+The player can also reject their “original” group/family and thus abandon their original roots altogether and create a completely new community by finding allies/friends/partners to team up with and set as your own group that you will be tied to. 
+
+As long as the player's current group/family doesn't go extinct, the player will always respawn within their sanctuary on any death. If they all die - if the entire family goes extinct, then the player will be reborn elsewhere in the universe with a new original family, but after a lengthy in-universe time skip, during which the elements, faction or forces in the universe may alter, retake or remystify some of the previously visited locations, territories and homes.
+
+
+(Returning to an old location may evoke a sense of deja vu, but they may have changed since your absence; sometimes for the better, sometimes for the worse.)
+
+But any exploits, major event and impact the player had previously done in their previous lives are now a permanent part of the universe's history and eventually you’ll be able to return and revisit the places you had touched and changed with your actions - albeit with a timeskip that may alter the old scenes with changes that make sense context wise. 
+
+If a place was abandoned - everything is now rusted or overgrown with plants or moss, while buildings have collapsed or crumbled into ruins due to disrepair.
+
+If it was conquered - an opponent had taken over the area and set up a hive/city/settlement/base where yours once was, now under their control and their rules.
+
+If it was eradicated - something or someone had wiped out everything into a desolate inhospitable wasteland.
+
+And so on.
+
+
+
+Game session wise player doesn't grind upon start or after death. They could immediately go pull off a heist and steal a spaceship with heavy nuclear weapons from a nearby military spaceport if such is available, kickstarting their journey to get vengeance upon whatever had taken them down a hundred years ago and putting them back on the map to conquering the universe once more. 
+
+Sometimes you may find that all that is available to you are primitives with swords, so you as the player will have to tech-up first to become capable of traveling the stars again and restart your tiny tribe into a regional power house once more.
+
+
+(Booting up the game each time gives you a freedom to do or pursue anything, with clearly highlighted routes you can choose from that suits your fancy for that specific day.)
+
+A game session is always different and unpredictable as the player is free to go anywhere and do anything. The overarching goals of the metagame will always give purpose to all actions and give hints or direction on what to do next, meanwhile the local situation will spontaneously become a campaign out of any task the player takes upon themselves.
+
+Examples of a ‘local situation’ are many:
+    • Player sees a better location elsewhere - they try to go there.
+    • Player needs transportation to get there faster or cross an obstacle they can’t on foot.
+    • Player encounters a dangerous monster nest that will grow bigger if not stopped now.
+    • Player has reached their ideal location and must now build a settlement.
+    • Settlement needs materials so player must venture out to find a source of materials.
+    • Player found materials, but now there is a challenge on how to move them from the source to the construction site.
+    • Player found someone along the way that needs help with something.
+    • Player found an interesting cave that has traces of advanced civilization of some kind.
+    • Player sees a curious anomaly in the horizon, seems worth investigating.
+    • Player discovers a live city and explores it.
+    • Player explores and accidentally stumbles upon territory of a hostile group, they declare war.
+    • Player fights to win the war or evacuate to save their people to fight another day.
+    • Player had built their settlement in the path of an incoming natural disaster and now it finally came - survive and minimize damage.
+    • There is an out of reach place in the world and player must create a research lab to invent necessary technology to make it possible to reach it.
+    • Player needs to set up a factory to build the parts needed to construct new technology.
+    • And the list goes on forever. Think of any singleplayer campaign you’ve played or any survival or settlement simulation game, or even the individual actions/events that happen in a 4X game - any of these things can suddenly become a basis for a spontaneous campaign session in this game project.
+
+As a game, the player always has the option to settle down temporarily and just cultivate their local world and tribe into something great, well taken care of and beautiful or they can venture out in search of adventure, discovery and action.
+
+
+(Whether playing a solo adventure or playing as a group of people, in both instances you can assemble a team to stand by your side or be a member of. In the former, you can’t control them directly - only yourself. In the latter mode, you can switch between anyone at any time.)
+
+As a game experience it's like being teleported into a foreign universe where you can go anywhere, try anything and become anyone. It's almost like a life/human-being experience simulator, but with an emphasis on action and epic galactic adventures. 
+
+It's the type of thing where you may have thought about the fantasy of "Wow, this star wars/mass effect/gundam/cowboy bebop universe is so incredible! I wish I could just be transported there and live there, have an adventure, participate in something epic or join/lead a team of friends where we take on some kind of challenge together and make awesome memories, have dramatic moments and achieve something incredible!".
+
+That's the core essence that this game project tries to make a reality.
+
+
+1. What purpose this project caters to:
+For the gamer: Adventure fantasy fulfillment, empowerment, challenge, discovery of ideas/knowledge, creating stories/moments/achievement through gameplay that are entirely unscripted and that the player can truly and honestly call as their own.
+
+
+
+Besides being a phenomenal Super Game, the point of this game is also to open a whole new chapter in the games industry in how games are perceived, structured, designed and built. 
+
+I will explain.
+
+A big problem in today’s world is that currently the majority of game design made by others is driven by mentality that has origins in film making, physical board/card games or tabletop games or born out of pure engineering experiments. 
+
+None of them truly see the full potential of video games by making video games in a way that is native to its medium - an interactive experience that is driven by a computer simulation where the player is the critical participant that everything is designed for.
+
+
+
+Movie makers usually focus on compulsively guiding the player's experience at each moment like a strict overly-controlling helicopter parent or an insecure middle-manager that tries to micromanage your every move and action, with them constantly breathing down your neck and behave like they own you - treating you like an object, a piece of company property.
+
+Player's freedoms are stripped away in favor of being forced to suffer the developer's ego about how they managed to make the graphics, tech and audio look so amazing, complex and pretty. It's rarely about serving the player at all; sometimes the player is actually seen as nothing more than cattle that is to be entertained as per developer's will - not the players.
+
+
+
+Meanwhile, tabletop-based devs try to cram methods and systems that made sense in the original physical medium due to its limitations and reality of logistics inherent to real-world manual gaming experiences. 
+
+They at least have the sense of making the game be about the player and they try to actually serve the player and care less about their own ego, but but they completely fail to grasp what a computer is capable of, how there are far better ways of achieving the experience they're trying to convey through their archaic pen/paper based methods. 
+
+In terms of creating gameplay on the computer, they sometimes feel like they're stuck in the stone age. I do admit there is occasionally merit with the clarity and turn-based pace of deck-builders/dice rollers, but I feel they often end up relying too strongly on arbitrary logic, strict constructs that offer no leeway to the interactions and the player often has to deal with convoluted/frustrating manuals, stats, descriptions and rulesets to grasp the game - something that you don't really need in a real-time physics driven simulation that is closer to a real life experience.
+
+
+
+Lastly, tech wizard engineers often do push the excellence in unlocking more intuitive control methods, interesting mechanics and impressive systems that hold great potential, but they're usually incapable of actual game design so their project often ends up as an aimless experiment that fails to capitalize on any significant discovery they made.
+
+Sadly, these types also lack self-esteem which causes their work and discoveries to remain largely unknown due to lacking marketing and promotion.
+
+To summarize, it’s a mess. Everyone is doing it wrong.
+
+
+(“Oh noes, our game project failed, how could this have happened?”)
+
+That's the state of the game's industry currently in the year of 2023 and I'm not seeing a change going to happen by anyone out there any time soon.
+
+Hence why I want to take the initiative to try to bring a new mindset to the scene, a new breed of game design thinking that causes a revolution in the industry in how games are seen, how they're played and how they are best structured.
+
+
+
+The beauty of this particular project and any other Super Game type project is that they effectively render most other existing games completely obsolete - not even worth even building because they are automatically so limited and inferior compared to a Super Game - even a partial one. 
+
+People would more often rather play a Super Game than any of the works produced by the three common developer types I listed above, as anything they create will be forgotten and ignored in favor of something that offers far more depth, more surprise, more content potential and durable support over a long timeline.
+
+
+2. How it achieves this:
+A common issue back in the past that persists even today is that some developers have the idea that “a bigger game is better". This idea was interpreted as that "it should have more features", "be more complex" and "have higher detail of graphics" - which are very awfully misguided conclusions.
+
+
+
+This resulted in a plethora of overcomplicated games that weren't fun to play, felt too intimidating to get into, still had the same limitations and tradition driven structures that plagued the older simpler games all the same and generally felt like it wasn't a game anymore but a job with chores.
+
+
+
+This game and my other projects focus on creating functional depth, not complexity. I aim to create the simplest possible surface experience that is surprisingly deep, natural and intuitive to play.
+
+
+
+This is done through a relatively simple playable interface that players can alter through context. Minecraft/Terraria and games like it are a prime example of this in action; Player is a humanoid with arms and legs. Whatever this humanoid equips upon themselves will change their abilities and how they can interact with the world. 
+
+Effectively items, interactive objects, consumables, clothes, armor, accessories that a player can put on themselves allows the player to shapeshift endlessly - just like a real human being in the real world. Putting on scuba gear suddenly allows the ability to explore underwater, a jetpack can allow flight, climbing hooks allow a person to attach themselves to a wall or ceiling.
+
+
+(Opposable thumbs are an incredible advantage of the humanoid form - the possibilities for interactions are infinite! And that’s not even mentioning the versatility of the rest of the human body too!)
+
+Arms take that even further and allow the humanoid to interact with machines and vehicles - further enhancing a person's ability to go anywhere and do anything.
+
+In practical terms, the player only ever has to concern themselves with WASD for movement, Mouse for menus/aiming and using arms, Q for inventory toggle and E to do a context sensitive interaction with something in the world. (There would also be a couple hotkeys for abilities and quick access, but nothing that can't be crammed onto a modern console game controller).
+
+Context sensitivity essentially means these controls are the only thing a player will ever have to concern themselves with at any given moment. Because the player's character is versatile and can adapt to any situation yet is simple to control, it allows the game to remain simple to play at all times while at the same time offering infinite depth in its mechanics, infinite combinations of item*situation and full freedom at all times. It's a game that is easy to learn and play but challenging to master - which makes it endlessly stimulating and exciting to pick up anytime, anywhere.
+
+
+3. What is unique/new/special about the project:
+This is what I call a 'Super Game' - something that goes above and beyond a regular game in terms of what it means to a player - the very human being playing the game.
+
+
+(Make the video game serve as a tool to empower the human, not to waste their time or enslave them or make them addicted. This is what video games should always strive to be.)
+
+It's a game that serves the human being by giving them an activity worth investing their full attention to - their full commitment - to the point of the game becoming a lifestyle, a profession, a mentor or even the very center focus of their whole human life.
+
+A Super Game can offer many things; infinite meaningful gameplay that serves to empower the player by trying its best to satisfy fundamental human needs while giving tangible benefits that are usable in real life. It can also become a profession as a source of income; by creating content for the game - like new items, props, vehicles, weapons, decals, decorations, etc... or by using it as a platform for video content that the player shares with the worlds, whether its entertainment, education, storytelling or art. 
+
+
+
+(Sidenote: Keep in mind this is already happening with games like Minecraft, despite that game’s limitations and flaws! There's an entire third-party industry around this game outside of Mojang or Microsoft. And it isn’t the only game with a thriving economy that the original developer isn’t the maintainer of yet still benefits from greatly!)
+
+The Super Game, its content, structure, systems and business model are all specially designed to encourage and facilitate these things as maximally as possible. A Super Game may also contain useful information that is helpful in real-life or offer therapy in many different ways.
+
+A Super Game is the antithesis to zombifying/life-alienating games that seek to "waste/kill/steal time" of a person; they *are* the ultimate way to spend one's free time when indoors.
+
+They do not exploit, manipulate, abuse or prey upon the player by hooking them with any sort of psychological tricks or 'dark design patterns' that attempt to force a player to become subservient to a malicious developer's desires of player commitment regarding arbitrary playtime metrics or predatory monetization practices. 
+
+Instead, a Super Game intends to be an inexhaustible source of needs fulfillment for the player in a way that is healthy, supportive and non-addictive. Despite being infinitely playable, an infinite game's structure is specifically designed to offer contained sessions that will satisfy a player for that duration while also offering plenty convenient exit points and pausing to never get in the way of real life.
+
+
+
+Currently, there are no true instances of a Super Game out there, but there are clear cravings for it from people all over the world. Speedrunners, game-specific youtubers, hardcore modders, obsessed community members on social platforms that become walking dictionaries for the game and those that play the game religiously... Many of these people would love there to be a game that they could commit to even more than how they currently do, but the game itself doesn't let them due to its limited or flawed design.
+
+There do exist games that have elements of a Super Game or are compatible/suitable to manifest Super Game elements externally through a third party activity. This is often the true reason why those games have been massively popular, well-regarded and have such strong fandoms.
+
+Sadly, all of them either have flaws, critical bugs/glitches/instability, poor support, a dead-end core, lacking features, limited content, inability to support more content, inability to reuse existing content with flexibility, awful performance problems, inherent elements that breed toxicity and poison a community, questionable themes/content that make sharing the game awkward, hardware restrictions that prevent the game from functioning, a reliance on an active service to stay operational, corporate meddling or shady business practices.
+
+
+
+The concrete specifics of what any particular Super Game contains in terms of features, systems, content, structure and mechanics is always context sensitive.
+
+A universal starter pack for a Super Game would be the combination of a:
+
+    • Persistent open world.
+    • Procedural generation or randomization.
+    • Infinite content addition potential and workflow.
+    • Data-driven content system.
+    • Non-scripted emergent gameplay design.
+    • Player customization or custom player characters.
+    • Content is designed to be modular, combinable/mixable and intercompatible.
+    • Metagame is centered around pushing the player into interesting circumstances that create cool moments organically.
+    • Game supports modding or ingame content creation.
+    • Mechanics are "easy to learn but hard to master".
+    • The audiovisual presentation is comfortable and timeless to the average human even if it isn't extremely advanced or detailed.
+    • A performance-aware design that seeks to anticipate lag by not allowing it to happen and if it does it happen it doesn't just let it continue but tries to actively stop it automatically.
+
+
+
+Super Games are not easy to create; they require a lot of work ahead of time in setting up a solid framework, a robust foundation and an anticipatory structure that knows in advance what features and systems it will have in its ultimate form. It has to be set up in a way that avoids the situation of painting oneself into a corner regarding technical design decisions. It cannot be done by an amateur game designer. 
+
+This is akin to designing a space satellite due to how intricate and fragile the game design work for a Super Game is - it needs a lot of expertise, fool-proofing, testing and care before it can launch into space - i.e launch a game into the public.
+
+Paradoxically the actual coding of a Super Game isn't difficult - it's relatively simple when it comes to each individual mechanic/system/feature, they often have a surprisingly simple solution to make it work. The thing that makes a Super Game special is *how* it is organized as a game - metagame and content wise - not the individual features that it contains.
+
+It is indeed the interconnected web of systems, the entire architecture of different parts of the game talking to one another as a holistic whole that is the hard/time consuming part. This organization of code structure requires plenty of time to plan out ahead to chart out a confident blueprint for it.
+
+
+
+My aim is that I succeed at this ambitious task - at making the first ever true Super Game.
+
+
+4. What is the potential of the project:
+As a game it would provide unprecedented freedom and fulfillment that would finally, truly, for real, be able to deliver the most fundamental ideal that most video games have been marketed to strive for; the fantasy where *you* become not just the hero of the show, but its inhabitant and you are able to do everything that the characters/universe imply you can do - instead of it being a fake backdrop that can't actually be interacted with at all.
+
+Todd Howard's (Skyrim/Bethesda) has this infamous quote: "You see that mountain? You can climb it! You can actually go there, it's not just a visual fake background!" ...but then it turns out that *no*, I cannot actually climb that mountain in that particular game and I am also blocked off by arbitrary invisible walls that stop player character movement for no believable reason! 
+
+These are mostly there in order to keep me forcibly contained along the developer's scripted path that they force me to go through. This is the opposite of what I want out of a game where I’m trying to enjoy playing as my own persona with my own free will.
+
+
+(Give me true freedom! Unshackle arbitrary constraints and empower my journey of real self expression!)
+
+My project aims to shatter that nonsense and actually creates a standardized system where there are no arbitrary invisible walls or such blockages that prevent access to anywhere - even the very edges of the universe feel natural, believable and compelling. 
+
+This project is meant to be that true fantasy where you are transported into another world and you can actually be there as true yourself, doing anything in any order you want, without anything scripted or any artificial funneling nonsense. Nothing is getting in the way of immersion and there is no ludonarrative dissonance either.
+
+
+
+Beyond the game experience, this project could become a platform for many people to make a living off - whether it's making internal or external content.
+
+Money or not, the game would anyway be a platform for self-expression, art and nerdy tinkering that is fun in itself - even if you decide to charge money, the work itself can be enjoyable too. 
+
+
+
+Economically a Super Game could spawn an entire industry around it and it could employ potentially a lot of people. Since the game is infinite and its content structure is infinite, there is no real limit how long people can rely on it for their income - remember that any added new piece of content *exponentially multiplies* the possible gameplay permutations and combinations that a player could encounter after it has been installed/included.
+
+
+
+The game itself isn't even performance intensive due to simpler graphics/presentation, inherent optimizations built into the very fabric of gameplay itself and how none of the computational tasks that the game engine runs through are in any way complex.
+
+What this means is that the game will work on lower end machines, older computers and less powerful PCs - the game becomes accessible to practically anyone in the world.
+
+
+
+Meanwhile since graphics are simple, the default install size of the project would be far smaller compared to a game that relies on high definition graphics. It also means that new content, new assets and new audiovisual files added into the game in updates or by players will remain small enough that it will be possible to keep cramming thousands of new content without running out of disk space.
+
+The game's standardized content system also nurtures intelligent additions of new content that actively avoids the creation of duplicates and promotes the reuse of existing assets when making new objects for the game.
+
+
+
+The game could also be possible to port to consoles, albeit with some limitations. Nowadays gaming consoles can receive downloadable updates but they do not have the suite of tools needed for file, image and audio editing. This means that any new content created by authors cannot be done directly on gaming consoles and therefore cannot share or download content the same way a PC player can. 
+
+To mitigate the conventional lack of modding, modders/content authors can apply for a program to have their assets submitted to the console version of the game via official updates. 
+
+Depending on the complexity and size of the content - the work required to make it and the impact that it has on the game - they will receive a one-time payment from me as "me purchasing a permanent license to use their content for the console version of the game". Authors can still provide their content for the PC version all the same, but the console release is a special vetted process that selects the best of the best content to package them into the official update.
+
+
+
+(Unfortunately, no public multiplayer servers for a game where players could have the power to level cities or crash entire planets into a sun. It would be an apocalyptic griefing nightmare unlike any other.)
+
+At its core, this is a singleplayer game and it would be very griefable due to complete player freedom. If there was any multiplayer it would have to be organized differently that doesn't allow players to screw up each other's universes except only in specific zones with full consent from all parties involved. 
+
+Multiplayer in itself is possible for this project but it would be a technical challenge that is beyond my own capabilities. And even if it would be done, the way its implemented would need to be planned out different than how the current design is set up - either as a drop-in/out cooperative experience or as an asynchronous collaborative mode where people can send gifts or meet at safe social hub areas, share photos of their worlds, discuss them and share ideas.
+
+
+5. What inspired the project:
+Overall it's a slow accumulation of many sources and experiences that I've had that eventually led to the seed of an idea and then I've been further refining it over the years. I would say hundreds if not thousands of games, movies, anime, books, comics, documentaries, people, life experiences, wikipedia/web articles, mods, communities and music all cumulatively contributed to this project's vision.
+
+
+
+First it began as a frustration with existing games - their flaws, awful design, limitations, many other things - and a sense of longing while watching anime/movies and wishing "wow, I wish this was a playable game where I could have that adventure they had and do the stuff they did".
+
+
+
+(Soldat and Cortex Command, both innovative physics driven 2D shooter games.)
+
+Later I'd see certain games that had something special that no other game did, like the physics ragdoll characters of Soldat and it's incredibly fluid combat system, Cortex Command's data-driven content system that allowed anyone to create anything into the game without needing the developer to do it and its simple yet flexible character/weapon system and fully destructible everything - terrain, items, characters, vehicles... everything could be broken and blown into pieces.
+
+
+
+(Minecraft and Terraria, two games where a persistent world can be almost entirely remodeled and explored block by block.)
+
+Somewhere in between those two Minecraft and Terraria with its procedural random worlds came to the scene, along with a generic customizable player character with inventory and crafting elements, the open world structure, the different intractable objects, the world generation system and seamless mechanics like farming, environmental hazards that affect everything - including enemies, the block based materials that had different properties.
+
+I started thinking of ways on how to combine those four - and many many more other games too - into a singular "ultimate game". I saw great unrealized potential in a lot of games and relatively easy fixes on how many other games could be made infinitely playable or atleast infinitely *re*playable by just reorganizing its metagame and content structure. There was something big there, yet to be fully grasped. Something that would be the next big thing in terms of game design technology, an innovation that would change everything forever.
+
+After years of research and hard work I cracked the code on how game design really works, but I didn't have the words on how to describe it - I only knew it somehow intuitively. The missing piece I needed wasn't even in the games industry but from a completely unexpected source. 
+
+
+
+By sheer luck I had stumbled upon Nonviolent Communication.
+
+It is a comprehensive toolset and mindset at its core. NVC effectively reveals the blueprint of how a human being actually works psychology wise. It is shockingly elegant and complete.
+
+
+(Fundamental Human Needs - the very things that drive every single action and thought of every human being on the planet. This knowledge is insanely vital for any game designer out there. This picture is not the same as Maslov’s Hierarchy or Pyramid of needs. It’s entirely different. Maslov’s system is outdated and flawed.)
+
+For a game designer this is a jackpot because - as deceptively obvious as it sounds - video games are made by human beings, for human beings, so understanding human beings on a fundamental level like how NVC reveals it makes so many things that were previously mysterious, unexplainable, intuition driven or too abstract to put into words suddenly become very logical, clear-as-day and fully instructed with a step-by-step approach in layman terms that anybody could understand and learn.
+
+
+(Fun fact, I’ve never read this book. There is a massive library of video and audio material online that teaches everything this book and its later editions have to offer in far better detail than text can. If you want to dive into NVC too, I recommend this video.)
+
+Not only that but NVC became instrumental in shaping metagame design and helped guide every single design decision. NVC became a superpower that I could wield to make the best possible design no matter what the project - it left nothing to guesswork.
+
+Supported by NVC, it redefined my game design knowledge entirely, surpassing anything I’ve learned or seen in the past offered by anyone else out there.
+
+
+Status:
+This was originally my first project I undertook. The complexity quickly made it clear that it would take me an extended amount of time to get this built - even as barebones minimum viable product - so under pressure from real life responsibilities I had to put this on hold in favor of a faster project, get established, acquire financial security and then return to this project eventually.
+
+
+
+(My old mod projects. Eradication Wars was for Soldat, while the rest were for Cortex Command. With newer official updates to both games, none of them work properly anymore. Back in the day they were one of the largest and best ones that were available. The game-update related compatibility breaking nonsense of these platforms and many other games that prominently feature and “support” modding made me fed up enough to quit modding for them or to try join up to mod any other game so far. It’s just not worth it.)
+
+Prior to this I had already worked plenty as a modder doing everything myself and releasing multiple mods online publicly. I didn't feel like pursuing smaller projects because I didn't play those myself; I didn't find smaller games attractive as a gamer nor were they going to give me the preparation that I didn't already have from modding work towards this mega project. The only way to solve the challenges of this project is to make it directly.
+
+Planet Warfare was meant to be built as a side-view 2D game in the vein of Soldat or Cortex Command - zoomed out 2D ragdoll characters with a hybrid mixture of top-down space vehicles.
+
+
+
+Problem is that 2D in itself has a lot of constraints and quirks to account for;
+
+    • How should collisions work between foreground and background?
+    • How do characters, terrain, vehicles, buildings interact with each other in a standardized way?
+    • How would a far-view horizon for distance gazing and high speed long range movement be achieved in 2D where such a thing normally doesn't exist?
+    • How to construct fully destructible planets/moons/stars that offer the perfect balance between granularity, flexibility, performance, feasibility, scalability and tolerable visuals?
+    • How to create a system that allows for the creation of megastructures or megavehicles or hybrid planet/vehicle fortresses like dyson spheres, along with the ability to use smaller vehicles inside them and also be able to split said megastructures apart?
+    • How to handle the viewing of these things from afar in a seamless universe?
+
+
+
+These and many more design problems are still unanswered questions for this project.
+
+I have also considered making the game 3D which would eliminate problems regarding far vision and collision/overlap questions, but that would require the game to transition to using 3D models whereas I was expecting to use 2D pixel art sprites for a lot of beneficial reasons. I also love the timeless SNES sprite art look seen in Super Metroid and Super Mario World that still holds up great today.
+
+
+(One of the earliest pages of my drafting designs for this project to scope out its many different interconnected systems that I’d have to account for and try to meld together seamlessly.)
+
+Technical-wise, the larger challenge for me personally is the seamless universe aspect though. The loading/unloading framework that constantly reads/writes data from the hard drive to update the universe, player state, load new content that otherwise were unused and dormant until this moment, etc. The other stuff are design questions that are merely puzzles that require enough time to figure out and solve to find the most optimal solution, but the seamless universe system in particular is a purely technical challenge that I truly need help with.
+
+My other project - Room Space - is a response to this obstacle; to abandon the idea of a seamless universe in favor of a rooms-based universe. Rooms are far easier to code and have far more resources on how to do it. It would reduce the seamless universe in a vast number of individual scenes that are loaded/unloaded as a player enters/exits them respectively. Effectively, Room Space is pretty much Planet Warfare in every other way, offering the same potential, gameplay and systems - albeit adapted to an almost Metroid-like room-to-room world space.
+
+Meanwhile, TopVerse also is a Super Game in itself too, but takes a different approach in how it's organized. It too would fulfill the promise of Planet Warfare.
+
+Because of this, Planet Warfare is currently dormant as a project, making way for TopVerse first then Room Space after it.
+
+That said, a lot of design work does exist for this project as well as auxiliary projects that are directly related to this. Still, TopVerse and Room Space are way more mature design wise than this project.

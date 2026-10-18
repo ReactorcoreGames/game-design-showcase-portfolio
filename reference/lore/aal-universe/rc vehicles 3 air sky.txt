@@ -1,0 +1,563 @@
+airplane
+commercial airliner
+private jet
+business jet
+light aircraft
+ultralight aircraft
+amphibious aircraft
+seaplane
+floatplane
+helicopter
+private helicopter
+utility helicopter
+tourist helicopter
+medical helicopter
+rescue helicopter
+police helicopter
+news helicopter
+firefighting helicopter
+agricultural helicopter
+passenger helicopter
+charter helicopter
+cargo helicopter
+autogyro
+gyrocopter
+hot air balloon
+gas balloon
+sport balloon
+tethered balloon
+glider
+sailplane
+motor glider
+hang glider
+paraglider
+powered paraglider
+powered hang glider
+paramotor
+microlight
+weight-shift control aircraft
+tiltrotor aircraft
+vertical take-off and landing (VTOL) aircraft
+vtol aircraft
+tiltwing aircraft
+flying car
+flying taxi
+personal aerial vehicle
+aerial tramway
+cable car
+sky tram
+airship
+blimp
+rigid airship
+hybrid airship
+zeppelin
+dirigible
+drone
+quadcopter
+octocopter
+hexacopter
+fixed-wing drone
+rotary-wing drone
+passenger drone
+delivery drone
+surveillance drone
+mapping drone
+agricultural drone
+surveying drone
+photography drone
+filmmaking drone
+racing drone
+hobby drone
+recreational drone
+weather drone
+rescue drone
+environmental monitoring drone
+science drone
+research drone
+inspection drone
+utility drone
+disaster response drone
+aerial ambulance
+emergency response aircraft
+flying boat
+amphibian plane
+floatplane
+seaplane
+commuter aircraft
+regional aircraft
+feederliner
+executive jet
+fractional jet
+air taxi
+luxury airliner
+first class airliner
+economy class airliner
+budget airliner
+low-cost carrier
+mainline carrier
+long-haul airliner
+short-haul airliner
+medium-haul airliner
+supersonic jet
+subsonic jet
+hypersonic aircraft
+supersonic airliner
+spaceplane
+suborbital plane
+solar-powered aircraft
+electric aircraft
+hybrid-electric aircraft
+fuel cell aircraft
+autonomous aircraft
+self-flying plane
+remote-controlled aircraft
+pilotless aircraft
+ai-powered aircraft
+smart aircraft
+stealth aircraft
+noise-reducing aircraft
+eco-friendly aircraft
+sustainable aircraft
+biofuel aircraft
+recyclable aircraft
+modular aircraft
+transformable aircraft
+adaptable aircraft
+compact aircraft
+urban air mobility vehicle
+city hopper
+air metro
+sky commuter
+flying wing
+blended wing body aircraft
+canard aircraft
+biplane
+triplane
+monoplane
+pusher aircraft
+puller aircraft
+tandem wing aircraft
+flying submarine
+vertical lift aircraft
+orbital aircraft
+experimental aircraft
+concept aircraft
+prototype aircraft
+future aircraft
+advanced aerial vehicle
+fantasy flying vehicle
+sci-fi flying vehicle
+futuristic flying car
+hovercar
+anti-gravity vehicle
+levitation vehicle
+jetpack
+personal jetpack
+rocket belt
+hoverboard
+flying suit
+flying skateboard
+sky yacht
+flying palace
+airborne hotel
+airborne restaurant
+sky resort
+sky park
+flying amusement park
+aerial laboratory
+sky observatory
+airborne research station
+aerial science platform
+flying hospital
+airborne medical facility
+sky clinic
+aerial mobile hospital
+emergency medical drone
+air rescue vehicle
+sky crane
+aerial construction vehicle
+flying warehouse
+airborne logistics vehicle
+sky freight
+aerial delivery vehicle
+cargo drone
+heavy-lift drone
+flying firetruck
+aerial firefighting vehicle
+sky firefighter
+flying police car
+aerial surveillance vehicle
+sky patrol
+airborne security vehicle
+flying library
+sky school
+aerial classroom
+flying museum
+sky gallery
+airborne exhibition
+sky cinema
+airborne theater
+flying studio
+sky broadcasting vehicle
+aerial news vehicle
+sky journalist
+airborne media platform
+flying farm
+aerial agricultural vehicle
+sky harvester
+airborne seeder
+flying sprayer
+sky irrigator
+aerial crop monitor
+flying greenhouse
+airborne nursery
+sky apiary
+flying vineyard
+sky orchard
+aerial reforestation vehicle
+sky planter
+airborne forester
+flying lumberjack
+sky fisher
+aerial aquaculture vehicle
+flying marine monitor
+sky yacht
+aerial leisure vehicle
+flying sailboat
+sky racer
+airborne racing vehicle
+flying sports car
+sky adventure vehicle
+airborne explorer
+flying camper
+sky rv
+aerial tour vehicle
+flying guide
+sky tourist
+airborne travel vehicle
+sky nomad
+aerial nomad
+flying family vehicle
+sky minivan
+airborne utility vehicle
+flying pickup
+sky workhorse
+airborne tool vehicle
+flying service vehicle
+sky helper
+aerial assistant
+flying companion
+sky buddy
+airborne guardian
+flying protector
+sky defender
+aerial rescue vehicle
+flying lifesaver
+sky medic
+jet fighter
+dropship
+interceptor jet
+bomber plane
+surveillance balloon
+combat blimp
+stealth fighter
+stealth bomber
+attack helicopter
+transport helicopter
+reconnaissance drone
+combat drone
+cargo plane
+aerial refueling tanker
+electronic warfare aircraft
+airborne early warning and control aircraft
+light attack aircraft
+multirole fighter
+ground attack aircraft
+training aircraft
+medical evacuation helicopter
+search and rescue helicopter
+maritime patrol aircraft
+anti-submarine warfare aircraft
+strategic bomber
+tactical bomber
+unmanned aerial vehicle
+air superiority fighter
+vertical takeoff and landing dropship
+tiltrotor aircraft
+supersonic fighter
+hypersonic vehicle
+special operations aircraft
+patrol aircraft
+observation balloon
+high-altitude reconnaissance aircraft
+trainer jet
+combat search and rescue aircraft
+electronic surveillance aircraft
+airborne command post
+balloon reconnaissance system
+strategic reconnaissance aircraft
+coastal surveillance aircraft
+heavy lift helicopter
+light utility helicopter
+airborne laser platform
+drone swarm
+experimental aircraft
+fighter-bomber
+attack jet
+tactical transport aircraft
+amphibious aircraft
+glider
+light observation helicopter
+heavy bomber
+medium bomber
+jet trainer
+maritime reconnaissance aircraft
+close air support aircraft
+fighter jet
+reconnaissance helicopter
+light transport aircraft
+high-altitude long endurance uav
+medium-altitude long endurance uav
+ultra light aircraft
+liaison aircraft
+anti-surface warfare aircraft
+utility helicopter
+heavy transport aircraft
+radar plane
+command and control aircraft
+seaplane
+high-speed reconnaissance drone
+supersonic bomber
+tactical airlift aircraft
+airborne surveillance platform
+airborne battlefield command and control center
+hypersonic reconnaissance drone
+stealth reconnaissance aircraft
+multimission aircraft
+light combat aircraft
+advanced trainer
+parachute aircraft
+electronic attack aircraft
+advanced jet trainer
+maritime surveillance drone
+heavy cargo helicopter
+supersonic transport aircraft
+carrier-based aircraft
+hypersonic bomber
+tiltwing aircraft
+uav mothership
+anti-radiation aircraft
+forward air control aircraft
+fighter reconnaissance aircraft
+vertical take-off and landing aircraft
+short take-off and landing aircraft
+vtol aircraft
+stol aircraft
+stealth uav
+sensor fused aircraft
+heavy lift aircraft
+special mission aircraft
+combat uav
+loitering aerial weapons platform
+aerial bombardment platform
+aerial aircraft-carrier
+aerial submarine-carrier
+spaceplane
+high-altitude platform station
+solar-powered surveillance drone
+hypersonic cruise missile
+air-launched hypersonic vehicle
+autonomous combat aircraft
+directed energy weapon platform
+airborne missile defense system
+aerial tank destroyer
+long-range strike bomber
+orbital bomber
+exoatmospheric interceptor
+multi-domain advanced fighter
+hybrid airship
+high-speed strike fighter
+autonomous aerial refueling tanker
+aerial cyber warfare platform
+high-endurance patrol drone
+stealth transport aircraft
+flying wing uav
+autonomous surveillance balloon
+hypersonic interceptor
+quantum radar aircraft
+aerial c4isr platform
+swarm control aircraft
+semi-submersible aircraft
+advanced tactical bomber
+long-range strategic reconnaissance drone
+suborbital reconnaissance vehicle
+solar-powered high-altitude uav
+autonomous tactical transport
+advanced electronic warfare drone
+autonomous reconnaissance helicopter
+hypersonic glide vehicle
+anti-satellite weapon platform
+air-launched ballistic missile
+high-speed tactical transport
+next-generation fighter
+hypersonic surveillance drone
+vertical launch aircraft
+stealth helicopter
+autonomous combat blimp
+high-altitude combat uav
+ultra-long-endurance uav
+high-speed maneuvering uav
+space-based reconnaissance aircraft
+aerial autonomous logistics system
+hybrid electric aircraft
+airborne high energy laser system
+aerial tactical command center
+space-based combat aircraft
+orbital surveillance platform
+autonomous air superiority fighter
+modular aerial weapons system
+adaptive cycle engine fighter
+smart wingman uav
+hypersonic strike uav
+aerial drone mothership
+high-altitude long-endurance solar uav
+autonomous airborne tanker
+airborne kinetic energy weapon system
+aerial mine-laying platform
+orbital combat drone
+autonomous combat air patrol system
+hypersonic reconnaissance aircraft
+solar-powered combat uav
+autonomous high-altitude airship
+space-based laser platform
+high-altitude long-endurance stealth drone
+advanced tactical reconnaissance aircraft
+autonomous swarm fighter
+airborne precision strike system
+hybrid vertical takeoff and landing aircraft
+vtol aircraft
+autonomous heavy lift drone
+multi-role advanced stealth fighter
+high-altitude long-endurance reconnaissance uav
+aerial kinetic strike platform
+autonomous maritime patrol drone
+high-altitude balloon drone
+aerial laser defense platform
+hypersonic strike aircraft
+advanced hypersonic bomber
+autonomous electronic attack uav
+multi-domain surveillance aircraft
+hypersonic stealth bomber
+ultra-high-altitude reconnaissance aircraft
+hybrid-electric fighter jet
+autonomous multi-role combat aircraft
+orbital reconnaissance drone
+quantum communication aircraft
+autonomous anti-submarine warfare drone
+ultra-long-range strike bomber
+hypersonic air superiority fighter
+space-based tactical bomber
+autonomous aerial logistics platform
+high-altitude hybrid airship
+low altitude air force vehicle
+cybernetic combat drone
+holographic decoy aircraft
+neuro-controlled fighter jet
+cybersecurity surveillance drone
+augmented reality command aircraft
+autonomous hacking uav
+stealth cyber attack aircraft
+digital warfare command center
+ai-piloted reconnaissance drone
+cybernetic surveillance blimp
+neural-linked fighter squadron
+virtual reality training jet
+autonomous cyber defense blimp
+quantum cryptography drone
+cyber intrusion detection aircraft
+neural network combat uav
+data interception surveillance plane
+cyber espionage drone
+augmented pilot fighter jet
+cyber warfare operations platform
+transforming combat vehicle
+air-sea fighter jet
+air-ground assault helicopter
+multi-mode combat drone
+transforming reconnaissance aircraft
+air-submarine combat vehicle
+sea-air uav
+ground-air attack vehicle
+aerial amphibious assault vehicle
+multi-mode surveillance drone
+transforming transport aircraft
+air-ground bombardment plane
+amphibious combat blimp
+dual-mode fighter-bomber
+ground attack jet with hover mode
+transforming uav carrier
+air-submersible drone
+hybrid air-sea transport helicopter
+multi-role transforming aircraft
+stealth attack vehicle with sea mode
+amphibious reconnaissance uav
+transforming sensor drone
+air-ground stealth fighter
+air-sea patrol aircraft
+hybrid air-ground combat blimp
+multi-environment uav
+air-submersible combat plane
+dual-mode electronic warfare aircraft
+transforming surveillance platform
+multi-mode stealth drone
+air-ground assault jet
+amphibious transport plane
+air-sea reconnaissance drone
+hybrid air-land vehicle
+multi-mode tactical drone
+transforming airborne command center
+air-underwater combat aircraft
+stealth uav with ground mode
+transforming heavy lift aircraft
+dual-mode maritime patrol plane
+amphibious surveillance blimp
+transforming jet fighter-ground assault tank
+multi-mode attack helicopter-ground combat vehicle
+morphing reconnaissance aircraft-sea patrol boat
+transforming uav-submarine
+multi-mode fighter jet-amphibious assault vehicle
+transforming stealth bomber-ground attack vehicle
+hybrid combat drone-ground assault unit
+morphing transport helicopter-sea hovercraft
+transforming surveillance aircraft-ground recon vehicle
+multi-mode fighter jet-underwater drone
+transforming stealth fighter-ground battle tank
+amphibious reconnaissance blimp-ground patrol vehicle
+transforming uav-ground combat tank
+hybrid airborne command center-ground operations base
+multi-mode fighter bomber-ground artillery
+transforming stealth jet-ground combat vehicle
+hybrid air-sea reconnaissance drone
+morphing heavy lift aircraft-ground transport vehicle
+transforming tactical fighter-ground combat robot
+multi-mode combat helicopter-ground assault tank
+transforming stealth recon aircraft-underwater surveillance drone
+hybrid fighter jet-ground attack drone
+morphing air transport-ground utility vehicle
+multi-mode uav-ground defense unit
+transforming stealth bomber-sea attack craft
+amphibious combat helicopter-ground assault vehicle
+transforming fighter jet-ground heavy assault unit
+multi-mode reconnaissance aircraft-ground surveillance vehicle
+hybrid tactical drone-ground combat tank
+morphing air transport-ground command center
+transforming uav-sea combat craft
+multi-mode fighter jet-ground support vehicle
+hybrid surveillance aircraft-ground reconnaissance drone
+transforming combat jet-ground attack unit
+multi-mode transport helicopter-ground assault craft
+morphing fighter jet-sea patrol vessel
+transforming stealth uav-ground combat robot
+hybrid fighter bomber-ground assault drone
+multi-mode recon aircraft-ground command vehicle
+transforming stealth fighter-sea combat unit

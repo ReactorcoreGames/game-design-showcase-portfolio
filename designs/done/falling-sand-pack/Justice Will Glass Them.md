@@ -1,0 +1,19 @@
+# Falling sand game variants
+(I'm making a series of games that fall under the same category of leveraging falling sand game mechanics (cellular automata with physics) in some way and originally I wrote a big mega document with all the ideas in it, then later split them into individual small documents to keep the prompt focused. The stuff after the Game Ideas is the actual game idea I want you to focus on, while the below two paragraphs are merely an intro that is free to be overwritten/disregarded in favor of the actual game idea that takes all priority.)
+
+The idea is to have very simple, short and satisfying game experiences that primarily incorporate falling sand mechanics in some way. By falling sand, I dont exclusively mean sand only, but the general game engine of falling sand games like Powder Toy or similar pixel simulation sandboxes. The range of materials/phenomenom are always limited to the scope of the particular game at hand, so while some games may feature things like fire, sand, water, grass, snow, ice, wood, stone, flammable gas, etc. it always depends on a per-game basis what they'll ultimately have, both to keep them focused and simpler to make.
+
+While falling sand mechanics are at the forefront, the game can feature other 2D game elements and colliders that work in tandem with the falling sand. Also unlike most falling sand games which are merely open sandbox experiences without any structure or metagame, the games I want to make aim to have enough game design embedded into them so they're atleast on the same level as a typical kongregate web game or a newgrounds flash game, in terms of gameplay, small scope and cohesiveness as a proper game experience, even if its simple/basic. 
+
+That said, I aim to mainly release them on desktop platforms (PC, Linux, Mac), maybe web too if its possible to make it performant enough for it to work there. But Windows PC is always priority one as the release platform.
+
+## Game Ideas
+
+### Justice Will Glass Them
+2D sideview game. Control a space police warship high above in the sky and drop payloads below to blow stuff up and burn them. Maybe do layered Evangelion style fortresses where you drill/burn through layers of terrain, concrete/metal/etc to reach the control bunker/command center at the bottom. Maybe use fog of war, with some clues being revealed the lower you did to help you narrow down the ultimate target. Avoid/annihilate anti-air defences present on the surface and revealed as you dig into pockets underground and keep melting/digging until the final core object at the bottom goes kaboom in a spectacular way after a small delay (your ship escapes during this).
+
+uses randomly generated layered materials with random air pockets that house anti-air weapon that shoot missiles towards your ship that you must either avoid or shoot down. On the surface and underground have randomly genned rectangle buildings too with turrets attached that shoot slow cannon projectiles upwards. Player has a powerful charge beam attack to dig and blow up stuff and a point defence machinegun attack to shoot down incoming projectiles. Player's warship can move somewhat slowly using WASD keys, while weapons are aimed and fired with Mouse Aim and Mouse 1 and 2 buttons.
+
+Diggable/destroyable solid materials divide between soft, medium, hard, ultrahard. While those ones are static, they each have custom color pixel. While knocked loose or destroyed, use one global color of a generic destroyed material that is set for that specific level. Generally use a narrow desaturated range 50-200 rgb for most colors, except for explosions, fire, lasers and projectiles which are all more vibrant and saturated to differentiate from the background. Use a vertical 2 random color gradient dark background (range 0-50 rgb), 
+
+Premise is to eliminate a dug-in dictator who thinks they're safe from the crimes they've done. Police justice theme.

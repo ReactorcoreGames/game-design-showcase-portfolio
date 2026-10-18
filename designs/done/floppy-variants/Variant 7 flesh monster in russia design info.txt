@@ -1,0 +1,44 @@
+# Russki Biomonster Neighbourhood: Apartment Ragdoll Rumble
+
+## Premise
+
+Amorphous pulsating blob monster lurks in the city, entering random peoples apartments through doors, windows, ventilation shafts, sewer grates, toilet plumbing, etc. It uses its tentacles to pull itself around the room like a retractable grappling hook gun, unable to move itself any other way, aside from rolling. The blob is round and about 1m in diameter when in a spacious room, can grow upto twice that size.
+
+The rooms contain various furniture items and people. Room are thus like enclosed arenas.
+
+## The blob is armed with these abilities:
+Grappling tentacles - a long tentacle that can stick to a wall to pull blob towards it by adding acceleration towards it until let go. if shot at furniture or people, it will apply pulling acceleration on those things to pull them towards the blob.
+Retractable triple bone spikes array - 5x 1 meter long spikes that extend from the blob, arranged like a fan. They can impale furniture and people, which stay stuck to spikes until the spikes are retracted back into the blob.
+Launch a heavy bone harpoon - forcefully skewers and drags objects with its momentum, nailing down people/objects into walls. Max 3x onboard ammo, they need to be retrieved to reuse them.
+Launch a light bone dart - sticks in to surfaces and people. Max 12x onboard ammo, they automatically regenerate at a rate of 1 shot per 3 seconds. low damage.
+Harden self into a wrecking ball - combine with fast momentum movement via tentacle pull or swing to slam into people or furniture to smash them to bit. Can be used as a shield to reduce incoming damage. Hardening only happen an 120' angle radius at front, leaving the rest exposed.
+Open blender maw - An opening in the side of the blob opens, causing people close enough to it to be pulled in and grinded into minced meat inside the blob.
+
+Mouse aim determines the aiming direction for all the above abilities.
+
+The blob essentially rampages through an apartment building in a low income housing district with tough-as-nails tenants full of bravado and pride.
+
+Player goes through a brutal fast paced gauntlet of rooms in an apartment building one by one, impaling, smashing, devouring the tenants before moving to the next room until the whole building is wiped out or the blob is destroyed by tenants. The tenants generally try to avoid the blob by moving away from it if they dont have a weapon (initially they dont, atleast during the earlier rooms while they're still surprised by the monster attack and unprepared), while simultaneously running up to a random furniture object and pulling out a secret stashed weapon - anything like a soviet firearm, melee weapon or improved weapon - and then they attempt to damage the blob to take it out. Generally the game is balanced in the favor of the blob so individual tenants are fairly weak against the blob but if the blob receives enough cumulative damage on its way through the various rooms, it may end up defeated, leaving the (remaining) tenants victorious.
+
+There are healing, regeneration or armor mechanics in this game.
+
+Devouring people mostly increases the strenght and mass of the blob, making it larger, giving it an incoming damage reduction multiplier, add even more force to its attacks/abilities, letting it dish out stronger hits against the tenants.
+
+The tenants themselves are regular russian people, consisting of workers, war veterans, pensioners, skinny dudes, house wives, alcoholics and thugs - all in their casual clothes in their own homes, mostly unsuspecting the incoming assault by the monster. They're crafty people that have stashed goodies, weapons and whatever is valuable to them within the furniture of their home, because they know its a rough country, a rough city and rough neighbourhood, so they prepare all in their own ways if they ever need to defend themselves. This can be kind of humorous at times; a tenant might pull out an AK47 out of a couch, or an RPG-7 from a cubboard, or a frying pan from behind a toilet.
+
+## Lore
+Game takes place in Chelyabinsk, Russia, where the government is secretly using an inhuman bioweapon (crafted from a mutated lifeform found in Lake Karachay) to flush out stubborn tenants in order to demolish their homes to make room for a new industrial plant, war factory, coal mine, etc. at the expense of the common people. If the monster succeeds without getting wasted during the assault, the russian military will suddenly roll up oh so conveniently to "stop it" by applying a flamethrower to it, appearing as heroes, which will put the monster into a damaged dormant state from which it will loaded into a van to be transported back to the base, where it will eventually recover back to its starting form and be ready to be used again elsewhere.
+
+## Low Metagame & High Metagame
+Theres only one game mode and it is the one described above. Low metagame is the gauntlet of apartment rooms in a single residential building. High metagame is about playing such low metagame campaigns again and again, each one randomized. The high metagame has this eerie persistent permanent achievements log, presented as a propaganda bulletin page, that says the name of the randomly generated apartment address the player just wiped out and how there is gonna be a this or that govt facility built there in this inappropriate cheery vibe of a propaganda department, giving the player this unsettling feeling of dread as they read this log, knowing the heinous truth of what is actually happening. It sends chill down the player's spine when they notice the sheer horror of how evil the russian government itself is, making even the terrible blob monster the player was just controlling pale in comparison.
+
+## Player Controls (blob monster)
+Mouse aim - The direction of which all blob abilities will be aimed at
+Mouse 1 - Tentacle Ability (click to launch, click again to let go/retract the tentacle)
+Mouse 2 - Harden Ability (hold down, can be used in conjuction with any ability, including blender maw or retractable spikes)
+D - Harpoon shot ability
+S - Arrow shot ability
+A - Retractable spikes ability (toggle, auto turn-off if blender maw is turned on)
+W - Blender maw ability (toggle, auto turn-off if retractable spikes is turned on)
+Q - Roll blob counter-clockwise
+E - Roll blob clockwise

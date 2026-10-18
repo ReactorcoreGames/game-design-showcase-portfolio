@@ -1,0 +1,17 @@
+# Raw BAIG output, batch databases and per-run prompt files (see tools/images.py)
+_work/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Wrangler (Cloudflare Pages deploys)
+.wrangler/

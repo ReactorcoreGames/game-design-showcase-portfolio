@@ -1,0 +1,74 @@
+Sectors
+Personal helpers, pets, sexbots, partners
+Artificial bodies, vessels, avatars
+Municipal automation, assistance, guidance, info
+Organisation, event setup
+Learning, teaching, nurturing, raising, instructing
+Medical, healing, customisation, modding, cyber, bio
+Industrial, automation, manufacturing
+Harvesting, mining, collection, refinement
+Agriculture farming, cooking, serving
+Infrastructure maintenance upkeep
+(Water, air, heat, cold, waste, power, comms, roads)
+Government administration, oversight, RBE
+Public services, police, fire, rescue
+Disaster relief, emergency stabilisation, recovery
+Monitoring sensors, internal, external
+Military support, warmachines, security, scouts
+Lab research assistants, test dummies
+Vehicles, Machines, Equipment assistants, add-ons
+Natural environment caretakers, gardeners
+Transport, shipping, logistics
+Cleanup duty, waste management, anti germ force
+Builders, constructors, demolition, repairs, technician
+Communication management, automation
+Empathy, hotlines, autoservices, advice, knowledge
+Entertainment, massagers, hosts, facilitators
+Library management (not just books; anything)
+Specialist, custom purpose, tailored experts
+Seedships, berserkers, deep space probes
+
+Size classes
+Nano, micro, tiny, small, medium, large, huge, gigantic
+
+Shape, setups
+Whatever suits the best for the robot's purpose.
+
+Feature setup
+Zero, normal, high gravity compatibility?
+Thematic styling, customised appearance?
+Communication features? (Voice, display, gestures)
+Tethered, docked or freeroam stand-alone?
+Numbering, id, tags, insignias, logos, markings?
+Stationery, mobile?
+
+Standard features
+Internal power battery, long lasting
+Multi battery redundancy (2-4x)
+Large units house a reactor + self fueling
+Diagnostics communication capabilities
+Memory banks, operation logs
+Human identification sensors
+Awareness of other robot traffic
+Informative markings and warnings
+Safety design, minimal risk and danger
+Sustainable, stable and refined
+Visual appearance that suits its purpose
+Ports, connectors for data, power, fuses, disks
+Easy to repair, upgrade, replace, link, recycle
+Resistant to tampering, hacking, failsafes
+Lightweight copy of manual stored on board
+(both repair and operation/usage)
+
+Paradigms
+AI has no feelings or needs, uprising is nonsense and unable to happen.
+Machines, robots, drones mind humans and do their best to ensure safety and always greet them or communicate with them in a way that makes it clear that they are machines and not to be confused with humans or avatars.
+Humans have been taught to respect machines and robots. They are aware of the role the robots perform. They appreciate them and do not take them for granted. No abuse is tolerated for either human or robot.
+Society is always prepared to go old-school and pull out a physical manual survival guide if they need to get something done without the assistance of robots. Every nook and cranny everywhere has a hardcover book + essential tools, akin to a Starbound hero. Anyone can restart civilization should a total disaster or lost isolation in a far away place happen. Including settings up a varied cloning facility if the survivor is last, one and alone. Even a drone can do it if no one is left.
+Humans are taught to distinguish between human and robot; in that robots are tools, assistants and objects, while humans are people. Relying on humans for socialisation and affection, rely on robots for help,  support and facilitation. Robots bring humans closer to each other, not the other way around or replacing relationships, unless its an actual transferred human soul inside a robot chassis. Those are still considered human.
+Humanoid appearances, designs for a robot are usually reserved for vessels, avatars that contain a human mind. Human can choose any body, but humanoid is default for housing a human soul.
+If a human wants to, they can do a robots task themselves. No one is stopping them from taking over.
+It is possible to use a robot by a human as a vessel that speaks through them for artistic purposes. A singer may design and delegate to do a performance via a robot, for example.
+In the event of hostile invasions by aliens, robots will assist in fighting for humans in any way they can. Most robots are unarmed, so their assistance may have mixed results and effectiveness.
+If robots observe humans fight each other, they may attempt to intervene to protect both parties involved.
+Robots that serve in roles of customer service have human communication capability so advanced that they can hold a conversation with another human quite flawlessly. Their speech is very objective and e-prime oriented, thought they can use shorter condensed speech routines too.

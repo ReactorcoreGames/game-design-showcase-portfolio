@@ -1,0 +1,140 @@
+Star on surface of planet.
+
+Launch from ship dock parking. Reach it via local transit systems. Parking is divided by size classes.
+
+Connect to skyway: Fly ship into appropriate size lane via skyway entry funnel from parking. Skyway is a highway with entries and exits. The initial size class funnel sorts the ship into the correct lane and this lane connects to the larger skyway highway.
+
+Edit: the size sorting funnel is actually only present at the edge of the star system, where FTL arrivals / departures happen. Otherwise ships stay in their respective size lanes throughout the whole star system starway and skyway road networks.
+
+Edit2: there may be additional purpose / theme driven sorting for various types of traffic, priority lanes vs regular lanes (military, medical, rescue, police, security, emergency), maintenance lanes (drones, technicians).
+
+Edit3: it is possible to eject and reconnect to a lane at almost any time. Simply fly up to leave and drift or hover, and to reconnect receive an ok signal from the traffic controller to fly and reconnect back into the lane. Free flight in dense traffic homeworlds with fully operational sky/starways will result in arrest. Frankly, starways / skyways are not only fastest, safest and coordinated but also the most convenient way to travel in a busy environment where a single mishap could result in catastrophic damage and loss of life.
+
+Edit4: Ejecting is useful for taking a break, address a problem or checking the map for route and destination information.
+
+Edit5: skyway / starway traffic is controlled, monitored and organized by joint effort of ship ai autopilots, starway infrastructure nodes, drones, hubs, controllers, satellites and hyperwave comms. There are standards for clearances between ships, tradelane spacing, skyway/starway spacing, intervals of buoys, drone bays (maintenance and security), hyperwave commsats, intermediate traffic controller stations, supply depots and ship condition checking sensors. Lots of redundancy and self checking.
+
+Edit6: manual piloting in homeworld-class worlds is too bothersome, stressful and dangerous. The ai can provide No Man Sky tier on-rails controls which are mostly automated, but full manual control is not advised; doing so will result in getting kicked out of the skyway / starway and promptly getting arrested by drones.
+
+Edit7: during star system wide emergency disaster evacuation, all ships are to fly directly up if they're travelling clockwise and down if flying counterclockwise. After this, escaped ships link up and organize into a fleet a and b for up and down ships. They may merge or travel separately. Each ship will estimate which evacuation route is most suitable and will either fly up or use the tradelane to reach the edge of the system, allowing them to fully utilize their FTL drive. Upward flying ships from the habzone will need roughly 5 hours to reach the edge before proper FTL kicks in. Tradelane evacuees can get out in 1 hour or less.
+
+Edit8: signage: apart from satellites, nodes, controllers, maintenance depots, drone bays, hubs and tradelane segments, most of starways are devoid of any visual aids, signage or markings. These are provided by augmented reality AR locally to each ship that requests them. Hyperwave nodes relay latest information and traffic data / stop and go signals and the ai onboard a ship displays this info as AR content to passengers. The only things that are visible in space are collision warning lights, faint zone markings for station / celestial territory and docking lights / holograms.
+
+Edit8b: in orbit, atmo and surface, markings, lights and holograms are more common. For mass transit and public spaces markings are abundant and redundant.
+
+Fly the skyway lane and turn to the fork that takes to orbit. Otherwise continue to another continental destination and land there.
+
+Fly via skyway all the way up to orbit. Continue via orbital skyway to an orbital destination, otherwise take a fork to leave the orbit to reach the greater habzone. Now entering the starway.
+
+At the habzone, continue to circle the habzone and reach another planet, station, colony or megastructure. 
+
+Note: During straight long empty portions of a starway, segments of in-system alternative externally induced form of FTL system called a tradelane, consisting of regularly spaced projector-linkers generate and create a magnetic tunnel route corridor, where ships will be externally sucked, locked and slid from start of the track to the end of the track by a different form of FTL than that of interstellar ship FTL travel is, which is internally induced.
+
+Note2: This tradelane is effective inside star systems, but not practical or useful for interstellar travel, for which ship FTL drives are better and more powerful.
+
+Note3: Unlike ship FTL travel, which works by long acceleration followed by short deceleration, tradelane FTL works by quick boost to its maximum possible FTL speed, keeping the velocity constant, then quick return to regular non-FTL speed after the exit. It sort of works like a vacuum cleaner pressure tube that sucks, moves and plops out ships out the other end.
+
+Note4: Also unlike ship FTL, tradelane FTL is less visually spectacular, being more similar to mass effect or star   wars style sudden poof and pop FTL entry and exit.
+
+Otherwise, take a turn at a fork to leave the habzone. This way will lead to the main defense line and past that, the outer habzone ship parking zone and the long range tradelane entry towards the edge of the star system, with a midway checkpoint (usually this is where the farthest significant natural celestial body like pluto would be).
+
+Either turn to enter parking (size sensitive, you're still in a lane of your own ship size class S, M, L or XL) or turn to enter the long range tradelane, a freelancer style-ish alternative FTL transit system which is merely just specialized segments / portions of the usual starway.
+
+The long-range tradelane is a segmented network of two-way routes. First sector is the zone between star habzone and midway. There may be other destinations before midway point where the secondary defense line lies, such as remnant celestials, special bases, zones or other unusual locations. Either travel to any of these sub locations or continue to midway.
+
+At midway, another parking zone is present, as well as the secondary defense line, along with a major military checkpoint fortress station. Other minor stations, platforms and satellites may be here too. Like previously, midway to edge is the second sector, where one can reach other remnant celestials, special bases, zones or other unusual locations via two-way tradelanes. Either travel to any of these sub locations or continue to edge.
+
+At edge, there is another parking zone, a large military border station, a sorting funnel for incoming FTL traffic, an exit location to an FTL launch zone, aka the "cup" which has 5 inbound and outbound cells (left, right, up, down, forward) for ships to slot themselves in or out of. 
+
+For outgoing ships, there is an enormous mass relay like FTL launch catapult tesla coil like device that momentarily latches on to launching ships with a plasma beam like tether and impart a momentum boost into them, allowing them to reach max FTL speeds faster. For incoming ships, this same mass relay like megastructure can latch and absorb their momentum, slowing incoming ships to a crawl.
+
+Still at the edge, the tertiary defense line is located here. There is also an edge circling tradelane to reach the other cups / border stations of the star system. In a fully developed homeworld, there are always 6 FTL entry and exit cups: up, down, left, right, forward, backward. They're the sanctioned entry/exit points to a star system. Trying to enter or exit a homeworld class system through other means than the cups and sorting funnels will raise an alarm and prompt automated retaliation response from military drones and ships.
+
+Besides the circling tradelane, there is also some automated outposts and perhaps even other fringe space stations, mini-celestials, platforms and other satellites / arrays at the edge perimeter.
+
+From here, one can enter exit the starway to enter the cup area, where you can plot a destination that is accessible (in the range of angle of the particular cup you're in), connect with the FTL traffic controller to recieve a slot and a timeframe to launch from, then proceed to blast away to your far away destination via ship internal FTL drive, which is fully operational and effective outside the edge of the solar system.
+
+Alternatively, especially if you're flying a smaller vessel than the XL size class, you may connect to a larger XL size "rack ship" similar to a rollercoaster ride and its associated loading process.
+
+This mothership / ark / rack ship provides faster FTL travel, because ship / engine size dictates max FTL speeds, acceleration and range. It is especially helpful to smaller S, M and L class vessels for this reason to piggyback on a rack ship.
+
+Depending on expected participants, demand, schedule and timeframe, the rackship gets loaded up as much as it makes sense for the mentioned factors taken into consideration. If theres too little outgoing traffic, then no rackship travel will be done and the few participants will need to fly manually themselves. Otherwise its a waste of energy and resources. Kanban methods apply here.
+
+Anyway, if the FTL destination is another fully developed homeworld class star system, then upon entry into the FTL cup's slot that was assigned on FTL launch at the original star system (and getting decelerated by the local mass relay catapult), you will proceed to the size class sorting funnel (while screened by the local border station checkpoint for security purposes) and enter the local starway again to travel to other destinations within this new solar system.
+
+For FTL travel in the galaxy, if the destination is relatively near with no obstacles or intersections, then a direct path will be plotted to it. However for long distance travel from one galactic sector to anothet, a more vertical wide arc hop is made instead. For relative close destination clusters which have some intersecting FTL traffic, then the otherwise direct paths are slightly bent below or above each other to prevent FTL collisions between stars.
+
+Also for skyway, starway and FTL traffic, in and out lanes are rotated so both are facing up. (First thought to flip opposite lane to be upside down, but then remember that I cant do that for a planet's skyway for gravity reasons, whoops).
+
+In a skyway and starway, ship size classes go from biggest at bottom, while smallest at top.
+
+Other worlds.
+
+Not all worlds are fully developed and most do not have full starway infrastructure in place. Maybe there is no infrastructure at all. Maybe there wont ever be if that particular star system is not intended for habitation due to special circumstances. Like an unstable star or the area is designated as disposable (like the firezone star system).
+
+For partial worlds, cups are often shortly developed once a stronger presence is established on at least one major celestial in the solar system. Defence infrastructure, starway definement and tradelanes follow them later, along with more expansion and habzone development. This is later complemented with further megastructures, sun stabilization and dyson swarm construction. Either way, cups are important if traffic to and from the solar system is going to be busy.
+
+For solar systems with no infrastructure at all, ships will rely on hyperwave scans; first 360 around then in all axis to determine other surrounding FTL travellers that may intersect with their own path essentially creating a ping of their own location and intent while doing so. Then a forward vector fine narrow hyperwave scan is made to detect obstacles in the flight path. If all good, a relatively safe FTL passage can be made, with the unlikely possibility of a freak accident or deliberate trap by complicated circumstances. To eliminate even this risk, chartered routes between homeworlds have been pre-cleared and are monitored for any disturbances.
+
+Infact, it is standard protocol that anyone that is intending to travel to a new uncharted solar system, the local or any nearest fully developed homeworld star will launch two autonomous and self-sufficient hyperwave nodes, one to top of the star system and another at the bottom (so that no matter where someone is, they can have a direct line of contact with at least one of the two nodes).
+
+These nodes will automatically set up themselves at the location, just at the edges of the uncharted solar system and remain there forever or until a homeworld class starway infrastructure replaces them.
+
+The nodes will scan the new uncharted solar system, noting any significant celestials, any major or unusual activity, any lifesigns or civilizations, any hazards or instabilities or hostiles.
+
+Clearing that, the node will then scan the path from the uncharted system to the location where the willing explorer is, as well as other convenient routes nearby from other homeworld class solar systems. It is more patient and thorough with its scans and may yield information on the quality and sustainability of the route that a ship on its own wouldn't want to bother with. It will more or less standardize the path, making it safer and clearer. If it detects obstructions or other problems with a route, either now or later, it'll give a signal to a nearest homeworld star to send autonomous drones to tidy up the route and fix any issues with it.
+
+This entire process takes time and depends on what is encountered in the new area. The initial launch of the 2 nodes may take an hour to get to their locations. For the local scans, 1-7 days may pass, for the route scans another 2-3 weeks may go by. If problems with route are found, the drones may take a day, week or months before solving the issue.
+
+If the explorer is in a hurry and willing to jump into the unknown and possibly bare the dangers that lie ahead, then they can do an arcing vertical hop FTL flight to the uncharted solar system after using their ship's hyperwave curve vector scanner. It is never advised, but it is possible to go straight away. Its just a gamble, that's all.
+
+On the whole though, in the lack of stationary communication installations either locally or in nearby stars, ships cooperate and coordinate with each other via their own hyperwave communicators. Some ships can take a higher role of being a relay or a controller for other ships, though usually its all decentralized, where each unit cares for its own vicinity and status yet as a whole it all just seems to work in harmony. Technically any stationary installations / controllers simply take the load off others and do the thinking and monitoring for others, so that they can conserve energy and bandwidth.
+
+Upon entry to an uncharted solar system at any point in its edge, ships can freely fly anywhere they want, simply avoiding fellow ships and obstacles dynamically with active collision detection. Since FTL inside a star system is limited to 100-300K km/s (aka slower than FTL), this is now considerably easier.
+
+Joining orbits and landing on planets is free game and again, done dynamically to avoid colliding with other stuff. Its like old-school driving a bicycle; keep your head on a swivel, avoid crashing at all times, stay balanced and don't be too rash / reckless. Its stressful, chaotic and mostly disorganized (the exception being fleet formations), but it does reduce the risk of accidents.
+
+For atmospheres that a civilization wants to preserve (read: not ruin), there may be less than 10000 (30 per day) medium ships per year landing / taking off on said planet. Anymore than that, and a skyway construction with a vertical vacuum corridor, excess atmosphere reservoirs and a proper ship parking facility at the end of the corridor need to be built for the sustainability of the planet and its atmosphere. Otherwise the thruster exhaust, noise, light, re-entry friction, wind generation by a significant amount of ship traffic will start to affect the environment quite seriously. Alternatively, atmosphere cleaners, purifiers and coolers are necessary to mitigate said damages with a vacuum corridor entry.
+
+In galactic FTL travel, if there are many intersecting routes and a vast empty void between stars, a connecting hub may be constructed there, consisting of a condensed solar system model with the usual 6 FTL cup set up, complete with mass relays, a space station in the center a reverse tradelane tech field to simulate a star's gravity bubble effect to cancel / slow FTL flyers quickly and conveniently. Since dark voids in a galaxy are a source of richer higgs boson energy wells, these hubs also have another good reason to exist and house various civilizational activity, despite seemingly being in the middle of nowhere.
+
+
+
+Ship FTL process:
+. Start at 0km/s, front shield on, engine on, go.
+. Accelerate to 10.000km/s, activate FTL drive ramjet
+. Blast off + cone shield plasma lance activation.
+. Hypervelocity FTL acceleration is go.
+. Calculate exit point countdown ETA.
+. Brilliant engine circular wake, cone shield shines.
+. Ship is bathes in an rainbow color shifting spectacular FTL field, depending on current speed.
+. Keep acceleration going until ETA zero.
+
+At ETA zero:
+. At this point acceleration is max.
+. FTL drive shutdown / suspend.
+. Ship begins to rapidly lose speed, going back towards the beginning 100.000km/s.
+. Ship will still drift for a while as it looses speed and will arrive at destination with correct speed precisely
+. While slowing down, lance cone shines gradually less, while ships FTL momentum field is shifting its colors in backwards order, engine wake gradually shrinks to normal size.
+. At FTL speed exit, cone lance vanishes, regular frontal impact shield is back visible again. Last of ships FTL momentum field disappears with muted color, engine wake back to normal.
+. Regular slowdown to 0km/s. Stop.
+
+
+FTL technicality:
+The FTL drive essentially creates a condition, field, phase mode that immerses or wraps the ship. This field allows vessel to ignore the limitation of lightspeed cap. Its a limit canceller. It creates, builds and maintains this field when its on and certain conditions are met, such as the minimum speed of 100.000km/s and an ongoing engine burn. Without these there is no achieving FTL speeds.
+
+If its turned off while in FTL flight, then the conditions for an FTL field to stay sustainable are impaired, as FTL drive is off and it is no longer built and maintained. At this point, the field starts to dissipate and gradually vanish. 
+
+It does not do so instantly, so the ship will continue to drift at high FTL speeds for a potentially very long distance, with larger ships and higher already achieved FTL speed having tougher residual fields that will take longer to dissipate than those on smaller or slower vessels.
+
+The FTL drive can be turned back on at any time, that's totally fine. If just the engine burn is stopped, then the field will remain strong, but will start to gradually get weaker, albeit at a far slower pace than the FTL drive shutdown. In this case, after a long while the speed will eventually decrease below the minimum threshold and the ships FTL drive won't be effective any more.
+
+This residual field is equal to the FTL speed and will be gone entirely once sub-ftl speeds have been achieved (or the 100.000km/s minimum, still open which one I'll use). Again, at that point the ship is now cruising or drifting at the same velocity it started before going FTL. The mass relay catapult can absorb this normal speed and slow the ship down to a halt. In the case of a hub FTL stop, the reverse tradelane tech suspends the ships movement to a crawl (like deadspace stasis) at which the catapult will dispel the FTL field and strip the remaining normal velocity as just mentioned.
+
+Because of this, the onboard ship ai will use its navigational computer to calculate how long to accelerate, how powerfully to accelerate and at what point to turn off the FTL drive so that at end of the dissipation drift, the ship would precisely arrive at the correct location. These values will differ for each ship size class, engine type and flight strength (full power rapid or slow steady gain).
+
+Outside of FTL movement, the ship has powerful sublight propulsion drive and a frontal field ram shield that protects from in-path collisions. In FTL, this field get supercharged into a magnificent plasma lance cone, making it incredibly powerful at annihilating almost anything in its path, capable of going several kilometers of solid rock before it gets overwhelmed and lets through the colliding matter, with catastrophic results to both the ship and the matter.
+
+If this shield wasn't there, the ship would be in grave danger as any object in the ship's path could mean doom for the ship. Usually the shield and sublight drive are linked / work together, so if the shield fails, the ship would either rapidly stop or refuse to go past a certain basic velocity (100-1000 km/h) if there is any risk of collision with anything nearby. Still, with the shield on, a ship could plow through a 100m thick wall easily, meanwhile in FTL flight, it could penetrate through up to 10km of matter no problem. Even more - exponentially so - if the FTL velocities are super high and the cone lance is enhanced somehow.
+
+Thankfully getting stranded after FTL flight or combat is no issue, should an engine, shield or other damage occur. Ships have their own self-sufficient repair drone that can fix the entire ship and even replicate it (very slowly), so getting a broken shield or engine back online can be done. If engine, shield and drone are busted, the survival kit allow the crew to repair the bot or build a new one. If hyperwave or even regular comms are functional, then the crew or ai can just request aid and rescue from the nearest allied station or friendly drone.

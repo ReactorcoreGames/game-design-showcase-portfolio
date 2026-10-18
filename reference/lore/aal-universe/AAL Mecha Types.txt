@@ -1,0 +1,75 @@
+AAL Mecha Types
+===========
+
+
+Types are almost like tiers; higher numbers have all the tech from lower numbers and are thus almost always superior by a vast margin.
+
+Some units of lesser types may be highly specialised that they can outperform a higher type mecha in one or two aspects, but the higher types will still be stronger as a whole in every other capacity.
+
+Each unit in any type can vastly vary in size, though types 3-4 assume at least a Gundam sized machine, roughly plus or minus some meters in any direction. Type 5 assume Evangelion/godzilla sizes more or less with no ceiling on how big it can get. Types 1 or 2 can be practically any size, from small to massive, with mostly their tech level, lack of complexity, design flexibility limitations, materials used, reduced features and structure keeping them from being greater types.
+
+
+
+Type 1 - primitive
+Slow lumbering machines with limited flexibility, mostly brute force style design.
+Ex. Mechwarrior, AT-AT, APU, lost planet 3 drill mech, junk mechs, early mechs or pilotable robots.
+
+
+
+Type 2 - advanced specialisation
+Next generation units with overall more advancements compared to type 1, may also specialise in specific trait or doctrine, excelling in it, vastly outperforming a type 1.
+Examples: Lost planet NEVEC mechs, muvluv alt mecha, front mission mechs, intrusion 2 mechs, metal slug 1-6 supervehicles, gunhed (the old japanese movie), macross grunts, gun arms (japanese freeware game with a mech), votoms, gun metal (3d game by yeti studios with a transforming mech).
+
+
+Type 3 - large full aspect humanoid
+Gundam sized on average, vastly uses better tech, design, materials, features and potential compared to any type 2 overall. Quite often fully humanoid, though alternative limbs are fine (spider legs, tracks, wheel legs, thrusters, tentacles, many arms/legs instead of just 2 each, head part of torso, etc.). Can be non humanoid too (zoids, animal, dino, insect, fish, bird, dragon, other).
+
+Most crucially however, they feature humanlike manipulator arms with opposable thumbs, allowing for vastly adaptive combat abilities to switch armaments on the fly in direct battle. Type 1 & 2s don't have these commonly, more relying on mounted, pre-installed weapons and systems, perhaps at most having claws or rudimentary manipulator arms, which both are relatively basic compared to a type 3s arm/hand logistics / control interface system.
+
+Though while they can specialise in a specific trait or doctrine, more often they are far balanced armor, weapons, mobility, sensor wise overall and capable of being a one unit army/operative that can survive independently, only needing a base or carrier for repairs. Most of AWMS of a type 3 are significantly stronger compared to any type 2, allowing them to easily overpower them in more than one way.
+
+Fuel is also less of a concern due to internal power plant/reactor system, extending operation time to far more than usually ever necessary.
+
+They are the peak of conventional battle vehicles/mechas that use still-relatable modern-ish technologies. Anything beyond them is likely to be miracle-tech, because type 3s are still limited, needing to accompany other transport vehicles to take them somewhere far, be it in land, sea or space. And they still need bases for full repairs and maintenance checks.
+Ex. Gundam/mobile suits/mobile armor, lost planet ptx160 hardballer, early armored core.
+
+
+Type 4 - large beyond limits hyper machines
+Similar to how type 3 compares to a type 2 - being better at everything overall - the type 4 does the same to type 3s, but stays a similar size. They're almost like super robots or future-tech Gundam, featuring materials, design, technology and systems that vastly outperform any type 3 by a huge margin.
+
+They can fully repair, refuel and maintain themselves, not requiring bases or carriers.
+
+They can also travel vast distances on their own usually, not needing to return to a base necessarily, but even keep going like a von Neumann probe (self replicating spacecraft robot) or just a solo nomad that can keep going virtually forever, only limited by the pilot.
+
+They may have the capacity to even build additional machines, virtual intelligence operated battle or support units that can be commanded as a fleet by the type 4, effectively either spawning an army, seeding a base/city in a new remote location, gathering resources en masse from a deposit, deploying satellite coverage over a planet(oid) or creating deep space outposts/buoys for itself or allies to use.
+
+Direct combat wise, the tech involved is super advanced.
+
+Armor wise their internal structure may be so advanced that it rivals biological complexity and integration, featuring less moving parts that can brake down in favour of solid multilayer megastructure construction that is almost like a weave of armor and utilities, incredibly durable and integrated, potentially modular even.
+
+They may even have energy shields, force fields or other exotic miracle tech defenses.
+
+Weapon/sensors systems may also be more automated, versatile and assisted overall - besides being absurdly more powerful too. The pilot may benefit from advanced HUD interfaces, autogun turrets/arrays across the exterior of the mecha, smart ammunition, transforming variable weapons and an all aspect arsenal to deal with any common category of threats, be it small / big targets, few / many targets, slow / fast targets, soft / hard targets, different elements of attack (kinetic, heat, electric, radiation, etc), direct / guided / arc curved line-of-sights.
+
+Mobility maybe be enhanced in responsiveness, max speed, acceleration mixed with additional benefits, like destructive exhaust, after images, shockwaves etc. Far outperforming a type 3 often, with no upper limit how advanced these systems may be.
+
+To regular human, type 4s often appear nigh godlike in their capabilities, even if they look deceptively plain on the surface or mostly seem too similar to type 3s.
+
+Ex. Valverave, NEXT from armored core 4A, final stage from lost planet 1 (hero & villain mecha), Super Robot Wars, Gargantia Chamber/machine caliber.
+
+
+Type 5 - colossus size mega machines
+With no upper limit, these machines can be as big as they want to be size wise. A rough unofficial minimum of 100 meters in size (x,y,z) is usually needed at least to qualify as one.
+
+They're fortresses, carriers, cities, planet busters and galactic super roamers, mega guardians.
+
+However, they're not necessarily a continuation of a type 4 tech wise, often being sufficiently built with type 3 level technology (though not lesser any than that, like type 1 or 2 tech), but they can have features of a type 4 by the sheer virtue of its size, crew, automation, internal compartments and systems.
+
+They can be self-sufficient without needing a base since they're the base or even the city itself, but not necessarily.
+They can travel far and survive as a nomad or self-replicate, but not necessarily.
+
+They're enormous mega mecha goliaths that can wield ridiculous power that make anything below them look tiny in comparison, often boasting the capability to destroy anything upwards a city, continent, planet or even a star - maybe even a galaxy - on their own.
+
+While type 1 & 2s can be large enough to rival a type 5 in terms of size, usually the tech level and capabilities of a type 5 is the biggest difference that sets them far apart. A giant type 1 or 2 can usually be defeated by a type 3 pretty well, despite any large size difference the two units might have - 1 & 2s are just cumbersome and limited by comparison each time.
+
+Ex. Evangelion, gunbuster, ideon, SDF macross ships, armored core 4A arms forts, planetary annihilation titans, power ranger megazords. 

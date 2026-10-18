@@ -1,0 +1,166 @@
+Working Name: Astro Industry Freelancer
+Engine: Any 2D engine
+
+
+
+Summary:
+Play as an engineer robot-person exploring a fully modifiable universe by piloting vehicles, carving terrain, excavating resources, creating factories, printing equipment and doing mild automation.
+
+Description:
+[Early Development - Design Phase in progress]
+Best described as a 'Bob the Builder simulator' - you control a character that receives commissions from other characters and organizations around the universe to do jobs. Those jobs involve solving, building, crafting, moving, blowing up, repairing or modifying something to complete the task. There may be hazards, obstacles, weather, distances and logistics problems in the way and the player must use their tools and creativity to find a solution no matter the problem.
+
+
+
+You play as an upgradable modular robot character that can exchange body parts, have multiple bodies, can pilot vehicles like a human and use tools and machines to build or interact with the world in many ways. 
+
+
+
+The player is actually a transferable digitized human mind that can "pilot" a robot body and they do the bob the builder stuff because they find it fun and enjoy helping others out. 
+
+
+
+They are virtually immortal and they always have a backup mind in a secure server that is restored whenever the old body breaks irreparably due to an accident. Any memories prior to the demise are added onto the backup, so the person always knows what happened in the past when they revive.
+
+You can go into space via spacecraft and travel around the universe between solar systems, planets, moons, asteroid fields - visiting areas in any possible environment, be it land, sea, space, underground or underwater. 
+
+
+
+There are heavy industrial vehicles that can haul material, dig tunnels, crush stuff or move superheavy objects. There are manufacturing machines, 3D printers, refineries, power supply systems and simple automation machines/vehicles that can help set up chains of machines and logistics vehicles that automatically gather basic materials from a resource deposit, bring them to a sorting station, input them into refineries for creating advanced materials and finally put them inside printers or manufacturing machines to create whatever the player needs.
+
+
+
+There is no focus on combat, no real adversaries, nor any kind of time pressure. Players can complete jobs at their pace in whatever order they want. There are indeed still hazards and tools of destruction included in the game, but the tone is a very casual logistics puzzle experience with occasional moments of excitement, action and adventure thanks to physics enabled gameplay. Players can make as many mistakes as they want, though there is the consequence of cleaning up a mess and having to redo/rebuild/reclaim lost equipment/resources.
+
+This project may take inspiration or ideas from these games:
++ Astroneer (Main core, character, vehicles, worlds, automation, crafting, simplified module driven machines that even a toddler can enjoy)
++ Factorio/Satisfactory (additional automation, item, crafting, resource mechanics)
++ Subnautica (survival elements, hazards, crafting, vehicles, outposts/base building, resource deposits)
++ Freelancer (space flight, cargo shipping, space mining, debris fields/nebulae, 2D map, tradelane/jumpgate infrastructure in space, buoys)
++ Elite Dangerous (same as freelancer)
++ Space Pirates And Zombies (top-down space flight, mining, outfitting ships with modules)
++ Starsector (same as SPAZ)
++ Starbound (wildlife, resources, survival elements, hazards, crafting, items, terrain generation)
++ Signs of Life (same as starbound)
++ No Man's Sky (same as starbound)
++ Signal From Tolva (exploration/world building, basis for combat (low intensity))
++ Motherload (ability to dig deep underground and encounter rarer resources but also face harsher hazards)
++ Steamworld Dig 2 (same as motherload)
++ G.E.O. (same as motherload)
++ Reassembly (top-down 2D space environments and hazards)
++ Clonk Rage (settlement gameplay, structures, items, resource acquisition, transport and usage)
++ Verdant Skies (characters, quests, exploration, crafting, resource mechanics)
++ Ixion (deep space exploration, interesting encounters in space, possible giant mothership HQ as a mobile megabase)
++ Red Faction Guerrilla (demolition of buildings and explosive demo equipment)
++ more...
+
+
+
+Because a malleable 3D voxel world is beyond my technical capabilities, the game would either be a simplified polygon based 3D, 2D/2.5D top-down, or even 2D/2.5D side-view game. There would still be destructible tile-based terrain along with physics enabled props, even if they’re more basic. I'm considering deriving compatible elements from TopVerse and RoomSpace to combine them in a simplified way to construct this project.
+
+
+
+A lot of major design questions are still unanswered and most of the design is currently a vague idea with some clues and potential avenues worth researching.
+
+That said, the main driver for this game is to create a more advanced version of Astroneer that overcomes many of its faults and limitations metagame-wise and content-wise.
+
+
+1. What purpose this project caters to:
+To enjoy the satisfaction of driving heavy industrial vehicles and using heavy-duty tools in a variety of situations. There's also an element of excitement of being able to solve logistical puzzles as an engineer in a highly casual environment where the player is free to make many mistakes and doesn't have to deal with anything complicated as everything is designed to be Fisher Price or Lego Duplo tier in terms of interactivity and simplicity. Basically it's a fun Bob the Builder experience that looks and feels like it's designed for babies/toddlers, but still has a surprising amount of depth and satisfying gameplay.
+
+
+
+It fulfills the fantasy of what an unaware child imagined engineering, construction and demolition work to be like in a nice peaceful world.
+
+
+
+It also combines the experience of Freelancer's simplified open-world space universe simulation where you could explore, discover, mine, haul cargo, do low-intensity combat and deal with hazards/anomalies in space - which feels quite fun to see what a future civilization in space would look like spread among many star system and galaxies. Freelancer lacked an on-the-ground mode and its world was built around a scripted campaign with all hand-crafted instances, so the game became a dead end meaning-wise once the player had been around the Sirius Sector once - there wasn't that much to be had in trying to replay it again. I aim to rectify these shortcomings with heuristics driven procedural generation.
+
+
+
+With that, the game would also cater to the fantasy of an open world space exploration game - where the player can actually bring heavy hardware and resources with them and interact with whatever mysteries, anomalies or discoveries they find for real. In the past in many other games, players were merely shown these things in cutscenes or background images, but they were never truly accessible as real playable content.
+
+
+2. How it achieves this:
+Technical execution wise there are already plenty of resources for 2D tile-based destructible terrain and generating it, meanwhile all other mechanics are fairly simple to code using GDevelop's basics. 
+
+The more complex systems like module based machines, power networks, train/shuttle/drone systems, universe generation, quests/jobs/campaign generation, lag/performance mitigation and room-to-room/scene-to-scene world transitions and fauna/flora ai will require some planning to figure the best way to implement them that doesn't paint me into a corner, but I don't think any of these are an obstacle that I wouldn't be able to figure out - even if I opt for really simple solution for all of them. 
+
+
+
+The whole point of the game is to reduce and eliminate complexity from all game mechanics and make it feel like a giant box of cool toddler toys so I would actively avoid creating anything that would be complicated to implement or have too complex behavior in the game.
+
+Gameplay design wise Astroneer is already an excellent base in terms of how resources, machines, tools, items, storage and objects behave. All I would have to do is a reduced 2D version of that. 
+
+
+
+Freelancer's top-down navigational star maps are a perfect basis for how space areas would be constructed, meanwhile Freelancer's space flight and functionality could be easily translated to a 2D top-down version, akin to many common top-down semi-freeroam space-shooter games or Asteroids clones.
+
+
+
+Purpose wise players would be able to freely get on board and pilot powerful vehicles, machines, spaceships that can affect the props and environment in spectacular ways involving sound effects, particle effects, cool head-up displays and noticeable physics influence upon the props/tiles/objects/items of the world. 
+
+
+
+Players would also enjoy the satisfaction of various colorful characters asking the player for help and thanking them for a job well done - with very loose criteria for success, so players can really play around with many ways to solve a mission. It's even ok if they make an unbelievable mess as long the job still gets done.
+
+3. What is unique/new/special about the project:
+It's a running theme for most of my projects, but a meaningful infinite campaign/quest/job generator is a big deal here too.
+
+People usually talk about the concept of an "end-game" or "late-game" which are part of the bigger mentality of how a game is structure; “early-game” has the player start with nothing, gradually build themselves up, hoard up resources, gain upgrades and eventually reach "middle-game" where they use those gained goods and perks to overcome a series of ever increasing challenges and perhaps defeat a final boss in some form. "End-game" is what happens after the final boss, i.e how does the game continue after that.
+
+
+
+In the genre of factory/automation/survival games, the unfortunate trend is that "end-game" is a sandbox without any meaningful goals provided by the game itself. Player is told to continue to build and optimize their factory/settlement infinitely until either they get bored or until their computer fails due to lag. The excitement, structure, goals, interactions and meaning provided by the initial campaign and challenges is no longer there, meanwhile the idea of infinite growth on finite hardware with limited memory, disk space and processing power is unsustainable and unenjoyable the worse the lag becomes. 
+
+
+
+Moreover, providing either an infinite map or infinite base construction potential is also game experience wise unnecessary since a player can really only be at any one place at a time and most of the time they will already have more than enough abundance within the small area the initial campaign took place.
+
+As a whole, the entire mentality of "early-mid-end game" and the metagame structure that arises from that is awful; player is forced to struggle in scarcity early in the game and once they get over that phase they can never experience the unique challenges that happened there without restarting the whole game and deleting all of their progress. 
+
+
+
+Worse yet, most of the game's content is blocked off and unavailable until the player goes through the effort of satisfying various unlock conditions. For replayability, this isn't good and usually bottlenecks the game to be only possible play in one specific way, so each full playthrough will follow the same route more or less. This metagame structure lacks variety, spontaneity and wastes potential by limiting the game's content to only be allowed to appear and exist in a very narrow scope.
+
+
+
+During mid-game, the entire game feels like a slog of chasing the next upgrade because without it the tasks and obstacles are far more tedious to do - I never really feel like I'm finally having fun, it's more of a feeling of having to go through many chores before I finally have everything needed to tackle problems in the game properly.
+
+
+
+End-game is the worst because after completing all that grind and unlock bureaucracy nonsense, the player finds themselves feeling that they were scammed after beating the official final boss/challenge the game had. The entire initial campaign from early-game to the start of end-game felt like an extended tutorial on rails. The constant feeling at the back of my mind is that "finally once I will unlock everything, the game will truly open up and actually begin, I will have all these resources, skills and machines and I'll use them to overcome any challenge that comes my way and I'll even be able to reach a flow state playing this game!". 
+
+Except that never happens. The game lacks the system for a campaign generator that is spontaneous, flexible, varied and endless that would give me those end-game challenges to take on. I'm just left alone and told to come up with my own fun. This is not okay because the whole reason I'm playing a video game is that it's supposed to provide structure and context to the stuff I do. Otherwise I may as well go back to playing with Legos/toys that have the same issue of lacking meaning and structure that are outside my choosing/outside my control.
+
+
+
+As with most of my other projects, I challenge this mentality of an "early-mid-end game" by discarding it entirely. In its place an infinite campaign generator that leverages simple yet smartly structured procedural generation is utilized to overcome the limitations and flaws of a scripted hand-crafted campaign, shunning away from the scarcity driven mentality of "earning your content" through unlocks and grind in favor of an abundance driven design model where player is given everything needed to access the full content of the game from the very start. 
+
+There wouldn't be an "early-, mid-, end-game" at all - no grind, no progression, no unlock walls - it would all be just "game" that can be played infinitely and sustainably with each generated campaign having its own narrative arc(s) that differ in pace, order and twists.
+
+Besides the metagame stuff, this project would also bring together casual space exploration elements that are seamless with the rest of the factory/survival/job gameplay - where everything works in a fully connected network of scenes that players can freely transition between and carry anything from one area to another. So far only a few rare games have done this like No Man's Sky, Space Engineers, Empyrion Galactic Survival and Starmade - all with their own faults and limitations and design differences compared to this project.
+
+
+4. What is the potential of the project:
+It would provide a far superior game experience than most existing factory or survival games out there since it would be virtually infinitely playable and always meaningful/spontaneous no matter how many campaigns you run through it. This project would be a trend-setter, a revolutionary disruptor in the games industry.
+
+
+
+Content wise it can be expanded infinitely with new job types, new resources, new items, new vehicles, new tools, new generator updates for either worlds generation or campaign/quest generation. Any new piece of added content would exponentially multiply the total amount of possible interactions the player could explore, play with and enjoy - all thanks to a modular template-based data driven content format.
+
+Multiplayer wise live coop or asynchronous collab modes could be added in the future for multiple people to solve problems together and take on jobs/campaigns as a team or as a community that all contribute towards in many different ways that suit them the best.
+
+Players would also be able to express their creativity with base builds, cool physics moment gif animations/videos, their achievements ingame or by showing off their customized player characters. All this would naturally make the game virally marketable on its own.
+
+
+5. What inspired the project:
+Originally I had exhaustively played Astroneer through multiple playthroughs and after the experience I felt inspired to write a metagame proposal suggestion that I would post to the Astroneer community and the devs, showing a possible new direction the next future game update that would make the game infinitely playable.
+
+However I knew that the devs had already painted themselves into a corner regarding certain design and business decisions around Astroneer that even with that proposal the game would still be trapped within its narrow framework and existing limiting conventions. So I began wondering if I could make a more flexible game instead - even if it would be 2D and vastly simplified compared to Astroneer.
+
+
+
+After all, I still often get far greater enjoyment gameplay-wise from scrappy indie projects that can have very simple graphics and simple interaction compared to AA or AAA titles. The amateur-indie's biggest strength is ultimately their mentality to challenge conventions and break traditions - this is something that teams can't do because they're scared, incompetent and attempt to seek safety - often with self-sabotaging results unfortunately. Also thanks to simpler mechanics and graphics, amateur projects can often have surprisingly less bugs and more stability than AA or AAA games because the minimal technical complexity is far easier to manage, detect and fix.
+
+Then I saw an opportunity to go beyond Astroneer's design altogether, mixing elements from other factory/automation, survival, exploration and space sim games to create an all-aspect super game that would render all the listed original games obsolete.

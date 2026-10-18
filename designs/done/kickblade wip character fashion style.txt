@@ -1,0 +1,83 @@
+The task written in the file 4 IMAGE Get Image Prompts After HTML done.md.
+
+I wanna generate some images for the HTML file in the 'Ready HTML Pages' folder, but I first need to create a unified artstyle, but more specifically, I need to define a consistent character for the heroine character of the game, namely describing their appearance in 300 characters or less, capturing their most defining features so that it would be easy to integrate it into a future image prompt without making too long, given that it will have to mention cinematography stuff, what the character is doing, the background/surrounding, the overall image style stuff, all of this crammed under 1000 characters. This is important when I will enter a prompt into the AI image editor, as it will maximize the chances of getting a somewhat consistent character for the 5 images I'll want to generate.
+
+A reference image that is a strong inspiration is this photo:
+cute soft pastel outfit.jpg
+(its located in the root directory)
+
+I want that exact outfit, plus a pink fabric facemask over her lower face, and a cute winged eyeliner eye makeup.
+She carries a utility blade but its completely pink. The very bottom sliver of her footwear is also pink while the rest of it is white.
+
+I was able to extract this information that captures the elements of her outfit in the image:
+<extracted_outfit_info>
+This stylish outfit is perfect for anyone looking to make a bold fashion statement. The ensemble features a soft pink, long-sleeved crop top with a high neckline, accented with delicate ruffles and buttons for a charming, feminine touch. Paired with this top is a short, pleated white skirt that falls just above the knees, adding a playful and youthful vibe to the look. 
+
+The outfit is completed with white thigh-high socks adorned with pink bows, which provide a cute and flirty contrast to the monochromatic color scheme. The socks are held up by white garters, adding an extra layer of detail. The shoes are white, chunky platform sneakers with a slight heel, offering both comfort and style.
+
+The overall look is complemented by a soft pink wig with long, straight hair, styled with side bangs and a cute headband, adding a touch of whimsy. The wig is made from high-quality synthetic fibers, ensuring durability and a natural shine.
+
+This outfit is perfect for themed events, cosplay, or simply making a statement in everyday wear. The combination of soft colors, playful details, and comfortable materials makes it an ideal choice for anyone looking to stand out with a unique and fashionable look.
+</extracted_outfit_info>
+
+The text prompts I want for ai image generation are these:
+
+    kickblade_1_title.jpg - Vibrant stylish banner image of white-pink cutecore heroine against the backdrop of a grunge corporate world.
+    kickblade_2_vignette.jpg - Same heroine in her white-pink cutecore outfit kicking a corporate goon in green grunge outfit in the face.
+    kickblade_3_feature.jpg - Same corporate goon from previous image flying knocked-out through the air out of a broken window with the heroine seen in the background in an aerial kick pose.
+    kickblade_4_boxart.jpg - A maverick-cool image of the cutecore outfit heroine with her pink utility knife in hand looking to the side with a smug look, grunge-industrial background (2:3 ratio)
+    kickblade_5_story.jpg - Zoomed out rooftop view of corporate drab grunge cityscape, heroine standing on the edge of a building overlooking it all, with a ethereal godray shining over her despite everything else being covered in smog and dark clouds. (16:9 aspect ratio)
+
+---
+
+Based on the reference image and your requirements, here's a 300-character heroine description that captures her defining features:
+
+
+
+
+Heroine Character Description (295 characters):
+
+Pink-haired girl with winged eyeliner, pink fabric face mask covering lower face. Soft pink ruffled crop top, white pleated mini skirt, white thigh-highs with pink bows and garters. White platform sneakers with pink soles. Carries bright pink utility blade. Cutecore aesthetic with kawaii styling.
+
+
+
+
+This description leaves ~700 characters for cinematography, actions, backgrounds, and art style details in your 1000-character limit, while ensuring consistent character recognition across all 5 images.
+
+
+A young woman with fair skin and light long pink hair takes a selfie in a mirror, wearing a white pleated skirt, pink and white striped long-sleeve top, a pink corset, white thigh-high stockings with pink bows, white fluffy leg warmers, and white high-top sneakers. Passively holding a pink utility knife. 
+Fashion style is best described as cute soft pastel pink white goth.
+
+
+A young woman with light pink hair, styled in a loose, wavy fashion, takes a mirror selfie in a white room. She wears a pink and white striped turtleneck sweater, a white pleated mini skirt, thigh-high white socks with pink bows, and white sneakers with thick soles. Her skin is fair. The room is minimalist with a bed and a white dresser visible.
+
+---
+
+REDO ALL PROMPTS:
+Redo relevant descriptions throughout the html and image prompts to be 'young woman' instead of 'girl'.
+
+All image prompts (completely rewritten, everything existing discarded) and CSS colors and look should be redone entirely with this following updated new style:
+Pretty young woman in a clean cutecore style pink-white dress outfit with cute accessories and shoes. She is armed with a tactical military-style blade, but it has this gamer-girl color scheme of white color blade with a pink color handle. Everything and everyone else around her is a mix of grunge-industrial-office-corporate. Artstyle is something akin to a mix of cell-shaded with textures, kinda realistic-looking but heavily stylized with thick outlines around characters. Colors are a clash of garish and fresh (cutecore side) and drab dirty worn (grunge-industrial-office-corporate side).
+
+In CSS, headings, glows and text are cutecore, pink and pretty, but backgrounds are industrial grey with corporate blueish silver accents. Ensure the contrast between the text, glows/shadows and background elements is good enough that they dont blend on accident. Soothing soft lighting, almost ethereal, with the young woman seemingly being the presence of causing it despite the light direction coming from offscreen.
+
+
+---
+
+Ok thank you, next up do the @4 IMAGE Get Image Prompts After HTML done.md prompt. Output the result to folder 'Ready HTML Pages' as '[game_project_name_without_subtitle]_image_prompts.txt' file.
+
+Ensure each prompt will work standalone and create consistent results.
+
+The heroine character that appears in all images can be described as this:
+
+A young woman with fair skin and light pink hair takes a selfie in a mirror, wearing a white pleated skirt, pink and white striped long-sleeve top, a pink corset, white thigh-high stockings with pink bows, white fluffy leg warmers, and white high-top sneakers. Passively holding a pink utility knife. 
+Fashion style is best described as cute soft pastel pink white goth. Cutecore aesthetic with kawaii styling.
+
+Longer outfit info:
+This stylish outfit is perfect for anyone looking to make a bold fashion statement. The ensemble features a soft pink, long-sleeved crop top with a high neckline, accented with delicate ruffles and buttons for a charming, feminine touch. Paired with this top is a short, pleated white skirt that falls just above the knees, adding a playful and youthful vibe to the look. Underneath them is a partially visible pink corset.
+
+The outfit is completed with white thigh-high socks adorned with pink bows, which provide a cute and flirty contrast to the monochromatic color scheme. The socks are held up by white garters, adding an extra layer of detail. The shoes are white, chunky platform sneakers with a slight heel, offering both comfort and style.
+
+The overall look is complemented by a soft pink wig with long, straight hair, styled with side bangs and a cute heart-shaped fluffy hair pins on both sides of the face slightly above the bangs, adding a touch of whimsy. The wig is made from high-quality synthetic fibers, ensuring durability and a natural shine.
+
+This outfit is perfect for themed events, cosplay, or simply making a statement in everyday wear. The combination of soft colors, playful details, and comfortable materials makes it an ideal choice for anyone looking to stand out with a unique and fashionable look.

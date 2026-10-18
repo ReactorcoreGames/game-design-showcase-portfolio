@@ -1,0 +1,159 @@
+Farthest in galaxy
+========
+
+Galactic hyperwave detection arrays
+(antennas, cameras, sensors, radar etc)
+(both celestial, space installations)
+
+Galactic megaweapons (in development, SW)
+(guns, IGBM's, berserkers, RKKV's, fleets) (none)
+
+Local galaxy defence fleets, ships
+Local galaxy defence guns, detection arrays
+Local natural galactic terrain
+
+In-galactic buoy, travel lanes, infrastructure defences
+(drones, guns, ships, detection, stations, outposts)
+(relative short range outer galactic defence guns)
+(limited by accuracy and range)
+
+Inbetween star system hubs, bases, stations, stops
+(higgs boson powered, since more bandwidth of it available in darker sectors of space)
+(beam guns, shields, detection, drone fighters, occasional warship or armed civilian vessel)
+
+Star system border, wide 360x360' grid
+(solar wind termination shock)
+(defence line 1, light, territory markers, advisory)
+(automated light border buoys, armed, no crew)
+
+Just outside farthest celestial body, XYZ rings, Pluto
+(defence line 2, medium)
+(Armed resupply stations, small fleets)
+
+Just outside habitable zone of star, XZ rings
+(defence line 3, heavy)
+(Strong gun battery arrays, then heavily armed and armoured fortresses, bases, large battle fleets)
+
+Habitable zone:
+Planets, colonies, megastructures, stations
+(remember "perfect engineered solar system" pic)
+Habzone infrastructure, comms, lanes, power transmission, resource sharing, shipping, rando traffic
+Progressive dyson swarm towards sun
+(defence line 4, ultra, combined, dense, various)
+(major military hubs, deep sensor arrays, on-celestial megaguns, battlestars, occasional battleships, civvies, megastructure drone guardians, small, huge)
+
+Celestial object orbital defences:
+Far orbit heavy gun XYZ rings
+After that, large bases, big guns and fleets XY rings
+Close orbit 360x360' grid light defense satellites
+Space elevator, low orbit stations
+Orbital shield barriers
+
+Celestial object terrestrial defences:
+Sky fortresses, floating sky ships
+Planetary guns, bases, docks, mass drivers 
+(in XYZ ring pattern for full coverage)
+City shields, shrouds, jammers, countermeasures
+Venus project style node cities with perimeters
+
+Planetary terrain layout, features, weather, cycles
+(natural protection, placement considerations)
+
+City,town,village,outpost - urban unit
+perimeter guns, anti-air, anti-space launchers, walls, fences, doors, barriers (tailored to environment)
+
+In-urban guardians, patrols, stations, closets, modules, docks, deployment fixtures.
+
+Bunkers, disaster shelters, escape vehicles, dedicated reinforced buildings, rooms, compartments.
+
+Personnel armories, vehicle bays, hangars.
+
+Emergency combat arms/kits.
+
+Personal suit or standalone defense device.
+
+Sun optimizer megastructure
+(partial vertical dyson sphere)
+(star waste energy minimization, star lifespan increase, star weather stabilization, star refueling, enormous energy collection banks, batteries)
+(this is where gigantic inter-galactic superweapons could be hooked up for huge  direct power supply)
+
+========
+Closest to a local star
+
+
+Note: each star system and its individual celestials may receive varying density of defenses and infrastructure. Less activity = less dense defences. Some star systems are also more engineered than others, while others are more natural and untouched like our solar system.
+
+At minimum, for the most remote isolated areas, each celestial has at least 6 satellites and 3 ground stations. (orbital stations if its a gas giant or planet is otherwise too hostile to land on). There is also a hyperwave buoy and 20 automated drone guardian ships (two per each location), plus additional scout, maintenance, security, monitor, survey drone units.
+Each location houses an empty visitor space for a 100 humans, should anyone get stranded in the area.
+
+Star colonisation density, rate or existence depends on star's properties (stability, type, hazards).
+
+Most worlds in milkyway are discovered, known, but not all are visited and much less have been colonised. Full colony saturation is still underway.
+
+
+Systems:
+Guns, cannons, projectors
+Missiles, warheads
+Bombs, devices
+Detection
+Drones
+Mines, traps, area denial, saturation
+Walls
+Terrain
+Weather
+Obstacles
+Ships
+Vehicles, mechs
+Suits, armors, portables
+Turrets, silos, launchers
+Catapults, mass drivers
+Fortifications
+Bunkers
+
+
+Styles:
+Indirect / direct
+Space / planetary
+Gravity / none
+Atmosphere mediums
+(gas, liquid, vacuum, fields, plasma)
+Space, air, ground, water, underwater, subterrain
+Disposable, sacrificial / durable
+Offense, defense, support
+Smart / dumb / guided
+Catalyst, activator, igniter, primer, detonator
+Accelerator, booster, enhancer
+Elemental, infused, multi effect, combiner
+Target specific, emp, bio, litho, metal, energy
+Real world / cyberspace
+Blunt, penetrator, spalling, phasing mw
+Solid, payload, splitter, carrier
+Lethal, repel, pacify
+Collateral damage classification
+(safe, tactical, brute, annihilation)
+Knockback, victim/target relocation, tosser
+Pin them to walls, sticker, attacher
+Sticky, slower, gunker, immobilizer
+Solid kinetic based / energy particle driven
+(abundance of matter vs abundance of energy)
+(solid celestials vs deep space zones)
+Transforming, connecting, separating, combining
+Centralized, decentralized
+Master-slave or equal collaborators setup
+Integrated / standalone
+
+
+Concepts:
+Art of war stuff (communication with enemy, smart)
+Detection ranges
+Jamming, hacking, ECM, social engineering
+Stealth, mirage, subversion, hiding, camouflage
+Lures, traps, baits, kill boxes, substitutes
+Decoys, countermeasures, redirection
+Tactics, strategy, individual performances
+
+Terrain manipulation, utilization, exploitation
+Digging, tunnels, collapses, floods, geo-activity
+Anomaly, weather, environment exploitation
+Use of celestials themselves in strategic combat
+

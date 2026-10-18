@@ -1,0 +1,60 @@
+Temporal Shift RTS and Type 1-X Mecha RTS
+
+==
+
+Two ideas.
+
+==
+
+First one is to implement both seamless slomo and time travel mechanics into an traditional skirmish style Real-Time Strategy game in the style of Tiberian Sun or Red Alert 2
+
+- Smooth intergrated on demand infinite slomo to quickly switch or even pause the game (or just do Streets of Rogue or Fallout 4 VATS style really slow slomo).
+- Ability to send units to the future, allowing them to warp a short distance within a radius. Basically command a unit to jump forward in time and it vanish from the field, only to reappear where you told it after a specific amount of time.
+- Ability to request units to appear from the "supposed" future back to the present. Basically get your units now, but if you fail to have them built and send in the future to a place to send them back in time, then something catastrophic will happen to you, tearing a spacetime and wrecking your base like it was hit by a super weapon.
+- Ability to disrupt units that are traveling forward in time and interdict them, bring them to the current present.
+
+
+==
+
+Second one is to feature mainly AAL classified "Type X Mecha" as the primary combat units, both in space and planetary settings, with typical C&C buildings/structures and carrier ships/battlecruisers inspired by homeworld. 
+
+- Theres an element of Empire Earth or Age of Empires where there are tech tiers or epochs that feature major jumps in terms of power, mobility and capabilities, almost like a Kardashiev Scale thing. Type 1 mecha could be considered infantry, Type 2 - vehicles (Tank, APC, Artillery, AA, Anti Infantry), Type 3 - super units (think GDI Mammoth Mk2), Type 4 - ultra units (Chamber), Type 5 - Evangelions/Gunbuster, Type 6 - Star Gods.
+- Infinitely expandable with new units/buildings/carriers/objects/etc but kept smart and simple using that "Available parts" greying out technique from my Reassembly Overhaul doc. Can make different types of variants of Type X units.
+- Use asset forge or similar for creating the assets - all of them.
+- Use a rock paper scissors armor/weapon system with weight/strenght classes (energy kinetic chemical dimensional vs metal composite organic virtual, respectively). Visualize them clearly to distinguish them. Works similar to Pokemon's Weak/Resist chart but only with 3+1 elements.
+- Prefer a simplified pre-made unit roster with loadouts for easy access from a database. Include a unit maker/editor to create new units like an AC/DxM mecha.
+- Low tier/low tech/low epoch weapons are typical point-to-point weak Tiberian Sun style warhead weapons. High tier stuff works on basis with lines, cones, rectangles, circles and otherwise wider AoE or Smart elements, making those weapons frighteningly powerful (Evangelion AT-Field blast/beam vs Main Battle Tank cannon)
+- For each Type X mecha, there may be different tech tiers that belong to a another type. Normally its defined as Type 1(primary type, so its an infantry sized unit no matter what)-(dash)3(true technology type, so in this case its an infantry sized unit but with the technological advancements and systems that belong to a Type 3 by default.) This system can go both ways to create ultra advanced small units (Type 1-6) or low tech mega units (Type 6-1).
+- Typical controls that of Red Alert 2 with some modern additions inspired from Zero-K, Beyond All Reason (BAR) and other newer and better RTS titles.
+
+
+==
+
+Both of these ideas can be combined into a single project.
+Or the first can be made into a simplified mini project as a proof of concept.
+
+Regardless, the first one is important as it addresses the nonsense core of existing traditional RTS games that essentially require one person to do the work of a thousand trained specialists all alone, in an absurdly tiny timeframe that in reality can actually take hours, days, weeks, months in total.
+
+Also I want to eliminate the aspect of a cheating AI opponent so that battles of attrition become equally devastating to an AI opponent as it is a human player. Currently the human player gets a limited pool of money that is quickly used up to get the bare basics going and a really weak initial force of a few soldiers and a vehicle or two. Losing any of these or even having to repair damage to any sort of attack or mishap can be crippling to the point of unable to mount a proper attack on the opponent or survive their next attack wave.
+
+On the topic of cheating, TibSun and RA2 both also let the AI build higher tech buildings and units despite not having the prerequisites built to access them legally.
+
+Another I want to reduce greatly is the need for micromanagement and reliability of combat. Currently in TibSun/RA2, my unit will travel in a conga line, with units in the front stopping to shoot at an opponent once they're within firing range, blocking all other units behind them, forcing them to circle around - whom also do the same to their following group members. This results in feeding my units almost one-by-one into an enemy grinder, making it easier for them to reduce and destroy an entire force that should have been effective and large enough to break through and win.
+
+Theres also the issue of units being stupid to follow damaged enemy units that are escaping straight into a enemy base with defence structures - ignoring them entirely - or attacking enemy units stationed near defence structures, while ignoring said defence structures that are a far greater threat and also their weapon would be more effective against them rather than the unit they decided to attack first.
+
+So I suppose target prioritization, better situational awareness, formation movement or smaller collission boxes for friendly units to allow for smoother movement while having larger collision boxes towards enemies, to better create blockades and stop movement or keep someone at a minimum distance. This ofcourse only matters for simulated physical projectiles and units. Another option is to remove unit collisions to some degree and focus on simplified AW2 style damage calculations and "salvo attacks".
+
+Further on micromanagement, same for base building designs. Now, I really like the idea of building bases, especially neat ones with walls, pavement, gates, lights and some level of organization - but I also need to make the creation/management of bases to require less meticulous attention and precise clicking so that it ensures player will have more awareness brainspace available for combat and battlefield situational awareness - like finding crates and organizing a pickup for them or to consider broader tactics and strategies on what to do and how to do it.
+
+Lastly, I want to reuse bases. I do still love "start from scratch with an MCV" experience, but I also want to establish battlefield control on maps with a pre-existing base assets. Obviously this means that there needs to be a balancing factors to ensure an enemy doesn't begin with a good base and I begin with a poor base types of scenarios - basically guaranteeing a loss depending on unit and AI designs, but still. I don't mind the occasional uphill battle or a stroll in the park, as long as the former is never too hard or outright impossible to win. Perhaps the default skirmish gameplay would have to be altered in some way to allow for me, maybe taking inspiration from the singleplayer campaign missions on how to set them up, without ending up in the same simon-says type of trap that campaign missions are faulty with.
+
+Speaking of campaign missions, they indeed also feel frustrating and flawed at their core since it often feels like those experiences are what I call a "Simon-Says Affair", where the author of the campaign scenario assembled an arbitrary scenario that more or less funnels a specific type of solution to be the only viable one, with not much variety or surprise, making it borderline uninteresting both during first play and also making it unreplayable in general too. I need to redesign the game to have the benefits of campaign missions but with the core of open-ended skirmish gameplay.
+
+Obviously maps will still encourage and discourage certain strategies in favor of others, but I think those too can be mitigated with some Deus Ex style level design principles and better unit variety. More different terrain types inspired by Advance Wars 2 in how they affect movement, but also different hazards, exploitables, neutral or unaffiliated hostiles or minor bandit groups, interactive transports like trains or barges that belong to no one but every can use them, nature flora/fauna and other such things that I've seen in Tiberian Sun and Red Alert 2 maps.
+
+Overall, the pace of the game is mildly slower than default Red Alert 2 and there is both more room and incentive for granular tactics that red alert is capable of - a combined hotkey group of anti-infantry units, anti-armor units, anti-air, air support units and a special purpose unit or scout that I as a player switch between and command them to engage targets that they're most suited at. 
+
+Currently this barely has the change or time to happen unless I'm playing at a very low game speed and even then I can still get overwhelmed badly. More commonly its a case of building a so-called "death ball" or "death blob" - essentially a large enough collection of units that have enough firepower and hitpoints to both withstand the defenders and to destroy them.
+
+Tiberian Sun and Red Alert 2 both have interest waypoint systems that sadly get underused because of this issue. I want to have those system so that the player can freeze or greatly slow down time to have the ability to setup all the waypoints and bookmarks, then have the plan be executed - while making occasional changes and reactions to the situation as the plan unfolds. Eventually, 

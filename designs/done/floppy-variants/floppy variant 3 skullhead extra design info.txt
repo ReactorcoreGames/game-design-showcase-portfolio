@@ -1,0 +1,69 @@
+This particular spinoff project is mainly inspired by two crude violent Adobe Flash games that used to be on Newgrounds in the early 2000's; 'Skull Kid' and 'Whack Your Boss'. Both games were designed for anger management without having to act out on those feelings in real life. They and many games like that personally helped me mentally withstand psychological abuse and emotional violence during my early teenage years when pressures, expectations and frustrating hypocrisy from parents, school staff, strangers and society were unbearable at times. They were also useful in the sense of showing violence in an uncensored way which let me see how horrible real violence actually is, making it less appealing to see or do irl, compared to something sanitized and cartoonified like Epic Game's Fortnite which paradoxically normalizes and encourages violence by sugarcoating it.
+
+<inspirations>
+# Info on Game 1:
+'Skull Kid' is a funny and slightly macabre game for everybody, who wants to let off some steam. Walk around the office as the merciless psycho Skull Kid (a young dude with a literal skull for a head) and destroy everything and everyone in your way. Use deadly weapons such as chainsaws and firearms. Your goal is to walk all the way to the exit door and get to the next level without getting killed by the office workers. First level has no threats to you, middle levels have a mix of passive targets and active targets that attack back with knives and modern firearms, while last level is a passive CEO boss that chastises Skull Kid but is too lazy and arrogant to fight or even think that theyre in any kind of danger.
+
+Take your chainsaw and firearms and destroy everything that crosses your way, such as tables, couches, copy machines or even humans. Only if you make it to the exit door, your task is accomplished and you can move on to the next level. But be careful, soon your targets will defend themselves and you might be in serious danger yourself.
+
+# Info on Game 2:
+'Whack Your Boss' is a simple beat the boss game with a dark and sense of humor. the game is focused on you beating, fighting and killing your boss. How will your frustrated employee respond to the supervisor's condescending attitude and frustrating ticks? A very simple idea: What would happen if you were to unleash your pent-up anger on your boss? The answer comes in the form a crude, yet surprisingly violent gameplay of one guy straight up killing his boss and any other goons that get in their way. Each boss battle is a crazy, and bloody depiction of revenge and over-the-top carnage.
+
+Whack Your Boss is a morbidly fun boss fighting game. Make an emotionally unstable, psychopathic employee turn everyday office items into deadly murder weapons. Watch him beat, bludgeon and skewer his boss with all kinds of objects, lying around at the workplace. Explore your character's workplace to find new ways to kill, maim or whack your boss during business hours. Laugh at the sadistic and gruesome ways the physical attacks on your boss turn lethal. It's all the makings of a serial killer, from beating, shooting and just wacking an unsuspecting boss.
+</inspirations>
+
+Some notable differences compared to other spinoff games:
+- Title is 'Skullhead: Psycho Murder Spree'
+- Dismemberment is accompanied with blood spray particle effects, and dismembered limbs can be further damaged to change their surface texture, ranging from intact skin to bruised, wounded, mutilated and gored with bone visible, after which those limbs become immune to attack/projectile collisions, likely to settle somewhere on the floor.
+- Player has a unique ability to regain health and regrow lost limbs by dismembering or killing live characters. Or by consuming food items found in the level. Only player can heal in this game while opponents cannot, to balance out the fact that player goes up against many opponents and obstacles all alone.
+- Instead of being arenas, stages are structured as horizontal stages akin to NES Super Mario, albeit without bottomless pits or tilebased terrain. They're instead littered with static or physics props, some destroyable, some as hard terrain/walls.
+- Generally the theme and style of the game is satirical and ironic akin to the game 'Postal 2', taking place in the early 1990's cubicle offices, mid-tier malls, boring cow farms, various typical city and suburban locations, trailer parks, prisons, fast food places, etc.
+- The color scheme a mix of boring urban muted colors with a splash of red stained blood. No neon colors or glows.
+- Player chooses a starting loadout of 2 weapons and can swap them (by pressing E) with whatever they find on the stage. Weapon have infinite ammo and durability mostly for the sake of keeping the game simple instead of worrying about ammo management or durability.
+- Player can also press E to activate context sensitive objects like doors or use items on the ground such as food items.
+
+---
+
+Some feedback:
+
+make any grey colors have a slight muted color tint so they're not entirely grey
+make title have like slightly brighter crimson color text and then something that is a dripping dark blood red as text shadow animation
+lore wise its not exclusive to corporate oppressors, its more broad, targeting assholes throughout society in various places all around a city, both on low level worker, mid level managers and owners/bosses. Including white collar places, blue collar places, academia, schools, public spaces, commercial malls, etc. Sort of a revenge against society type of thing.
+new revamped controls: WASD to move up/left/down/right, mouse to aim character rotation, m1 to fire/use current weapon, m2 to dash in direction character is facing, Q to swap to other weapon, E to pickup items, or activate objects, or to swap for a new active weapon, placing the old one where the new gun was picked up, space to brace for impact, minimize damage to self, mouse wheel keep the same as before. Rest omit.
+tie vignette and feature images to game mechanics but worded for a layperson.
+no improvised weapons - player uses a chainsaw, knife or axe, and a mix of typical american firearms. Opponents also use similar equipment, except for the chainsaw.
+no permadeath system for low metagame, player is a person who made a contract with the devil to enact revenge. If they die during a stage, an earlier save checkpoint is loaded, similar to older FPS games. This is explained by the power of satan forcing the situation to always end up a certain way for the context of this game.
+low metagame is about vengeance on a specific place/building/mall, while high metagame is about revenge against a town, or a specific part/area of a city. high metagame shows a map similar from the classic FPS Doom (1993) intermission screen, have a blood splat on places that were cleared and a "you are here" to point where you're going next.
+high metagame works by player entering the name of a town or part of city that they want to revenge upon. Then from there player can write the name of the specific place/building that they want to strike and choose from a set of presets if its an office, a school, a mall, etc. Low metagame will proc gen a gauntlet of 5-15 levels as per players wishes, where they will go and play as Skullhead. After completing those places successfully, they are marked at "eliminated". Player can replay those map again but the first playthrough usually marks that they've canonically already been there and cleared it out. High metagame essentially becomes something akin to a personal album of places the player has a personal anger towards, kinda of like the Death Note, except as a playable revenge fantasy experience.
+so no nemesis system for this game, no news ticker either.
+theres only two game modes, the above thing I described (lets call it Death Journal), and a quick temporary throwaway low metagame 10 level gauntlet if player doesnt want to deal with the persistent death journal stuff this time and just jump into some straight-forward randomized carnage gameplay session.
+stuff you wrote for environment destruction and different enemy archetypes is good, adopt them for the plan rewrite.
+for destructible environments, game uses a library of props that are randomly placed into levels.
+
+
+
+Lets rewrite the plan with all this info.
+
+---
+
+Some further changes needed:
+
+Title: Skullhead: Death Journal Vengeance
+Subtitle: Psycho Murder Spree
+health regen doesnt involve cannibalistic consumption, its simply part of the powers gained from the devils contract that when someone is dismembered or killed, Skullhead will dark-magically restore any damage they suffered prior. Its meant to reward aggressive play.
+in target audience, swap retro gaming enthusiasts with old violent Flash games.
+make the image quote for vignette a more edgy instead of sounding like a revolutionary. the quote for feature image is good though.
+
+
+
+Other than that, the rest is approved. Proceed to HTML building phase, with the above changes implemented.
+
+---
+
+Skullhead character appearance: Otherwise an average looking human wearing khaki cargo pants, light grey t-shirt with short sleeves, exposed light hispanic skin color for arms, black and white sneakers, but instead of a neck its just a column of spinal bones that connect to a clean white skull that appears angry. Edgy stylized art style.
+
+---
+
+Skull Head was once a non-named adult young american male of mixed american-mexican parents that endured a hard upbringing, unloved by their parents, bullied in school, abused at work, emotionally manipulated by friends, robbed and beaten by thugs, losing a loved one to a stray drive by shooting, getting screwed over by bureaucracy, getting unlucky with corrupt police, and so on, and eventually they were consumed by such strong hatred that they made a contract with the devil, giving away their soul away in exchange for power and immortality to enact vengeance as Skull Head, forever dooming the control of their mind and body for purpose of perpetual vengeance against society as a whole, to kill and hunt everyone as the intrument of the devil.
+
+---

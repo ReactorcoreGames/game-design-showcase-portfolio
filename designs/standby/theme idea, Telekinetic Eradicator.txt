@@ -1,0 +1,45 @@
+Theme/Mechanics idea:
+
+Telekinetic Eradicator
+A regular person trying to do basic chores to survive a week, but gets swept into threatening situations that force them to use violence. (I guess we making Postal 2, then.)
+Its a world where many people are a cruel bastard, including street thugs, unhinged locals, despicable bullies, narcissists, weasel politicians, hierarchical npc-like police, amtsprachen workers/managers/bosses/CEOs, sicko immigrants, treacherous succubi, findom scum, sleazy sales persons, linkedin lunatics, priviledged assholes that enjoy lower people suffering, low people that do bad, drug dealers, foreign burglar group that steal copper railings, chinese tankies, etc. Plenty of inspiration from the news or urban stories.
+
+The protag person actually has hidden telekinetic and psychokinetic abilities that allow them to do various cool and scarily powerful things with gesture of a hand/arm(s):
+
+OFFENSIVE:
+- explode someone's head, torso, arm, leg, etc. Or any object for that matter. (sort of "take a hold of something and apply rapid directional/shaped explosive force upon it", kind of like turning whatever you want into a claymore mine where you can direct where the 45-90 degree blast is aimed at.)
+- same as above, but crunch/implode instead. (hold out hand, palm directed at thing, curl into fist as user mentally focuses on it. Previous is similar but mentally chose to "blow it up" instead of "crunching it" and don't close hand into a fist but keep it open.)
+- create an intensity gravity well that crunches and compacts the entire targeted person into a superheated shrunker orb.
+- swipe/slash with an arm to project a variable lenght superheated energy blade that cleanly cuts through flesh, bone, wood, metal, but not thick stone or concrete - atleast not without great struggle and repeated strikes, leaving a superheated cutmark on them nonetheless. The lenght of the blade is controlled by the primarily mind but influenced by body motion too.
+- similar to above, but instead of a singular blade, project a fan-like array of small blades, one per each finger, with a maximum of 5 per hand. If doing a crosscutter arms movement, user essentially creates a grid/web slash. The smaller finger blades are overall less powerful, able to cut through flesh, bones and wood, but not through metal or particularly thick layers of materials.
+- apply sudden and growing directed pressure to rapidly crack and shatter rock, concrete in a variable sphere area (radius or diameter wise), gradually breaking it into smaller and smaller pieces as it turns to gravel eventually.
+- telekinetically propel a loose solid inanimate object from one point towards another, with distance between the two points determining the launch velocity of how much speed it'd take for that object to travel in 0.1 second (100 milliseconds), so if the user draws a vector line of 3 meters from the object toward another point in space, the object will be properlled by 108km/h.
+- same as above, but instead of a singular whole object, instead within a variable sphere area (radius or diameter, w/e) so the user can grab an aggrerate of objects within that sphere to have the telekinetically induced momentum speed vector applied to it all of a sudden.
+- telekinetically take hold of something at a range between 0 to a maximum of 100 meters and move it around in the air as if held by a gravity beam. Can be then freely thrown like a spear, boulder, bowling ball or flung sideways, accelerating the speed of the object dramatically with excertion and mental focus, sending the thing flying at the desired force. The user intuitively feels what strenght/launch force is correct. Range of launch force ranges from 1km/h to 1000km/h. (not enough to break the sound barrier)
+- as an addon to above, forcible reshape/mangle the held object or aggregate mass of objects into a superheated fused sphere, oval, american football shape or spear, for improved and more cohesive throwing performance.
+- cause an radial EMP blast outwards from self as origin point with a variable distance. Fries electronics. User balls hands into fists hunches and crosses arms, triggering the detonation and range mentally.
+- porcupine bio signature knockout - user curls and lowers self, intuitively senses every live creature around them in at a distance between 10-100 meters and sends a homing high velocity psycho tendril right through them, causing the affected to lose temporarily conciousness for 10-600 minutes.
+- "mind crush" - a targeted mental attack that requires eye contact, inspired by YuGiOh Abridged, max range 10 meters, hand reaches towards target gesture, leer at them and trigger the mind crush. Causes the target to become a vegetable, a mentally brain dead - possibly permanently. Can also be used to mind control, as long as target remains within a range of 1km of user, control becoming harder to maintain the further the victim travels from caster.
+- Death touch - snuffs the life out of a victim person within a few seconds. Requires touching the victim with hand, usually targeted at head or heart causing a subtle failure. Also lungs are a valid target, but slower and more difficult to do. Other organs can be targeted too to cause them to fail or become damaged, though they're a less-than-lethal option.
+- EMP touch - similar to death touch, but against electronic devices, frying their circuits or components, rendering them unusable/broken/temporarily non-functional or glitched.
+- shockwave - like force push, but either used as a wide wave or a radial blast to push everything away instead of just one or group item grab and toss.
+
+DEFENSIVE or UTILITY:
+- invoke a deflective orb that envelops the user, causing incoming projectiles to bounce off towards whatever angle makes sense physics wise.
+- same as above, but warp based where incoming projectiles momentarily curve around the user and keep flying according to their original trajectory, almost as if the user wasn't there in their way.
+- similar to the first one, the deflective orb, but as a square/rectangle wall projected in front of self in desired direction
+- levitation/flight/superjump - basically grab hold of own body and freely apply gentle controlled speed vector at desired pace (gradual or sudden) and intensity (fast or slow) loose or tight (minimal friction and maximum momentum or weak/strong auto-brakes on at all times.)
+- time freeze, (can slowly move self at a rate of 0.1 normal speed)
+- slow motion, 0.2 timescale (able to think at full speed, but own body moving at 0.2 timescale speed too)
+- turn invisible (disappear from the visible/optical and thermal/infrared spectrum)
+- telekinetic pull/yank, push/shove, gentle hold and drag/hover/float. Unlike the more violent version, this one can be used in a utilitarian way to move things around. Can also be used to remotely activate or manipulate objects at a range without having to touch them physically.
+- telekinetic x-ray sense. Its not x-ray vision that lets you see through walls, but something that feels like it, sort of like a psychic version of echolocation.
+- a quick wide blinding light blast to cause temporarily disorientation at anyone looking at caster in the general direction of the cast.
+- accelerated passive healing, as long as user is fed, they can heal most damage or issues of their body and mind.
+
+Each of the abilities are controlled, triggered, detonated using the mind of the user, while using the rest of their body to channel energy, direct it and empower it. A weak body and weak mind results in weak powers. Some can be used covertly, others need more overt action to use them.
+
+In terms of the game, it could be made in 2D, in VR (3D), maybe even just 3D (fps or tps). Personally I'd just focus on 2D, either sideview platformer or top down.
+Unlike all other games, this one would be a pre-built experience ala Postal 2 or Fallout 3, or like those 2D slice of life narrative adventure games, all with an open world type of place where player can choose the order of the thing they need to do, offering a few alternatives to complete quests, all resulting in different conflict situations 90% of the time. Like Postal 2, it'll do a Day structure with a Day-specific todo-list of innocuous things that the player has to do that takes them outdoor to do stuff, like groceries, visit the postal office, check with the police for a licence thing, go to an event, withdraw money, go to a speciality shop for a special item, pay respects to a grave, go to a mall, go to a library, go to school to respond to child being in trouble at school, etc. Places where the player will encounter someone and have to deal with a situation.
+
+The controls and gameplay would heavily rely on slomo and doing a satisfying psychic/telekinetic attacks upon assholes as a swift brutal justice that normally you'd never be able to do due to lack of power and safety to do so irl.

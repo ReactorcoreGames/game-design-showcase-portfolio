@@ -1,0 +1,82 @@
+Pixel Sprites ala ReactorCore (PSRC)
+A Graphical Assets System
+
+
+
+
+
+Summary:
+A complete solution/library of standardized intercompatible pixel-art sprites designed specially for a Super Game. Also includes a polygonal/shape based extension system for objects that are too large for pixel-art as a medium to handle.
+
+Description:
+Planet Warfare needed graphics, so PSRC was born to fulfill dual purposes;
+
+
+(The original Mark 1 Human Character of the PSRC project. Focusing on a completely side-view based style.)
+
+1) An all-aspect art library that has built-in game design work integrated directly into the sprites themselves with the aim to support a Super Game with the most amount of flexibility, standardization and modularity possible. As a bonus it also looks cool and is just the right balance between detail, functionality and fidelity.
+
+2) Become a popular asset store product for anyone who needs high-quality, standardized and highly versatile/modular/flexible pixel-art sprites for their games like never seen before. They would be really easy to understand, easy to work with, easy to replicate and modify by anyone - this is intentional by design and PSRC as a system even offers education to turn anyone willing into a pixel artist too. 
+
+There's also the idea that modders could use these as a resource to ensure the production of high quality art for any new content they create for any game that uses the PSRC library.
+
+
+The 3M System:
+
+
+(As I kept drawing larger things I noticed things started to become unfeasible for mass production. It would either result in an image too large and heavy or in requiring detail that was far too laborious to draw.)
+
+Besides just standardized pixel-art of PSRC, I ran into the problem that pixel-art is only cost effective up to a certain size - namely 96x96 pixels max. Since the scale standard is set at 32 pixels per meter, that means I can realistically only draw pixel art for objects that are below 3 meters in size. Anything more than that results in images that are too large and heavy in terms of performance and disk space if I were to have thousands of them - which is the ultimate goal here - so a solution was needed for this all-aspect art system to handle objects larger than 3 meters.
+
+Keep in mind, PSRC is supposed to be all-aspect - it needs to be able to handle anything as small as a tennis ball up to enormous things like tall trees, airliners, cruise ships, mountains, moons, planets, megastructures and even stars.
+
+For reference, the earth's diameter is 12.742 million meters. Multiply that by 32 and you get 407744000 pixels - that's for width only, not even counting height of a canvas. Pixel-art workflow has the artist click on each pixel on screen individually to draw something - obviously it's too much.
+
+Heck, even something like a 20 meter tree would be 640 x 640 pixels which is an absurdly large canvas already. A cruise ship is about 300 meters, so that's 9600 x 9600 pixel canvas - most image/photo editors start to struggle in performance even with images half that size. Meanwhile the image would be so large that it wouldn't even fit the monitor/screen.
+
+
+(A rather primitive showcase, but it communicates the general idea behind the 3M system. I believe this system combined with strategic usage of sprites and better standards for how to design objects with this system, I think fairly neat results can be achieved, especially when combined with 2D lighting systems and shadows.)
+
+The solution is to use a hybrid art system that combines simple geometric shapes like rectangles, triangles, squares, lines, seamlessly tiling textures and greeble pieces of tiny/small pixel-art that is randomly scattered across the surface of said shapes. 
+
+Additionally, color tinting is also used to alter the color or sprites, shapes, textures and lines. I call it the "3M System" - since it's an art system mainly intended for objects that are longer/taller than 3 meters.
+
+It may appear odd at first, but the goal is to realize gameplay mechanics that regular art cannot achieve - full destructible environments, shattering/splitting of objects, merging natural and artificial objects together, drawing hundreds if not thousands of entities that need a visual form.
+
+
+(Some snapshots of maps made by a famous mapper “VirtualTT” from the Soldat Forums community. Compared to original vanilla maps, these had detail and scale unlike any other.)
+
+The Polish indie game Soldat was a pioneer of this by using 2D polygons to build its levels. It even went as far as to stretch sprites used as decorations and even stretch seamlessly tiling textures on the polygons they were applied upon, but despite the unconventional abstract solution I think it looks quite stylish and timeless in my honest opinion, even to this day.
+
+Legendary mappers like username VirtualTT on Soldat Forums created incredibly detailed and beautiful levels with this system back in the day.
+
+
+(A general overview of the 3M system and suggestions for how to apply it for best effect.)
+
+Though unlike Soldat which only used polygons for terrain, PSRC aims to extend the system to cover any objects, vehicle, machine, flora, fauna, monster, urban infrastructure.
+
+It can even cover some lesser objects that are below the size of 3 meters - like garbage/trash cans, fire hydrants, fences, bollards, streetlamps, doors, windows, traffic lights, benches, bikes, rubber boats and more.
+
+The idea is to focus the pixel-art sprites mostly upon items relating to the human character - things they wear, carry, equip, hold, use, etc - while delegating everything else to the 3M system.
+
+
+Status:
+
+My original wave of PSRC packs were made in a rush due to external pressures. This resulted in poor/missing standards - they are best considered a prototype, a testing ground for figuring out the final form of PSRC sprites.
+
+
+(My old workspace when drawing the Mark 1 Human Character, trying to figure out the scale, style and form of the basis of this art system.)
+
+Since the original packages I've made key advancements in nailing down the standardization better. The largest change is the Human Being character Mark 2 that has been massively overhauled and upgraded to be the best template it can possibly be, enabling many features and streamlining that the first iteration of the human did not have.
+
+A new 32 pixels per meter scale standard also has replaced the old one (40px/m) and made it more inline with how computers like their graphics to be in 'power of two' scale format.
+
+
+(A new overhaul Mark 2 Human Character, now combining frontal and side view for better expressivity and detail. This one is standardized to a much better degree than the old one.)
+
+I have effectively completed the Human Mark 2, its accompanying Skeleton Mark 2, but I am missing clothes, hair, accessories, weapons. Luckily the other non-character object packs I made are still compatible and very well made; they are fully usable and even translate perfectly to the 32px/m standard.
+
+
+(One of my many work-in-progress sprite megasheets that still await my return to continue the work on shading the many objects that I’ve drawn here. There is a lot more than this one.)
+
+A lot of work is still left to be done - as basically I only have a naked human running around with power tools and trash bins, literally - but I have multiple megasheets prepared that require silhouette fixes, shading and coloring. I also have special sheets for tiles/blocks, animation effects and seamless textures that are mostly done but require some final refinement to make them complete.

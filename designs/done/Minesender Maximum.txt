@@ -1,0 +1,66 @@
+This should be a web based game that can be uploaded to itch.io.
+
+Make a classic windows 98 style minesweeper clone with a 12x10 grid, 20 hidden mines, 3 lives (so don't lose the game when clicking on a mine unless no lives are left, just cause an explosion animation to play on that tile once, show the mine, then turn the tile's background to crimson red). Have a button to safely flag one random hidden mine on the board; this ability has limited uses, player starts with one use, but for every 50 revealed tiles, they get a new use. Denote this ability button with a dog icon.
+
+Have a just like in classic minesweeper, have a face that reacts to clicks; idle is smiling, clicking is surprised, clickin on mine is terror, no more lives is skull, level complete is sunglasses.
+
+Do not have a timer, just have a red color counter for mines left.
+
+GUI TOP BAR AREA:
+- reactive face is top center
+- left side of face is a random country flag and then a randomly chosen two words from two separate lists that imply a location name, like  "Mike's fields", composed of [first name] + ['s] + [space] + [location noun]. Add 3 entries per both lists, tell me what is the maximum entries they can hold and I'll fill them out myself manually.
+- right side of face is life counter with three hearts and below it a button with a dog icon and a number beside it, indicating the remaining random mine reveal autoflag uses left.
+
+GUI GAME AREA BELOW TOP BAR:
+- minefield is a grid as usual surrounded by thick beveled border walls
+- unopened tiles are of darker color and more saturated, GUI buttons also have this color.
+- opened tiles have a lighter desaturated color.
+- surrounding border and greater background is a color that is somewhere in between those above two.
+- over all color scheme is a soft pastel/realistic; game randomly chooses any soft pastel/realistic color per new minefield and applies it to the above components.
+- opened tiles are either blank, have a mine on it, or a dark colored number between 1 or 8, indicating how many adjacent tiles have mines in them.
+- opening a tile that is blank will also open any other surrounding tiles until all tiles with a number are uncovered, just like classic minesweeper.
+- right mouse click will place/remove a flag from an unopened tile. Left click will open a tile, unless a flag is on it which will prevent it from opening.
+- player can place unlimited flags, limited by one flag per unopened tile.
+- placing a flag on an unopened tile will cause surrounding opened tiles with numbers on them to become light and desatured if the number of surrounding flags around them is the same as the number on that opened tile.
+
+GUI BOTTOM BAR
+- On left side, show a numeric counter (goes up to 999 max) of all non-exploded mines from all sessions so far. And on the right have a big button that says "SEND (End Session)".
+
+ENDING CUTSCENE
+- Upon clicking on the SEND (End Session) button, a simple screen is shown with a building/mansion/castle icon on the bottom right of screen and a plane on the top left of the screen. After a brief delay of 2 seconds, mines fly rapidly from the plane to the building/mansion/castle and creates an expanding bright yellow circle that engulfs the building, with a random origin offset about 30 pixels both in X and Y axis to give it an appearance of scattered explosions. The amount of mines corresponds to the amount of mines that were collected in the GUI BOTTOM BAR. (Note both building and planet aren't at the border, but have a margin so they're presented cleanly and visibly without hugging the border walls.)
+- After the last mine has been launched, wait for 3 seconds, and then create one last big red explosion from the center of the building/mansion/castle that is scaled by how many mines there were in total, with 999 being the maximum, each number adding 1 pixel to the blast radius. Scale of last big explosion will also affect how long it will last, minimum being 1 second, while longest being 9 seconds.
+- After one second of the last big explosion, swap the building icon with an ash pile icon.
+- After 10 seconds since the start of the last big explosion, show a button at the bottom center of screen that reads "Victory". Pressing the button will start a fresh new game with the accumulated mine counter set back to zero and amount of dog ability uses reset to 1 too.
+- At the top center of the cutscene screen, during the entire sequence, there is a text label that read [random noun from list of thug type names] + ['s] + [random noun from list of building type names].
+- Extra effects: during both small explosions, spawn a particle emitter that sprays a burst of simple dark grey particles, suggesting debris from the explosion flying away from the origin of each explosion. For the last big explosion, have a much bigger emitter that sprays simple yellow during the duration of the last big explosion.
+
+GAMEPLAY LOOP:
+1. Player begins with a random minefield to start with. First click on any new minefield is always safe no matter which unopened tile is opened first.
+2. Player will try to open every safe unopened tile until only tiles with mines remain on the field.
+3. If all lives are lost, player loses up to 10 recovered mines from the bottom bar mine counter, but not going below 0. A new map is loaded once the top bar area face is clicked on.
+4. Clicking on top bar area face resets the map with a random new layout, colors, location and flag, without neither losing nor accumulating any recovered mines, all 3 lives are restored if any were lost.
+5. Upon opening the last safe tile on the field, mines are safely revealed one by one with a simple opacity fade in animation on top of their unopened tiles. After the last mine is revealed in this sequence, a label appears in the center of the screen saying that clicking on the face will advance to the next map or the player can end the session with the button below. Technically player can skip the reveal sequence and click on the top bar face icon as soon as player opened the last safe tile and the face turned to sunglasses state (during which also the mines that didn't explode on this level had been added to the GUI bottom bar recovered mines counter).
+6. Player can continue playing as many rounds as they wish, but the recovered mines they collect will only count up to 999 at which point a small label saying MAX in red color below the counter will signal that no more mines will be added to this number. Player can either keep playing despite that or press the SEND game session ending button to enjoy the ending cutscene sequence.
+7. Pressing the Victory button after the cutscene ends resets the game back to 1.
+
+Title of game is "Minesender Maximum"
+
+At the bottom of the game, have this tiny footer:
+"Author: https://linktr.ee/reactorcore"
+
+
+
+FIX:
+- dark mode visual focus
+- improve cutscene delay logic (remove some delays entirely)
+- make chatgpt improve this document section by section with better cohesion, more detail to better instruct and AI to know what it needs to do. Fill in the missing pieces etc.
+- make chatgpt outline -> implementation instructions
+- make it more ukraine themed
+- get color palettes from other minesweeper doc (or just do a ukraine colors + realistic brown green for field)
+- better game name
+- better labels for UI and buttons
+- more consistent behaviour for HUD face (keep each reaction for an entire second stuck before allowing for a new one unless clicking on mine (shock) or losing the game (skull), make the latter permastuck until game reset.)
+- separate above doc into CORE GAME, NECESSARY AUXILIARIES, and EXTRA BONUS FEATURES, and implement them in that order.
+- Flux ai image gen "PC game screenshot of windows 98 minesweeper but modern and ukraine flag themed in modern dark mode style."
+- randomize amount of mines between 10 and 20
+- give out dogs at start based on total mines on map (1 dog per 6 mines) instead of earning them by opened tiles.

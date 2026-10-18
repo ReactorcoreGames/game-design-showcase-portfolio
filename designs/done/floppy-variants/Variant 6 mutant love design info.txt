@@ -1,0 +1,49 @@
+# Mutant Love Quest: Morphing Ragdoll Slapfest
+
+In a bizarre version of a mad-max mixed with idiocracy (the movie) style world, the world has been bathed in strange radiation that has transformed humans into weird super mutants with unstable bodies and limbs that keep morphing and shifting every so often. 
+
+## Campaign
+Looking for a new partner to call the love of their life, player controls one such mutant to find a partner they found in a neighbouring village via Wasteland Tinder. 
+
+They have to go through the gauntlet of their own parents saying no, local religious organization saying no, local town bureucrats/gatekeepers saying no, local village mayor saying no, random raiders getting in the way in transit to other village, a total of about 3 times, neighbouring village gatekeepers saying no, neighbouring village religious organization saying no, neighbouring village mayor saying no, and the final boss of parents of the date saying no.
+
+Each campaign is thus a gauntlet of 4+3+4 levels over these zones; local village, transit wasteland, neighbouring village.
+
+Each of these "obstacles" is resolved by slapping sense into them by whacking them over and over until they sustain enough damage that they will be knocked out of the arena and concede with the protagonists victory. 
+
+Overall its sort of like a goofy lighthearted trashy mutant themed lite version of smash bros gameplay, but with floaty physics ragdolls. Each battle will randomize the limbs, torso and head of player, giving them a different set of attributes and abilities that the player needs to adapt to on the fly while they try to fight equally wierd mutant opponents. Some fights are 1v1, some are 1v2, 1v3, 1v4. some opponents may either be larger or hardier, having 2x, 4x or even 8x the resilience to knockback, making the player work overtime to knock them out if they wish to reach their date.
+
+Once victorious, player's mutant will hug and kiss their love in a celebratory ending still image cutscene.
+
+All above is for the low metagame campaign. As for high metagame, for each new low metagame it creates, it generates a new mutant protagonist, a new date to pursue, both will have random names, genders, likes and dislikes attached to them. The local and neighbouring village names are randomized as well as the names of the various characters that come across during a low metagame are also randomly generated. All combat arenas and participants and their limbs are also randomly chosen per low metagame campaign. Each completed low metagame campaign will be added to a log list of lovers that successfully found each other in the high metagame. Maybe a group photo with the generated names written underneath all characters is also automatically created and saved as a memento of that campaign that the player can look back on and share with their friends.
+
+## Mechanics
+
+There are no dismemberment mechanics, nor armor, nor weapons, nor cannibalistic healing here.
+
+Instead, the more damage a character receives, be it player or NPC, they get a progressively redder color tint shader showing how strongly they've been damaged and the more vulnurable they are to smash-class attacks to be sent flying hard enough that it will be impossible for them to stay in the arena.
+
+Most activate abilities that can be used to attack someone fall into two classes:
+hurt-class: low damage rapid hits with low knockback that is only affected by 10% of enemy accumulated damage, usually never sending them flying. Cheaper, easier and faster to use, intended to weaken opponent before hitting them with a smash-class hit.
+smash-class: high damage slow hits with high knockback that leverages full 100% of enemy accumulated damage, usually blasting them off into the horizon if enough damage has been dealt prior.
+
+With a cooldown of 30 seconds, player can press a hotkey to mutate one part of their body at random, swapping it for another one of the same limb-type. It can be the head, torso, left arm, right arm, left leg or right leg, completely at random. The game has a library of heads, torsos, arms and legs that have certain attributes, passive abilities or active abilities. Usually legs are defensive and focus on passive abilities while arms are offensive and focus on active abilities. Torso is also passive but has its own set of bonus that legs dont have, while head is active and its abilities are more utility based.
+
+As an example:
+Legs are made of stone that make turning speed slower for player, but they reduce incoming damage massively.
+Arms can be activate to shoot fire like a flamethrower.
+Torso passively causes repulsive acceleration force for things that get close to it.
+Head shoot a long tongue that can be used as a grappling hook to pull self towards walls or to pull characters towards self.
+
+Funnily enough while torso and head will always remain in the same position, any arm or leg limb can become an arm or a leg; its possible to end mutate into having a torso, a head and 4 arms and no legs or 4 legs and no arms.
+
+## Controls
+WASD move character around arena
+Mouse aim, rotate character in that direction
+Mouse 1 activate left side limbs
+Mouse 2 activate right side limbs
+Q toggle torso passive ability on/off
+E activate head ability
+Spacebar flip character horizontal facing direction (left/right)
+X to mutate one random body part (head, torso, leg/arm 4x sockets from torso)
+F jump/dash forward in direction of facing.

@@ -1,0 +1,119 @@
+TERRENE v3 REMIX, AAL: EXTERMINATOR, 
+--
+
+Combat focused 3 layer assault game.
+
+--
+
+Player Characters:
+
+Agent
+Battle suit humanoid.
+Able to fly anywhere similar to "Meteorites" beings from that DnB music vid, or like superman.
+Thermal Lance digging.
+Held rapid railgun rifle. (utopia must fall style)
+Super explosives/power bombs/C4.
+Able to slip into smallest spaces and avoid all huge defences that jet/carrier are normally stopped by. Best in underground, stealth infiltrations and melee combat against mooks.
+Uses a gravity well pack/suit to move about.
+
+Jet/Mech
+Transforming pilotable jet and mecha vehicle.
+Afterburner or Boost/Overboost
+Large twin linked rapid railgun cannons (utopia must fall style, mounted to arms/side-pylons on mech/jet, alternatively use one gunpod style railgun)
+Thermo disruptor blade emitter matrix (lunge or slash mode, based on mouse distance(or other toggle mechanism), switch weapon with gundam style deploy beam sabre. powered mode will wreck terrain, hold to charge up greater power and reach threshold to go into powered mode. below threshold strikes are basic. lunge pierces and stuns with heavier damage, while slash pushes away. this weapon is usable in jet mode too as a penetrating lance(lunge) or pushing searing aura(slash))
+Can launch a fusion nuke smart bomb ala Standalone's versatile fusion missile/grenade hybrid, reminiscent of Starfox 64's Smart Bomb. (or split missile, gravity mine, black hole vortex gun)
+Or have a grapple tether to latch on to stations, asteroids, etc to keep it in place so that Agent can explore an area but keep the jet close by for quicker getaways.
+Uses gravity well engines to move about
+All around powerful fighting vehicle able to handle anything in space, orbit, surface, sea, underwater. Limited underground ops due to lesser digging abilities and large form factor. Agent is better at that.
+Jet can be remotely recalled to agent at open air surfaces or at any point in outerspace/orbit/atmo. It will arrive quite fast in seconds, with farther distance slightly increasing arrival time. It travels via BG so collisions are not an issue, though LZ must be free/open to make transit happen.
+movement wise take hints from nova drift; i.e. higher speed means higher friction.
+
+Carrier
+Warp capable warship space craft
+Movable with large gravity well engines
+Long range siege heavy charge mega railcannons
+Point defence lasers 2-4x
+Gravity tractorgrab,pull,hold/moiraXpushtoss/(uses AoE radius gravity well based or individual item? usually used to take targets from top half and move them to lower half for turret's firing arc angles to be able to shoot them. can drop a big meteor from space)
+Jet/Mech can dock with main turret that doubles as repair/refuel/fabricator gantry, as well as linear catapult launcher to eject jet. Main turret with jet/mech docked also works as a gundam seed style METEOR system adding jet's twin railguns to carrier's arsenal, but empowered with supercharged ammo and hyperacceleration.
+Exists in 2 stages: outside of combat zone and inside. Inside allows usage of heavy siege weaponry upon enemy, but now enemy can target carrier too. Keep it back and use only jet/agent to reduce risk of carrier destruction/disabling.
+technically possible to WASD move and QE to roll. can land on planet too.
+Can pound fortress-class targets head on without relying on weakpoints that agent/jet are more apt at striking.
+Can offer remote orbital artillery support too. (as accurate siege breaker critical hits, supppressive area denial fire or mass saturation bombardment)
+Agent can get in via main turret at center or via airlock exits on sides. Agent can technically go on EVA in space via these exits instead of using the jet.
+
+--
+
+Other Characters:
+Dictator Enemies - these are oppressive alien empire type of goons. Bad guys with military might.
+Space Monsters - alternative opponents that have dug deep into a place and are ruining it and multiplying/growing.
+Natural Flora/Fauna - subnautica type stuff. animals and flowers, some docile, some hostile. Sometimes they're neutral and preservation worthy, other times they're akin to space monsters or mosquitos and set to be exterminated. By you.
+
+Regardless, all three come in three categories that mirror the player's 3 units.
+Creature Class - CAT1 - smallest - fought with agent
+Vehicle Class - CAT2 - medium - fought with jet
+Fortress Class - CAT3 - biggest - critical weakpoints: agent, intermediate weakpoints: jet, main hull: carrier (note that jet or carrier can also exploit weakpoints too if they can get an angle on them)
+
+--
+
+Each room essentially has 4 zones:
+High orbit - out of range, this is where player's carrier start at and can only deploy jet or agent, but cannot shoot its main gun.
+Low orbit - no gravity, mostly satellites and high altitude vehicle combat happens here. Agent is usually too small to do any combat unless they go inside floating space stations or similar ala Adios Amigos. carrier is in range in this area to fire its main guns all the way down to the surface as long range artillery fire. Carrier also becomes vulnurable to anti-orbital weapons and low orbit vehicles/creature enemies too.
+atmo to surface - transit from low orbit to atmo triggers renetry burn, intensity/burn plume size decided by velocity. Agent is mostly going to see use inside airship interiors or surface, while jet does most of the work here.
+underground/underwater - UW is still accessible to jet though agent is often too exposed/naked to be there on their own - akin to being in the prawn suit vs swimming in bare scuba gear. Underground is agent's best turf to tunnel and dig through, as jet can only make awkward holes little by little before its able to dig through any meaningful amount; the jet is 3x3 or 5x5, while holes it makes are 1x1 size, so it has to dig more blocks out of the way before it can proceed deeper, while agent is 1x1 already and they can plow through terrain easy.
+
+--
+
+Terrain materials:
+
+Whether its an airship, spacestation, terrain, or building, they all are made from static blocks. Easy version uses 1 block strenght for all, while an advanced version will have softer blocks and harder blocks. backgrounds would be great to have for designated areas (other than planetary terrain, so stations, buildings, airships, bunkerships, etc.) so I'd use cryptark style rectangles with loose borders to sell the idea of that. They could be tied to a core block that will destroy the entire sub-entity and all its blocks, which would also delete the BG when that happens. This could add a metroid style escape sequence to such as a core feature. Blow up the core and run to exit for safe distance with countdown or suffer heavy damage/death. Maybe use a slowly expanding cryptark style nuke blast to erase structures. Do the thing where blowing up the core triggers micro explosions to happen all over the BG and the final blast always originates from center of BG, engulfing the entity entirely when it goes off, obscuring the deletion of the BG in the process.
+Borders are invisible walls, planetary bottom floor is invincible bedrock.
+
+--
+
+Enemy formations:
+All enemy classes can appear in any area but high orbit. High orbit is always a retreat sanctuary for player to run away to.
+Different worlds may be organized in different ways where sometimes you can simply use the carrier to bomb everything and maybe do some agent spelunking underground afterwards. Other times its too risky to bring carrier to low orbit due to fortress class enemies in the low orbit, making it more suitable to use the jet to destroy that layer of defence to open up a path for the carrier to bombard stuff.
+Or player can deliberately play low-key stealthy and quietly, using jet to get to a good LZ, drop off as agent and plant a power bomb at a critical weakpoint in enemy.
+In some parts player can choose to either go about it as an all-out slug fest or play a more tactical cryptark style approach where there is focus on taking down layers/systems to reduce enemy fighting ability before attacking them head on and finishing them off.
+Context wise enemies can be very diverse. They can be starships/spacestations/asteroidbases/bunkerships in low orbit, airships/bunkerships in atmo, bunkerships/fortresses/buildings/bunkers on surface, sea, underwater or underground. 
+They can be space/air/surface/sea/uw/ug vehicles or creatures.
+Ofcourse these can have artificial/mechanical/organic/biometal/cyborg variants too. 
+
+At their core, fortress classes are mainly just floating tiles with a BG, a core module(s) somewhere and some ability they fire. smallest is 5x5, largest could be 50x50 or so. Fairly large.
+Vehicles are just a large sprite entity that can be mobile or immobile with an ability they fire too. around 1-9 tiles big.
+Same with creatures, albeit their scale is smaller at the 1x1 tile range.
+vehicles and creatures usually just have one attack, one optional passive ability, an movement+ai combo that they stick to. Simple sprited entities. What they lack individually they make up in numbers. They can be/act as turrets, mines, megamissiles and such too.
+
+--
+
+Goal:
+
+Player is essentially going to a hostile star system to exterminate all bad guys in a one-man army style assault using a combination of agent/jet/carrier. Enemies and locations often pose 3 layers of defences; an outshell, an inner shell and core. They're not necessarily atmo-surface-underground, but more akin to escorts-outerdefences-innerdefences, which could be applied to a single airship instead of the whole planet. Ultimately, its a kill-em-all objective, so player is tasked with literally killing every hostile target on the map to complete it. It always a random combo of CAT1-3 enemies in either a planetary assault setting (top to down) or a space setting (left to right, bottom to up, right to left).
+
+Overall gameplay is relatively fast and aggressive, with player going in, kicking ass and melting through terrain like its butter. Maps will often look completely busted up after the player does their thing on them.
+
+Player agent/jet health regenerates, it also regenerates faster when docked with carrier. Some special powerweapon ammo is limited and acquired through replenishment on carrier with a cooldown on manufacture/stockpile. Player can choose to use it all in a burst or tactically where they need to one by one.
+
+--
+
+Metagame:
+
+Player can find supercores from enemies and upgrade their capabilities as degrading/durability based boosters that eventually break. They provide stacking benefits and player can amass them, with being able to sustain a presumed number of them, cycling through old ones, replacing them with new ones, constantly changing the facets that the player is empowered by, moprhing every game session to feel and play different.
+
+One star system is a campaign with multiple celestial locations. Can be completed in any order, death will reset the map to try over, mostly just losing time and progress as penalty to motivate player to try to stay alive. Each map is randomized, as are the occupants and the campaign session at large who you're up against and what they call themselves and what crimes they've done to deserve extermination.
+
+Experience wise its a cathartic assault of non-stop violence and annihilation where you're empowered super unit laying waste to entire armies by yourself. Every session, campaign, map and such are procgenned or randomized in some way. Gameplay wise it won't get stale thanks to satisfying meaty
+
+Player can customize their character with a callsign and color tint(s). (body of jet/agent/carrier individually, jet/fire/boost color, weapon color, etc.)
+Support modding of player sprite replacements that include the IMAJ sprites and a profile pic. Let people add in furries, sonic fan OCs, anime characters and what else.
+(Allow non greyscale sprites and just use them with notint or white to show all the colors they have, thought tinting them is still possible with mild drawbacks, but atleast it'll allow for more diverse colors per sprites even if they're locked to those.)
+
+--
+
+Metametagame:
+
+Each campaign adds an entry to a kill log with a mugshot of a bad guy dictator/space monster threat, their crimes and how badly they got f***n mangled by the player's assault and the aftermath/benefit of them finally being eliminated. Sort of like a trophy list of how much the player has done good by terminating those scum lords for good, maybe even like collectible cards of victories etc. A real anti-dictator stress relief simulator. this gives the player a satisfying infinite reason to continue playing the game and completing one campaign after another. Player can also set personal hits where they go name a particular person that wronged them and goes after them, with that name being a seed value for the random gen, as a revenge fantasy game.
+
+I do admit it dehumanizes people and promotes the use of violence to fight against abusive violent people, but I think as long as people do it in a game, it will help them not to do it in real life when they see the fucked up corpse of the one they hated and destroyed with own hands. It will be enough emotional relief to become zen afterwards. I've noticed when abusers see you after you've enjoyed dehumanizing them ingame, they'll often feel terrified and tone down the abuse, realizing that it could eventually lead to their real life demise if they continue their abuse. They don't need to see you play the game; you'll acquire that look in your eyes of a hunter and a dangerous "I will kill you" posture/body language that they will pick up on, regardless if its subconciously or conciously. It won't matter how small or weak you otherwise are, because they'll get a feeling like you're possessed by a demon inside. That kind of thing will make anyone nervous.
+
+In a way the game offers two types of campaigns: commissions and personal vendettas. Former is the usual procgenned opponents, while the latter is sort of like a Death Note/Kill Book thing where the player enters the name of whom they hate and the game creates a campaign around them and their minions/goons/allies. And then player goes and kills them there and feels satisfied.

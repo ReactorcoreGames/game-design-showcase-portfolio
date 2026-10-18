@@ -1,0 +1,49 @@
+Claude, ignore this file. This text file is mainly a workspace for me to prepare the next prompt for you.
+
+===
+
+--- CORE
+
+Claude, your task is written in:
+@1 MAIN Game Design Presentation HTML Generator.md
+
+That task doc will refer to a design bible file:
+@2a BIBLE Reactorcores Game Design Mentality Bible.md
+@2b BIBLE Reactorcores Game Design Mentality Bible.md
+
+The completed HTML file will be placed in the folder called 'Ready HTML Pages'. Name that html file as '[game_project_name_without_subtitle].html'.
+
+The 'Game Project Files' folder contains the files that I want you to make the next game design showcase based on.
+
+Create a plan first, outlining the different sections you'll make and the theme you'll choose for it, but dont code it yet; I will review it first, then we will tweak it if necessary and then I'll give you the approval to proceed to build it.
+
+---
+
+Some changes:
+- color palette: avoid the cliche blue-orange combo. Use something else than complementary color schemes. It can be mono-color, dual-color or tri-color, up to you.
+- title: 
+- game modes:
+
+Otherwise its ok, you may now proceed to HTML building phase.
+
+--- STORY ADDON
+
+Well done. Next up:
+
+In the HTML file inside the folder called 'Ready HTML Pages' do the following:
+
+Add a 'Lore & Story' section above the 'Controls & Interface' section with an additional image positioned above this section, implemented similar to the other images already in the html/css so far.
+
+- **story image** ([project_name_shortened]_5_story.jpg) provides a zoomed out overworld view of the greater setting the game takes place in. The image is 16:9 aspect ratio. Give it its own quote too like the vignette and feature images have.
+
+The purpose of this 'Lore & Story' section would be give the viewer a grounded basis and a sense of meaning by telling them where the game takes place, why its taking place (tell the past but dont spoil the future), and what is the goal right now for the events of this game.
+
+--- IMG PROMPT LIST
+
+Great work, thank you. Next up do the @4 IMAGE Get Image Prompts After HTML done.md prompt. Output the result to folder 'Ready HTML Pages' as '[game_project_name_without_subtitle]_image_prompts.txt' file.
+
+
+===
+
+NOTE TO SELF:
+Claude has a limit of 25000 characters per file it can read, so split any game project files into multiple parts to avoid losing context.

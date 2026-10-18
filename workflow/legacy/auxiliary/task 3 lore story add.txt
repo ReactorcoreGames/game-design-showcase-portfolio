@@ -1,0 +1,9 @@
+Well done. Next up:
+
+In the HTML file inside the folder called 'Ready HTML Pages' do the following:
+
+Add a 'Lore & Story' section above the 'Controls & Interface' section with an additional image positioned above this section, implemented similar to the other images already in the html/css so far.
+
+- **story image** ([project_name_shortened]_5_story.jpg) provides a zoomed out overworld view of the greater setting the game takes place in. The image is 16:9 aspect ratio. Give it its own quote too like the vignette and feature images have.
+
+The purpose of this 'Lore & Story' section would be give the viewer a grounded basis and a sense of meaning by telling them where the game takes place, why its taking place (tell the past but dont spoil the future), and what is the goal right now for the events of this game.

@@ -1,0 +1,38 @@
+Star system development plan:
+. Start with initial top / bottom hyperwave nodes
+(they scan the star system, point out ideas)
+
+In a solar system there may be...
+. Planets
+. Moons
+. Asteroid belts
+. Asteroids (rock, metal)
+. Gas / ice giants
+. Comets (ice, frozen gas, dust, rock)
+. Gas / debris / other fields
+. Ruins, wrecks, remnants, ancients, anomalies
+. Dust fields / rings
+. Or none of the above.
+. The sun(s) themselves.
+
+The above list depicts the preferred order of celestials from best to worst locations, top to bottom. If distance is no issue and there is a planet on the habitable zone, then preference to suggest that as the starting location for an explorer / pioneer arriving at the edge of the uncharted solar system is given to them.
+
+If distance is an issue or a planet does not exist, especially not in the habitable zone, then the next best option down the list is offered. 
+
+Worst case scenario is having to setup a colony at the orbit of a lone sun with nothing in particular orbiting it in its entire solar system, scooping up loose dust to form enough mass to get any meaningful chunk of matter to do anything with. Or trying harvest sun's matter to do the same. Usually at that point its best to either bring planets from elsewhere or just siphon, suck, smother and bottle up the sun for all its resources and matter to be used elsewhere, in a more populated other solar system or just anywhere where that relocated energy and matter could be more handy at.
+
+Anyway, back to assuming that there is significant matter in the uncharted solar system... 
+
+Eventually, once a base is formed at a celestial, be it a pluto-like edge world, a gas / ice giant orbit, an asteroid, comet or a moon, maybe even a planet, maybe even not so volatile one, then the process after that is to gradually stabilize and convert / extract that celestial into something that could be made into either an earth-like planet, a livable megastructure, ringworld or a hollow asteroid / O'Neill space colony.
+
+If its outside the habitable zone, then using gigantic propulsion engines, it shall be moved there carefully and gently, placing it into a stable orbit.
+
+Once at least one stable colony is in place in the habitable zone, construction of the local starway, FTL cups, defense lines, military fleets and midway / edge station fortresses is begun.
+
+After that, all other celestials, asteroid rings / fields, comets and giants are also converted into suitable human-livable worlds gradually, one by one or simultaneously. These too are brought to the habitable zone, midway or edge, depending on preference and best option.
+
+In this way, the habitable zone is populated, a dyson swarm is constructed, defensive lines / military bolstered and further infrastructure perfected. At this point, this solar system is now ready to help in construction of other solar systems. 
+
+Internally, this star system is now 99% self-sufficient and sustainable for millions if not far more years. With material supplied from outside to reload the sun and get back lost / vented / radiated material into dark space, the place can stay good for billions, trillions, quintillions of years if not far longer than that, potentially infinitely.
+
+This the general guide for how this works. In reality some things maybe done simultaneously, in slightly different order, with different preferences and themes, maybe with more or less external help / input, but usually this is the standard procedure.

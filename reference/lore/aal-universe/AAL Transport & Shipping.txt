@@ -1,0 +1,93 @@
+Areas of operation:
+Space
+Planetary
+In-ship / In-station
+Orbital transit
+Subterranean, underground
+Water, liquid, underwater
+Sky, air, gas
+Solar, plasma, energy
+
+
+Considerations:
+Zero gravity / normal gravity
+Distance intended
+Capacity - amount of people or cargo
+Complexity, cost, suitability
+Propulsion and powering type
+Travel medium (gas, liquid, solid, plasma, vacuum)
+Integrated, connectable, standalone
+Intended primary function
+Filth resistance, survivability in rough conditions
+Protection from environment, elements, hazards
+(Mud, sand, snow, gunk, debris, splashes, submergion, condensation, insulation, germs, cold, heat, radiation, acid, lava, impacts, burns, collisions, damage, biological matter, flora, fauna, high velocity, air resistance, slippery, friction, lightning, energy fields, EMF influence, vibration, quakes, winds, rain, smog, mist, gasses, sparks, growth, parasites, garbage, waste, magnets)
+Environmental impact, route wear, tear, erosion
+Accessibility; can pickup invalid itself into cabin, even if its just a spine and brain, or only upper torso left of poor person. AI can deduct an emergency, administer first aid, autodrive vehicle to medical facility by itself.
+Refuel, rearm, repair; vehicle is designed that its ports for input & output, maintenance access and shape is compatible and standardized with the appropriate vehicle bay that will be able to easily and quickly service it.
+Manual vs AI autodrive; usually AI does all the driving while pilots simply tell it where to go and what to do. Even if manual control is initiated, usually its a simplified and streamlined interface similar to wasd keyboard + mouse set up or any other similar easy control operation that focuses on the "what" and not the "how".
+Usability design; With the exception of recreational vehicles - like wingsuits, jetsuits, unicycles - most regular vehicle designs require minimal athelitisism, skill, health, strenght or soberness to operate, even manually. They often prefer stable movement and do less acrobatics, keeping users upright, comfortable, in control and safe.
+Manual control systems; neural link aka mind, console, joystick, keyboard + mouse, integrated controller like built into gloves or sleeves or thighs, gestures, voice, body-as-controller, head only, vision only (blink + look), custom combination of any mentioned.
+For civilian pedestrians, propulsion / locomotion / movement system are designed to be environment and surface safe, preferring magnets to hooks, arms to tapes, wraps to goo, suckers to glue in order to prevent damage, wear or dirtying surfaces.
+Reuse vs disposable; to increase usability, recycle effectively and not leave waste to pollute or occupy the environment, vehicles are non-disposable default. Some vehicles may have one-way only design where they dock, transform, decouple, separate or convert to something else at their final destination. Though even then they can be still easily reclaimed and recycled.
+Color coding for branch id.
+
+
+Theme, purpose:
+Military
+Rescue
+Waste man, clean up, towing, removal
+Mass transit, regular travel
+Mobile homes
+Evac, disasters
+Recreational, fun, experience, joy
+Environment transition, amphibious crossing
+Orbital transfer, re-entry
+Shipping, cargo, material, products, packages
+Mining, hauling, harvesting
+Construction, repair, modification
+Building, factory, structure transit
+(elevator, escalator, shuttle, crane)
+Infrastructure maintenance, utility vehicles
+Police, fire, capture, hunt, ambulance, 
+Carriers, towing (land, air, sea, space, sub, uw)
+(carry/tow cargo, other vehicles, buildings, rigs, prefabs, machines, drones, packs, people, devices, homes, colonies, satellites, buoys, megastructures, celestials, stars, arrays, chains, collections, groups, tanks, reservoirs, fleets, silos, containers)
+
+
+Pedestrian devices (1 person):
+(Segway, skates, board (snow, surf, skate, hover), platform, scooter, wheels, bike, jetpack, EVA, suit, moped, parachute, wingsuit, sled, hover-slide boots, shoes, animal mounts, jetskis, snowmobile, pogo, zipline, grappling hook, rope, tether, ATV, glider, helipack, wings, jet wingpack, rocket boots, canoe, skis, cart, monowheel, unicycle, wheelchair, rollator, mobile bed, capsule, escape pod, drone hanger, drone puller, pickup/grab drone, piggyback robot, stairs, ladder, path, road, trail, firepole, Gundam rope elevator the cockpit.
+
+
+Transit devices (group of people or cargo):
+Car, bus, boat, catamaran, helicopter, airplane, submarine, shuttle, train, submersible, sidecar motorcycle, pedal boat, rollercoaster, cable car, monorail, maglev, hovercraft, hydrofoil, yatch, ship, starship, cruiseship, landship, tractor, wagon, van, trolleybus, metro, tram, rover, racecar, monster truck, minibus, funicular, ekranoplan, ornithopter (bird flapper), shagohod (screw), elevator, escalator, conveyor belt, rail platform, inserter hand, pickup busdrone, stairlift, wheelchair lift, transit pipe, pods, capsules, landers, robot carry, rail handle (zero g), tunnel, tubes, slides, horizontal elevator, catapult, tosser, thrower, launcher, swing, bridge, orbital elevator, skyhook, mass driver, jumpgate, tradelane, hypergate, starlane, highway, truck, freighter, hauler, mover, crawler, tanker, dropship, skycrane, magnet crane tower, warehouse compartment rail robot system, forklift, pallet loader, container grabber, freight train, space shuttle, space tether, rocket, scramjet, concorde, airbus, tractor beam, repulsion beam, gravity control, matter energetics, warp anomalies, astral stepping, solar sail, glider, pull cord, wormhole, cart trains, barge, powered sled, tank tread chassis, heavy lift vehicle HLV, gyrocopter, autogyro, gyroplane, ultralight plane, spaceplane, pontoon, vtol, stol, ufo flying saucer, hybrid vehicles, motoroad battleship, landboat, boatplane, flying boat, space ship with boat and uw capabilities, convertible vehicle, carplaneboat,  airship, blimp, subterrain tunneler, walker, at-at, mammoth mk2, rocketbike, vertical launch plane, deltawing, sweptwing, floater, aerial truss flyer, aerial carrier, UAV, cypher (mgs), roboanimals, wind kite, harmonica bus, animal pulled carriage, 
+
+Combat Starships:
+Fighter, bomber, interceptor, defender, dropship, corvette, frigate, destroyer, cruiser, battlecruiser, battleship, dreadnought, titan, colossus, flagship.
+
+Other space vehicles:
+Tanker, freighter, builder, mover, dozer, carrier, assembler, harvester, science lab, converter, invader, colony, seed, cryotray, breacher, salvager, boarding, jammer, ECM, ECCM, stealth, infiltrator, hacker, mine layer, saturator, primer, detonator, pusher, thruster, tow ship, drone guardian, drone repair, drone warship, combat specializer, transformer, mecha, robots, booster, FTL catapult, jumpgate, wormhole generator, dedicated superweapons, scout, transport, assault lander, heavy lift vehicle, droppod, satellite, station, mobile celestial, mobile fortress, mobile star, mobile industry, factory, refinery, mobile warehouse, dock, city, hangar, exhibition, wonder, experience, containment, prison, zoo, biome preserve (BSL), planet devourer Unicron, planet genesis Titan AE, park train on wheels, party van, mobile disaster shelter, arctic snow mobile, expedition caterpillar tractor, land yacht, airport vehicles, shipping dock vehicles, mobile stairs / elevator / escalator, mobile bridge / walkway, tank, MLRS, ICBM mobile unit, jet fighter, bomber, warboat, gunner plane, attack heli, attack plane A-10, catapult, trebuchet, battering ram, apc, light tank, heavy tank, artillery unit, anti-air unit, depth charge sub hunter, torpedo sub, gun platform airship, gunship, missile ship, disguised vehicle, kamikaze vehicles, dozer, plow, multi decker, track maintenance, draisine, road dismantler, rail plough self sabotager, rail siege cannon, railsnow plough, armed train car (tank, artillery), farm sim vehicles, semi-submersible heavy-lift ship, drillship, tunnelbore,  military landing hovercraft, landplane, drag racer, rowboat, flying submarine, sea-going tractor, spider tank, animal mimicking vehicles, fish subs, bug cars, climber, anti-gravity, spider, hookshot tether, zeppelin, deepsea, deployer.
+
+
+
+Distances of travel:
+In-house
+Neighborhood max 2km max
+Town, village, district 10km max
+City wide network 20,50,200km
+Regional, Intercity, megacity
+State, interstate, continent end-to-end
+Intercontinental
+Orbital
+Lunar, Lagrange
+Inter habitable zone
+FTL travel within star system
+FTL travel between stars
+FTL travel between galactic sectors
+FTL travel beyond the galaxy, Intergalactic
+
+
+Vehicle equipment:
+Accessibility robo arms
+First aid medkit
+Security lock, tracking
+Auxiliary / emergency projector, defense gun
+Comms, navigation, maps, info, blackbox

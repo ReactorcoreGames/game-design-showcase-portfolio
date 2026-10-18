@@ -1,0 +1,168 @@
+Working Name: RoomSpace
+Engine: Any 2D engine
+
+
+
+Summary:
+A persistent and dynamic 2D open world made from thousands of terrarium like rooms with local climates that connect together to form a giant living universe - featuring versatile physics ragdoll human characters that defy gravity.
+
+
+(Left side: What an individual room could be like where actual gameplay takes place.)
+(Right side: What a “planet” in this side-view 2D universe could look like.)
+
+Description:
+Welcome to a universe of interconnected rooms, each decorated with terrain, objects, characters, vehicles, critters, items and more - organically creating various natural, artificial or mixed biomes. Each room has intricate interior sub-compartments too that allow the player to go exploring the deeper layer of a particular main room.
+
+The rooms themselves are like 2D terrariums/aquariums/dioramas viewed from the side, where a dynamic climate system imbues each room with local elements such as weather, forces, gravity, flora, fauna, materials, liquids, gasses, solids, and more.
+
+The unique feature is the seamless interaction between rooms, as the environment and events of one room influences the adjacent rooms directly.
+
+
+(A room can represent a location somewhere on a planet's surface, underground, underwater, in the atmosphere, orbit or in deep space.)
+You and all others characters in this universe are whimsical flying/floating ragdoll humans, endowed with the ability to interact freely with any object, any item and any element. It's all driven by 2D physics gameplay. 
+
+Any living or powered thing has the ability to resist gravity and project a force to move themselves about, allowing free movement anywhere in the room, even if gravity may be pulling everything else towards a particular direction with varying intensity.
+The transition between rooms is facilitated by doors embedded in the walls, reminiscent of the iconic mechanics found in Super Metroid.
+This innovative setup ensures a fluid and engaging experience, where the ever-changing dynamics of the interconnected terrariums create a dynamic and immersive gameplay environment.
+
+(Not an accurate image, but each planet is different, featuring a diverse range of biomes, analogous to real world planets each with its own planetary core at its bottom. Stars, gas giants and moons share the same concept too, even if they’re internally different.)
+The expansive network of interconnected rooms intricately constructs a cosmos, akin to a meticulously organized universe. Within this cosmic expanse, planets are arranged in a cup-like fashion, descending vertically, mirroring a side view of Earth. 
+The planets encompass distinct zones, including orbital, air, surface, underground/underwater, mantle, and core areas. Additionally, outer space is delineated in a top-down grid structure, subdivided into regions that further branch into star systems, galaxies, and superclusters.
+This universe adheres to a fundamental principle of equivalent exchange of matter, resembling the laws governing our reality. In this cosmic realm, the immutable rule dictates that no matter can be spontaneously created or annihilated; rather, transformation occurs through diverse natural and artificial events. This principle aligns with the dynamics of real-life existence, where entities can only alter their shape and type within the boundaries of the cosmos.
+
+(Planets can be extremely varied yet distinct. Things that can be different are the atmosphere, surface, planetary layers such as soil, crust, mantle, etc. and the core(s) which influences the climate and conditions of a planet.)
+
+While the rooms and doors are rigid, indestructible, their content are physics enabled and have destructible terrain, there are dynamic liquids/gasses that can flood or flow through the room, creating streams/wind or humidity or other effects upon the room's parameters, altering its dynamic climate and changing its biome. 
+
+Players can alter room climate and biome through their actions in the game, turning deserts into forests and back.
+
+
+
+Game-wise, this is an adaptable universe that acts as a platform for virtually infinite contexts. It's all a matter of setting up game objectives and metagame logic and placing specially prepared content. 
+
+
+
+More exactly, it could be made into a conquest game where the player tries to master the universe by building up their people as an exchangeable hero, fighting hostile factions on ground/air/space with an aim to eliminate all threats. 
+
+
+
+Or it could be made into an adventure game with a quest where a reincarnatable hero will attempt to complete grand achievements in the universe. 
+
+
+
+Or it could be about being an engineer/gardener that tries to terraform and cultivate the worlds into a beautiful paradise/eden. 
+
+
+
+Or it could be reframed to play as an investigator/bounty hunter that uncovers wicked mysteries of the universe and confronts eldritch monstrosities. 
+
+
+
+Or it could be an omni-game that is all of these and many more - similar to TopVerse, functioning as an infinite procedurally generated singleplayer campaign generator with multiple modes, but all taking place in the same seamless universe instead of separate compartments like it would work in TopVerse.
+
+
+1. What purpose this project caters to:
+In itself, RoomSpace is a platform to simulate a living/breathing seamless persistent universe. In terms of satisfying fundamental human needs, it could be configured for empowerment, socialization, self-expression, learning, challenge or be a medium for a message that is best presented by a universe simulator or parts of it. 
+
+
+
+The core of RoomSpace could be made into multiple separate games that focus on a specific theme/context or a single big one that has all activities and they're merely activated by where the player decides to travel in-universe and what they will do there for that session. Sort of like how I would wake up in the morning on a free sunday and decide what I'd like to do that day; be it relaxation, excitement, action, adventure, work or pondering.
+
+2. How it achieves this:
+Technical-wise at its core, the program works by only actively simulating the current room the player resides in. Everything else only exists as a semi-dormant node, as a file in a folder that only receives changes when it is specifically invoked.
+
+
+
+There is a metagame/universe events thread/algorithm running in the background that updates the universes adjacent and far away rooms on a necessity basis and generates events for the player's region or the room they're in based on the properties of the rooms and the regions they make up. 
+
+
+
+If player goes to another room in the network, the universe may calculate and apply changes that alter the new room's contents/climate/occupants, while unloading the previous room from memory - thus making it semi-dormant - but saving its state and apply its data to the universe events simulation that may or may not trigger an event that will happen upon entry or some time later in the new room.
+
+3. What is unique/new/special about the project:
+Characters behave and move sort of like fish in an aquarium. There is indeed gravity that pulls objects and characters downwards, but everyone is able to fly and resist the gravity enough to navigate to any point in the room. It's sort of a hybrid between a top-down and side-view 2D games.
+
+
+
+The basic interaction systems are fairly robust and varied. There's physics, momentum based movement, gibs/gore, particle effects, lighting, physics ragdoll player characters are able to equip items/gear/clothes/armor, the different elements of nature play a major role in gameplay - like temperature, humidity, radiation, magnetic forces, gravity, physics joints, mass, sharpness, friction, etc. 
+
+
+
+The very feel of the game is enjoyable just thanks to its basic intractability alone, not to mention combat interactions that involve physical melee and ranged weapons that can have physics enabled projectiles, recoil, collisions, knockback and more.
+
+
+
+There's advanced features like vehicles and even giant starships/megavehicles that players can construct, modify and pilot between rooms. It's always been a dream of mine to create an experience of having that mobile headquarters mothership seen in the story of Mobile Suit Gundam, Gundam Seed, Gundam 00, Gundam Zeta and ZZ, where a group of people travel together on an epic adventure and overcome dangers and foes using big machines and powerful awe-inspiring technology. It's even possible to do boarding actions in ship-to-ship combat.
+
+
+
+There's a heuristics driven smart procedural generator for the entire universe and its regions, down to celestials and the individual rooms that they're made up from. Unlike many poor attempts by others making procedurally generated worlds, this one is vastly different because it doesn't focus on artificially creating specific biomes, but instead adding materials and applying environmental conditions to them that ultimately shapes that room or that region to take on a climate/biome that is natural/organic. 
+
+
+
+It does this on multiple layers of the universe, starting from distribution of matter/antimatter and finishing at a local room by deciding how the props are placed in it with each regional, galactic and supercluster state affecting the final result of the individual room. It might sound complicated, but it's really just a matter of IF statements with a logical chain of order.
+
+4. What is the potential of the project:
+There are already many pseudo-universe simulation games like Minecraft, Terraria, No Man's Sky, Starbound, Stardew Valley, Zelda Breath of the Wild, Signs of Life, Astroneer, Factorio and many more that I think are a merely a glimpse of something far greater, bigger and better.
+
+
+
+However, despite their data-driven content system, procedural generation of worlds or characters, open world design, versatile and dynamic transformable player characters and many fully implemented randomization systems... none of these get to shine to their full potential, sadly. The structure of the metagame still ends up following the old traditional rigid formula of a scripted movie experience which often clashes with the gameplay and causes ludonarrative dissonance where gameplay and story end up contradicting each other in a way that ruins immersion for the player, leading to a worse overall experience.
+
+
+
+Negative effects include: 
+    • Shattering of immersion.
+    • Convoluted story moments that force the player down a specific bottleneck/funnel when the rest of the core game experience is an open world with an emphasis on freedom and choice.
+    • Underutilization of game content due to exclusivity to certain story moments only or other arbitrary reasons that restrict where and how content can appear, who or what the player character should be or is not allowed to be.
+    • The general inflexibility of the game experience on multiple playthroughs where despite the openness the general session still ends up following the same script as the first playthrough with no real room to deviate from it thus making all that randomness feel meaningless.
+
+
+
+However, I've found a solution with game design that can transcend beyond these problems and create a game with meaningful infinite playability of which the world has never seen before. This project can revolutionize game design and the games industry in a major way, especially when paired with intelligent and ethical monetization practices and models that can not only make a project like this massively profitable but also sustainable for decades if not more.
+
+Unlike with the games I've mentioned which has a finite scripted route(s) that you complete - usually with a final boss battle in the end - this design framework puts the player's own adventures as the focus of the story that can be dynamically generated to create a new unique campaign in the same universe an infinite amount of times, with the outcomes of every previous campaigns carrying over naturally for every future campaign generated by the system.
+
+
+
+It would be like playing something akin to Skyrim, Mass Effect or Fallout, but each time you completed an epic adventure, the system would generate a new one in the same universe to continue where you left off, with a clear beginning, middle and end for each session, each featuring old and new locations, old or new foes/challenges, while having an entire breathing universe filled with dynamic side events that may surprise, sidetrack or twist the campaign in unexpected directions. It would be a game that you could truly play forever, truly expand endless with new modular content that is intercompatible with all previous content and multiplies the possible situations that can happen in the game exponentially!
+
+
+
+Alongside, the game could have a thriving modder/creator community and a marketplace/portal that gives creators a way to make a living by supporting the game with new creations and selling or monetizing them in some way. 
+
+This could be in the form of premium content, Patreon dev support subscriptions, Netflix/Nebula style creator group platform, player requested commission orders or any other kinds of third party services that others could provide that revolve around the game.
+
+This can be a huge new sector for jobs, dream fulfillment and wealth for all that participate in the project. 
+
+
+
+If anyone is familiar with the modding scene for games like Starbound, Skyrim, Subnautica, Cortex Command, Fallout 3/NV/4, Terraria, Starsector,  then imagine if that could become a source of income for all those creative people on a massive scale thanks to a specifically designed game that makes creating content easy yet standardized and unified.
+
+
+
+It's the same way the Unity Asset Store marketplace already works and any other places like it, especially with specific submission guidelines that ensures quality and a set of tutorials/education that helps people know how to make things as best as possible.
+
+
+5. What inspired the project:
+Inspired by a vast number of games I've played over the years. I mentioned some of them in the answers above, but this is something of a magnum opus I've been developing with passion for a long time.
+
+Oddly enough the specific terrarium/aquarium room based universe with ragdoll characters comes from Floppy Heroes, which is a far simpler game in comparison.
+
+
+
+Floppy Heroes - a simple gladiator-like game about two or more opposing ragdoll characters with armor and weapons that can freely fly through the air but can't control their rotation. They try to smartly collide with each other, trying to deal damage to others and try to receive no harm themselves by careful positioning and timing of their limbs/armor/swords, while protecting their weak spots such as exposed skin or head. 
+
+There's a basic VS mode and a 10 level campaign gauntlet against randomized opponents with progressively more dangerous gear. That's it. You can unlock and customize your character with armor and weapons, but there is no further metagame or progression besides that.
+
+
+
+Gameplay wise I found it really satisfying despite its simplicity but I also felt the game was too simple and restrictive to be enjoyable beyond a few sessions with it. 
+
+Initially I just wanted to make a version of that game with the ability to rotate the character freely during combat and have guns and other futuristic equipment along with more interesting levels with simple hazards and props, but felt the game would need something more substantial structure-wise to thrive in the ever competitive market of the games industry. 
+
+Looking at some of my older design documents and ideas - especially for a universe simulation Super Game - I suddenly saw an opportunity to fulfill that potential in this seemingly simple ragdoll room battler frame.
+
+
+
+The idea evolved into something that can start off as this simple low gravity ragdoll combat game in its early versions, but then gradually grow into a mega project by having a the initial framework for the game well planned ahead beforehand that will be easy to expand upon without ending up in a situation where I'd paint myself into a corner regarding early technical decisions that would require an engine rewrite from scratch later in development.

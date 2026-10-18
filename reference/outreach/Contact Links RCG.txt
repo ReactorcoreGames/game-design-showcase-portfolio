@@ -1,0 +1,7 @@
+In @hire replace the TL;DR modal links with these ones:
+- Email Me (mailto: keep as is)
+- Discord (https://discord.gg/UdRavGhj47)
+- BlueSky (https://bsky.app/profile/reactorcoregames.bsky.social)
+- Everything (https://linktr.ee/reactorcore)
+- Releases (https://reactorcore.itch.io/)
+- Devblog (https://www.patreon.com/ReactorcoreGames)

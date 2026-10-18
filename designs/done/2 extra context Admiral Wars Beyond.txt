@@ -1,0 +1,285 @@
+Working Name: Admiral Wars Beyond
+Engine: Any 2D engine
+
+Summary:
+Take the core gameplay of Advance Wars and combine it with mechanics from Command and Conquer, Into The Breach and the overworld of 4X games for an epic strategy/tactics super game, where battles take place on 4 layers simultaneously - orbit, air, surface, underground/underwater - wrapped up with an epic open-world metagame experience spanning the universe.
+
+Description:
+[Note - Early Development - Design Phase in progress]
+The game has two main components to it, first being a persistent universe overworld where the player gets to decide what challenge/situation to take on next and then the outcome of that battle will influence the overworld, generating new challenges/situations based on previous battle history. Players may find themselves returning to old locations to defend the areas they once captured and conquered, while sometimes venturing outwards into new areas discovering new challenges to solve and new areas to conquer.
+
+The second part is a tactical turn-based war game where the player will deploy, manage and control military, research and civilian units on a square grid map. The map consists of various terrain types that alter the movement, vision, defense and bonuses of the unit that stands on it, either gaining advantages or disadvantages. Units themselves have different abilities in how far they can see, how adapted they are to moving through certain terrain tiles and if they have a special ability that gives them particular benefits from particular terrain tiles. If you are familiar with Advance Wars, it's almost 1:1 in how it looks and plays. This is the main core of the game for this project.
+
+However, unlike Advance Wars, battles can take place both on land, sea, space and deep underground. For planetary combat the battlefield is split into 4 layers - orbit, air, surface, underground/underwater. For space combat the battlefield is split into 2 layers - outskirts, area proper. For deep underground - i.e crust-mantle-outer core-inner core of a planet/moon - there is only 1 layer and it is vertical instead of horizontal.
+
+Furthermore, unlike Advance Wars, mechanics, units, systems, buildings are also integrated from other turn-based tactical (TBT) games and Real Time Strategy (RTS) games, drawing from a large pool of ideas:
++ Advance Wars 2, DS, DoR (combat core)
++ Cortex Command (core and ordering)
++ C&C ra2/ts/yr/mo (everything, but as TBT)
++ Wargroove (heroes, units)
++ XCOM 1&2 (overwatch/hunker, unit customization)
++ Super Robot Wars (advanced units, vn, chars)
++ Fire emblem (advanced units, vn, chars, romance)
++ Homeworld 1&2 (space units)
++ Into the Breach (tile tactics, units)
++ Gamma Void (super cores)
++ Super Mario Bros 3 (inventory)
++ Xenonauts 1&2 (home base management, logistics)
++ Attrition (AW clone)
++ Warzone 2100 (custom units)
++ Zero K (custom units)
++ Stars in Shadow (4X games)
++ Planetary Annihilation (mega weapons, units, unit tiers)
++ Nebulous Fleet Command (jamming, units)
++ Children of a Dead Earth (real sim spaceships)
++ Cryptark (defense systems)
++ Pokemon (moves list and inventory)
++ Supreme Commander (nukes and antinukes)
++ Armored Core (mercenary campaign structure)
++ Shadow of Mordor (Nemesis system)
++ Front Mission Gun Hazard (player motherships)
++ BattleTech/MechWarrior (standard arsenal, tonnage)
+The idea is to take the fun core of moment-to-moment gameplay of Advance Wars and expand it intelligently beyond its limits, while implementing and taking inspiration from various other tactical/strategy games in order to create a more robust yet casual laid-back open world adventure game that is surprisingly easy to pick up and play for a short 20-50 minute session, yet contains massive depth in its mechanics and persistent universe that allows players to study the game to really get invested into it.
+
+1. What purpose this project caters to:
+Most of my other projects are real-time games with active chaotic gameplay, but none of them are turn-based where I can play the game as slowly as I'd like where I can actually think, analyze and ponder every move at my own pace.
+
+As a game it has an element of challenge and puzzle to it, but more on the easy side so it's not a hardcore-make-your-eyes-bleed type of hard type of game. Instead, the game is about the fun of solving dynamic puzzles and adventuring in a persistent open world that the player conquers, cultivates and keeps safe like a garden, attempting to make it thrive and grow as large as possible, all the while doing so through commanding a cool mix of military science and civilian technology in various scenarios that sometimes might not even have any lethal combat involved.
+
+The game also leans on characters, relationships and choices, serving as an interesting tool of education about consequences and friendships... or even love.
+
+2. How it achieves this:
+In terms of game difficulty, players will always either have a realistic chance of defeating the opponent(s) or to flee safely, so the game will never be too intimidating to play. Instead, the fun comes from the sheer exponential amount of variety, combinations and surprises the game will throw at the player and the satisfaction of solving these puzzle/chess-like moments.
+
+In terms of game complexity, it will heavily rely on context sensitive menus so that players will only have a very small set of buttons/menus to check at any given time, all of them being relevant and selectable only if that action is possible. There is also an emphasis on a limited number of units at any given time and several easy-to-use quality of life automation functions that players can take advantage of that otherwise were annoying situations in Advance Wars, i.e manually managing long supply lines.
+
+In terms of content overload, player will have a limited inventory and a maximum cap of units they can field at any given time, as well as loadouts that help greatly in keeping what the player has to deal with at any given moment, yet still have access to the vast library of content that they can access for deeper gameplay options between battles. Its akin to Battletech, Armored Core or Pokemon Trading Card Game where the actual battles are easy to pick up and play and usually last only for a relatively short session, but players can spend hours upon hours tweaking their decks, units, loadouts in the garage to their heart's content through a series of easy-to-navigate and organized menus.
+
+In terms of metagame, the player is not asked to micromanage an empire or anything like that. Instead, they are in a role of an Battle-Admiral/Commander/Captain who is simply given an brief overview of the empire as a read-only view as a form of feedback on how the player's actions have impacted the overworld, but in terms of actual decisions the player only is given a limited selection of missions to choose from on an overworld map and to manage their loadout/mothership. In essence, the player thus only focuses on battles themselves and choosing which ones to fight next. The rest is handled by the generator/passive universe simulation.
+
+3. What is unique/new/special about the project:
+Many things for both sides/layers of the game!
+For the tactical battle side of the game a lot of mechanics that exist in individual games separate are brought into a single ultimate all-stars system where they all coexist, allowing for unparalleled variety, freedom and tactical options/situations that can arise during battle.
+
+A common limitation of most Advance Wars-type games is that everything happens on a singular map layer, where submarines, jets fighters and land vehicles co-exist in the same space, leading to odd situations where a bomber plane can't go past a tile that has an APC standing on it or a submarine can't go forward because a jet fighter is parked on that tile. 
+AWB changes this by splitting the battle map into 4 layers that make up a vertical slice of the world, where units either above or below each other can directly interact with one another and even transition from one layer to another (aircraft that can land and take off!).
+
+Each layer also offers extended - quadrupled - terrain type possibilities, weather influences, fog of war/information warfare aspects, as well as more advanced combat scenarios. 
+Keep in mind, usually only 1-2 layers are actively used in most battles and the user interface/visualization of layers stacked on top of each other ensure that the average battle never becomes a slog or over complicated that it would lose that fast pace of a usual Advance Wars match.
+
+Also unlike Advance Wars, the maps aren't static but dynamic and alterable too! Terrain can be changed through weather, events, destruction or construction, making the game become sort of a hybrid between Command and Conquer, Into The Breach and Advance Wars.
+And all of this is just scratching the surface - for the tactics side only! There's a ton of unique things about this project that evolves turn-based tactics beyond anything seen before.
+
+On the strategic metagame side of the game a massive unique aspect is that none of the game is premade or pre-scripted. It's all completely run by a smart heuristics driven procedural generator that is context aware - feeding information directly from a persistent permanent passively simulated universe that informs what kind of maps will occur where and what type of missions/campaigns take place in certain regions.
+
+The most important part about this is that I always hated the campaigns of Advance Wars and its derivatives; I felt the game truly shined in the Versus (VS) mode where the player could pick a map, set up teams, goals, conditions and COs and then play those balanced maps in multiple different ways. The problem with the campaigns is that each mission was more or less a "Simon says" type of affair where I simply had to guess what the developer wanted me to do rather than think on my feet about a spontaneous situation that happened organically. 
+
+Meanwhile VS modes had the issue of being prone to the "Reset syndrome" where any match I played didn't a play a role towards anything bigger, but as soon as I won or lost a battle, everything was reset to zero and I could always decide everything about each match where as I actually wanted that some of that control was not in my hands. 
+I wanted something that took the best parts of the campaign and VS modes - the meaning, cohesion, progression and on-going story of the metagame, while introduce the spontaneous non-scripted battles that no-one prewrote of VS mode, along with VS mode's much richer set of parameters that can could alter a map to play vastly differently than any campaign map would allow.
+
+Basically this is what was the greatest aspect of the XCOM series of games and I want to bring that to Advance Wars, along with a plethora of other features that go beyond just a simple throwaway campaign experience. 
+I want the game to be a source of endless adventure that has automatic structure, pacing and surprise that I can boot up at any time and continue living in that simulated world, exploring a vast universe with endless possibilities and virtually infinite growth potential.
+
+Beyond that, the metagame would also feature characters that the player can meet and have relationships/rivalries/alliances with - sort of mixing together Shadow of Mordor's "Nemesis System" and Fire Emblem's support character romances under the same roof. The potential for memorable stories that would be born from that excites me greatly!
+
+Lastly the metagame would also give context to playing non-combat missions within the turn-based tactical gameplay of Advance Wars, featuring civilian, industrial, science and rescue units instead of the usual military war machines only. 
+
+They would either be for peace-time mission gameplay where the player cultivates their HQ or cities of the empire/federation they serve or for character centered events that involve escorting, rescuing, finding, supporting or otherwise interacting with them on the tactical battlefield, even if no military combat fighting takes place.
+4. What is the potential of the project:
+The initial version of the game will be a basic skeleton version of the Advance Wars style tactical gameplay and a simplified metagame campaign generator. From there, the game's content can increased nigh-endlessly with new units, new terrain tiles, new structures/buildables, new systems, new mechanics, new art modules for the character generator and increasing refinement of all components of the game until it reaches its intended potential.
+
+Further on from there, the game can be still endlessly expanded with new content and refinement, while enhancing the game with additional quality of life features as well as smoother menu/screen transitions and more UI stylization to make it be more comparable with Advance Wars' slick audiovisual presentation.
+
+But on a global level, this project would be the ultimate turn-based tactics game to ever exist, surpassing everything else in terms of gameplay, expansion potential, infinitely playability and contain the biggest potential for awesome memorable moments that will have players enjoy sharing their ingame stories with the world.
+Multiplayer wise I would never add competitive Player vs Player and the base game is designed as a singleplayer experience at its core. However, it is possible to create Player vs Everyone cooperative game modes or similar systems, whether they are active or passive, i.e sessions that happen with all participants present for a live game or asynchronous sessions where player's can contribute towards each other's universes with gifts, universe visits, encountering characters from another world and interact with them.
+5. What inspired the project:
+
+I binge played Advance Wars 2, then Advance Wars Dual Strike. After ungodly amounts of hours of both my mind just started wondering what if I made a basic clone but with some changes that I found interesting. I then went down a rabbit hole of creating a ridiculously long document that listed every possible idea that would come to my head regarding content, mechanics, systems and structure for the game. 
+
+
+I recalled how I enjoyed building bases in C&C Tiberian Sun and Red Alert 2. I remember Into The Breach was pretty cool. I also thought how XCOM was neat. I then started seeing a coherent vision come together for the ultimate turn-based tactics game.
+
+---
+
+# Admiral Wars Beyond (Extras, WIP, Maybe Stuff)
+
+> *(Easy) Tactical Turn-based Warfare Simulation*
+
+Summary:
+
+Inspired by Advance Wars 2, taking the concept to the next level be re-imagining the entire game design. Some elements included from Command & Conquer (Red Alert 2:YR + Mods, like Mental Omega), X-Com, Gamma Void (Super Cores idea), Super Robot Wars and Topverse (Universe Simulator) too.
+
+## Combat Layer:
+
+Advance Wars and SRW both did combat on a single layer, regardless if the units were grounded, airborne or seaborne - all on the same map.
+
+Admiral Wars Beyond (AWB) would essentially have two modes:
+
+- Celestial battlefield
+
+- Space battlefield
+
+Celestial battlefield is split into 4 layered maps that exist in parallel:
+
+- Surface
+
+- Subsurface
+
+- Sky
+
+- Space
+
+...or if to take the example of a regular terrestrial planet (Earth)
+
+- Ground/Sea surface
+
+- Underground/Underwater
+
+- Airspace/Low atmosphere
+
+- Orbit/High atmosphere
+
+I'm classifying it like this because I want the system to support other celestial bodies, like gas giants, stars, moons, asteroids, starbases, megastructures (big) etc.
+
+Space battlefields are split into only 2 layers:
+
+- Inside/Local space
+
+- Outside/Outskirts
+
+This applies to environments like asteroid belts, gas clouds, debris fields, space stations, megastructures (small).
+
+In **Celestial battlefields** units usually are designed to operate only between 1-2 layers, often being deployed at surface (not always) and then moving onto their "native" layer, like aircraft rising to the sky or satellites going to space or land vehicles staying on the ground. If a unit lacks the ability to exist on a layer (a tank can't fly or go to space), then they cannot transfer between layers.
+
+Meanwhile **Space battlefields** are different in that *any units can hop between the two layers freely*, costing a full movement action to do so.
+
+This is the core that Admiral Wars Beyond operates upon. Everything else serves this core gameplay. Overall the game plays like a deeper version of Advance Wars, with more features, variety, expansion capability, tying together different battles to campaigns that are all on a giant living bowl-type universe map.
+
+Topics:
+
+- Admirals (COs of AWB).
+
+- Officers/Heroes (In-battle Hero Units/Pilots).
+
+- Permadeath of both^^.
+
+- Procgen of Admirals and Heroes.
+
+- Consumable/Reusable Items or Equipment attached to a unit.
+
+- Resource situation types - Inf gold every turn (AW), Harvester(C&C), Pre-dep (None).
+
+- Mega vehicles, mobile HQs, metagame travel, equipment inventory and dispensement.
+
+- Structures in sky, air, underwater/underground.
+
+- Terrain hazards + protective equipment^ to mitigate it, maybe with drawbacks. ie gas enviro -> use gasmask, but vision range gets reduced etc.
+
+- Gameplay simplification - turn off inactive layers, only 1 resource to manage, small combat maps, max unit cap, same turn based AW gameplay, easy controls, most extra features can be ignored and played as is. Each turn is not slowed down by anything and can be played overall fast as normal AW, but with extra optional functions.
+
+- Special metagame events resulting in combat events - with timers, reinforcements, imminent destruction, etc.
+
+- Excess unit refunding at bases. Repair toggling.
+
+- On-level tech structures (RA2:YR)
+
+- On level special structures, super weapons
+
+- Mobile cities, aerial cities, space stations, underwater cities, giant land crawlers
+
+- Fauna, flora
+
+- Other factions - aliens, monsters, beasts, lost decay robots, hostile AI robots, culturally different human armies (not a palette swap).
+
+- Access to building tech - units available based on circumstances, possessions, tech level, resources, stuctures captured/owned.
+
+- Construction of new structures.
+
+- Tech-tiers; basic human army (AW, standard), low tech raider scavenger, high tech future tech, ultra tech mechs, god-tech hyperweapons.
+
+- Robust system to add new units easily
+
+- Unit purchase browser with categories, search, favorites.
+
+- Assets needed - greyscale terrain tiles, 1 illustrative large unit show image, 2 idle frames for unit, 2 move frames (for both vertical and horizontal movement) + flipped for unit, Admiral procgen components (head torso hair hat eyes mouth nose ears accessories clothes - all greyscale and colorable by overlay system), unit explosion anims (space, ground, UW, sea, air, gas) - big n small. No battleanims needed.
+
+- Combat map terrain gen - atom based. Ensure validity of map playability.
+
+- Universe structure - combat area > region > continent > celestial > solar system > cloud > galaxy > super cluster > universe
+
+- VN style choices and dialogue - procgenned.
+
+- Initial ground-only "tutorial" campaign on a single planet to reach an alien tech cache to acquire advanced space travel - includes timeskip to present where space exploration and expansion has begun well.
+
+- Balancing solution? Ensure that there is no unit-on-unit stats matrix built into every single unit like in AW to prevent new unit addition to game became exponentially managable. Make it so that weapons types, hull/armor types, size types and advance tech types are all standardized and only responsible for themselves - each unit will deal with the calculations of how much damage it should take on its own, without needing to know whom attacked it nor whom it will attack.
+
+- Multi-tile weapons (lasers, barrages, sequence weapons, cycles, rings, radiuses, lingering, area of effect, multi-beams, multi-artillery, multi-direct)
+
+- On-level carrier ships/mega bases that are essentially like those mega fortresses with built in cannons, lasers and grenade launchers, etc.
+
+- Advanced infantry transport units - APC w/ soldier catapults etc.
+
+- Super Cores or similar artifacts that override/add Admiral unit stats or alter powers or give/overwrite new powers.
+
+- Multi-layer transforming units that can hop between air and ground. Amphibious sea-ground units. Digger units, submarines, transforming mecha.
+
+- Plane landing mechanics (usually in air, can only safely land on ground if there is airfield below, will take minor damage if landing on plains, will blow up if landing on mountain or forest)
+
+- Satellites, orbital weapons, orbital access (mass drivers, heavy lift payload rockets, other means of transit from surface to orbit), atmo re-entry, orbital/space combat.
+
+- Interchangable weapon mounts (Super Robot Wars style weapon slot swapping).
+
+- Combinable units (mechs, lost planet 2 style)
+
+- Drones?
+
+- Combat environmental effects that alter weapon effectiveness - like that scene in gundam where giant tsunami splash wave caused beam weapons to become ineffective.
+
+## Misc Bonus Info
+
+### Interesting excerpts from AW:DoR mechanics:
+
+> *Harkening back to Super Famicom Wars, units now
+>  promote when successfully defeating an opposing unit, with ranks First,
+>  Second, and Veteran. A Veteran receives a worthy bonus to both offense 
+> and defense, making their value quite distinct. Preservation of Veteran 
+> units, and the prevention of allowing the opponent any are important 
+> aspects of play.*
+
+> *Another solution to a long-standing problem comes with a
+>  change to the APC unit. Now called the Rig, in addition to transporting
+>  foot soldiers and resupplying units, the Rig can now also construct 
+> Temporary Airfields and Seaports with the former being on any plains 
+> tile and the latter any shoal. These additions act the same as their 
+> more permanent counterparts with the exception that they can’t actually 
+> deploy anything. This allows air and naval units to come back and repair
+>  without preventing the construction of new units, or needing to 
+> completely abandon the frontlines to do so.*
+
+> *Terrain is far more varied, providing differing mobility
+>  penalties, defensive bonuses and many, many more terrain types that 
+> provide cover in Fog of War, or even extra vision. This provides for far
+>  more interesting maps, especially in the Naval sector which previously 
+> only had Shoals and Reefs to consider. Mist provides cover and light 
+> defense, while rough seas will provide moderate defense and slow ships 
+> down.*
+
+> COs can pay half the price of a unit to personally board
+>  it themselves. This performs two distinct functions. First, the unit 
+> instantly becomes a Veteran. Secondly, the CO on board will project a 
+> radius of influence. Allied units within this radius will enjoy the CO’s
+>  unique characteristics as well as a passive basic boost to their stats,
+>  an aspect similar to Masaya’s 1990s strategy-RPG series [*Langrisser*](http://www.hardcoregaming101.net/langrisser/).
+> 
+> Further, units within the radius (including the CO unit) that make 
+> engagements with opposing units will charge the CO’s meter. At 
+> half-charge, the radius expands. At full-charge it expands yet again, 
+> and allows the CO to use their CO Power. CO Powers convey the Radius 
+> Bonus to all of the CO’s units on the entire map, and perform a unique 
+> effect, just like in prior entries. Upon conclusion, the meter and 
+> Radius reset. This causes the player to make strategic and tactical 
+> decisions. On the one hand, most CO Powers are highly potent and 
+> covering the entire map with one’s bonus is quite mighty indeed. On the 
+> other hand, it may well be more prudent to continue to take advantage of
+>  the larger radius in order to make the army’s efforts consistently more
+>  effective where they count most.

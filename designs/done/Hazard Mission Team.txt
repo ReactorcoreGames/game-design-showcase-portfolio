@@ -1,0 +1,76 @@
+# Hazard Mission Team
+
+## Version 1 of Design (initial brainstorming)
+Summary:
+Clonk Rage inspired settlement type singleplayer logistics action game, while combining many elements from King Arthurs Gold (KAG), Teleglitch/Savage Vessels, some materials/elements seen in FallingSand/PowderToy type games with minor hints of minecraft/terraria and wrapping it up with a greater overworld metagame for making every mission taken on by the player be part of an interconnected into a continuous persistent universe.
+
+Description:
+Clonk Rage has a settlement game mode; you start with 1-3 versatile humans often with some basic starting resources - on a map with resources, treasure, hazards, varied terrain - and are given an objective to complete on this map. That objective is usually "mine, collect and sell all X resource type(s)", "kill all monsters/eggs on map", "build X buildings or reach a settlement score of Y" or "find this X thing on map". Sometimes its a combination of multiple objectives.
+
+That is essentially the premise of this game too, except without the awkwardness of Clonk since its a very old game with a lot of legacy systems and primitive design holding it back.
+
+However, the goal is to take the core of that Clonk Settlement gameplay but upgrade it beyond its limits, creating a major overhaul that plays as smoothly and interestingly as Clonk Rage does, but is a massively different experience.
+
+The games that are inspiring this project include:
++ Clonk Rage (clonks, vehicles, buildings, construction mechanics, power mechanics, resources, objectives, mission structure, character classes, weather, hazards, fauna, nature, portraits/dialogue, F context menu, R ingame menu, throw, autocollect system, digging system, terrain materials and their hardnesses, magic system, blueprints system)
++ King Arthurs Gold or KAG (16x16 tile-based terrain with 32px tall characters that can crouch down to 16px size, warfare systems - trap/structure tiles, vehicles, controls, universal grab ability, inventory, zombie fortress, held tools (drill, sponge, lantern, bucket, explosive keg, mine, bomb, waterbomb, battering ram, boulder, saw, seeds, logs, trampoline packs, arrows...), resource pile merging, contraptions?, stacking explosives power feature, turrets, catapult launching, spreading fire mechanics, throwable corpses, chickens/ridable animals with benefits, tile/block-based structures, workshops vs clonk buildings?, food/burgers, farming (crops+animals), plentiful disposable player characters unlike clonk, minimap, liquid system?, knight shield platform and pickup ladder like mechanics, knight shield formations/towers, knight shield skidding/surfing/gliding/pushing, archer arrow climbs, one-way platforms, map making/generation system, wang tiles, duck to disable collision between characters, fall damage, bomb jump, class changing at home base(engineer, battle knight, scout), suicide bombing tactics)
++ Teleglitch/Savage Vessels (list type inventory system, items/weapons, damage model?)
++ FallingSand/PowderGame-type games (tile based terrain, but have more interactions between tiles as falling sand mechanics do. Not a full blown simulation, but just more options.)
++ XCOM (randomized portraits, age and names, MECs, Psionics/Magic?)
++ Donkey Kong Country 3 (overworld vehicles - boat, hovercraft, ski jumper, gyrocopter, e.g. equivalents.)
++ Minecraft (block types, biomes, mods, liquid system?)
++ Terraria (block types, biomes, hazards, flora, fauna, enemies, flower farming + potions)
++ Admiral Wars Beyond (entire metagame/overworld system)
++ Noita (material interactions, wands,)
++ StarCraft (Terran building relocation ability, SiegeTank deploy mode.)
++ Forts (Structures, turrets, machines, generators, capacitors, portals, shields, etc.)
++ Master of Orion remaster (4X gameplay, particularly managing planets, fleet management, scouting, discoveries/anomalies, conflict encounters)
+
+
+Metagame - very similar to AWB, theres a world/universe map that is persistent and players are given option to take up (or reserve dibs on for later) whatever next mission is available from a number of randomly generated yet context driven scenarios. So the world map may have tiles or nodes in the world that have an opportunity, threat or curiosity, while other tiles are reserved for the Clonk Civilization that the player is working in favor of. The Clonk Civ tiles are usually resource zones, factories, cities, ports, farmland, reservoirs, parks, logistics hubs or lanes/roads/routes/paths (land, air, sea, space), storages, power plants, labs, military bases and such.
+
+Essentially any mission the player completes has any goods transferred to the self-sustaining clonk civs, expanding the size and reach of the population, allowing the hazard team to travel further out, while giving more options for starting loadouts when entering a new mission - maybe even more options for in-mission reinforcements! The more the player conquers, the more of the universe they can explore, discover more places, travel to other distant continents, planets, moons, asteroids or other galaxies.
+
+==
+
+## Version 2 of Design (more defined idea, specifically focus on this one. Clonk Rage (specifically its singleplayer settlement map challenges) is by far the primary inspiration for this game)
+
+Summary:
+Play as a hazard mission team, operating world wide with a network that can span the entire universe, opening up more and more clients in ever different circumstances, locations, technologies, clients and dangers.
+
+Description:
+There are two parts the game; metagame and mission play.
+
+Metagame is where player can see the impact of their actions upon the world by seeing the cities, villages, nations and environment grow and thrive to be bigger and better with each successful mission. It is also a region selection or network transit screen, allowing the player to travel to other sectors for missions in different countries, different planets/celestials, different star systems etc.
+
+The goal is to serve people or aliens in many ways:
+- Resource acquisition (easy medium hard)
+- Pest control / nest eradication / monster hunt / invasion defense / assault, siege or battle against some threat
+- Rescue / Lost and Found / Exploration Discovery / Anomaly Investigation
+- Outpost construction / Paving the way / Build a machine (anywhere or specific location)
+- Move a vehicle, item, character, machine or object from point A to point B
+- Environmental stabilization / Nature Care
+- Defuse hostage situations or arrest someone
+- Cleanup Duty of any type of mess (ruins, gore, stains, obstacles, debris, loose chunks, breakdowns of vehicles, traffic jams)
+- ...and anything else. Inspiration; bob the builder, thunderbirds, swat kats, tnmt, biker mice from mars, captain planet, voltes 5, etc.
+
+The hazard mission team is the spearhead/vanguard/pioneer/pathfinder of all civilizations across the galaxy, regardless of species, borders, location, on world or offworld. They do a task that secures the area for the greater permanent mass production to come in later.
+
+The game generates a chain of missions that are effectively generated campaigns that will entertain a player for the session. Player can choose which mission or chain of missions to undertake by navigating the world map that presents opportunities, events and locations. These dynamically change and reflect the world map, so any mission is always context sensitive and makes sense on the map tile/node they're on, while completing the mission may alter the tile in a positive way or create other positive effects on the greater area or to adjacent tiles.
+
+With successful mission the player is rewarded with the clonk civ making new megaprojects that yield in exciting super missions. Usually a generated campaign is a sequence of smaller missions that eventually lead up to a big super mission at the end where everything pays off with a grand push forward, opening new frontiers, new trophies in the form of monuments, new cities, new megaprojects being complete, new outposts being established, new factories created, new sanctuaries established and new roads being built - all project contributing to a Master of Orion style overworld where the 4X gameplay has the player manage their worlds, cultivating them, fixing their issues (pollution, lack of production, no farms, not suitable terrain, no defences, etc.)
+
+Mission play has a player enter a procedurally generated, smart heuristics driven map that is tied to the overworld/metagame directly. Usually theres an entry point and the player can allocate loadouts as to what to bring to the zone. The further or more remote or harder to reach area it is, the less the hazard team can bring in. This means far away missions are always hardest and require on-site setup to get things going. Meanwhile closer-to-civ missions can have player bring a lot of extra things and even order reinforcements and other support/aid more easily and abundantly. That said, all missions are inherently designed to be generated in a way that it is possible to complete them even with the most minimal of starting assets.
+
+There is a tolerance how much failure the player can occur - namely hazard team members dying or running out of critical resources needed to complete the mission - and if it is crossed, the mission is failed and player has to restart over. I'm also debating on making missions doable only once where if the player fails, the clonk civ's greater assets will come to clean up the mess - with the consequence of player incuring a penalty to their rating score that can affect access to certain goods or mission types. The point here is that Hazard Team runs on trust, so if they are to undertake a super mission to complete a megaproject, they must earn it (back) with lesser missions first to prove their worthiness. This could be an option or maybe have restart be the solution where time simply rewinds before the mission began so the player can try again without fear of failure. 
+
+If a player deems a mission isn't something they want to play, they can use a "defer" function to let someone else do the job to dismiss that mission permanently - but without receiving the benefits of it had it been completed by the player. Perhaps a deferral will have a skeleton team setup a basic hut with roadsigns to signify that "this area is on-hold until further notice". Or maybe abandon the idea of keeping it consequential and realistic by simply rerolling the missions/campaign available with a different set of maps, but still maintain the same theme and elements of the overworld - so players will still clear that area out, but perhaps the context or mission will be slightly different instead. Again, this is an experimental idea so everything is subject to change. Depends on many factors.
+
+That said, unlike in Clonk where its quite easy to mess up and end up in a soft-locked state - due to running out of clonks, wasting all available resources that were critical to mission success, losing the ability to buy by having the homebase destroyed and having no backup construction kit + materials needed to recover, getting stranded or stuck with no escape, a creeping problem or major mistake completely ruins any real chance of winning (flooding an area the player shouldn't have or meteor bombing finally breaches last line of defence) and many more circumstances - in my game project this is less likely to happen due to contingencies and different design in terms of playable characters, their disposability, material resupply/recovering problems and many others that ultimately make the game more faster/snappy to play and also easier in some respects, while still offering challenge similar to how clonk does in ways that is better adapted to the new overhauled structure of mission gameplay.
+
+The rest of the design requires heavy exploration of mission gameplay systems and mechanics to figure the coolest solution that captures the magic of both Clonk and KAG into a fun fusion that transcends the limitations and frustrations of both games with something that is really amazing and fun to play even alone.
+
+Real-time multiplayer with physics involved is hard so I'd leave that to an external code wizard, but singleplayer is something I can certainly get done!
+
+(Note: if need be, do web search for Clonk Rage settlement gameplay to understand the basic idea how the active gameplay works - it involves a lot digging underground in pixel terrain, carrying stuff around, pushing things around, riding vehicles, building structures that produce goods, electricity or process materials into other materials - all the while avoiding hazards and adapting to disasters (earthquakes, floods, volcanoes, meteorites, etc.) being smart where to build/store stuff and create redundancies/defences/preventative measures against the effects of hazards in the world.)
+(Note2: if the other referenced games are unknown to you, you can web search them too to get ideas/context that would fit this project better. If you, do not mention them in the final HTML file but instead use words to describe the actual thing they bring into the game on its own.)

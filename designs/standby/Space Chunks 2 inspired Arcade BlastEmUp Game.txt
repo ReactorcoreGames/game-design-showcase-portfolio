@@ -1,0 +1,161 @@
+# Space Chunks 2 inspired Arcade Style Blast-em Up
+
+Top-down arena gauntlet of levels with fairly dumb arcade gameplay. In some respects inspired by vampire survivors where you hop in a spaceship, blast enemies, gain points, use points on straightforward upgrades for a limited set of standardized weaponry/ability/attributes. No weapon switching, no inventory, no items. Just a primary blaster projectile gun, a secondary missile weapon, slomo ability. Maybe also a bomb inspired by Azimuth.
+
+Enemies are also standard - just a typical evil alien invader trope, Wing Commander esque villains where humans are the badass heroes. They have their set classes of ships with built in weapon + ability + move pattern, along with slots of turrets, a shield.
+
+---
+
+## Original Description for Space Chunks 2:
+
+Fast and furious arcade style space combat!
+Fly missions and achieve main objectives and bonus objectives for extra points!
+Earn commendations and promotions to gain upgrades!
+Choose from 36 different upgrades, each with 3 levels!
+With each increase in rank, you are assigned a wingmate for your personal squadron!
+Boost your engines or blasters by double-tapping. Likewise unleash a barrage of missiles with a double-tap!
+Use your special power - CHUNK TIME - to get out of harms way or defeat tough enemies!
+Collect powerups to replenish or even permanently improve your hull, shields, blasters, and missile and special power capacity!
+Asteroids are the least of your problems - lookout for:
+
+- Swarmers
+- Marauders
+- Minelayers
+- Stealth ships
+- Destroyers
+- Tractor beam ships
+- Carriers
+- Super-shield ships
+- Dreadnaughts
+- Motherships
+
+Unique and nasty end-of-stage bosses!
+You're not alone! Fight alongside friendly terran forces:
+
+- Fighters
+- Gunships
+- Frigates
+- Cruisers
+
+10 stages of increasing duration and difficulty!
+Pulse pounding, hard rocking original sound track!
+Game automatically scales to whatever your desktop resolution is, including widescreen!
+
+---
+
+## Inspirations:
+Berserker pack from Soldat - part of ability to get penta 6x damage for x seconds with slomo.
+ABARA - Tsutomu Nihei's manga titular character inspiring the player ship/mech
+Gundam Wing - Operation meteor where Wing Gundam enters the earth from space and destroys enemies before reaching earth.
+Rayforce - Same as Gundam Wing, but more of the stages that begin in space, approach orbit, then go lower and lower until reach planet core. Shmup frontal firepower + homing lasers.
+Azimuth - combining blaster abilities like freeze, phase, homing, scatter, pierce, triple. Plus rocket and bomb, along with movement, armor and utility upgrades.
+Starsector Diable Avionics - Transforming mech/starfighter combo and controls.
+Space Chunks 2 - Zones and sectors, arcade dumb gameplay, meaty explosions, enemy design, turret types, allies, looping wide arena space, projectile sensibilities, hazardous fragments from explosions, speedy transitions via cruise engine, the upgrades it provides. Also ally/enemy messages/taunts on spawn, kill, low health, death, random time passed based on hp (confidence/desperation check).
+Pluto SLAM project - lore idea of player being a super weapon akin to that doomsday weapon.
+Biomechanical Weapon (any edgy anime from that era, ala Genocyber) - lore idea for player being a rapidly evolving biomechanical weapon that grows hotter and stronger the closer it gets to its goal until it reaches full potential and detonates, sacrificing/eliminating itself in the process. Functions almost like the Mass Bomb from SPAZ that grows more potent the longer it travels after armed and launched.
+Omega Boost - playing this game sort of feels like in terms of low metagame, going from sector to sector, eliminating waves of enemies and the occasional boss enemy, traversing in a one-way-ticket sort of way with a series of all-range-mode esque arenas inspired from Star Fox 64.
+Gun Metal - Havoc Suit and how it transforms from jet to mech and back. Has homing missiles and a shield. Also the enemy forces, featuring vehicles for space, orbit, atmospheric, aerial, ground. optionally also sea, UG or UW enviros as DLC.
+Homeworld - ship classes.
+Raptop Call of Shadows - ground turrets, structures, being able to shoot and damage buildings despite flying over them, aerial units, boss designs.
+Warning Forever - boss designs.
+
+---
+
+## Lore:
+
+In the early phases of galactic colonization of humanity and some fellow friendly alien races, they encountered a horrific war-driven empire that was in the process of subjugating the galaxy and the universe under its rule. It appeared one day at the edges of joint human/alien colonized worlds with its fleet of ship ala 'Independence Day' movie and just straight up started killing and conquering whatever it came accross ruthlessly and calmly.
+
+Confused, the joint alliance fought back, captured some enemies, retook a few worlds that were conquered and came to the awful realization that these guys were basically something akin to Strogg with zero chance of achieving any kind of peace through diplomacy and understanding. They viewed us as nothing more than meat, lacked all capacity for empathy, were single-minded like the CCP and its uninspired, gimmick driven, shallow, uninnovative paper tiger military that sought to conquer, consume, pollute and greedily do this endlessly througout the universe. It became clear that either we go extinct or they go extinct. They're not entirely actual Space Monsters, but close enough. They're like those militaristic soviet boomers with excessive nihilism/fatalism/vanity that grew up a certain way and were always locked to being that till the day they die.
+
+Generally, the tactics and technology used by this evil empire seemed fairly standard, having spaceships of varying sizes (fighter to dreadnaught), good armor, good blasters, missiles, bombs, mines, tractor beams, emp, nuclear reactors, shield tech and maybe basic-ftl flight (according to AAL universe style of FTL flight). That said that was generally their extent - just brute force with cannon fodder mentality for tactics and military strategy, genetically, physically and mentally incapable of evolving past that.
+
+Humanity suffered losses during the initial invasion, but actually won and destroyed the advancing armadas by now. To avoid further loss of lives in fighting the empire and to prevent them from eventually returning, new weapons were developed specifically as a big "fuck you" to make them go extinct. Heavily inspired by the infamous Pluto SLAM project from humanities ancient past, a biomechanical super weapon was developed:
+
+NAME PENDING - THERMONUCLEAR BERSERKER
+Launched from far away like a deep space probe, beyond visual range as a giant interstellar torpedo, towards a sector that needs to be neutralized, usually towards a planet/moon/planetoid/etc, once it reaches the battle area, it unfurls into a Berserker, a fully autonomous nuclear powered biomechanical mecha that vaguely looks like Denji from ABARA in his badass-creepy skeletal monster form, with a powerful internal (nuclear) reactor, dual (nuclear) blaster cannons, dual (nuclear) missile launchers, a hardened shield generator, (nuclear) bomb dispenser/dropper/ejecter and an internal self-destruct super nuclear bomb that is empowered the more the mecha fights, evolves, upgrades and gets closer to its intended target, eventually detonating, wiping out the enemy to extinction.
+
+In other words its a continent busting nuclear bomb that grew legs, arms, a jetpack-/vernier-/RCS-boosters and evolves the more it destroys its enemies, stealing their essence and materia and manifesting new upgrades for itself from that stuff, being hardwired to love combat and blow itself up gleefully once it reaches a juicy target to wipe out.
+
+Despite its name is admittedly inspired by the "Berserker Von Neumann Probe" concept, this one doesn't actually replicate or go anywhere else besides its target. Its more of a torpedo that works as a one-mecha-army, designed to be powerful, thorough and agile; wipe out the entire guarding enemy space fleet, destroy orbital defences that normally would shoot down a dumb torpedo, continue to destroy interceptors and any defences and fleet assets in the planet's atmo, continuing down to the surface and engaging in ground combat, destroying all enemy planetary defences, all military bases, all industrial facilities, all infrastructure nodes, all population centers, all backup stations and finally destroy the main nexus of control for that planet, effectively dooming any possible survivors and lobotomizing all remaining combat forces to have no tyrant to control them, causing them all to die. Its a cleaner solution than a planetary bombardment that lets the human alliance salvage more materials intact instead of reducing a planet to an instant wasteland. Sort of like a guided precision glide bomb or cruise missile, as a metaphor.
+
+About the ally feature from space chunks 2, the mech can build them internally and release them like eggs or boxes ala Astroneer package that unzip to reveal minion ships that are linked to the mecha - they'll auto destruct or run out of power and crash if the mecha blows up during combat.
+
+Note: Since its meant to be a tactical weapon to conquer enemy worlds and simply wipe out the enemy and itself without destroying the planet itself, the final payload may not be a typical thermonuke, but a high intensity neutron radiation blast (think Mass Effect 2 ending, Evil option) that was specifically designed against this particular race to efficiently wipe them all out while leaving any (hopefully) surviving wildlife and nature intact.
+
+---
+
+## Problems with Space Chunks 2
+
+- Asteroids or Ships with gun emplacement is an ok idea, but needing to hit turrets before the actual hull can be destroyed seems kinda dumb. Better have them available as weakpoints for faster HP bar reduction ala Nova Drift or have them explode in random order as the damage is dealt to the enemy.
+- The scoring system and collecting powerups feels annoying, tedious, arbitrary and stupid. Should be replaced with something that doesn't require chasing after fleeing powerups or breaking rocks randomly or having to fly near exploded enemies to scoop up fallen candy. Something that lets you focus on action - maybe a Azimuth/Metroid style pickups for health, rockets, bombs - but upgrades are earned with % of kills per level with a preset amount of points that each playthrough will have or skip it for automatic random upgrades?
+- Upgrades menu generally has great variety and allows for respec during zone intermissions, but for playthrough-to-playthrough it lacks difference and feels annoying that some upgrades are left unlocked or useless in favor of tried-and-true upgrades. Its also somewhat linear experience where first you suffer in poverty, then grow, then become overpowered and then everything becomes meaningless. Needs a randomized upgrades/super core system. Maybe have the upgrade menu be shuffled in what is available before or after.
+- Invulnurable shields: big NO. It sucks having to witness a boss or enemy ship turn on a white shield and the only thing I can do is wait a twiddle my thumbs until it turns it off for me to finally penetrate it. Never do this.
+- Enemy ranks and bullet sponge enemies. As much as its ok for the larger ships to have beefy armor that takes a bit to destroy, the Rank system that doubles enemy armor/shield/speed/firepower is definitely very bad and inconsistent. Keep all enemies standardized, though maybe introduce uncommon/rare elite enemies ala that Rainbow Monsters doom mod universal addon.
+- Particles and objects overkill. I was able to lag and even straight up BSOD my older laptop playing that game when I did the ghost x6 + blasters + multiple salvos of cluster missiles ultimate attack. Keep the game stable at all times no matter what, keep a tight budget of maximum allowing things ingame at any given time.
+- Player control and turret felt janky to aim. Instead opt for a Starsector style mech controls. Add turn speed as an option for upgrades or for weapons to have some wider arc to shoot at mouse position direction instead of straight forward.
+- Missiles will auto lockon to fly into nearest enemy based on mouse cursor position. They will do this and then choose the nearest next enemy if previous lockon target expired before the missile could hit them.
+- Double tap for blaster, missiles, boost and cruise engine isn't too bad. It works, although cruise engine I'd rather swap to something different.
+- Player arrives at arena and enemies teleport in after, this isn't right. Enemies should already be at sector and player "descends" into the arena to fight them. I want to avoid enemies having teleportation/warp tech. Instead of reinforcements, simply have player move to next sector. Simply have more sectors per zone.
+- Player should not have to wait for enemy to arrive; in SC2, I arrive and then wait before the enemies arrive. Just a continuation of the above point.
+- All units, props, objects, player, allies, enemies and bosses are all fitted inside a square. This is fine and makes colliders and sprites easier to deal with. Just use circle colliders for all. I can even use AI to generate them.
+- Hazards are limited to rocks that break apart into smaller ones and offer minimal juicy feedback when they do and are quite flimsy despite being made of actual rock. There should be more stuff in space as obstacles, cover or hazards or opportunistic elements, like large space station fragments or asteroids, debris fields of smaller fragments (low damage, but can add up if going too fast through it), dust/nebula clouds for partial visibility reduction, methane clouds to ignite and regenerate after 5 seconds, plus whatever equivalents for atmospheric and ground versions of these.
+- Backgrounds are cheap and dont reflect location changes that much. do it more akin to rayforce with neat simple transitions.
+- Game controls are good in keeping things simple: WASD + Mouse M1 M2 for move and shoot, with F for ability, Esc for menu/pause. Add X or Q for bombs, but hopefully nothing more than that. Perhaps replace double tap boost with Shift or Spacebar button to enable tap boost, regular boost and overboost. Let mecha turn into a jet with arms during boost, letting it fire its weapons normally despite transforming. Side strafe and backflight is slower with jet so pointing in direction of boost direction actually gives significant speed boost. Or maybe dont transform into jet. Mech on its own is fine enough.
+- Remove the rating of missile use, hits taken, weapon accuracy. They steal/poison focus of game fun instead of enjoying combat freely.
+- There is no newtonian momentum drift or brakes. Makes movement and combat feel very stilted, stiff, unalive. With improved WASD controls where mouse points player direction while AD is for strafe, W is forward and S is for brakes or backward (player can use WS to come to full stop, theres only minimal default air friction, which increases based on level conditions - some have more friction due to atmosphere/gasses/nebula)
+
+---
+
+## Upgrades, Supercores, Low Meta, High Meta
+
+Weapons include Blaster, Missile, Bomb, Collide (armor, shield), Thruster Flame - each campaign starts off at a basic level with random 3-6 upgrades already enabled as a "starting loadout". This is the Super Core equivalent of this game so that each new run feels random, fresh and interesting as you might start with some extras already enabled instead of always starting naked. You may also start with a perk/trait that is unique for that run (sort of like classes or gimmick, ala "double damage, but 75% armor" or "Bruiser: heavy armor, heavy guns, slow speed" or "fast finesse sniper", "spray and pray: more spread, more rate of fire, 80% damage" or "Slammer: 500% collide damage against others, harderned armor against collision damage", etc.) Each of these are more weighted towards assault gameplay rather than slowness, waiting, defence and turtling. This is meant as an aggressive gameplay game, so anything that reduces damage should have something that still always leaves the overall DPS higher than what it was prior.
+
+Theres also another quirk/perk that decides whether double tap engages a burst, a barrage or initiates a charge up sequence for a super powered shot. 
+
+If its a charge up, player will double tap and it will automatically powerup to fill up a bar. If player presses again but it hasn't fully charged again, it will shoot a premature shot, if player waits and lets it go to full strenght, then it will launch a standard powered super shot. Player will see a charge-up bar fill up in the UI to tell if its still charging or fully charged. If they trigger it before it reaches full potential, it will launch a regular shot with a mild extra power, up to 60% more damage. If they let it reach the full potential, then trigger it, it will unleash a super shot with 600% damage + other myriad benefits (velocity, blast radius, pierce more, phase more, freeze larger, leave a stronger/longer corrode, etc.), including a short 1sec of recovery period afterward to cool down. If its charging an ammo weapon (rocket or bomb), then it will consume slightly more ammo per shot, multiplying the power even more than the blaster. Great for prepared finesse multikills with one efficient shot.
+
+If its a burst, double tapping will immediately initiate an immediate dump-fire sequence that the player commits to, dealing triple damage and triple rate of fire (or more for both) with other extra bonuses, with a 2 second recovery period afterward. Great for hit and run tactics.
+
+If its a barrage, double tapping and holding down will start ramping up fire ala siege weapon from Nova Drift, increasing damage with each launched shot, while massively reducing turn speed, move speed, with Rancor mod effects included too. For blasters, theres a heat mechanic that will cause a 3 second recovery cooldown if its maximized. Player should stop firing before it reaches that and simply continue shooting in basic mode until its low enough to use again. For bombs and rockets, ammo is spent rather quickly but each shot is atleast 2x powerful, with a minimum of 4 ammo spent, with every shot launched after the first 4 increasing with power by another +50%, with maximum damage potential determined by maximum amount of ammo available. Great for focusing massive firepower.
+
+The burst, barrage, charge is applied at random per blaster, rocket, bomb individually, so each playthrough can have 3x3=9 different archetypes. This combined with starting loadouts and the other upgrades/perks results in endless combinations that all feel different per playthrough.
+
+## Upgrades:
+Before each boss upon picking up the metroid style upgrade, player afterwards gets to choose 3-5 out of 9 randomly offered options to apply to their ship, altering movement, berserk ability, armor, shields, blaster, bombs, missiles, allies and utility (pickups, enemy behaviour, defence/hijack against enemy tractor/mines/missile, level hazard related stuff, etc). Then a boss fight begins, then the next stage transition begins with an option to save and quit or continue until end of campaign.
+
+I'm also considering a split between Space Chunks 2 style upgrades and also receiving a major upgrade prior a boss ala Metroid games. Prior because I want it to be useful before the game ends and available during the boss. The major upgrades are things like new blaster types (freeze, pierce, phase, spazer, triple, scatter, bounce/rico, homing, airburst split, etc. - some apply to missiles and bombs too or gain the effects of blaster infused into rocket/bomb) new armor types (varia, gravity, reactive, anti-knockback, anti-emp), shield (nova drift ones), movement (speedbooster+shinespark(trigger with boost), screw attack (via boost), hijump (longer harder boosts)), engines (fire trail, wider firefly burn, nova drift ones basically) and so on.
+
+Generally, upgrades come from these inspirations:
+- Nova Drift
+- Space Chunks 2
+- All metroid and metroid adjacent games
+- Incl. Ex Vitro and Azimuth
+- Action RPGs that have stat improvements or enable functionality in player that is precoded into them, but enabled if player chooses those upgrades (like enemy mine/missile hijack or repulsing projectiles on shield hit, blaster projectiles reduce enemy blaster bolts if they intersect/collide)
+
+There are no abilities that require a hotkey or button combo. Blaster cannot turn into beam, hitscan or otherwise not be a blaster. Same with missile/bomb - they always remain the same weapon though missiles could have potential to be dumb-fire rockets by default like Azimuth with only minimal auto aim and course correction to reduce frustrating misses. Have homing be a "seeker" upgrade that can apply to blaster, rocket, or bomb.
+
+Another idea is visor as utility upgrades to give player info on enemy AI intent or see more detailed info on HP/Shields, or reveal cloaked enemies without needing to shoot them first.
+
+The order of Primary and Secondary upgrades is entirely randomized, offered from a pool of all the possible upgrades. they are designed somewhat to be independent, meaning you don't need prerequisites. the only exception is the double tap fire mode per each weapon, which have their own alternative sets of upgrades that are injected into the pool, while other ones are excluded from the pool as they'd do nothing. Perhaps they're bundled as ABC mods that will simply apply the effects of A, B or C depending on what the player is equipped with.
+
+## High Metagame:
+
+The game takes place in the milky way galaxy, a smaller region/cloud where Sol/Earth is, along with nearby stars systems. Canonically this is a rather small and limited campaign compared to all my other games, albeit player can play it virtually forever. The lore is that the enemy is already fucked as they're being driven to extinction by these doomsday weapons used by the human alliance to cleanse the evil from the galaxy. The player simply gets to participate in the "fun" to wipe out a single-minded tyrant race from the face of the galaxy as a remote control (drone) operator of this biomechanical berserker mecha weapon.
+
+Since this is a simple roguelite gauntlet arcade game with randomized runs with a dual seed (one seed for player loadout/upgrades, another for enemy/location), it simply records a log of successes of conquered enemy worlds with a seed/replay option for unsuccessful ones so player can go retry them until they turn them green. Show stats for total exterminated enemies in life counts and kg tonnages of metal material destroyed of enemy forces.
+
+Each player has a randomly assigned color to seed. Its fine to repeat seed of already used berserker unit. Its simply another instance of the same model configuration.
+
+Have the log be coded to be red color bg at first and gradually turn fully into blue after about 100 successful missions, followed by other random procedular elements appearing subsequently to make it change each time you've finished another world, some basic generative art algorithm thingy.
+
+## Expansion Potential:
+
+The upgrades are fairly numerous to come up with even with the relatively strict constraints of this game.
+
+Theres also stage hazards and how stages are generated - more algorithms for more variety and structure until it looks something like Raptor Call of The Shadows or Rayforce, with inclusion of sea, underwater, underground and even sub underground (mantle, core) zones, introducing walls and tighter spaces on occasion.
+
+Also gas giants, stars, asteroid belts, nebula, debris fields, minor megastructures. usually with some type of Freelancer style shipyard, station complex, asteroid base, large station, gas miner fleet, resources gatherer, depot, prison, factory, battlestar, moon base, space fleet division/brigade/w/e - I wanna keep it low-ish tech so no dyson spheres or such. Keep it simple, Gundam UC-79 One-Year-War or Freelancer tier stuff.
+
+Enemy forces could also be expanded with more variety of units, more turret variants, though I wouldn't actually implement new races or implement new mechanics that are outside what the player or Space Chunks 2 originally had. Maybe include some mooks from Nova Drift, but thats about it.
+
+New structures, terrain textures and such could be added for more color variety.

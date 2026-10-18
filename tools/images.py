@@ -1,0 +1,260 @@
+"""Image pipeline for showcase pages: spec -> BAIG -> resized JPEGs in site/.
+
+Each project has a spec at image-prompts/<slug>.json (format in workflow/image-brief.md).
+The pages already reference the final file names, so this tool only has to
+produce files at exactly those paths.
+
+    python tools/images.py check  [slug ...]             validate specs, show lengths and image count
+    python tools/images.py gen    slug ... [--dry-run]   generate through BAIG (klein4b, Standard tier)
+    python tools/images.py finish slug ...               resize + JPEG + thumbnail into site/projects/
+    python tools/images.py recompress [--apply]          re-encode existing site images (report only by default)
+
+No slug given to check = every spec. gen refuses to queue more than --max images
+(default 70: the Klein free allowance minus a margin that keeps SDXL usable).
+"""
+
+from __future__ import annotations
+
+import argparse
+import io
+import json
+import math
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+from PIL import Image
+
+REPO = Path(__file__).resolve().parent.parent
+SPECS = REPO / "image-prompts"
+WORK = REPO / "_work"
+SITE_IMAGES = REPO / "site" / "projects" / "images"
+SITE_THUMBS = REPO / "site" / "projects" / "thumbnails"
+BAIG = Path(os.environ.get("BAIG_DIR", r"C:\ClaudeWorkspace\AI image gen batch program"))
+
+ROLES = {1: "title", 2: "vignette", 3: "feature", 4: "boxart", 5: "story"}
+RATIOS = {"16:9", "3:2", "1:1", "2:3", "9:16"}
+TARGET_PIXELS = 1280 * 720  # every image is scaled to this area, whatever its ratio
+THUMB_SIZE = (320, 180)
+JPEG_QUALITY = 82
+PROMPT_LIMIT = 1800  # prompt + style suffix; klein's encoder cuts off silently near 2000
+DAILY_MAX = 70
+
+
+def load_presets() -> dict[str, str]:
+    cfg = BAIG / "config.json"
+    if not cfg.exists():
+        return {}
+    return json.loads(cfg.read_text(encoding="utf-8")).get("style_presets", {})
+
+
+def load_spec(slug: str) -> dict:
+    path = SPECS / f"{slug}.json"
+    if not path.exists():
+        sys.exit(f"no spec: {path}")
+    spec = json.loads(path.read_text(encoding="utf-8"))
+    spec.setdefault("slug", slug)
+    spec.setdefault("prefix", slug)
+    return spec
+
+
+def all_slugs() -> list[str]:
+    return sorted(p.stem for p in SPECS.glob("*.json"))
+
+
+def style_suffix(spec: dict, presets: dict[str, str], preset_override: str | None = None) -> str:
+    """Preset text (by name, from BAIG's config) followed by the spec's own extra style words."""
+    parts = []
+    name = preset_override or spec.get("preset")
+    if name:
+        if name not in presets:
+            sys.exit(f"{spec['slug']}: unknown BAIG preset {name!r}")
+        parts.append(presets[name])
+    if spec.get("style"):
+        parts.append(spec["style"])
+    return " ".join(p.strip() for p in parts if p.strip())
+
+
+def validate(spec: dict, presets: dict[str, str]) -> list[str]:
+    errors = []
+    nums = sorted(img.get("n") for img in spec.get("images", []))
+    if nums != [1, 2, 3, 4, 5]:
+        errors.append(f"images must be n=1..5, got {nums}")
+    suffix = style_suffix(spec, presets)
+    for img in spec.get("images", []):
+        n = img.get("n")
+        if img.get("role") != ROLES.get(n):
+            errors.append(f"image {n}: role should be {ROLES.get(n)!r}, got {img.get('role')!r}")
+        if img.get("ratio") not in RATIOS:
+            errors.append(f"image {n}: bad ratio {img.get('ratio')!r}")
+        prompt = img.get("prompt", "").strip()
+        if not prompt or "\n" in prompt:
+            errors.append(f"image {n}: prompt must be one non-empty line")
+        total = len(prompt) + 1 + len(suffix)
+        if total > PROMPT_LIMIT:
+            errors.append(f"image {n}: prompt+style is {total} chars (limit {PROMPT_LIMIT})")
+    return errors
+
+
+def cmd_check(args) -> None:
+    presets = load_presets()
+    slugs = args.slugs or all_slugs()
+    total = 0
+    bad = False
+    for slug in slugs:
+        spec = load_spec(slug)
+        suffix = style_suffix(spec, presets)
+        errors = validate(spec, presets)
+        longest = max((len(i.get("prompt", "")) for i in spec.get("images", [])), default=0)
+        state = "OK " if not errors else "ERR"
+        print(f"{state} {slug:32} preset={spec.get('preset')!r} style={len(suffix)}c longest prompt={longest}c")
+        for e in errors:
+            print(f"      - {e}")
+        bad |= bool(errors)
+        total += len(spec.get("images", []))
+    print(f"\n{len(slugs)} specs, {total} images")
+    if bad:
+        sys.exit(1)
+
+
+def ratio_tag(ratio: str) -> str:
+    return "p" + ratio.replace(":", "x")
+
+
+def cmd_gen(args) -> None:
+    presets = load_presets()
+    plan = []
+    for slug in args.slugs:
+        spec = load_spec(slug)
+        errors = validate(spec, presets)
+        if errors:
+            sys.exit(f"{slug}: spec invalid, run check")
+        plan.append(spec)
+    count = sum(len(s["images"]) for s in plan)
+    print(f"{count} images across {len(plan)} projects, model {args.model}")
+    if count > args.max and not args.dry_run:
+        sys.exit(f"refusing: {count} > --max {args.max}")
+
+    for spec in plan:
+        suffix = style_suffix(spec, presets, args.preset)
+        out = WORK / spec["slug"] / f"raw-{args.model}"
+        out.mkdir(parents=True, exist_ok=True)
+        groups: dict[str, list[dict]] = {}
+        for img in sorted(spec["images"], key=lambda i: i["n"]):
+            groups.setdefault(img["ratio"], []).append(img)
+        for ratio, imgs in groups.items():
+            pfile = WORK / spec["slug"] / f"{ratio_tag(ratio)}.txt"
+            lines = [(args.lead + img["prompt"].strip()) for img in imgs]
+            pfile.write_text("\n".join(lines) + "\n", encoding="utf-8")
+            # line number -> image n, so finish can map BAIG's output back
+            (pfile.with_suffix(".map.json")).write_text(json.dumps([i["n"] for i in imgs]))
+            cmd = [
+                sys.executable, str(BAIG / "cli.py"), "dry-run" if args.dry_run else "run",
+                str(pfile), "-o", str(out), "--model", args.model, "--ratio", ratio,
+                "--tier", "standard", "--style-text", suffix,
+            ]
+            print(f"\n== {spec['slug']} {ratio} ({len(imgs)} images)")
+            subprocess.run(cmd, cwd=BAIG, check=True)
+
+
+def find_raw(slug: str, model: str, n: int) -> Path:
+    base = WORK / slug
+    for mapfile in base.glob("p*.map.json"):
+        order = json.loads(mapfile.read_text())
+        if n in order:
+            line = order.index(n) + 1
+            stem = mapfile.name.removesuffix(".map.json")
+            hits = sorted((base / f"raw-{model}").glob(f"{stem}-{line:03d}-*.*"),
+                          key=lambda p: p.stat().st_mtime)
+            hits = [h for h in hits if h.suffix.lower() in (".jpg", ".jpeg", ".png")]
+            if hits:
+                return hits[-1]
+    sys.exit(f"{slug}: no {model} output for image {n} (run gen first)")
+
+
+def scale_to_area(im: Image.Image, pixels: int = TARGET_PIXELS) -> Image.Image:
+    w, h = im.size
+    if w * h <= pixels:
+        return im
+    k = math.sqrt(pixels / (w * h))
+    size = (round(w * k / 2) * 2, round(h * k / 2) * 2)
+    return im.resize(size, Image.LANCZOS)
+
+
+def save_jpeg(im: Image.Image, path: Path, quality: int = JPEG_QUALITY) -> int:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    im.convert("RGB").save(path, "JPEG", quality=quality, optimize=True, progressive=True)
+    return path.stat().st_size
+
+
+def cmd_finish(args) -> None:
+    for slug in args.slugs:
+        spec = load_spec(slug)
+        prefix = spec["prefix"]
+        for img in sorted(spec["images"], key=lambda i: i["n"]):
+            src = find_raw(slug, args.model, img["n"])
+            im = scale_to_area(Image.open(src))
+            dest = SITE_IMAGES / f"{prefix}_{img['n']}_{img['role']}.jpg"
+            size = save_jpeg(im, dest)
+            print(f"{dest.relative_to(REPO)}  {im.size[0]}x{im.size[1]}  {size // 1024} KB")
+            if img["n"] == 2:
+                thumb = Image.open(src).convert("RGB")
+                thumb.thumbnail((THUMB_SIZE[0] * 4, THUMB_SIZE[1] * 4))
+                thumb = thumb.resize(THUMB_SIZE, Image.LANCZOS)
+                tdest = SITE_THUMBS / f"{prefix}_2_vignette_thumb.jpg"
+                tsize = save_jpeg(thumb, tdest)
+                print(f"{tdest.relative_to(REPO)}  {THUMB_SIZE[0]}x{THUMB_SIZE[1]}  {tsize // 1024} KB")
+
+
+def cmd_recompress(args) -> None:
+    before = after = 0
+    for path in sorted(SITE_IMAGES.glob("*.jpg")):
+        data = path.read_bytes()
+        im = scale_to_area(Image.open(io.BytesIO(data)))
+        buf = io.BytesIO()
+        im.convert("RGB").save(buf, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
+        before += len(data)
+        new = buf.getvalue()
+        if len(new) < len(data):
+            after += len(new)
+            if args.apply:
+                path.write_bytes(new)
+        else:
+            after += len(data)
+    verb = "rewrote" if args.apply else "would shrink"
+    print(f"{verb} site images: {before / 1e6:.1f} MB -> {after / 1e6:.1f} MB")
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    p = sub.add_parser("check")
+    p.add_argument("slugs", nargs="*")
+    p.set_defaults(func=cmd_check)
+
+    p = sub.add_parser("gen")
+    p.add_argument("slugs", nargs="+")
+    p.add_argument("--model", default="klein4b")
+    p.add_argument("--preset", help="override the spec's preset (e.g. a photo/watercolor one for sdxl)")
+    p.add_argument("--lead", default="", help="text put in FRONT of every prompt (sdxl only reads ~300 chars)")
+    p.add_argument("--max", type=int, default=DAILY_MAX)
+    p.add_argument("--dry-run", action="store_true")
+    p.set_defaults(func=cmd_gen)
+
+    p = sub.add_parser("finish")
+    p.add_argument("slugs", nargs="+")
+    p.add_argument("--model", default="klein4b")
+    p.set_defaults(func=cmd_finish)
+
+    p = sub.add_parser("recompress")
+    p.add_argument("--apply", action="store_true")
+    p.set_defaults(func=cmd_recompress)
+
+    args = ap.parse_args()
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

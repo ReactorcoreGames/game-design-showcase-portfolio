@@ -1,0 +1,16 @@
+Claude, your task is written in:
+@1 MAIN Game Design Presentation HTML Generator.md
+
+That task doc will refer to a design bible file:
+@2a BIBLE Reactorcores Game Design Mentality Bible.md
+@2b BIBLE Reactorcores Game Design Mentality Bible.md
+
+The completed HTML file will be placed in the folder called 'Ready HTML Pages'. Name that html file as '[game_project_name_without_subtitle].html'.
+
+The 'Game Project Files' folder contains the files that I want you to make the next game design showcase based on.
+
+Create a plan first, outlining the different sections you'll make and the theme you'll choose for it, but dont code it yet; I will review it first, then we will tweak it if necessary and then I'll give you the approval to proceed to build it.
+
+This time, in regards to which one of the two projects in the doc to do, focus on V2 in particular. In particular I want its style and theme be heavily inspired by the Crusher Joe anime (do a web search on it, to get the mood/vibe, and the general scifi universe and the type of technology that exists within it.)
+
+(Note that I already have V1 in completed HTML form in @Ready HTML Pages/thunderstrike-justice.html, so if you want a good starting point for V2, then use that.)

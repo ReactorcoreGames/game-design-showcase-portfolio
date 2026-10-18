@@ -1,0 +1,40 @@
+## additional info:
+
+This one is heavy metal concert themed moshpit that goes into comical lenghts of having player participate in a small section infront of a concert stage, along with several other metal fans that decide to continuously bump into each other like a human version of demolition derby (the motor sport), having people collide over and over, get bruised and have their limbs fall off until only their torso and head remain. If either torso or head's hitpoints are reduced to zero, that character is knocked out of the arena until the next match begins.
+
+No one gets killed and people are sewn back together by paramedics, good as new. Its a lighthearted chaotic human ramming party, with a heavy metal concert theme. Compared to other spinoffs, this one is a fairly minimalistic game that can played just using the mouse.
+
+There are no weapons involved and no healing/regeneration during combat. No armor system either. Participants are just metal-music fans dressed in all kinds of inspired outfits and motifs. Different outfits mainly change visual appearance but dont affect stats.
+
+Combat consists of people trying to gain enough momentum and ram into someone. When the impact happens, who had the bigger speed and favorable momentum will suffer only minimal damage, while the receiver of the impact will be hit hard and receive massive damage.
+
+Arenas have anywhere between 4-12 participants in a free-for-all slam fest, while a metal band plays in the background. Each battle is limited to the duration of the song or whoever is the last one standing, whichever happens first. There are 10 songs and by the end of them whoever has the most points is crowned the lord of the moshpit and celebrated by all the participants and recognized by the band. Any lost limbs or sustained damage is healed between songs.
+Points system:
+- inflict 10 hitpoints worth of heavy damage cumulatively: +1 score
+- deal the final blow to another contestant: +5 score
+- be the last one standing: +5 score
+- if song ends with less than half of starting characters remaining in arena: +2 points (awarded to all survivors)
+
+Each character has a collective 666 hitpoints, dispersed among limbs and torso. Hits to head incur 1.5x damage multiplier, hits to torso have a 1.0x damage multiplier, hits to limbs incur 0.5x damage multiplier. This goes both ways, its advantageous to first building up speed and then at the last moment to rotate the body so that either the arms or legs will make contact during impact, while the head and torso are kept safe to maximize opponent damage and minimize damage to self.
+
+Songs are about 3-4 minutes long, but combat is fairly fast, loaded with juicy blood spurt effects for over-the-top dramatic visuals, painting the moshpit red with blood, dirt smears from where characters accelerated, and scattered clothed dismembered limb pieces. The longer and more intense a battle is, the more vividly painted the arena becomes. When the next song begins, previous limbs are all removed but old blood and dirt stains dry up and becomes dark but stays around for the rest of the songs the band will play. This will cause each moshpit battle to make the arena more and more stained with blood and dirt, resulting in a unique painting that will serve as the background during celebration of the new moshpit lord.
+
+## controls:
+mouse aim - control rotation of character
+mouse 1 - accelerate towards current facing direction
+mouse 2 - tap for a quick dash with a cooldown, charge and release for a bigger dash boost. if done next to a wall, quick boost gets 2.0x, while charge dash boost gets a proportionally stronger blast off towards facing direction, getting anywhere between 1.5 up to 4.0x speed boost depending on how long the button was held down before releasing. Without a wall, the equivalent numbers are about 1.25x for quick boost or 1.20x up to 2.5x for charge boost.
+
+## powerups:
+There may be random powerups occasionally dropped into the moshpit that can be picked up by anyone.
+
+What are relic powerups:
+
+They're items that spawn randomly every minute at a random point anywhere on the map. They are picked up on contact by any character, giving them a multiplier-based special power for 30 seconds of duration before expiring. Multiple powerups can be collected, having their effects stack, including of the same type.
+
+Power ups list:
+- Relic of Strength: Doubles the damage that you do.
+- Relic of Defense: Reduces all the damage you take by 0.25x
+- Relic of Haste: Multiplies your base speed acceleration by 1.5x.
+- Relic of Boost: doubles the launch power of a charged dash boost and quick dash, including wall-assisted version of boost.
+- Relic of Knockback: Causes impact knockback force on target to be doubled, sending them flying away after a hit more forcefully.
+- Relic of Translocation: If a player carrying this relic receives a strong enough hit from another character (threshold, so weaker hits will still get through), they are instantly teleported to a random location on the map.

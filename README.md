@@ -1,6 +1,6 @@
 # Reactorcore's Game Design Showcase Portfolio
 
-![Banner Image](https://raw.githubusercontent.com/ReactorcoreGames/game-design-showcase-portfolio/main/ReactorcoreCollageBanner.jpg)
+![Banner Image](https://raw.githubusercontent.com/ReactorcoreGames/game-design-showcase-portfolio/main/site/ReactorcoreCollageBanner.jpg)
 
 This repository hosts the source code for my personal game design portfolio website.
 
@@ -17,6 +17,12 @@ The portfolio showcases my game design concepts and projects with detailed descr
 The **Menu button** will answer many questions, provide links, let you view my Resume/CV, socials, contact, etc.
 
 The visual shell was built with pure HTML and CSS using Claude Code with extensive prompt engineering, but the actual content/designs were hand-made by my human self. These are game concepts I put many days/weeks/months of thought and care into. I really want to make these games a reality.
+
+## Inside this repository
+Besides the website itself (`site/`), this repo holds the raw material the showcase pages are made from, open for anyone who wants to learn how I design games:
+- `designs/`: my original design documents for every project, both showcased and upcoming
+- `reference/bible/`: my game design mentality bible, the principles behind every design decision
+- `reference/lore/`: lore of the AAL universe that many of the projects share
 
 ## Opportunity for you, Coder
 If you find them inspiring and cool, join me up as a coder where I will handle art, sound, music, design, project management, marketing, publishing and you will handle the code, whether you use AI coding tools or hand-made code or a hybrid approach - all are welcome.

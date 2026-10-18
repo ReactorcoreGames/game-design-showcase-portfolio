@@ -1,0 +1,7 @@
+Lets add SEO metadata to the game project showcase html pages located in the folder "Ready HTML Pages". 
+
+Add meta descriptions, Open Graph tags, Twitter cards, and JSON-LD structured data. Only modify the head section - do not change visible content. For canonical URL links, use this GitHub Pages URL structure: https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/[PAGE-NAME].html.
+
+In the meta stuff when choosing an image for the different things for SEO, always pick the "...2_vignette.jpg" one. Always check the page's existing info to get the correct exact image link.
+
+Any SEO metadata must be honest; remember that these are only concepts, not released products.

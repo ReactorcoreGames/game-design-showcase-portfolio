@@ -1,0 +1,251 @@
+# Falling sand game variants
+(I'm making a series of games that fall under the same category of leveraging falling sand game mechanics (cellular automata with physics) in some way and originally I wrote a big mega document with all the ideas in it, then later split them into individual small documents to keep the prompt focused. The stuff after the Game Ideas is the actual game idea I want you to focus on, while the below two paragraphs are merely an intro that is free to be overwritten/disregarded in favor of the actual game idea that takes all priority.)
+
+The idea is to have very simple, short and satisfying game experiences that primarily incorporate falling sand mechanics in some way. By falling sand, I dont exclusively mean sand only, but the general game engine of falling sand games like Powder Toy or similar pixel simulation sandboxes. The range of materials/phenomenom are always limited to the scope of the particular game at hand, so while some games may feature things like fire, sand, water, grass, snow, ice, wood, stone, flammable gas, etc. it always depends on a per-game basis what they'll ultimately have, both to keep them focused and simpler to make.
+
+While falling sand mechanics are at the forefront, the game can feature other 2D game elements and colliders that work in tandem with the falling sand. Also unlike most falling sand games which are merely open sandbox experiences without any structure or metagame, the games I want to make aim to have enough game design embedded into them so they're atleast on the same level as a typical kongregate web game or a newgrounds flash game, in terms of gameplay, small scope and cohesiveness as a proper game experience, even if its simple/basic.
+
+That said, I aim to mainly release them on desktop platforms (PC, Linux, Mac), maybe web too if its possible to make it performant enough for it to work there. But Windows PC is always priority one as the release platform.
+
+
+## Game Ideas
+
+### 1, Justice Will Glass Them
+2D sideview game. Control a space police warship high above in the sky and drop payloads below to blow stuff up and burn them. Maybe do layered Evangelion style fortresses where you drill/burn through layers of terrain, concrete/metal/etc to reach the control bunker/command center at the bottom. Maybe use fog of war, with some clues being revealed the lower you did to help you narrow down the ultimate target. Avoid/annihilate anti-air defences present on the surface and revealed as you dig into pockets underground and keep melting/digging until the final core object at the bottom goes kaboom in a spectacular way after a small delay (your ship escapes during this).
+
+uses randomly generated layered materials with random air pockets that house anti-air weapon that shoot missiles towards your ship that you must either avoid or shoot down. On the surface and underground have randomly genned rectangle buildings too with turrets attached that shoot slow cannon projectiles upwards. Player has a powerful charge beam attack to dig and blow up stuff and a point defence machinegun attack to shoot down incoming projectiles. Player's warship can move somewhat slowly using WASD keys, while weapons are aimed and fired with Mouse Aim and Mouse 1 and 2 buttons.
+
+Diggable/destroyable solid materials divide between soft, medium, hard, ultrahard. While those ones are static, they each have custom color pixel. While knocked loose or destroyed, use one global color of a generic destroyed material that is set for that specific level. Generally use a narrow desaturated range 50-200 rgb for most colors, except for explosions, fire, lasers and projectiles which are all more vibrant and saturated to differentiate from the background. Use a vertical 2 random color gradient dark background (range 0-50 rgb), 
+
+Premise is to eliminate a dug-in dictator who thinks they're safe from the crimes they've done. Police justice theme.
+
+
+### 2, Zero Space Robo Derby
+
+Fly in solid ship asteroids style, drifting with momentum, shoot at other solid ships in a free for all rectangle arena shootout. Unlike asteroids games, no screen warp here. If their HP goes 0 then turn them into sand with inherited impact momentum that flies towards off screen or vanishes after X seconds, going from burning hot colors to a random dark muted. Sort of like a demolition derpy robot wars theme, but instead of head on-collisions, the robo-ships use a charge up blaster that has a delay before firing and when it fires, it launches a projectile at medium speed going directly forward and deals more damage the longer it was charged, with a maximum damage potential of 60hp hit and minimum 5hp hit. All ships start with 100hp. Amongst ships, theres also random asteroids floating about that will behave as they would in asteroids games, splitting into two several times before being fully gone. Collisions with asteroids are harmless and they're mostly used as pushable physics cover to soak up hit.
+
+Players can pick up powerups that randomly appear on the level every 15 seconds and bounce around until picked up via ship contact, to add an ability to their blaster:
+- phase: shot goes through asteroids and ships.
+- scatter: shot explodes on impact, splintering into 6 smaller 50% power shrapnel hits.
+- homing: shot will slightly curve to adjust its trajectory towards opponent in line of fire within the 20' degree firing angle calculater from the shooters ship.
+- warp: shot will warp around the screen once.
+- triple: ship will fire 3 projectiles in a spread pattern, each only 75% powerful compared to default single shot.
+- hypervelocity: doubles weapon damage output and projectile launch speed but also doubles charge time.
+
+These upgrades can stack and last for 60 seconds before expiring.
+
+Control with mouse:
+- mouse aim: rotate ship to face direction
+- mouse 1: hold to charge weapon, release to fire
+- mouse 2: apply forward thrust
+
+Player has maximum speed and there is automatic braking/air resistance that will slow the ship down gradually as it drifts with its momentum using basic physics.
+
+
+### 3, Twin-Stick-Shmup/Missile-Command/Space-Invaders (sideview)
+
+This one is a mix of R-Type, Missile Command and Space Invaders, as a 2D sideview that plays like an autoscrolling twin-stick shoot em up. The falling sand aspect here is that objects are initially 2D objects that turn into fiery dust falling sand particles that shift in color, breaking down with force and momentum based on the impact they suffered from player's weaponry. I supposed techwise theres the 2D game layer and a falling sand layer that acts as the visual special effect for this game.
+
+Although I said R-Type, which is about a starfighter, this game instead has a starfighter mecha (starmecha) that launches missiles in the style of the classic game Missile Command, that fly out of players starmecha towards a spot where the mouse cursor is positioned at and detonate there, with a lingering circle that slowly grows, reaches its apex size and slowly shrinks until it disappears, simulating an explosion that obliterates any invader alien ships caught in the blast, though player is immune to the blast and they're immune to all their own weapons in general too. Enemies are also immune to their own weapons.
+
+The starmecha is also armed with a rapid burst-fire mass driver that allows the player to unleash a burst of high velocity projectiles like the A-10 Warthog's GAU-8 Avenger weapon. These can clear out a whole line of invader ships in a single burst by tearing right through them. Lastly player has a slow-firing frag-shotgun that saturates a wide spread of super heated projectiles to wipe out a group of enemies, although unlike the mass driver, the shotgun does not penetrate through opponents, meaning invaders hiding behind their comrades will survive unscathed.
+
+Space Invaders style enemies appear in waves from the right as various random geometrical formations and they bounce around the stage, either as a unified formation they started with or randomly splitting off chaotically. The players starmecha starts out on left, shooting down invader waves while dodging their sporadict shots by freely moving around the area using WASD. Unlike most shmup games that have a fixed firing direction, the starmecha aims freely using the mouse, able to fire in any direction 360 degrees, with the mouse aim rotating the starmecha with its weapons to face that direction.
+
+The player has a recharging shield they can use by holding down a hotkey, which drains its power until it runs out and will regenrate when not in use at a rate of 9 seconds to recharge 0% to 100%. Theres about 3 seconds to total usage time before it runs out. Useful to get out of sticky situations without taking damage. Player can also teleport to the opposite mirrored/flipped position of their current location in the rectangular stage. This means if player is at the top left corner of the stage, they'll end up in the bottom right corner of the stage.
+
+Player can withstand 5 enemy projectile hits or collisions before being destroyed while invaders will be defeated in one hit. This is to make up for the fact that invaders massively outnumber the player. Invaders focus on quantity, player focuses on quality.
+
+The last enemy of the wave drops an artifact that the player can pick up as a powerup, which will do one of these things:
+- repair one hitpoint (if less than maximum).
+- increase blast radius and duration of missile explosion by +5%.
+- increase firing duration of mass driver burst by +5% (shoots a longer line of bullets, giving more time and chance for bouncing enemies to run into that line of bullets and get perforated by them).
+- increase the firing velocity of shotgun +5%, effectively increasing its range.
+- +1 defence orb thats orbiting around the player ship, absorbing incoming enemy projectiles and collisions, upto 3 hits before expiring. Can have a maximum of 6 drones.
+
+Game is about doing an X amount of rapid stages that each have a wave of 10-40 colorful invader enemies of varying shapes and sizes, mixed together in randomized formations. Player wipes them out, has about 2 seconds before the next wave begins and keeps going, gradually growing in power with powerups that keep stacking benefits, eventually reaching the last stage.
+
+The amount of stages is chosen by the player to determine how long and epic they want the game to be. Short games will only have 20 stages, then theres 80 stages medium lenght campaign setting, and finally a 200 stages option for an endurance battle. Player can also choose the color of their ship.
+
+Falling sand is visually present with all weapons, trails and explosions happening in the foreground effects layer. When either the player or invader enemies are blown up, the initial color of the falling sand particles that they burst into is the same color as the sprites were or what the player's chosen color was. This color then shifts from that color to a fiery neon color, then to a black color before the particle expires and is gone.
+
+This creates a beautiful display of colorful falling sand particles punctuating the fast paced combat dance. Some rarer dark and muted color secondary particles on a third background effects layer from ship explosions may linger and float about the stage, accumulating through out the campaign, creating a painterly nebula-like background as the stages go on.
+
+Before enemy invaders appear on the stage, there is always an orange '!' exclamation signs shown near the spot at the right edge of the stage where they will enter into the stage. This helps the player avoid crashing into them on accident during the beginning of each wave. Enemies arrive in a unified formation into stage all together before they randomly decide if they want to disperse or stick together for the duration of that stage.
+
+The enemy waves dont get stronger or weaker with later stages, they're always randomized and they may be consisting of any kinds of units, in any formation.
+
+After clearing the last wave, a large orb appears as the alien core, spawning one invader every 1 second, up to 10 of them at any given time, and upon being hit by any of players weapons, will spectacularly explode in a giant burst of particles, like a ship explosion on steroids with a 4x force multiplier.
+
+Context of this game is player assaulting an alien invader hive inside of a planetoid, taking the fight back to them with a starmecha, fighting through hordes before reaching the planetary core and blowing it up. The resulting canvas is saved as a screenshot 3 second after the planetary core had blown up with the player in it, able to strike a cool pose as they wish. It basically creates a cool sharable art piece with each playthrough.
+
+Longer campaigns with more stages will create a more denser and richer art piece, while shorter runs will be sparser and more minimal.
+
+Controls:
+WASD - move
+Mouse aim - rotate mecha and its weapons
+Mouse 1 - Fire mass driver burst
+Mouse 2 - Fire frag shotgun
+Q - Missile Launch
+E - Use Shield
+X - Teleport to mirrored/flipped position on stage
+
+
+
+==
+
+### Brick Breaker (Arkanoid, Breakout, Winbrick, etc.) game but tiles turn into bursts of various falling sand style pixels.
+
+Context is derelict space station demolishing game where different parts turn into different colors of dust, liquid or gas when smashed. These pixels may interact with each other, changing into other materials. Space stations are build randomly/procedurally with typical bricks and when broken, they release a burst of falling sand pixels that either fall into a tray below (solids and liquids), or rise into a tray above (gas or anti-gravity material solids/liquids). Demolition happens within a chamber that has selective gravity rays coming from below and above that simulate an planetary gravity for the pixels yet allowing the racket ship to fly like its in space and keep the station suspended where it is. Racket ship is free to fly anywhere in the stage, except through the solid space station bricks.
+
+Player has a drone racket ship and a ball that is connected to paddle with an electromagnetic ethereal tether. Player can release the ball softly, bump it with their paddle to impart momentum upon it, have it fly, then use the tether to pull it back towards the paddle. The ball will auto retract to racket if it flies below the bottom border. The chamber has solid edge walls on the top and sides, so the ball will bounce against those, but will fly offscreen briefly if it goes downwards past the bottom edge. Its impossible to lose the ball and player has much more control over the ball generally, so this is more of a therapeutic relaxing experience of smashing up a composite object and watching all the dust, liquid and gasses accumulate in the demolition chamber, with each material being randomized, having a unique color and behaviour depending on what it touches. There are no timers, no hazards or anything else. Its mostly a fun experience watching the different falling sand style pixels burst out, fall or rise, touch other pixels of a different type and react differently per each stage (assimilating to another material, changing to a different material all together, settling peacefully, being forcefully repelled away by each other.)
+
+Player uses an elementalized wrecking ball to pound the target to turn its blocks into various sand/liquid/gas pixels that are collectible resources pulled in by gravity rays coming from below and above. Player can switch ball elemental type (fire, electric, acid, spike-rock) at will to deal more damage to correct bricks by creating explosion on contact, explosion size being determine by how fast the ball was moving when it hit that tile. Its always random what bricks colors are sensitive to what type. Some stages may have all bricks vulnerable to a single element. Bricks still break even if hit with the "wrong" element, they just wont cause a satisfying explosion.
+
+Each stage has 2 random solids containing bricks, 2 liquids containing bricks, 2 gasses containing bricks. Each has their own color both in brick form and falling sand pixel form. There is also a hidden 3 materials that the other pixels when touching each other may optionally change into, depending on the stage. In some stages 1,2 or all 3 may never occur, remaining hidden despite existing. In other levels only 1 or 2 happen, but the third one never appears. Its completely randomized.
+
+Point of game is to reduce randomized targets into resources. each dismantled station/stage completed = a cool new randomized starship gets built pixel by pixel using a mirrored randomly generated pixel art image of a top down spaceship, and its sent to the civilization for service. Purpose of randomized starship can be any of the 5 archetypes; civilian, industrial, military, research, recreation/fun. these influence the image generator. Each image is saved as a PNG with a transparent background.
+
+Controls:
+Mouse position - move/accelerate racket ship towards cursor position if possible. Stop acceleration on the X or Y axis if that axis is blocked by solid brick or border edge. falling sand style pixels will not collide with player.
+Mouse 1 - launch ball upwards, pull towards racket if already out there.
+Mouse wheel up/down - which between the 4 elements. 0.2 timescale slomo for 1 second each time mouse wheel is flicked either way. Does not stack, only resets duration of 1 second.
+Mouse 2 - create a limited circle area gravity field that pulls falling sand pixels towards racket ship by applying force acceleration towards the middle of racket, which is stronger further out but weaker near the center. This feature is mainly for fun, the pixels don't collide with racket ship, player can merely use this to play with the pixels by "picking them up" and "tossing them about".
+
+==
+
+### Fire Extinguisher Megalodon
+(2D single stage sideview scene of a city on fire. Control an FPS style cursor, aiming where to shoot water. Heavy emphasis on falling sand game style mechanics and rules.)
+
+materials:
+- wood/ash (not gravity affected, flammable, conducts fire to other wood pixels gradually at a rate of 1 pixel per second), burns for 300 seconds before turning to ash, creates heat that transfers to nearby stone at a rate of 10 per second)
+- stone/lava/obsidian (not gravity affected, heats up with burning fire pixels adjacent to it, if reaches 100 heat points that it accumulates, turn into gravity affected lava that flows and generate heat into adjacent stone at a rate of 2 per second. lava lives for 600 second from birth before turning into inert obsidian. Hot stone can be reset to 0 with a water blast and lava can be turned into obsidian with a water blast too, to prevent further damage spread.)
+- water (gravity affected, flows/moves freely horizontally, vanishes in 60 seconds or if it touches burning wood then it removes the fire and saves the wood at the expense of water pixel sacrificing itself. Water touching lava instantly changes it to obsidian also sacrificing the water pixel in the process. Similarly water will sacrifice itself to reset a stone with more than 20 heat points down to 0. Ash will be instantly deleted on touching water without anything happening to water in the process; water sort of "cleans" ash away and continues flowing/moving like it had no effect on the water pixel itself.)
+- terrain (completely inert and immune to everything. water, ash, lava all collide with it.)
+
+Use water blast explosions to stop fire in a FPS helicopter gunner view style.
+- rapid auto fire small shots
+- charge up big shot altfire
+- both shots create an circle area of effect extinguishing effect while also spawning an exploding circle of water as falling sand type pixels. Both the area of effect circle and the water pixels will immediately extinguish burning wood, reset stone's heat to 0 and turn lava to obsidian. The pixels will vanish when they do any of the aforementioned extinguishing effects or evaporate automatically after 60 seconds.
+
+Randomly generate a building with various geometrical methods using rectangles and lines, then later in the sequence use lines, small rectangles in a smart if/else decision way to add detail to building using simple patterns. This random building procgen is versatile enough to create anything from a small, tall, wide, big building composed of one or more rectangles and use additional smaller rectangles and lines (horizontal and vertical only) for lesser details to create all kinds of wild structures that are all nevertheless still connected to the floor/ground.
+
+wood and stone would each use one random color per level to make each level unique.
+wood would use colors that imply wood, cable, insulation. Brown, tan, green, yellow, blue. Generally colors are only mildly desatured, but brighter than stone though not overly garish.
+stone would use colors that imply stone, metal, brick, concrete. Grey, red, white. Generally colors are only heavily desatured and darker than wood.
+terrain color uses earthly tones and is darker and even more desaturated than stone.
+
+Context: Game is about arriving at scene of meteorite/spacewreck debris shower falling from space in small hot fire starters thrown all around the level. Fire gets a small headstart to begin burning and player tries to minimize damage while shooting down additional pieces with FPS gunnery cannon. The new pieces fall from the sky during the firefighting process but impact anywhere on the map from a first person view, not by colliding from top - player has to judge whether they shoot it down with guns or let it impact and use water guns instead to avoid blasting buildings to pieces with their gunnery cannon unintentionally as they'll cause more fires than the meteor will upon impact. Successfully detonated midflight meteorites/debris turn to ash with momentum they already had plus some added extra radial explosion momentum from its epicenter. If meteorite hits the ground, it goes off like a cluster bomb, spraying lava pixels from the point of impact.
+
+9 level gauntlet comprises of a single crisis where 9 clusters of the falling meteorite attempt to wreck havok on an area with 3-7 complex buildings per level.
+
+Effects: burning wood has a fire particle effect, lava produces smoke emission that rises up.
+
+Controls:
+Mouse cursor - position crosshair
+Mouse 1 - launch water shots/charge up water blast. Uses up player's reserve of water.
+Mouse 2 - hold down to replenish water reserve. Water ammo: 100 rapid shots or 50 big shots.
+
+==
+
+### Chain Reaction Demolition Punch
+(game that prominently uses a falling sand game style mechanics)
+
+2D sideview scene. Pound a building with a giant stone until its fully grounded into powder. Select hitting spot with mouse cursor and aiming direction angle, then do the Nanaca Crash style power meter thing and cause that amount of force upon all pixels within a set radius (low power hit smaller radius, but bigger power hit has larger radius. Range between 10 pixels to 100 pixels circle radius.) to become loose and gain momentum vector of the blast based on pixel location vs blast epicenter. loose pixels become ultra hot shrapnel and perforate the static stone sand while applying positive temperature (based on how fast the shrapnel pixels are flying, they get slower with global air resistance/friction) that if high enough will melt that stone into loose slag that turns to ash and it imparts the heat upon surrounding static pixels, causing a cascading chain reaction until the total heat imparted from the shrapnel pixels has been distributed and consumed. Static stone has a melting point of 100 temperature points, so if a shrapnel pixel flew threw it, the shrapnel pixel first lost some momentum from touching that pixel but kept going until it's speed dropped down to zero either through collision or just global friction, the shrapnel pixel imparted 5000 heat points upon the static stone pixel (value for the next collision with another stone pixel is reduced due to shrapnel pixel slowing down), stone pixel absorbs 100 heat into itself, turns into ash pixel, transfers remaining stack of 4900 heat upon surrounding stone pixel if any are adjacent to it (horizontally, vertically or diagonally). If no other stone pixels are adjacent when a heat stack hasn't been fully used up, then cause a delayed explosion similar to the one player caused using the stack's value as its power. These delayed explosions are added to a queue that happens in the order they were added to the queue, detonating them with 100ms pause between. Initial player detonation is always the source of the overall heat and momentum budget, with pixels closer to blast epicenter receiving more speed and heat budget compared to the stone pixels at the far edges of the blast radius.
+
+Context/theme of game is a demolition company run by a single cyclops superhero who just punches a building to turn it into ruins, making it easy for a cleanup crew to gather up the materials for recycling. Randomly generate a building with various geometrical methods using rectangles and lines, then later in the sequence use lines, small rectangles in a smart if/else decision way to add detail to building using simple patterns. This random building procgen is versatile enough to create anything from a small, tall, wide, big building composed of one or more rectangles and use additional smaller rectangles and lines (horizontal and vertical only) for lesser details to create all kinds of wild structures that are all nevertheless still connected to the floor/ground. Game features these materials:
+
+- Terrain (brown, extra durable compared to stone, does not inherit heat and does not explode. Can be perforated by shrapnel but massively reduces speed of per each collision vs stone would, making damage to terrain be minimal during demolition.)
+- Stone (randomly generated buildings are build from this material, has heat and explosion mechanics as mentioned before.)
+- Shrapnel (created from stone when stone is within an explosion radius event, either due to player initiated blast or a secondary 'overheated stone but there is no adjacent stone to transfer excess heat to' delayed blasts)
+- Ash (collides with stone and other ash, but doesn't collide with shrapnel. Does not have heat nor explosion mechanics. Just inert gravity affected material.)
+
+9 stage metagame with 1-5 randomized buildings to reduce to ash. Colors of stone and ash are randomized within a range of 60-190 rgb per stage.
+
+==
+
+### Unhinged Anomalous Materials Heist
+(sideview 2D game with a simple physics low gravity platformer and also a sideview 2D game with a falling sand scene separately)
+
+Its a two stage game:
+
+## STAGE ONE
+1. Land an unlicenced space taxi (looks like a lunar lander and controls like one, has infinite fuel and is collision resistant, but can be blown up by weapons fire) onto an anomalous materials containment site, which is essentially a randomly generated lunar bunker maze with shafts, tunnels and spacious rooms (very simple and basic, just tiles map with guaranteed layout, baby's first 2d dungeon generator basically) that is occupied by roughly 15-30 drone bot armed with plasma guns that are programmed to guard the area to keep troublemakers away, to prevent them from taking canisters that contain dangerous and unpredictable anomalous materials. Once landed, player can exit the taxi lander from the top as a small dude with a blaster shotgun, some grenades and jetpack - a troublemaker - and try to fly/fight past the guards and the somewhat easy maze to collect all 3-5 randomized canisters and bring them back to the taxi and then blast off, reaching the top of the level to win. The scene is seen through the eyes of a long range surveillance artillery drone. It initially announces that "this area is restricted, turn back and leave", but as player starts collecting canisters, it gives the player a last warning to put down the canister and get out, when the player picks up the second and subsequent canisters, it is authorized to use lethal force and begins to track the coordinates of the player as they are going around the maze and firing explosive shells with an AoE blast radius that arrive at the last player location with a delay of 8 seconds before the shell hits that spot. The after every shot, the shot velocity increases by 0.2 seconds, down to a maximum delay of only 4 seconds before the explosion hits that spot and the rate of fire also increases from 1 shot per 6 seconds down to 3 seconds per shot, with a 0.1 increase per shot after the first one has fired. Player will have to move fast to get out of the way and try to grab the last canisters before they're either blown apart by artillery or shot by drone bots or accidently have their taxi lander getaway vehicle blown up.
+Player is armed with blaster shotgun that fires a simple projectile with a constant velocity that flies straight and deal damage to what it collides with. Grenades are launched forward with an initial velocity and they gradually slow down with air friction, collisions and gravity. They will bounce off surfaces and detonate with a AoE blast after 3 seconds, dealing triple more damage than a shotgun projectile, but having limited ammo (start with 10, find packs of 5 in the level as powerups). Shotgun can be powered up by finding powerups that increase projectile count (default start with one slug projectile only, additional ones with give +1 projectile +5% spread.), increase rate of fire, increase damage per shot, increase projectile velocity, replenish ammo (ammo start with 99 shots, can find packs of 20 shots. Projectile count does not affect ammo consumption rate).
+Guard drone bots are just a humanoid bot that stands around with a rifle and shoots at player with a similar weapon like the players shotgun if they have a line of sight on the player. Player should either move quickly to dodge shots or hide behind cover to not get shot at or throw a grenade with a bounce to take out the bot without risking exposing self if trying to use player shotgun against guard bot. They dont chase the player, the just shoot and get knocked around like a physics object if hit and have some hitpoints that let them survive a few hits before they break.
+
+## Player controls
+
+### Small dude:
+Mouse aim - point shotgun/grenade launch direction freely 360 degrees.
+Mouse 1 - shoot shotgun
+Mouse 2 - launch grenade
+AD - rotate character left and right
+W - apply jetpack thrust in whichever direction characters up is currently facing
+S - apply air breaks to slow down gradually, keep holding to hover midair in place
+E - enter lander taxi (switch control over to Lander and hide/disable small dude)
+(dude has 10 hit points, they're wearing a armored battlesuit rated for space infantry, don't ask how the dude got it, they're sketchy as heck)
+
+### Lander taxi
+W - upward thrust (100% power)
+AD - thruster left and right (70% power)
+S - downward thrust (60% power)
+E - exit lander taxi (make small dude appear outside taxi right on top of it and switch control to them)
+(Lander stays upright at all times. It has 20 hit points. Artillery does about 3 damage per hit, good to know when finally getting in and trying to fly away. Collisions do progressively more damage with more speed, player can insta-blowup their lander if they go high speed and crash into something solid. Slower collisions will do less damage and below a certain threshold no damage occurs.)
+
+2. In the previous stage player succeeded in stealing canisters of anomalous materials. Now the player gets to use them. They strap a C4 explosive on them and then drop them from above into a scene that they can customize before entering it. Before the scene begins, player is presented with a menu 
+"You got some nasty things there, where do you want to use them?"
+Name of location: text field input
+Type of location: drop down menu; outhouse, small house (1 floor), tall building (5 floors), wide building (2 floors), big building (4 floors and wide)
+Building is above or underground: toggle
+Number of people: slider with range of 1-50 people
+Time: Day, Night, Dusk, Dawn (determines background vertical linear gradient colors)
+Terrain: drop down menu; flat, crater, hill, cliff (randomly left or right sided), mildly wavy, bridge
+(Have a button to randomize all but amount of people and name of location. Name of location has its own optional button to randomize.)
+
+Once set, the game will generate an ultra-simple 2D falling sand stage with these elements:
+
+Based on selected terrain, add a desaturated muted colored dirt that starts from the bottom and goes up to 15-35% of the scene's height (for example, flat terrain end at 25% of scene height).
+Drawn over it at the very bottom, a jagged layer of dark grey stone bedrock (indestructible, inert, random frequency, goes up only about 2-3% from bottom in scene height.)
+Drawn over the dirt too, a medium grey with a faint color tint of concrete rectangle, based on the building type selected and if its above ground or underground. If underground, building cannot be lower than 8% from bottom of scene. If above ground, match the bottom origin of rectagle to average height of the dirt layer's surface, so it roughly sits on top of it, though slightly sunk down about 3%.
+Over the rectangle drawn in the previous step, draw multiple evenly spaced smaller rectangles in light blue color to represent windows of that building, based on building type.
+This forms the surface of the scene and the last thing to add is to people as 1 pixel wide and 5 pixel tall figures where the top most pixel is of absolutely any color, while the 4 pixels below it are of one globally-chosen-per-scene skin color, be it be caucasian, hispanic, asian or african. Pepper these figures anywhere on the surface at random, based on how many people were chosen. Even if they up standing on top of the roof of a building or just standing somewhere in on the dirt or bedrock.
+
+The add a text label up top that says the location name and a background gradient as defined.
+
+Now player can choose to click anywhere in the scene where there is open space (no solid pixels) to spawn the 3-5 canisters they picked up, one at a time per click. It will be spawned as a simple small physics object pulled down by gravity and likely just fall and settle somewhere, resting on the scene. Spawning happens with mouse 1 button, while detonation happens with mouse 2. Player can spawn all and detonate all at once, or spawn one or few and detonate them individually.
+
+The detonation payload will spawn a group of randomized cellular automata pixels, one unique type per each canister that will likely grow out of control and apply physics forces, convert existing scene material into more of itself interact with other cellular automata payloads violently and probably obliterate the entire scene in a spectacular way where all the original pixels of dirt, concrete, glass and wax are probably going to be obliterated, assimilated or thrown out of the sides or top of the scene. It would be like a chaotic storm by simply leveraging the different cellular automata types like conways game of life or what not. Each detonation will likely be unique and result in different outcomes, especially since the cellular automata pixels that break out of the canisters are assigned a random color as they spread and another random color when they interact with something other than themselves or empty space.
+
+Player can enjoy the spectable or cancel at any time by pressing Esc to open a pause menu to either resume and exit back to main menu, to start a new game or to view a log of saved games to replay any Stage 2 they previously managed to get into and completed defining the level. It contains the seed so reloading that level lets them replay it again like it was the first time without needing to do the heist stage again. The log list of saved games include name of location and seed number.
+
+==
+
+### Poo Storm Janitor Powersuit
+(tongue in cheek 2D platformer with single screen stages to suck up falling-sand pixels to collect them and deposit them into pots that will grow into plants once watered. Does it make sense? no. Is it funny? yes.)
+
+An office building has suffered a massive shitstorm - literally! - and they have no greenery in there either, oh the humanity, its unbreatable! No mortal is able to enter the premises to clean it up, so a janitor has to don a heavy-duty hermetically sealed power armor suit with an industrial vacuum cleaner and a watering hose to save the day.
+
+Stages are a cutaway of a multi-floor office building with pixels of brown sand, light brown liquid, and hardered dark brown solids. There are plant pots, standing office fans (implying that someone threw shit in the fan), office chairs and water coolers.
+
+Its built like a vertical platfomer level so player is able to jump up some platforms to reach high floors and drop down to lower floors.
+
+Player must:
+- Vacuum the sand poo, mop up the liquid poo, powerfist punch (causes a circle AoE blast that affects multiple pixels at once) the solid poo to turn it into sand poo, pick up and place the fallen water tanks back onto water coolers and spray water at them to refill them, deposit/distribute poo into the flower pots evenly (the correct amount happens automatically, player doesnt have to worry about details, its enough they collect all the poo and press E at every pot to reduce the collected storage of total poop into the pots), then spray water at the pots filled with poo to make a verdant green plant appear out of it, wash and turn all the shittified fans back on.
+- Player can see a checklist of things that are unfinished/done. The offices are mostly white/light grey, so poo and various objects are highly visible/contrast against the solid walls and background.
+
+All poo types are falling-sand. Walls are static colliders. Water tanks, water coolers, fans, flower pots, plants are sprite objects that player interacts with either pressing E on them or by spraying water at them when that tool is selected. Sprite objects are rendered between the office background and player sprite. Sprite objects are not solid, player can walk past them, same with falling sand stuff.
+
+Controls:
+AD - move left/right
+W - jump and double jump
+S - drop down (if were having one-way platforms, otherwise this does nothing)
+E - interact with water tanks, water coolers, cleaned fans, pots and level exit (when it opens after all tasks are done)
+Mouse 1 - use currently selected tool
+Mouse 2 - cycle to select next tool (powerfist, vacuum, mop, waterhose)
+
+Its a fast paced game, but doesnt enforce it. Player can enjoy cleaning up the stages at their own pace. After completing a stage a celebrational image appears with a random quote of wisdom that would be helpful for a person that wants to avoid them from having the shit hit the fan, metaphorically speaking, promoting patience.
+
+Metagame wise player has a log with all the office buildings they cleaned up with a goofy randomly generated name for a company and stamp saying "Cleaned!"
+
+One idea is to have each building have a poo monster that sprays different poo types as it walks about (sand, liquid, solid), so player's first priority is to have an epic yet simple powerfist fight against it by getting close to it to smack it with the powerfist a total amount of 4-8 times or by spraying water at it with a rate of 30-60 seconds total of spraying to defeat it, assuming full health. Or player can use a mix of those attacks. Poo monster has randomly 100-200hp, so each punch would deal 25dmg, and a single water spray shot would do 1dmg at the whatever rate of fire that adds up to. Player has 20 hp, so poo monster can either punch them for 3 dmg or throw a poo projectile at the for 1 dmg. When the poo monster is reduced to 0hp or lower, it will gloriously explode into a big blast of poo sand and poo liquid. Generally the poo monster's AI has it run around the office, disregarding the player, causing as much of a mess as it can, only attacking player if player has hit it in the last 5 seconds or if they about 2 meters away from the player. Their attacks have a 2 second delay to show they're about to do an attack, so player can use that warning to try to dodge the attack.

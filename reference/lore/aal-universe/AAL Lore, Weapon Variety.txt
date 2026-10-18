@@ -1,0 +1,238 @@
+# AAL Lore, Weapon Variety
+(This document explains the variety of weapon tech that )
+
+
+Inspired by starsector and aided lightly by DxM/AC6, maybe with a touch of Mass Effect 3, I want bring armor mechanics and weapon types that create a level of complexity to combat that can cause resistance or opportunities to exploit.
+
+Weapons namely fall into two categories; ballistic and energy.
+
+Ballistic contains solids, fragmentation, kinetics, blades, hammers, penetrating perforators, shedders, cutters and physical impacts.
+
+Energy contains shockwaves, incineration, vaporization, electrocution, waves, explosions, blasts, spalling, burning, tearing and ripping.
+
+As an optional component, subvariant or addon, emp effects can exist too in energy weapons.
+
+There's also elemental effects that both of these main categories can be imbued with - fire, acid, shock, slag, freeze, gravity and such.
+
+Some weapons can be hybrids, being both ballistic and energy in totality or partially.
+
+Some elements may override some effects of a weapon types innate attributes.
+
+--
+
+The main idea is that there are types of armor, shields or materials that things are made of that make them vulnerable or resistant to certain types of weapons.
+
+Ballistics are great against things that can shatter, lacerate, shred, crack, eviscerate, cut, cave in, deform.
+
+Energy are great for things that can twist, melt, tear, rip, stretch, burn, spall, change form, resist/absorb electricity, vibrate, undergo molecular shifts, mutate.
+
+Each unit, object, surface, machine, vehicle, prop, item... they are all made from various materials. Presence of a material in it's composition will make it more vulnerable to the corresponding weapon type. Depending on the ratio, exact materials, their arrangement/refinement, they will provide different ratings of resistance against one weapon type or another - possibly even total immunity if a weapon is weak enough and the armor is strong/resistant against it enough.
+
+Because there's this duality of weapons, nothing is fully safe no matter how hardened it is. Most objects will gravitate towards a balance of both materials to make them resistant against both weapon types atleast to some degree.
+
+This creates a world where there are armors rated to withstand either both weapons fairly well or heavily focus against one weapon. Each armor class tries to either resist or make itself proof against up to certain levels of power.
+
+This creates the Armor/Defense value/stat/parameter.
+
+Alongside it exists the Integrity/Health value that is impacted when armor is breached. Armor may exist as an additional health bar, absorbing all hits before integrity starts taking a hit or it may exist like a Doom style armor that reduces an amount of damage by a percentage, both degrading the armor value, but also letting the health/integrity also take damage as it comes.
+
+If the armor is dense enough and an attack is weak enough, it may harmlessly ricochet off and away. While this doesn't cause neither HP nor armor damage, it does still chip away at another counter, counting up with enough hits to count for a single point of armor damage eventually. Kind of like erosion or degradation of armor quality.
+
+Shields - energy shields - are a essentially an artificial armor created and held intact through active energy supply. They work the same as armor, but require a supply of energy and a supporting generator to keep it existing and cohesive. Armor is like a naturally built-in embedded feature that can exist on its own, but shields exist only through assistance. They have the benefit of regeneration, but may have the drawback of catastrophic collapse or dangerous surges.
+
+Integrity Health vs Armor; the difference is that the composition of integrity only defines vulnerabilities, while in armor it defines a protective shell may ricochet, absorb or mitigate that type of damage that leaks into the hull/integrity.
+
+--
+
+Weapon Damage vs NPC hitpoint balancing chart
+
+Semi-auto medium power rifle 1 shot = 1.1 kill 32px standard
+
+8px most shrapnel kills
+16px half / quarter hp
+32px normal hp
+48px double hp
+64px quad hp
+80px six hp
+96x eight hp
+112 12x boss hp
+128px 16x boss hp
+
++/- variance for each enemy type ofc.
+
+Basically 32x32px is a standard size character, like a human.
+Something like 96x96px means it takes six equivalent rifle shots to take it down.
+None of this takes into account the above damage resistance and weakness factors, as well as variance between different NPC sizes or shapes or type. Like, it would make sense if something is 96px tall, but is lanky and thin like only 32px wide, then probably make it go down in 3-4 hits instead of six. Stuff like that.
+
+--
+
+.the more powerful enemy weapon is, be it damage, rof, radius, range, sustainment, accuracy, tracking, projectile speed, knockback, status effects, spread, secondary payloads, ease of use, relentlessness, difficulty of dodging, countering, defusing, interrupting - on account of projectile smallness or other factors, penetration, its carriers properties the more nerfs it has.
+
+.nerfs include projectile slowness, delay before firing, obviousness of attack type and vector, rof, spread, inaccuracy, lack of range, radius, penetration, cumbersome, mobility slow or stop, bad properties of the weapons carrier like low hp, natural slowness, lack of abilities like no jumping, deflectability, ease of defusal with countermeasures, interruption, poor firing cones, lack of aiming capacity - fixed mount only weapons, rarity of enemy, larger size (bigger hitbox to shoot at, even if it has more hp), possibility of self sabotage via recoil knockback or friendly fire.
+
+.instakill, either via enemy attack or stage hazard should be made extremely clear and even then, only via proper methods of damage infliction, not arbitrary 9999dmg enforcements. Even then, instakill needs to be rare as it can possibly be, predictable, foreseeable, clearly telegraphed, avoidable, mitigatable (shields), reduceable, preventable.
+
+--
+
+Possible stats per each weapon:
+
++ Damage
++ Knockback (radius or inherit vel, can be neg)
++ Recoil
++ Reload speed
++ Max ammo
++ Mag size
++ Shot speed 
++ Shot amount
++ Shot spread
++ Shot gravity (no global gravity in this game)
++ Shot acceleration over time
++ Shot lifetime/det time
++ Affected by char motion? (Inherit player vel scalar)
++ Fire rate
++ Weight (move speed slower)
++ Cumbersomeness (mouse aim track delay)
++ Terrain delete radius
++ Proj, cone, line, sphere, curve line, sinewave line, etc.
++ Stun time
++ Noise range
++ Det trigger type proxy, time, contact 
++ Proj (collider) size
++ Proj trail spawnable
++ Proj trail rate
++ Proj submunition (blast or proj)
++ Proj det proj inherit vel or random dir
++ Wep ui sprite 
++ Wep ui name
++ Wep in-game sprite
++ Wep shot sound
++ Wep reload start sound
++ Wep reload end sound
++ Wep empty click sound
++ Wep muzzle sprite/fx
++ Proj sprite
++ Wep rarity/cost
++ Firing particle fx
++ Proj particle fx/trail fx.
++ Proj hit particle fx type and color tint.
++ Damages rock flag (treat rock same as dirt)
++ Weapon shake quake value (accumulate to trigger level event to cause dirt to spawn into level due to collapse.)
+
+--
+
+Ammo Types:
+
+Below is an idea for a composite ammo system where instead of complete firearm rounds, these scifi weapons - called Firing Frames - use a system of internally manufactured ammo inside the gun itself. The ammo itself is usually a slurry, powder or aggregate that the weapon will extract a correct amount based on the type of projectile its programmed to launch, create that round either in advance or during the firing process and then launch, accelerate or eject said projectile out of the weapons barrel or whatever other ejection port type it has.
+
+-advanced/complex projectiles commonly use more than 1 unit of ammo at a time.
+-larger projectiles commonly use more than 1 unit of ammo at a time.
+-ammo pickups come in small 8px and large 16px container formats.
+-small gives 20 units, large gives 200 units.
+-they're common to find and can be found in bundles.
+-large ones are slightly rarer, but only by a factor of 1/10.
+-all containers look the same, but have 2 colors to distinguish them.
+-first color is predominant, while the second color denotes a subtype.
+-ex, kinetic and shell are similar, so both are yellow, but have red and blue sub colors respectively to distinguish them.
+-any ammo is superweapon capable, weapon simply has other drawbacks (weight, rof, ammo use, delays, cooldowns, inaccuracy, dangerous, etc).
+-weapons may combine multiple ammo types to create special payloads.
+
+
+Firing Frame Weapon Types:
+
+kinetic (solid mass)
+shell (hollow container)
+
+grenade / bomb (non-moving)
+rocket / mines (moving)
+
+gas (slow wide spreading gravity agnostic area projectiles)
+liquid (water, acid, lava, gasoline, goo, slime, napalm etc) - non-organic.
+
+electro / plasma (pure beams, lasers, energy bolts, arcs, lightning etc)
+cem particle (complex customizable electromagnetic particle, heat)
+
+drone / turret
+electronic / utility / stealth
+
+heal/buff/cure
+booster / mobility / upgrade (juice / fuel for overdrives)
+
+contruction/repair/modification (as addon)
+demolisher/removal/process/seperation/convert (into something else)
+
+gravity/vortex/spacetime/forces (chaos tearing, not shockwaves)
+exotic energies (uncommon energies)
+
+Radiation/rays/waves
+Sonic/fields/forces (shockwaves)
+
+bio-organic growth/creation/mutation
+bio-organic enzyme/poison/unraveling
+
+*dark/void/chaos_creator/spacetime_rupture/agitation/divider/multiplier/copy/split/mass_acceleration/universe irritation.
+*light/mass/chaos_harmonizer/spacetime_mender/simplify/merge/fuse/reduce_complexity/mass_slow_down/convert many and complex to single and basic entities/universe streamlining.
+
+Jammer/ECM/Anti-drone/Signal Disruption
+Communication/Transciever/Anti-ECM
+
+
+Firing Frame Ammo Container Types:
+(includes color coding identifier info)
+
+kinetic shred (yellow - red)
+shell puree (yellow - blue)
+
+grenade slurry (green - blue)
+rocket goo (green - red)
+
+liquid powder (blue - pink)
+gas grind (blue - lime)
+
+electro slime (red - cyan)
+particle pellets (red - orange)
+
+heal paste (white-green)
+booster juice (white-pink)
+
+drone nanos (gray muted brown - deep blue/cyan stripe)
+utility gravel  (gray muted brown - yellow/pink stripe)
+
+demolisher crush (orange-red + caution tape(yellow-black))
+builder dust (orange-blue + caution tape(red-white))
+
+gravity pebbles (purple-black)
+exotic cubes (purple-pink)
+
+ray scatter - (teal-pastel orange)
+sonic fibers - (teal-pastel pink)
+
+harmonizer strands - (grey-black or darkgrey + white/yellow)
+chaos antimatter - (grey-white or darkgrey + purple/cyan)
+
+growth gunk - (greenish yellow-teal green)
+bio ooze - (greenish yellow-purple)
+
+comm wires - (muted skyblue + caution tape(blue-white))
+jammer plugs - (muted camo green + caution tape(red-black))
+
+*metal dark - (bluish-dark grey [shiny or matte], + dim pink)
+*metal bright - (yellowish-bright grey [shiny or matte], + bright cyan)
+
+
+MELEE SECTOR
+=============
+
+Much like ranged Firing Frames, melee weapons also have several distinct types that allow for color coding. Melee weapon do not have their own ammo and if they use ammo, they use the ones listed above.
+
+For colors, they tend to favor more muted inbetween colors, than the clear primary or secondary types. Something like salmon, beige, marine and similar colors are key here.
+
+Types:
+Motorized (drills, saws, crusher/pincher claws, hydraulics) - marine
+Boosted (rocket engine assisted, pneumatics, pilebunkers or reactive armor) - green
+Simple (just metal or w/e else material, no ammo or power use) - beige
+Energized (fusion of both solid and energy surfaces, cyberpunk whip weapons) - salmon
+Pure Beam (only energy or EM/Grav fields based) - orange, pink or purple
+
+Subtypes:
+Offensive (attack weapon) - Red
+Defensive (protect shield, utility or mobility) - Blue/Yellow/Green, respectively.

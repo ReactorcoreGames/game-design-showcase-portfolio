@@ -1,0 +1,131 @@
+Initial landing expansion:
+. Self-sufficient ship / module / capsule / lander
+(provide food, life support, habitat, tools)
+. Initial mines, resource extraction
+. Initial power generation + heating cooling
+. First factories, drones, builders
+. First cargo supply, orbital launch zone
+. Comm station (external, temp)
+. Minor satellite constellation + drone scouts
+(survey map, plan expansion)
+. Temporary habitat structure / domes 
+(shell, framework, foundations)
+. Agriculture + waste management
+. Life support, HVAC, sensors, ai installation
+. Habitat dock, port, hangar, airlocks
+. Control, planning room / deck
+. Activation of alpha habitat
+. Connection of existing structures to habitat ai
+. Plan, coordinate and expand to create more serious infrastructure, dedicated industry, ship parking facilities, zoning of habitats / human sectors, proper power, water, HVAC-LS plants, agriculture, data-comms, connections, roads, lines, transport, security, disaster, defence, weather, environment monitoring, surface-to-orbit transfer, orbital stations / facilities.
+. For above, look at colonizable / habitable / stable / accessible / connectable / fertile / promising / convenient / safe / suitable / comfortable / livable / rich / good areas of the planet where cities or bases can be built. That's where to expand to.
+. As phase 1 infra is saturated, population grows, resources amassed, power generated, drones, factories, industry, defences and security established, begin to transform the planet in all ways necessary; geo stabilization, terraforming, weather control, planetary transit to habitable zone star orbit (giga thrusters), vacuum corridor foundations, skyways, ultra mass transit framework, wonder foundations, landscape smoothing / optimization, resource reservoir distributing / spreading / harmonizing, pollution control and cleanup, local biodiversity crafted preserves, orbital elevator / ring foundations.
+. Once phase 1 peaks and transformation foundations are planned out, begin planet overhaul, aka phase 2; effectively turning the planet into a homeworld class planet aka phase 3. Build phase 2 first in newly acquired areas and eventually replace all or most old phase 1 zones.
+. As phase 2 is 100% done, the world is now phase 3. At this point, final global optimizations, linkups, connections and activations are made. World complete. Glorious MAGNASANTI. 
+. ABSOLUTE MAXIMUM ACHIEVED.
+. After this, continue spaceward and build the starway network, followed by star defence lines, FTL cups, tradelane segments, further expansion of the habzone, midway, edge and solar sectors. Also pull material from outside of system to further enrich, bolster and expand it. All this can also be done prior to phase 3, but the resources, machinery and power required usually becomes sufficient at phase 2-3 to pull it off, not before, unless external help is served.
+
+
+Placement of facilities and infrastructure:
+
+Note: planets may have only few specific areas that are habitable / worth using. Everything else may be unavailable forever or until phase 2 rolls around.
+
+Note2: some planets may have no atmosphere, lesser / extreme gravity, strong pressure, extreme temperatures, hostile flora / fauna, hazards (local or space), nasty weather (sideways glass shard rain at mach 5), special conditions, different resources or it may be a gas / liquid giant planet that can only be habitated in orbit. These require special considerations for habitats and planet utilization.
+
+Note3: remember the NIMBY principle (not in my back yard) for placing cities, doing zoning and avoiding poor social design that would make life less wonderful for people.
+
+Note4: variety is key. Phase 1 resembles opportunistic microbial spreading development quite alike on Earth, with expansion done where most convenient, easiest and cheapest. Every new colonized world will be different due to this, but variety will still be present during phase 2-3, since zoning can be done in infinite ways on the local micro scale.
+
+Note5: for cities, megacities, arcologies, cityblocks(dredd), large colony interiors, huge space station layouts, either adopt the venus project circle node setup or cruise ship deck setup. Not applicable to smaller compact habitats.
+
+Sea surface
+. Floating or mobile cities & industry
+
+Beach / shore
+. Power generation (green, coolant required)
+. Water supply
+. Cooling
+. Cities & industry
+
+Inland, lush (rivers, forest, smooth, light craters)
+. Cities, agriculture, comms, eco-industry
+. Storage, batteries, capacitors
+
+Inland, desolate (deserts, rough, heavy craters)
+. Ship parking
+. Industries
+. Orbital launches
+. Power generation (large, centralized)
+. Comms
+. Storage
+. Solar / wind / heat reservoir generators
+
+High ground, mountain
+. Comms, arrays, mass drivers, maglev launchers
+
+Underwater, subnautical
+. UW cities, industry
+
+Underground, subterranean
+. Reservoirs, cities and industry, cooling, heating
+
+Sky, atmosphere
+. Aerial platforms, arrays, comms, airships
+
+Orbital, stratosphere
+. Orbital stations, parking, satellites, defences, comms, ships
+
+Anywhere
+. Mining, harvesting, collection
+. Labs (safe, unsafe, extreme)
+. Cities, towns, habitats, arcologies
+. Planetary defenses
+. Mass transit ports / stations
+. Green energy collectors
+. Roads, lines, pipes, ways
+. Sanctuaries, shelters
+. Disaster detectors
+. Rescue drone bays, first aid
+. Area / territory markings
+. Coolant-free power stations
+. Decentralized power plants
+. Military bases
+. Visitor platforms
+. Tourism spots
+. Cargo / shipping docks, facilities, warehouses
+. Maintenance drone hives
+. Natural preserves
+. Escape pods / vehicles
+
+No build zones:
+Volcanic, volcanic rivers / lakes, cryovolcanic, comet surface, gas / ice giants.
+Planetary mantle, core, inner outer.
+
+Dubious build zones:
+Non water oceans, lakes (hydrogen, nitrogen, methane, etc).
+Scorched (Recent cataclysm, extinction, disaster)
+Hardened ice (ultra cold & pressure)
+
+Planet types:
+Infernal more than +600c = sun
+hot more than +80c
+warm -20 lowest = habzoner
+cold -80 max
+frozen -200c = post saturn, half over to midway
+Atmo - no atmo
+Rings, moons, debris
+Small, medium, large (planet. giant. star.)
+Life ( none, chemcoctail, cellular, multicellular, aquaplant, aquanimal, terraplant, terranimal, intelligent, sentient, transhuman)
+Colonization interest level 1-6
+No black hole or gamma ray burst meddling
+
+Atmosphere types:
+Airless
+Traces
+Thin - breather needed
+Breathable
+Tainted breathable
+Thick- breather needed
+Inert - not bad, just not breathable
+Toxic - poisonous
+Corrosive - acidic effect
+Both toxic and corrosive - oof.wav

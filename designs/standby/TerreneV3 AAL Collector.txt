@@ -1,0 +1,51 @@
+TERRENE v3 REMIX, AAL Collector: Reach, Capture/Cute, Recover
+--
+
+Terrene Lite with heavy DKC3 inspired gamepaly and collectathon focus. Maybe with a cute monster women flavor or a regular nature wildlife version.
+Mildly light hearted with stun/capture focused equipment, chill exploration vibe with reduced combat. More about grabbing, tossing and carrying stuff around like a cheeky raccoon.
+
+Each star system creates cool gallery of recovered relics.
+Relics are procgenerated amalgamations of random shapes in random configurations with random micro texture with random tints/patterns per shapes.
+
+Bananas - trail to objective
+Bear Coins - hard to reach places/miniboss defeats
+Bonus Coins - small minigame challenges, extra boosters
+DK Coins - major achievements, upgrades/supercores
+
+(obvious switch them to something that makes more sense to this game)
+
+--
+
+Player Characters:
+Agent
+Small human operative.
+
+
+Shuttle
+Travel rocket from heavy cargo lander carrier to planetside and back. Can work as a submarine(?).
+
+
+Carrier
+Personal base of operations. (maybe) Can land on planet if need be, but slow, expensive and lumbering. Not as agile as shuttle nor fuel efficient.
+
+
+BSL Megaship (maybe)
+An out of reach larger colony/research/collection vessel that you are a part of. Maybe sort of like that Metroid Fusion BSL research station.
+*BSL = Biological Space Labs
+
+--
+
+Other Characters:
+Fauna/flora
+Basically the same as Subnautica. Some peaceful, some territorial/evasive/retaliatory, some predatory. Different sizes. Usually you can avoid them. Can be killed, stunned or captured, dragged to carrier and delivered to BSL Megaship.
+Funny idea: They're all monster women.
+Capturing them needs the player to construct suitable containment vessels (slime women require glass tanks, succubi/demons need comfy beds/enchanted mirrors, vampires coffins, fish tanks, mummies/undead cloth wraps, small rodents cardboard boxes, birds wooden boxes, cats/dogs/canines tech pods, lava being stone cube, etc.)
+
+--
+
+Location types:
+
+Wang tiles/shapegrammar
+Mazes
+Random perlin caves/marching squares?
+Open spaces in terrain, connected by paths

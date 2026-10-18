@@ -1,0 +1,120 @@
+Color coding:
+Each branch of the civilization's vehicles, machines, objects, structures, items, uniforms, clothing, markings and systems would have a unique universal 2-3 color code (and any optional pattern) to identify the role / purpose / branch a thing belongs to.
+
+First, a primary color(s) denote the general branch of operation and theme. 80%
+
+Then, a secondary color denotes the specific sub category of this branch. 20%
+
+Thirdly, an ornamental pattern, shape or texture denotes the specific object type of that sub-branch.
+
+Lastly, a logo, insignia, name, numbering, id, suit patch and flag communicate the full description of the branch.
+
+All are as stylish is possible, all are respected equally and all are different, yet cooperative and cohesive.
+
+Full color of the rainbow is used. Attempt is made to give some level of relatability for quicker recognition.
+
+Nature of colors themselves is taken into consideration when assigning them to purposes; muted natural colors are used in more general purposes, while garish, unnatural colors are used for when visibility matters or when attention is evoked.
+
+Below are subject to change. Use online color palettes to aid finding better choices.
+
+
+Military - red, black
++ Stealth
++ Intelligence
++ Siege, attack
++ Fort, defend
++ Experimental
++ Support
++ Supply
++ Repair
++ Superweapon
++ Exploration
+++ Infantry
+++ Vehicles
+++ Structures, stations
+++ Starships
+++ Megastructures
+# Special: color shift tech
+
+Shipping - beige
++ Solids
++ Liquid
++ Gasses
++ Energy
++ Bio, flora, fauna
++ Prison containment
++ Prefabs, machines
+++ Hazardous
+++ Safe
+++ Packets
+++ Containers
+++ Bulk, reservoirs, silos, freight, mass
+
+Building - orange, red
++ Construction, assembly
++ Repair, add-on, modify
++ Demolition, disassemble
+
+Infrastructure - dark blue, silver
++ Power
++ Water
++ Air, HVAC, pressure
++ Cooling
++ Heating
++ Comms
++ Monitoring
++ Info, guidance, signage
++ Roads, rails, lanes, paths, routes
++ Weather control
++ Terraforming
++ Gravity
++ Lighting
+
+Emergency - orange cyan
++ Rescue, relief
++ Shelter
++ Disaster
++ Fire fighters
+
+Industry - purple
++ Mining, harvesting, collecting
++ Refinement, processing, conversion
++ Manufacturing
++ Customization, polishing
+
+Sanitary management - green, blu
++ Cleanup, disinfect, waste collection
++ Organize, Feng Shui design
++ Nature care
++ Life support
++ Sewers
++ Quarantine
+
+Lab, research - white, black, neon
++ Safe
++ Unsafe
++ Extreme
+++ Design
+++ Production
+++ Testing
+
+Public services - metal pearl
++ Government, improvement
++ Police, security, surveillance, monitor
++ Official bureaus, agencies, departments
++ Education, info, guidance, advisory
++ Libraries, services
++ Transport
++ Food, goods
++ Entertainment, culture - pink
+
+Living spaces - skyblue, white & rainbow, any
+
+Agriculture, farming, zookeeping - brown, olive
+
+Medical, soul banks, healthcare, clinics - gold, iridescent
+
+
+
+
+
