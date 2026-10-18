@@ -9,8 +9,8 @@ Everything left to finish the portfolio, in a sensible order. Tick items as they
 - [x] Build `tools/images.py` (spec → BAIG → resized JPEGs + thumbnails)
 - [x] Re-encode the existing images (39 MB → 27 MB)
 - [x] Switch GitHub Pages to deploy from GitHub Actions
-- [x] Point the Cloudflare deploy script at `site/`
-- [ ] Review the `restructure` branch, merge it into `main`, push, and check both mirrors still work
+- [x] Connect Cloudflare Pages to the GitHub repo (build output `site`), replacing the wrangler deploy script
+- [x] Review the `restructure` branch, merge it into `main`, push, and check both mirrors still work
 - [ ] Rename or delete the old workspace folder `C:\ClaudeWorkspace\HTML Game Design Showcase Maker`
 
 ## 1. Nexus page overhaul (`site/index.html`)
@@ -128,6 +128,5 @@ Up to 70 Klein images a day. Use `python tools/images.py check`, then `gen` and 
 Pages only go live once their images exist. Keep page work on a branch until its image pass is done.
 
 - [ ] Merge to `main` and push (GitHub Pages deploys automatically)
-- [ ] Run `deploy-to-cloudflare RC GD Portfolio.bat`
 - [ ] Spot-check both mirrors on desktop and phone
 - [ ] Update the project count in `reference/outreach/` post texts and announce

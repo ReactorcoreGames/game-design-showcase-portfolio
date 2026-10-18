@@ -48,7 +48,7 @@ Only `tools/images.py gen` without `--dry-run` spends anything. Run it only when
 ## Publishing
 
 - **GitHub Pages** deploys `site/` through `.github/workflows/pages.yml` on every push to `main` that touches `site/`. Pages source is set to "GitHub Actions".
-- **Cloudflare Pages** deploys through `C:\14 Repos\CLOUDFLARE PAGES DEPLOYER\deploy-to-cloudflare RC GD Portfolio.bat`, which uploads `site/` with wrangler. It deploys whatever is checked out locally, so run it from an up-to-date `main`.
+- **Cloudflare Pages** is connected to the GitHub repo and builds on every push: `main` goes to production (build output `site`, no build command), and other branches get public preview URLs like `<branch>.rc-game-design-portfolio.pages.dev`. Missing paths there fall back to `index.html` instead of a 404.
 - Pages whose images aren't generated yet would go live with broken images. Do page work on a branch, or hold the push until the image pass is done.
 
 ## Conventions
