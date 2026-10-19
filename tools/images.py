@@ -10,16 +10,21 @@ and no thumbnail. The AAL page (site/aal/) uses one.
 
     python tools/images.py check  [slug ...]             validate specs, show lengths and image count
     python tools/images.py gen    slug ... [--dry-run]   generate through BAIG (klein4b, Standard tier)
+                                   [--model M --only 1,6]  ... or reroll some images on another model
     python tools/images.py finish slug ...               resize + JPEG (+ thumbnail) into site/
     python tools/images.py recompress [--apply]          re-encode existing site images (report only by default)
 
 No slug given to check = every spec. gen refuses to queue more than --max images
 (default 70: the Klein free allowance minus a margin that keeps SDXL usable).
+
+An image with "model" in its spec (e.g. "nano-banana-2-lite") was rerolled on that model:
+finish takes it from that model's output instead of --model.
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import io
 import json
 import math
@@ -147,6 +152,9 @@ def cmd_gen(args) -> None:
         if errors:
             sys.exit(f"{slug}: spec invalid, run check")
         plan.append(spec)
+    only = {int(n) for n in args.only.split(",")} if args.only else None
+    for spec in plan:
+        spec["images"] = [i for i in spec["images"] if only is None or i["n"] in only]
     count = sum(len(s["images"]) for s in plan)
     print(f"{count} images across {len(plan)} projects, model {args.model}")
     if count > args.max and not args.dry_run:
@@ -160,7 +168,11 @@ def cmd_gen(args) -> None:
         for img in sorted(spec["images"], key=lambda i: i["n"]):
             groups.setdefault(img["ratio"], []).append(img)
         for ratio, imgs in groups.items():
-            pfile = WORK / spec["slug"] / f"{ratio_tag(ratio)}.txt"
+            pdir = prompt_dir(spec["slug"], args.model)
+            pdir.mkdir(parents=True, exist_ok=True)
+            # an --only run gets its own short prompt file name (BAIG keeps 16 characters and turns - into _)
+            run = "_" + hashlib.md5(",".join(str(i["n"]) for i in imgs).encode()).hexdigest()[:6] if only else ""
+            pfile = pdir / f"{ratio_tag(ratio)}{run}.txt"
             lines = [(args.lead + img["prompt"].strip()) for img in imgs]
             pfile.write_text("\n".join(lines) + "\n", encoding="utf-8")
             # line number -> image n, so finish can map BAIG's output back
@@ -174,19 +186,27 @@ def cmd_gen(args) -> None:
             subprocess.run(cmd, cwd=BAIG, check=True)
 
 
+def prompt_dir(slug: str, model: str) -> Path:
+    """Where gen writes a model's prompt files and line maps. Klein's stay at the top of the
+    project's work folder; other models get their own folder, so a reroll never overwrites the
+    line map another model's output depends on. Prompt file names stay short because BAIG
+    squeezes the stem it puts in output names to 16 characters."""
+    return WORK / slug if model == "klein4b" else WORK / slug / f"prompts-{model}"
+
+
 def find_raw(slug: str, model: str, n: int) -> Path:
-    base = WORK / slug
-    for mapfile in base.glob("p*.map.json"):
+    """The newest output for image n across every gen run of this model (full runs and --only)."""
+    hits = []
+    for mapfile in prompt_dir(slug, model).glob("p*.map.json"):
         order = json.loads(mapfile.read_text())
         if n in order:
-            line = order.index(n) + 1
             stem = mapfile.name.removesuffix(".map.json")
-            hits = sorted((base / f"raw-{model}").glob(f"{stem}-{line:03d}-*.*"),
-                          key=lambda p: p.stat().st_mtime)
-            hits = [h for h in hits if h.suffix.lower() in (".jpg", ".jpeg", ".png")]
-            if hits:
-                return hits[-1]
-    sys.exit(f"{slug}: no {model} output for image {n} (run gen first)")
+            line = order.index(n) + 1
+            hits += [h for h in (WORK / slug / f"raw-{model}").glob(f"{stem}-{line:03d}-*.*")
+                     if h.suffix.lower() in (".jpg", ".jpeg", ".png")]
+    if not hits:
+        sys.exit(f"{slug}: no {model} output for image {n} (run gen first)")
+    return max(hits, key=lambda p: p.stat().st_mtime)
 
 
 def scale_to_area(im: Image.Image, pixels: int = TARGET_PIXELS) -> Image.Image:
@@ -209,7 +229,7 @@ def cmd_finish(args) -> None:
         spec = load_spec(slug)
         prefix = spec["prefix"]
         for img in sorted(spec["images"], key=lambda i: i["n"]):
-            src = find_raw(slug, args.model, img["n"])
+            src = find_raw(slug, img.get("model", args.model), img["n"])
             im = scale_to_area(Image.open(src))
             dest = dest_path(spec, img)
             size = save_jpeg(im, dest)
@@ -255,6 +275,7 @@ def main() -> None:
     p.add_argument("--model", default="klein4b")
     p.add_argument("--preset", help="override the spec's preset (e.g. a photo/watercolor one for sdxl)")
     p.add_argument("--lead", default="", help="text put in FRONT of every prompt (sdxl only reads ~300 chars)")
+    p.add_argument("--only", help="comma-separated image numbers to generate, e.g. 1,6,9")
     p.add_argument("--max", type=int, default=DAILY_MAX)
     p.add_argument("--dry-run", action="store_true")
     p.set_defaults(func=cmd_gen)

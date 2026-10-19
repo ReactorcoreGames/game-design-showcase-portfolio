@@ -15,3 +15,9 @@ FTL is not possible for the planet itself due to the delicate balance it maintai
 Unlike atmosphere planets, other airless celestials, stations, ships and megastructures, they are more easier to fly and even go FTL due to their more static format.
 
 As an uncharted new planet is being converted to a homeworld class celestial, it is seen more as a spaceship earth as Buckminster Fuller termed it.
+
+REVISED (October 2026, for the AAL Universe page; supersedes the thruster idea above)
+
+Pulled, not pushed. Thrusters bolted into the crust would crack it, blast the atmosphere away and slosh the oceans, and six is far too few for something that big anyway. Instead a homeworld is moved by a gravity tug: a massive ring-shaped structure hanging in space ahead of the planet, held in place by hundreds of engines whose plumes all angle outward and backward so none of them touch the world. The tug's own mass pulls the planet along by gravity, so every part of it, from bedrock to cloud, is pulled evenly and nothing tears. Acceleration is gentle, so a move takes years, not days.
+
+A portable habitable zone. Leaving the goldilocks zone would freeze or fry an ordinary planet, so a flying world carries its own. The climate shell hung from the orbital rings encloses the whole planet: its inner face is a lattice of artificial sunlight that runs day, night and seasons; its outer skin adapts, mirroring starlight away near a hot star and insulating in deep space; radiator fins along the orbital rings shed surplus heat; Higgs-boson reactors, stronger the farther from any star, supply the power. The planet no longer depends on any star, so it can go anywhere except FTL.

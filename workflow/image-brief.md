@@ -33,6 +33,8 @@ One file per project at `image-prompts/<slug>.json`:
 - `style` is optional extra style text appended after the preset. Use it for the color scheme, taken from the page's CSS palette, plus anything the preset lacks.
 - **Length:** prompt + preset + style must stay within **1800 characters** per image. Klein's encoder silently drops text past roughly 2000, and the style is the part that gets lost because it comes last. `tools/images.py check` enforces the limit. A 400–900 character prompt is usually right.
 
+**Rerolling on a paid model.** When Klein misses an image that needs stronger prompt adherence (complex, structured scenes), it can be rerolled on Nano Banana 2 Lite ($34 per 1000, prepaid credit, only with Reactorcore's go-ahead): `python tools/images.py gen <slug> --model nano-banana-2-lite --only 1,9`. Mark those images in the spec with `"model": "nano-banana-2-lite"` so `finish` takes them from that model's output. Nano Banana follows negations, so its prompts can end with "No text, lettering or signatures anywhere." Its 16:9 output is 1344×768, which `finish` scales to about 1270×726.
+
 **Section specs.** Pages that aren't project showcases (the AAL universe page) use a free-form spec instead: add `"out": "site/aal/images"` and give each image a kebab-case `name` instead of a `role`. Any number of images is allowed, numbered from 1. `finish` saves them as `<out>/<NN>-<name>.jpg` and makes no thumbnail. `image-prompts/aal.json` is the example.
 
 ## Choosing a style preset
