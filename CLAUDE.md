@@ -13,7 +13,9 @@ site/                  THE PUBLISHED SITE. Only this folder is deployed.
   index.html           nexus page: hero with six routing buttons, then the designs grid (from projects.js)
   projects.js          THE CATALOG: one entry per project page (field reference at the top)
   articles.html        game design articles catalog, rendered from articles.js
-  articles.js          the article list
+  articles.js          the article list (slug = its page in articles/, original = the Google Doc)
+  articles/            one <slug>.html per article, built by tools/articles.py (don't hand-edit), article.css,
+                       images/<slug>/NN.webp
   theme.css, fx.js     THE SHARED THEME for every page: tokens, components, reactor wave, startup burst
   fonts/, icons/       built by tools/brand.py (WOFF2 subsets; game-icons as alpha masks for CSS tinting)
   logo.png, favicon.*  the cyan Reactorcore Games mark and favicon set, also from tools/brand.py
@@ -40,7 +42,8 @@ workflow/
   legacy/              the old Sonnet-era task docs, kept for history only
 image-prompts/         <slug>.json image specs (+ legacy/ old prompt txts)
 tools/images.py        spec -> BAIG -> resized JPEGs + thumbnails in site/
-tools/sitemap.py       rebuilds site/sitemap.xml from site/projects.js
+tools/sitemap.py       rebuilds site/sitemap.xml from site/projects.js and site/articles.js
+tools/articles.py      Google Docs exports (assets/gd articles raw/) -> site/articles/ pages + WebP images
 tools/brand.py         fonts, logo/favicons and icon masks from assets/ into site/
 archive/               unused alternate images
 assets/                (gitignored) raw source material: fonts, game-icons pack, identity images,

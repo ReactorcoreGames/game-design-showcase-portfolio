@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additive vs Multiplicative Game Content And Why The Latter Is Better · Reactorcore</title>
+    <script>try{if(!sessionStorage.getItem("rc-burst"))document.documentElement.classList.add("burst-pending")}catch(e){}</script>
+    <!-- Built by tools/articles.py from the Google Docs export. Edit the template or the tool, not this file. -->
+
+    <meta name="description" content="The difference between content that adds up and content that multiplies, with a concrete, genre-agnostic system any game can adopt.">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/additive-vs-multiplicative-content.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Additive vs Multiplicative Game Content And Why The Latter Is Better">
+    <meta property="og:description" content="The difference between content that adds up and content that multiplies, with a concrete, genre-agnostic system any game can adopt.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/additive-vs-multiplicative-content.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Additive vs Multiplicative Game Content And Why The Latter Is Better">
+    <meta name="twitter:description" content="The difference between content that adds up and content that multiplies, with a concrete, genre-agnostic system any game can adopt.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Additive vs Multiplicative Game Content And Why The Latter Is Better",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/additive-vs-multiplicative-content.html",
+        "author": { "@type": "Person", "name": "Reactorcore", "url": "https://reactorcoregames.github.io/" },
+        "isPartOf": { "@type": "CollectionPage", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/articles.html" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="article.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="shelf-metagame">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap article-page">
+        <header class="article-head">
+            <span class="bg-icon" style="--icon: url(../icons/quill-ink-lorc.png)" aria-hidden="true"></span>
+            <p class="eyebrow"><a href="../articles.html#shelf-metagame">Articles · Infinite metagames</a></p>
+            <h1 class="glow" data-burst-origin>Additive vs Multiplicative Game Content And Why The Latter Is Better</h1>
+            <p class="meta-line"><span>By Reactorcore</span><span>11 min read</span><span><a href="https://docs.google.com/document/d/1X46PJP9A6mNVZ4EZVNa80UCmH51aEBJ2jvXm51VBMBQ" target="_blank" rel="noopener">Original Google Doc ↗</a></span></p>
+        </header>
+
+        <div class="article-layout">
+            <div class="summary panel bracketed"><p class="label">In short</p><p>I talk about the difference between Additive vs Multiplicative ingame content. I highlight the superior benefits of the latter, as well as showing a concrete, universally implementable example that can work in any game, regardless of its genre.</p>
+<p>In this article I also share some game design work I personally crafted for my primary project that I intend to use. I want other games to adopt this good idea with their own context/narrative, their own art and their own gameplay as I think it will result in much better games worldwide, metagame structure wise.</p></div>
+            
+            <article class="article-main">
+                <div class="prose">
+<h2 id="an-interesting-chatgpt-generated-piece-of-text">An interesting ChatGPT generated piece of text</h2>
+<p>I was writing another game design article and needed to mention a specific "how to organize game content" thing in a concise way. I thought chatGPT could make writing that part faster for me so I gave it a try.</p>
+<p><strong>This was my prompt:</strong></p>
+<p>"In the context of game design, explain the difference between Additive vs. Multiplicative (game) Content."</p>
+<p>What it wrote didn't make it into the article as it would have veered off too far offtopic, but I liked what it had given me so much that I wanted to share it anyway on its own. As a snippet, it is useful enough to designers out there to have it open their mind to viewing content from a different perspective.</p>
+<p>However I didn’t like how rigid it was in its interpretation of this concept, making a hard divide on things that are and aren’t multiplicative content, which I did not agree with. I will offer my detailed personal thoughts after you read the text for yourself.</p>
+<p><strong>This is what ChatGPT wrote:</strong></p>
+<p>In the context of game design, "additive" and "multiplicative" refer to different approaches in incorporating content, features, or elements into a game. These terms are often used to describe how additional components contribute to the overall player experience. Let's delve into each:</p>
+<ol><li><strong>Additive Content:</strong><ul><li><strong>Definition:</strong> Additive content involves introducing new features or elements to a game that expand its scope without significantly altering the existing systems.</li><li><strong>Effect:</strong> It adds variety and breadth to the gameplay experience without fundamentally changing the core mechanics. Players can engage with new content without disrupting their understanding of the game's basic rules.</li><li><strong>Example:</strong> Adding new levels, characters, weapons, or items that complement the existing gameplay but don't drastically change the way the game is played.</li></ul></li><li><strong>Multiplicative Content:</strong><ul><li><strong>Definition:</strong> Multiplicative content introduces elements that interact with existing systems in a way that amplifies or alters the overall experience. The impact of these additions multiplies with the existing content, often resulting in emergent gameplay dynamics.</li><li><strong>Effect:</strong> It can lead to more profound and complex interactions within the game. The introduction of multiplicative content can create emergent strategies, deeper gameplay depth, and a more dynamic and evolving experience for players.</li><li><strong>Example:</strong> Adding a new gameplay mechanic that interacts with existing systems in unexpected ways, creating synergies or trade-offs that fundamentally change the player's approach to the game.</li></ul></li></ol>
+<p><strong>Comparison:</strong></p>
+<ul><li><strong>Additive Content:</strong> Expands the game horizontally by introducing new elements that work alongside existing features.</li></ul>
+<figure class="narrow" style="max-width: 532px"><img src="images/additive-vs-multiplicative-content/01.webp" alt="" width="1024" height="1024" decoding="async"></figure>
+<ul><li><strong>Multiplicative Content:</strong> Expands the game vertically by introducing elements that interact with and potentially transform existing features, resulting in more complex and nuanced gameplay.</li></ul>
+<figure class="narrow" style="max-width: 538px"><img src="images/additive-vs-multiplicative-content/02.webp" alt="" width="1024" height="1024" loading="lazy" decoding="async"></figure>
+<p>Both additive and multiplicative approaches have their merits, and game designers often use a combination of both to keep a game fresh and engaging. The choice between additive and multiplicative content depends on the design goals, the desired player experience, and the overall vision for the game.</p>
+<h2 id="my-thoughts-on-this-and-a-personal-example">My thoughts on this and a personal example</h2>
+<p>It didn't quite nail what my view on the topic was, but it did highlight the main point how they are different.<br><em>(Note: the included images were created and added by me, chatGPT did not add them by itself.)</em></p>
+<p>The biggest thing it missed here was that in a game project where content is organized in a modular, interchangeable and swappable manner, the levels, characters, props, decorations, weapons, tools, vehicles or items can themselves be Multiplicative Content just as equally.</p>
+<p>Here's some examples of this concept in a hypothetical game where your goal is to assault an enemy military base with a soldier character.</p>
+<h3 id="level-as-multiplicative-content">Level as Multiplicative Content</h3>
+<p>Instead of building a level where everything has been placed by hand, you instead place zones on the level within which items, characters and structures can appear in when the level is loaded. This can further be nested by having sub zones within the zone that further randomize the final thing you’ll interact with in the game.</p>
+<p>Compared to a static pre-built level which offers no surprise after the first playthrough, a zone-randomized level could have the player start anywhere, have the enemy base be elsewhere on the map each time and the defenders could be shuffled to start in different locations and in different numbers.</p>
+<p>Suddenly each playthrough is unexpected and exciting each time this randomized level is played.</p>
+<p>The pictures below show how it can work for a simple top-down game. This same principle can be adapted to any 2D or 3D game, including platformer type side-scrollers, first person or third person games.</p>
+<figure><img src="images/additive-vs-multiplicative-content/03.webp" alt="" width="695" height="548" loading="lazy" decoding="async"><figcaption>A basic blank square canvas for a top down game level. The dots represent exit/entry points that appear either mounted to the wall, placed on the floor or embedded into the background. <br><br>In this example, Basic Rooms are places where events happen, while Highway Rooms are mainly for long distance transit between Basic Rooms where it contextually makes sense. Basic Rooms can be chained together too without needing to have Highway Rooms at all.</figcaption></figure>
+<figure><img src="images/additive-vs-multiplicative-content/04.webp" alt="" width="700" height="756" loading="lazy" decoding="async"><figcaption>Spawn zones of a basic room explained in detail. <br><br></em><strong><em>Rectangle</em></strong> <em>spawn method means you have a box area with these variables: X and Y origin coordinate, usually the top left point of the spawn box and then Width and Height to determine the size of the box in code. Then you make the code spawn something within those coordinates at random. <br><br></em><strong><em>Circle</em></strong> <em>is a bit more simple; X and Y origin coordinate, usually the center point of the circle and then Radius to determine the size of the spawn circle area. Then you make things spawn anywhere in the circle between its center origin and up to its maximum radius at random.</figcaption></figure>
+<figure><img src="images/additive-vs-multiplicative-content/05.webp" alt="" width="700" height="770" loading="lazy" decoding="async"></figure>
+<figure><img src="images/additive-vs-multiplicative-content/06.webp" alt="" width="700" height="770" loading="lazy" decoding="async"></figure>
+<p><em><br>(Same as above, but for the Highway Room setup. Different spawn zones would have certain types of enemies, objects or things that are best suited for appearing there; some are mounted to walls, while others are freestanding.)</em></p>
+<figure><img src="images/additive-vs-multiplicative-content/07.webp" alt="" width="666" height="880" loading="lazy" decoding="async"><figcaption>This showcases the basic potential of the sheer variety that smartly coded procedural generated rooms can achieve by using a heuristics driven decision tree randomizer, more on that later.</figcaption></figure>
+<figure><img src="images/additive-vs-multiplicative-content/08.webp" alt="" width="666" height="422" loading="lazy" decoding="async"></figure>
+<p><em><br>(The levels can be made even more wildly random by blocking off entire sectors while ensuring that at least 2 adjacent sectors are still available. I think a marching squares algorithm can achieve this effect.)</em></p>
+<p><em>Context for the next few images:</em></p>
+<p><em>Originally I developed this procedural generation system for a top down game that takes place inside the human body where you play as a Symbiont, an artificial antivirus nanomachine, to cure a human from illnesses from the inside. You’d travel between different parts of the body and spray medicine to remove bad things.</em></p>
+<p><em>You’d enter the human through air or contact transmission via orifices of a human (nose, mouth, wound) and then travel via blood vessels to get to places where you need to go.</em></p>
+<figure><img src="images/additive-vs-multiplicative-content/09.webp" alt="" width="700" height="700" loading="lazy" decoding="async"></figure>
+<p><em><br>(The basic building block of the entire system. I use the term “Room” here, but this can be considered also as Scene, a Level, a Map, a World, a Location and whatever else is the equivalent to each game engine.)</em></p>
+<figure class="narrow" style="max-width: 520px"><img src="images/additive-vs-multiplicative-content/10.webp" alt="" width="520" height="800" loading="lazy" decoding="async"></figure>
+<p><em><br>(The basics of a Highway Room, showcasing dynamic environments that feature physics forces or similar that push things around like a river current. The foundational basics here are tremendously flexible for creating practically any kind of variation of a level that feels significantly diverse to play on.)</em></p>
+<figure><img src="images/additive-vs-multiplicative-content/11.webp" alt="" width="700" height="770" loading="lazy" decoding="async"></figure>
+<p><em><br>(The game would procedurally generate entire campaigns using these rooms, connected as a network of only the parts that were relevant to the mission to keep the gameplay focused and short.)</em></p>
+<figure class="narrow" style="max-width: 470px"><img src="images/additive-vs-multiplicative-content/12.webp" alt="" width="470" height="1087" loading="lazy" decoding="async"></figure>
+<p><em><br>(This image explains how the algorithm would create a level campaign network procedurally. It uses specific rules that create a clear structure that is still quite flexible to create interesting results each time.)</em></p>
+<figure><img src="images/additive-vs-multiplicative-content/13.webp" alt="" width="700" height="920" loading="lazy" decoding="async"></figure>
+<p><em><br>(The full potential of the system and the massive variety of levels that would be possible to attain with this type of procedural generation. Take into account the procgen that happens per individual room and then combine that with this system and you’ll get quite the fascinating algorithm to create an endless supply of campaigns that are never the same, yet still have meaning, structure and context.)</em></p>
+<p>With this type of structure, all you need is to define varied terrain and designate potential spawn zones for the game to use. Just one added map can yield an endless amount of fresh play sessions.</p>
+<h3 id="character-as-multiplicative-content">Character as Multiplicative Content</h3>
+<p>Instead of having a predefined character with specific abilities, traits, clothing, armor, equipment and weapons, all these things could be randomized and handed out to a character using a 'heuristics driven decision tree randomizer'*.</p>
+<p>So instead of either fighting as the same soldier each time or having to fight enemies that are the same each time, here you can instead expect to fight opponents that might have almost anything on them in any type of configuration.</p>
+<p>Maybe they all have sniper rifles, maybe it's only pistols, maybe it's a mix of things.</p>
+<h3 id="side-note-a-heuristics-driven-decision-tree-randomizer">*Side note - a heuristics driven decision tree randomizer</h3>
+<figure class="narrow" style="max-width: 402px"><img src="images/additive-vs-multiplicative-content/14.webp" alt="" width="402" height="770" loading="lazy" decoding="async"><figcaption>Somewhat like this, but with more branches, more numerical modifiers than simple binary yes/no choices, more if questions, more layers, more detailed options, more depth and an added rare(0.01%, 1%, 5%, 10%) chance element of introducing chaos into certain steps to spice things up. <br><br>The idea is to give the procedural generation algorithms a ‘natural logic’-driven structure to follow where things on a higher level influence things on the lower level in a way that makes sense as a butterfly-effect like consequence, yet still have a chance for interesting surprises to happen. This is how you do procedural generation right.</figcaption></figure>
+<p>A “heuristics driven decision tree randomizer” may sound fancy and it may even be the wrong term for it - I honestly don’t know, technically it can be called a flowchart, decision tree, heuristics or something else - but regardless in actual game programming code it's really just a battery sequence of "If, Else" statements arranged as a tree that branch off, determining how the randomization will be organized.</p>
+<p>It's a more controlled, cleaner and structured way of creating randomized results than simply saying "spawn randomly anyone with anything" without any cohesion. The idea behind it is to let the randomizer decide what biases it should lean on before it actually doles out the randomization. This prevents the infamous ‘1000 bowls of differently colored porridge’ problem.</p>
+<p>An example of such a heuristics randomizer:</p>
+<ul><li>How many defenders should there be? <strong><em>Little, Some, A lot?</em></strong></li><li>How should they be placed on the map? <strong><em>As individuals? As groups? All in one place? A mix of these?</em></strong></li><li>Should they be placed close to points they're trying to guard or far away? <strong><em>By how much?</em></strong></li><li>Are they healthy, damaged or are some of them already dead when the battle begins? <strong><em>To what degree?</em></strong></li><li>Are combat supplies and pickups close to them or are they a fair distance away from them? <strong><em>By how much?</em></strong></li><li>Do they use primary weapons and sidearms or only sidearms or only primary weapons? Or just grenades or just fists? Or a mix of these?</li><li>Is the AI mood aggressive or defensive generally? <strong><em>To what degree?</em></strong></li></ul>
+<p>...and so on. It's just a battery of questions you feed to the game in a top to bottom sequence to let it decide how it wants to put together the level and its characters when it loads up.</p>
+<figure><img src="images/additive-vs-multiplicative-content/15.webp" alt="" width="880" height="1150" loading="lazy" decoding="async"><figcaption>Another example, the same caption as before applies to this one too. I’m merely trying to give a somewhat approximate visualization of what this heuristic decision tree thing is.</figcaption></figure>
+<p>Some questions may branch off temporarily into a subtype topic of parameters that only make sense for the particular option the original question split off at. Eventually it will merge with the main question chain with the parameters it got from the subtype topic.</p>
+<p>Other questions may branch off completely into a different subtype topic that will not merge back into the original structure, resulting in a product that makes more sense as a separate type that differs greatly from the main question chain products.</p>
+<p>Overall, this method is much better than amateur procedural generation attempts that forget to do this.</p>
+<h2 id="the-great-benefit-and-potential-of-multiplicative-content">The great benefit and potential of Multiplicative Content</h2>
+<figure><img src="images/additive-vs-multiplicative-content/16.webp" alt="" width="768" height="512" loading="lazy" decoding="async"></figure>
+<p>With this structure, any piece of equipment, any weapon, any ability and such could transform any newly added character bodies to become practically anyone instead of having to fight the same unique named John McJohn villain character each time you play the game.</p>
+<p>Weapons/Items/Armor/Equipment can work as multiplicative content too; the moment you add one new weapon, it can be added to the pool of possible weapons either you or the enemy can spawn with or equip during the battle.</p>
+<p>Combined with randomization, the variety of new combinations that arise even from one extra added weapon, item, prop or anything else will increase exponentially. Sometimes it will feel like playing an entirely new game all over again when something gets added in this way, making the gameplay experience feel fresh, exciting, surprising and engaging each time, with each new content update.</p>
+<p>And the best part you can keep adding more and more content this way to increase the game's value, where not only you've added new items to extend the game, but you've also given all the old content a new thing to combine with, essentially multiplying the amount of things you can now do in the game.</p>
+<p>This is something Additive Content cannot do and why I'm here to argue its inferior compared to Multiplicative Content.</p>
+<p>Additive Content will not give life to old content and will have more limitations and restrictions that will become unsustainable in the long term to keep producing because people will consume it far faster than you'll be able to make it. Multiplicative Content however may need much less time to build but result in far better value and longevity by comparison.</p>
+<p>With Additive Content you spend 5 weeks making something that will last 5 minutes.</p>
+<p>With Multiplicative Content you spend 5 hours making something that will last 5 weeks.<br><em>(Note: This doesn’t take into account the time it takes to set up the framework to support this, but still.)</em></p>
+<p>It takes some time to set up the framework to support multiplicative content, I don't want to dismiss that.</p>
+<p>You can't just start creating Multiplicative Content without standardization, modularity and intercompatibility built into the game's content management and usage system, it won’t be possible without those.</p>
+<p>However, the value gained from it is far better than doing it the rather primitive and shortsighted method of making Additive Content that is only faster in the short term and comes with way too many drawbacks to be anywhere near as valuable as Multiplicative Content.</p>
+<p>Personally I think the future will be dominated by Multiplicative Content, while Additive Content will fade into a lesser role, only used if the purpose of the multimedia experience is to tell a story without really implementing much in the way of robust game mechanics into its systems.</p>
+                </div>
+
+                <section class="closing panel" aria-labelledby="closing-title">
+                    <h2 class="section-mark" id="closing-title"><span class="icon" style="--icon: url(../icons/conversation-lorc.png)"></span>Talk about it</h2>
+                    <p>Questions, disagreements and ideas of your own are all welcome. Discuss this article with other readers on the Reactorcore Games Discord, follow new articles and dev news on Patreon, or write to me directly.</p>
+                    <p class="closing-links">
+                        <a class="btn" href="https://discord.gg/UdRavGhj47" target="_blank" rel="noopener"><span class="icon" style="--icon: url(../icons/chat-bubble-delapouite.png)"></span>Discord</a>
+                        <a class="btn" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener"><span class="icon" style="--icon: url(../icons/megaphone-delapouite.png)"></span>Patreon</a>
+                        <a class="btn" href="mailto:reactorcoregames@gmail.com"><span class="icon" style="--icon: url(../icons/envelope-lorc.png)"></span>Email</a>
+                    </p>
+                </section>
+
+                <nav class="pager" aria-label="More articles">
+                    <a class="pager-link prev" href="player-run-services.html"><span class="label">← Previous</span><span class="pager-title">How To Contextualize Narrative Within Infinite Metagames: Player-Run Services</span></a>
+                    <a class="pager-link next" href="what-is-a-game-designer.html"><span class="label">Next →</span><span class="pager-title">What Really Is a Game Designer And How To Master This Skill</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="../articles.html"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>All articles</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Homepage: <a href="https://reactorcoregames.github.io/" target="_blank" rel="noopener">reactorcoregames.github.io</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../articles.html">Back to the articles</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

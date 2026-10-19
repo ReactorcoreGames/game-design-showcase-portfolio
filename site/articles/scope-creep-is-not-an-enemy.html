@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Creep Is Not An Enemy, You&#x27;re Just Incompetent and Inexperienced · Reactorcore</title>
+    <script>try{if(!sessionStorage.getItem("rc-burst"))document.documentElement.classList.add("burst-pending")}catch(e){}</script>
+    <!-- Built by tools/articles.py from the Google Docs export. Edit the template or the tool, not this file. -->
+
+    <meta name="description" content="Why the people warning about scope creep stifle innovation, why your dream game can be your first game, and the trick behind Scope Maximization.">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/scope-creep-is-not-an-enemy.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Scope Creep Is Not An Enemy, You&#x27;re Just Incompetent and Inexperienced">
+    <meta property="og:description" content="Why the people warning about scope creep stifle innovation, why your dream game can be your first game, and the trick behind Scope Maximization.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/scope-creep-is-not-an-enemy.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Scope Creep Is Not An Enemy, You&#x27;re Just Incompetent and Inexperienced">
+    <meta name="twitter:description" content="Why the people warning about scope creep stifle innovation, why your dream game can be your first game, and the trick behind Scope Maximization.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Scope Creep Is Not An Enemy, You're Just Incompetent and Inexperienced",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/scope-creep-is-not-an-enemy.html",
+        "author": { "@type": "Person", "name": "Reactorcore", "url": "https://reactorcoregames.github.io/" },
+        "isPartOf": { "@type": "CollectionPage", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/articles.html" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="article.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="shelf-craft">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap article-page">
+        <header class="article-head">
+            <span class="bg-icon" style="--icon: url(../icons/quill-ink-lorc.png)" aria-hidden="true"></span>
+            <p class="eyebrow"><a href="../articles.html#shelf-craft">Articles · The craft</a></p>
+            <h1 class="glow" data-burst-origin>Scope Creep Is Not An Enemy, You&#x27;re Just Incompetent and Inexperienced</h1>
+            <p class="meta-line"><span>By Reactorcore</span><span>13 min read</span><span><a href="https://docs.google.com/document/d/1dUnMhvgPTFoPFwaomh2T-dLzVyq59Deu_0r3MzPFXCI" target="_blank" rel="noopener">Original Google Doc ↗</a></span></p>
+        </header>
+
+        <div class="article-layout">
+            <div class="summary panel bracketed"><p class="label">In short</p><p>In this article I challenge the notion of scope creep, saying that those that “warn” about it are incompetent and inexperienced morons that have no idea what they are doing and causing harm by stifling innovation, making people needlessly demotivated and misinformed about what they should do.</p>
+<p>I suggest to people make their dream games as their first game right away and to do something I call Scope Maximization, where the game designer is actually encouraged to embrace scope creep to their hearts content right from the start. It may sound paradoxical, but there's a cool trick to it.</p></div>
+            <nav class="toc" aria-labelledby="toc-title"><p class="label" id="toc-title">In this article</p><ol><li><a href="#what-is-a-scope-creep-in-game-design">What is a scope creep in game design?</a></li><li><a href="#do-not-fear-scope-creep-master-it-instead">Do not fear scope creep, master it instead</a></li><li><a href="#good-design-is-immune-to-technical-and-other-obstacles-that-">Good design is immune to technical and other obstacles that you may encounter</a></li><li><a href="#the-lazy-everyone-has-a-plan-until-they-get-punched-in-the-f">The lazy &quot;Everyone has a plan until they get punched in the face lol?&quot; argument</a></li></ol></nav>
+            <article class="article-main">
+                <div class="prose">
+<h2 id="what-is-a-scope-creep-in-game-design">What is a scope creep in game design?</h2>
+<figure><img src="images/scope-creep-is-not-an-enemy/01.webp" alt="" width="968" height="544" decoding="async"></figure>
+<p>Scope creep (sometimes known as “feature creep”) is when an incompetent game developer is trying to actively “design” their game while already fully building it with code, writing, art and sounds.</p>
+<p>Usually the developer has either:</p>
+<ol><li>Entirely skipped, disregarded, downplayed and ignored doing a proper design phase.</li><li>Rushed, half-assed, half-baked or otherwise did their design phase carelessly and superficially.</li></ol>
+<p>…and then went straight to building it as a full game, not even as a test case prototype!</p>
+<p>It's essentially the equivalent of someone trying to build a house on the go and writing the blueprint <strong>afterwards</strong> or writing it while they’re actively building the house.</p>
+<p>It is the epitome of stupidity and incompetence and results in bullshit equivalent to this:</p>
+<figure><img src="images/scope-creep-is-not-an-enemy/02.webp" alt="" width="605" height="812" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 322px"><img src="images/scope-creep-is-not-an-enemy/03.webp" alt="" width="605" height="783" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 310px"><img src="images/scope-creep-is-not-an-enemy/04.webp" alt="" width="605" height="807" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/05.webp" alt="" width="605" height="362" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/06.webp" alt="" width="605" height="962" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/07.webp" alt="" width="605" height="454" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/08.webp" alt="" width="605" height="448" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/09.webp" alt="" width="605" height="445" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/10.webp" alt="" width="605" height="748" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/11.webp" alt="" width="605" height="454" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/12.webp" alt="" width="634" height="474" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/13.webp" alt="" width="634" height="476" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 268px"><img src="images/scope-creep-is-not-an-enemy/14.webp" alt="" width="536" height="786" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 407px"><img src="images/scope-creep-is-not-an-enemy/15.webp" alt="" width="634" height="476" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/16.webp" alt="" width="634" height="476" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/17.webp" alt="" width="634" height="476" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/18.webp" alt="" width="634" height="667" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/19.webp" alt="" width="634" height="475" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/20.webp" alt="" width="700" height="570" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/21.webp" alt="" width="700" height="570" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 326px"><img src="images/scope-creep-is-not-an-enemy/22.webp" alt="" width="652" height="531" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 331px"><img src="images/scope-creep-is-not-an-enemy/23.webp" alt="" width="662" height="539" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/24.webp" alt="" width="700" height="570" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/25.webp" alt="" width="700" height="570" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/26.webp" alt="" width="700" height="570" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/27.webp" alt="" width="379" height="300" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 357px"><img src="images/scope-creep-is-not-an-enemy/28.webp" alt="" width="400" height="266" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 282px"><img src="images/scope-creep-is-not-an-enemy/29.webp" alt="" width="425" height="404" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/30.webp" alt="" width="300" height="400" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 328px"><img src="images/scope-creep-is-not-an-enemy/31.webp" alt="" width="267" height="400" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 324px"><img src="images/scope-creep-is-not-an-enemy/32.webp" alt="" width="453" height="604" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/33.webp" alt="" width="700" height="570" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 342px"><img src="images/scope-creep-is-not-an-enemy/34.webp" alt="" width="605" height="776" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 316px"><img src="images/scope-creep-is-not-an-enemy/35.webp" alt="" width="605" height="835" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/36.webp" alt="" width="605" height="477" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/37.webp" alt="" width="605" height="403" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/38.webp" alt="" width="605" height="440" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 324px"><img src="images/scope-creep-is-not-an-enemy/39.webp" alt="" width="605" height="807" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 299px"><img src="images/scope-creep-is-not-an-enemy/40.webp" alt="" width="598" height="912" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 328px"><img src="images/scope-creep-is-not-an-enemy/41.webp" alt="" width="605" height="807" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 316px"><img src="images/scope-creep-is-not-an-enemy/42.webp" alt="" width="605" height="838" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 316px"><img src="images/scope-creep-is-not-an-enemy/43.webp" alt="" width="605" height="452" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="max-width: 335px"><img src="images/scope-creep-is-not-an-enemy/44.webp" alt="" width="605" height="454" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/45.webp" alt="" width="605" height="444" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/46.webp" alt="" width="700" height="570" loading="lazy" decoding="async"></figure>
+<figure><img src="images/scope-creep-is-not-an-enemy/47.webp" alt="" width="640" height="800" loading="lazy" decoding="async"></figure>
+<p>Imagine the same as those but with game projects.</p>
+<p>I hope you can see why I'm upset by people that do this stupidity and why I use such harsh language. If people mess up their game design in this way, nobody benefits in the end.</p>
+<h3 id="how-does-scope-creep-happen">How does scope creep happen?</h3>
+<figure><img src="images/scope-creep-is-not-an-enemy/48.webp" alt="" width="768" height="512" loading="lazy" decoding="async"></figure>
+<p>What happens is that the developer notices design issues with their game as they are building it and they come up with quick half-assed solutions in an attempt to fix them.</p>
+<p>They also come across new exciting ideas they hadn't thought about previously and try to forcibly add them into the current project, regardless if it conflicts with its existing systems, mechanics, features or content.</p>
+<p>In the process they may forget about the purpose of the project or fail to even have one at all, causing them to coast on a vague blurry thought of what their game should be. In other words, they don’t really know what the fuck they’re making.</p>
+<p>More accurately, there is no real game design in their project; they’re just attempting to brute force their game into something “good” by working hard - be it in a:</p>
+<ul><li>Stubborn way (“maybe it’ll eventually get better if I keep pushing it!”)</li><li>Desperate way (“I must get this done as fast as possible, the deadline is crushing me!”)</li><li>Ignorant way (“Haha video game go brrrr, who needs design anyway?”)</li></ul>
+<p>Or in an otherwise careless way - often being hypnotized too deeply by their current momentum/flow/work streak to stop, sit their ass down, pick up the pen and paper and actually take game design seriously.</p>
+<p>This results in:</p>
+<ul><li>The game becomes more convoluted in its mechanics, the opposite of being streamlined.</li><li>The game gets bloated with incohesive features that don’t play well together.</li><li>The overall direction of the project becomes aimless, harming motivation long term.</li><li>User Interface and User Experience (UI/UX) becomes a clumsy disjointed mess that constantly has to be redone and reworked to adapt to the new features, sometimes requiring major overhauls and tons of extra work, while flushing down old efforts down the toilet because that work had become worthless. Worst case scenario the developer just leaves the UI/UX as is, with all its faults and awful organization, just layering more and more stuff until it becomes completely unusable.</li><li>It becomes progressively more difficult to add new things into the game due to the feature creep causing asset requirements to grow out of proportion due to lack of standardization.</li><li>The project becomes harder to maintain when something inevitably breaks due to said incohesive features and aimless direction.</li><li>The code will often begin to contradict itself. This means weird hacks are required to awkwardly glue together different elements to make the game even work, making the project more unstable as time goes on.</li></ul>
+<h3 id="scope-creep-has-become-a-false-boogeyman-that-makes-the-enti">Scope creep has become a false boogeyman that makes the entire games industry worse</h3>
+<p>As you see this results in a total mess, the project often fails in some form or another and the incompetent dev goes online to cry about how feature creep is a bad thing. Sometimes the failure isn’t about the project not gaining popularity, but about the wasted potential it fails to subsequently capture that was there in its core, even if just conceptually.</p>
+<p>This has resulted in the common narrative which says that "scope creep or feature creep is bad and you should avoid it, keep your games limited, small and highly restricted".</p>
+<figure><img src="images/scope-creep-is-not-an-enemy/49.webp" alt="" width="968" height="544" loading="lazy" decoding="async"></figure>
+<p>The problem with that is now we get games that have no ambition, no expansion potential, no longevity and no innovation because everyone has been scared shitless by this manufactured scope creep boogeyman.</p>
+<p>At no point did anyone who said this come out and just say that they’re actually incompetent and inexperienced because that would make them look bad, so they chose to tell a lie to save their face.</p>
+<p>Both old and new aspiring game developers and game designers are essentially discouraged from making their dream game as their first game - which, motivation wise, IS the main fucking reason why they entered the games industry to begin with - outright telling them to not work on it, but wait until some unknown time in the future (when? maybe never?), telling them to first make copies of existing and old games as “training”.</p>
+<p>Not only this is demotivating, but I advocate the very opposite of this; if you’re new to the industry and you came here because you wanted to make your dream game then that should be the first project you work on, with the caveat of figuring it out how to make a scaled-down version of your dream game that is feasible for your skill level and knowledge.</p>
+<p>You learn to make the dream game by making the fucking dream game. You figure it out, you use your head, you adapt and investigate, finding a path to make some kind of version of it that is feasible/possible.</p>
+<p>Newbies that directly start with their dream game are the ones that make the coolest, freshest and most fun games, even if they’re badly put together or have lesser audiovisual presentation compared to someone with more experience. Do not rob them away from their dreams and don’t rob me from being able to enjoy their early amateur stuff, no matter how initially scrappy it might be.</p>
+<p>A dream game is often a dream game because there was something really inspiring and exciting enough about it to consider jumping into the unknown to pursue it. That shit needs to be nurtured, not stomped down dismissively.</p>
+<p>I don't like this scope creep fear mongering trend at all. My hope with this article is to let you see an alternative perspective on the issue. I’ll do my best to explain how to master it as concisely as possible.</p>
+<p>This won’t be a comprehensive deep dive, but something quick to give you an overview of how it looks in general. In future articles I may show what the design phase of a project looks like with examples and more detail.</p>
+<h2 id="do-not-fear-scope-creep-master-it-instead">Do not fear scope creep, master it instead</h2>
+<figure><img src="images/scope-creep-is-not-an-enemy/50.webp" alt="" width="768" height="512" loading="lazy" decoding="async"></figure>
+<p>In the beginning of a project - during the very initial stages of it - everything starts off with nothing more than just an idea or a vision.</p>
+<p>Stop, do not immediately open up the game engine and start building anything yet.</p>
+<p>Instead, you must begin by charting out the maximum range of possibilities the game project could potentially have during its entire lifespan. Don’t rush it, spend plenty of time on this and write your musings down in whichever way is most comfortable to you - either pen and paper, a notepad txt file or a rich text document.</p>
+<p>The act of doing this is incredibly cheap and quick in itself; writing or typing out words to get your thoughts and doodles down onto paper or documents is the fastest, easiest thing that you can humanly do without needing to construct anything, pay for anything or put any amount of considerable effort. Use this to your advantage.</p>
+<p>Most commonly you’ll have your pen and paper but then hit a gap in knowledge and don’t know how to continue; that’s your cue to hit the internet, go outside, check the library (of any kind, anywhere, online and offline), draw doodles, play games, watch movies, go on adventures, go experience something inspiring, do something fun or anything else that might relate to what you’re doing. By “procrastinating”, going on walks or searching information actively, you’ll eventually bump into something that is just good enough to give you the next step in advancing your design.</p>
+<p>During this phase of initial design work, use whatever means to gather information, test out theories, build throwaway quick prototypes or ponder the viability of certain content and features. You must also explore the limits, restrictions and quirks of the technology you'd theoretically want to use for your project to identify if anything you've planned is viable or not for you to implement once it comes time to build the game according to the designs you've created.</p>
+<p>I can not stress this enough; spend time here and do not rush it, the time and patience invested here will pay itself back many times over. It's also cheaper to do it here than it will be later; you may appear slow at first, but with a good design, the pace of your work will be blazingly fast compared to if you’re trying to just brute force it.</p>
+<p>Do not begin development of the actual game until a great degree of confidence and cohesion is achieved within this so-called “scope maximization phase”. Do not write meticulous details for final content or systems! Keep things general and flexible to change, yet still cohesive (the final feature may somewhat look different in the finished product, but its original core intent will remain the same).</p>
+<p>Once satisfied with the full potential of the project, you can begin developing the game in its absolute minimal, easiest, cheapest and quickest form.</p>
+<p>The maximum scope figured out previously will serve as a clear roadmap for the entire future of the project, giving you a clear idea how to expand it after you’re done with the minimal skeleton version of it. The maximized scope will also keep you organized in having a better idea in what order each component of the project should be done and how.</p>
+<p>You’ll be able to have foresight when building UI/UX stuff, knowing to leave room for things that you know will be implemented in the future, making the final result much more cohesive, elegant and standardized. Your players will thank you for it.</p>
+<p>This "flexible generalized plan" of sorts helps you build out the game up to its ultimate full potential without neither overwhelming you, neither ending up in a dead-end which would require a full restart (for design reasons at least, technical implementation reasons are a different story), neither feeling terribly frustrating where you don't know where the project begins and where it ends.</p>
+<p>You also will know confidently that your project has solid foundations to depend on which will give you a peace of mind. You will feel motivated, knowing your project is worthy of development and worth taking to its ultimate completion with great certainty. And best of all; you ARE working on your dream already.</p>
+<h2 id="good-design-is-immune-to-technical-and-other-obstacles-that-">Good design is immune to technical and other obstacles that you may encounter</h2>
+<figure><img src="images/scope-creep-is-not-an-enemy/51.webp" alt="" width="968" height="544" loading="lazy" decoding="async"></figure>
+<p>During development, problems will not arise from the game design itself if you did your preparational scope work correctly.</p>
+<p>If you spend enough time and patience testing out your theories in limited prototypes, papercraft/tabletop/logical mind simulations and ensure your designs are mostly agnostic of any specific technology or platform you're supposed to use, the game design will remain flexible and adaptable without losing its core identity. Well crafted rules are immutable and universal; they’ll work great no matter where they are.</p>
+<p>Instead, often issues and obstacles will originate from the technologies, platforms or other quirks that game design cannot account for, such as obscure limitations/bugs/quirks of the game engine you're using, the uncertain/limited amount of funding/time you can spend on building the project, legislative landmines that may state that certain parts of your game are against some arbitrary terms of service or contrived rules that were meant to stop other kinds of misuse. It happens. Whatever can go wrong, might go wrong.</p>
+<p>In the event of these obstacles, the game design itself wouldn't need major changes; you'd only need to change <em>how</em> something is implemented.</p>
+<p>Examples:</p>
+<ul><li>Problem: Turns out the game engine can handle much less characters and items on screen than originally intended.</li></ul>
+<p>Solution: Reduce expectations and work with what you have; set a lower maximum amount of characters and items.<br>–</p>
+<ul><li>Problem: Colliders on objects start behaving badly if they are too wide or too narrow.</li></ul>
+<p>Solution: Work around it; shorten objects or split them into connected segments.<br>–</p>
+<ul><li>Problem: Spawning and removing objects from the game is causing a lot of lag that makes the game unplayable.</li></ul>
+<p>Solution: Look into solutions that work natively better within the engine, such as using "object pooling spawns" or other technical workarounds.<br>–</p>
+<ul><li>Problem: A storefront declared that AI generated art is against terms of service.</li></ul>
+<p>Solution: Look for a better storefront that does allow AI art or replace the AI generated art with a cost effective solution so it meets those arbitrary requirements.<br>–</p>
+<ul><li>Problem: My design relied on this third party plugin that got discontinued, deleted and is no longer supported.</li></ul>
+<p>Solution: You fucked up, this was something you needed to take into account during the scoping of your project to make sure either it could be done without it or that you could rely on the existing version from start to end even if something like that would have happened to it.</p>
+<p>Obviously it's not your fault that something outside your control suddenly broke down, but you do have a responsibility for mitigating risks and to anticipate things to collapse abruptly and unexpectedly. Have insurance.<br><br>Always have a plan B and a backup. It's healthy to be paranoid about game engines, plugins, technologies, people and companies you rely on; more often than not, they are not there for you, they are there mostly for themselves. If you have an option to use downloadable installed offline systems, prefer those over the ones that operate in the cloud online.</p>
+<p>Remember: Anything that can go wrong may go wrong, so plan around that and do risk mitigation as much as you can. The world isn’t as perfect or as safe as we’d like it to be, humanity still has a long road ahead before it can get there and I don’t think it's gonna be anytime soon. This is a part of being a talented game designer, a necessary skill to learn.</p>
+<h2 id="the-lazy-everyone-has-a-plan-until-they-get-punched-in-the-f">The lazy "Everyone has a plan until they get punched in the face lol?" argument</h2>
+<figure><img src="images/scope-creep-is-not-an-enemy/52.webp" alt="" width="768" height="512" loading="lazy" decoding="async"></figure>
+<p>I hear this particular tired argument very often when anyone tries to suggest preparation and planning for a project; it's honestly exhausting and naive to see it each time.</p>
+<p>While the sentiment of "everyone has a plan until they get punched in the face" might hold some truth in unpredictable situations, dismissing the value of preparation altogether is shortsighted. Planning is not about predicting every possible outcome, but rather about building resilience and adaptability in the face of challenges.</p>
+<p>Acknowledging that unexpected setbacks can occur is essential, but it doesn't diminish the importance of having a well-thought-out plan. A plan provides a roadmap, helps identify potential obstacles, and allows for the development of contingency strategies. It's a tool for understanding the terrain before entering the battlefield, enabling a more informed and strategic approach.</p>
+<p>The key is to balance planning with flexibility. Recognizing that plans may need adjustment in response to unforeseen circumstances is part of the process. It's not about adhering rigidly to a preconceived notion but rather having a framework that can be adjusted based on real-time feedback and changing conditions.</p>
+<p>In essence, the saying about plans and punches emphasizes the need for adaptability and resilience, not the abandonment of planning itself. A well-prepared individual or team is better equipped to navigate uncertainties, learn from unexpected challenges, and make informed decisions on the fly. So, instead of dismissing planning outright, it might be more constructive to emphasize the importance of a dynamic and adaptive approach that integrates both preparation and responsiveness.</p>
+<p>This is why I adamantly stress the importance of not setting in stone the meticulous details of a game design but only working to define the general points to maintain the flexibility when obstacles with technology, storefront or other places occur. In a way, good design is paranoid design.</p>
+<p>Creating unique characters, specific level layouts and other such final details only make sense after you have the framework and content creation workflow built around the limitations and quirks of the tech you're relying on.</p>
+<p>In other words, the final form of the in-game content, systems, mechanics, features and auxiliary components in the fully completed game project always depend on the mutual dance between of the intended (yet flexible) game design scope you’ve created and the platform/tech/workflow you're relying on.</p>
+<p>It’s a puzzle where you need to find a solution where both your game design and the tech you use is in good harmony.</p>
+                </div>
+
+                <section class="closing panel" aria-labelledby="closing-title">
+                    <h2 class="section-mark" id="closing-title"><span class="icon" style="--icon: url(../icons/conversation-lorc.png)"></span>Talk about it</h2>
+                    <p>Questions, disagreements and ideas of your own are all welcome. Discuss this article with other readers on the Reactorcore Games Discord, follow new articles and dev news on Patreon, or write to me directly.</p>
+                    <p class="closing-links">
+                        <a class="btn" href="https://discord.gg/UdRavGhj47" target="_blank" rel="noopener"><span class="icon" style="--icon: url(../icons/chat-bubble-delapouite.png)"></span>Discord</a>
+                        <a class="btn" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener"><span class="icon" style="--icon: url(../icons/megaphone-delapouite.png)"></span>Patreon</a>
+                        <a class="btn" href="mailto:reactorcoregames@gmail.com"><span class="icon" style="--icon: url(../icons/envelope-lorc.png)"></span>Email</a>
+                    </p>
+                </section>
+
+                <nav class="pager" aria-label="More articles">
+                    <a class="pager-link prev" href="evolution-of-a-game-designer.html"><span class="label">← Previous</span><span class="pager-title">Evolution of a Game Designer According to Common Knowledge</span></a>
+                    <a class="pager-link next" href="forking-drives-innovation.html"><span class="label">Next →</span><span class="pager-title">Forking Drives Innovation, Not Competition!</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="../articles.html"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>All articles</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Homepage: <a href="https://reactorcoregames.github.io/" target="_blank" rel="noopener">reactorcoregames.github.io</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../articles.html">Back to the articles</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

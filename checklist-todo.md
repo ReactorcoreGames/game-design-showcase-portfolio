@@ -43,7 +43,7 @@ The full plan, reasons and decisions are in `workflow/site-plan.md`. Read it bef
 
 ### C. Content sections
 
-- [ ] C1: `tools/articles.py` built; the 16 listed articles moved onto the site with optimized images
+- [x] C1: `tools/articles.py` built; the 16 listed articles moved onto the site with optimized images
 - [ ] C2: "Reactorcore's Big Projects" and "Astroneer 8th Planet" articles published
 - [ ] C2: the two guest articles published in full, with author credit and source links at the top
 - [ ] C3: AAL Universe hub page, entry list and image spec (up to 10 Klein images)

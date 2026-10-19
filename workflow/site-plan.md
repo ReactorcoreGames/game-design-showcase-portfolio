@@ -134,6 +134,8 @@ Done in B3. The page has a TL;DR panel, three services, proof of work (designs, 
 
 Convert the 16 articles already listed. Target: the whole articles folder under about 15 MB.
 
+Done in C1: `tools/articles.py build` writes all 16 pages (14.5 MB in total, from about 55 MB of source images). The page template is `tools/article_template.html` and the shared styles are `site/articles/article.css`. Images are WebP q70, at most 1040 px wide, since the reading column is 780 px. `articles.js` entries now carry a `slug` (the page) and an `original` (the Google Doc), and the tool writes each article's reading time back into it. The cleanup drops the doc's title block, lifts the "Summary:" section into an "In short" panel, turns italic "(…)" lines under images into captions, and replaces the identical Patreon/Discord "Closing words" every article ended with by one shared "Talk about it" panel. Long articles get a contents list, a sticky sidebar on wide screens. `tools/sitemap.py` lists the article pages. For C2: add each new article to `SOURCES` in the tool and to `articles.js`. The guest-article header and the project links in Big Projects still need adding to the tool.
+
 **C2. The new articles.**
 - "Reactorcore's Big Projects" (30,000 words, 286 images, the bulk of the session). It talks about designs that already have showcase pages. Publish it anyway, since it shows the design thinking behind them in more depth than the showcase pages can, and link from each mention to that project's page.
 - "Astroneer – 8th Planet Infinite Metagame Concept".

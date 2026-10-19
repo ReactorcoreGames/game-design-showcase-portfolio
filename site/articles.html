@@ -128,7 +128,7 @@
             <p class="eyebrow">Game design writing</p>
             <h1 class="glow" data-burst-origin>The thinking behind the designs</h1>
             <p>Every design in this portfolio rests on the ideas in these articles: that games are satisfiers of real human needs, that a game can keep giving through an infinite metagame instead of ending, and that the industry's defaults are worth questioning.</p>
-            <p>They're long-form and opinionated, written for designers, developers, employers, and anyone who wants games to be more than a way to pass time. Each one opens as a Google Doc.</p>
+            <p>They're long-form and opinionated, written for designers, developers, employers, and anyone who wants games to be more than a way to pass time.</p>
         </section>
         <div id="featured"></div>
         <div id="shelves"></div>
@@ -154,7 +154,9 @@
     <script>
         (function () {
             const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-            const link = a => `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a>`;
+            const link = a => a.slug
+                ? `<a href="articles/${esc(a.slug)}.html">${esc(a.title)}</a>`
+                : `<a href="${esc(a.original)}" target="_blank" rel="noopener">${esc(a.title)}</a>`;
 
             const featured = ARTICLES.find(a => a.featured);
             if (featured) {
@@ -165,7 +167,7 @@
     <p class="eyebrow">Start here · ${featured.minutes} min read</p>
     <h2>${link(featured)}</h2>
     <p>${esc(featured.summary)}</p>
-    <span class="btn btn-primary" aria-hidden="true">Open the article</span>
+    <span class="btn btn-primary" aria-hidden="true">Read the article</span>
   </div>
 </article>`;
             }
@@ -179,7 +181,7 @@
   <p class="num">${String(n).padStart(2, "0")}</p>
   <h3>${link(a)}</h3>
   <p>${esc(a.summary)}</p>
-  <div class="meta"><span>${a.minutes} min read</span><span class="open">Open ↗</span></div>
+  <div class="meta"><span>${a.minutes} min read</span><span class="open">${a.slug ? "Read →" : "Open ↗"}</span></div>
 </article>`;
                 }).join("");
                 return `<section class="shelf shelf-${shelf.id}" aria-labelledby="shelf-${shelf.id}">
