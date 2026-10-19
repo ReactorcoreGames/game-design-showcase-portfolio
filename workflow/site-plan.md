@@ -47,6 +47,8 @@ The core idea behind every design, in Reactorcore's words (raw material for the 
 
 **Other identity material** (`assets/avatars identity/`): avatars (close, mid, far), mood images, a repeating tech background tile, a circuit board flair element, and a pixel-art guy firing a big gun. These are available for flair, the about-me spots, the links page and 404s.
 
+**Reading surface:** text never sits directly on the moving background. Each page's main content goes on a `.sheet` (in `theme.css`): a near-opaque panel with a still, faint copy of the grid, so the wave only flows in the margins around it. Reactorcore found the wave distracting behind text, so every new page (project pages, the book, the AAL section) uses it too.
+
 **Accessibility:** the startup burst plays once per visit (remembered in `sessionStorage`) and can be skipped with a click or key. With `prefers-reduced-motion`, the wave stops and the burst becomes a simple fade. Text over the moving background must still pass contrast (see `workflow/cookbook.md`).
 
 ## Site map after the overhaul
