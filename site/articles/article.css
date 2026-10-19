@@ -6,6 +6,8 @@
 .shelf-craft { --c: var(--tint-green); }
 .shelf-ethics { --c: var(--tint-orange); }
 .shelf-beyond { --c: var(--tint-blue); }
+.shelf-deep { --c: var(--tint-yellow); }
+.shelf-guest { --c: var(--tint-red); }
 
 .article-head { position: relative; padding: clamp(2.5rem, 7vw, 4.5rem) 0 1.6rem; max-width: 980px; }
 .article-head .bg-icon { right: -40px; top: 0; --size: 340px; --tint: var(--c); }
@@ -73,3 +75,16 @@
 @media (max-width: 620px) { .pager { grid-template-columns: 1fr; } .pager-link.next { grid-column: 1; } }
 
 .back { margin: 1.4rem 0 0; }
+
+.guest { margin-top: 1.4rem; max-width: 780px; --edge: var(--line-bright); background-color: var(--surface-solid); box-shadow: inset 3px 0 0 var(--c); color: #d3e4f2; }
+.guest .label { color: var(--c); }
+.guest p:last-child { margin-bottom: 0; }
+.guest-note { color: var(--text-dim); }
+
+.toc ol ol { margin: 0 0 0.3rem 2.1em; counter-reset: none; }
+.toc ol ol li { counter-increment: none; }
+.toc ol ol a { grid-template-columns: 1fr; padding: 0.18rem 0; border-top: 0; font-size: 0.86rem; color: var(--text-faint); }
+.toc ol ol a::before { content: none; }
+
+.prose .see-page { margin: -0.4em 0 1.4em; }
+.prose .see-page .btn { text-decoration: none; }

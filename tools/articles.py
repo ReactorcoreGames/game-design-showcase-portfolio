@@ -63,11 +63,73 @@ SOURCES = {
     "why-i-dont-play-competitive-games": "Why I Don't Play Competitive Human Vs Human Games Anymore",
     "universe-life-and-death-1": "My View On The Universe, Life And Death Pt1",
     "universe-life-and-death-2": "My View On The Universe, Life And Death Pt2",
+    # C2. Options (all optional), matched against a block's text from its start:
+    #   start      the first block kept (default: the first heading); blocks before it are dropped
+    #   stop       the block where the article ends (not included)
+    #   drop       paragraphs to leave out
+    #   intro      paragraphs that go into the "In short" panel (default: the doc's "Summary:" section)
+    #   skip       headings whose whole section is left out, up to the next heading at the same level
+    #   strip      regex removed from heading texts
+    #   shift      added to the doc's heading level (default 1: doc h1 -> page h2)
+    #   toc_depth  3 to list h3s under their h2 in the contents
+    #   links      heading -> page: a "See the showcase page" link under that heading
+    #   written    shown in the header, for articles that are a snapshot of their time
+    #   guest      guest-article header: author, author_url, site, published, note
+    "reactorcores-big-projects": {
+        "zip": "!Reactorcore's Big Projects",
+        "start": "General Design Tenets",
+        "stop": "END OF DOCUMENT",
+        "skip": ["Working Name: Sexy Neuromancy Sessions"],
+        "strip": r"^Working Name:\s*",
+        "toc_depth": 3,
+        "links": {
+            "Working Name: AAL:Superweapon": "../projects/AALSuperweapon.html",
+            "Working Name: Admiral Wars Beyond": "../projects/admiralwars.html",
+            "Working Name: Astro Industry Freelancer": "../projects/astro_industry.html",
+        },
+        "written": "January 2024",
+    },
+    "astroneer-8th-planet": {
+        "zip": "Astroneer - 8th Planet Infinite Metagame Concept (Illustrated)",
+        "start": "Document by",
+        "drop": ["Document by"],
+        "intro": ["Original proposal to Astroneer", "It was tailored around"],
+        "stop": "Since I wrote this doc",
+        "shift": 0,
+    },
+    "exploitative-game-design": {
+        "zip": "GUEST Exploitative Game Design Beyond the F2P Debate",
+        "start": "Ethics matter in game design",
+        "intro": ["Ethics matter in game design"],
+        "drop": ["Edward McNeill, Blogger", "August 9, 2013", "20 Min Read"],
+        "shift": 0,
+        "guest": {
+            "author": "Edward McNeill", "author_url": "https://www.gamedeveloper.com/author/edward-mcneill",
+            "site": "Game Developer (then Gamasutra)", "published": "9 August 2013",
+            "note": "It's too good to vanish, so I'm keeping a copy here in case the original is lost or its site closes down. I gave it some extra love with fitting AI images to make it more fun to read.",
+        },
+    },
+    "loopholes-in-game-design": {
+        "zip": "GUEST Loopholes in Game Design",
+        "start": "7 May, 2012",
+        "drop": ["7 May, 2012"],
+        "shift": 0,
+        "guest": {
+            "author": "Julian Pritchard", "author_url": "http://devmag.org.za/author/julian/",
+            "site": "Devmag", "published": "7 May 2012",
+            "note": "Devmag is an old site, and old sites tend to vanish, sometimes taking gems like this one with them for good. I'm keeping a copy here because it's universally useful.",
+        },
+    },
 }
 
 # The "Closing words" every article shared, recognised by its opening; the template's closing panel replaces it.
 BOILERPLATE_CLOSING = "My hope is to spark your mind to see beyond what is currently available."
-SEPARATORS = {"–", "-", "—"}
+SEPARATORS = {"–", "-", "—", "--"}
+
+
+def source(slug: str) -> dict:
+    s = SOURCES[slug]
+    return {"zip": s} if isinstance(s, str) else s
 
 
 # ---------- catalog ----------
@@ -132,16 +194,24 @@ def text_of(node: Tag) -> str:
 
 
 class Converter:
-    def __init__(self, slug: str, doc_html: str, doc_dir: Path, doc_links: dict[str, str]):
+    def __init__(self, slug: str, doc_html: str, doc_dir: Path, doc_links: dict[str, str], opts: dict):
         self.slug = slug
         self.doc_dir = doc_dir
         self.doc_links = doc_links          # Google Doc id -> local page, for links between articles
+        self.opts = opts                    # this article's options from SOURCES
         self.formats = class_formats(doc_html)
         self.soup = BeautifulSoup(doc_html, "html.parser")
         self.images: dict[str, tuple[str, int, int]] = {}   # source name -> (file, width, height)
         self.ids: set[str] = set()
-        self.headings: list[tuple[str, str]] = []          # (id, text) of h2s, for the contents list
+        self.headings: list[tuple[int, str, str]] = []     # (level, id, text) of h2s and h3s, for the contents list
         self.words = 0
+
+    def matches(self, node: Tag, key: str) -> bool:
+        """Does the block's text start with one of the option's markers?"""
+        markers = self.opts.get(key, [])
+        markers = [markers] if isinstance(markers, str) else markers
+        text = text_of(node)
+        return any(text.startswith(m) for m in markers)
 
     # inline
 
@@ -251,17 +321,23 @@ class Converter:
         text = text_of(h)
         if not text:
             return None
-        text = re.sub(r"\s*:$", "", text)
-        level = min(int(h.name[1]) + 1, 6)
+        link = next((page for marker, page in self.opts.get("links", {}).items() if text.startswith(marker)), None)
+        text = re.sub(r"\s*[:.]$", "", text)
+        if self.opts.get("strip"):
+            text = re.sub(self.opts["strip"], "", text)
+        level = max(2, min(int(h.name[1]) + self.opts.get("shift", 1), 6))
         hid = base = slugify(text)
         n = 2
         while hid in self.ids:
             hid, n = f"{base}-{n}", n + 1
         self.ids.add(hid)
-        if level == 2:
-            self.headings.append((hid, text))
+        if level == 2 or (level == 3 and self.opts.get("toc_depth") == 3):
+            self.headings.append((level, hid, text))
         self.words += len(text.split())
-        return f'<h{level} id="{hid}">{html.escape(text, quote=False)}</h{level}>'
+        out = f'<h{level} id="{hid}">{html.escape(text, quote=False)}</h{level}>'
+        if link:
+            out += f'\n<p class="see-page"><a class="btn btn-sm" href="{html.escape(link)}">See the showcase page →</a></p>'
+        return out
 
     def lists(self, run: list[Tag]) -> str:
         """Google Docs writes each list level as its own flat <ul>/<ol> (class lst-kix_<id>-<level>).
@@ -300,10 +376,28 @@ class Converter:
         summary: list[str] = []
         content: list[str] = []
         mode = "intro"           # intro (title block) -> summary -> body
+        skip_level = 0           # inside a skipped section: the level of its heading
+        if self.opts.get("start"):
+            first = next((n for n, b in enumerate(blocks) if self.matches(b, "start")), None)
+            if first is None:
+                sys.exit(f"{self.slug}: start marker not found")
+            blocks, mode = blocks[first:], "body"
         i = 0
         while i < len(blocks):
             b = blocks[i]
-            if b.name in ("h1", "h2", "h3", "h4", "h5", "h6"):
+            is_heading = b.name in ("h1", "h2", "h3", "h4", "h5", "h6")
+            if self.matches(b, "stop"):
+                break
+            if is_heading and skip_level and int(b.name[1]) <= skip_level:
+                skip_level = 0
+            if is_heading and self.matches(b, "skip"):
+                skip_level = int(b.name[1])
+            if skip_level or self.matches(b, "drop"):
+                i += 1
+                continue
+            if b.name == "p" and self.matches(b, "intro"):
+                summary.extend(self.paragraph(b))
+            elif is_heading:
                 title = text_of(b).rstrip(":").strip().lower()
                 if title == "summary" and mode == "intro":
                     mode = "summary"
@@ -332,7 +426,8 @@ class Converter:
                 else:
                     (summary if mode == "summary" else content).extend(self.paragraph(b))
             elif b.name == "hr":
-                content.append("<hr>")
+                if content:
+                    content.append("<hr>")
             else:
                 print(f"  {self.slug}: skipped a <{b.name}> block")
             i += 1
@@ -355,7 +450,8 @@ def build(slug: str, shelves: list[dict], articles: list[dict]) -> None:
     entry = next((a for a in articles if a.get("slug") == slug), None)
     if not entry:
         sys.exit(f"{slug}: no articles.js entry with this slug")
-    zpath = RAW / f"{SOURCES[slug]}.zip"
+    opts = source(slug)
+    zpath = RAW / f"{opts['zip']}.zip"
     if not zpath.exists():
         sys.exit(f"{slug}: missing source {zpath}")
     work = WORK / slug
@@ -372,7 +468,7 @@ def build(slug: str, shelves: list[dict], articles: list[dict]) -> None:
     img_dir = OUT / "images" / slug
     for old in img_dir.glob("*.webp") if img_dir.exists() else []:
         old.unlink()                        # generated files only; rebuilt below
-    conv = Converter(slug, doc.read_text(encoding="utf-8"), doc.parent, doc_links)
+    conv = Converter(slug, doc.read_text(encoding="utf-8"), doc.parent, doc_links, opts)
     parts = conv.convert()
     minutes = max(1, round(conv.words / WORDS_PER_MINUTE))
 
@@ -390,21 +486,44 @@ def build(slug: str, shelves: list[dict], articles: list[dict]) -> None:
 
     toc = ""
     if len(conv.headings) >= TOC_MIN_HEADINGS:
-        items = "".join(f'<li><a href="#{hid}">{esc(text)}</a></li>' for hid, text in conv.headings)
-        toc = f'<nav class="toc" aria-labelledby="toc-title"><p class="label" id="toc-title">In this article</p><ol>{items}</ol></nav>'
+        items = []
+        for level, hid, text in conv.headings:
+            link = f'<a href="#{hid}">{esc(text)}</a>'
+            if level == 3 and items:
+                items[-1][1].append(f"<li>{link}</li>")
+            else:
+                items.append((link, []))
+        lis = "".join(f'<li>{link}{"<ol>" + "".join(subs) + "</ol>" if subs else ""}</li>' for link, subs in items)
+        toc = f'<nav class="toc" aria-labelledby="toc-title"><p class="label" id="toc-title">In this article</p><ol>{lis}</ol></nav>'
 
     summary = ""
     if parts["summary"]:
         summary = f'<div class="summary panel bracketed"><p class="label">In short</p>{parts["summary"]}</div>'
 
-    original = ""
+    guest = opts.get("guest")
+    original, byline, guest_panel = "", "<span>By Reactorcore</span>", ""
     if entry.get("original"):
-        original = f'<span><a href="{esc(entry["original"])}" target="_blank" rel="noopener">Original Google Doc ↗</a></span>'
+        where = f"Original on {guest['site'].split(' (')[0]}" if guest else "Original Google Doc"
+        original = f'<span><a href="{esc(entry["original"])}" target="_blank" rel="noopener">{where} ↗</a></span>'
+    if guest:
+        author = f'<a href="{esc(guest["author_url"])}" target="_blank" rel="noopener">{esc(guest["author"])}</a>'
+        byline = f"<span>Guest article by {author}</span>"
+        guest_panel = (
+            f'<div class="guest panel"><p class="label">Guest article</p>'
+            f'<p>Written by {author} and first published on <a href="{esc(entry["original"])}" target="_blank" rel="noopener">'
+            f'{esc(guest["site"])}</a> on {esc(guest["published"])}. Reposted here with the author\'s permission; '
+            f'the original is worth a visit too.</p>'
+            f'<p class="guest-note"><strong>Why it\'s here:</strong> {esc(guest["note"])} <span class="faint">— Reactorcore</span></p></div>')
+    written = f'<span>Written {esc(opts["written"])}</span>' if opts.get("written") else ""
 
     url = f"{BASE}articles/{slug}.html"
     page = PAGE.substitute(
         title=esc(entry["title"]),
         title_json=json.dumps(entry["title"], ensure_ascii=False),
+        author_json=json.dumps(guest["author"] if guest else "Reactorcore", ensure_ascii=False),
+        byline=byline,
+        written=written,
+        guest=guest_panel,
         description=esc(entry["summary"]),
         url=url,
         shelf_id=shelf["id"],
@@ -441,7 +560,7 @@ def cmd_list(args) -> None:
     _, articles = read_catalog()
     for a in articles:
         slug = a.get("slug", "")
-        src = "source ok" if slug in SOURCES and (RAW / f"{SOURCES[slug]}.zip").exists() else "no source"
+        src = "source ok" if slug in SOURCES and (RAW / f"{source(slug)['zip']}.zip").exists() else "no source"
         page = "page ok" if slug and (OUT / f"{slug}.html").exists() else "no page"
         print(f"{slug or '(no slug)':50} {src:10} {page:8} {a['title']}")
 

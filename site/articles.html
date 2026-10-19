@@ -6,7 +6,7 @@
     <title>Game Design Articles by Reactorcore</title>
     <script>try{if(!sessionStorage.getItem("rc-burst"))document.documentElement.classList.add("burst-pending")}catch(e){}</script>
 
-    <meta name="description" content="Sixteen game design articles by Reactorcore: games as need satisfiers, infinite metagames, procedural campaigns, multiplicative content, scope maximization, and what a game designer really does.">
+    <meta name="description" content="Eighteen game design articles by Reactorcore and two guest essays: games as need satisfiers, infinite metagames, procedural campaigns, multiplicative content, scope maximization, and what a game designer really does.">
     <meta name="keywords" content="game design articles, metagame design, infinite metagame, procedural campaigns, game designer career, scope creep, Reactorcore">
     <meta name="author" content="Reactorcore Games">
     <meta name="robots" content="index, follow">
@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Reactorcore Games">
     <meta property="og:title" content="Game Design Articles by Reactorcore">
-    <meta property="og:description" content="Sixteen articles on why games matter and how to design them: need satisfiers, infinite metagames, multiplicative content and more.">
+    <meta property="og:description" content="Twenty articles on why games matter and how to design them: need satisfiers, infinite metagames, multiplicative content and more.">
     <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles.html">
     <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ReactorcoreDev">
     <meta name="twitter:title" content="Game Design Articles by Reactorcore">
-    <meta name="twitter:description" content="Sixteen articles on why games matter and how to design them.">
+    <meta name="twitter:description" content="Twenty articles on why games matter and how to design them.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
 
     <script type="application/ld+json">
@@ -109,6 +109,9 @@
         .shelf-craft { --c: var(--tint-green); }
         .shelf-ethics { --c: var(--tint-orange); }
         .shelf-beyond { --c: var(--tint-blue); }
+        .shelf-deep { --c: var(--tint-yellow); }
+        .shelf-guest { --c: var(--tint-red); }
+        .article .by { color: var(--text-faint); font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; margin: -0.3rem 0 0.7rem; }
     </style>
 </head>
 <body>
@@ -180,6 +183,7 @@
                     return `<article class="article">
   <p class="num">${String(n).padStart(2, "0")}</p>
   <h3>${link(a)}</h3>
+  ${a.guest ? `<p class="by">Guest article by ${esc(a.guest)}</p>` : ""}
   <p>${esc(a.summary)}</p>
   <div class="meta"><span>${a.minutes} min read</span><span class="open">${a.slug ? "Read →" : "Open ↗"}</span></div>
 </article>`;

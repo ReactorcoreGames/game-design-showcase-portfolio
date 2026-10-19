@@ -4,6 +4,7 @@
   summary: trimmed from the article's own "Summary:" paragraph. minutes: reading time at ~230 words/min,
   written by tools/articles.py when it builds the page.
   Shelves are rendered in the order listed here. featured: the recommended first read.
+  guest: the author's name, for articles by someone else (original then links to where it was first published).
 */
 
 window.SHELVES = [
@@ -11,7 +12,9 @@ window.SHELVES = [
   { id: "metagame", label: "Infinite metagames", note: "Structures that let a game keep giving, instead of ending." },
   { id: "craft", label: "The craft", note: "What a game designer really does, and how to grow into one." },
   { id: "ethics", label: "Industry & ethics", note: "Competition, innovation, and how they shape what gets made." },
-  { id: "beyond", label: "Beyond games", note: "Personal worldview that quietly drives the designs." }
+  { id: "beyond", label: "Beyond games", note: "Personal worldview that quietly drives the designs." },
+  { id: "deep", label: "Designs in depth", note: "Long design write-ups, with more room than any showcase page." },
+  { id: "guest", label: "Guest articles", note: "Two essays by other designers, kept here with their permission so they don't vanish." }
 ];
 
 const GDOC = id => "https://docs.google.com/document/d/" + id;
@@ -128,5 +131,31 @@ window.ARTICLES = [
     summary: "Honest guesses about the mechanics of a soul and what may come after death, how games usually handle death, and how these beliefs influence my design.",
     slug: "universe-life-and-death-2",
     original: GDOC("1x7K3maoEju4YL5KN4Av8ikxqzmlTvhmxetZgw8bt3Io")
+  },
+  {
+    shelf: "deep", minutes: 118,
+    title: "Reactorcore's Big Projects",
+    summary: "The design thinking behind my biggest projects, in far more depth than a showcase page has room for: the tenets they all share, then TopVerse, AAL Superweapon, RoomSpace, Standalone, Admiral Wars Beyond, Astro Industry Freelancer, Shape Smasher and Planet Warfare.",
+    slug: "reactorcores-big-projects"
+  },
+  {
+    shelf: "deep", minutes: 28,
+    title: "Astroneer: 8th Planet Infinite Metagame Concept",
+    summary: "An open proposal to System Era: an eighth planet that turns Astroneer’s ending into an infinite metagame, with reset bombs, generated campaigns and lasting rewards, instead of costly, short-lived additive content.",
+    slug: "astroneer-8th-planet"
+  },
+  {
+    shelf: "guest", minutes: 18, guest: "Edward McNeill",
+    title: "Exploitative Game Design: Beyond the F2P Debate",
+    summary: "Ethics matter in game design, but it’s not about free-to-play. Randomized rewards, premium currencies and the other techniques that exploit players under any business model, and how to not exploit yours.",
+    slug: "exploitative-game-design",
+    original: "https://www.gamedeveloper.com/design/exploitative-game-design-beyond-the-f2p-debate"
+  },
+  {
+    shelf: "guest", minutes: 27, guest: "Julian Pritchard",
+    title: "Loopholes in Game Design",
+    summary: "If something can be abused, it will be. What a loophole is, the kinds players find in shooters, racers, physics and save systems, and how to find and fix them before your players do.",
+    slug: "loopholes-in-game-design",
+    original: "http://devmag.org.za/2012/05/07/loopholes-in-game-design/"
   }
 ];

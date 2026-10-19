@@ -33,7 +33,7 @@
         "@type": "Article",
         "headline": $title_json,
         "url": "$url",
-        "author": { "@type": "Person", "name": "Reactorcore", "url": "https://reactorcoregames.github.io/" },
+        "author": { "@type": "Person", "name": $author_json },
         "isPartOf": { "@type": "CollectionPage", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/articles.html" },
         "inLanguage": "en"
     }
@@ -69,7 +69,8 @@
             <span class="bg-icon" style="--icon: url(../icons/quill-ink-lorc.png)" aria-hidden="true"></span>
             <p class="eyebrow"><a href="../articles.html#shelf-$shelf_id">Articles · $shelf_label</a></p>
             <h1 class="glow" data-burst-origin>$title</h1>
-            <p class="meta-line"><span>By Reactorcore</span><span>$minutes min read</span>$original</p>
+            <p class="meta-line">$byline<span>$minutes min read</span>$written$original</p>
+            $guest
         </header>
 
         <div class="article-layout">
