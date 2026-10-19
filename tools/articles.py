@@ -13,7 +13,7 @@ What the cleanup does: drops the Google Docs title block (the page has its own),
 section into the page's intro panel, replaces the shared Patreon/Discord "Closing words" with the
 template's closing panel, unwraps google.com/url redirects, points links to other articles' Google
 Docs at their pages here, rebuilds nested lists, and keeps only bold, italic and superscript.
-Images are resized to at most 1040 px wide (or twice their width in the doc, if smaller) and
+Images are resized to at most 800 px wide (or twice their width in the doc, if smaller) and
 re-encoded as WebP into site/articles/images/<slug>/.
 """
 
@@ -40,7 +40,7 @@ WORK = REPO / "_work" / "articles"
 CATALOG = SITE / "articles.js"
 BASE = "https://reactorcoregames.github.io/game-design-showcase-portfolio/"
 
-MAX_WIDTH = 1040
+MAX_WIDTH = 800
 WEBP_QUALITY = 70
 WORDS_PER_MINUTE = 230
 TOC_MIN_HEADINGS = 4

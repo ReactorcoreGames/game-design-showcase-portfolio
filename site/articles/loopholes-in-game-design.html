@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loopholes in Game Design · Reactorcore</title>
-    <script>try{if(!sessionStorage.getItem("rc-burst"))document.documentElement.classList.add("burst-pending")}catch(e){}</script>
     <!-- Built by tools/articles.py from the Google Docs export. Edit the template or the tool, not this file. -->
 
     <meta name="description" content="If something can be abused, it will be. What a loophole is, the kinds players find in shooters, racers, physics and save systems, and how to find and fix them before your players do.">
@@ -78,7 +77,7 @@
             <nav class="toc" aria-labelledby="toc-title"><p class="label" id="toc-title">In this article</p><ol><li><a href="#what-a-loophole-is">What a loophole is</a></li><li><a href="#related-concepts">Related Concepts</a></li><li><a href="#examples-of-loopholes">Examples of loopholes</a></li><li><a href="#why-loopholes-are-bad">Why loopholes are bad</a></li><li><a href="#general-types-of-loophole">General types of loophole</a></li><li><a href="#loopholes-in-fpses">Loopholes in FPSes</a></li><li><a href="#loopholes-in-multiplayer-games">Loopholes in multiplayer games</a></li><li><a href="#loopholes-in-racing-games">Loopholes in racing games</a></li><li><a href="#loopholes-in-game-physics">Loopholes in game physics</a></li><li><a href="#loopholes-in-saving-systems">Loopholes in saving systems</a></li><li><a href="#how-to-find-game-design-loopholes">How to find game design loopholes</a></li><li><a href="#how-to-fix-loopholes">How to fix loopholes</a></li><li><a href="#it-s-not-a-bug-it-s-a-feature">It’s not a bug, it’s a feature</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li><li><a href="#thanks">Thanks</a></li></ol></nav>
             <article class="article-main">
                 <div class="prose">
-<figure><img src="images/loopholes-in-game-design/01.webp" alt="" width="968" height="544" decoding="async"></figure>
+<figure><img src="images/loopholes-in-game-design/01.webp" alt="" width="800" height="450" decoding="async"></figure>
 <p>I had just finished working on my latest card game; I was rather chuffed with it: the rules were elegant and nuanced: there was a wealth of strategies you could use in the game. I explained the rules to two friends, and they began to play. I was expecting them to be amazed with the game.</p>
 <p>Instead, <em>I</em> was amazed with how one had managed to find a neat little trick to <em>—</em> unexpectedly <em>—</em> win the game: a loophole!</p>
 <p>After the discovery, the game was never the same. I eventually decided to change the card game into a board game so that the game could keep my original idea, but without the loophole.</p>
@@ -98,7 +97,7 @@
 <p><em>Still, the many examples in this article talk about situations that result from faulty game design that were built from the perspective of “look how cool I am, obey me” more aimed at wasting your time, causing addiction and filling your head with nonsense knowledge instead of “how can I serve the player to make their real life better” where the goal is to empower you, keep you healthy and never waste your time. Take the “lessons” from this article with a grain of salt.</em></p>
 <p><em>-Reactorcore)</em></p>
 <h2 id="related-concepts">Related Concepts</h2>
-<figure><img src="images/loopholes-in-game-design/02.webp" alt="" width="968" height="544" loading="lazy" decoding="async"></figure>
+<figure><img src="images/loopholes-in-game-design/02.webp" alt="" width="800" height="450" loading="lazy" decoding="async"></figure>
 <p>Loopholes are degenerate strategies to play the game. Among all available strategies, a <strong>dominant strategy</strong> has the best chance of leading to success. A <strong>degenerate strategy</strong> is a dominant strategy that <em>always</em> leads to success. (Not all dominant strategies are degenerate: the<a href="http://en.wikipedia.org/wiki/Prisoners_dilemma" target="_blank" rel="noopener"> </a><a href="http://en.wikipedia.org/wiki/Prisoners_dilemma" target="_blank" rel="noopener">prisoner’s dilemma</a> is a classical example.)</p>
 <p>Loopholes are often bugs, but only bugs that can be exploited by the player are loopholes.</p>
 <p>Many loopholes are<a href="http://en.wikipedia.org/wiki/Sequence_breaking" target="_blank" rel="noopener"> </a><a href="http://en.wikipedia.org/wiki/Sequence_breaking" target="_blank" rel="noopener">sequence breakers</a> (that is, they allow the player to experience events in a different order than was intended), but only sequence breaks that benefit the player are loopholes.</p>
@@ -203,7 +202,7 @@
 <p>Some games make statistics manipulation a valid game mechanic, for example, in<a href="http://tvtropes.org/pmwiki/pmwiki.php/VideoGame/CastleOfTheWinds" target="_blank" rel="noopener"> </a><a href="http://tvtropes.org/pmwiki/pmwiki.php/VideoGame/CastleOfTheWinds" target="_blank" rel="noopener">Castle Of The Winds</a> levels are randomly generated on player entering, and players can choose to re-enter the level. This is a kind of fall-back-fix for otherwise broken mechanics (more precisely, broken procedural generation).</p>
 <p><strong>Save jumping</strong> is when the player uses the game auto-save system to their advantage. The player can do things such as teleporting to a different game point, or run to an autosave point while fighting to load the save and remove the enemies.</p>
 <h2 id="how-to-find-game-design-loopholes">How to find game design loopholes</h2>
-<figure><img src="images/loopholes-in-game-design/04.webp" alt="" width="968" height="544" loading="lazy" decoding="async"></figure>
+<figure><img src="images/loopholes-in-game-design/04.webp" alt="" width="800" height="450" loading="lazy" decoding="async"></figure>
 <p>As a designer, finding loopholes is a challenge: you are trying to break the very rules you crafted so carefully to govern the game world. In non-computer games this may be easier because the rules are stated explicitly. In video games, the rules are implicit, and requires a player to learn the rules, mostly, through trial-and-error. Because of the complexity of some games, a loophole may be completely overlooked simply because the “proper way of playing” is ingrained in the designer’s head.</p>
 <p>There are four ways to find loopholes in your design.</p>
 <h4 id="1-use-your-own-knowledge-experience-and-instincts">1. Use your own knowledge, experience and instincts</h4>

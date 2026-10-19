@@ -52,7 +52,7 @@
 .prose a { overflow-wrap: anywhere; }
 .prose em { color: #fff; }
 .prose figure.narrow { margin-inline: auto; }
-.prose figure img { height: auto; background: var(--bg-2); }
+.prose figure img { height: auto; background: var(--bg-2); border: 3px solid var(--c); box-sizing: border-box; }
 .prose figcaption { font-family: var(--font-body); font-size: 0.95rem; line-height: 1.5; letter-spacing: 0; color: var(--text-dim); padding-left: 0.8rem; border-left: 2px solid var(--c); margin-top: 0.7em; }
 
 .closing { margin-top: 3.5rem; --edge: var(--line-bright); }

@@ -1,8 +1,8 @@
 /* Reactorcore theme effects, shared by every page (load with defer, after theme.css).
 
    - Reactor wave: glowing cyan strands flowing across a fixed canvas behind the page.
-   - Startup burst: a reactor-pulse flash when a visit starts (once per visit, sessionStorage
-     "rc-burst"). Click or any key skips it. Pages opt in with this in <head>:
+   - Startup burst: a reactor-pulse flash when a visit starts, on the front page (site/index.html) only (once per visit, sessionStorage
+     "rc-burst"). Click or any key skips it. The page opts in with this in <head>:
        <script>try{if(!sessionStorage.getItem("rc-burst"))document.documentElement.classList.add("burst-pending")}catch(e){}</script>
      The element marked data-burst-origin (usually the logo) is where the pulse starts.
    - prefers-reduced-motion: the wave is drawn once and holds still; the burst is a plain fade.
