@@ -59,7 +59,7 @@ python tools/images.py gen <slug> <slug> ...          # spends the daily allowan
 python tools/images.py finish <slug> <slug> ...       # resize + JPEG + thumbnail into site/
 ```
 
-Raw BAIG output lands in `_work/<slug>/raw-<model>/` (gitignored). `finish` scales every image to the pixel area of 1280×720 (so 2:3 comes out at 784×1176), saves it as progressive JPEG at quality 82 under the exact name the page expects, and makes the 320×180 nexus thumbnail from the vignette. Look over the results before committing. To redo one bad image, use BAIG's `regenerate` on that prompt file, or edit the prompt and run `gen` again: a changed prompt gets a new file name, and `finish` takes the newest.
+Raw BAIG output lands in `_work/<slug>/raw-<model>/` (gitignored). `finish` scales every image to the pixel area of 1280×720 (so 2:3 comes out at 784×1176), saves it as progressive JPEG at quality 82 under the exact name the page expects, and makes the 640×360 nexus thumbnail from the vignette. Look over the results before committing. To redo one bad image, use BAIG's `regenerate` on that prompt file, or edit the prompt and run `gen` again: a changed prompt gets a new file name, and `finish` takes the newest.
 
 ## SDXL fallback
 

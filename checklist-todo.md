@@ -11,21 +11,57 @@ Everything left to finish the portfolio, in a sensible order. Tick items as they
 - [x] Switch GitHub Pages to deploy from GitHub Actions
 - [x] Connect Cloudflare Pages to the GitHub repo (build output `site`), replacing the wrangler deploy script
 - [x] Review the `restructure` branch, merge it into `main`, push, and check both mirrors still work
-- [ ] Rename or delete the old workspace folder `C:\ClaudeWorkspace\HTML Game Design Showcase Maker`
+- [x] Rename or delete the old workspace folder `C:\ClaudeWorkspace\HTML Game Design Showcase Maker` (Reactorcore handles this manually)
 
-## 1. Nexus page overhaul (`site/index.html`)
+## 1. Nexus page overhaul, first pass (`site/index.html`)
 
-Done first, so every page finished afterwards only needs a one-line entry.
+Done first, so every page finished afterwards only needs a one-line entry. Built on the `nexus-overhaul` branch. Reactorcore's review of it led to the second overhaul below.
 
-- [ ] Project cards come from a single data list (title, subtitle, page, thumbnail, blurb, tags), not hand-written HTML
-- [ ] Badges telling concepts apart from released games, and ways to browse (genre/tags, AAL universe…)
-- [ ] Articles catalog subpage (`reference/outreach/article-links.md`)
-- [ ] Links sidebar (articles, itch.io, Patreon, linktree, Discord, contact/hire)
-- [ ] Visual refresh with Opus. The page is a showcase in its own right.
-- [ ] Fix its SEO head: `og:url` points at the wrong address, and `og:image` should be an absolute URL
-- [ ] Check `hire_me/hire_me.html` still says the right things
+- [x] Project cards come from a single data list (title, subtitle, page, thumbnail, blurb, tags), not hand-written HTML
+- [x] Badges telling concepts apart from released games, and ways to browse (genre/tags, AAL universe…)
+- [x] Articles catalog subpage (`reference/outreach/article-links.md`)
+- [x] Links sidebar (articles, itch.io, Patreon, linktree, Discord, contact/hire)
+- [x] Fix its SEO head: `og:url` points at the wrong address, and `og:image` should be an absolute URL
+- [x] First visual refresh (Cherenkov theme) and the hire-me review. Both are superseded by the second overhaul.
+
+## Second overhaul
+
+The full plan, reasons and decisions are in `workflow/site-plan.md`. Read it before starting any of these sessions. Phases A and B come first. C and D can run in any order after that, alongside sections 2–6.
+
+### A. Identity and theme
+
+- [x] Answer the open decisions (recorded at the bottom of `workflow/site-plan.md`)
+- [x] A1: shared theme (`theme.css`, `fx.js`): blueprint grid, reactor wave, startup pulse burst, Nulshock Bd and Oxanium fonts, cyan logo and favicon, icon tinting, look-test page
+- [x] A1: Reactorcore approves the look
+
+### B. Structure
+
+- [x] B1: nexus rebuild: "Reactorcore's" title, six routing buttons in the hero, new copy, no stats or AAL tagging, A–Z default, square tiles, project icons, drawer removed
+- [x] B1: merge `nexus-overhaul` into `main`
+- [ ] B2: links page and team-up page (revshare, plus joining other projects)
+- [ ] B3: hire-me page rewritten from scratch
+
+### C. Content sections
+
+- [ ] C1: `tools/articles.py` built; the 16 listed articles moved onto the site with optimized images
+- [ ] C2: "Reactorcore's Big Projects" and "Astroneer 8th Planet" articles published
+- [ ] C2: the two guest articles published in full, with author credit and source links at the top
+- [ ] C3: AAL Universe hub page, entry list and image spec (up to 10 Klein images)
+- [ ] C4: AAL wiki entry pages (may split into two sessions)
+- [ ] AAL images generated
+
+### D. The book: *Game Design Technology: The Holy Grail of Fun*
+
+- [ ] D1: audit and outline of the original, the bible and the articles
+- [ ] D1: Reactorcore approves the outline
+- [ ] D2–D6: write the book, one part per session (split set by the outline)
+- [ ] D7: online edition at `site/book/`
+- [ ] D8: offline HTML zip plus EPUB build, and the itch.io page
+- [ ] D9: refresh `2a-bible.md` and `2b-bible.md` from the finished book
 
 ## 2. Pilot: set the quality bar
+
+Start after B1, so the pilot pages use the new theme. The pilot also updates the page template (fonts, icon badge, blueprint background, "free to fork" line).
 
 - [ ] Rewrite one published page and review it closely
 - [ ] Build one new page from standby and review it closely

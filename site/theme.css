@@ -1,0 +1,554 @@
+/* Reactorcore's shared theme, used by every page: a dark blueprint grid with a cyan reactor wave
+   (fx.js) flowing behind it. Pages add their own layout on top; tokens and components live here.
+
+   Icons: <span class="icon" style="--icon: url(icons/reactor-sbed.png)"></span> takes the
+   current text colour; set color or --tint to recolour it. Icons are CC BY 3.0, so any page
+   using them carries the game-icons.net credit line in its footer. */
+
+@font-face {
+    font-family: "RC Display";
+    src: url("fonts/rc-display-black.woff2") format("woff2");
+    font-weight: 900; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Oxanium";
+    src: url("fonts/oxanium-medium.woff2") format("woff2");
+    font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Oxanium";
+    src: url("fonts/oxanium-semibold.woff2") format("woff2");
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+
+:root {
+    --bg: #040b16;
+    --bg-2: #081425;
+    --surface: rgba(8, 20, 37, 0.86);
+    --surface-solid: #0a1829;
+    --surface-2: rgba(14, 32, 56, 0.9);
+    --line: rgba(150, 215, 255, 0.16);
+    --line-bright: rgba(120, 240, 255, 0.42);
+
+    --grid-minor: rgba(130, 190, 255, 0.045);
+    --grid-major: rgba(130, 200, 255, 0.10);
+    --grid-cell: 24px;
+    --grid-speed: 14s;                  /* one major cell (5 cells) of horizontal drift */
+
+    /* the slow horizontal colour flow behind the page and in the header */
+    --flow-1: #040b16;
+    --flow-2: #0b2a40;
+    --flow-speed: 24s;
+
+    --text: #e6f4ff;
+    --text-dim: #a3bccf;
+    --text-faint: #7491a8;
+
+    --cyan: #13ffe6;                   /* the logo's cyan: the reactor */
+    --cyan-2: #22beb5;
+    --cyan-ink: #02201d;
+    --cherenkov: #4fb8ff;              /* the blue of the pulse glow */
+    --amber: #ffd23f;                  /* released games */
+    --amber-ink: #241c00;
+
+    /* logo variants, for other sections and project tints */
+    --tint-cyan: #13ffe6;
+    --tint-green: #39ff5a;
+    --tint-yellow: #ffd23f;
+    --tint-red: #ff4040;
+    --tint-magenta: #ff3dff;
+    --tint-blue: #4fb8ff;
+    --tint-orange: #ff9a2e;
+
+    --glow: 0 0 0 1px rgba(19, 255, 230, 0.55), 0 0 24px -4px rgba(19, 255, 230, 0.55);
+    --glow-soft: 0 0 0 1px rgba(19, 255, 230, 0.22), 0 10px 30px -14px rgba(19, 255, 230, 0.4);
+
+    --font-head: "RC Display", "Segoe UI", sans-serif;
+    --font-ui: "Oxanium", "Segoe UI", sans-serif;
+    --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", Consolas, monospace;
+
+    --head-case: uppercase;
+    --head-spacing: 0.03em;
+
+    --header-h: 60px;
+    --cut: 10px;                        /* the clipped corner on buttons and panels */
+    --wrap: 1320px;
+    --gutter: clamp(16px, 3vw, 32px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 24px); }
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--text);
+    background-color: var(--bg);
+    overflow-x: hidden;
+}
+
+/* Page background, back to front: a colour flow (::before), the blueprint grid (::after), then
+   fx.js's wave canvas. All are fixed to the viewport and drift left to right by transform only,
+   so scrolling and animating stay cheap. Opaque sections (the hero) simply cover them. */
+body::before, body::after {
+    content: ""; position: fixed; top: 0; left: 0; height: 100vh; pointer-events: none;
+}
+body::before {
+    z-index: -3;
+    width: 200vw;
+    background: linear-gradient(90deg, var(--flow-1) 0%, var(--flow-2) 25%, var(--flow-1) 50%, var(--flow-2) 75%, var(--flow-1) 100%);
+    animation: flow var(--flow-speed) linear infinite;
+}
+body::after {
+    z-index: -2;
+    width: calc(100vw + var(--grid-cell) * 5);
+    background-image:
+        linear-gradient(var(--grid-major) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+        linear-gradient(var(--grid-minor) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+    background-size:
+        calc(var(--grid-cell) * 5) calc(var(--grid-cell) * 5),
+        calc(var(--grid-cell) * 5) calc(var(--grid-cell) * 5),
+        var(--grid-cell) var(--grid-cell),
+        var(--grid-cell) var(--grid-cell);
+    animation: grid-drift var(--grid-speed) linear infinite;
+}
+@keyframes flow { from { transform: translateX(-100vw); } to { transform: translateX(0); } }
+@keyframes grid-drift { from { transform: translateX(calc(var(--grid-cell) * -5)); } to { transform: translateX(0); } }
+
+a { color: var(--cyan); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+strong, b { color: #fff; font-weight: 600; }
+img { max-width: 100%; display: block; }
+::selection { background: rgba(19, 255, 230, 0.35); color: #fff; }
+
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+.visually-hidden {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.wrap { width: min(var(--wrap), 100% - 2 * var(--gutter)); margin-inline: auto; }
+
+/* ---------- Type ---------- */
+
+h1, h2, h3, h4, .head {
+    font-family: var(--font-head);
+    font-weight: 900;
+    text-transform: var(--head-case);
+    letter-spacing: var(--head-spacing);
+    line-height: 1.15;
+    color: #fff;
+    margin: 0 0 0.6em;
+    text-wrap: balance;
+}
+h1 { font-size: clamp(2rem, 1.2rem + 3.6vw, 3.6rem); }
+h2 { font-size: clamp(1.45rem, 1.1rem + 1.6vw, 2.2rem); }
+h3 { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem); }
+h4 { font-size: 1rem; }
+
+/* Glowing title: a cyan glow for the look plus dark layered shadows for legibility over the wave. */
+.glow {
+    color: #f2fffd;
+    text-shadow:
+        0 0 2px rgba(4, 11, 22, 0.9), 0 0 8px rgba(4, 11, 22, 0.8),
+        0 0 14px rgba(19, 255, 230, 0.55), 0 0 32px rgba(19, 255, 230, 0.35);
+}
+
+p { margin: 0 0 1em; }
+
+.eyebrow, .label {
+    font-family: var(--font-ui); font-weight: 600;
+    font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--cyan);
+    margin: 0 0 0.8rem;
+}
+.lead { font-size: clamp(1.05rem, 1rem + 0.35vw, 1.25rem); color: var(--text-dim); max-width: 62ch; }
+.dim { color: var(--text-dim); }
+.faint { color: var(--text-faint); }
+
+/* Section heading with an icon marker and a measured rule after it. */
+.section-mark {
+    display: flex; align-items: center; gap: 0.7rem;
+}
+.section-mark .icon { width: 1.4em; height: 1.4em; color: var(--cyan); flex: none; }
+.section-mark::after {
+    content: ""; flex: 1; height: 1px; min-width: 2rem;
+    background: linear-gradient(90deg, var(--line-bright), transparent);
+}
+
+/* ---------- Cut corners ---------- */
+
+/* Clipped top-left and bottom-right corners. clip-path also cuts the border away there, so two
+   gradients paint the diagonal edge back in --edge (the element's border colour). Use
+   background-color, not the background shorthand, on these elements. */
+.btn, .route, .panel:not(.bracketed), .id-badge, .island {
+    clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+    background-image:
+        linear-gradient(135deg, var(--edge) 0 calc(var(--cut) * 0.7071 + 1px), transparent 0),
+        linear-gradient(315deg, var(--edge) 0 calc(var(--cut) * 0.7071 + 1px), transparent 0);
+}
+
+/* ---------- Icons (CSS mask tinting) ---------- */
+
+.icon {
+    display: inline-block; flex: none;
+    width: 1.25em; height: 1.25em; vertical-align: -0.2em;
+    background-color: var(--tint, currentColor);
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+}
+
+/* Project ID badge: the project's icon in a clipped frame, tinted per project with --tint. */
+.id-badge {
+    --cut: 8px;
+    --edge: color-mix(in srgb, var(--tint, var(--cyan)) 70%, transparent);
+    display: inline-grid; place-items: center;
+    width: 46px; height: 46px; flex: none;
+    color: var(--cyan);
+    background-color: rgba(4, 11, 22, 0.88);
+    border: 1px solid var(--edge);
+    box-shadow: 0 0 16px -4px color-mix(in srgb, var(--tint, var(--cyan)) 70%, transparent), inset 0 0 12px -4px color-mix(in srgb, var(--tint, var(--cyan)) 60%, transparent);
+}
+.id-badge .icon { width: 28px; height: 28px; }
+.id-badge.lg { width: 76px; height: 76px; }
+.id-badge.lg .icon { width: 48px; height: 48px; }
+
+/* Large faint icon used as a background watermark. Put inside a position: relative parent. */
+.bg-icon {
+    position: absolute; pointer-events: none; z-index: 0;
+    width: var(--size, 420px); height: var(--size, 420px);
+    background-color: var(--tint, var(--cyan));
+    opacity: var(--alpha, 0.05);
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+}
+
+/* ---------- Logo ---------- */
+
+.logo {
+    width: var(--logo-size, 40px); height: var(--logo-size, 40px);
+    flex: none;
+}
+/* The logo is pixel art; keep it crisp at whole-number scale-ups (172px, 258px…). */
+.logo.pixel { image-rendering: pixelated; }
+.logo.lit { filter: drop-shadow(0 0 10px rgba(19, 255, 230, 0.55)) drop-shadow(0 0 30px rgba(19, 255, 230, 0.25)); }
+
+/* ---------- Header ---------- */
+
+.site-header {
+    position: sticky; top: 0; z-index: 50;
+    height: var(--header-h);
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0 var(--gutter);
+    background: linear-gradient(90deg, var(--flow-1) 0%, var(--flow-2) 25%, var(--flow-1) 50%, var(--flow-2) 75%, var(--flow-1) 100%) 0 0 / 200% 100%;
+    animation: header-flow calc(var(--flow-speed) / 2) linear infinite;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+}
+.site-header::after {   /* a thin energised line under the header */
+    content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan) 30%, var(--cherenkov) 70%, transparent);
+    opacity: 0.55;
+}
+
+@keyframes header-flow { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+
+.brand {
+    display: flex; align-items: center; gap: 0.65rem;
+    text-decoration: none; color: #fff;
+    font-family: var(--font-ui); font-weight: 600; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase;
+    white-space: nowrap;
+}
+.brand .logo { --logo-size: 36px; }
+.brand span { color: var(--text-dim); font-weight: 500; }
+
+.site-nav { margin-left: auto; display: flex; align-items: center; gap: 0.15rem; }
+.site-nav a {
+    color: var(--text-dim); text-decoration: none;
+    font-family: var(--font-ui); font-weight: 500; font-size: 0.86rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.45rem 0.7rem;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+}
+.site-nav a:hover { color: #fff; border-bottom-color: var(--line-bright); }
+.site-nav a[aria-current="page"] { color: var(--cyan); border-bottom-color: var(--cyan); }
+.site-nav a.btn { margin-left: 0.5rem; padding: 0.5rem 0.9rem; color: var(--c); border-bottom: 1px solid var(--edge); }
+.site-nav a.btn:hover { color: #fff; }
+
+@media (max-width: 820px) {
+    .site-nav a.nav-optional { display: none; }
+    .brand span { display: none; }
+}
+@media (max-width: 480px) {
+    .site-nav a:not(.nav-keep) { display: none; }
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    --c: var(--cyan);
+    --edge: color-mix(in srgb, var(--c) 60%, transparent);
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+    font-family: var(--font-ui); font-weight: 600; font-size: 0.92rem; letter-spacing: 0.1em; text-transform: uppercase;
+    line-height: 1.2; white-space: nowrap;
+    color: var(--c); text-decoration: none;
+    padding: 0.8rem 1.25rem;
+    background-color: rgba(4, 11, 22, 0.7);
+    border: 1px solid var(--edge);
+    cursor: pointer;
+    transition: background-color .18s, color .18s, box-shadow .18s, border-color .18s;
+}
+.btn:hover { --edge: var(--c); background-color: color-mix(in srgb, var(--c) 16%, transparent); color: #fff; text-decoration: none; }
+.btn:active { transform: translateY(1px); }
+.btn .icon { width: 1.3em; height: 1.3em; }
+
+.btn-primary { --edge: var(--c); background-color: var(--c); color: var(--cyan-ink); }
+.btn-primary:hover { --edge: #8ffff3; background-color: #8ffff3; color: var(--cyan-ink); }
+
+.btn-ghost { --edge: transparent; background-color: transparent; color: var(--text-dim); }
+.btn-ghost:hover { --edge: var(--line); background-color: transparent; color: #fff; }
+
+.btn-sm { font-size: 0.78rem; padding: 0.5rem 0.8rem; --cut: 6px; }
+
+/* Big routing button: icon, label, one line of what the visitor gets, and an arrow. */
+.route {
+    --c: var(--cyan);
+    --cut: 14px;
+    --edge: color-mix(in srgb, var(--c) 45%, transparent);
+    position: relative; overflow: hidden;
+    display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 0.3rem 1.1rem;
+    min-height: 116px;
+    padding: 1.2rem 2.6rem 1.2rem 1.3rem;
+    text-decoration: none; color: var(--text); text-align: left;
+    background-color: color-mix(in srgb, var(--c) 10%, rgba(4, 11, 22, 0.92));
+    border: 1px solid var(--edge);
+    box-shadow: inset 3px 0 0 var(--c);
+    transition: background-color .2s, box-shadow .2s, transform .2s;
+}
+.route::before {   /* sweep of light on hover */
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(105deg, transparent 30%, color-mix(in srgb, var(--c) 22%, transparent) 50%, transparent 70%);
+    transform: translateX(-100%); transition: transform .5s ease;
+}
+.route::after {
+    content: "\2192"; position: absolute; right: 1.1rem; top: 50%; translate: 0 -50%;
+    font-family: var(--font-ui); font-size: 1.5rem; color: var(--c);
+    transition: translate .2s;
+}
+.route:hover {
+    --edge: var(--c);
+    background-color: color-mix(in srgb, var(--c) 20%, rgba(4, 11, 22, 0.92));
+    box-shadow: inset 3px 0 0 var(--c), inset 0 0 40px -14px var(--c);
+    transform: translateY(-2px);
+}
+.route:hover::before { transform: translateX(100%); }
+.route:hover::after { translate: 4px -50%; }
+.route .icon { grid-row: span 2; width: 54px; height: 54px; color: var(--c); filter: drop-shadow(0 0 10px color-mix(in srgb, var(--c) 55%, transparent)); }
+.route .route-label {
+    font-family: var(--font-ui); font-weight: 600; font-size: 1.2rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: #fff; line-height: 1.2; align-self: end;
+}
+.route .route-line { font-size: 0.95rem; color: #c3d6e6; line-height: 1.4; align-self: start; }
+
+.routes { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1000px) { .routes { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .routes { grid-template-columns: 1fr; } .route { min-height: 0; } }
+
+/* ---------- Badges ---------- */
+
+.badge {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-family: var(--font-ui); font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 0.28rem 0.55rem; line-height: 1;
+    color: var(--text-dim);
+    background: rgba(4, 11, 22, 0.85);
+    border: 1px solid var(--line);
+}
+
+/* ---------- Panels ---------- */
+
+.panel {
+    --edge: var(--line);
+    position: relative;
+    background-color: var(--surface);
+    border: 1px solid var(--edge);
+    padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* Corner brackets, the blueprint "registration marks". */
+.bracketed { position: relative; }
+.bracketed::before, .bracketed::after {
+    content: ""; position: absolute; width: 18px; height: 18px; pointer-events: none;
+    border: 2px solid var(--cyan); opacity: 0.8;
+}
+.bracketed::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.bracketed::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+/* ---------- Tiles (designs grid) ---------- */
+
+.tiles { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr)); }
+
+.tile {
+    --tint: var(--cyan);
+    position: relative;
+    display: flex; flex-direction: column;
+    text-decoration: none; color: var(--text);
+    background: var(--surface-solid);
+    border: 1px solid var(--line);
+    transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.tile:hover { border-color: var(--tint); box-shadow: 0 0 0 1px var(--tint), 0 0 30px -8px var(--tint); z-index: 2; }
+.tile-media { position: relative; aspect-ratio: 16 / 9; }
+.tile-img { position: absolute; inset: 0; overflow: hidden; background: var(--bg-2); }
+.tile-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease, filter .3s; filter: saturate(0.9); }
+.tile:hover .tile-media img { transform: scale(1.05); filter: saturate(1.1); }
+.tile-img::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, var(--surface-solid), transparent 45%);
+}
+.tile .id-badge { position: absolute; left: 14px; bottom: -24px; z-index: 2; width: 56px; height: 56px; }
+.tile .id-badge .icon { width: 34px; height: 34px; }
+.tile-body { padding: 2rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
+.tile-title {
+    font-family: var(--font-head); font-weight: 900; text-transform: var(--head-case); letter-spacing: var(--head-spacing);
+    font-size: 1.25rem; line-height: 1.2; color: #fff; margin: 0;
+}
+.tile-sub {
+    font-family: var(--font-ui); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--tint); margin: 0;
+}
+.tile-blurb { font-size: 0.98rem; line-height: 1.55; color: #bcd0e0; margin: 0.35rem 0 0; }
+
+/* ---------- Hero: AI-art mosaic with a central island ---------- */
+
+/* The hero is opaque, so the flow, grid and wave only begin below it. */
+.hero {
+    position: relative; overflow: hidden; isolation: isolate;
+    background: var(--bg);
+    display: flex; align-items: center;
+    min-height: min(calc(100vh - var(--header-h)), 900px);
+    padding: clamp(1.5rem, 4vh, 3rem) 0;
+    border-bottom: 1px solid var(--line-bright);
+}
+.hero::after {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+        radial-gradient(ellipse 60% 60% at 50% 50%, rgba(4, 11, 22, 0.55), rgba(4, 11, 22, 0.2) 80%),
+        linear-gradient(to bottom, transparent 75%, rgba(4, 11, 22, 0.9));
+}
+
+.mosaic {
+    position: absolute; inset: -20px 0; z-index: 0;
+    display: flex; flex-direction: column; justify-content: center; gap: 10px;
+    transform: rotate(-4deg) scale(1.12);
+    opacity: 0.8;
+    pointer-events: none;
+}
+.mosaic-row { display: flex; gap: 10px; width: max-content; animation: drift 160s linear infinite; }
+.mosaic-row:nth-child(2) { animation-direction: reverse; animation-duration: 190s; }
+.mosaic-row:nth-child(3) { animation-duration: 220s; }
+.mosaic-row:nth-child(4) { animation-direction: reverse; animation-duration: 250s; }
+.mosaic-row img {
+    width: clamp(180px, 18vw, 260px); aspect-ratio: 16 / 9; height: auto; object-fit: cover;
+    border: 1px solid rgba(120, 240, 255, 0.2);
+}
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.island {
+    --cut: 18px;
+    --edge: var(--line-bright);
+    position: relative; z-index: 1;
+    width: min(1220px, 100% - 2 * var(--gutter)); margin-inline: auto;
+    padding: clamp(1.4rem, 3.5vw, 2.6rem);
+    text-align: center;
+    background-color: rgba(4, 11, 22, 0.8);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid var(--edge);
+    box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.9);
+}
+.island h1 { font-size: clamp(1.7rem, 1rem + 2.6vw, 3rem); margin-bottom: 0.45em; }
+.island .lead { margin: 0 auto 1.8rem; }
+
+/* ---------- Prose (articles, book, long text) ---------- */
+
+.prose { max-width: 80ch; color: #d3e4f2; font-size: 1.1rem; }
+.prose h2 { margin-top: 2.2em; }
+.prose h3 { margin-top: 1.8em; color: var(--cyan); }
+.prose ul, .prose ol { padding-left: 1.3em; margin: 0 0 1.2em; }
+.prose li { margin: 0.3em 0; }
+.prose li::marker { color: var(--cyan); }
+.prose blockquote {
+    margin: 1.6em 0; padding: 0.9em 1.2em;
+    border-left: 3px solid var(--cyan);
+    background: linear-gradient(90deg, rgba(19, 255, 230, 0.08), transparent);
+    color: #fff; font-size: 1.1em;
+}
+.prose blockquote p:last-child { margin-bottom: 0; }
+.prose code {
+    font-family: var(--font-mono); font-size: 0.88em;
+    background: rgba(19, 255, 230, 0.08); border: 1px solid var(--line); padding: 0.05em 0.35em;
+}
+.prose figure { margin: 1.8em 0; }
+.prose figure img { width: 100%; border: 1px solid var(--line); }
+.prose figcaption { font-size: 0.85rem; color: var(--text-faint); margin-top: 0.5em; font-family: var(--font-ui); letter-spacing: 0.04em; }
+.prose hr { border: 0; height: 1px; margin: 2.5em 0; background: linear-gradient(90deg, transparent, var(--line-bright), transparent); }
+
+.meta-line {
+    display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem;
+    font-family: var(--font-ui); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    margin-top: 4rem;
+    padding: 2.2rem 0 2.6rem;
+    border-top: 1px solid var(--line);
+    background: rgba(4, 11, 22, 0.75);
+    color: var(--text-faint); font-size: 0.9rem;
+}
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; }
+.site-footer p { margin: 0.2rem 0; }
+.site-footer a { color: var(--text-dim); }
+.site-footer a:hover { color: var(--cyan); }
+
+/* ---------- Startup burst ---------- */
+
+/* Set in <head> before first paint when the burst hasn't played this visit. The cover lifts
+   itself after 3 s even if fx.js never runs, so the page can't stay hidden. */
+html.burst-pending::after {
+    content: ""; position: fixed; inset: 0; z-index: 1000;
+    background: var(--bg);
+    animation: burst-safety 0.4s ease 3s forwards;
+}
+@keyframes burst-safety { to { opacity: 0; visibility: hidden; } }
+
+.fx-layer { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.fx-wave { z-index: -1; }   /* above the body's grid (it paints on the canvas root), below all content */
+.fx-burst { z-index: 1001; pointer-events: auto; cursor: pointer; }
+
+/* The logo flares as the core comes up. */
+.fx-ignite [data-burst-origin] { animation: ignite 1.8s ease-out; }
+@keyframes ignite {
+    0% { filter: brightness(3) drop-shadow(0 0 30px #fff) drop-shadow(0 0 60px var(--cyan)); }
+    100% { filter: drop-shadow(0 0 10px rgba(19, 255, 230, 0.55)) drop-shadow(0 0 30px rgba(19, 255, 230, 0.25)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .mosaic-row, body::before, body::after, .site-header { animation: none; }
+    body::before { transform: translateX(-50vw); }
+    .route::before { display: none; }
+    .tile:hover .tile-media img { transform: none; }
+    .route:hover { transform: none; }
+    .fx-ignite [data-burst-origin] { animation: none; }
+}
