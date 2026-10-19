@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Up with Reactorcore</title>
+    <script>try{if(!sessionStorage.getItem("rc-burst"))document.documentElement.classList.add("burst-pending")}catch(e){}</script>
+
+    <meta name="description" content="Team up with game designer Reactorcore: build one of the portfolio's game designs together through revshare, or invite Reactorcore into your own project. How the revshare tiers work, which projects are open, and the honest terms.">
+    <meta name="keywords" content="revshare game development, game dev team up, indie game revshare, coder wanted, game designer collaboration, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/work-with-me/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Team Up with Reactorcore">
+    <meta property="og:description" content="Build one of Reactorcore's game designs together through revshare, or bring Reactorcore into your project.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/work-with-me/">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Team Up with Reactorcore">
+    <meta name="twitter:description" content="Build one of Reactorcore's game designs together through revshare, or bring Reactorcore into your project.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <script src="../fx.js" defer></script>
+
+    <style>
+        .page-hero { position: relative; overflow: hidden; padding: clamp(3rem, 8vw, 5rem) 0 1rem; }
+        .page-hero .bg-icon { right: -60px; top: 10px; --size: 380px; --tint: var(--tint-green); }
+        .page-hero p:not(.eyebrow) { color: var(--text-dim); max-width: 64ch; font-size: 1.1rem; }
+
+        .part { padding: 3rem 0 0.5rem; }
+        .part > h2 .icon { color: var(--c); }
+        .part h3 { color: var(--c); margin-top: 2.2rem; }
+        .part .prose { max-width: 72ch; }
+        .part .prose .btn { white-space: normal; text-align: center; }
+
+        .open-list {
+            display: grid; gap: 6px; margin: 1.2rem 0 0.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+        }
+        .open-list a {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.45rem 0.8rem 0.45rem 0.45rem;
+            color: var(--text); text-decoration: none; line-height: 1.25;
+            font-family: var(--font-ui); font-weight: 500; font-size: 0.95rem; letter-spacing: 0.03em;
+            background: var(--surface-solid);
+            border: 1px solid var(--line);
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .open-list a:hover { border-color: var(--tint); box-shadow: 0 0 20px -8px var(--tint); }
+        .open-list .id-badge { width: 40px; height: 40px; --cut: 6px; }
+        .open-list .id-badge .icon { width: 24px; height: 24px; }
+
+        .terms { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); margin: 1.6rem 0 1rem; }
+        @media (max-width: 900px) { .terms { grid-template-columns: 1fr; } }
+        .term { --edge: color-mix(in srgb, var(--c) 45%, transparent); box-shadow: inset 3px 0 0 var(--c); }
+        .term h3 { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.7rem; font-size: 1.05rem; }
+        .term h3 .icon { width: 1.6em; height: 1.6em; }
+        .term p { color: #c3d6e6; margin: 0; }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.4rem; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section class="page-hero">
+            <span class="bg-icon" style="--icon: url(../icons/shaking-hands-delapouite.png)" aria-hidden="true"></span>
+            <p class="eyebrow" style="color: var(--tint-green)">Team up</p>
+            <h1 class="glow" data-burst-origin>Let's build something together</h1>
+            <p>There are two ways to work together. You can join me on one of my designs through revshare, or you can invite me into a project of yours. Both are below, with the honest terms for each.</p>
+        </section>
+
+        <section class="part" id="revshare" style="--c: var(--tint-green)" aria-labelledby="revshare-title">
+            <h2 class="section-mark" id="revshare-title"><span class="icon" style="--icon: url(../icons/anvil-impact-lorc.png)"></span>Build one of my designs with me</h2>
+            <div class="prose">
+                <p>Every design on this site is ready for development, and I'm looking for coders to build them with me. Coders who direct AI count too. I handle the game design, art, sound, writing, marketing, publishing and project management. You handle the code.</p>
+                <p>We make a commercial game together and aim for PC releases on Steam, GOG and itch.io. The earnings are split among everyone who contributed. Monetisation depends on the project, but it always stays ethical. The game's first job is to give the player a damn good game.</p>
+
+                <h3>How the split works</h3>
+                <p>I use my own revshare system. Contributors earn a tier (Main, Assistant, Special Thanks or Fan), and the revenue is split by tier. Once you earn a tier you keep it, so core contributors never get diluted. Every payout is recorded, and everyone can check the maths.</p>
+                <p><a class="btn" href="https://reactorcore.itch.io/reactorcores-revshare-system" target="_blank" rel="noopener" style="--c: var(--tint-green)">Reactorcore's Revshare System on itch.io ↗</a></p>
+
+                <h3>Which projects are open?</h3>
+                <p>All of them. Every design in the portfolio is open for a revshare team-up.</p>
+            </div>
+            <div class="open-list" id="open-list">
+                <noscript><p>The list needs JavaScript. Every design is also on <a href="../#designs">the front page</a>.</p></noscript>
+            </div>
+            <div class="prose">
+                <h3>Not a coder?</h3>
+                <p>Artists, writers, musicians, sound designers, marketers and publishers are welcome too. Most people in those roles would rather join once there's a playable prototype, though, so the first call goes out to coders.</p>
+            </div>
+        </section>
+
+        <section class="part" id="your-project" style="--c: var(--tint-orange)" aria-labelledby="yours-title">
+            <h2 class="section-mark" id="yours-title"><span class="icon" style="--icon: url(../icons/rocket-lorc.png)"></span>Bring me into your project</h2>
+            <div class="prose">
+                <p>You can invite me into your own project, but I'll be honest: the bar is high. Saying yes means setting my own projects aside, so three things have to line up.</p>
+            </div>
+            <div class="terms">
+                <div class="panel term" style="--c: var(--tint-cyan)">
+                    <h3><span class="icon" style="--icon: url(../icons/crystal-cluster-lorc.png); color: var(--c)"></span>It has to be interesting</h3>
+                    <p>It must be interesting enough that I'd rather work on it than on my own designs. That bar is high, but it's not about genre. I'm drawn to games that meet real human needs and treat the player well.</p>
+                </div>
+                <div class="panel term" style="--c: var(--tint-yellow)">
+                    <h3><span class="icon" style="--icon: url(../icons/coins-delapouite.png); color: var(--c)"></span>The pay has to be fair</h3>
+                    <p>It must be adequate for the work and paid reliably. Exposure, or a share of a game that may never ship, doesn't count as pay for this route. Revshare is what the section above is for.</p>
+                </div>
+                <div class="panel term" style="--c: var(--tint-magenta)">
+                    <h3><span class="icon" style="--icon: url(../icons/key-lorc.png); color: var(--c)"></span>Trust has to be earned</h3>
+                    <p>I need to be able to rely on your word. That takes time and a track record, and it isn't easy, so expect us to start small.</p>
+                </div>
+            </div>
+            <div class="prose">
+                <p>If that still sounds like you, tell me about the project. If you'd rather hire me for design work outright, the hire-me page has the terms.</p>
+                <p><a class="btn" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)"><span class="icon" style="--icon: url(../icons/briefcase-delapouite.png)"></span>Hire me</a></p>
+            </div>
+        </section>
+
+        <section class="part" id="contact" style="--c: var(--cyan)" aria-labelledby="contact-title">
+            <h2 class="section-mark" id="contact-title"><span class="icon" style="--icon: url(../icons/envelope-lorc.png)"></span>Get in touch</h2>
+            <div class="prose">
+                <p>Email is best. Tell me which design you want to build, or what your project is, and what you bring to it.</p>
+            </div>
+            <div class="actions">
+                <a class="btn btn-primary" href="mailto:reactorcoregames@gmail.com"><span class="icon" style="--icon: url(../icons/envelope-lorc.png)"></span>Email me</a>
+                <a class="btn" href="https://discord.gg/UdRavGhj47" target="_blank" rel="noopener"><span class="icon" style="--icon: url(../icons/chat-bubble-delapouite.png)"></span>Discord</a>
+                <a class="btn" href="../links.html"><span class="icon" style="--icon: url(../icons/compass-lorc.png)"></span>All links</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Homepage: <a href="https://reactorcoregames.github.io/" target="_blank" rel="noopener">reactorcoregames.github.io</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../projects.js"></script>
+    <script>
+        // The open-for-revshare list: every design that isn't a released game, A–Z.
+        (function () {
+            const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+            const open = (window.PROJECTS || []).filter(p => p.status !== "released").sort((a, b) => a.title.localeCompare(b.title));
+            document.getElementById("open-list").innerHTML = open.map(p => `<a href="../projects/${encodeURIComponent(p.page)}" target="_blank" rel="noopener" style="--tint: var(--tint-${esc(p.tint || "cyan")})">${p.icon ? `<span class="id-badge"><span class="icon" style="--icon: url(../icons/${esc(p.icon)}.png)"></span></span>` : ""}${esc(p.title)}</a>`).join("");
+        })();
+    </script>
+</body>
+</html>

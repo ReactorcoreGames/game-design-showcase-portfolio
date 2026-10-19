@@ -2,7 +2,7 @@
 
     python tools/sitemap.py
 
-Run it after adding a project entry. Lists the nexus, the articles page, the hire-me page and every
+Run it after adding a project entry. Lists the nexus, the articles, links, team-up and hire-me pages and every
 project page, with URLs on the canonical GitHub Pages address.
 """
 import re
@@ -21,7 +21,7 @@ def main() -> None:
     if missing:
         raise SystemExit("projects.js lists pages that don't exist: " + ", ".join(missing))
 
-    urls = [BASE, BASE + "articles.html", BASE + "hire_me/hire_me.html"]
+    urls = [BASE, BASE + "articles.html", BASE + "links.html", BASE + "work-with-me/", BASE + "hire_me/hire_me.html"]
     urls += [BASE + "projects/" + quote(p) for p in pages]
     body = "\n".join(f"  <url><loc>{u}</loc></url>" for u in urls)
     xml = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n'

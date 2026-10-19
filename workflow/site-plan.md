@@ -102,6 +102,7 @@ Phases A and B come first, because every later page uses the theme they set up. 
   - which projects are open for it
   - the honest terms for inviting Reactorcore into someone else's project: it has to be interesting, the pay has to be fair, and trust has to be earned
   - how to make contact
+- Done in B2: `links.html` and `work-with-me/index.html` are built, and the B1 stand-ins for Team up, Everything else and the header's Links now point at them in `index.html` and `articles.html`. X (@ReactorcoreDev) is on the links page with a note that it's a news feed, not a place to talk. The links page's Sci-fi lore button still goes to the lore folder on GitHub (swap it to `aal/` in C3). The team-up page lists the open designs from `projects.js` (everything not `released`), so it stays current on its own. `tools/sitemap.py` now lists both pages.
 
 **B3. Hire-me rewrite.** Rewrite `site/hire_me/hire_me.html` from scratch, keeping its URL. Inputs:
 - the released games on the catalogue, https://reactorcoregames.github.io/catalogue/
@@ -138,7 +139,7 @@ Convert the 16 articles already listed. Target: the whole articles folder under 
 - The angle: a sci-fi universe that is its own thing, not Star Trek, Star Wars or Mass Effect, with its own timeline.
 - Its outlook is optimistic despite the wars and horrors in it: humanity reaches a good outcome. Altered humans, aliens, robots and AI coexist in a cohesive, kind society that pursues cool things, lives forever and kicks ass. That utopia looks weird by conservative standards and unlike anything people imagine.
 - The hub carries the pitch, the timeline at a glance, and links into the entries and to the AAL-set designs.
-- Plan the entry list for C4, and write the image spec. The budget is **up to 10 Klein images** for the whole AAL section, generated in a normal image day.
+- Swap the Sci-fi lore buttons in `index.html` and `links.html` from the GitHub lore folder to `aal/`. Plan the entry list for C4, and write the image spec. The budget is **up to 10 Klein images** for the whole AAL section, generated in a normal image day.
 
 **C4. AAL wiki entries.** Wiki-style pages under `aal/` for lore fans who like digging into details, the way game wikis cover characters, quests, tech and concepts. Likely entries, depending on what the lore supports:
 - the timeline in full
@@ -168,7 +169,7 @@ Propose the final table of contents, a target length, and a voice guide built fr
 
 **Format.** HTML/CSS is the book's main format, as multiple pages: one per chapter, with real navigation that a page-based format can't offer. Skip PDF: it lays text out in fixed pages, which reads badly on phones, and it's laborious to typeset well. The chapters are written once as HTML, and both editions come from those same files.
 
-**D7. Book site.** `site/book/`: a contents page, one HTML page per chapter, a sidebar contents list, previous/next links and anchor links on headings. Give it its own colour from the logo variants. Add a link to the itch.io edition on every page.
+**D7. Book site.** `site/book/`: a contents page, one HTML page per chapter, a sidebar contents list, previous/next links and anchor links on headings. Give it its own colour from the logo variants. Add a link to the itch.io edition on every page. Also add a Book button to the "On this site" group in `links.html`; it was left out in B2 because the book didn't exist yet.
 
 **D8. Offline edition and store page.** A build script (`tools/book.py`) that packages the same chapter pages for download:
 - **Main download:** a zip of the book as a self-contained HTML folder (fonts and images inside, no CDN or network calls), opened by double-clicking `index.html`. It looks and navigates exactly like the online edition.

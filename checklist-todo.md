@@ -38,7 +38,7 @@ The full plan, reasons and decisions are in `workflow/site-plan.md`. Read it bef
 
 - [x] B1: nexus rebuild: "Reactorcore's" title, six routing buttons in the hero, new copy, no stats or AAL tagging, A–Z default, square tiles, project icons, drawer removed
 - [x] B1: merge `nexus-overhaul` into `main`
-- [ ] B2: links page and team-up page (revshare, plus joining other projects)
+- [x] B2: links page and team-up page (revshare, plus joining other projects)
 - [ ] B3: hire-me page rewritten from scratch
 
 ### C. Content sections
