@@ -10,7 +10,7 @@ The site is not a "look how cool I am" portfolio. It exists to serve the visitor
 2. **Hirers.** People looking for an advanced game designer to hire.
 3. **Partners.** People who want to team up: either build one of Reactorcore's projects through the revshare system (https://reactorcore.itch.io/reactorcores-revshare-system), or invite Reactorcore into their own project. The second only works if the project is interesting enough to drop Reactorcore's own projects, the pay is adequate and fair, and Reactorcore can come to trust their word. None of that is easy, and the page can say so plainly.
 4. **Learners.** People who want to learn game design, through the articles and the book. The designs teach too: a visitor might not care for a project as a whole but take one idea from it in a completely different direction ("the rest isn't my cup of tea, but that one thing is good"). The site is a showcase of designs and an educational resource at the same time, and the project pages should make it easy to lift a single idea, not only the whole package.
-5. **Lore fans.** People who like sci-fi lore and enjoy reading game wikis about characters, quests, tech and concepts. The AAL universe section is for them.
+5. **Lore fans.** People who like sci-fi lore and enjoy reading about a universe's history, rules and tech. The AAL universe page is for them.
 6. **Explorers.** People who want to see what else Reactorcore does: games, tools, socials, everything on the links page.
 
 The designs carry no license and no copyright claim, and they are not secret. That is deliberate, and the site should say why: the industry keeps recycling stale ideas. Talented teams spend years on concepts that fulfill no human need, encourage toxic behaviour or exploit the player. Others take two steps forward and one step back. More people forking these designs into their own versions means more variety and better games. Reactorcore would rather see a design built by someone else than never built.
@@ -22,7 +22,7 @@ The core idea behind every design, in Reactorcore's words (raw material for the 
 - The name is **Reactorcore**. The studio is **Reactorcore Games**, a creative label for games and game development work. It is not a registered company, and the site doesn't need to explain that.
 - Reactorcore stays anonymous. No real name, anywhere, including file names and document metadata in the repo. Finland can be mentioned where it helps (it has a good reputation), but it is never highlighted or made a selling point. Remove it from the nexus description and hero copy.
 - Titles say **Reactorcore's**: "Reactorcore's Game Design Portfolio".
-- The AAL universe is not a selling point yet, since nobody knows it. No AAL badges, filters or stats on the nexus. It gets its own section instead (sessions C3 and C4), reached through the lore fans' hero button, which is framed around what that visitor wants ("sci-fi lore to dig into"), not around the AAL name.
+- The AAL universe is not a selling point yet, since nobody knows it. No AAL badges, filters or stats on the nexus. It gets its own page instead (session C3), reached through the lore fans' hero button, which is framed around what that visitor wants ("sci-fi lore to dig into"), not around the AAL name.
 
 ## Look and feel
 
@@ -62,7 +62,7 @@ links.html            grid of buttons to every link (replaces the drawer)
 articles.html         articles catalog, now linking to on-site articles
 articles/<slug>.html  the articles themselves, moved off Google Docs
 book/                 Game Design Technology: The Holy Grail of Fun (online edition, one page per chapter)
-aal/                  the AAL universe: a pitch hub page plus wiki-style entry pages
+aal/                  the AAL universe: one polished page (index.html) and its images
 projects/<slug>.html  the 37 + new design pages, restyled to the new theme
 ```
 
@@ -146,21 +146,14 @@ Done in C1: `tools/articles.py build` writes all 16 pages (14.5 MB in total, fro
 
 Done in C2. All four are built by `tools/articles.py`, whose `SOURCES` entries now take per-article options (start/stop markers, dropped paragraphs, intro paragraphs, skipped sections, heading cleanup, showcase-page links, a written date, a guest header). Two new shelves hold them: "Designs in depth" (Big Projects, Astroneer) and "Guest articles". Reactorcore's decisions on Big Projects: the Sexy Neuromancy Sessions section is left out to keep the site SFW, and the article starts at "General Design Tenets", dropping the January 2024 funding pitch (Foreword, Help Is Welcome). It's marked "Written January 2024". AAL Superweapon, Admiral Wars Beyond and Astro Industry Freelancer link to their showcase pages; when the standby projects in it (TopVerse, RoomSpace, Standalone, Shape Smasher, Planet Warfare) get pages, add them to its `links` option and rebuild. Big Projects and Astroneer have no "original" link, since their Google Doc URLs aren't in the repo; add them to `articles.js` if wanted. The hire-me page now counts 18 articles (guests excluded). The articles folder is 32 MB, 15.8 MB of it Big Projects' 263 images, all lazy-loaded.
 
-**C3. AAL Universe hub.** `aal/index.html`, a pitch page for the universe, built from `reference/lore/aal-universe/` (540 KB of lore; start with the all-in-one file).
+**C3. AAL Universe page.** `aal/index.html`, one polished page for the universe, built from `reference/lore/aal-universe/` (540 KB of lore; start with the all-in-one file). Reactorcore decided against wiki-style entry pages: the lore is too small and too raw to fill a wiki, and nobody knows the universe yet, so one page that people actually scroll does the job better. The raw lore files stay in the repo for Reactorcore's own use, but the site doesn't link to them; the page is the maintained, public version.
 - The angle: a sci-fi universe that is its own thing, not Star Trek, Star Wars or Mass Effect, with its own timeline.
 - Its outlook is optimistic despite the wars and horrors in it: humanity reaches a good outcome. Altered humans, aliens, robots and AI coexist in a cohesive, kind society that pursues cool things, lives forever and kicks ass. That utopia looks weird by conservative standards and unlike anything people imagine.
-- The hub carries the pitch, the timeline at a glance, and links into the entries and to the AAL-set designs.
-- Swap the Sci-fi lore buttons in `index.html` and `links.html` from the GitHub lore folder to `aal/`. Plan the entry list for C4, and write the image spec. The budget is **up to 10 Klein images** for the whole AAL section, generated in a normal image day.
+- Sections: the pitch, the timeline (the main section), the Milky Way civilization, the rules of the universe, space monsters, FTL travel, and the designs set in AAL. A sticky table of contents keeps the long page navigable. Defence layers and superweapons stay out: they differ from game to game, so they aren't universe canon.
+- The rules of the universe (Equilibrium, the Chaos System) are a highlight. They are what makes the universe and Reactorcore's bigger games interwoven: the technical limits every game runs into (processing, memory, storage, entity counts) are baked into the universe as natural law, instead of being ignored until a game becomes laggy, unplayable or crash-prone. The exact solutions differ per game. The universe is not a self-aware simulation and doesn't think it's a game; it's a real universe where those constraints are simply another law of nature.
+- Swap the Sci-fi lore buttons in `index.html` and `links.html` from the GitHub lore folder to `aal/`, and write the image spec. The budget is **up to 10 Klein images** for the page, generated in a normal image day.
 
-**C4. AAL wiki entries.** Wiki-style pages under `aal/` for lore fans who like digging into details, the way game wikis cover characters, quests, tech and concepts. Likely entries, depending on what the lore supports:
-- the timeline in full
-- civilizations and factions (Milky Way civilization)
-- species, altered humans, AI and robots
-- technology: FTL, defence layers, resource processing, superweapons (`reference/lore/sw-military-armaments.md`)
-- space monsters
-- the rules of the universe: Equilibrium, the Chaos System
-
-Each entry cross-links to related entries and to the designs set there. If the lore is too big for one session, split C4 into two.
+Done in C3 (images still to generate). `site/aal/index.html` has seven sections: the universe (pitch and the AAL name), the timeline (13 eras in three acts: the old world, the turning, the Mugen age), life in the Milky Way, laws of the universe (ground rules, Equilibrium, the Chaos System with its load ladder, a designer's note), space monsters, FTL travel (the drive, a homeworld-to-homeworld trip, uncharted systems, flying homeworlds) and the designs set there, rendered from the `universe: "aal"` entries in `projects.js`. Era tags link Eradication Wars, Tactical Arsenal Command and AAL Superweapon to their pages, and Standalone and Planet Warfare to their sections of the Big Projects article; swap those two to showcase pages once they exist. Reactorcore's framing decisions: the Eradication Wars and the re-education/reset of holdouts are stated plainly, not as a "dark price". The purity side is the dictators and thugs who'd lose the power to bully, Homo mugen spreads through pleasure, affection and seduction (kept SFW but not sugar-coated), and the early eras are deliberately gritty like our world. The images are `image-prompts/aal.json`, a free-form section spec (`tools/images.py` gained the `out` mode for it), 10 images in the John Harris preset, written to `site/aal/images/NN-name.jpg`. The Sci-fi lore buttons in `index.html` and `links.html` now go to `aal/`, Universe joined the header nav in `index.html` and `articles.html`, and `tools/sitemap.py` lists `aal/`.
 
 ### Phase D: the book
 

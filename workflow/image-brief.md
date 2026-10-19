@@ -33,6 +33,8 @@ One file per project at `image-prompts/<slug>.json`:
 - `style` is optional extra style text appended after the preset. Use it for the color scheme, taken from the page's CSS palette, plus anything the preset lacks.
 - **Length:** prompt + preset + style must stay within **1800 characters** per image. Klein's encoder silently drops text past roughly 2000, and the style is the part that gets lost because it comes last. `tools/images.py check` enforces the limit. A 400–900 character prompt is usually right.
 
+**Section specs.** Pages that aren't project showcases (the AAL universe page) use a free-form spec instead: add `"out": "site/aal/images"` and give each image a kebab-case `name` instead of a `role`. Any number of images is allowed, numbered from 1. `finish` saves them as `<out>/<NN>-<name>.jpg` and makes no thumbnail. `image-prompts/aal.json` is the example.
+
 ## Choosing a style preset
 
 BAIG has ~110 presets (`python tools/images.py check` shows the one in use; the full list is in BAIG's `config.json` → `style_presets`). Families include `01 Main` (digital painting, comic, 3D high/low poly, Frazetta oil, 90s anime), `02 Photo` (cinematic, gritty, dystopian, noir, tilt-shift, long exposure…), `03 Style` (sketch, watercolor, retro, vector, pop art, pixel), `04 Special` (glitch, splash, ghostly), `06 Cool`, `08 Games` (named game art styles: Homeworld, Super Metroid, C&C, Battletech, Einhander, Daemon X Machina…) and `09 Artist` (Nihei, Frazetta-era cover painters, Murata…).

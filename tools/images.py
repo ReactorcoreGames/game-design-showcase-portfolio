@@ -4,9 +4,13 @@ Each project has a spec at image-prompts/<slug>.json (format in workflow/image-b
 The pages already reference the final file names, so this tool only has to
 produce files at exactly those paths.
 
+A spec with an "out" folder (relative to the repo) is a free-form section spec instead of a
+project's five: any number of images, each with a "name", saved as <out>/<NN>-<name>.jpg
+and no thumbnail. The AAL page (site/aal/) uses one.
+
     python tools/images.py check  [slug ...]             validate specs, show lengths and image count
     python tools/images.py gen    slug ... [--dry-run]   generate through BAIG (klein4b, Standard tier)
-    python tools/images.py finish slug ...               resize + JPEG + thumbnail into site/projects/
+    python tools/images.py finish slug ...               resize + JPEG (+ thumbnail) into site/
     python tools/images.py recompress [--apply]          re-encode existing site images (report only by default)
 
 No slug given to check = every spec. gen refuses to queue more than --max images
@@ -20,6 +24,7 @@ import io
 import json
 import math
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -76,15 +81,26 @@ def style_suffix(spec: dict, presets: dict[str, str], preset_override: str | Non
     return " ".join(p.strip() for p in parts if p.strip())
 
 
+def dest_path(spec: dict, img: dict) -> Path:
+    if spec.get("out"):
+        return REPO / spec["out"] / f"{img['n']:02d}-{img['name']}.jpg"
+    return SITE_IMAGES / f"{spec['prefix']}_{img['n']}_{img['role']}.jpg"
+
+
 def validate(spec: dict, presets: dict[str, str]) -> list[str]:
     errors = []
+    free = bool(spec.get("out"))
     nums = sorted(img.get("n") for img in spec.get("images", []))
-    if nums != [1, 2, 3, 4, 5]:
-        errors.append(f"images must be n=1..5, got {nums}")
+    expected = list(range(1, len(nums) + 1)) if free else [1, 2, 3, 4, 5]
+    if not nums or nums != expected:
+        errors.append(f"images must be n={expected[0] if expected else 1}..{expected[-1] if expected else 'N'}, got {nums}")
     suffix = style_suffix(spec, presets)
     for img in spec.get("images", []):
         n = img.get("n")
-        if img.get("role") != ROLES.get(n):
+        if free:
+            if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", img.get("name", "")):
+                errors.append(f"image {n}: needs a kebab-case name, got {img.get('name')!r}")
+        elif img.get("role") != ROLES.get(n):
             errors.append(f"image {n}: role should be {ROLES.get(n)!r}, got {img.get('role')!r}")
         if img.get("ratio") not in RATIOS:
             errors.append(f"image {n}: bad ratio {img.get('ratio')!r}")
@@ -195,10 +211,10 @@ def cmd_finish(args) -> None:
         for img in sorted(spec["images"], key=lambda i: i["n"]):
             src = find_raw(slug, args.model, img["n"])
             im = scale_to_area(Image.open(src))
-            dest = SITE_IMAGES / f"{prefix}_{img['n']}_{img['role']}.jpg"
+            dest = dest_path(spec, img)
             size = save_jpeg(im, dest)
             print(f"{dest.relative_to(REPO)}  {im.size[0]}x{im.size[1]}  {size // 1024} KB")
-            if img["n"] == 2:
+            if img["n"] == 2 and not spec.get("out"):
                 thumb = Image.open(src).convert("RGB")
                 thumb.thumbnail((THUMB_SIZE[0] * 4, THUMB_SIZE[1] * 4))
                 thumb = thumb.resize(THUMB_SIZE, Image.LANCZOS)

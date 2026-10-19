@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AAL Universe</title>
+
+    <meta name="description" content="The AAL Universe: the persistent sci-fi setting of Reactorcore's bigger game designs. Its full timeline from 2019 to the edge of the universe, the immortal Homo mugen civilization of the Milky Way, the Chaos System and Equilibrium laws of nature, space monsters and FTL travel.">
+    <meta name="keywords" content="sci-fi lore, science fiction universe, game universe, timeline, Homo mugen, space monsters, FTL travel, Chaos System, AAL Universe, Alteisen Arsenal Laboratories, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/aal/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="The AAL Universe">
+    <meta property="og:description" content="A grounded, optimistic sci-fi universe with its own timeline, its own laws of nature and a weird, kind utopia at the end of a terrible war.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/aal/">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/aal/images/01-hero.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="The AAL Universe">
+    <meta name="twitter:description" content="A grounded, optimistic sci-fi universe with its own timeline, its own laws of nature and a weird, kind utopia at the end of a terrible war.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/aal/images/01-hero.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "The AAL Universe",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/aal/",
+        "description": "The persistent fictional sci-fi universe shared by Reactorcore's bigger game designs: timeline, civilization, laws of nature, space monsters and FTL travel.",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/aal/images/01-hero.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games" },
+        "about": { "@type": "CreativeWork", "name": "AAL Universe", "genre": "Science fiction" }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <script src="../fx.js" defer></script>
+
+    <style>
+        /* The AAL page runs on magenta (the Sci-fi lore button's tint) with violet and teal beside it.
+           Each act of the timeline and each section sets --c. */
+        :root {
+            --aal: #ff3dff;
+            --aal-2: #b98cff;
+            --aal-soft: #f3c6ff;
+            --act-old: #ffd23f;
+            --act-war: #ff4d5e;
+            --act-mugen: #ff3dff;
+            --sheet-pad: clamp(1.2rem, 4vw, 3.5rem);
+        }
+        @media (max-width: 620px) { :root { --sheet-pad: var(--gutter); } }
+
+        .sheet::before, .sheet::after { border-color: var(--aal); }
+        .prose strong, .era strong, .namebox strong, .route-chain strong { color: var(--c, var(--aal-soft)); }
+
+        /* Hero: the image runs edge to edge across the sheet, the title sits below it. */
+        .aal-hero { position: relative; margin: 0 calc(-1 * var(--sheet-pad)); }
+        .aal-hero img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #120a24; border-bottom: 1px solid color-mix(in srgb, var(--aal) 45%, transparent); }
+        .intro { position: relative; padding: clamp(1.8rem, 5vw, 3rem) 0 0.5rem; }
+        .intro .bg-icon { right: -40px; top: 0; --size: 340px; --tint: var(--aal); --alpha: 0.06; }
+        .intro .eyebrow { color: var(--aal); }
+        .intro h1 { font-size: clamp(2.2rem, 1.2rem + 4.4vw, 4.4rem); animation: aal-glow 9s ease-in-out infinite; }
+        .intro .lead { max-width: 66ch; color: #d9c8ea; }
+        @keyframes aal-glow {
+            0%, 100% { color: #fff4ff; text-shadow: 0 0 2px rgba(4, 11, 22, .9), 0 0 8px rgba(4, 11, 22, .8), 0 0 16px rgba(255, 61, 255, .55), 0 0 36px rgba(255, 61, 255, .3); }
+            50% { color: #f4eeff; text-shadow: 0 0 2px rgba(4, 11, 22, .9), 0 0 8px rgba(4, 11, 22, .8), 0 0 16px rgba(185, 140, 255, .6), 0 0 40px rgba(19, 255, 230, .25); }
+        }
+
+        /* Two columns on wide screens: a sticky contents rail and the reading column. */
+        .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(2rem, 4vw, 4rem); align-items: start; }
+        .toc { position: sticky; top: calc(var(--header-h) + 24px); padding-top: 3.2rem; }
+        .toc p { font-family: var(--font-ui); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-faint); margin: 0 0 0.7rem; }
+        .toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+        .toc a {
+            display: block; padding: 0.38rem 0 0.38rem 1rem; margin-left: -1px;
+            font-family: var(--font-ui); font-weight: 500; font-size: 0.9rem; letter-spacing: 0.04em; line-height: 1.3;
+            color: var(--text-dim); text-decoration: none; border-left: 2px solid transparent;
+            transition: color .2s, border-color .2s;
+        }
+        .toc a:hover { color: #fff; border-left-color: var(--line-bright); }
+        .toc a.active { color: var(--aal); border-left-color: var(--aal); }
+        @media (max-width: 1100px) {
+            .layout { grid-template-columns: 1fr; gap: 0; }
+            .toc { position: static; padding-top: 1.5rem; }
+            .toc ol { display: flex; flex-wrap: wrap; gap: 6px; border: 0; }
+            .toc a { padding: 0.35rem 0.7rem; margin: 0; border: 1px solid var(--line); font-size: 0.82rem; }
+            .toc a.active { border-color: var(--aal); }
+        }
+
+        .part { --c: var(--aal); padding: 3rem 0 0.5rem; }
+        .part > h2 .icon { color: var(--c); }
+        .part .prose h3 { color: var(--c); }
+        .part .prose { max-width: 74ch; }
+        .part .prose h3 { margin-top: 2.2rem; }
+
+        /* Figures: the image and a caption plate under it, never text over the art. */
+        .shot { margin: 2rem 0; }
+        .shot img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #120a24; border: 1px solid color-mix(in srgb, var(--c, var(--aal)) 40%, transparent); }
+        .shot figcaption {
+            padding: 0.7rem 1rem; font-size: 0.95rem; color: #d9c8ea;
+            background: color-mix(in srgb, var(--c, var(--aal)) 8%, rgba(4, 11, 22, 0.95));
+            border: 1px solid color-mix(in srgb, var(--c, var(--aal)) 40%, transparent); border-top: 0;
+            box-shadow: inset 3px 0 0 var(--c, var(--aal));
+        }
+
+        /* The name box. */
+        .namebox { --edge: color-mix(in srgb, var(--aal-2) 50%, transparent); margin: 1.6rem 0 0.5rem; max-width: 74ch; box-shadow: inset 3px 0 0 var(--aal-2); }
+        .namebox h3 { color: var(--aal-2); margin: 0 0 0.6rem; font-size: 1.05rem; }
+        .namebox p { color: #cfc2e0; margin: 0 0 0.8em; }
+        .namebox p:last-child { margin: 0; }
+
+        /* Timeline: acts as banners, eras as numbered nodes on a rail coloured by act. */
+        .timeline { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+        .act {
+            margin: 2.4rem 0 1rem; padding: 0.55rem 1rem;
+            font-family: var(--font-ui); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase;
+            color: var(--c); background: color-mix(in srgb, var(--c) 9%, transparent);
+            border: 1px solid color-mix(in srgb, var(--c) 40%, transparent);
+        }
+        .act:first-child { margin-top: 0; }
+        .act span { color: var(--text-dim); letter-spacing: 0.08em; text-transform: none; font-weight: 500; }
+        .era { position: relative; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0 1.1rem; padding-bottom: 1.6rem; }
+        .era::before { content: ""; position: absolute; left: 1.6rem; top: 3.2rem; bottom: 0; width: 2px; background: linear-gradient(var(--c), color-mix(in srgb, var(--c) 15%, transparent)); }
+        .era-n {
+            display: grid; place-items: center; width: 3.2rem; height: 3.2rem;
+            font-family: var(--font-head); font-weight: 900; font-size: 1.05rem; color: var(--c);
+            background: rgba(4, 11, 22, 0.95); border: 1px solid var(--c);
+            box-shadow: 0 0 18px -6px var(--c), inset 0 0 12px -6px var(--c);
+        }
+        .era h3 { margin: 0.55rem 0 0.7rem; color: #fff; font-size: clamp(1.05rem, 1rem + 0.45vw, 1.3rem); }
+        .era p { color: #d3e4f2; margin: 0 0 0.8em; max-width: 72ch; }
+        .era .shot { margin: 1.2rem 0 0.6rem; }
+        .design-tag {
+            display: inline-flex; align-items: center; gap: 0.45rem; margin: 0.2rem 0.4rem 0.4rem 0;
+            padding: 0.3rem 0.65rem; font-family: var(--font-ui); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--c); text-decoration: none; border: 1px solid color-mix(in srgb, var(--c) 50%, transparent); background: rgba(4, 11, 22, 0.9);
+            transition: background-color .2s, color .2s;
+        }
+        a.design-tag:hover { color: #fff; background: color-mix(in srgb, var(--c) 18%, transparent); }
+        .design-tag .icon { width: 1.2em; height: 1.2em; }
+
+        /* Card grids (civilization, ground rules). Even counts only. */
+        .cards { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 1.6rem 0 1.4rem; }
+        .cards.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        @media (max-width: 1000px) { .cards.three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 700px) { .cards, .cards.three { grid-template-columns: 1fr; } }
+        .card { --edge: color-mix(in srgb, var(--c) 40%, transparent); box-shadow: inset 3px 0 0 var(--c); transition: border-color .2s, background-color .2s; }
+        .card:hover { --edge: var(--c); background-color: color-mix(in srgb, var(--c) 7%, var(--surface)); }
+        .card h3 { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.6rem; font-size: 1.02rem; color: var(--c); }
+        .card h3 .icon { width: 1.5em; height: 1.5em; }
+        .card p { color: #c9d9e7; margin: 0 0 0.7em; font-size: 1rem; }
+        .card p:last-child { margin: 0; }
+        .card strong { color: var(--c); }
+
+        /* The Chaos System's performance ladder. */
+        .ladder { list-style: none; margin: 1.6rem 0; padding: 0; max-width: 640px; font-family: var(--font-ui); }
+        .ladder li { display: flex; align-items: center; gap: 0.9rem; padding: 0.55rem 0.9rem; border-left: 4px solid var(--r); background: color-mix(in srgb, var(--r) 10%, rgba(4, 11, 22, 0.9)); margin-bottom: 4px; }
+        .ladder b { color: var(--r); font-weight: 600; letter-spacing: 0.05em; min-width: 8.5rem; }
+        .ladder span { color: #c9d9e7; font-size: 0.95rem; line-height: 1.35; }
+        .ladder .line { border: 0; background: none; padding: 0.2rem 0; margin: 6px 0 8px; }
+        .ladder .line span { flex: 1; text-align: center; color: var(--act-war); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; border-top: 2px dashed var(--act-war); padding-top: 0.35rem; }
+
+        /* The designer's note. */
+        .note { --edge: color-mix(in srgb, #13ffe6 45%, transparent); margin: 2rem 0 0.5rem; max-width: 74ch; box-shadow: inset 3px 0 0 #13ffe6; }
+        .note .eyebrow { color: #13ffe6; }
+        .note h3 { color: #fff; margin: 0 0 0.8rem; }
+        .note p { color: #cfe0ee; }
+        .note p:last-child { margin: 0; }
+
+        /* An FTL trip, stop by stop. */
+        .route-chain { list-style: none; margin: 1.6rem 0; padding: 0; counter-reset: stop; display: grid; gap: 6px; }
+        .route-chain li {
+            counter-increment: stop; position: relative;
+            display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 0 0.9rem; align-items: start;
+            padding: 0.75rem 1rem; background: rgba(10, 24, 41, 0.9); border: 1px solid var(--line);
+            transition: border-color .2s;
+        }
+        .route-chain li:hover { border-color: color-mix(in srgb, var(--c) 60%, transparent); }
+        .route-chain li::before {
+            content: counter(stop, decimal-leading-zero); grid-row: span 2;
+            font-family: var(--font-head); font-weight: 900; font-size: 1rem; color: var(--c); padding-top: 0.15rem;
+        }
+        .route-chain b { font-family: var(--font-ui); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; font-size: 0.95rem; }
+        .route-chain span { color: #c3d6e6; font-size: 0.97rem; line-height: 1.5; }
+
+        /* The AAL designs as wide horizontal tiles: one per row, so any count works. */
+        .aal-tiles { grid-template-columns: 1fr; gap: 10px; margin-top: 1.4rem; }
+        .aal-tiles .tile { flex-direction: row; }
+        .aal-tiles .tile-media { flex: 0 0 min(42%, 400px); }
+        .aal-tiles .tile-img::after { background: linear-gradient(to left, var(--surface-solid), transparent 40%); }
+        .aal-tiles .tile .id-badge { left: auto; right: -24px; bottom: 14px; }
+        .aal-tiles .tile-body { padding: 1.3rem 1.4rem 1.3rem 2.6rem; justify-content: center; }
+        @media (max-width: 700px) {
+            .aal-tiles .tile { flex-direction: column; }
+            .aal-tiles .tile-media { flex: none; }
+            .aal-tiles .tile-img::after { background: linear-gradient(to top, var(--surface-solid), transparent 45%); }
+            .aal-tiles .tile .id-badge { right: auto; left: 14px; bottom: -24px; }
+            .aal-tiles .tile-body { padding: 2rem 1.3rem 1.4rem; }
+        }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.4rem; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .intro h1 { animation: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet">
+        <figure class="aal-hero">
+            <img src="images/01-hero.jpg" alt="A fully developed star system at peace: a star wrapped in solar collectors, a ringed homeworld and streams of ships between the colonies." width="1280" height="720" fetchpriority="high">
+        </figure>
+
+        <section class="intro">
+            <span class="bg-icon" style="--icon: url(../icons/galaxy-delapouite.png)" aria-hidden="true"></span>
+            <p class="eyebrow">Sci-fi lore · the setting of my bigger games</p>
+            <h1 data-burst-origin>The AAL Universe</h1>
+            <p class="lead">Most of my bigger games share one persistent sci-fi universe. It has its own history, its own laws of nature and its own idea of where humanity ends up. It isn't Star Trek, Star Wars or Mass Effect.</p>
+        </section>
+
+        <div class="layout">
+            <nav class="toc" aria-label="On this page">
+                <p>On this page</p>
+                <ol>
+                    <li><a href="#pitch">The universe</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#civilization">Life in the Milky Way</a></li>
+                    <li><a href="#rules">Laws of the universe</a></li>
+                    <li><a href="#monsters">Space monsters</a></li>
+                    <li><a href="#ftl">FTL travel</a></li>
+                    <li><a href="#designs">Designs set here</a></li>
+                </ol>
+            </nav>
+
+            <div class="content">
+                <section class="part" id="pitch" aria-labelledby="pitch-title">
+                    <h2 class="section-mark" id="pitch-title"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span>The universe</h2>
+                    <div class="prose">
+                        <p>It starts in our own world, in 2019, and grows outward. Humanity spreads across the solar system and into the stars. Then comes a war that decides what humanity becomes, and after it a galaxy, and then a whole universe, full of things that want to eat it.</p>
+                        <p>The tone is <strong>grounded</strong>. It isn't hard science, but it's believable enough that a layperson goes "yeah, that could work". There are FTL ships, megastructures, sentient machines, planet-killing superweapons, biological immortality and bodies you can redesign at will. There is no teleportation and no magic.</p>
+                        <p>The outlook is <strong>optimistic</strong>. Humanity wins, and what it wins is strange: a civilization of immortal, endlessly customizable people, where humans, aliens, robots and AI live together kindly, everything is free, nobody has to work, and the whole universe is there to explore. By conservative standards it looks weird. It also never gets completely safe, because the dark between the galaxies is full of monsters.</p>
+                        <p>Each era of the timeline below was imagined as its own TV series or film, and each of my AAL games is set in one of them.</p>
+                    </div>
+                    <div class="panel namebox">
+                        <h3>Why "AAL"?</h3>
+                        <p>AAL stands for <strong>Alteisen Arsenal Laboratories</strong>, a military technology company that makes a cameo in almost every era. It stays neutral and supplies every side with the same equipment, simply because that equipment is good, reliable and well designed. Think Anaheim Electronics in Gundam's Universal Century, or IKEA for military, industrial, power and aerospace tech. It's also a small nod to the TOHA Heavy Industries of Tsutomu Nihei's manga.</p>
+                        <p>It began as a faction mod I made for Cortex Command, full of exotic weapons, ships and units, designed on the fly with whatever seemed cool. It has grown up with me since then, and so has the universe around it.</p>
+                    </div>
+                </section>
+
+                <section class="part" id="timeline" aria-labelledby="timeline-title">
+                    <h2 class="section-mark" id="timeline-title"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span>The timeline</h2>
+                    <div class="prose">
+                        <p>There are no dates or year numbers, only eras, each defined by the main thing going on, in order. The early eras are a familiar, gritty universe much like ours. Everything changes after the Eradication Wars.</p>
+                    </div>
+
+                    <ol class="timeline">
+                        <li class="act" style="--c: var(--act-old)">Act I · The old world <span>— a universe that works like ours</span></li>
+
+                        <li class="era" style="--c: var(--act-old)">
+                            <span class="era-n">01</span>
+                            <div>
+                                <h3>Our world, then the solar system</h3>
+                                <p>The universe starts from the real world of 2019 and branches off from there. Humanity slowly spreads across the solar system, puts its vast resources to work, and builds the first basic megastructures.</p>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-old)">
+                            <span class="era-n">02</span>
+                            <div>
+                                <h3>The Old Mentality World</h3>
+                                <p>With the solar system mostly settled, colonies push out to the nearest stars, and the megastructures grow bigger and more advanced. Sentient AIs, the <strong>synths</strong>, are created by accident and cause a stir, until people come to terms with robots living among them. Non-sentient AI keeps doing the labour, automation and caretaking.</p>
+                                <p>Humans and synths both learn that neither is perfect. A synth is only as capable as its body, and the best bodies are expensive and built from rare parts that are hard to replace. The human body, by contrast, evolved to run on whatever nature provides. Meanwhile, the first signs of alien intelligence are detected, though nobody has met any aliens yet.</p>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-old)">
+                            <span class="era-n">03</span>
+                            <div>
+                                <h3>A Dividing World</h3>
+                                <p>First contact happens many times over. Some aliens are primitive, some intelligent, some just animals. Their DNA opens up biology and genetics, and makes a new upgrade to Homo sapiens possible: <strong>Homo mugen</strong>.</p>
+                                <p>Meanwhile the colonies turn on each other for all the old reasons: ideology, greed, misunderstanding, stupidity and bigotry. Corruption, bullying and racism are as alive out here as they are on Earth today. Scientists, philosophers and leaders, both human and alien, see that these old ways have no future for anyone. The aliens finally give humanity an outsider's view of its faults. Together they set a plan in motion: transform humans and aliens alike into Homo mugen, and make peace natural, permanent and self-sustaining.</p>
+                            </div>
+                        </li>
+
+                        <li class="act" style="--c: var(--act-war)">Act II · The turning <span>— the war that decides what humanity becomes</span></li>
+
+                        <li class="era" style="--c: var(--act-war)">
+                            <span class="era-n">04</span>
+                            <div>
+                                <h3>The Eradication Wars</h3>
+                                <p>Homo mugen is a designed species that can transform ordinary humans into its own kind, and it spreads between the colonies like a happy outbreak, a feel-good Plague Inc. It brings immortality from ageing and illness, abundance, and a body you can shape into anything. It spreads through pleasure, affection and seduction, winning people over by making them feel good, which melts hatred and bigotry in a way no argument could. That's why the change, once it takes hold, is so powerful and so permanent.</p>
+                                <p>One kind of person is terrified by it: the dictators, the thugs, and everyone whose power rests on bullying others with impunity. In a world like that, they lose that power for good. They rally a "purity" side that wants everyone kept natural and kept down, and they threaten the Mugen side with extinction. With its survival at stake, the Mugen side pushes the evolution through and transforms society entirely. The staunchest purity holdouts answer with genocide.</p>
+                                <p>What follows is pure apocalypse with nobody holding back, fought between two mentalities with no common ground left: domination, scarcity and hierarchy on one side, and cooperation, abundance and freedom on the other. Fleets on the scale of Legend of the Galactic Heroes clash, alongside superweapons, mechs and brutal fighting on planets. The Mugen side defends itself and puts a permanent end to it, for a safer future. When the war is over, every remaining human has become Homo mugen.</p>
+                                <a class="design-tag" href="../projects/EradicationWars.html"><span class="icon" style="--icon: url(../icons/battle-mech-delapouite.png)"></span>Design: AAL Eradication Wars</a>
+                                <figure class="shot">
+                                    <img src="images/02-eradication-wars.jpg" alt="War mechs striding through a burning colony city while warships fire overhead in low orbit." width="1280" height="720" loading="lazy" decoding="async">
+                                    <figcaption>The Eradication Wars: a war for the future of the species, fought to the end.</figcaption>
+                                </figure>
+                            </div>
+                        </li>
+
+                        <li class="act" style="--c: var(--act-mugen)">Act III · The Mugen age <span>— a kind civilization against a hostile cosmos</span></li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">05</span>
+                            <div>
+                                <h3>Golden Age Expansion of Space Colonies</h3>
+                                <p>Ageing is gone, scarcity is gone, and nobody is stuck with the body they were born in. With that, the things that used to drive people to cruelty simply evaporate, and that's why the war never repeats itself. Society reorganizes around Nonviolent Communication, innovation and wellbeing, and finds ways to meet everyone's needs, so suffering, conflict and hatred never again grow into war. It's a true victory over the seven deadly sins.</p>
+                                <p>Civilization also unlocks <strong>digital immortality</strong>: with a backup, death becomes something you recover from. More friendly and neutral alien species join. Across many star systems, society becomes something like a kind, utopian space Scandinavia, which in time the whole Milky Way adopts. The era ends with the discovery of the dreaded space monsters.</p>
+                                <a class="design-tag" href="../projects/AALSW.html"><span class="icon" style="--icon: url(../icons/crosshair-delapouite.png)"></span>Design: Tactical Arsenal Command</a>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">06</span>
+                            <div>
+                                <h3>Fight for the Milky Way: the early period</h3>
+                                <p>Dormant and active space monsters are discovered, fought and defeated, and each new nightmare is different from the last, or worse. It builds to an epic crossfire in which several monster groups, humans and allied aliens all fight to wipe each other out. Humans and their allies are the ones left standing. Then probes sent beyond the Milky Way find far bigger threats.</p>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">07</span>
+                            <div>
+                                <h3>Fight for the Milky Way: the late period</h3>
+                                <p>The galaxy is still being colonized, and many pockets are unexplored, the galactic core among them. Humanity and its allies are now the dominant force in the Milky Way. But space monsters of an epic scale are arriving or drifting in from outside, and they make the earlier ones look trivial.</p>
+                                <p>The galaxy-spanning war grows intense. It ends with a major threat defeated and a hard realization: more are coming, the universe is being ravaged with nothing to stop it, and fighting defensively can't be sustained.</p>
+                                <figure class="shot">
+                                    <img src="images/03-milky-way-war.jpg" alt="A fleet of white warships firing into a swarm of moon-sized organic space monsters in front of a colonized planet." width="1280" height="720" loading="lazy" decoding="async">
+                                    <figcaption>The fight for the Milky Way: each new monster worse than the last.</figcaption>
+                                </figure>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">08</span>
+                            <div>
+                                <h3>Intergalactic Deep Space Expeditions</h3>
+                                <p>To turn the tide, humanity needs weapons that shoot far, hit hard and wipe out monsters sustainably, and the Milky Way's own science and resources aren't enough to build them. So maverick xenoarchaeologist agents set out in stealth FTL ships to find ancient alien technology.</p>
+                                <p>They uncover where the monsters come from. They find useless tech, cautionary tales of dead civilizations, and unstable tech that has to be destroyed. They bring back controversial tech to debate with the council, and finally the components that are actually needed. The data goes ahead by hyperwave, but the physical parts come home on an epic return trip. Humanity builds a superweapon and fires it. Cliffhanger.</p>
+                                <figure class="shot">
+                                    <img src="images/04-expedition.jpg" alt="A lone stealth starship approaching a colossal ruined alien megastructure in the darkness between galaxies." width="1280" height="720" loading="lazy" decoding="async">
+                                    <figcaption>Out between the galaxies, the ruins of civilizations that got it wrong.</figcaption>
+                                </figure>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">09</span>
+                            <div>
+                                <h3>Defence of the Milky Way</h3>
+                                <p>The superweapon fires, and reality breaks. A dimensional fault plunges a whole group of star systems into chaos (the <a href="#chaos">Chaos System</a> explains why). Strange dimensional monsters are fought and cleansed, reality is repaired, and the weapon's design flaws are fixed.</p>
+                                <p>A new superweapon is built and fired just in time to obliterate an incoming monster megafleet. The Milky Way is no longer on the back foot. It has the technology, the weapons and the know-how, and it goes on the offensive.</p>
+                                <a class="design-tag" href="../projects/AALSuperweapon.html"><span class="icon" style="--icon: url(../icons/meteor-impact-lorc.png)"></span>Design: AAL Superweapon</a>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">10</span>
+                            <div>
+                                <h3>Space Monster Annihilation Campaigns</h3>
+                                <p>The end of the monster wars. Autonomous berserker superweapons are built: self-replicating probes in the spirit of a von Neumann machine. They're tested, improved after a few accidents, and finally perfected. Then they're sent out into the universe to wipe out the space monsters, save planets from corruption, clear occupied regions, destroy planets that are already lost, and lay down the infrastructure for a safe, sustainable future.</p>
+                                <a class="design-tag" href="../articles/reactorcores-big-projects.html#standalone"><span class="icon" style="--icon: url(../icons/robot-helmet-delapouite.png)"></span>Design: AAL Standalone</a>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">11</span>
+                            <div>
+                                <h3>Exploration of the Universe</h3>
+                                <p>With the universe safe at last, humanity colonizes beyond the Milky Way. This one is a slice-of-life series: each episode follows a different person doing whatever they like in a wide-open universe. It ends with the edges of the universe coming into view. Humanity discovers the Wilderness, and learns that the universe is both finite and infinite.</p>
+                                <a class="design-tag" href="../articles/reactorcores-big-projects.html#planet-warfare"><span class="icon" style="--icon: url(../icons/spaceship-delapouite.png)"></span>Design: Planet Warfare</a>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">12</span>
+                            <div>
+                                <h3>Exploration of the Wilderness</h3>
+                                <p>People venture into the Wilderness at the outer border of the universe. They find weird anomalies, work out its structure, and learn to live with it, use it and respect it. Throw bad things in and bad things come back out, so the galactic civilizations learn to stay harmonious and organized to keep the risk down.</p>
+                                <figure class="shot">
+                                    <img src="images/05-wilderness.jpg" alt="A tiny research ship before a gigantic curved wall of cosmic storms at the edge of the universe." width="1280" height="720" loading="lazy" decoding="async">
+                                    <figcaption>The Wilderness: the edge of the universe, which sends back whatever goes in, changed.</figcaption>
+                                </figure>
+                            </div>
+                        </li>
+
+                        <li class="era" style="--c: var(--act-mugen)">
+                            <span class="era-n">13</span>
+                            <div>
+                                <h3>To Infinity and Beyond</h3>
+                                <p>The endless, vibrant cycle of the universe. Even mastered, nature is so vast and complex that it never runs out of surprises. Places decay, reinvent themselves, reshuffle and randomize, old places become unrecognizable, and people change. Nothing stays the same except the laws of the universe. Every day is exciting, and the universe can never grow boring, old or dead. Humanity accepts this infinity and embraces it happily.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="part" id="civilization" style="--c: var(--aal-2)" aria-labelledby="civ-title">
+                    <h2 class="section-mark" id="civ-title"><span class="icon" style="--icon: url(../icons/house-delapouite.png)"></span>Life in the Milky Way</h2>
+                    <div class="prose">
+                        <p>After the Eradication Wars, humans and every reasonable alien species become one people. Everyone ends up as Homo mugen, a biologically immortal and endlessly customizable omni-species, simply because it's too beneficial not to. Allied aliens live mixed into the population, either in compatibility suits or reshaped into humanoid form for practicality. Most of my games take place in this era.</p>
+                    </div>
+
+                    <div class="cards">
+                        <div class="panel card" style="--c: var(--aal-2)">
+                            <h3><span class="icon" style="--icon: url(../icons/cubes-lorc.png)"></span>Everything is free</h3>
+                            <p>Shelter, food, water, power, hygiene, tools, transport and entertainment are free, clean and guaranteed quality. Anything can be customized and printed to a preset, then returned and recycled automatically when it wears out.</p>
+                            <p>People own very little, because there's no need. Keys are biometrics, and your ID and data live in a secure galaxy-wide registry that everyone can actually trust.</p>
+                        </div>
+                        <div class="panel card" style="--c: var(--aal-2)">
+                            <h3><span class="icon" style="--icon: url(../icons/butterfly-lorc.png)"></span>Your body is a choice</h3>
+                            <p>Nobody ages or gets ill, and medical stations will painlessly change anything that's biologically feasible: skin, hair or eye colour, height, a tail, a pair of wings, going full furry, going digital and coming back. Anything goes, unless it's dangerous, unsustainable or incompatible with everyone else.</p>
+                            <p>People can still be killed. With a backup of their brain and spine they come back in a new body. Without one, they're gone for good.</p>
+                        </div>
+                        <div class="panel card" style="--c: var(--aal-2)">
+                            <h3><span class="icon" style="--icon: url(../icons/linked-rings-lorc.png)"></span>No politics, no laws, no crime</h3>
+                            <p>It's a resource-based economy that follows natural law. Experts run their own fields, supported by networked AI, and coordinate with whoever their work affects. Leaders exist, but as pioneers who lead from the front, not commanders who give orders.</p>
+                            <p>Crime is treated as a sign that someone needs support, empathy and a listening ear. Justice is restorative, built on Nonviolent Communication ("giraffe language"). There's no punishment, guilt or good-versus-evil.</p>
+                        </div>
+                        <div class="panel card" style="--c: var(--aal-2)">
+                            <h3><span class="icon" style="--icon: url(../icons/processor-lorc.png)"></span>A personal AI for everyone</h3>
+                            <p>Every person has an AI guardian. It gives honest, neutral facts instead of superstition, helps with any task, defuses conflicts, notices injustice, and meets social and emotional needs, love and intimacy included.</p>
+                            <p>You can ask to be left alone, and people do. The AI still keeps an eye on your safety.</p>
+                        </div>
+                        <div class="panel card" style="--c: var(--aal-2)">
+                            <h3><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Raised by the system</h3>
+                            <p>There's no parenting and there are no families. At some point everyone accepted how unfit most people are to raise children. So children grow up in a system built for it, with abundance, learning, curiosity, safety, honesty and love.</p>
+                            <p>They're told the rough truths too: death, extinction, violence, and humanity's long history of stupidity.</p>
+                        </div>
+                        <div class="panel card" style="--c: var(--aal-2)">
+                            <h3><span class="icon" style="--icon: url(../icons/battle-mech-delapouite.png)"></span>Work is optional</h3>
+                            <p>Automation is maxed out in every field. Almost nobody ever has to work, so people chase whatever life offers: sport, science, art, design, travel, romance, adrenaline, exploration.</p>
+                            <p>The <strong>military</strong> is surprisingly popular. The most powerful weapons need a human to authorize them, and the military is the front line of exploration, science and action, with mechs, spacecraft and real teamwork.</p>
+                        </div>
+                    </div>
+
+                    <div class="prose">
+                        <h3>Joining</h3>
+                        <p>Anyone who wasn't raised in this system, whether a newly met alien or a holdout from the old world, is given every reason and every piece of evidence to come willingly into re-education. They stay there until it's certain they can live in the galactic community. A great deal of effort goes into letting a person change from within before any force is used.</p>
+                        <p>If someone is hard-wired to reject it, they're reset and reborn by force. The reasoning is simple: every citizen has easy access to things as dangerous as nuclear weapons. In practice, any being that can think and feel, however alien, finds the offered world worth joining.</p>
+
+                        <h3>What it looks like</h3>
+                        <p>Everything is designed for wellbeing, whether it's a residential block, a factory, a spaceport or a remote outpost. Every sector has its own <strong>colour code</strong>: red and black for the military, beige for shipping, purple for industry, gold for medicine, sky blue and white for living spaces, and so on. Spaces are clean, standardized and built from mass-produced prefab parts, yet stylish, lived in and full of small details of busy, happy life.</p>
+                        <p>Cities are walkable. People get around by train, tram, bicycle, scooter and skateboard, not cars and trucks, and the skies aren't jammed with flying cars. Nature preserves and parks sit right next to the cities, kept separate but easy to reach.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="images/06-civilization.jpg" alt="A sunny city plaza with colour-coded buildings, a tram, cyclists and a crowd of bioengineered people, robots and aliens." width="1280" height="720" loading="lazy" decoding="async">
+                        <figcaption>A Milky Way city: colour-coded, walkable, and full of people who chose who to be.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="part" id="rules" style="--c: #13ffe6" aria-labelledby="rules-title">
+                    <h2 class="section-mark" id="rules-title"><span class="icon" style="--icon: url(../icons/reactor-sbed.png)"></span>Laws of the universe</h2>
+                    <div class="prose">
+                        <p>This is what makes the AAL Universe its own thing. Its laws of nature include the limits that every big game eventually runs into, and the universe deals with them the way it deals with gravity.</p>
+                    </div>
+
+                    <div class="cards">
+                        <div class="panel card" style="--c: #13ffe6">
+                            <h3><span class="icon" style="--icon: url(../icons/compass-lorc.png)"></span>No teleportation</h3>
+                            <p>Nothing jumps instantly from one place to another. Ships fly, and near planets and stars they fly the slow way (see <a href="#ftl">FTL travel</a>).</p>
+                        </div>
+                        <div class="panel card" style="--c: #13ffe6">
+                            <h3><span class="icon" style="--icon: url(../icons/crystal-cluster-lorc.png)"></span>No magic, but an astral realm</h3>
+                            <p>The astral realm is a parallel dimension woven through the physical world. Souls rest there between lives before being placed into new beings. It acts as the universe's will, though it has no mind and works on instinct. A rare few can tap it for psychic powers like telekinesis, at enormous cost and difficulty.</p>
+                        </div>
+                        <div class="panel card" style="--c: #13ffe6">
+                            <h3><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span>No beginning, no end</h3>
+                            <p>The universe was never born and will never die. A big bang is not <em>the</em> event but <em>an</em> event, a rare local catastrophe that can even be defused. No matter is ever created or destroyed; it only changes state.</p>
+                        </div>
+                        <div class="panel card" style="--c: #13ffe6">
+                            <h3><span class="icon" style="--icon: url(../icons/spiked-tentacle-lorc.png)"></span>The Wilderness</h3>
+                            <p>The universe is a vast stable zone surrounded by the Wilderness. Picture a bowl whose edges curve up forever. Anything flung out drifts up the slope, gets reshuffled, fused, purified or corrupted by its storms, and is sent back. Sometimes it returns through rifts that open in voids starved of matter.</p>
+                        </div>
+                    </div>
+
+                    <div class="prose">
+                        <h3>Equilibrium</h3>
+                        <p>Everything in the universe tends toward becoming stable, settled and idle. Gravity pulls things together and slows them down, while weather, life, chemistry and anomalies keep eroding, growing and reshaping them. Gravity has range limits, so drifting worlds slowly come to rest. Stars pulse between hot and cold phases instead of burning steadily.</p>
+                        <p>The universe also tries to spread out anything too dense or too fragmented. When that pressure builds up, it bursts out as a quake, a tsunami, an eruption or an anomaly. Cram too much into one spot and it transforms: a planet can collapse into a gas giant, a star, a black hole, or even a local big bang. Megastructures have to be built big and solid, because a structure made of many small fragments gets ground back into a ball.</p>
+
+                        <h3 id="chaos">The Chaos System</h3>
+                        <p>The universe also guards itself against too much happening at once. When too many things exist in one place, or too much violent activity piles up, it intervenes. The truer name would be the Harmony System, but from the inside it looks like chaos: violent, storm-like events that restore order.</p>
+                        <p>Its response scales with the overload. At first it's subtle: unimportant things fade into the background, complex things simplify, crowds of similar things merge into one, and expensive processes slow down. At the extreme, space-time itself shatters and a void rift opens to swallow whatever caused the overload. Nothing is deleted. Things get displaced, trapped, mutated or transformed, and reappear later somewhere else, often in the Wilderness.</p>
+                    </div>
+
+                    <ul class="ladder" aria-label="How the Chaos System responds to load">
+                        <li style="--r: #39ff5a"><b>Full power</b><span>Everything runs, with capacity to spare.</span></li>
+                        <li style="--r: #13ffe6"><b>Normal</b><span>The universe breathes on its own.</span></li>
+                        <li style="--r: #ffd23f"><b>Getting spicy</b><span>The Chaos System steps in: fusing clumps of matter, grouping things together, slowing time.</span></li>
+                        <li class="line"><span>The line the universe never lets anything cross</span></li>
+                        <li style="--r: #ff4d5e"><b>Lag</b><span>Never allowed. Everything above exists to keep the universe from ending up here.</span></li>
+                    </ul>
+
+                    <div class="prose">
+                        <p>The universe watches itself constantly. It sweeps zone by zone, from star systems up to superclusters, thinning out crowded hotspots before they become a problem. The first time anyone saw the extreme response was the AAL Superweapon incident. A planet-killing cannon, badly configured, unleashed so much at once that it tore a wound in space-time big enough to swallow two star systems.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="images/07-chaos-rift.jpg" alt="A violet and crimson tear in space spreading from a shattered planet, swallowing stations while ships flee." width="1280" height="720" loading="lazy" decoding="async">
+                        <figcaption>A chaos rift: the universe closing a wound it was never meant to take.</figcaption>
+                    </figure>
+
+                    <div class="panel note">
+                        <p class="eyebrow">Designer's note</p>
+                        <h3>Why the universe works this way</h3>
+                        <p>Many games are designed as if hardware will improve forever, so whatever lags today will run smoothly tomorrow. I've played enough of them to know how that ends. Cortex Command could only handle a small number of objects at once, yet the game and its mods invited you to blow past that limit. Played seriously, it sank into a slideshow, below 10 frames per second and sometimes below one.</p>
+                        <p>No matter how far Moore's law goes, a computer will always have a limit on processing, memory and storage. So in the AAL Universe, those limits are built in as a law of nature, instead of being ignored until the game becomes laggy, unplayable or crash-prone.</p>
+                        <p>The universe isn't a simulation and doesn't think it's a game. It's a real universe where this is simply how physics works. Each of my games solves the problem in its own way, but this is why the AAL Universe and my game design are woven together.</p>
+                    </div>
+                </section>
+
+                <section class="part" id="monsters" style="--c: var(--act-war)" aria-labelledby="monsters-title">
+                    <h2 class="section-mark" id="monsters-title"><span class="icon" style="--icon: url(../icons/spiked-tentacle-lorc.png)"></span>Space monsters</h2>
+                    <div class="prose">
+                        <p>Across the Milky Way, the aliens humanity meets fall into two kinds.</p>
+                        <p><strong>Reasonable neighbours</strong> can always, eventually, be persuaded to work together, however weird they are. Wars with them are rare and short, usually born of misunderstanding, fear or stupidity, and each new species is easier to welcome than the last. In the end they all join the combined galactic people.</p>
+                        <p><strong>Space monsters</strong> are the other kind: mindless things that no one can communicate with. Some are instinct-driven beasts, others run on pre-coded behaviour. To them, everything that isn't them is food or trash, and they multiply and spread with no awareness of anything around them. Inside the Milky Way they were young, contained and predictable, and most fights were quickly won.</p>
+                        <p>Then the probes looked outside the galaxy. Beyond it roam monster groups far larger, more evolved and more destructive, and they outnumber the Milky Way's forces many times over. There are hyper-evolved alpha beasts, spacefaring parasites and viruses, mindless undead cyborg armies, berserker war robots that replicate themselves, all-devouring flesh swarms, and biomechanical superweapons without a master. There are automated doom fleets, chaotic nightmare beings, whole civilizations turned into brain-dead zombie hordes by one bad decision, and grey goo gone wrong.</p>
+                        <p>They roam and they spread. They infest every planet they find as a new hive, or strip it until nothing is left alive. Now and then a few stragglers reach the galaxy's border. The great megafleets are still far away and busy fighting each other, and that gives the Milky Way time, maybe centuries, maybe millennia, to build the weapons it will need.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="images/08-monsters.jpg" alt="A vast horde of biomechanical leviathans, war machines and flesh-covered asteroids crossing intergalactic space toward a spiral galaxy." width="1280" height="720" loading="lazy" decoding="async">
+                        <figcaption>Beyond the Milky Way: monster groups that outnumber it many times over, roaming and spreading.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="part" id="ftl" style="--c: var(--aal)" aria-labelledby="ftl-title">
+                    <h2 class="section-mark" id="ftl-title"><span class="icon" style="--icon: url(../icons/rocket-lorc.png)"></span>FTL travel</h2>
+                    <div class="prose">
+                        <p>FTL exists, with one big rule: <strong>it fades near gravity</strong>. The closer a ship comes to a planet or star, the slower its FTL gets, until below the high orbit of anything moon-sized it's practically useless. Around planets, ships fly on ordinary thrust. FTL acceleration also follows different laws from ordinary momentum, so a ship can't be turned into an FTL missile to bombard a planet.</p>
+
+                        <h3>How the drive works</h3>
+                        <p>A ship first accelerates to a high sublight speed, then switches on its FTL drive. The drive wraps the ship in a field that cancels the light-speed limit for as long as the drive and the engine keep running. The ship keeps accelerating the whole way, then cuts the drive and coasts while the field slowly fades. Its navigation AI times the cutoff so that the ship drifts in at exactly the right place and speed.</p>
+                        <p>As the speed climbs, the field shifts through the colours of the rainbow, and it shifts back again on the way down. The ship's frontal ram shield sharpens into a <strong>plasma lance</strong>, a cone that can punch through about ten kilometres of solid rock. Ships stranded after a breakdown or a battle carry a self-sufficient repair drone that can fix the whole ship, and even replicate it, slowly.</p>
+
+                        <h3>A trip between two homeworlds</h3>
+                    </div>
+
+                    <ol class="route-chain">
+                        <li><b>Dock</b><span>Ships park by size class, S, M, L or XL, and you reach yours by local transit.</span></li>
+                        <li><b>Skyway</b><span>Planetary highways in the air, with a lane for each size class. The AI flies you, mostly on rails. Free-flying in a homeworld's dense traffic gets you kicked out and arrested by drones.</span></li>
+                        <li><b>Orbit and starway</b><span>The skyway climbs to orbit and joins the starway circling the habitable zone. On long empty stretches, <strong>tradelanes</strong> take over: a second kind of FTL, generated from outside the ship. Like a vacuum tube, they suck a ship in, slide it along and pop it out at the other end.</span></li>
+                        <li><b>Midway</b><span>About where Pluto would be: a parking zone, the second defence line and a military checkpoint fortress.</span></li>
+                        <li><b>The edge and the cup</b><span>At the border of the system, a border station sorts incoming traffic. A developed homeworld has six sanctioned FTL gates, called cups: up, down, left, right, forward and back. Entering any other way triggers an automated military response.</span></li>
+                        <li><b>Launch</b><span>A colossal mass-relay catapult latches onto your ship with a plasma tether and flings it toward full FTL speed. At the other end, its twin catches you and soaks up your speed. Smaller ships can ride an XL <strong>rack ship</strong> like a rollercoaster, because bigger engines are faster.</span></li>
+                    </ol>
+
+                    <figure class="shot">
+                        <img src="images/09-ftl-launch.jpg" alt="A white starship launched from a ring-shaped gate by a coil tower's plasma tether, its shield flaring into a cone of plasma." width="1280" height="720" loading="lazy" decoding="async">
+                        <figcaption>Leaving a homeworld: a plasma tether from the catapult, and the plasma lance flaring up ahead.</figcaption>
+                    </figure>
+
+                    <div class="prose">
+                        <h3>Going somewhere new</h3>
+                        <p>Most star systems have no infrastructure at all. Before anyone visits a new one, the nearest homeworld launches two autonomous hyperwave nodes to sit above and below it. They scan the system for a week or so and chart the route there over a few more weeks. When they find trouble, drones are sent to tidy the route up. Explorers in a hurry can make a blind, arcing FTL hop instead. It's never advised, but it's possible. It's just a gamble.</p>
+                        <p>Across the galaxy, long trips arc high over the galactic plane, and close routes bend around each other so that FTL traffic never collides. Where many routes cross a dark void, a hub is built: a miniature star system with its own six cups. The voids are also rich in Higgs-boson energy, which gives people another reason to live out there.</p>
+
+                        <h3>Worlds that fly</h3>
+                        <p>A homeworld gets at least six colossal thrusters, first to move it into the habitable zone, and afterwards to fly it like a spaceship. Worlds with an atmosphere are wrapped in a protective shell hung from their orbital rings. The shell keeps the air in, provides light, warmth, day and night and seasons, and collects Higgs-boson energy, which gets stronger the farther a world is from a star. A whole planet can't go FTL, but it can dodge a threat or move somewhere nicer.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="images/10-planetship.jpg" alt="An Earth-like planet flying through space on six blazing thrusters inside a translucent shell held by orbital rings." width="1280" height="720" loading="lazy" decoding="async">
+                        <figcaption>Spaceship Earth, literally: a homeworld under its own power.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="part" id="designs" style="--c: var(--aal)" aria-labelledby="designs-title">
+                    <h2 class="section-mark" id="designs-title"><span class="icon" style="--icon: url(../icons/gamepad-delapouite.png)"></span>Designs set in the AAL Universe</h2>
+                    <div class="prose">
+                        <p>These game designs take place in this universe. Each one stands on its own, so you don't need to know the lore to enjoy any of them.</p>
+                    </div>
+                    <div class="tiles aal-tiles" id="aal-designs">
+                        <noscript><p>The list needs JavaScript. Every design is also on <a href="../#designs">the front page</a>.</p></noscript>
+                    </div>
+                    <div class="actions">
+                        <a class="btn" href="../#designs"><span class="icon" style="--icon: url(../icons/gamepad-delapouite.png)"></span>All designs</a>
+                        <a class="btn" href="../articles/reactorcores-big-projects.html" style="--c: var(--aal)"><span class="icon" style="--icon: url(../icons/scroll-unfurled-lorc.png)"></span>Reactorcore's Big Projects</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Homepage: <a href="https://reactorcoregames.github.io/" target="_blank" rel="noopener">reactorcoregames.github.io</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../projects.js"></script>
+    <script>
+        // The designs set in this universe, A–Z, as nexus tiles.
+        (function () {
+            const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+            const thumb = p => "../projects/thumbnails/" + encodeURIComponent(p.thumb || p.prefix + "_2_vignette_thumb.jpg");
+            const aal = (window.PROJECTS || []).filter(p => p.universe === "aal").sort((a, b) => a.title.localeCompare(b.title));
+            document.getElementById("aal-designs").innerHTML = aal.map(p => `<a class="tile" href="../projects/${encodeURIComponent(p.page)}" target="_blank" rel="noopener" style="--tint: var(--tint-${esc(p.tint || "cyan")})">
+  <div class="tile-media"><div class="tile-img"><img src="${thumb(p)}" alt="" width="640" height="360" loading="lazy" decoding="async"></div>${p.icon ? `<span class="id-badge"><span class="icon" style="--icon: url(../icons/${esc(p.icon)}.png)"></span></span>` : ""}</div>
+  <div class="tile-body"><h3 class="tile-title">${esc(p.title)}</h3><p class="tile-sub">${esc(p.subtitle)}</p><p class="tile-blurb">${esc(p.blurb)}</p></div>
+</a>`).join("");
+        })();
+
+        // Highlight the contents entry for the section being read.
+        (function () {
+            const links = [...document.querySelectorAll(".toc a")];
+            const byId = new Map(links.map(a => [a.hash.slice(1), a]));
+            const seen = new Set();
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => e.isIntersecting ? seen.add(e.target.id) : seen.delete(e.target.id));
+                const current = [...byId.keys()].reverse().find(id => seen.has(id));
+                if (current) links.forEach(a => a.classList.toggle("active", a === byId.get(current)));
+            }, { rootMargin: "-30% 0px -60% 0px" });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+        })();
+    </script>
+</body>
+</html>

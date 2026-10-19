@@ -14,7 +14,8 @@
     blurb     one or two sentences, shown in full on the tile
     genres    ids from GENRES below (kept for later use; the nexus doesn't filter on them)
     tags      a few free lowercase words (likewise not shown)
-    universe  "aal" for Armored Assault League games, otherwise omit (for the AAL section, not the nexus)
+    universe  "aal" for games set in the AAL Universe (Alteisen Arsenal Laboratories), otherwise omit;
+              aal/ lists them, the nexus doesn't
     status    "concept" or "released"
     play      released games only: where to play it
     added     YYYY-MM-DD the page went live

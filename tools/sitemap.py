@@ -2,7 +2,7 @@
 
     python tools/sitemap.py
 
-Run it after adding a project or an article. Lists the nexus, the articles catalog, links, team-up and hire-me
+Run it after adding a project or an article. Lists the nexus, the articles catalog, links, team-up, hire-me and AAL
 pages, every article page and every project page, with URLs on the canonical GitHub Pages address.
 """
 import re
@@ -26,7 +26,7 @@ def main() -> None:
     if missing:
         raise SystemExit("articles.js lists articles without a page (run tools/articles.py build): " + ", ".join(missing))
 
-    urls = [BASE, BASE + "articles.html", BASE + "links.html", BASE + "work-with-me/", BASE + "hire_me/hire_me.html"]
+    urls = [BASE, BASE + "articles.html", BASE + "links.html", BASE + "work-with-me/", BASE + "hire_me/hire_me.html", BASE + "aal/"]
     urls += [BASE + f"articles/{a}.html" for a in articles]
     urls += [BASE + "projects/" + quote(p) for p in pages]
     body = "\n".join(f"  <url><loc>{u}</loc></url>" for u in urls)
