@@ -80,7 +80,7 @@ Phases A and B come first, because every later page uses the theme they set up. 
 
 ### Phase A: identity and theme
 
-**A1. Theme system and look test.** Build `site/theme.css` (tokens, fonts, blueprint grid, tiles, buttons, header, footer) and `site/fx.js` (reactor wave, startup burst, reduced-motion handling), shared by every page. Make the font WOFF2 subsets, the logo header mark, the favicon set and the icon tint mechanism, and copy the first batch of icons. Deliver a single look-test page (`site/_theme-test.html`, deleted after approval) that shows the hero with the burst and wave, a few tiles, buttons, headings, body text and an article block. **Reactorcore approves the look before B1 starts.** Approved on 2026-10-19. The approved test page is kept at `workflow/a1-look-test.html` as the markup reference for B1 (hero island, routing buttons, tiles, footer). It only renders when copied back into `site/`; delete it once B1 has used it. The look will likely take a round or two of feedback, so leave room for that in this session.
+**A1. Theme system and look test.** Build `site/theme.css` (tokens, fonts, blueprint grid, tiles, buttons, header, footer) and `site/fx.js` (reactor wave, startup burst, reduced-motion handling), shared by every page. Make the font WOFF2 subsets, the logo header mark, the favicon set and the icon tint mechanism, and copy the first batch of icons. Deliver a single look-test page (`site/_theme-test.html`, deleted after approval) that shows the hero with the burst and wave, a few tiles, buttons, headings, body text and an article block. **Reactorcore approves the look before B1 starts.** Approved on 2026-10-19. The approved test page is kept at `workflow/a1-look-test.html` as the markup reference for B1 (hero island, routing buttons, tiles, footer). B1 used it and it has been removed. The look will likely take a round or two of feedback, so leave room for that in this session.
 
 ### Phase B: structure
 
@@ -93,6 +93,7 @@ Phases A and B come first, because every later page uses the theme they set up. 
 - Remove the links drawer, which moves to its own page in B2. Fix the meta descriptions (no "from Finland").
 - Pick an icon for each of the 37 projects (the `icon` field in `projects.js`, documented in its field reference).
 - Merge `nexus-overhaul` into `main` after this session, once the images are in place.
+- Done in B1: `articles.html` moved onto the theme too (the old `styles.css` and the drawer's `site.js` are gone). Pages that don't exist yet get live stand-ins, to be swapped when they're built: in `index.html` the Team up button goes to the itch.io revshare page (B2: `work-with-me/`), Sci-fi lore to the lore folder on GitHub (C3: `aal/`), and Everything else plus the header's Links to linktree (B2: `links.html`). Book and Universe join the header nav in `index.html` and `articles.html` once D7 and C3 exist, and the Learn button's line mentions the book once it's out.
 
 **B2. Links page and team-up page.**
 - `links.html`: a grid of big buttons from `reference/outreach/Contact Links RCG.txt`, plus homepage, GitHub, catalogue, articles, book and AAL. Leave Telegram out.
