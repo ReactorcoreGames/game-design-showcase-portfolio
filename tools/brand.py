@@ -1,0 +1,158 @@
+"""Brand assets for the site theme: web fonts, logo, favicons and icon masks.
+
+Sources live in the gitignored assets/ folder; this tool writes only the optimized
+files the site uses.
+
+    python tools/brand.py fonts                 WOFF2 Latin subsets into site/fonts/
+    python tools/brand.py logo                  header logo + favicon set into site/
+    python tools/brand.py icons name ...        game-icons PNG -> alpha mask into site/icons/
+    python tools/brand.py all                   fonts + logo + every icon already in site/icons/
+
+Icon names are file names in assets/icons/ without ".png" (e.g. reactor-sbed).
+Icons are white-on-black greyscale; the mask keeps the luminance as alpha, so
+CSS mask-image can tint one file any colour.
+"""
+
+from __future__ import annotations
+
+import argparse
+import base64
+import io
+import sys
+from pathlib import Path
+
+from PIL import Image
+
+REPO = Path(__file__).resolve().parent.parent
+ASSETS = REPO / "assets"
+SITE = REPO / "site"
+
+# Latin, matching Google Fonts' "latin" range.
+LATIN = ("U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,"
+         "U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD")
+
+# (source in assets/fonts, output name, variable-axis pin, renamed family or None)
+# Orbitron has the Reserved Font Name "Orbitron", so the modified (pinned + subset) build
+# must ship under another name.
+FONTS = [
+    ("Oxanium-Medium.ttf", "oxanium-medium.woff2", None, None),
+    ("Oxanium-SemiBold.ttf", "oxanium-semibold.woff2", None, None),
+    ("Orbitron[wght].ttf", "rc-display-black.woff2", {"wght": 900}, "RC Display"),
+]
+FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
+
+LOGO_SRC = ASSETS / "avatars identity" / "rcg logo color (1).png"  # the cyan variant
+LOGO_BG = (32, 32, 32)
+ICON_SIZE = 256
+
+
+def rename_family(font, family: str) -> None:
+    style = font["name"].getDebugName(2) or "Regular"
+    for rec in font["name"].names:
+        if rec.nameID in (1, 16):
+            rec.string = family
+        elif rec.nameID == 4:
+            rec.string = f"{family} {style}"
+        elif rec.nameID in (3, 6):
+            rec.string = f"{family.replace(' ', '')}-{style.replace(' ', '')}"
+
+
+def build_fonts() -> None:
+    from fontTools import subset
+    from fontTools.ttLib import TTFont
+
+    out = SITE / "fonts"
+    out.mkdir(exist_ok=True)
+    for src, name, pin, family in FONTS:
+        font = TTFont(ASSETS / "fonts" / src)
+        if pin:
+            from fontTools.varLib.instancer import instantiateVariableFont
+            font = instantiateVariableFont(font, pin)
+        if family:
+            rename_family(font, family)
+        opts = subset.Options()
+        opts.flavor = "woff2"
+        opts.layout_features = ["*"]
+        opts.name_IDs = ["*"]
+        opts.notdef_outline = True
+        sub = subset.Subsetter(opts)
+        sub.populate(unicodes=subset.parse_unicodes(LATIN))
+        sub.subset(font)
+        font.flavor = "woff2"
+        font.save(out / name)
+        print(f"  {name}: {(out / name).stat().st_size // 1024} KB")
+    for src, name in FONT_LICENSES:
+        (out / name).write_bytes((ASSETS / "fonts" / src).read_bytes())
+
+
+def build_logo() -> None:
+    src = Image.open(LOGO_SRC).convert("RGBA")
+    w, h = src.size
+
+    # Header mark: the background keyed out, so the blueprint grid shows through the gaps.
+    mark = src.copy()
+    mark.putdata([(0, 0, 0, 0) if p[:3] == LOGO_BG else p for p in mark.getdata()])
+    mark.save(SITE / "logo.png", optimize=True)
+
+    # Favicons keep the dark square, so the mark reads on light browser chrome too.
+    def padded(size: int, scale: int) -> Image.Image:
+        canvas = Image.new("RGBA", (size, size), LOGO_BG + (255,))
+        big = src.resize((w * scale, h * scale), Image.NEAREST)
+        canvas.paste(big, ((size - big.width) // 2, (size - big.height) // 2))
+        return canvas
+
+    padded(180, 2).convert("RGB").save(SITE / "apple-touch-icon.png", optimize=True)
+    padded(192, 2).save(SITE / "icon-192.png", optimize=True)
+    padded(512, 5).save(SITE / "icon-512.png", optimize=True)
+    small = src.resize((96, 96), Image.LANCZOS)
+    small.save(SITE / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+
+    # SVG favicon wrapping the pixel art, so existing pages that link favicon.svg get the new mark.
+    buf = io.BytesIO()
+    src.save(buf, "PNG", optimize=True)
+    b64 = base64.b64encode(buf.getvalue()).decode()
+    (SITE / "favicon.svg").write_text(
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}">'
+        f'<image width="{w}" height="{h}" style="image-rendering:pixelated" '
+        f'href="data:image/png;base64,{b64}"/></svg>\n', encoding="utf-8")
+    print("  logo.png, favicon.svg, favicon.ico, apple-touch-icon.png, icon-192.png, icon-512.png")
+
+
+def build_icons(names: list[str]) -> None:
+    out = SITE / "icons"
+    out.mkdir(exist_ok=True)
+    missing = [n for n in names if not (ASSETS / "icons" / f"{n}.png").exists()]
+    if missing:
+        sys.exit(f"not in assets/icons: {', '.join(missing)}")
+    for name in names:
+        lum = Image.open(ASSETS / "icons" / f"{name}.png").convert("L").resize((ICON_SIZE, ICON_SIZE), Image.LANCZOS)
+        mask = Image.new("LA", lum.size, 255)
+        mask.putalpha(lum)
+        mask.save(out / f"{name}.png", optimize=True)
+    print(f"  {len(names)} icons into site/icons/")
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    sub.add_parser("fonts")
+    sub.add_parser("logo")
+    p = sub.add_parser("icons")
+    p.add_argument("names", nargs="+")
+    sub.add_parser("all")
+    args = ap.parse_args()
+
+    if args.cmd in ("fonts", "all"):
+        build_fonts()
+    if args.cmd in ("logo", "all"):
+        build_logo()
+    if args.cmd == "icons":
+        build_icons(args.names)
+    if args.cmd == "all":
+        existing = sorted(p.stem for p in (SITE / "icons").glob("*.png")) if (SITE / "icons").exists() else []
+        if existing:
+            build_icons(existing)
+
+
+if __name__ == "__main__":
+    main()

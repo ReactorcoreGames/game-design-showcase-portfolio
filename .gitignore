@@ -15,3 +15,9 @@ desktop.ini
 
 # Wrangler (Cloudflare Pages deploys)
 .wrangler/
+
+# Raw source material (fonts, icons, article zips, identity images). Only the optimized files the site uses are copied into site/.
+assets/
+
+# Reactorcore's working notes
+wip/
