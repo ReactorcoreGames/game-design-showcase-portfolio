@@ -47,7 +47,7 @@ The full plan, reasons and decisions are in `workflow/site-plan.md`. Read it bef
 - [x] C2: "Reactorcore's Big Projects" and "Astroneer 8th Planet" articles published
 - [x] C2: the two guest articles published in full, with author credit and source links at the top
 - [x] C3: AAL Universe page (one polished page) and its image spec (up to 10 Klein images)
-- [ ] AAL images generated
+- [x] AAL images generated
 
 ### D. The book: *Game Design Technology: The Holy Grail of Fun*
 
