@@ -118,6 +118,11 @@ On pay, hourly billing doesn't fit how the work happens: design epiphanies arriv
 
 No hourly rate. Drop the $1600/month and $50/hour figures.
 
+Done in B3. The page has a TL;DR panel, three services, proof of work (designs, articles, catalogue highlights), how-I-work, pay, terms and contact, and keeps the two red mecha images as framed art. The book stays off the page until D7. Reactorcore asked for the rates to be set for them, and the page uses this scale (the price follows the pressure):
+- retainer: part-time with no deadlines or pressure €500–€1000/month, design lead €1500/month (the default), priority lead with tight deadlines, on-call availability and own projects on hold up to €3000/month
+- design review (one to four weeks): from €400, quoted per project
+- complete design (document plus showcase page): from €1500, quoted per project
+
 ### Phase C: content sections
 
 **C1. Articles import tool and the first batch.** The articles move off Google Docs onto the site. The sources are the 20 Google Docs HTML exports in `assets/gd articles raw/` (zips, 131 MB in total, mostly images). Write `tools/articles.py`:
@@ -169,7 +174,7 @@ Propose the final table of contents, a target length, and a voice guide built fr
 
 **Format.** HTML/CSS is the book's main format, as multiple pages: one per chapter, with real navigation that a page-based format can't offer. Skip PDF: it lays text out in fixed pages, which reads badly on phones, and it's laborious to typeset well. The chapters are written once as HTML, and both editions come from those same files.
 
-**D7. Book site.** `site/book/`: a contents page, one HTML page per chapter, a sidebar contents list, previous/next links and anchor links on headings. Give it its own colour from the logo variants. Add a link to the itch.io edition on every page. Also add a Book button to the "On this site" group in `links.html`; it was left out in B2 because the book didn't exist yet.
+**D7. Book site.** `site/book/`: a contents page, one HTML page per chapter, a sidebar contents list, previous/next links and anchor links on headings. Give it its own colour from the logo variants. Add a link to the itch.io edition on every page. Also add a Book button to the "On this site" group in `links.html`, and mention the book in the hire-me page's proof of work; both were left out in B2/B3 because the book didn't exist yet.
 
 **D8. Offline edition and store page.** A build script (`tools/book.py`) that packages the same chapter pages for download:
 - **Main download:** a zip of the book as a self-contained HTML folder (fonts and images inside, no CDN or network calls), opened by double-clicking `index.html`. It looks and navigates exactly like the online edition.
@@ -189,5 +194,5 @@ These are checklist sections 2–6 as before (pilot, 37 rewrites, new pages, ima
 3. **Time zone:** left out.
 4. **Book title:** *Game Design Technology: The Holy Grail of Fun*, confirmed.
 5. **Merge timing:** `nexus-overhaul` waits and merges after B1.
-6. **Hire-me pay model:** retainer from €1500 to €3000 a month, fixed-price commissions and revshare, with no hourly rate. Approved.
+6. **Hire-me pay model:** retainer from €500 (relaxed part-time) through €1500 (the default) to €3000 a month, fixed-price design reviews (from €400) and complete designs (from €1500), and revshare, with no hourly rate. Approved; the exact figures were set in B3.
 7. **Book format:** multi-page HTML online, with a downloadable offline HTML zip and an EPUB bonus. No PDF.
