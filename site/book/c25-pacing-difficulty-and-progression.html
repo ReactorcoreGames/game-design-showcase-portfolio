@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacing, Difficulty and Progression Without the Scam · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="The last chapter showed why ramps, zero-to-hero and scaling don&#x27;t work. So what does? Here are my recommendations for pacing, difficulty and progression.…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c25-pacing-difficulty-and-progression.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 25: Pacing, Difficulty and Progression Without the Scam · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="The last chapter showed why ramps, zero-to-hero and scaling don&#x27;t work. So what does? Here are my recommendations for pacing, difficulty and progression.…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c25-pacing-difficulty-and-progression.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 25: Pacing, Difficulty and Progression Without the Scam · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="The last chapter showed why ramps, zero-to-hero and scaling don&#x27;t work. So what does? Here are my recommendations for pacing, difficulty and progression.…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 25: Pacing, Difficulty and Progression Without the Scam",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c25-pacing-difficulty-and-progression.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c24-infinite-metagames.html">
+    <link rel="next" href="c26-worlds-that-last.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html" aria-current="page"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a><ol class="toc-secs"><li><a href="#campaigns-made-of-modules">Campaigns made of modules</a></li><li><a href="#balance-by-real-life-logic">Balance by real-life logic</a></li><li><a href="#abundance-from-the-start">Abundance from the start</a></li><li><a href="#perfecting-your-world">Progression as perfecting your world</a></li><li><a href="#first-time-returning-and-expert-players">First-time, returning and expert players</a></li><li><a href="#tutorials-and-guidance">Tutorials and guidance</a></li><li><a href="#never-reward-never-punish">Never reward, never punish</a></li></ol></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>9 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c25-pacing-difficulty-and-progression">
+                    <header>
+                    <p class="kicker">Part IV · Chapter 25</p>
+                    <h1>Pacing, Difficulty and Progression Without the Scam</h1>
+                    </header>
+
+                    <section id="intro">
+                    <p><a href="c24-infinite-metagames.html">The last chapter</a> showed why ramps, zero-to-hero and scaling don't work. So what does? Here are my recommendations for pacing, difficulty and progression. They're general and apply to most projects, but only when your project's purpose lines up with them. They assume a game driven by fun mechanics, not a one-time story with no real gameplay.</p>
+                    </section>
+
+                    <section id="modules">
+                    <h2 id="campaigns-made-of-modules">Campaigns made of modules<a class="anchor" href="#campaigns-made-of-modules" aria-label="Link to this section: Campaigns made of modules">#</a></h2>
+
+                    <p>Instead of the same easy-medium-hard shape every time, let each generated campaign have its own shape:</p>
+
+                    <table>
+                    <thead><tr><th>Start</th><th>Middle</th><th>End</th></tr></thead>
+                    <tbody>
+                    <tr><td>easy</td><td>medium</td><td>easy</td></tr>
+                    <tr><td>medium</td><td>medium</td><td>hard</td></tr>
+                    <tr><td>hard</td><td>medium</td><td>hard</td></tr>
+                    <tr><td>hard</td><td>easy</td><td>hard</td></tr>
+                    <tr><td>medium</td><td>medium</td><td>easy</td></tr>
+                    <tr><td>hard</td><td>easy</td><td>easy</td></tr>
+                    <tr><td>easy</td><td>easy</td><td>medium</td></tr>
+                    </tbody>
+                    </table>
+
+                    <p>Vary the length too: very short, shorter, regular, longer, extra long. Playing a shorter or longer session than usual feels refreshing.</p>
+
+                    <p>If the game has themed zones, shuffle them. Forest, desert, snow, lava, always in that order, always meaning easy, medium, hard, hardest, has been done in so many games. A lava stage can be calmer than a forest stage, and a forest packed with obstacles and enemies can be harder than any lava stage. Let some zones not appear in a session, and others appear twice: desert, desert, snow, forest.</p>
+
+                    <p>The central point: treat every aspect of a campaign as a swappable module. A non-exhaustive list of parameters the campaign generator can pick:</p>
+
+                    <ul>
+                    <li><strong>Difficulty:</strong> how tough or lethal are opponents overall?</li>
+                    <li><strong>Pacing:</strong> how many opponents, how aggressive, what types?</li>
+                    <li><strong>Length:</strong> how far to travel, how many rooms or objectives?</li>
+                    <li><strong>Number of zones</strong> or areas to complete, compared to the standard?</li>
+                    <li><strong>Supplies:</strong> scarce, fair or abundant resources and ammunition?</li>
+                    <li><strong>Mixing:</strong> how likely is content from one zone to show up in others?</li>
+                    <li><strong>Starting state:</strong> does the player begin with nothing, some gear, or heavily equipped?</li>
+                    <li><strong>Bosses:</strong> all, some or none?</li>
+                    <li><strong>Availability:</strong> is everything included this time, or are some items, vehicles or characters missing?</li>
+                    </ul>
+
+                    <p>Settings don't have to be three steps. Two can be enough (small, large), nine can be fun (nano to enormous), or a number from 1 to 100. I usually use fixed steps and then "mutate" them slightly with a small random multiplier, so they're both readable and varied.</p>
+
+                    <p>Don't build levels, maps or campaigns so they can only be played and understood one way ("lava is the hardest, so it always comes last"). Look for chances to make anything and everything modular, so the generator has more to shuffle. That's what keeps an infinite game fresh.</p>
+                    </section>
+
+                    <section id="real-life">
+                    <h2 id="balance-by-real-life-logic">Balance by real-life logic<a class="anchor" href="#balance-by-real-life-logic" aria-label="Link to this section: Balance by real-life logic">#</a></h2>
+
+                    <p>An infinite game can't use the usual progression where the player just keeps getting stronger, because it never ends. So it needs a natural reason for the player to stay balanced with the world. The player can become overpowered and stay that way, but the world gives them good reasons to give up power sometimes, or to lose it through circumstances.</p>
+
+                    <p><cite>Minecraft</cite> is a clean example. You spawn with nothing, and quickly boost your power by mining, crafting and equipping armor, weapons and potions. But the world is dangerous, especially in the unknown places you keep going to for new adventures, and nothing protects you completely. When you die, your equipment stays where you fell. And equipment wears out with use, so it needs maintenance or replacement. The important thing to notice is that <cite>Minecraft</cite> simply mimics real life.</p>
+
+                    <p>Real life already has the best solutions for organizing an infinite game's progression, balance and narrative. It starts from simple things: how things are made, how the world works, how things relate to each other.</p>
+
+                    <ul>
+                    <li><strong>Powerful things are costly.</strong> If something is powerful, durable and intricate, it was usually expensive, slow and complex to make. That applies to characters, creatures, weapons, tools, armor, buildings and vehicles alike, and it naturally makes powerful things rare.</li>
+                    <li><strong>Nothing lasts forever.</strong> Things degrade through use, age and entropy. Damage can be reversed with maintenance, which costs resources, time and labor. If materials run short, the player may have to let something powerful go because they can't keep it running.</li>
+                    <li><strong>Everything is connected.</strong> Changing one thing changes others, sometimes unpredictably and dangerously. A careless player can trigger something they shouldn't and pay for it.</li>
+                    <li><strong>Things need supplies.</strong> Fuel, ammunition, food, energy. They don't appear from nowhere. Logistics give even very powerful things vulnerabilities.</li>
+                    <li><strong>The world is bigger than you.</strong> Nature is more powerful than people, and there's always a bigger fish. Even someone who conquers a planet is at the mercy of cosmic events, and can only try to limit the damage.</li>
+                    <li><strong>Knowledge can be lost.</strong> If a player can build something, there's a blueprint stored somewhere, and storage can burn, break or lose power. Researching from scratch is slow. Progress doesn't only go up; it sometimes goes down.</li>
+                    </ul>
+
+                    <p>Start from these, and every piece of content gets sensible balance naturally, without arbitrary numbers. It's the foundations approach from <a href="c21-foundations-before-content.html">Chapter 21</a>, applied to progression.</p>
+                    </section>
+
+                    <section id="abundance">
+                    <h2 id="abundance-from-the-start">Abundance from the start<a class="anchor" href="#abundance-from-the-start" aria-label="Link to this section: Abundance from the start">#</a></h2>
+
+                    <p>In my own projects, players don't have to grow or grind their way out of scarcity. They're given abundance from the start, in resources and in abilities. From the very beginning, the game serves the player what they came for, as directly as possible, with the arbitrary limits and obstacles that usually stand in the way removed.</p>
+
+                    <p>This might sound like it removes the challenge. It doesn't. It moves the challenge to where it belongs. Scarcity in these games is never a design goal. It only ever appears as a natural consequence (you spent your ammunition, your supply line was cut, the planet is poor) or as a campaign parameter the generator chose this time. The player is never kept poor so they'll play longer. They face real, believable challenges with everything the game has to offer at their fingertips.</p>
+
+                    <p>And it removes the reasons to cheat that <a href="c15-when-players-misbehave.html">Scenario 2</a> described. When nothing is locked away, there's nothing to break in and steal.</p>
+                    </section>
+
+                    <section id="perfecting">
+                    <h2 id="perfecting-your-world">Progression as perfecting your world<a class="anchor" href="#perfecting-your-world" aria-label="Link to this section: Progression as perfecting your world">#</a></h2>
+
+                    <p>So what does progression look like over the long run? The player tries to make themselves as powerful and secure as they can, and to stay that way, except when the situation calls for giving something up. Sometimes they invest: pouring wealth into a struggling village to turn it into a city, or building a dam to power something they want. Sometimes they have to change form: the giant mech suit won't fit into the narrow cave where the treasure is, or a delicate mission needs a light infiltration outfit instead of an army.</p>
+
+                    <p>So locally, their power rises and falls with what they're doing. But on the big scale, they are progressing. Not necessarily by becoming more powerful. By <strong>perfecting their world</strong>: making it more personal, more their own style, more of a masterpiece.</p>
+
+                    <p>A good analogy is bonsai, or gardening in general. You keep improving it while taking care of it, watching it evolve beautifully, careful not to mess it up, drawing out its full potential. In the real world, we call this "making the world a better place". An infinite game can let players do exactly that, endlessly.</p>
+                    </section>
+
+                    <section id="three-players">
+                    <h2 id="first-time-returning-and-expert-players">First-time, returning and expert players<a class="anchor" href="#first-time-returning-and-expert-players" aria-label="Link to this section: First-time, returning and expert players">#</a></h2>
+
+                    <p>Three kinds of player arrive after a fresh install, and developers often only design for one:</p>
+
+                    <ul>
+                    <li><strong>The first-time player,</strong> who may have little experience with games at all.</li>
+                    <li><strong>The experienced player,</strong> who has played many other games.</li>
+                    <li><strong>The returning player,</strong> who played your game before, and reinstalled it months or years later.</li>
+                    </ul>
+
+                    <p>For first-time players, or fresh characters, put limiters on how hard things can get in the first one to ten hours, hidden or visible. The controls are new and the systems unknown, so a grace period that eases them in is needed before the full potential of the game is let loose. Without a safe place to learn, many will leave. Throwing someone in at the deep end isn't a healthy way to teach. Being supportive, gentle and caring is the best way to welcome a new person, especially someone who's never played games before. And experienced players appreciate the hospitality too.</p>
+
+                    <p>For experts, give a fast track to turn the limiters off: either by doing something drastic in the game, or with a switch in the options, something like "pro mode: no limits, not for beginners!"</p>
+
+                    <p>If the game has an open world, you can use routes instead of limiters: more dangerous paths with higher rewards for the higher risk. Immersive sims do this well. <cite>Deus Ex</cite> offers several ways to reach an objective (close combat, ranged combat, stealth, talking). In <cite>Fallout: New Vegas</cite> you can head straight toward your goal along the shortest road, which is guarded by monsters that will easily kill a new character, but a crafty player might sneak past them instead of taking the long, safe way around.</p>
+
+                    <p>For returning players: let them skip what they already know. Never force an unskippable tutorial on someone who has played before. Offer a quick refresher of the controls and systems for those who've forgotten. And make sure their old save still works.</p>
+
+                    <p>Remember all three, and you satisfy everyone without excluding anyone.</p>
+                    </section>
+
+                    <section id="tutorials">
+                    <h2 id="tutorials-and-guidance">Tutorials and guidance<a class="anchor" href="#tutorials-and-guidance" aria-label="Link to this section: Tutorials and guidance">#</a></h2>
+
+                    <p>Teaching the game is part of the game. A few principles:</p>
+
+                    <ul>
+                    <li><strong>Spell it out. Be blunt.</strong> Don't make players guess what a thing does or where to go to learn it. Clear beats clever every time.</li>
+                    <li><strong>Introduce things gradually,</strong> as the player needs them, instead of in one wall of text at the start.</li>
+                    <li><strong>Let them learn by doing,</strong> in a safe space where failure costs nothing.</li>
+                    <li><strong>Keep the interface clean.</strong> Show what matters now, and let the rest be found when it's needed.</li>
+                    <li><strong>Always let them look it up again.</strong> Provide a place the player can consult whenever they need help: a guide, a manual, a codex, a helpful character. Support, available on demand, never forced.</li>
+                    </ul>
+
+                    <p>And never design anything that only makes sense with knowledge of the developer's own inner mind. If someone outside your head can't understand it, it isn't finished.</p>
+                    </section>
+
+                    <section id="never-reward-or-punish">
+                    <h2 id="never-reward-never-punish">Never reward, never punish<a class="anchor" href="#never-reward-never-punish" aria-label="Link to this section: Never reward, never punish">#</a></h2>
+
+                    <p>Don't punish and don't reward. They're two sides of the same coin (<a href="c09-understanding-human-beings.html">Chapter 9</a>), and neither does the player any favors. In game form, the common extrinsic motivators are:</p>
+
+                    <ul>
+                    <li>unlockables,</li>
+                    <li>progression systems,</li>
+                    <li>penalties for mistakes,</li>
+                    <li>collectables,</li>
+                    <li>money and shop systems,</li>
+                    <li>upgrade trees,</li>
+                    <li>punishments for not playing the way the developer intended,</li>
+                    <li>achievement notifications.</li>
+                    </ul>
+
+                    <p>All of them damage a game's long-term sustainability. They seem to work, but only for a short time, and for the wrong reasons. Ask the two questions: what do you want the player to do, and what do you want their reasons to be for doing it?</p>
+
+                    <p>Please note what this does and doesn't mean. It doesn't mean a game can't have money as part of its world, or items you find, or tools you build. A merchant selling goods in a believable world economy is part of the world. A shop whose prices exist to slow the player down, or to push them toward a cash shop, is a motivator bolted on top. The question is always whether the thing is part of the game's world and serves its purpose, or is a lever to steer the player's behavior from outside the fun.</p>
+
+                    <p>Intrinsic motivation is the alternative. The player plays because the moment-to-moment play, the mechanics and the metagame are enjoyable in themselves. Make movement fun. Make combat, or whatever the interaction is, fun. Easy to pick up, and deep and varied no matter how long you play. As long as nothing gets in the way of that intrinsic fun, the game stays playable forever, and stays fun even after all its content has been seen.</p>
+
+                    <h3 id="feedback">Feedback is not a reward<a class="anchor" href="#feedback" aria-label="Link to this section: Feedback is not a reward">#</a></h3>
+
+                    <p>Players still need to see that their actions matter. That's feedback, and it's different from reward. Feedback is information: it shows what happened, what has changed, what still needs doing. It can celebrate a victory with the player, as if the game is happy for them. It can mourn a loss with them, with empathy. What it must never do is reward or punish. It's gratitude and acknowledgement, not praise and not judgement. The next chapter shows what this looks like: mementos and a living history of the player's world.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c24-infinite-metagames.html"><span class="label">← Previous · Part IV · Chapter 24</span><span class="pager-title">Infinite Metagames</span></a>
+                    <a class="pager-link next" href="c26-worlds-that-last.html"><span class="label">Next → · Part IV · Chapter 26</span><span class="pager-title">Worlds That Last</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

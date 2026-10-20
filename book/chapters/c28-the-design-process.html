@@ -1,0 +1,156 @@
+<article class="chapter" id="c28-the-design-process">
+<header>
+<p class="kicker">Part V · Chapter 28</p>
+<h1>The Design Process</h1>
+</header>
+
+<section id="scope-creep">
+<h2 id="scope-creep-is-not-the-enemy">Scope creep is not the enemy</h2>
+
+<p>You've probably heard the warning: "Beware of scope creep! Keep your game small and limited, or you'll never finish it." I want to show you why that warning is aimed at the wrong thing.</p>
+
+<p>Scope creep (or feature creep) is what happens when a developer tries to design their game while already fully building it with code, writing, art and sound. Usually they skipped the design phase entirely, or rushed through it superficially, and went straight to building the full game, not even a test prototype. It's like building a house on the go, and writing the blueprint afterwards, or while the walls are going up.</p>
+
+<p>Here's how it plays out. While building, the developer notices design problems and comes up with quick fixes. They also come across exciting new ideas and force them into the project, whether or not they fit what's already there. Along the way they lose track of the project's purpose, or never had one, and coast on a vague, blurry idea of what the game should be. There's no real design. Just an attempt to brute-force the game into something good through hard work: stubbornly ("it'll get better if I keep pushing"), desperately ("the deadline is crushing me"), or carelessly ("who needs design anyway?"), too caught up in the momentum to stop, sit down, pick up a pen and take design seriously.</p>
+
+<p>The result:</p>
+
+<ul>
+<li>The mechanics get more convoluted instead of more streamlined.</li>
+<li>The game bloats with features that don't play well together.</li>
+<li>The project loses direction, and motivation suffers.</li>
+<li>The interface becomes a clumsy mess that has to be reworked again and again for each new feature, throwing away earlier work, or is left as it is, layered with more and more until it's unusable.</li>
+<li>Adding anything new gets harder and harder, because without standards, every new thing needs its own special assets and rules.</li>
+<li>The game gets harder to maintain, because incoherent features keep breaking each other.</li>
+<li>The code starts contradicting itself, held together by more and more hacks, getting less stable over time.</li>
+</ul>
+
+<p>The project fails in some way, or wastes the potential it had. And then the advice spreads: "scope creep is bad, keep your games small and restricted."</p>
+
+<p>But the problem was never the size of the dream. It was the missing design phase. And the advice has a heavy cost: games with no ambition, no expansion potential, no longevity and no innovation, because everyone has been scared away from ambition by a false boogeyman. New designers get told not to make their dream game first, but to wait until some unknown time in the future (when? maybe never?), and make copies of old games "for training" in the meantime. That's demotivating, and the dream game is the main reason most people came to game development in the first place.</p>
+
+<p>I advocate the opposite. If you came here to make your dream game, make it your first project, on one condition: figure out a scaled-down version of it that's feasible for your current skill and knowledge. You learn to make the dream game by making the dream game. Newcomers who start with their dream often make the coolest, freshest and most fun games, even when they're rough. A dream game is a dream because there was something inspiring enough about it to jump into the unknown for. That should be nurtured, not stamped out.</p></section>
+
+<section>
+<h2 id="scope-maximization">Scope maximization</h2>
+
+<p>So instead of fearing scope creep, master it. At the very beginning, a project is only an idea or a vision. Stop. Don't open the game engine yet.</p>
+
+<p>First, chart out the maximum range of possibilities the project could have over its entire lifespan. I call this <strong>scope maximization</strong>. Embrace scope creep to your heart's content, on paper, where it costs nothing. Take your time. Write it down however is most comfortable: pen and paper, a text file, a document.</p>
+
+<p>Writing and doodling is the cheapest, fastest thing a human can do to develop an idea. No building, no paying, no considerable effort. Use that to your advantage.</p>
+
+<p>You'll hit gaps in your knowledge where you don't know how to continue. That's your cue to go looking: search online, go to a library, play games, watch films, go outside, go on adventures, do something fun related to what you're designing. By "procrastinating" or searching actively, you'll eventually bump into something good enough to give you the next step.</p>
+
+<p>During this phase, use whatever helps: gather information, test theories, build quick throwaway prototypes, ponder whether certain content and features are viable. And explore the limits and quirks of the technology you intend to use, to find out whether what you're planning is even possible with it.</p>
+
+<p>Two rules for this phase:</p>
+
+<ul>
+<li><strong>Don't rush it.</strong> The time and patience invested here pay themselves back many times over. It's cheaper here than anywhere later. You'll look slow at first, but with a good design, your pace afterwards will be far faster than brute-forcing.</li>
+<li><strong>Keep the details flexible.</strong> Don't write meticulous details for final content or systems. Keep things general and open to change, but coherent. A feature may look somewhat different in the finished game, but its core intent stays the same.</li>
+</ul>
+
+<p>Don't start building until you've reached a good degree of confidence and coherence. Then begin developing the game in its absolute minimal, easiest, cheapest, quickest form.</p>
+
+<p>The maximized scope becomes your roadmap for the whole future of the project. It tells you how to expand the minimal skeleton, in what order things should be built, and how. It gives you foresight: when you build the interface, you know to leave room for what's coming, so the final result is coherent and elegant instead of patched together. You'll never feel lost about where the project begins and ends, and you won't design yourself into a dead end that needs a full restart. And best of all, you're working on your dream already.</p>
+</section>
+
+<section id="tools">
+<h2 id="tools-of-the-design-phase">Tools of the design phase</h2>
+
+<dl>
+<dt>Pen and paper</dt>
+<dd>Cheap, crappy doodles are the fastest way to see an idea in every situation you can think of. The robot game's 2D-or-3D question in <a href="c02-three-projects-two-designers.html">Chapter 2</a> was settled this way.</dd>
+
+<dt>Mind dumps</dt>
+<dd>When an idea is too complex to judge, write down everything about it: the idea, everything about it that feels unknown or uncertain, its pros and cons, the alternatives and their pros and cons, and anything else remarkable. Completely free-form. The point is to get it out of your head onto paper, where you can see the problems and benefits before testing anything.</dd>
+
+<dt>Cheap experiments</dt>
+<dd>When you don't know, test it in the fastest, easiest, cheapest way possible: paper and scissors, toys on a table, a throwaway code prototype, a logical walk-through in your head. These are temporary, disposable experiments that take no more effort than necessary. Their only job is to give you information.</dd>
+
+<dt>Documents that your future self can read</dt>
+<dd>Record ideas as soon as they come, because you'll forget them, and some never come back. Write them so you'll understand them months later; notes so vague you can't tell what they meant are a very common mistake. A design may end up as text documents, photos, scans, reference folders, video clips and programs, so staying organized is a custom puzzle for each project. Keep everything in one place.</dd>
+
+<dt>Backups</dt>
+<dd>Back up your work, often, in as many separate places as possible. It's a horrible feeling to know you recorded something important and find it lost when you need it. Protect it.</dd>
+</dl>
+</section>
+
+<section id="prototypes">
+<h2 id="prototypes-are-proving-grounds">Prototypes are proving grounds</h2>
+
+<p>A prototype is a test, not the start of the final game. Use prototypes to prove or disprove ideas, then throw them away. Don't build the final project on top of a prototype, however tempting it is. A prototype is built quickly, with shortcuts, to answer one question. Building on it means building on those shortcuts, and the final game inherits every one of them.</p>
+
+<p>If your vision is fuzzy, a series of throwaway experiments can also help you learn the engine you chose, or find out which of your ideas hold up. You might even enjoy them. Sometimes an experiment derails you in a fun direction you didn't consider, toward something better than the original plan.</p>
+</section>
+
+<section id="build-order">
+<h2 id="the-barebones-game-first">The barebones game first</h2>
+
+<p>When it's time to build the real game, build it in order. First, a minimal barebones version that's <strong>playable from start to end</strong>, however basic. Then add systems and content, gradually, toward the full scope.</p>
+
+<p>Why start and end, and not one polished slice? Because a game that's playable from start to end proves the whole structure works: the beginning, the loop, the progression, the ending or the endlessness. A polished slice proves only that one slice works. And a complete barebones game can be tested, shown and even released while it grows, which a beautiful fragment can't.</p>
+
+<p>Know what your minimum viable product is: the smallest version that actually fulfills the purpose. Focus on what matters. Everything else waits for its turn on the roadmap.</p>
+
+<p>Prioritize features the way the purpose decides (<a href="c20-taking-inventory.html">Chapter 20</a>): primary, then secondary, then tertiary. Some things depend on others, so a checklist helps: do <em>not</em> continue until X has been done, when everything after X relies on it.</p>
+
+<p>Whatever method you use to track the work (kanban boards, scrum, agile or just a list), use whatever fits your project and your team. None of them replace design. They only organize the building of it.</p>
+</section>
+
+<section id="paranoid">
+<h2 id="good-design-is-paranoid-design">Good design is paranoid design</h2>
+
+<p>If you did the scope work properly, problems during development won't come from the design. If you tested your theories in prototypes, paper and mind simulations, and kept your design mostly independent of any specific technology, it stays flexible without losing its identity. Well-crafted rules are universal; they work anywhere.</p>
+
+<p>Problems will come from outside the design instead: obscure engine limits and bugs, limited or uncertain funding and time, a store's terms of service. When they do, the design doesn't need to change. Only how something is implemented.</p>
+
+<table>
+<thead><tr><th>Problem</th><th>Solution</th></tr></thead>
+<tbody>
+<tr><td>The engine can handle far fewer characters and items on screen than planned.</td><td>Work with what you have: set a lower maximum.</td></tr>
+<tr><td>Colliders misbehave on objects that are too wide or too narrow.</td><td>Work around it: shorten objects, or split them into connected segments.</td></tr>
+<tr><td>Spawning and removing objects causes lag.</td><td>Use a solution that suits the engine, like object pooling.</td></tr>
+<tr><td>A store bans a kind of asset you used.</td><td>Find a store that allows it, or replace those assets with a cost-effective alternative.</td></tr>
+<tr><td>A third-party plugin your design relied on is discontinued and deleted.</td><td>This one should have been caught during scoping. Either design it so it isn't needed, or make sure you can keep using the existing version from start to finish.</td></tr>
+</tbody>
+</table>
+
+<p>That last one isn't your fault, but mitigating the risk is your responsibility. Always have a plan B and a backup. It's healthy to be paranoid about the engines, plugins, technologies, people and companies you rely on, because more often than not, they're there for themselves, not for you. Where you have the choice, prefer offline, installed tools over ones that only work in the cloud. Anything that can go wrong may go wrong, so plan around it. This is part of being a skilled designer.</p>
+
+<h3 id="punched-in-the-face">"Everyone has a plan until they get punched in the face"</h3>
+
+<p>I hear this one whenever someone suggests planning. There's some truth in it for unpredictable situations, but using it to dismiss planning altogether is shortsighted. Planning isn't about predicting every outcome. It's about building resilience: a map of the terrain, the obstacles you can see, and contingencies for the ones you can't. That's exactly why I insist on keeping the details flexible and only setting the general points. Unique characters, specific level layouts and other final details only make sense once the framework and the content workflow are built around the real limits of your technology. The final form of everything in the game comes from a dance between your flexible design and the tools you're using, and the dance only works if the design leaves room to move.</p>
+</section>
+
+<section id="time">
+<h2 id="everything-takes-longer">Everything takes longer than it seems</h2>
+
+<p>Be aware of time, estimate it, and value it. And expect everything to take longer than it seems. It's very easy for days to turn into weeks, weeks into months and months into years, even while working as fast as you can and doing only what's necessary.</p>
+
+<p>My rough rule of thumb: estimate how long you think something will take, then multiply it by eight, and look honestly at how long that really is. (If you've done that kind of work before, five is closer.) Not because you'll be slow, but because every task hides rabbit holes, prerequisites and surprises you can't see from the start.</p>
+
+<p>Use it to judge feasibility. If the ×8 version of a plan is longer than you can realistically sustain, don't drop the dream, but look for an easier way to build it: simpler art, generated content instead of handmade, a smaller first version. And use it to know when to pivot. If a part is taking far longer than even the ×8 estimate, that's a signal to step back and ask whether there's a simpler path to the same purpose.</p>
+</section>
+
+<section id="kill">
+<h2 id="when-is-it-ready-when-to-kill-it">When is it ready, and when to kill it</h2>
+
+<p><strong>It's ready to release</strong> when the barebones version fulfills the purpose: when someone with the need it was made for plays it and has that need met, without any other need being violated. Not when it's "finished", because a well-designed game keeps growing. Not when it's polished, because polish on a hollow core is polishing a ball of crap. When it does what it's for.</p>
+
+<p><strong>It's time to kill it</strong> when the evidence shows the design is headed for failure and can't be saved: the purpose turned out to be something another strategy meets far better, the strategy can't meet the need however it's built, or the project can't be finished with the resources that really exist. Killing a project isn't a defeat. The years you'd spend pushing a doomed project are years you won't get back. Keep the notes, keep what you learned, salvage what can be salvaged, and put your life into something that can succeed.</p>
+
+<p><strong>How do you know it'll be viable?</strong> You check it against the purpose, again and again, as the whole book has shown. Did the inspiration point to a real need? Does the strategy plausibly meet it? Have the riskiest parts been tested? Do you have, or can you get, what it takes to build it? If yes, carry on with confidence. Never rely on miracles for success. Don't leave things to chance.</p>
+</section>
+
+<section id="mistakes">
+<h2 id="you-will-make-mistakes">You will make mistakes</h2>
+
+<p>You will make mistakes. Remember that it's all about becoming progressively less stupid.</p>
+
+<p>And watch out for one trap in particular: enjoying the making of the game so much that the making becomes the game, and you forget to make the game itself good on its own. Building systems, tinkering with tools and polishing pipelines can be wonderfully satisfying. Just keep asking whether what you're making serves the purpose, for the player.</p>
+
+<p>Finally, don't forget to rest. Taking care of your health is as important as the work. If you get sick and burn out, the project fails, and all the work goes with it. Eat well, sleep well, drink water, get outside, move your body, have fun, see people, and sometimes do nothing at all.</p>
+</section>
+</article>

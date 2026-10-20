@@ -5,6 +5,7 @@ files the site uses.
 
     python tools/brand.py fonts                 WOFF2 Latin subsets into site/fonts/
     python tools/brand.py logo                  header logo + favicon set into site/
+    python tools/brand.py book-logo             the book's green mark into site/book/
     python tools/brand.py icons name ...        game-icons PNG -> alpha mask into site/icons/
     python tools/brand.py all                   fonts + logo + every icon already in site/icons/
 
@@ -42,6 +43,7 @@ FONTS = [
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 
 LOGO_SRC = ASSETS / "avatars identity" / "rcg logo color (1).png"  # the cyan variant
+BOOK_LOGO_SRC = ASSETS / "avatars identity" / "rcg logo color (4).png"  # green: the book's own colour
 LOGO_BG = (32, 32, 32)
 ICON_SIZE = 256
 
@@ -85,14 +87,18 @@ def build_fonts() -> None:
         (out / name).write_bytes((ASSETS / "fonts" / src).read_bytes())
 
 
+def keyed(src: Image.Image) -> Image.Image:
+    """The mark with its dark background keyed out, so the blueprint grid shows through the gaps."""
+    mark = src.copy()
+    mark.putdata([(0, 0, 0, 0) if p[:3] == LOGO_BG else p for p in mark.getdata()])
+    return mark
+
+
 def build_logo() -> None:
     src = Image.open(LOGO_SRC).convert("RGBA")
     w, h = src.size
 
-    # Header mark: the background keyed out, so the blueprint grid shows through the gaps.
-    mark = src.copy()
-    mark.putdata([(0, 0, 0, 0) if p[:3] == LOGO_BG else p for p in mark.getdata()])
-    mark.save(SITE / "logo.png", optimize=True)
+    keyed(src).save(SITE / "logo.png", optimize=True)
 
     # Favicons keep the dark square, so the mark reads on light browser chrome too.
     def padded(size: int, scale: int) -> Image.Image:
@@ -118,6 +124,14 @@ def build_logo() -> None:
     print("  logo.png, favicon.svg, favicon.ico, apple-touch-icon.png, icon-192.png, icon-512.png")
 
 
+def build_book_logo() -> None:
+    # The site keeps the cyan logo everywhere, header included; the green mark is the book's cover branding.
+    out = SITE / "book"
+    out.mkdir(exist_ok=True)
+    keyed(Image.open(BOOK_LOGO_SRC).convert("RGBA")).save(out / "book-logo.png", optimize=True)
+    print("  book/book-logo.png")
+
+
 def build_icons(names: list[str]) -> None:
     out = SITE / "icons"
     out.mkdir(exist_ok=True)
@@ -137,6 +151,7 @@ def main() -> None:
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("fonts")
     sub.add_parser("logo")
+    sub.add_parser("book-logo")
     p = sub.add_parser("icons")
     p.add_argument("names", nargs="+")
     sub.add_parser("all")
@@ -146,6 +161,8 @@ def main() -> None:
         build_fonts()
     if args.cmd in ("logo", "all"):
         build_logo()
+    if args.cmd in ("book-logo", "all"):
+        build_book_logo()
     if args.cmd == "icons":
         build_icons(args.names)
     if args.cmd == "all":

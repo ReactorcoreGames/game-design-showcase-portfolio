@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Everything · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="The biggest issue with the common mistake is that decisions, plans and effort get made without being questioned thoroughly. Without asking &quot;why?&quot; as many…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c04-question-everything.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 4: Question Everything · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="The biggest issue with the common mistake is that decisions, plans and effort get made without being questioned thoroughly. Without asking &quot;why?&quot; as many…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c04-question-everything.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 4: Question Everything · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="The biggest issue with the common mistake is that decisions, plans and effort get made without being questioned thoroughly. Without asking &quot;why?&quot; as many…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 4: Question Everything",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c04-question-everything.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c03-how-i-learned-this.html">
+    <link rel="next" href="c05-popularity-is-a-side-effect.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html" aria-current="page"><span class="n">4</span>Question Everything</a><ol class="toc-secs"><li><a href="#not-asking-why">The act of not asking &quot;why&quot;</a></li><li><a href="#the-traps">The traps</a></li><li><a href="#cognitive-biases">Cognitive biases</a></li><li><a href="#the-cost-of-not-verifying">The cost of not verifying</a></li><li><a href="#the-important-question">The important question is &quot;Why?&quot;</a></li></ol></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>6 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c04-question-everything">
+                    <header>
+                    <p class="kicker">Part I · Chapter 4</p>
+                    <h1>Question Everything</h1>
+                    </header>
+
+                    <section id="the-biggest-issue">
+                    <h2 id="not-asking-why">The act of not asking "why"<a class="anchor" href="#not-asking-why" aria-label="Link to this section: The act of not asking &quot;why&quot;">#</a></h2>
+
+                    <p>The biggest issue with the common mistake is that decisions, plans and effort get made without being questioned thoroughly. Without asking "why?" as many times as needed.</p>
+
+                    <p>The usual belief is that if something is popular, worked elsewhere, made a lot of money, is a tradition or someone said it's good, then surely it must be great by default. Why question it? It's been declared good, right? Not so.</p>
+
+                    <p>The danger is that by trusting a tradition, a forecast, a trend, a popular thing or someone's word, I'm not using my own mind to check whether it's actually true, or whether it's compatible with my project. Maybe something works great in one project and is the worst possible idea in mine. Maybe something has been labeled "good" only because of the genuinely good things around it, which hid its actual bad or useless nature.</p>
+
+                    <p>I need to use my own mind and investigate case by case whether something is truly good and compatible with my project, no matter how traditional, popular or good it's claimed to be. I must verify. Always verify. Never believe anything or anyone blindly until I'm sure of it myself. Doing otherwise is design suicide.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="the-traps">The traps<a class="anchor" href="#the-traps" aria-label="Link to this section: The traps">#</a></h2>
+
+                    <p>There are many traps that lead to the common mistake. Here are the main ones:</p>
+
+                    <ul>
+                    <li><strong>Popularity.</strong> A large number of people seem to like it.</li>
+                    <li><strong>Profitability.</strong> It made a remarkable amount of money.</li>
+                    <li><strong>Trends.</strong> A theme, structure or system that's been repeated or copied often.</li>
+                    <li><strong>Tradition.</strong> Anything that's been around for a long time.</li>
+                    <li><strong>Originality.</strong> Anything that differs remarkably from everything else.</li>
+                    <li><strong>Someone said so.</strong> A person with authority, or a person you like, said how they think life would be more wonderful for them.</li>
+                    <li><strong>Forecasting and statistics.</strong> Trying to predict the future while looking backwards at past data, hoping to arrive at that future. Lots of expectations, no guarantees.</li>
+                    <li><strong>Mistaking one for all.</strong> Believing that because someone failed at something, it's forever impossible for anyone, when in reality that person just approached the problem with the wrong tools.</li>
+                    </ul>
+
+                    <p>These, and many more, are called cognitive biases.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="cognitive-biases">Cognitive biases<a class="anchor" href="#cognitive-biases" aria-label="Link to this section: Cognitive biases">#</a></h2>
+
+                    <p>When a person lacks the information, time, willingness or other resources to properly process something new, they may take a mental shortcut to judge it and be done with it, often compromising reason and sense in the process. This easily leads to stupid decisions that seriously harm a project, often without the designer ever noticing the damage.</p>
+
+                    <p>The list of cognitive biases keeps growing every year, and there are well over a hundred of them. Plenty of books and online resources cover them in detail, but I find it unnecessary to learn them all, because they all come from the same source.</p>
+
+                    <p>It's enough to become aware of a few of them to understand the logic behind them, and after that it's trivial to defeat them all, even the ones nobody has named yet. Once I know what a cognitive bias is as a concept, I can notice instantly when I'm about to fall into one, and prevent the mistake before it happens.</p>
+
+                    <p>The crux of every cognitive bias is simply this: believing something is true without verifying it yourself. Blindly trusting that something is good without asking why.</p>
+
+                    <p>Once I know that, I can stop myself as soon as I notice I'm about to make a design decision without being fully sure of its consequences. I know for a fact that a decision made from a cognitive bias can destroy my whole project, so I immediately feel concern, my strong need for success kicks in, and I realize I need to stop, step back and verify the information in whatever way I can, until I'm confident what consequences my decision will have. Only then do I continue. Never before.</p>
+                    </section>
+
+                    <section id="the-cost">
+                    <h2 id="the-cost-of-not-verifying">The cost of not verifying<a class="anchor" href="#the-cost-of-not-verifying" aria-label="Link to this section: The cost of not verifying">#</a></h2>
+
+                    <p>Let me spell out what's at stake, because it's easy to dismiss this as exaggeration.</p>
+
+                    <p>The cost of skipping verification is far worse than the time a shortcut saves. I'm talking about years of work going down the toilet. A huge portion of a human life wasted. Not only that, but I might create a product that causes massive disappointment, or even ends up harmful to its players, or to the world, by accident.</p>
+
+                    <p>Worse, I could get stuck in a cycle of frustration, pain and confusion that lasts for years, never knowing why every honest attempt to improve or polish a project only seems to make it worse. And finding out years later that my work was the worst design I could have made hurts even more if an earlier project was already released and became popular in whatever state it was in.</p>
+
+                    <p>Make no mistake: video games can have a global effect on humanity. Your creations can become popular and concretely change the world just by existing. All major changes in society, culture and industry come from the mindset of the people, and games, like other art and media, can change that mindset with new information, encouragement, suggestions and proposals, whether that was intended or not. A game can speak a powerful message through its very design, with serious, long-reaching, real-life consequences.</p>
+
+                    <p>That's why it's critically important to understand the enormous responsibility you have as a game designer, and to question everything you do thoroughly before committing to any design decision.</p>
+
+                    <p>It's far more satisfying, painless and easy to become aware of the common mistake as early as possible, and to know that none of your future efforts will be destroyed by missing information, or make the world a worse place by accident.</p>
+                    </section>
+
+                    <section id="ask-why">
+                    <h2 id="the-important-question">The important question is "Why?"<a class="anchor" href="#the-important-question" aria-label="Link to this section: The important question is &quot;Why?&quot;">#</a></h2>
+
+                    <p>Ask it as many times as possible, about everything. Here's a spree of examples:</p>
+
+                    <ul class="question-spree">
+                    <li>Why is feature X planned into the game? Why is it needed? Why is it there?</li>
+                    <li>What do you need from this feature? What do you feel about it, and about not having it? Why do you feel that way?</li>
+                    <li>Where did this idea come from? What inspired it? Why did it feel suitable? Why do you think it will work?</li>
+                    <li>If you know other options exist, why did you pick this one? Why not the others?</li>
+                    <li>Why is mechanic Y in the game? What purpose does it serve? What needs is it supposed to satisfy?</li>
+                    <li>Why is the game structured this way? Why is this detail included? Why are these elements organized like this, and what logic got you there?</li>
+                    <li>Why is the game marketed this way? Why is it monetized this way?</li>
+                    <li>If the idea came from another seemingly successful game, why do you think it will work in yours? Why do you think it was good in the original? Do you know for sure, or are you guessing? Why do you want to copy it?</li>
+                    <li>What motivates you? How do you feel, and what do you want?</li>
+                    </ul>
+
+                    <p>Question everything! Never leave ANY piece of the design at the mercy of a cognitive bias or an assumption. Keep digging until you can honestly say you made your decision with your own mind, using your own facts-only judgement.</p>
+
+                    <p>That simple word "why", and the habit of questioning the reasoning behind everything you do, puts you on the path to the real reasons something is the way it is, and to its true consequences if you put it into your own project. No cognitive biases, only real root causes. That's how you avoid the common mistake.</p>
+
+                    <p>By questioning everything and finding definite answers, you can prevent mistakes before they happen. You can tell whether a concept, mechanic, system, structure or feature will clash with your project, what its real consequences are beyond what's visible on the surface, and why it was popular in the first place.</p>
+
+                    <p>"Why" is like an x-ray vision superpower that lets you see the skeleton of your design: what will work, what won't, what has the most potential, what has flaws, what you need and what you must avoid. You never have to rely on popularity, trends or statistics. You never have to hope, guess or assume, as long as you question everything, gather as much information as needed and run experiments for whatever you have no information on. Game design can be simplified into a reliable process. A science.</p>
+
+                    <p>But "why" is only the beginning. It's one of the critical tools of understanding, but it's not the Holy Grail itself. The parts of the Holy Grail are what give the real answers to "why". Asking why is simply the path that leads you to them. They come in <a href="c07-the-holy-grail.html">The Holy Grail</a>.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c03-how-i-learned-this.html"><span class="label">← Previous · Part I · Chapter 3</span><span class="pager-title">How I Learned This the Hard Way</span></a>
+                    <a class="pager-link next" href="c05-popularity-is-a-side-effect.html"><span class="label">Next → · Part I · Chapter 5</span><span class="pager-title">Popularity Is a Side Effect</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

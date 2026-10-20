@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What a Good Game Is · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="Several times in this book I&#x27;ve said &quot;a good game&quot; and promised to say what I mean by it at the end. Here it is.">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c33-what-a-good-game-is.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 34: What a Good Game Is · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="Several times in this book I&#x27;ve said &quot;a good game&quot; and promised to say what I mean by it at the end. Here it is.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c33-what-a-good-game-is.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 34: What a Good Game Is · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="Several times in this book I&#x27;ve said &quot;a good game&quot; and promised to say what I mean by it at the end. Here it is.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 34: What a Good Game Is",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c33-what-a-good-game-is.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c32-growing-as-a-designer.html">
+    <link rel="next" href="b1-needs-at-a-glance.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html" aria-current="page"><span class="n">34</span>What a Good Game Is</a><ol class="toc-secs"><li><a href="#a-definition">A definition</a></li><li><a href="#what-a-good-game-is-not">What a good game is not</a></li><li><a href="#why-this-works">Why this works</a></li><li><a href="#what-to-expect">What to expect</a></li><li><a href="#your-responsibility">Your responsibility as a creator</a></li><li><a href="#make-it-count">Make it count</a></li></ol></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>6 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c33-what-a-good-game-is">
+                    <header>
+                    <p class="kicker">Part V · Chapter 34</p>
+                    <h1>What a Good Game Is</h1>
+                    </header>
+
+                    <section id="definition">
+                    <h2 id="a-definition">A definition<a class="anchor" href="#a-definition" aria-label="Link to this section: A definition">#</a></h2>
+
+                    <p>Several times in this book I've said "a good game" and promised to say what I mean by it at the end. Here it is.</p>
+
+                    <p><strong>A good game is one that fully meets the needs it set out to meet, without violating any others.</strong></p>
+
+                    <p>That's it. Everything else follows from it. In other words, a good game:</p>
+
+                    <ul>
+                    <li><strong>Knows what it's for.</strong> It has a clear purpose, rooted in real human needs, and every part of it serves that purpose, from the mechanics to the store page.</li>
+                    <li><strong>Delivers it.</strong> Someone with that need plays it and has the need met, strongly and reliably, the way the creator felt it when the inspiration first struck.</li>
+                    <li><strong>Does no harm along the way.</strong> It doesn't drain the needs it isn't about: respect, freedom, rest, safety, trust, honesty, the player's time, money and relationships.</li>
+                    <li><strong>Is honest about what it is.</strong> A game that's a game, a tool that's a tool. A short game that says it's short. A price that says what it costs.</li>
+                    <li><strong>Serves the player, not the creator's ego.</strong> It makes life more wonderful for the person playing it, and through that, for the person who made it.</li>
+                    <li><strong>Lasts as long as the need does.</strong> When the need is a lasting one, the game doesn't run out, reset or expire. It keeps meeting it, for years if the player wants.</li>
+                    </ul>
+
+                    <p>Notice what isn't on the list. Graphics, budget, length, genre, popularity, sales, innovation, originality. Any of those can come with a good game, as a side effect. None of them makes a game good. A tiny game with simple art can be a very good game. A huge, beautiful, commercially successful one can be a bad game, if it got there by violating the needs of the people playing it.</p>
+                    </section>
+
+                    <section id="not-good">
+                    <h2 id="what-a-good-game-is-not">What a good game is not<a class="anchor" href="#what-a-good-game-is-not" aria-label="Link to this section: What a good game is not">#</a></h2>
+
+                    <p>A few things look like good games and aren't.</p>
+
+                    <p><strong>A game that appeals to needs without fulfilling them.</strong> Its trailer promises freedom, power or belonging, and the game delivers a scripted ride, a grind or a lonely competition. That's the most common kind of disappointment there is: the need was touched, and then left hungry.</p>
+
+                    <p><strong>A game that's compelling because it's compulsive.</strong> A game built on addiction (timers, streaks, rewards, threats of loss) can hold people for a very long time. That isn't the same as meeting their needs. A good game is one people can put down whenever life calls, and come back to gladly. A game people can't put down, and don't enjoy, is the opposite.</p>
+
+                    <p><strong>A game that harms real life.</strong> A good game never conflicts with the player's real life. It doesn't wreck their sleep, cost them their rent, damage their relationships, anger their family, or wear down their capacity to connect with other people. If a game makes life outside it worse, it has failed, however much people play it.</p>
+
+                    <p><strong>A fantasy that alienates from life.</strong> Play and fantasy are wonderful, and they can be constructive or destructive. Constructive play lets people come back to their lives refreshed, stronger, more themselves. Destructive play teaches them to escape from a life they then neglect. A good game sends people back to their lives better off than it found them.</p>
+                    </section>
+
+                    <section id="why-it-works">
+                    <h2 id="why-this-works">Why this works<a class="anchor" href="#why-this-works" aria-label="Link to this section: Why this works">#</a></h2>
+
+                    <p>Why should you trust this method to produce good games? Three reasons.</p>
+
+                    <p><strong>It's honest.</strong> The whole method rests on not lying: not to players, not to partners, not to yourself about what you really want. Honesty doesn't need upkeep. A design that works by deceiving people needs constant effort to keep the deception going, and collapses the moment it's discovered, as Part III showed again and again. A design that works by genuinely meeting needs has nothing to hide, so there's nothing to collapse.</p>
+
+                    <p><strong>It works with nature, not against it.</strong> Fundamental human needs aren't an invention or a theory I'm asking you to believe. They're how human beings work, the same for every one of us, and you can check them against your own life at any moment. A design that respects them is building with the grain. A design that ignores them is fighting human nature, and human nature wins every time. The same is true of the technology: respect its limits, and it serves you; ignore them, and they break your game.</p>
+
+                    <p><strong>It comes from experience.</strong> This method didn't come from theory. It came from playing games for most of my life, being frustrated over and over by the same flaws, and being amazed over and over by the potential I could see underneath them. From modding, from official work, from designs of my own. From failing, and from finding out why. And from Nonviolent Communication, which finally explained what I'd been seeing all along.</p>
+                    </section>
+
+                    <section id="results">
+                    <h2 id="what-to-expect">What to expect<a class="anchor" href="#what-to-expect" aria-label="Link to this section: What to expect">#</a></h2>
+
+                    <p>If you use this method, here's what I expect for you.</p>
+
+                    <p>You'll stop feeling lost. Every decision, large or small, has a way to be answered. The dread I felt for years, never knowing whether what I was making would be any good, goes away, because you can check.</p>
+
+                    <p>Your motivation will last, because it's anchored in a need you can feel, not in excitement that fades.</p>
+
+                    <p>You'll waste far less. Fewer features built and then removed. Fewer years spent on a game that misses. Bad ideas caught on paper, where they cost nothing.</p>
+
+                    <p>You'll see other games differently. You'll understand exactly why the ones you love work, and why the ones that disappoint you don't, down to the smallest detail.</p>
+
+                    <p>Your players will feel it, even if they can't say why. Games made this way feel like someone made them for a real person. Players trust them, recommend them, return to them, and support the people who made them, gladly.</p>
+
+                    <p>And you don't need future technology for any of it. Not better graphics, not new hardware, not some magical breakthrough. The technology of the mind, design technology, has lagged far behind the physical technology of games for a long time. Just by reorganizing existing kinds of games with a better structure, better foundations and content that multiplies, it's possible to make something remarkable with surprisingly few resources. With even one well-made project, you could provide more enrichment and joy than most of what exists today, and it could sustain you for a very long time.</p>
+                    </section>
+
+                    <section id="responsibility">
+                    <h2 id="your-responsibility">Your responsibility as a creator<a class="anchor" href="#your-responsibility" aria-label="Link to this section: Your responsibility as a creator">#</a></h2>
+
+                    <p>You hold a great deal of responsibility as a creator. Be wise.</p>
+
+                    <p>As <a href="c10-fun-is-the-fulfillment-of-needs.html">Chapter 10</a> said, you're an architect of the future. People will spend hours of their lives inside what you make. What your game makes easy, they'll do more of. What it rewards, they'll learn to want. What it makes normal, they'll come to expect. You can use that power over people, or with them. You can make their lives a little worse, very quietly, in a way your numbers will never show, or you can make their lives more wonderful.</p>
+
+                    <p>Please choose the second. Don't use your power to abuse people, even when you could get away with it. Especially when you could get away with it. And don't do it by accident either, which is what most of this book has been about: the good intentions that became harm because nobody looked at the consequences. Look at the consequences. Every time.</p>
+
+                    <p>Make a design that you yourself would play. Care about the project. Care about the people who will play it. If you do those three things, and follow the purpose, it's very hard to go wrong.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="make-it-count">Make it count<a class="anchor" href="#make-it-count" aria-label="Link to this section: Make it count">#</a></h2>
+
+                    <p>In <a href="c26-worlds-that-last.html">Worlds That Last</a> I shared my belief that we live again after this life, without our memories, in whatever world we've helped make. Whether or not you believe that, the conclusion holds: you will live in tomorrow, and so will everyone you love. The games you make become part of the world tomorrow happens in. If you create with a careless, short-sighted attitude, it can become a burden on your children and on the future, and in my view on your own future self too. If you create with care, it can make that future a little brighter for everyone in it.</p>
+
+                    <p>You are, in a sense, immortal. Make it count.</p>
+
+                    <p>That's the whole book. A clear purpose, rooted in real human needs. An understanding of human beings. An understanding of your technology. An honest look at your resources. And at every decision, one question: does this serve the purpose? The Holy Grail of fun isn't a secret formula or a lucky break. It's a way of thinking, and now it's yours.</p>
+
+                    <p>I don't trust that it will protect you from every mistake. But I hope it saves you from the ones it took me so long to learn. Go and make something that makes life more wonderful.</p>
+
+                    <p>Good luck, and stay smart.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c32-growing-as-a-designer.html"><span class="label">← Previous · Part V · Chapter 33</span><span class="pager-title">Growing as a Designer</span></a>
+                    <a class="pager-link next" href="b1-needs-at-a-glance.html"><span class="label">Next → · Back matter</span><span class="pager-title">Needs at a Glance</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

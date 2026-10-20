@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content That Multiplies · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="There are two ways content can relate to a game.">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c23-content-that-multiplies.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 23: Content That Multiplies · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="There are two ways content can relate to a game.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c23-content-that-multiplies.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 23: Content That Multiplies · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="There are two ways content can relate to a game.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 23: Content That Multiplies",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c23-content-that-multiplies.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c22-build-the-forces-not-the-desert.html">
+    <link rel="next" href="c24-infinite-metagames.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html" aria-current="page"><span class="n">23</span>Content That Multiplies</a><ol class="toc-secs"><li><a href="#additive-and-multiplicative">Additive and multiplicative content</a></li><li><a href="#five-weeks-five-minutes">Five weeks for five minutes</a></li><li><a href="#levels-that-multiply">Levels that multiply: spawn zones</a></li><li><a href="#characters-that-multiply">Characters and items that multiply</a></li><li><a href="#structured-randomness">Structured randomness: the heuristics randomizer</a></li><li><a href="#cheap-mass-producible-content">Cheap, mass-producible content</a></li><li><a href="#nothing-hard-coded">Nothing hard-coded</a></li></ol></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>8 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c23-content-that-multiplies">
+                    <header>
+                    <p class="kicker">Part IV · Chapter 23</p>
+                    <h1>Content That Multiplies</h1>
+                    </header>
+
+                    <section id="two-kinds">
+                    <h2 id="additive-and-multiplicative">Additive and multiplicative content<a class="anchor" href="#additive-and-multiplicative" aria-label="Link to this section: Additive and multiplicative content">#</a></h2>
+
+                    <p>There are two ways content can relate to a game.</p>
+
+                    <p><strong>Additive content</strong> sits alongside everything else. It's single-use: it can't combine freely with the rest of the game's content. The player experiences it once, and its novelty is gone soon after. A handmade level, a scripted boss fight, a story cutscene, a unique quest. Each one adds its own few minutes of play, and that's all it will ever add.</p>
+
+                    <p><strong>Multiplicative content</strong> is flexible, modular, swappable and combinable. It interacts with everything already in the game. Each new piece adds its own value <em>and</em> gives every old piece something new to combine with. One new weapon in a game where any character can carry any weapon, on any level, in any configuration, isn't one new experience. It's a new variation of every situation the game can already produce.</p>
+
+                    <p>That's where the name comes from. Additive content adds up: ten levels give ten levels' worth of play. Multiplicative content multiplies: ten weapons, ten enemy types and ten level layouts give a thousand combinations, and adding one more weapon adds another hundred.</p>
+
+                    <p>Please note that multiplicative content isn't a special category of thing, like "mechanics" as opposed to "levels". People sometimes describe it that way, as if levels, characters and items were always additive and only new mechanics could multiply. That's not it. In a game organized in a modular, interchangeable way, levels, characters, props, weapons, vehicles and items can all be multiplicative. It's about how the content is organized, not what kind of content it is.</p>
+                    </section>
+
+                    <section id="ratio">
+                    <h2 id="five-weeks-five-minutes">Five weeks for five minutes<a class="anchor" href="#five-weeks-five-minutes" aria-label="Link to this section: Five weeks for five minutes">#</a></h2>
+
+                    <p>Here's the difference in practice:</p>
+
+                    <ul>
+                    <li>With additive content, you spend five weeks making something that lasts five minutes.</li>
+                    <li>With multiplicative content, you spend five hours making something that lasts five weeks.</li>
+                    </ul>
+
+                    <p>Additive content also has a cost that grows over time. Each piece often needs special rules written just for it, which means extra programming for anything complex, and it's still restricted in how it can work. Players consume it far faster than anyone can produce it, so a game that lives on additive content is a treadmill: the developer has to run faster and faster just to keep the game from emptying out. Because each piece expires so quickly, the author feels pressure about whether it was worth the weeks it took, unless it reaches a huge audience.</p>
+
+                    <p>Multiplicative content gets the benefits of standardization and modularity. The content system is set up so each new piece naturally bends into almost any situation. That's why it's usually cheaper and quicker to produce, once the framework exists.</p>
+
+                    <aside class="note">
+                    <p>That "once the framework exists" matters, and I don't want to dismiss it. You can't make multiplicative content without standardization, modularity and intercompatibility built into how the game manages and uses its content. Setting that up takes time. It's the pipe from <a href="c21-foundations-before-content.html">Chapter 21</a>. But the value it gives is far beyond the primitive, shortsighted way, which is only faster in the very short term.</p>
+                    </aside>
+
+                    <p>Additive content still has its place. It's the right tool when a project's purpose is to tell a very specific story or present a highly curated experience, as in the handmade campaigns from <a href="c13-purpose-as-a-compass.html">Chapter 13</a>. But for any game whose purpose lives in its mechanics, I think multiplicative content is the future, and additive content will fade into that smaller role.</p>
+                    </section>
+
+                    <section id="levels">
+                    <h2 id="levels-that-multiply">Levels that multiply: spawn zones<a class="anchor" href="#levels-that-multiply" aria-label="Link to this section: Levels that multiply: spawn zones">#</a></h2>
+
+                    <p>Here's a concrete example, from a hypothetical game where you assault an enemy base with a soldier.</p>
+
+                    <p>Instead of building a level with everything placed by hand, place <strong>zones</strong> on the level, in which items, characters and structures can appear when the level loads. Zones can be nested: sub-zones within a zone further randomize what ends up there. A rectangle zone is just an origin point plus a width and height; a circle zone is a center point plus a radius. The code picks a spot inside at random.</p>
+
+                    <p>A static level offers no surprise after the first time. A zone-based level can have the player start anywhere, put the enemy base somewhere else each time, and shuffle the defenders into different places and numbers. Suddenly every playthrough is unexpected.</p>
+
+                    <p>Then push it further:</p>
+
+                    <ul>
+                    <li>Do zones spawn one type of thing or several? How many of each?</li>
+                    <li>Do groups spawn in formation (a line, a circle, a curve, a square) or scattered? Facing the same way or different ways?</li>
+                    <li>Does everyone carry the same equipment, or is each individual different?</li>
+                    <li>Can a zone spawn nothing at all, or extra terrain instead of enemies?</li>
+                    <li>When the game picks a random range for something, make the range as wide as you can. Narrow ranges produce sameness.</li>
+                    </ul>
+
+                    <p>Levels themselves can be modules too. In one of my designs, a game set inside the human body where you play as a medical nanomachine, the building block is a "room" (call it a scene, a level, a map, a location, whatever your engine calls it). Basic rooms are where things happen, and highway rooms are for traveling between them, with currents that push things around like a river. A generator connects rooms into a network containing only the parts relevant to the current mission, which keeps play focused and short. Combine the randomization inside each room with the randomization of the network, and one set of rooms gives an endless supply of campaigns that are never the same, but still have meaning, structure and context. Add one new room, and it shows up in all of them.</p>
+                    </section>
+
+                    <section id="characters">
+                    <h2 id="characters-that-multiply">Characters and items that multiply<a class="anchor" href="#characters-that-multiply" aria-label="Link to this section: Characters and items that multiply">#</a></h2>
+
+                    <p>Instead of a predefined character with fixed abilities, traits, clothing, armor and weapons, all of those can be handed out by a generator. You no longer fight the same named villain each time. You fight opponents who might have almost anything, in any configuration. Maybe they all have sniper rifles. Maybe only pistols. Maybe a mix.</p>
+
+                    <p>For this to work, the character has to be built to accept anything. Design the character's hands to hold, use, stash, drop and throw any object, with context flags on the object deciding what it does (a held weapon, a consumable, an ability trigger, a stat changer). Then no item, ability or piece of equipment is bolted permanently onto anyone, and every new item works for every character, player and enemy alike.</p>
+
+                    <p>Weapons, items, armor and equipment become multiplicative the moment they join the shared pool. Combined with randomization, the number of new combinations from even one added item grows enormously. Sometimes a single addition makes the game feel new all over again.</p>
+                    </section>
+
+                    <section id="heuristics">
+                    <h2 id="structured-randomness">Structured randomness: the heuristics randomizer<a class="anchor" href="#structured-randomness" aria-label="Link to this section: Structured randomness: the heuristics randomizer">#</a></h2>
+
+                    <p>Randomness done lazily ruins all of this. Put "spawn anything anywhere" into a game and you get noise: every result technically different and all of them feeling the same. That's the famous "thousand bowls of differently colored porridge" problem. A thousand variations that nobody can tell apart in any way that matters.</p>
+
+                    <p>The fix is what I call a <strong>heuristics-driven decision tree randomizer</strong>. It may well have another proper name (flowchart, decision tree, heuristics), but in code it's just a sequence of if/else statements arranged as a tree. The randomizer decides which way to lean first, and only then hands out the randomness. Things decided at a higher level influence things at the lower levels, like a butterfly effect that makes sense.</p>
+
+                    <p>For the base assault, the questions might be:</p>
+
+                    <ol>
+                    <li>How many defenders? Few, some, a lot?</li>
+                    <li>How are they placed? As individuals, in groups, all in one place, a mix?</li>
+                    <li>Close to what they guard, or far? By how much?</li>
+                    <li>Are they healthy, damaged, or are some already dead when the battle starts? To what degree?</li>
+                    <li>Are supplies near them or far away?</li>
+                    <li>Primary weapons and sidearms, only sidearms, only grenades, only fists, a mix?</li>
+                    <li>Is their mood aggressive or defensive? To what degree?</li>
+                    </ol>
+
+                    <p>Some questions branch off into a subtopic that only makes sense for one answer, and then merge back. Others branch off entirely into a separate type of result. And at some steps, there's a small chance (say 0.01%, 1%, 5% or 10%) of introducing chaos, to spice things up.</p>
+
+                    <p>The same structure works for whole environments. Let the generator first read the general environment, then decide what's common there, what's rare and what's an anomaly. In a desert, sand is common and abundant. An oasis is less likely. And very rarely, as a freak occurrence, there's a snowman, with a freezer next to it that explains how it got there and why it hasn't melted. Allow the freak occurrences. Just always support them with a reason the player can discover. That's the difference between chaos that delights and noise that annoys.</p>
+
+                    <p>Done this way, randomness has logic, structure, origin and meaning. Every result feels like it came from somewhere, because it did.</p>
+                    </section>
+
+                    <section id="mass-production">
+                    <h2 id="cheap-mass-producible-content">Cheap, mass-producible content<a class="anchor" href="#cheap-mass-producible-content" aria-label="Link to this section: Cheap, mass-producible content">#</a></h2>
+
+                    <p>High-quality, complicated content is worthless if it's rare, inflexible, slow to make and one-dimensional. If making content becomes the bottleneck in your workflow, the game will never really thrive: long delivery times, nothing interchangeable, and inflated quality standards that make it hard for anyone else to help. Content is at the center of a game. If there isn't a steady flow of it, there isn't much to play.</p>
+
+                    <p>So make content cheap to produce, for yourself and for anyone you might bring in later:</p>
+
+                    <ul>
+                    <li><strong>Reduce animation frames.</strong> Fewer frames, cleverly used, often read just as well.</li>
+                    <li><strong>Reuse graphics wherever possible.</strong> This is the good kind of reuse, the opposite of the padding kind in <a href="c18-afraid-the-game-is-too-short.html">Chapter 18</a>, because it makes more variety possible instead of disguising its absence.</li>
+                    <li><strong>Draw in grayscale and tint in the engine.</strong> One sprite becomes any number of color variants, chosen by the game or the player at runtime. Shaders and other in-engine tricks can modify images on the fly.</li>
+                    <li><strong>Keep the graphics needs of systems minimal.</strong> Design mechanics so they need as little art as possible to work.</li>
+                    <li><strong>Make it easy to learn.</strong> Keep the barrier to making new content as low as possible, for others and for yourself. A pipeline only one expert can use is a pipeline that stops when that expert does.</li>
+                    </ul>
+
+                    <p>The cheapest, most powerful customization there is: let the player pick a color tint for one to three parts of their character. Hair, armor, accessories, equipment, skin. That's all it takes. If the game has a gritty tone, restrict the palette to avoid harsh colors while still offering the whole rainbow.</p>
+                    </section>
+
+                    <section id="no-hard-limits">
+                    <h2 id="nothing-hard-coded">Nothing hard-coded<a class="anchor" href="#nothing-hard-coded" aria-label="Link to this section: Nothing hard-coded">#</a></h2>
+
+                    <p>A multiplicative game has to be able to keep growing, so never build in a ceiling on how much content it can hold.</p>
+
+                    <ul>
+                    <li><strong>In menus,</strong> prefer scrolling lists, drop-downs, content browsers and dynamically scaling bars over fixed buttons and slots. A screen with exactly twelve slots is a promise that the game will never have a thirteenth thing.</li>
+                    <li><strong>In code,</strong> don't hard-code anything about content. Make it possible to swap even the main character, and how they control at a fundamental level. The player could be a human, a car, a helicopter, a dog, an alligator, a blob, a swarm of drones.</li>
+                    <li><strong>In structure,</strong> don't tie content or difficulty to a fixed level order. Let levels shuffle. Make later levels different in style, not just harder.</li>
+                    </ul>
+
+                    <p>Every hard-coded limit is a future overhaul waiting to happen, at exactly the moment the game is doing well enough to want more content. Avoiding it costs almost nothing at the start.</p>
+
+                    <p>With content that multiplies, a game can keep growing for as long as anyone wants to keep adding to it. The next chapter is about giving it a structure that lets it.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c22-build-the-forces-not-the-desert.html"><span class="label">← Previous · Part IV · Chapter 22</span><span class="pager-title">Build the Forces, Not the Desert</span></a>
+                    <a class="pager-link next" href="c24-infinite-metagames.html"><span class="label">Next → · Part IV · Chapter 24</span><span class="pager-title">Infinite Metagames</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

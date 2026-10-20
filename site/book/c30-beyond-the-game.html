@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Game · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="For a long time I thought of game design as everything that happens inside the game. Then I started looking at how people come to play a game at all, and…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c30-beyond-the-game.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 30: Beyond the Game · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="For a long time I thought of game design as everything that happens inside the game. Then I started looking at how people come to play a game at all, and…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c30-beyond-the-game.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 30: Beyond the Game · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="For a long time I thought of game design as everything that happens inside the game. Then I started looking at how people come to play a game at all, and…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 30: Beyond the Game",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c30-beyond-the-game.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c29-working-with-people.html">
+    <link rel="next" href="c30a-handle-with-care.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html" aria-current="page"><span class="n">30</span>Beyond the Game</a><ol class="toc-secs"><li><a href="#the-game-starts-before-the-main-menu">The game starts before the main menu</a></li><li><a href="#marketing">Marketing</a></li><li><a href="#answering-a-ceos-questions">Answering a CEO&#x27;s questions</a></li><li><a href="#monetization-is-the-designers-job">Monetization is the designer&#x27;s job</a></li><li><a href="#pricing-and-inequality">Pricing and inequality</a></li><li><a href="#forking-not-competition">Forking, not competition</a></li></ol></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>11 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c30-beyond-the-game">
+                    <header>
+                    <p class="kicker">Part V · Chapter 30</p>
+                    <h1>Beyond the Game</h1>
+                    </header>
+
+                    <section id="before-the-menu">
+                    <h2 id="the-game-starts-before-the-main-menu">The game starts before the main menu<a class="anchor" href="#the-game-starts-before-the-main-menu" aria-label="Link to this section: The game starts before the main menu">#</a></h2>
+
+                    <p>For a long time I thought of game design as everything that happens inside the game. Then I started looking at how people come to play a game at all, and everything around it: advertising, publishing, packaging, monetization, maintenance, updates, roadmaps, the game's lifecycle, the first-time experience, communication and community. None of it is "playing the game". All of it is part of the experience.</p>
+
+                    <p>Think of it this way. A game doesn't magically appear on your computer, with you suddenly staring at its main menu. A lot happens before that moment. Ads, box art, screenshots and clips somewhere online, a store page, a live event, maybe an oversized cardboard cutout of the main character. You're not "in the game" yet, but the experience of the game has already begun.</p>
+
+                    <p>That realization made me zoom out to see the game whole: not only what happens inside it, but everything around it, from the moment the player first sees any part of it. And once you see it that way, you start finding ways to design all of it to serve the same purpose. That's why marketing, monetization and community are part of the designer's job (<a href="c27-what-a-game-designer-really-does.html">Chapter 27</a>).</p>
+
+                    <h3 id="role-play">Making the outside part of the game<a class="anchor" href="#role-play" aria-label="Link to this section: Making the outside part of the game">#</a></h3>
+
+                    <p>Sometimes the real-world parts can even blend seamlessly into the game, so the whole thing feels more immersive and more fun. I count the main menu, the pause menu and even the game's folder as part of the game, at least in how they're presented: the language and art they use.</p>
+
+                    <ul>
+                    <li>A game where you play a starship pilot could have a store page or box art written like your acceptance into the flight academy and your pilot's license.</li>
+                    <li>A strategy game about commanding an army could have its store page formatted like a military briefcase, with your authorization codes for the battlefield controls.</li>
+                    <li>A gardening game could have box art like a gardener's toolkit, with text that reads like an invitation to a garden that's been handed into your care, and a map of where you'll be working.</li>
+                    </ul>
+
+                    <p>It's cute, cool or immersive in its own way, and players appreciate it. It also makes for better marketing and a better community, and it makes the game more profitable in a way that never feels sleazy, because it's just more of the game.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="marketing">Marketing<a class="anchor" href="#marketing" aria-label="Link to this section: Marketing">#</a></h2>
+
+                    <p>Business and marketing are necessary whether or not you intend to make money. Reaching people, and sharing your creation so it gets noticed and understood correctly, is a big part of success. Neglect it, and your hard work goes unnoticed or misunderstood. Fail to set up the basic business side, and you can't even receive feedback, visitors or payments.</p>
+
+                    <p>Marketing done well is just honest communication: showing the people who have a need that your game meets it. That's why <a href="c19-more-ways-good-intentions-fail.html">Scenario 9</a> failed with interruptions, contests and generic hype, and why the fix was clarity of value. Make it obvious, at a glance, what need the game meets and how. Show the inspiration. Let the presentation feel like the game. The people who have that need will recognize it.</p>
+
+                    <p>For learning marketing and business in a way that doesn't make you hate yourself, I recommend Tad Hargrave of Marketing for Hippies. He isn't in the games industry, but his material is so universally applicable that it's easy to see how to adapt it. Most of it is free.</p>
+
+                    <p>A few more practical points that belong here:</p>
+
+                    <ul>
+                    <li><strong>Choose an accurate, simple name.</strong> One that says what the game is, and that people can remember, spell and search for. Check it isn't already taken.</li>
+                    <li><strong>Be findable.</strong> Learn the basics of how search engines and store searches work, so people who are looking for what you made can find it.</li>
+                    <li><strong>Make the first hour excellent.</strong> The out-of-the-box experience, from installing to the first minutes of play, decides whether people stay long enough to find what's good. Present quality from the very first screen.</li>
+                    <li><strong>Don't fear copycats or stolen ideas.</strong> Share what you're making. Ideas are cheap; execution is everything, and someone copying your idea still has to do all the work you did, without your purpose to guide them. The one exception: keep the name to yourself until release, so nobody grabs it first.</li>
+                    </ul>
+                    </section>
+
+                    <section id="ceo">
+                    <h2 id="answering-a-ceos-questions">Answering a CEO's questions<a class="anchor" href="#answering-a-ceos-questions" aria-label="Link to this section: Answering a CEO&#x27;s questions">#</a></h2>
+
+                    <p>Sooner or later, someone responsible for a company's money will ask you the same four questions. A CEO, a publisher, an investor, or the part of your own head that worries about rent. They sound like business questions, but every one of them is really a design question, and the method in this book answers all four.</p>
+
+                    <p>Before answering, hear the need behind them. Someone asking these is usually responsible for other people's jobs and livelihoods. Underneath the questions is a need for security and predictability. Answer that need honestly, and you'll be trusted far more than if you promise what they want to hear.</p>
+
+                    <h3 id="ceo-guaranteed-hit">"Can you make a game that's guaranteed to be a hit?"<a class="anchor" href="#ceo-guaranteed-hit" aria-label="Link to this section: &quot;Can you make a game that&#x27;s guaranteed to be a hit?&quot;">#</a></h3>
+
+                    <p>No. Nobody can, and anyone who says they can is selling something. Popularity is a side effect of things outside anyone's control: timing, luck, what else comes out that month, what people happen to be talking about (<a href="c05-popularity-is-a-side-effect.html">Chapter 5</a>).</p>
+
+                    <p>What I can promise is a game that fully meets the needs it sets out to meet, for the people who have them, without violating anyone else's. That's the part within anyone's control, and it's what every lasting hit is made of. It also protects the company from the most common way games fail, which isn't bad luck but a game that misses its own point. Then I can show how many people have that need, where they are, and what currently meets it worse than we would. That's not a guarantee. It's the most honest picture of the odds anyone can give.</p>
+
+                    <h3 id="ceo-hook">"To make it a hit, we need a hook. What is it?"<a class="anchor" href="#ceo-hook" aria-label="Link to this section: &quot;To make it a hit, we need a hook. What is it?&quot;">#</a></h3>
+
+                    <p>The question usually lists the candidates: the theme, the technology, the story, the mechanics. Those are all strategies. The real hook is the need: a clearly stated human need that a lot of people have unmet, and a game that meets it better than anything else they have. The theme and the mechanics are how the hook is delivered, not the hook itself.</p>
+
+                    <p>So my answer is the purpose sentence from <a href="c11-from-inspiration-to-purpose.html">From Inspiration to Purpose</a>, plus the one thing that makes our strategy better than the alternatives. "People who love tactical combat finish every match tired, and everything they built is thrown away. Ours is the one where every battle counts." That's a hook a player recognizes in one sentence.</p>
+
+                    <p>Please note the other meaning of "hook": the one on a fishing line. If the question means a compulsion loop that keeps people playing against their own interest, the answer is no, and <a href="c17-money.html">Money</a> and <a href="c18-afraid-the-game-is-too-short.html">Afraid the Game Is Too Short</a> show what those hooks cost the company in the end.</p>
+
+                    <h3 id="ceo-non-gamers">"How do we get people to buy it, even if they're not gamers?"<a class="anchor" href="#ceo-non-gamers" aria-label="Link to this section: &quot;How do we get people to buy it, even if they&#x27;re not gamers?&quot;">#</a></h3>
+
+                    <p>Non-gamers have exactly the same needs as gamers. They aren't uninterested in games; they're uninterested in what they've seen games offer. Either those games met needs they didn't have, or their needs were already met by other means (<a href="c13-purpose-as-a-compass.html">Purpose as a Compass</a>), or the way in was too hard: controls that assume years of practice, jargon, a huge time commitment, a price for something they couldn't judge.</p>
+
+                    <p>So: describe the value in their terms, not in genre words. Lower the barrier: simple controls to begin with, a first ten minutes that already meets the need, respect for their time (<a href="c20-taking-inventory.html">Taking Inventory</a>). Show it where they already are, not only where gamers gather. And never trick them in. A non-gamer who feels tricked doesn't just leave your game; they leave games (<a href="c19-more-ways-good-intentions-fail.html">Scenario 9</a>).</p>
+
+                    <h3 id="ceo-advertising">"How do we advertise it? How do we connect with people?"<a class="anchor" href="#ceo-advertising" aria-label="Link to this section: &quot;How do we advertise it? How do we connect with people?&quot;">#</a></h3>
+
+                    <p>Show the need being met. Not a list of features, not hype words, not a cinematic that has nothing to do with the game (<a href="c19-more-ways-good-intentions-fail.html">Scenario 7</a>). Show real moments of play that give the feeling the game is for, so the people who have that need recognize it at a glance. Make the advertising part of the game, as at the start of this chapter. Clarity of value, again.</p>
+
+                    <p>And here's the line not to cross: appealing to a need without fulfilling it. An ad that promises belonging, romance, power or adventure the game doesn't actually deliver works once. People buy, find nonsense behind the promise, and feel cheated. That's how nonsense games sell, and why they're bad: they take people's money and time by pointing at a real need and leaving it unmet. Every refund, every angry review and every player who won't trust your next game is the bill for that ad, arriving later.</p>
+
+                    <p>Four questions, one answer: know the need, meet it fully, and tell people honestly that you did.</p>
+                    </section>
+
+                    <section id="monetization">
+                    <h2 id="monetization-is-the-designers-job">Monetization is the designer's job<a class="anchor" href="#monetization-is-the-designers-job" aria-label="Link to this section: Monetization is the designer&#x27;s job">#</a></h2>
+
+                    <p>Deciding how a game makes money is a central responsibility of the game designer. Not the marketer's, not the publisher's, nobody else's. Because the game itself can be designed to suit particular ways of making money, and only the designer can see the whole game well enough to find the model that fits it best.</p>
+
+                    <p>It's also where the most harm is done, as <a href="c17-money.html">Money</a> showed. A lot of monetization advice out there is predatory, unethical and plain abusive. If you ever find yourself seeing your customers as anything other than living, breathing human beings who deserve care, support and respect, you've taken a wrong turn. Never go down that road.</p>
+
+                    <h3 id="free-value-first">Free value first<a class="anchor" href="#free-value-first" aria-label="Link to this section: Free value first">#</a></h3>
+
+                    <p>The approach I recommend: first offer something free and genuinely valuable, which draws people in and lets them see what you do. Then offer something more for those who want to support the project, with money, time or other resources, and get something beyond the free part in return.</p>
+
+                    <p>This works because of the human need to give (<a href="c12-game-or-interactive-tool.html">Chapter 12</a>). When someone has received real value, many of them want to give something back. Make it easy to say thank you, and many will. Paying becomes gratitude, not a toll.</p>
+
+                    <h3 id="support-models">Support models<a class="anchor" href="#support-models" aria-label="Link to this section: Support models">#</a></h3>
+
+                    <p>Some models that fit this approach:</p>
+
+                    <ul>
+                    <li><strong>An honest price.</strong> Say clearly what the game is and what it costs, and let the game be complete for that price. No content held back to sell again.</li>
+                    <li><strong>Ongoing support for ongoing development.</strong> For a game that keeps growing, a way for invested players to support the continued work behind the scenes, beyond the base game. In my proposal to the <cite>Astroneer</cite> developers, I suggested a Patreon-style support page, with simple rewards: monthly behind-the-scenes posts, occasional polls with options the developers chose, work-in-progress art, and the same update posts free for everyone. The base game and the honestly sold expansions stay as they are; support is an extra way to say thank you.</li>
+                    <li><strong>Cosmetics sold as a thank-you,</strong> never framed as status (see the note at the end of <a href="c17-money.html">Money</a>).</li>
+                    <li><strong>A creator economy.</strong> For a game built to multiply, a marketplace or portal where modders and creators can make a living from content for the game: premium content, their own supporter subscriptions, commissions. Imagine if the modding scenes of games like <cite>Skyrim</cite>, <cite>Terraria</cite> or <cite>Cortex Command</cite> could be a source of income for all those creative people, because the game was designed to make creating content easy, standardized and unified. That could be a whole new field of work and dream fulfillment for everyone involved.</li>
+                    </ul>
+
+                    <p>And when you need more money, ask for it honestly. Say what you need, why, what you'll do with it, and what you're asking for (<a href="c19-more-ways-good-intentions-fail.html">Scenario 12</a>). People who love what you make often want to help, if you let them.</p>
+                    </section>
+
+                    <section id="inequality">
+                    <h2 id="pricing-and-inequality">Pricing and inequality<a class="anchor" href="#pricing-and-inequality" aria-label="Link to this section: Pricing and inequality">#</a></h2>
+
+                    <p>When you share a game, you're sharing it with an unequal world. Most people don't live where most games are made, and most people don't have a powerful computer. Design and publish with that in mind.</p>
+
+                    <ul>
+                    <li><strong>Optimize.</strong> A game that runs well on weak hardware reaches far more people. Every frame you save opens the game to someone who couldn't play it otherwise.</li>
+                    <li><strong>Mind compatibility.</strong> Support older systems and common hardware where you reasonably can, and be clear about what the game needs.</li>
+                    <li><strong>Consider fair pricing.</strong> The same price is a coffee in one country and a week's food in another. Where your storefront allows it, regional pricing lets more people play honestly.</li>
+                    <li><strong>Consider localization.</strong> Translating the game, even just its interface, opens it to people who'd otherwise be shut out. Keep text easy to translate from the start, and avoid jokes and references that only make sense in one language or culture.</li>
+                    <li><strong>Consider letting people mod it.</strong> Modding support turns players into creators, extends the game's life far beyond what you could make alone, and is how many designers, me included, got started.</li>
+                    </ul>
+
+                    <p>Respecting the player includes respecting where they are. It's also good business: a world of players is a much bigger world than the few who own the newest hardware.</p>
+                    </section>
+
+                    <section id="forking">
+                    <h2 id="forking-not-competition">Forking, not competition<a class="anchor" href="#forking-not-competition" aria-label="Link to this section: Forking, not competition">#</a></h2>
+
+                    <p>Finally, how should you think about other studios and other games? The common answer is "competition", and "competition drives innovation" is repeated everywhere. It's wrong, and it's harmful. The whole idea of "healthy competition" is a contradiction. (Alfie Kohn's <cite>No Contest</cite>, which I recommended in <a href="c15-when-players-misbehave.html">Chapter 15</a>, explains why in full.)</p>
+
+                    <p>I'd like to replace the word "competition" with "<strong>forking</strong>" when it comes to driving innovation. Forking captures what actually happens when innovation is real.</p>
+
+                    <p>When I see something that doesn't satisfy me, my goal isn't to make its creator look bad. That's absurd, but it's what competition encourages: focusing on someone else instead of on the work. What really happens is this. I see something, an idea or a game, that has potential to be better. I take the good parts, drop the bad parts, and build my own project in my own direction. I diverge from the original. I evolve from it. I fork from it, the way a road splits. At no point am I thinking about the other creator, except maybe feeling a bit disappointed they didn't do this themselves.</p>
+
+                    <p>My goal is simply to make something better. My mentality is "I want to do it my way", not "I'm going to beat you". In the first, all my attention is on making the thing excellent. In the second, I'm stuck in a toxic loop of comparing myself to someone else, with part of my mind busy on a contest instead of the work, and more likely to sabotage myself by accident. In the worst case, the other party doesn't even know there's a contest, which makes my side of it a sad, one-sided tantrum.</p>
+
+                    <p>Forking is also how the whole field grows. When every studio forks from the best ideas of others, instead of fighting over the same narrow space, the number of directions keeps multiplying. That's the same principle as multiplicative content, at the scale of an industry.</p>
+
+                    <p>Don't compete. Fork. Forget the contest, and focus on making your project as excellent as possible for its own sake.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c29-working-with-people.html"><span class="label">← Previous · Part V · Chapter 29</span><span class="pager-title">Working with People</span></a>
+                    <a class="pager-link next" href="c30a-handle-with-care.html"><span class="label">Next → · Part V · Chapter 31</span><span class="pager-title">Handle With Care</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

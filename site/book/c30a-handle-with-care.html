@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle With Care · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="The original version of this book ended with a long list of warnings, written as titles only. Most of them have found their home in earlier chapters. A few…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c30a-handle-with-care.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 31: Handle With Care · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="The original version of this book ended with a long list of warnings, written as titles only. Most of them have found their home in earlier chapters. A few…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c30a-handle-with-care.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 31: Handle With Care · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="The original version of this book ended with a long list of warnings, written as titles only. Most of them have found their home in earlier chapters. A few…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 31: Handle With Care",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c30a-handle-with-care.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c30-beyond-the-game.html">
+    <link rel="next" href="c31-putting-it-all-together.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html" aria-current="page"><span class="n">31</span>Handle With Care</a><ol class="toc-secs"><li><a href="#violence-and-video-games">Violence and video games</a></li><li><a href="#flammable-content">Flammable content</a></li><li><a href="#gender-equity">Gender equity</a></li><li><a href="#out-there-be-monsters">Out there be monsters</a></li></ol></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>10 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c30a-handle-with-care">
+                    <header>
+                    <p class="kicker">Part V · Chapter 31</p>
+                    <h1>Handle With Care</h1>
+                    </header>
+
+                    <section id="intro">
+                    <p>The original version of this book ended with a long list of warnings, written as titles only. Most of them have found their home in earlier chapters. A few are left, and they belong together, because they're all about what your game puts into the world and who it lets in: violence, flammable content, gender equity, and the dangers waiting for you outside.</p>
+
+                    <p>None of this is a reason to be afraid of making things. It's a reason to look at consequences before they happen, which is what this whole book has been asking of you.</p>
+                    </section>
+
+                    <section id="violence">
+                    <h2 id="violence-and-video-games">Violence and video games<a class="anchor" href="#violence-and-video-games" aria-label="Link to this section: Violence and video games">#</a></h2>
+
+                    <p>"Do violent games make people violent?" People have argued about it for decades, and the argument never seems to go anywhere. I think that's because it asks the wrong question.</p>
+
+                    <p>Remember what violence means in this book (<a href="c09-understanding-human-beings.html">Understanding Human Beings</a>). Not only physically hurting someone, but any use of power over people: punishment and reward, guilt, shame, coercion, and any system that keeps people from equal access to resources and justice. By that measure, the most violent thing in a lot of games isn't the gunfire. It's the dark patterns, the time gates and the manipulation from <a href="c17-money.html">Money</a> and <a href="c18-afraid-the-game-is-too-short.html">Afraid the Game Is Too Short</a>. Those reach real people. The explosions don't.</p>
+
+                    <h3 id="fantasy-violence">Fantasy violence on its own<a class="anchor" href="#fantasy-violence" aria-label="Link to this section: Fantasy violence on its own">#</a></h3>
+
+                    <p>My own giant robot game from <a href="c02-three-projects-two-designers.html">Chapter 2</a> has a nuclear plasma cannon in it. I wanted to blow things up, and I didn't want anything destroyed in real life. I also had a lot of built-up anger and frustration from my circumstances, and a peaceful, harmless way to release it was part of what the game was for. Those are real needs (release, power, relief, a sense of capacity), met by a strategy that hurts nobody.</p>
+
+                    <p>That works because of the definition of a game in <a href="c12-game-or-interactive-tool.html">Chapter 12</a>: no intent of real-life consequence. Nobody is actually hurt, and everyone knows it. Play-fighting is as old as play itself. Young animals wrestle and chase and pounce, and learn from it. Children play cops and robbers. Chess is a war. Fantasy violence, by itself, is just one strategy among infinitely many, and it's often a healthy one.</p>
+
+                    <h3 id="where-it-goes-wrong">Where it goes wrong<a class="anchor" href="#where-it-goes-wrong" aria-label="Link to this section: Where it goes wrong">#</a></h3>
+
+                    <p>It goes wrong when the violence stops being only fantasy. I see four ways that happens.</p>
+
+                    <p><strong>When the victim is real.</strong> Shooting a pixel soldier hurts no one. Humiliating the person controlling it does. Griefing, harassment and the joy some players take in another real person's suffering are sadism with a living target, and a game that pits people against each other makes them common (<a href="c15-when-players-misbehave.html">When Players Misbehave</a>). Friends who agree to play-fight are fine; that's consent. A structure that pays out for other people's misery is not.</p>
+
+                    <p><strong>When it carries a message about real people.</strong> If the enemies look like a real nationality, religion, ethnicity or political group, the game spends hours rehearsing one thought: those people are monsters, and killing them is good. Nobody has to become a killer for that to do damage. It's the side-effect influence from <a href="c12-game-or-interactive-tool.html">Chapter 12</a>: what a game makes normal, players come to expect. An enemy image practised for a hundred hours doesn't stay in the game. It comes out in how people talk, vote and treat their neighbors. That's why the opponents in <a href="c31-putting-it-all-together.html">walkthrough 3</a> are built from sins and virtues, behaviors anyone can fall into, instead of sneering villains who could be mistaken for real people.</p>
+
+                    <p><strong>When cruelty is the reward.</strong> A game can show horror so you feel its weight. That can meet needs for understanding, meaning and mourning, and some of the most important games ever made do it. That's different from a game that hands out points for tormenting the helpless. Ask what feeling the scene is meant to give. If the honest answer is "the pleasure of dominating someone who can't fight back", the game is practising power over people with the player, and it will teach that to them.</p>
+
+                    <p><strong>When the line between game and life blurs.</strong> The original had a heading for this: the separation of leisure and non-leisure, and constructive vs destructive fantasy. Constructive fantasy releases tension and sends you back to your life calmer, kinder and more capable. Destructive fantasy feeds the tension, and leaves you angrier, more anxious, or more suspicious of people than when you sat down. A shooter that doubles as a recruitment ad, or a "game" built to train real-life aggression, is an interactive tool in disguise, with all the problems from <a href="c12-game-or-interactive-tool.html">Chapter 12</a>. Here's a simple test: do people leave your game feeling better or worse about the world and the people in it?</p>
+
+                    <p>So violence isn't banned in a good game. It's a strategy like any other, and it takes the same two questions as everything else (<a href="c13-purpose-as-a-compass.html">Purpose as a Compass</a>): does it serve the purpose, and does it violate anyone's needs?</p>
+                    </section>
+
+                    <section id="flammable">
+                    <h2 id="flammable-content">Flammable content<a class="anchor" href="#flammable-content" aria-label="Link to this section: Flammable content">#</a></h2>
+
+                    <p>The original's warning, word for word, was: "Caution!!! Flammable, unlicensed, provocative, unpopular, offensive, judgemental content." Each of those burns in a different way.</p>
+
+                    <h3 id="taboo">Taboo subjects<a class="anchor" href="#taboo" aria-label="Link to this section: Taboo subjects">#</a></h3>
+
+                    <p>Grief, abuse, suicide, addiction, atrocity. These aren't off-limits. A game can be one of the best ways for someone to feel understood in the worst moment of their life, and when that's the purpose, it's a beautiful one. The mistake is treating a painful subject as decoration because "it's only fantasy" (<a href="c19-more-ways-good-intentions-fail.html">More Ways Good Intentions Fail</a> lists it as a scenario to think through).</p>
+
+                    <p>Follow the chain. Someone who lived through it meets it unannounced, used as shock value or a punchline. They're hurt, and they feel betrayed by something they came to for enjoyment. They tell others. The game becomes known for that scene instead of for what it was trying to do, and the people who could have loved it never try it.</p>
+
+                    <p>If the subject serves your purpose: research it, listen to people who've lived it, treat it honestly, and tell players up front what the game contains so they can choose. That's consent, the same thing that separates honest challenge from abuse in the masochism paragraph of <a href="c18-afraid-the-game-is-too-short.html">Chapter 18</a>. If it doesn't serve your purpose, it doesn't belong in the game.</p>
+
+                    <h3 id="provocative">Provocative, offensive and judgemental<a class="anchor" href="#provocative" aria-label="Link to this section: Provocative, offensive and judgemental">#</a></h3>
+
+                    <p>Provocation to get attention is an extrinsic goal (<a href="c06-making-games-for-the-wrong-reason.html">Chapter 6</a>). Controversy does bring attention, but the wrong kind. The people who come for the outrage aren't the people who have the need your game meets, and the game gets tied to the scandal long after everyone has forgotten what it was about. Popularity is a side effect (<a href="c05-popularity-is-a-side-effect.html">Chapter 5</a>), and this is a side effect you can't take back.</p>
+
+                    <p>Offensive and judgemental content is the joke from <a href="c16-good-intentions-violent-methods.html">Chapter 16</a> again: humor that needs a victim is a judgement, and the people it judges will feel it, whether or not you meant it.</p>
+
+                    <p>And here's the trap on the other side. In <a href="c03-how-i-learned-this.html">Chapter 3</a>, one of the ways a project loses its soul is sanitizing its content to please bigger outlets. Cutting what the purpose needs, to avoid any possible complaint, is the same mistake as adding provocation to get noticed: deciding the content by the reaction you expect, instead of by the purpose. Handle with care doesn't mean handle with fear.</p>
+
+                    <h3 id="unlicensed">Unlicensed<a class="anchor" href="#unlicensed" aria-label="Link to this section: Unlicensed">#</a></h3>
+
+                    <p>Music, art, characters, names or code you don't have the rights to. Apart from being someone else's work taken without asking, it's a time bomb: one takedown notice can erase years of your work overnight, and everything built on top of it with it. Make your own, license properly, or use freely licensed work and credit it exactly as the license asks.</p>
+
+                    <h3 id="unpopular">Unpopular<a class="anchor" href="#unpopular" aria-label="Link to this section: Unpopular">#</a></h3>
+
+                    <p>This one isn't a warning against unpopular things. A small need is still a need, and the people who have it will be grateful someone finally met it. It's only a reminder to know how small your audience might be, and to plan your resources honestly around it (<a href="c20-taking-inventory.html">Taking Inventory</a>).</p>
+                    </section>
+
+                    <section id="equity">
+                    <h2 id="gender-equity">Gender equity<a class="anchor" href="#gender-equity" aria-label="Link to this section: Gender equity">#</a></h2>
+
+                    <p>Needs have no gender. Every human being has the same fundamental needs (<a href="c09-understanding-human-beings.html">Understanding Human Beings</a>). What differs from person to person is the strategies, shaped by their culture, history and experience, not by which box they were put in.</p>
+
+                    <h3 id="equity-in-the-game">In the game<a class="anchor" href="#equity-in-the-game" aria-label="Link to this section: In the game">#</a></h3>
+
+                    <p>"Games for boys" and "games for girls" are the common mistake applied to people. They design for a label, which is a final result, instead of for the needs, which are the root cause. Follow the chain: a pastel version of a game assumes what girls want, a shooter's marketing assumes only men want power and challenge, and both shut out everyone who doesn't fit the label they were aimed at. Those people have the needs too. They just learn the game wasn't made for them, and go meet those needs elsewhere.</p>
+
+                    <ul>
+                    <li><strong>Let people be who they want to be.</strong> Where the player creates or chooses a character, offer real range, and don't lock abilities or roles to gender unless the world has an honest reason for it.</li>
+                    <li><strong>Write characters with needs, not roles.</strong> A character who wants things, fears things and acts on them is believable. A character who exists only to be rescued, or to be looked at, isn't.</li>
+                    <li><strong>Don't make anyone's body the bait.</strong> Selling a game with sexualized characters it has no other use for appeals to a need the game doesn't meet (more on that in <a href="c30-beyond-the-game.html">Chapter 30</a>), and tells a large share of potential players that people like them are decoration.</li>
+                    </ul>
+
+                    <h3 id="equity-in-the-team">In the team<a class="anchor" href="#equity-in-the-team" aria-label="Link to this section: In the team">#</a></h3>
+
+                    <p>Rosenberg counted as violence "any system that discriminates against people and prevents equal access to resources and justice". In a team, that means equal pay for equal work, credit given to whoever did the work, hiring by what people can do, and every voice heard in the room, because everyone's needs matter equally (<a href="c29-working-with-people.html">Working With People</a>). It also means nobody has to put up with harassment to keep their job. The structure has to make it safe to speak up, and someone who keeps hurting people after being heard doesn't stay.</p>
+
+                    <p>There's a practical consequence too. A team where some voices count less loses information. If the people who'd notice a problem aren't listened to, the designer misses the needs of a big share of the players, and finds out only when the game is out.</p>
+
+                    <p>None of this is about slogans or quotas. It's the same honesty as the rest of the book: every human being's needs matter, equally, in the game and around it.</p>
+                    </section>
+
+                    <section id="monsters">
+                    <h2 id="out-there-be-monsters">Out there be monsters<a class="anchor" href="#out-there-be-monsters" aria-label="Link to this section: Out there be monsters">#</a></h2>
+
+                    <p>This one is a sobering warning, and it's mostly for the kind and gentle readers. If you've read this far, you're probably one of them.</p>
+
+                    <p>There are people out there who want to hurt you. Not because of anything you did, and not because your game is bad. Don't go in expecting everyone to be respectful and sensible. Most people won't be the problem, but some will, and meeting them unprepared can knock a gentle person flat.</p>
+
+                    <p>They come in a few shapes:</p>
+
+                    <ul>
+                    <li><strong>People whose job is to hurt.</strong> Organized troll operations exist, some of them run by states, that pay people to spread hostility, stir up fights and wear down anyone who speaks up. Their attacks feel personal. They aren't. You're a target of opportunity, and it says nothing about you or your work.</li>
+                    <li><strong>People in pain who want company in it.</strong> Some people are so unhappy that they want everyone around them to suffer too. In NVC terms, it's a tragic strategy for needs they've given up on meeting any other way. You can understand that, and even feel compassion for them, and still refuse to let them in. Understanding someone doesn't mean you have to stand there and take it.</li>
+                    <li><strong>People who see you as prey.</strong> Contracts that take the rights to your game for a small advance, "exposure" instead of pay, fake influencers asking for piles of keys to resell, award shows that charge you to win, services promising a guaranteed number of downloads. Read every contract in full, get advice from someone with nothing to gain, and never sign away your dream project because you're tired and someone is offering money now.</li>
+                    <li><strong>The crowd at its worst.</strong> Hate mobs and review bombs. The NVC translations in <a href="c19-more-ways-good-intentions-fail.html">Scenario 12</a> help you hear the unmet needs inside them. They don't oblige you to read every message, or to stand in the storm alone.</li>
+                    </ul>
+
+                    <p>Here's why I'm saying this so plainly. Gentle people tend to believe that if they're kind, others will be kind back, and that if someone is cruel to them, they must have deserved it. So the first real attack hits twice: once from outside, and once from inside, as "maybe they're right about me". That second hit is the dangerous one. Good, talented people have quit, sunk into depression, or worse, because they met the worst of the internet with no warning that it exists and no idea that it isn't about them.</p>
+
+                    <p>So, before it happens:</p>
+
+                    <ul>
+                    <li><strong>Know it's coming,</strong> and know it isn't a verdict on you. The cruelty of a stranger tells you about their needs, not your worth.</li>
+                    <li><strong>Keep a few people close</strong> whom you trust to tell you the truth, and talk to them when it gets bad. Don't carry it alone.</li>
+                    <li><strong>Protect your inputs.</strong> Mute, block, filter, let someone else read the comments for a while. Hearing feedback is your job; drinking poison isn't.</li>
+                    <li><strong>Rest.</strong> An exhausted designer believes the mob, signs bad contracts and gives up on good projects.</li>
+                    <li><strong>Remember the work.</strong> The people your game was made for are still out there, quietly enjoying it. They're usually far more numerous than the ones shouting.</li>
+                    </ul>
+
+                    <p>And if it ever gets so dark that you think about hurting yourself, please reach out right away, to someone you trust or to a crisis line where you live. That isn't weakness. It's meeting a need for safety, which is exactly what this whole book says to do. The world needs the kind people to stay in it, and to keep making things. Don't let the monsters take you, or what you've built.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c30-beyond-the-game.html"><span class="label">← Previous · Part V · Chapter 30</span><span class="pager-title">Beyond the Game</span></a>
+                    <a class="pager-link next" href="c31-putting-it-all-together.html"><span class="label">Next → · Part V · Chapter 32</span><span class="pager-title">Putting It All Together</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

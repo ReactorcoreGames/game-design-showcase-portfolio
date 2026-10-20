@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build the Forces, Not the Desert · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="Most games can be boiled down to a &quot;throwaway toy&quot;, a consumable thrill. There&#x27;s barely any effort, or even thought, put into making sure the project and…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c22-build-the-forces-not-the-desert.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 22: Build the Forces, Not the Desert · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="Most games can be boiled down to a &quot;throwaway toy&quot;, a consumable thrill. There&#x27;s barely any effort, or even thought, put into making sure the project and…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c22-build-the-forces-not-the-desert.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 22: Build the Forces, Not the Desert · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="Most games can be boiled down to a &quot;throwaway toy&quot;, a consumable thrill. There&#x27;s barely any effort, or even thought, put into making sure the project and…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 22: Build the Forces, Not the Desert",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c22-build-the-forces-not-the-desert.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c21-foundations-before-content.html">
+    <link rel="next" href="c23-content-that-multiplies.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html" aria-current="page"><span class="n">22</span>Build the Forces, Not the Desert</a><ol class="toc-secs"><li><a href="#the-throwaway-toy">The throwaway toy</a></li><li><a href="#framework-driven-design">Framework-driven design</a></li><li><a href="#thinking-in-wholes">Thinking in wholes</a></li><li><a href="#believable-not-realistic">Believable, not realistic</a></li><li><a href="#natural-limits">Natural limits, not arbitrary ones</a></li><li><a href="#throwaway-is-worse-business">Throwaway is worse business, too</a></li></ol></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>10 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c22-build-the-forces-not-the-desert">
+                    <header>
+                    <p class="kicker">Part IV · Chapter 22</p>
+                    <h1>Build the Forces, Not the Desert</h1>
+                    </header>
+
+                    <section id="throwaway">
+                    <h2 id="the-throwaway-toy">The throwaway toy<a class="anchor" href="#the-throwaway-toy" aria-label="Link to this section: The throwaway toy">#</a></h2>
+
+                    <p>Most games can be boiled down to a "throwaway toy", a consumable thrill. There's barely any effort, or even thought, put into making sure the project and its assets get used to their full potential and last.</p>
+
+                    <p>Look at where the time goes. Weeks, months and years are spent on content and experiences that are consumed in seconds, minutes or hours. On top of that, the experience is narrow, restricted, shallow and one-dimensional: playable in exactly one way, the way the developer dictated. In terms of making people happy in the long run, or running a game business sustainably, that's a disaster. The creation of content is bottlenecked, and the content that does get made isn't flexible, so it's worth less to the player too.</p>
+
+                    <p>Why is it so common? Because developers still see making a game through the lens of making a movie. A project usually starts from the idea of constructing a specific situation and recreating it, with the player on scripted rails through it. That's forcing a square peg into a round hole: taking a medium whose whole strength is freedom and interactivity, and making it constrained and scripted. It's like a teacher who tells you to sit down, shut up and obey, and expects you to have a profound moment of learning. It doesn't work. It violates the player's need to be curious, to play and explore, and to fail without fear.</p>
+
+                    <p>There's a far better way. And it isn't more work. It's mostly a matter of reorganizing how a game and its content are built, which means reframing the mindset behind it. The amount of work is about the same as the old way. The potential, value and flexibility are far better.</p>
+                    </section>
+
+                    <section id="framework-driven">
+                    <h2 id="framework-driven-design">Framework-driven design<a class="anchor" href="#framework-driven-design" aria-label="Link to this section: Framework-driven design">#</a></h2>
+
+                    <p>Instead of recreating a specific situation as the starting point, build a framework where that situation can happen naturally. Create an environment where the player can make that situation happen by coincidence. Allow every variation and mutation of it. Make it possible for things to happen that you didn't anticipate but that are cool and welcome anyway. Let emergent systems, however basic, take precedence over solutions that skip straight to the result.</p>
+
+                    <ul>
+                    <li><strong>Don't make a desert.</strong> Make an area with lots of sand, harsh sunlight and high heat, which results in a desert.</li>
+                    <li><strong>Don't make a forest.</strong> Make an area with fertile soil, humidity, gentle sunlight, an atmosphere and compatible flora and fauna.</li>
+                    <li><strong>Don't make a tundra.</strong> Make an area with humidity, precipitation, cold temperatures and weak sunlight.</li>
+                    <li><strong>Don't make a lava zone.</strong> Make terrain with volcanic activity that produces ash and lava, hard but brittle rock, seismic activity that shifts it, low humidity and ash clouds that block the sun.</li>
+                    <li><strong>Don't make prefabs.</strong> Make the source elements prefabs are made of, and assemble them with simple if/else rules into a final result, like building a custom sandwich.</li>
+                    </ul>
+
+                    <p>Notice what this is. It's the common mistake from <a href="c01-final-result-vs-root-cause.html">Chapter 1</a>, applied to content. The desert is the final result. Sand, sun and heat are the root cause. Focus on the source of a thing, not the final result. Notice which elements or forces lead to the result, how they relate to each other, and which comes first.</p>
+
+                    <p>And look at what it gets you. Forests, deserts, tundras and lava lands become far more varied, because each one is a different mix of the same forces. Hybrid biomes appear on their own, a little of both, or a crazy mix that becomes an unexpected cool new biome. Even within one biome, the system can make a lush forest or a sparse one just by changing the water or the soil. You designed four biomes and got hundreds.</p>
+
+                    <h3 id="more-examples">The same idea, everywhere<a class="anchor" href="#more-examples" aria-label="Link to this section: The same idea, everywhere">#</a></h3>
+
+                    <ul>
+                    <li><strong>Don't make pre-made unique characters.</strong> Make a modular character, a paper doll, that can take any limbs, facial features, clothing, accessories, colors and patterns. Generate names from lists of words or syllables. Roll background and personality from a mix of options that define their behavior and style.</li>
+                    <li><strong>Don't make scripted campaigns.</strong> They offer one experience, and a narrow one. Make a campaign generator that mixes and combines content freely, for maximum reuse, more emergent play and exponential variety.</li>
+                    <li><strong>Don't make a linear sequence of levels.</strong> Prefer an open world, or at least a level select where levels can be played in any order and shuffled for each campaign.</li>
+                    </ul>
+
+                    <p>To be clear, none of this requires an intricate universe simulator. All you need is a list of building blocks with parameters, a simple if/else tree, and a little random(1,9) thrown in. The content itself is built paper-doll style: everything made of modules and components, often drawn in grayscale and tinted by the program during play. Even a small pool of content made this way can give many times more hours of play than the throwaway approach, and the play is more interesting, because it's emergent instead of scripted. <a href="c23-content-that-multiplies.html">Content That Multiplies</a> goes into the practical details.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="thinking-in-wholes">Thinking in wholes<a class="anchor" href="#thinking-in-wholes" aria-label="Link to this section: Thinking in wholes">#</a></h2>
+
+                    <p>Framework-driven design is one form of a wider habit: looking at a game as a whole, made of parts that affect each other, instead of as a pile of separate features.</p>
+
+                    <h3 id="mechanics-have-purposes">Every mechanic has a purpose too<a class="anchor" href="#mechanics-have-purposes" aria-label="Link to this section: Every mechanic has a purpose too">#</a></h3>
+
+                    <p>In <a href="c11-from-inspiration-to-purpose.html">From Inspiration to Purpose</a> I said the five steps work on the whole game, and that the same thinking applies to individual mechanics. Here's how. Each mechanic is a small strategy to meet needs, inside the bigger strategy that is the game. So for each one, ask the same questions you asked of the game: what does this make the player feel, which needs does it meet, and does it violate any? Then ask the purpose question: does this mechanic serve the game's purpose?</p>
+
+                    <p>A mechanic can pass the first test and fail the second. A deep crafting system might meet needs for creation and mastery beautifully, and still be wrong for a game whose purpose is momentum and flow, because every stop to craft breaks the flow. That doesn't make crafting bad. It makes it wrong for this game. Judging a mechanic in isolation ("is this a good mechanic?") is how games end up as collections of good mechanics that don't add up to a good game.</p>
+
+                    <h3 id="systems-thinking">Systems thinking<a class="anchor" href="#systems-thinking" aria-label="Link to this section: Systems thinking">#</a></h3>
+
+                    <p>Every part of a game touches other parts. Change the movement speed and you've changed the level sizes, the enemy reaction times, the camera, the difficulty and the pacing. So when you change anything, follow the effects outward: what does this touch, and what does that touch? This is the investigation from <a href="c14-intention-and-action.html">Chapter 14</a>, applied to the game's own parts instead of its players.</p>
+
+                    <h3 id="biomimicry">Observe reality<a class="anchor" href="#biomimicry" aria-label="Link to this section: Observe reality">#</a></h3>
+
+                    <p>Nature has been solving the problem of building lasting, self-balancing, endlessly varied systems for a very long time. When you're stuck on how a system should work, look at how the real world does something similar: how ecosystems balance, how cities grow, how economies recover, how erosion shapes land. You don't have to copy it. Borrow the principle, as the desert example does.</p>
+
+                    <h3 id="top-down-bottom-up">Top-down and bottom-up<a class="anchor" href="#top-down-bottom-up" aria-label="Link to this section: Top-down and bottom-up">#</a></h3>
+
+                    <p>There are two directions to build a universe from. Top-down starts from the largest scale (galaxies, planets, continents, nations) and works down to the details. Bottom-up starts from the smallest pieces (the materials, the creatures, the individual rules) and lets the larger structures emerge from them. Neither is right on its own. The scale the player mostly plays at usually decides which to start from, and a good design checks the other direction too, so the big picture and the small pieces agree.</p>
+                    </section>
+
+                    <section id="believable">
+                    <h2 id="believable-not-realistic">Believable, not realistic<a class="anchor" href="#believable-not-realistic" aria-label="Link to this section: Believable, not realistic">#</a></h2>
+
+                    <p>"Build the forces" might sound like "simulate reality". It isn't. The goal is believability, not realism.</p>
+
+                    <p><strong>Realism</strong> is copying how the real world works, in detail. It's expensive, it's often not fun, and it's frequently not even what players expect, because real life is full of tedious things nobody wants to experience in a game.</p>
+
+                    <p><strong>Believability</strong> is the world making sense on its own terms. Things behave consistently. Causes lead to effects the player can understand. There are no magic rules that apply to some things and not others for no reason. A believable world can have flying castles and plasma cannons, as long as they follow the world's own laws.</p>
+
+                    <p>Why does believability matter so much? Because it meets needs: clarity (understanding how the world works), safety (being able to predict it), and freedom (being able to act in it with confidence). A believable world lets players form plans and use their own judgement. An inconsistent one makes every plan a guess, and players stop trying. Notice also that believability is what makes framework-driven design possible: forces only produce sensible results if the rules are consistent.</p>
+
+                    <h3 id="player-first">The player comes first<a class="anchor" href="#player-first" aria-label="Link to this section: The player comes first">#</a></h3>
+
+                    <p>When realism and the player's experience pull in different directions, the player wins, every time. Override realism wherever it would make the game worse to play. If a contrivance is needed, it should always be in the player's favor.</p>
+
+                    <ul>
+                    <li><strong>Favor convenience over realism.</strong> Real soldiers can't carry fifty grenades. If carrying fifty grenades makes the game better for its purpose, let them, and find a believable reason (a clever backpack, a supply drone), or just don't draw attention to it.</li>
+                    <li><strong>Use abstraction.</strong> Simplify. Remove middlemen. Omit the unimportant. A game about running a starship doesn't need the crew to use the toilet. It needs the parts of running a starship that meet the game's purpose, presented in a way that keeps the feel of the whole.</li>
+                    <li><strong>Design by necessity.</strong> Add a system because the purpose needs it, not because reality has it. Reality has everything. Your game has room for only what matters.</li>
+                    </ul>
+
+                    <p>Real-world knowledge is still enormously useful, as <a href="c21-foundations-before-content.html">Chapter 21</a> showed. It's a library of believable rules you can borrow from. The trick is to borrow the rules that serve the purpose and leave the rest. Piggybacking on reality wholesale is limiting. Picking from it intelligently is powerful.</p>
+                    </section>
+
+                    <section id="no-arbitrary-limits">
+                    <h2 id="natural-limits">Natural limits, not arbitrary ones<a class="anchor" href="#natural-limits" aria-label="Link to this section: Natural limits, not arbitrary ones">#</a></h2>
+
+                    <p>The same thinking applies to limits. When you need to stop the player from going somewhere or doing something, use the world's own laws, never an arbitrary measure.</p>
+
+                    <ul>
+                    <li><strong>No invisible walls.</strong> Don't block the player with an invisible barrier or by quietly disabling their abilities. Design the environment and the player's abilities so the limits come naturally and intuitively: a cliff too steep to climb, water too deep to cross without a boat, cold that kills without the right gear. Never use a measure that wouldn't make sense if it were real.</li>
+                    <li><strong>If the player has a gun, they can shoot anyone with it.</strong> Including an important character the story depends on. Design the story as if a random lightning bolt could strike anyone at any moment. Make the game still completable if a key character dies, with a different ending that reflects it. Don't make the player instantly fail because they did something against the script. Give them a branch where they went their own way, and let their ending reflect it.</li>
+                    <li><strong>Use the systems you built.</strong> If the game has destructible terrain, a buy menu that can drop anything anywhere, or characters that can carry anything, then build the levels, campaigns and stories to embrace those systems, not to cut them down so they barely matter. Don't build destructible terrain and then be too timid to let it matter because some scripted moment would be ruined if the player blew a hole around it.</li>
+                    </ul>
+
+                    <p>That last point is about ego, and it's worth being honest about. When a developer suppresses their own game's systems to force a specific scripted moment, they're meeting their own need (to have the player see the moment exactly as imagined) at the expense of the player's. The result is ludonarrative dissonance: the story says one thing while the systems say another. The game's systems promise freedom, and the script takes it away. If you want to provide tightly controlled experiences, a non-interactive medium like a film, a comic or a book does that far better. If you're making a game, let the game be a game.</p>
+                    </section>
+
+                    <section id="better-business">
+                    <h2 id="throwaway-is-worse-business">Throwaway is worse business, too<a class="anchor" href="#throwaway-is-worse-business" aria-label="Link to this section: Throwaway is worse business, too">#</a></h2>
+
+                    <p>The throwaway model doesn't even benefit the developer. It takes forever to make a game that gives momentary entertainment, is sold once (often at a discount), and has a narrow window in which it can be marketed and sold at all. A throwaway game can be so shallow that watching ten minutes of someone else playing it feels like enough to be "done" with it, even when it's free. I can often glance at one and think "I get it", with no wish to play it.</p>
+
+                    <p>It also feeds the idea that games are nonsense: useless, a waste of time, with no real benefit to anyone. Unfortunately that's true for most games, because they were designed by a mindset that sees games as nothing more than throwaway thrills.</p>
+
+                    <p>Once a developer sees that a game can be more than that, they gain far more than better games. Framework-driven games give players more play from less content, and every addition multiplies everything that came before. That means healthier careers, steadier income and an effort-to-outcome ratio that finally makes sense. The next two chapters show how.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c21-foundations-before-content.html"><span class="label">← Previous · Part IV · Chapter 21</span><span class="pager-title">Foundations Before Content</span></a>
+                    <a class="pager-link next" href="c23-content-that-multiplies.html"><span class="label">Next → · Part IV · Chapter 23</span><span class="pager-title">Content That Multiplies</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

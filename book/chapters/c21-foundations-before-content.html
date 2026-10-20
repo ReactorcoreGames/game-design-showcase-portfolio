@@ -1,0 +1,102 @@
+<article class="chapter" id="c21-foundations-before-content">
+<header>
+<p class="kicker">Part IV · Chapter 21</p>
+<h1>Foundations Before Content</h1>
+</header>
+
+<section id="the-gun">
+<h2 id="everything-depends-on-what-is-under-it">Everything depends on what's under it</h2>
+
+<p>When I became an official content creator for <cite>Cortex Command</cite> (the full story is in <a href="c32-growing-as-a-designer.html">Growing as a Designer</a>), my task was simple: take the sprite sheets the lead artist drew, and turn them into playable guns. I did exactly that, directly. I made about fifty of them, tuning each one by feel until it seemed cool. Some of my bullets weighed three kilograms each, because that's what it took to get the recoil and damage to feel right.</p>
+
+<p>Only later did I find out the game had certain physical standards its original content tried to follow, to keep the physics simulation believable. Nobody had mentioned them. By then the fifty guns were done.</p>
+
+<p>And then came the realization that changed how I work. The design of a gun depends on the characters who use it, and on what they want to do with it. The purpose of the gun, the environment it's used in, how it works mechanically, its physical limits, what it costs to make and maintain: all of those decide what the gun should be. Hahaha... ha... whoops. Nobody had told me, and I hadn't known to ask.</p>
+
+<p>But the guns were only the tip of the iceberg. The characters should be designed around their environment. If I'm sending soldiers onto a battlefield with hazards, that directly decides their outfit and abilities. Lethal flying debris? Give them protection. Walls to get over? Give them something to climb with. Water to swim or sink in? A flotation device or scuba gear. High drops? Something to soften the landing. Catching fire? Something to put it out. Too much to carry? Some way to help with that.</p>
+
+<p>Did the characters in the official content or most mods take any of that into account? Nope. And those situations weren't rare. They came up constantly, on most maps. The soldiers were exposed, had no proper tools for vertical shafts and poor protection against everything. And the same was true of the vehicles, the base building, the defenses and the terrain. Everything was a mess, because everything had been made without looking at what it stood on.</p>
+</section>
+
+<section id="the-chain">
+<h2 id="the-dependency-chain">The dependency chain</h2>
+
+<p>What I noticed is that to design a gun properly, I'd have to go through this chain every time, from left to right:</p>
+
+<blockquote>
+<p>Performance limits of the computer &gt; Premise of the game &gt; Basic natural laws of the in-game universe &gt; Environment (gravity, terrain, resources, hazards, flora and fauna, airspace, atmosphere) &gt; The vehicle or character that uses it &gt; The gun itself</p>
+</blockquote>
+
+<p>Each link depends on everything to its left. Change the gravity, and the right gun changes. Change the premise, and the right environment changes. Change the hardware limits, and how many of anything can exist at once changes. Start from the right end, as I did, and every decision on the left is a guess you'll have to undo later.</p>
+
+<p>Replace "gun" with whatever your game's content is (a spell, a recipe, a building, a dialogue line, a level) and the chain still holds. Content sits at the very end of it. It's the last thing to design, not the first.</p>
+
+<p>In the words of Carl Sagan: "If you wish to make an apple pie from scratch, you must first invent the universe."</p>
+
+<p>What he meant is that the apple pie is the result of everything around it that made it possible: how physics and chemistry work, how heat works, how nature and its rules shape the environments, people and tools that are needed to make that darned pie. In a game, you really do invent the universe first. If you don't do it on purpose, you do it by accident, one inconsistent piece of content at a time.</p>
+
+<p>There's a lot we humans take for granted, and it creates blind spots that lead to poor design decisions. It takes humility to recognize what we don't know, to notice our assumptions and jumps to conclusions, and to start looking at the world as an interconnected whole.</p>
+</section>
+
+<section id="standards">
+<h2 id="foundations-first">Foundations first, content last</h2>
+
+<p>So instead of building guns, I should have gone back along the chain. Before any gun, standardize the rules for how levels are built, both natural terrain and man-made structures. And before even that, standardize the basic things everything shares:</p>
+
+<ul>
+<li>How explosions of different types and sizes behave. Same for smoke, sparks and liquids.</li>
+<li>How bullets and shell casings work, for every gun, the same way.</li>
+<li>How fire, electricity, radiation, poison and other effects behave.</li>
+<li>How flora and fauna are set up, their properties and behavior.</li>
+<li>How armor and materials are defined, for characters, vehicles, terrain, items, props and everything else.</li>
+<li>How the game flows in terms of logistics, how moment-to-moment combat and movement should feel, and how the controls, interface and HUD support the player.</li>
+<li>And how to encourage everyone making content, including modders, to use those standards instead of building their own incompatible versions of explosions and fire.</li>
+</ul>
+
+<p>Only after all that, define the environments. Then the vehicles and characters. Only after all of those, finally, the guns. Not before!</p>
+
+<p>Here's what that buys you:</p>
+
+<ul>
+<li><strong>Content supports itself.</strong> Everything is built on the same rules, so it all stays compatible and interacts properly.</li>
+<li><strong>Balance comes for free.</strong> Each piece is fit for its purpose, with balance that comes from sensible standards. No guesswork, and much less risk of something accidentally overpowered or useless. You don't need convoluted arbitrary justifications for a balance change, because the standards explain it.</li>
+<li><strong>Creativity goes up, not down.</strong> Content creators stop thinking "I need a pistol, a rifle, a shotgun and a grenade", which is how every faction in every mod ended up as the same cookie-cutter lineup. Instead they think "the heavily armored climbing specialist needs a weapon that can deal with several weak enemies quickly and reliably in confined spaces, under these specific rules of this universe." That question produces entirely new weapon concepts, instead of the same old archetypes forever.</li>
+<li><strong>Content becomes modular.</strong> Standardized content can be mixed with any other content, which is the foundation of <a href="c23-content-that-multiplies.html">content that multiplies</a>. New content doesn't replace or obsolete old content; it gives it new life.</li>
+</ul>
+
+<p>Everything I learned there in <cite>Cortex Command</cite> applies directly to game design in general, whatever the project. If you want real innovation, this is the most reliable way I know to get it: not by trying to be original, but by building foundations that make good, varied content the natural result.</p>
+</section>
+
+<section id="buckets">
+<h2 id="buckets-or-a-pipe">Buckets or a pipe</h2>
+
+<p>Before I learned this, I made a lot of things that were fun for five minutes but took five hours, five days or even five weeks to make. I was wasting my own time and the players' time on things that were laborious to build and had very little staying power.</p>
+
+<p>After I learned it, I saw that the ratio could be reversed. Now I can build something in five minutes, five hours, five days or five weeks, and have it stay useful for five weeks, five months, five years, maybe indefinitely. All of that comes from how well the foundations are designed and built, the standards inside them, and how flexibly content can exist on top of them.</p>
+
+<p>Here's the analogy that shows it best. The old way is carrying buckets of water home by hand, every day, forever. The new way is building a pipe and a pump to your home. Building the pipe is slower than carrying one bucket. After it's built, you just turn on the tap.</p>
+
+<p>The flip side is real, and I won't hide it. Setting up foundations means time and patience spent on boring boilerplate: frameworks, standards and invisible support structures that don't produce anything playable by themselves. But you only have to build them once, and do it well. After that, everything is faster than the old way. Having seen the difference, I'd never go back.</p>
+
+<aside class="note">
+<p>This is also the answer to the developer in <a href="c18-afraid-the-game-is-too-short.html">Scenario 6</a> who spent years on something consumed in minutes. That imbalance isn't fate. It's a sign the work went into buckets instead of a pipe.</p>
+</aside>
+</section>
+
+<section id="learning-the-world">
+<h2 id="learning-about-the-world">A reason to learn about the world</h2>
+
+<p>Setting up foundations turned out to have a wonderful side effect. Suddenly I had a natural reason to learn about things that had never interested me before.</p>
+
+<p>Depending on what I was designing, I'd end up reading or watching about engineering, logistics, science, astronomy, nature, anatomy, history, physics, chemistry, mathematics, weather, biology, aviation and many other subjects, to understand the possibilities for the system I was building. It was slow and mentally tiring, and none of it was playable. But I was learning about the world with a passion and enthusiasm my teachers could only have dreamed of. Notice why: the learning met a need, right there, immediately. That's the point from <a href="c12-game-or-interactive-tool.html">Chapter 12</a> about learning already being fun when it serves something you care about.</p>
+
+<p>Two things to note about how to do it:</p>
+
+<ul>
+<li><strong>Only learn what the project needs.</strong> You don't have to become an expert, or even remember the details forever. Look for what the design needs, and stop when you have enough. More study past that point rarely changes the design.</li>
+<li><strong>Look for the openings.</strong> Understanding a subject a little more deeply keeps revealing nuances that open the door to new mechanics and systems. Real-world logistics, for example, explains why powerful things are rare and expensive, which gives you balance rules for free (<a href="c25-pacing-difficulty-and-progression.html">Chapter 25</a> uses this).</li>
+</ul>
+
+<p>It also gave me a wider appreciation for many things I'd taken for granted. The more I learned about things with potential, the more abundant and limitless the world felt. I suspect that's protected me from a lot of the apathy I see around me. Designing a world turns out to be a good reason to love the real one.</p>
+</section>
+</article>

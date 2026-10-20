@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afraid the Game Is Too Short · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="Three different but similar situations, all ending in the same place.">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c18-afraid-the-game-is-too-short.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 18: Afraid the Game Is Too Short · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="Three different but similar situations, all ending in the same place.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c18-afraid-the-game-is-too-short.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 18: Afraid the Game Is Too Short · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="Three different but similar situations, all ending in the same place.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 18: Afraid the Game Is Too Short",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c18-afraid-the-game-is-too-short.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c17-money.html">
+    <link rel="next" href="c19-more-ways-good-intentions-fail.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html" aria-current="page"><span class="n">18</span>Afraid the Game Is Too Short</a><ol class="toc-secs"><li><a href="#scenario-6-story">Scenario 6: Worried about the game&#x27;s length</a></li><li><a href="#filler-content">Filler content</a></li><li><a href="#artificial-difficulty">Artificial difficulty</a></li><li><a href="#arbitrary-unlocks">Arbitrary unlocking and progression systems</a></li><li><a href="#blatant-recycling">Blatant recycling and repetition</a></li><li><a href="#tacked-on-features">Tacked-on features</a></li><li><a href="#time-gating">Time gating</a></li><li><a href="#arbitrary-content-splitting">Arbitrary content splitting</a></li><li><a href="#hidden-delays">Hidden moment-to-moment delays</a></li><li><a href="#rewards-for-staying">Rewards for staying</a></li><li><a href="#punishments-for-leaving">Punishments and threats for leaving</a></li><li><a href="#six-more-padding-methods">Six more padding methods</a></li><li><a href="#why-fear-produces-these">Why fear produces all of these</a></li><li><a href="#scenario-6-outcome">What happened, and why</a></li></ol></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>26 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c18-afraid-the-game-is-too-short">
+                    <header>
+                    <p class="kicker">Part III · Chapter 18</p>
+                    <h1>Afraid the Game Is Too Short</h1>
+                    </header>
+
+                    <section id="scenario-6">
+                    <h2 id="scenario-6-story">Scenario 6: Worried about the game's length<a class="anchor" href="#scenario-6-story" aria-label="Link to this section: Scenario 6: Worried about the game&#x27;s length">#</a></h2>
+
+                    <h3 id="s6-story">Story<a class="anchor" href="#s6-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>Three different but similar situations, all ending in the same place.</p>
+
+                    <ol>
+                    <li><p><strong>The developer who notices the imbalance.</strong> They've been working on a game they'd like to enjoy themselves, and realize their design makes the experience very short. They spent years on something that can be consumed in minutes. They feel terrified, seeing how unfair the ratio of effort to result is. They realize that a cycle of suffering through years of development for a tiny moment of relief isn't a healthy way to live. They're not immortal, so it isn't sustainable. And development itself is often long, laborious and exhausting, the opposite of fun. Struck with dread, they desperately look for ways to make the game last longer.</p></li>
+                    <li><p><strong>The developer worried about value.</strong> They've made a commercial game and notice it's very short compared to other products, which raises the question of whether it's worth its price. They may have used expensive graphics, audio and code to stand out, and they need a certain return to cover costs and debts. But the audience could get an experience with slightly less impressive graphics that's ten times cheaper and ten times longer. Price it low and they can't stay afloat. Price it high and people choose something else. They're stuck, and they start looking for ways to make the game last longer.</p></li>
+                    <li><p><strong>The developer who doubts the game.</strong> During development, a fear appears: maybe the game isn't any good on its own. Too shallow, not deep enough, not satisfying enough. Maybe it gets boring too fast, or lacks long-term meaning. They've already come a long way, and suddenly there's dread that the design might be flawed. Whether the worry is accurate or not, they can still do something now, and ignoring the feeling isn't an option, because suppressed it only grows. They want to act on it. They must. And the most obvious action is to make the game last longer.</p></li>
+                    </ol>
+
+                    <h3 id="s6-action">Action<a class="anchor" href="#s6-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>Before the list, the main thing to notice: every action below comes <em>primarily</em> from worry, fear and desperation, and only <em>secondarily</em> from a wish to improve the game. That order of priority is the source of design decisions that make the game worse instead of better.</p>
+
+                    <p>Please also note that almost none of the techniques below are destructive by their very nature. Side activities, game modes, unlocks, cooldowns and events all have legitimate uses when the purpose of a game calls for them. What makes them padding is the reason they were added: to make the game seem longer or more valuable than it is, out of fear. Keep that context in mind for every item.</p>
+
+                    <p>Each method is described in the same way: what it is, how it's done, and what it does to players. Together they're a catalogue of fear-driven padding. You'll find it again as a checklist at the back of the book.</p>
+                    </section>
+
+                    <section id="filler">
+                    <h2 id="filler-content">Filler content<a class="anchor" href="#filler-content" aria-label="Link to this section: Filler content">#</a></h2>
+
+                    <p><strong>What it is.</strong> New, pointless content added only to make the game look bigger and longer than it is: items, characters, writing, story, mechanics, levels, worlds, activities. It's forced to sit alongside everything else regardless of whether it serves the purpose or adds anything. Unnecessary fat. Regular content exists to fulfill the purpose of the game. Filler exists to keep the player busy.</p>
+
+                    <p><strong>How it's done.</strong></p>
+                    <ul>
+                    <li>Arbitrary collectables: a hundred apples scattered around the world for a vague reason at best and no reason at worst, there to give you "something to do", however satisfying the collecting is made to feel.</li>
+                    <li>Arbitrary challenges: do this task under thirty seconds because I said so, fetch quests (take item A to place B), skill trials with restrictions that make no sense in the rest of the game, timed puzzles, find the hidden thing, climb this tower.</li>
+                    <li>Arbitrary story moments: side stories injected into the game that contribute little to its purpose.</li>
+                    <li>Arbitrary features: "here's a system about collecting runes that has nothing to do with the game, but gives you small upgrades."</li>
+                    </ul>
+
+                    <p><strong>What it does.</strong> Annoyance, frustration and contempt. Human beings are smart. They can feel when something is filler. When they feel it strongly enough, they lose respect for the developer and the game, and immersion and enjoyment suffer. It becomes hard to see the game as more than a toy, even if it had the potential to be much more. Filler content ruins the game.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="artificial-difficulty">Artificial difficulty<a class="anchor" href="#artificial-difficulty" aria-label="Link to this section: Artificial difficulty">#</a></h2>
+
+                    <p><strong>What it is.</strong> Making the game obscenely difficult, with the primary intention of lengthening it through more failure and harsher consequences for failing. The player fails easily and has to replay sections, or the whole game, many times. Or each failure costs more, up to losing all progress and starting over.</p>
+
+                    <p>Artificial difficulty differs from meaningful difficulty in where it comes from. Meaningful difficulty serves the purpose of the game. Artificial difficulty serves the wish to make the game last longer. The exact same technique can be meaningful in one game and artificial in another, which is why it's so hard to pin down without talking about purpose. The examples below are artificial only in the context of padding a game out.</p>
+
+                    <p><strong>How it's done.</strong></p>
+                    <ul>
+                    <li>Removing checkpoints or saves, or making them scarce.</li>
+                    <li>Making the controls more complicated and less intuitive, so even basic actions are hard.</li>
+                    <li>Requiring punishing precision from movement, with no tolerance for error.</li>
+                    <li>Giving opponents more power, accuracy and defense than makes sense.</li>
+                    <li>Removing essential interface information, so the player makes uninformed decisions.</li>
+                    <li>Making success depend on luck instead of skill or knowledge.</li>
+                    <li>Weakening the player or strengthening opponents in arbitrary ways.</li>
+                    <li>Trial and error: requiring knowledge the player can't have before failing.</li>
+                    <li>Blocking the player's view with foreground elements or effects, though the character could see perfectly well.</li>
+                    <li>Arbitrary restrictions on how a task must be done.</li>
+                    <li>A challenge that's literally impossible, presented as possible, with the game urging the player to try harder.</li>
+                    <li>Lying to the player so they fail.</li>
+                    </ul>
+
+                    <p><strong>What it does.</strong> Frustration, anger and sadness. Players come to hate their experience, lose respect for the developer, stop playing entirely, and tell everyone they know the game is horrible, so their friends never try it. Artificial difficulty ruins the game.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="arbitrary-unlocks">Arbitrary unlocking and progression systems<a class="anchor" href="#arbitrary-unlocks" aria-label="Link to this section: Arbitrary unlocking and progression systems">#</a></h2>
+
+                    <p><strong>What it is.</strong> Instead of making all the content available from the start, the developer makes parts of it unavailable by default, until the player completes arbitrary tasks, plays for an arbitrary amount of time, or feeds some system that measures how long they've played. As milestones are reached, content is "unlocked". Existing content gets stretched over a far longer time than the player would otherwise spend.</p>
+
+                    <p><strong>How it's done.</strong> Anything can be locked: game modes, difficulty levels, worlds, characters, features, items, utilities, collectables, artwork, customization options, story sections, writing, entire mechanics.</p>
+
+                    <p><strong>What it does.</strong> The game wastes the player's time with arbitrary obstacles, contrived tasks and pointless restrictions, just to lengthen the experience. The player's real-life time isn't respected, and neither is the player. The unlock system can also steal the game's meaning: it becomes the main reason to play, and once everything is unlocked, the player feels empty, with no reason to play the game for its own sake. It hurts returning players too, who have to unlock everything again before they can enjoy the game fully.</p>
+
+                    <p>The irony is that it can make people spend <em>less</em> time with the game. They notice the manipulative intent and the inane nonsense they have to deal with, when they came for an entirely different experience, and they leave with a feeling that their time with the game was bad. Unlocking and progression systems can ruin a game.</p>
+                    </section>
+
+                    <section id="recycling">
+                    <h2 id="blatant-recycling">Blatant recycling and repetition<a class="anchor" href="#blatant-recycling" aria-label="Link to this section: Blatant recycling and repetition">#</a></h2>
+
+                    <p><strong>What it is.</strong> Like filler, but reusing existing content to make the game seem bigger. The repeated content doesn't enrich the game or feel valuable to experience. It devalues the legitimate content around it.</p>
+
+                    <p>Please note that this is not to be confused with producing more assets at less cost, by reusing parts cleverly. That's a really good idea for any size of project, and <a href="c23-content-that-multiplies.html">Content That Multiplies</a> is all about it. The difference is the intent: padding the length out of fear, versus enriching the game or making it cheaper to create.</p>
+
+                    <p><strong>How it's done.</strong> Most often with items, characters and sections of the world: duplicated under a slightly different name, look, layout or set of numbers. It's technically new, but it gives no remarkable variety.</p>
+
+                    <p>Two examples, both PC games. <cite>Borderlands 2</cite> advertises millions of weapons. In practice it has a handful of weapon types (pistol, SMG, shotgun, sniper, rocket launcher, assault rifle) with randomized color, damage, reload and recoil values. The rest is reskins, which mostly give the player busywork: comparing numbers in the hope of a slightly better gun. <cite>Skyrim</cite> repeats the same dungeon many times with a different layout: the same pots with one coin each, the same traps with the same triggers, the same reward chest at the end, the same angry mob. The amounts and positions differ, but it doesn't feel like variety or growth. Once I'd seen one dungeon, I'd seen them all.</p>
+
+                    <p><strong>What it does.</strong> Playing through recycled content doesn't meet my need for growth and variety. It feels like busywork. Players feel stagnation, their immersion breaks, and moment-to-moment play becomes more laborious than fulfilling. Eventually they notice the repetition and lose respect for a developer who padded the game this way, and often quit.</p>
+                    </section>
+
+                    <section id="tacked-on">
+                    <h2 id="tacked-on-features">Tacked-on features<a class="anchor" href="#tacked-on-features" aria-label="Link to this section: Tacked-on features">#</a></h2>
+
+                    <p><strong>What it is.</strong> Forcing an unplanned feature onto the existing design to make players spend more time with the game.</p>
+
+                    <p><strong>How it's done.</strong></p>
+                    <ul>
+                    <li>Side activities that fill time between parts of the main game. Some developers even lock main content behind them.</li>
+                    <li>Extra mechanics that slow the pace, like a hunger meter that kills you unless you find and eat food every five minutes. Finding, picking up, managing and eating food, and watching the meter, makes the whole game play slower.</li>
+                    <li>Entirely new experiences next to the main game: new modes, minigames, extra difficulty levels, a multiplayer mode in a singleplayer game or the reverse, or a separate companion mobile app that affects the main game.</li>
+                    </ul>
+
+                    <p><strong>What it does.</strong> The same as filler and recycling: frustration, disconnection and meaninglessness, growing stronger the longer the player tries to enjoy the game, until they quit. If they figure out why they stopped, that it was fear-driven padding presented as a big, valuable game, they feel annoyed, angry and disappointed, and may warn others away from the developer's future games. Enough of that cripples a business.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="time-gating">Time gating<a class="anchor" href="#time-gating" aria-label="Link to this section: Time gating">#</a></h2>
+
+                    <p><strong>What it is.</strong> Blocking content or progress by making the player wait in real-life time. Or the reverse: making content or progress available only at a certain real-life time, a time of day, a season, an event, so the player has to show up then. Real-life time becomes a gate the player must pass through, with no other option.</p>
+
+                    <p><strong>How it's done.</strong> Endless variations, for example:</p>
+                    <ul>
+                    <li>Two hours of play per day, then wait until tomorrow.</li>
+                    <li>Progress pauses for four real hours before you may continue.</li>
+                    <li>Content unlocks after twelve hours of real waiting.</li>
+                    <li>A feature or mechanic needs thirty real minutes to activate.</li>
+                    <li>Content only reachable between 19:00 and 24:00, or on Tuesdays at 14:00.</li>
+                    <li>Content only available during an event or season the developer picked, with no other chance to get it.</li>
+                    <li>A shop with a "rotating inventory" that shows a small slice of its content each hour, so you have to wait or keep checking to see the rest.</li>
+                    <li>One real hour to beat the game, one attempt a day.</li>
+                    <li>Play every day for thirty days to unlock something, and miss one day to lose it all.</li>
+                    </ul>
+
+                    <p><strong>What it does.</strong> Everything the previous methods do, plus something more serious. Time gating is highly dangerous, because it reaches into real life.</p>
+
+                    <p>Now, this might sound a bit absurd for something so innocent-looking. It may also sound like it's preventable with a bit of self-discipline. It isn't, and here's why. A game that respects real life can be paused, saved and played whenever and however the player wants. There's no inconvenience in putting it down. A time-gated game makes it inconvenient to play any other way than the way it demands. With time gating, the game controls the player. Without it, the player controls the game. That's the crucial difference. Time gating makes the game more important than real life.</p>
+
+                    <p>The ways that turns into harm are subtle:</p>
+                    <ul>
+                    <li><strong>Missed obligations.</strong> The game's time slot competes with a real appointment, meeting or event. Going costs progress. Not going costs relationships, trust and opportunities.</li>
+                    <li><strong>Accidents.</strong> The player's attention is held by the game at the moment it was needed elsewhere: a child, a stove, a road. People can actually be injured or die through the neglect a time-gated game encourages.</li>
+                    <li><strong>Unhealthy habits.</strong> If the game demands uninterrupted focus without a way to pause or save, players put off eating, drinking, the toilet, rest, exercise, hygiene and time with their family. Repeated often enough, it damages health and makes the person harder to be around.</li>
+                    <li><strong>Broken sleep.</strong> If the game demands play at times that clash with sleep, the player's sleep becomes short and irregular, and the health effects of that, short and long term, are very bad.</li>
+                    </ul>
+                    </section>
+
+                    <section id="content-splitting">
+                    <h2 id="arbitrary-content-splitting">Arbitrary content splitting<a class="anchor" href="#arbitrary-content-splitting" aria-label="Link to this section: Arbitrary content splitting">#</a></h2>
+
+                    <p><strong>What it is.</strong> Taking the scarce content of one complete game and splitting it between two or more almost identical parallel games. Or cutting content that could have shipped together into separately sold expansions and DLC, sometimes padded with recycled content to look bigger.</p>
+
+                    <p><strong>How it's done.</strong> The most notorious example is the <cite>Pokémon</cite> series, which releases two almost identical versions of each game, each with a set of creatures the other lacks. The reasoning is that you're supposed to trade with friends to complete the collection. There's some validity there: the handheld's link feature was unique and interesting. But I'd still call it arbitrary content splitting, because the same sharing could be built in ways that don't compromise the singleplayer experience or require two versions, with all the annoyances that come with them, like a friend who happens to own the same version as you.</p>
+
+                    <p>Anything one-of-a-kind can be split: characters, items, maps, music, vehicles, missions, campaigns. A desperate developer might release two parallel games that each have one of the playable characters meant for a single game, or half the missions each.</p>
+
+                    <p>And there are legitimate reasons for splitting content: a developer should get fair compensation for the work they do, and it doesn't make sense to stretch themselves thin by doing more work than they're supported for. Content splitting is a tool that can be used well or badly. I call the bad use arbitrary.</p>
+
+                    <p><strong>What it does.</strong> As with padding: players lose respect for the developer, enjoy the overall experience less, and often quit in disappointment at the inconvenience.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="hidden-delays">Hidden moment-to-moment delays<a class="anchor" href="#hidden-delays" aria-label="Link to this section: Hidden moment-to-moment delays">#</a></h2>
+
+                    <p><strong>What it is.</strong> Tiny, subtle, barely noticeable delays strategically sprinkled throughout the game wherever there's an opportunity. A dirty little trick. Each one seems trivial. Across a full playthrough there can be thousands, and together they stretch a short game into a long one.</p>
+
+                    <p><strong>How it's done.</strong></p>
+                    <ul>
+                    <li>Prolonged cinematic animations.</li>
+                    <li>Fake loading times, or longer real ones.</li>
+                    <li>Tiny pauses between actions.</li>
+                    <li>Slowing the entire game with an almost unnoticeable 0.9 timescale.</li>
+                    <li>Menus that take an extra second before they respond.</li>
+                    <li>New transitions that only exist to waste time.</li>
+                    <li>Longer intros, and unskippable intros, cutscenes, credits and briefings.</li>
+                    <li>Characters who talk very slowly and pause often, and text that crawls onto the screen.</li>
+                    <li>Holding a button to confirm instead of tapping it.</li>
+                    <li>Opponents that take twice as long to defeat, and abilities that recharge very slowly.</li>
+                    <li>Slow, cumbersome scrolling through lists.</li>
+                    <li>Taking away control for a few seconds when the player finds something.</li>
+                    <li>Slowing down every player action: walking, jumping, crafting, reloading, turning their head.</li>
+                    </ul>
+
+                    <p>To be honest with my own feelings here: I feel disgusted whenever I see a developer try this trick. It limits my play and reduces the fun I could have, and it violates my need to be respected as a human being. It wastes my time for petty reasons, and doesn't respect my intelligence by pretending I won't notice.</p>
+
+                    <p><strong>What it does.</strong> At first, nothing visible. That's why they're hidden. A new player assumes everything is normal. With extended play, it becomes apparent that there are delays and slowdowns that make no sense. When players notice, they feel what I feel: anger and disappointment, because their time is being wasted and they aren't respected. They perceive it as an insult, as disrespect, as violence, in the sense that the developer is meeting their own needs by trampling on the players'. They quit, lose respect for the developer, and find it far harder to trust them in the future.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="rewards-for-staying">Rewards for staying<a class="anchor" href="#rewards-for-staying" aria-label="Link to this section: Rewards for staying">#</a></h2>
+
+                    <p><strong>What it is.</strong> Using extrinsic rewards to lure players into coming to the game and staying as long as possible, regardless of the game's own value or the player's real interest. The developer fears the game isn't good enough on its merits, or not worth its price, so they fill it with incentives to make it look more valuable. These rewards usually have nothing to do with the game's purpose. They're laid on top of it, like a third leg.</p>
+
+                    <p><strong>How it's done.</strong> The rewards can be built into the game, partly external (praising the player's self-worth from inside the game), or entirely external (on the website, the forum, or real life).</p>
+                    <dl>
+                    <dt>Real-life incentives</dt>
+                    <dd>Coupons, discounts, vouchers and free trials, sometimes for unrelated services: "play for X hours and get a free week of service Y!"</dd>
+                    <dt>Contests and prizes</dt>
+                    <dd>An event bolted onto the game, with scarce prizes for the few who win or get lucky in a draw, and rules that make people play far longer than the game is worth to them.</dd>
+                    <dt>Achievements</dt>
+                    <dd>Arbitrary, often time-consuming tasks that reward badges, grades, stars and other tokens telling the player they're "a good player". I see them as the equivalent of doggy biscuits for obedience. They can create addiction, which is why they're so widely used and believed to "guarantee engagement". Their long-term effects stay hidden to the developer, and get blamed on other causes, usually the players.</dd>
+                    <dt>Automatic idle rewards</dt>
+                    <dd>A small reward every few seconds as long as the game is running and the player is active, with a safeguard that stops it if they step away, to keep them seated. (Players will find creative ways around the safeguard.)</dd>
+                    <dt>Periodic free rewards</dt>
+                    <dd>A bundle every day or week that doesn't stack, so coming back after two weeks gets you one week's worth. It makes it inconvenient to play only when you actually want to.</dd>
+                    <dt>Bonus overload</dt>
+                    <dd>Rewards for anything and everything, however mundane, to keep a constant stream of instant gratification going.</dd>
+                    <dt>Celebratory audiovisual bombardment</dt>
+                    <dd>Particle explosions, screen effects, bombastic sounds and epic music for clicking a menu button or taking a few steps.</dd>
+                    <dt>Constant praise and compliments (not gratitude)</dt>
+                    <dd>"Good job!", "You're awesome!", "Perfect!", "You're a super player!" These aren't genuine expressions of gratitude. They're hollow compliments meant to make the player feel good so they keep playing. They can create dependence on approval, make the player's self-worth rely on constant praise, and teach that there's such a thing as a "good person" and a "bad person", which spreads labels and judgements into everyday communication.</dd>
+                    </dl>
+
+                    <p><strong>What it does.</strong> Rewards appear to work, but only for a short time. Most people eventually sense the manipulative intent and feel strongly betrayed that the nice things weren't genuine.</p>
+
+                    <p>It's worth noticing where that short "success" comes from. Players arrive with trust, built up by earlier developers who treated their players well. Thanks to them, players give a new developer the benefit of the doubt. Rewards used as manipulation spend that trust. They violate the needs for trust, respect, honesty and transparency, and the hurt of realizing it causes contempt, anger, boycotts and every other kind of counterattack. The accumulated goodwill of the past is destroyed, the pioneers who built it are disrespected, newcomers to the industry have a harder time, and players grow jaded about games in general.</p>
+
+                    <p>And some players do get hooked, especially when they're emotionally vulnerable because something big and scary is happening in their life. The rewards give comfort and help them forget. That becomes a loop: the player feeds the habit to suppress their pain, the game keeps supplying, and the damage keeps building, until it often explodes into some kind of tragedy that care, and the absence of an environment that encourages it, would have prevented.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="punishments-for-leaving">Punishments and threats for leaving<a class="anchor" href="#punishments-for-leaving" aria-label="Link to this section: Punishments and threats for leaving">#</a></h2>
+
+                    <p><strong>What it is.</strong> The opposite of rewards for staying: punishing players to keep them from leaving. As <a href="c09-understanding-human-beings.html">Chapter 9</a> showed, rewards and punishments are two sides of the same coin. Both are power over people.</p>
+
+                    <p>Punishment for leaving is usually indirect. First the game needs leverage: something the player strongly values and doesn't fully control, that can be held hostage. It can be an item, a privilege, access to a service, progress, status. It's often manufactured, by designing in an artificial scarcity of something important, creating value out of nothing. Without a hostage, punishment just makes players leave and curse the developer.</p>
+
+                    <p>Punishment also only works if the player accepts the developer's contrived logic as reality: that the developer really has power over them and there's no other option. That means discouraging questions, discouraging alternative views and encouraging obedience. The more absurd the claims, the harder the developer has to work to maintain the environment. That's why games that seem to use punishments "successfully" so often have spectacular art, sound and effects. They're crutches. Without them, the game would collapse quickly, which shows how unsustainable the method is.</p>
+
+                    <p><strong>How it's done.</strong></p>
+                    <dl>
+                    <dt>Disapproval of the player's short sessions as "wrong"</dt>
+                    <dd>The game expresses disappointment and disapproval at players who keep their sessions short, passively through text, sound and visuals, or actively through threats ("your character dies in 10 seconds"), locked features or taking over control to steer the player back. Both violate the needs for freedom and control over one's own life, and the anger they cause grows until the player quits.</dd>
+                    <dt>Denial of content or bonuses</dt>
+                    <dd>"Unless you play at least X hours of part Y, I'll make your game worse, or block the good stuff until you obey." The obstacles might be literal waiting, grinding, or a time-consuming, unrelated task. There's a fine balance the developer has to keep: punish too hard, or offer content that's only marginally good, and the player decides "screw this game" and quits. That's why games using this technique put enormous effort into presentation.</dd>
+                    <dt>Missing out on reward bundles and boosts</dt>
+                    <dd>Weekly bundles that reward players who return on schedule, and so punish those who come back when they feel like it. Regular players make predictable data that reassures investors; sporadic ones don't. So the game bends players' real lives toward making the numbers look good, at the cost of their time, schedules and responsibilities, and later of their trust in the developer and their relationships with the people around them.</dd>
+                    <dt>Denial of real-life rewards and opportunities</dt>
+                    <dd>Contests, giveaways, live events and promotions available only in one narrow time and place, deliberately one-off rather than ongoing, with something that matters for progress or advantage attached, held hostage to force attendance.</dd>
+                    <dt>A mean attitude, to make the player believe something is wrong with them</dt>
+                    <dd>The game labels the player (coward, loser and much worse) and offers a task to prove it wrong, which happens to be playing longer. Or it invites them to accept the label and the abuse that comes with it, which can spiral into a loop that also keeps them playing. It's one of the most frightening tactics there is, used in the past to control groups of people with terrible results, and it works best on the vulnerable: the unsure, the confused, the depressed, the outnumbered, the ones lacking meaning. Its costs are depression, cynicism, toxic communities and, at worst, real harm to people and property. Life becomes concretely worse wherever it's used.</dd>
+                    <dt>Threatening to lose all progress</dt>
+                    <dd>Build up the player's investment (items, prestige, skills, recognition, progress), then hold it hostage: "if you don't log in for 30 days, your character is erased", "uninstall and you lose everything, and you can't back up your save because we said so". I've heard the same story from many players: "I put so many hours into it, I can't just let it all go. It can't have been meaningless." That isn't an addiction that came from the player. The developer structured the game to put them in that position.</dd>
+                    <dt>Threatening to lose some progress, to stretch a session</dt>
+                    <dd>A smaller version of the same trick, aimed at the single session instead of the whole relationship: progress that only counts once you reach the next distant save point, a run that's only banked if you finish it, a timer that wipes your unbanked gains if you stop now. "Just a little longer, or you lose the last forty minutes." The player came to play for a while. The game decided how long "a while" is, and made stopping painful. It meets no need of the player's, and it violates their freedom, their rest and their trust that they can put the game down whenever life needs them.</dd>
+                    </dl>
+
+                    <p>Compare these with the rewards for staying, and you'll see they're mirror images. Rewards also hide a punishment inside them: not doing what earns the reward means not getting it, and being treated coldly for not obeying. Punished by rewards, as ironic as that sounds.</p>
+
+                    <aside class="note">
+                    <p><strong>About masochism.</strong> Please don't confuse the punishment I'm describing with the kind some people enjoy. Some players seek out games that are brutally hard, unforgiving or even degrading, and genuinely enjoy them. That's a real strategy for meeting real needs: for challenge, for testing one's limits, for the intense relief of finally overcoming something, sometimes for working through feelings in a safe space. The difference is consent and honesty. Someone who chooses a punishing experience, knowing what it is, from a game that's upfront about what it is, is meeting their own needs on their own terms. A game that hides punishment inside a promise of fun, and uses it to control how long people play, is doing something to them they never agreed to. If your game's purpose really is a punishing experience, say so plainly, and let the people who want it come to it.</p>
+                    </aside>
+                    </section>
+
+                    <section id="six-more">
+                    <h2 id="six-more-padding-methods">Six more padding methods<a class="anchor" href="#six-more-padding-methods" aria-label="Link to this section: Six more padding methods">#</a></h2>
+
+                    <h3 id="forced-rng-failure">Forced failure through randomness<a class="anchor" href="#forced-rng-failure" aria-label="Link to this section: Forced failure through randomness">#</a></h3>
+                    <p><strong>What it is.</strong> Using random number generators to make the player fail more often than their skill and choices would warrant. <strong>How it's done:</strong> hit chances that miss far more than the displayed odds suggest, crafting that randomly fails and destroys the materials, rare drops with tiny odds that the player has to farm the same enemy for, upgrades that can randomly downgrade. <strong>What it does:</strong> the player's skill and decisions stop mattering, so the need for power and competence is violated. Failure no longer teaches anything, because there was nothing to learn, only dice. Players feel cheated, and the time spent repeating attempts feels wasted, because it was.</p>
+
+                    <h3 id="playthrough-splitting">Splitting the game across multiple playthroughs<a class="anchor" href="#playthrough-splitting" aria-label="Link to this section: Splitting the game across multiple playthroughs">#</a></h3>
+                    <p><strong>What it is.</strong> Dividing the game's content so that no single playthrough can see it all, forcing the player to replay the same game to get the rest. <strong>How it's done:</strong> class systems where each class only reaches part of the content, "choices" that lock out half the game but change little else, alternate endings that need a full replay to reach, story branches that differ by a few scenes. <strong>What it does:</strong> the player replays hours of identical content to see the small part that differs. Choices that only exist to force replays feel cheap, and players can tell the difference between a real choice and a gate. It's content splitting inside one game, and it has the same effects as recycling.</p>
+
+                    <h3 id="dailies">Daily challenges and offline progress<a class="anchor" href="#dailies" aria-label="Link to this section: Daily challenges and offline progress">#</a></h3>
+                    <p><strong>What it is.</strong> Systems that call the player back into the game on the game's schedule instead of their own. <strong>How it's done:</strong> daily challenges and quests that expire, rewards for coming back, resources that generate while you're away but cap out if you don't collect them, notifications that something is ready. <strong>What it does:</strong> these are intrusive real-life beckonings. The game reaches out of the screen into the player's day and pulls. It's time gating with a friendlier face, and it does the same harm: the game competes with real life for the player's attention, and the player starts feeling that they're "losing" something every day they don't play. That feeling isn't fun. It's a low-level, constant pressure, and it's one of the main reasons people describe a game as a chore they can't stop doing.</p>
+
+                    <h3 id="drip-feeding">Drawing existing content out really slowly<a class="anchor" href="#drip-feeding" aria-label="Link to this section: Drawing existing content out really slowly">#</a></h3>
+                    <p><strong>What it is.</strong> Stretching the same amount of content over more time. <strong>How it's done:</strong> slow walking speeds, long empty roads between interesting places, rewards drip-fed in tiny amounts, large maps with little in them, and the <cite>Skyrim</cite> coin pots: dozens of containers with one coin each, so collecting a meaningful sum takes forever. <strong>What it does:</strong> the moment-to-moment experience becomes thin and boring, because the density of anything meaningful is low. It's hidden delays at the scale of the whole world. Players feel their time being stretched, and the game feels padded even when they can't say why.</p>
+
+                    <h3 id="removing-conveniences">Removing conveniences on purpose<a class="anchor" href="#removing-conveniences" aria-label="Link to this section: Removing conveniences on purpose">#</a></h3>
+                    <p><strong>What it is.</strong> Taking away things that would make the game smoother, so it takes longer. <strong>How it's done:</strong> no fast travel, no quick-save, a tiny inventory that forces constant trips back to sort it, no way to exit a dungeon except walking back out, no way to buy or craft in bulk. <strong>What it does:</strong> the player spends a large share of their time on chores rather than on the game they came for. It also sets up the worst version of monetization: once a convenience is missing, it can be sold back. Paid fast travel, paid inventory space and paid automation are this padding trick with a price tag. Please note that some games really do need the journey, the limited bag or the long way back, because their purpose is about travel, survival or planning. The question, as always, is whether it serves the purpose or just adds time.</p>
+
+                    <h3 id="difficulty-options">Extra difficulty options as padding<a class="anchor" href="#difficulty-options" aria-label="Link to this section: Extra difficulty options as padding">#</a></h3>
+                    <p><strong>What it is.</strong> Using difficulty levels to make the player replay the same game. <strong>How it's done:</strong> "beat the game on hard to unlock the real ending", content or items that only exist at higher difficulties, rankings that imply there's a "correct" way to beat the game, difficulty settings that change nothing but enemy health so the same content takes longer. <strong>What it does:</strong> it breaks the consistency of the game's world (why is this sword only in the world on hard?), and it tells players who chose the easier setting that their experience was the lesser one, which violates their need for respect. Players who replay to see the locked content are just replaying.</p>
+                    <p>This is not the same as honest difficulty options. Letting new players start with limits on how hard their first hours can get, and letting experienced players switch on a "pro mode: no limits" whenever they want, respects both groups and changes the experience to fit the person. That's covered in <a href="c25-pacing-difficulty-and-progression.html">Pacing, Difficulty and Progression Without the Scam</a>. The difference, again, is the reason: serving the player, or stretching the game.</p>
+                    </section>
+
+                    <section id="why-fear">
+                    <h2 id="why-fear-produces-these">Why fear produces all of these<a class="anchor" href="#why-fear-produces-these" aria-label="Link to this section: Why fear produces all of these">#</a></h2>
+
+                    <p>Rushing to a solution out of fear is an ordinary psychological weakness we all have. It's a mental shortcut meant to help us decide fast in immediate danger, and fast decisions don't have the time to be well thought out. They come with drawbacks and compromises we suffer for later. For a subject as complex as game design, and for long-term solutions, that's especially harmful.</p>
+
+                    <p>Every method in this chapter is the most convenient, easiest, quickest, most obvious thing to try, especially if you don't know beforehand why it's bad. From a place of fear, worry and desperation, making these mistakes is incredibly easy. Fear is a very bad motivator for exactly that reason: it makes people forget wisdom and rush toward the most convenient fix, with very counterintuitive results.</p>
+
+                    <p>The list is only what I can remember, and it could be infinitely longer, because each kind of game has its own opportunities for padding. But it covers the most common ones. And notice that the mindset, the intention, is the source of every single one. That's why <a href="p2-the-mindset.html">Part II</a> came first.</p>
+                    </section>
+
+                    <section id="s6-rest">
+                    <h2 id="scenario-6-outcome">What happened, and why<a class="anchor" href="#scenario-6-outcome" aria-label="Link to this section: What happened, and why">#</a></h2>
+
+                    <h3 id="s6-problem">Problem<a class="anchor" href="#s6-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>The game did get longer, on paper. Playtime per player went up for a while. Then reviews started using words like "padded", "grindy", "tedious" and "disrespectful of my time". Players who'd finished the game didn't recommend it, or recommended it with a warning. Many quit partway, so they never even saw the good parts the padding was wrapped around. The developer's reputation took a hit that followed them to their next game. And the original worry, "is this game worth it?", was now answered by the players with a clear no, when the honest short game might have earned a yes.</p>
+
+                    <h3 id="s6-intention">Intention<a class="anchor" href="#s6-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>To make the game feel worth the years that went into it, worth its price, and good enough to last. In terms of needs: the developer's safety (financial and emotional), meaning (their years of work counting for something), and contribution (giving players something substantial).</p>
+
+                    <h3 id="s6-mistake">Mistake<a class="anchor" href="#s6-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>The developer tried to fix a problem of value with a strategy of length. Players don't want more time spent. They want more needs met. Every padding technique adds time without adding need satisfaction, and most of them actively drain needs (respect, freedom, rest, trust) while doing it. So the ratio of value to time, the thing players actually feel, went down, not up.</p>
+
+                    <p>Underneath that is the deeper mistake: the game's structure was finite and its content additive, so the only way to get more playtime was to stretch what existed. The real answers are structural, and they're what Part IV is about:</p>
+
+                    <ul>
+                    <li>If the game is short because it's a handmade experience that delivers one gift, that's fine. Make it excellent, price it honestly, and say clearly what it is. A short game that's honest about being short is respected. A short game disguised as a long one is resented.</li>
+                    <li>If the game is short because its content runs out, build the content to multiply instead of add, so every piece combines with every other (<a href="c23-content-that-multiplies.html">Content That Multiplies</a>).</li>
+                    <li>If the game is short because its structure ends, give it a structure that doesn't have to end (<a href="c24-infinite-metagames.html">Infinite Metagames</a>).</li>
+                    <li>If the developer's years of work were out of proportion to the result, that's a production problem: build forces and frameworks instead of hand-placing every piece (<a href="c22-build-the-forces-not-the-desert.html">Build the Forces, Not the Desert</a>).</li>
+                    </ul>
+
+                    <p>None of those come from fear. All of them come from the purpose.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c17-money.html"><span class="label">← Previous · Part III · Chapter 17</span><span class="pager-title">Money</span></a>
+                    <a class="pager-link next" href="c19-more-ways-good-intentions-fail.html"><span class="label">Next → · Part III · Chapter 19</span><span class="pager-title">More Ways Good Intentions Fail</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

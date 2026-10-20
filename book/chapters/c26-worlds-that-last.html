@@ -1,0 +1,135 @@
+<article class="chapter" id="c26-worlds-that-last">
+<header>
+<p class="kicker">Part IV · Chapter 26</p>
+<h1>Worlds That Last</h1>
+</header>
+
+<section id="intro">
+<p>An infinite game needs a world that can last forever. That sounds impossible on a computer with finite memory, and in a literal sense it is. This chapter is about how to make a world that lasts anyway: by dividing it into a home and a wilderness, by respecting the hardware as a law of nature, by keeping a history instead of a pile of data, and by letting time move only forward.</p>
+</section>
+
+<section id="regular-and-wilderness">
+<h2 id="the-regular-world-and-the-wilderness">The regular world and the wilderness</h2>
+
+<p>This is loosely inspired by the old game <cite>RuneScape</cite>, whose world was split into two zones. The regular world stayed the same: permanent, persistent and stable. The wilderness was fluctuating, chaotic and dangerous, with special rules that didn't apply elsewhere, and the deeper you went, the more dangerous and chaotic it got.</p>
+
+<p>An infinite metagame needs a similar structure. It can't work with only a stable, persistent world. It needs both.</p>
+
+<ul>
+<li><strong>The regular world</strong> is the starting area and tutorial, and afterwards the persistent home: the headquarters the player always returns to, to rest, upgrade, prepare, and launch the next adventure. Things built here stay.</li>
+<li><strong>The wilderness</strong> is where the infinite adventures happen. It's a temporary space created for the length of a campaign or a quest. The player goes in with gear from earlier adventures, uses it to complete the campaign, and brings back new resources, trophies, loot and treasures.</li>
+</ul>
+
+<p>Why is the wilderness necessary? Because of the hardware. Storage and memory have hard limits. Exceed them and the game crashes, the computer freezes, or the save becomes too big to load, which effectively ends the game and makes it finite after all. By keeping the regular world a limited space that can hold only so much, the game's memory use is capped. But that alone isn't enough, because humans have a natural need for endless variety, which a limited, persistent world can't satisfy.</p>
+
+<p>The wilderness solves both. It's a temporary, disposable, randomized space that lets the player step into a completely new adventure outside the regular world. Because it's disposable, its memory footprint is capped too. At the end of a campaign, the wilderness is deleted to make room for the next one. But what happened in it is permanently recorded in logs and mementos, and its effects on the regular world remain, so every campaign has persistent consequences.</p>
+
+<p>The only thing that grows endlessly is the history: mementos and logs, designed to take as little space as possible, so thousands of them never become a problem. Better still, store them in common formats (images, PDFs, text files) that can be backed up and opened outside the game.</p>
+
+<p>The result is the illusion of an infinite world without needing one. And it feels fine to players even if they notice the trick, because it holds together believably. If the player wants to revisit a wilderness location, the game can regenerate it on the fly, with the changes that have since happened there, based on flags it kept. And players soon notice they don't need an infinite regular world anyway. A human can only be in one place and do one thing at a time. Gathering everything in one central place makes sense, so players naturally set up a home, a base or a camp that becomes their cozy spot, which they can rearrange as much as they like.</p>
+
+<p>The form of both depends entirely on the project. The regular world can be a home base you walk around in, an overworld map with some menus, or, at its most basic, a campaign progress bar. The wilderness is the campaign itself. The names "regular world" and "wilderness" are only training wheels. Rename them to whatever helps you think about your project. Only the concept matters.</p>
+
+<p>You saw this structure in the <a href="c24-infinite-metagames.html">Astroneer example</a>: seven persistent planets as the regular world, a disposable 8th planet as the wilderness.</p>
+</section>
+
+<section id="hardware-as-law">
+<h2 id="hardware-limits-as-natural-law">Hardware limits as a law of nature</h2>
+
+<p>Treat the computer's limits the way you treat gravity: as a law of the game's universe, built into it from the start, never ignored and never left to break the game later. (The crab bomb in <a href="c20-taking-inventory.html">Chapter 20</a> is what happens otherwise.)</p>
+
+<p>When a game generates literally infinite worlds, like <cite>Minecraft</cite>'s, I can't help but wince. Running out of disk space is something software should avoid at all costs. It feels awful to find a game has filled your drive or used so many resources that the whole computer stops responding. And an endless world isn't even necessary. Most of the generated area in <cite>Minecraft</cite> sits unused, visited once or twice and forgotten.</p>
+
+<p>So I model my game universes like a bowl. The flat center is the active universe, with permanent locations and persistent things. Around it, the curved sides are a virtually endless wilderness, where things from the center can drift out and come back reshuffled or changed. The center might be anywhere from three to nine galaxies (or superclusters), depending on how big that particular game needs to be. A strategy game commanding things on a galactic scale needs a different size than a game where you control one person dealing with small objects up close. I aim for believability and a smooth experience on an ordinary computer, not realism.</p>
+
+<p>It's the same structure as the regular world and the wilderness, at the scale of a universe.</p>
+</section>
+
+<section id="history">
+<h2 id="mementos-and-history">Mementos and a living history</h2>
+
+<p>An infinite game needs something that shows the player their efforts mattered. Not a reward, as <a href="c25-pacing-difficulty-and-progression.html">the last chapter</a> explained, but a visible record: an active, visual representation of everything the player has done, like an artwork that keeps evolving on its own.</p>
+
+<p>It shows what has been done and what still needs doing. It celebrates victories, as if the game itself is happy the player is succeeding. It mourns failures and losses, sad together with the player. It must never be used to reward or punish, under any circumstances. It's an intrinsic part of the game, an information screen, nothing more.</p>
+
+<p>It can take many forms:</p>
+
+<ul>
+<li><strong>An overworld map</strong> with flags, markers, colors and icons that show what's changed: a dusty wasteland turned into a green paradise with cities and roads, or an alien empire pushed back from half the map.</li>
+<li><strong>A guestbook</strong> of generated messages from the people you've served, showing that your postal service or restaurant really made people happy.</li>
+<li><strong>A history book</strong> that chronicles notable events in order, your own autobiography in that world, fun to read later.</li>
+<li><strong>A medal box,</strong> each medal with a description of the battle or event it remembers.</li>
+<li><strong>A memorial wall</strong> for the fallen characters you played as, and what each of them achieved.</li>
+<li><strong>A home base</strong> that has visibly grown richer and more wonderful with every upgrade you brought back to it.</li>
+<li><strong>A place that was corrupted</strong>, literally or metaphorically, and is now clean and beautiful because of you.</li>
+</ul>
+
+<p>These can be layered: one for the whole game, another for the current campaign, others for regions.</p>
+
+<p>What makes them special is that the player creates the artwork simply by playing. It's a by-product of enjoying the moment-to-moment game, and it feels so natural that a game without it would feel like something is missing. At the start, it shows the places waiting to be explored, so it's interesting from the first minute.</p>
+
+<p>Make it shareable. If it can be saved as an image or a document, players can show their worlds, logs and stories to others, which deepens their connection to the game, gives them something to talk about with friends, and spreads the game naturally. Since every player's world is different, every memento is unique. That's something only games with procedural generation and emergent play can offer.</p>
+
+<h3 id="two-examples">Two examples from my designs</h3>
+
+<p>In one design, each galaxy the player works in is procedurally generated, and so is a piece of art based on it: the galaxy's silhouette is overlaid with a mosaic of thousands of colored regions. At first the mosaic is gray, faded and nearly transparent. As the player completes missions there, the regions gradually brighten into vivid color, until at 100% the whole galaxy glows. Then the player gets to name it and write a line of text, and the game saves an image of the finished galaxy with its name and the player's words, as a memento, before they move on to the next one. Some players will write something heartfelt, others will make a joke. Both are wonderful.</p>
+
+<p>In another design with permadeath, each fallen character's name, colors, cause of death and achievements are recorded in a memorial log, with a respectful, colorful portrait. A new character can never take the exact same name as one in the memorial. The log is more interesting to keep than to delete. It almost becomes a game of its own: watching it fill with each character's story, seeing how far the current one can go.</p>
+
+<p>In both cases, the system keeps producing something unique and personal that makes it worth continuing, endlessly.</p>
+
+<aside class="note">
+<p>This also answers a pattern you can see in creative sandbox games that give players no meaning beyond the sandbox itself. Once players have exhausted everything else, many turn to destroying what they built, sometimes as a grand finale, as in the Astroneer example. That isn't the players being strange. It's the need for meaning looking for any outlet left. A living history, and a reason to keep building, gives the need a better one.</p>
+</aside>
+</section>
+
+<section id="time">
+<h2 id="time-never-rewinds">Time never rewinds</h2>
+
+<p>Many games handle failure the cheap and easy way: rewind time to an earlier moment and pretend the failure never happened. New game, save game, load game, reset level. For some games that's enough. But it carries a feeling of meaninglessness, because suddenly I control time itself and can erase events as if they never existed in the game's universe. It makes the whole experience feel like a game of pretend.</p>
+
+<p>Multiplayer combat games have players respawn after death, either ignoring logic altogether or with a flimsy explanation that the gameplay doesn't actually support, which is ludonarrative dissonance again. Roguelikes do both: the world resets and the player respawns. The worst of both worlds, and it feels even more artificial.</p>
+
+<p>In my own projects, nothing is reset. The universe continues on its path without pausing or rewinding. Time always moves forward, with no way to roll back without outright cheating.</p>
+
+<p>Please note that this isn't about saving. Saving so you can stop and come back is respect for the player's life (<a href="c20-taking-inventory.html">Chapter 20</a>), and every game should allow it. What I'm describing is the game's world refusing to un-happen. You stop, you come back, and your world is exactly where you left it, consequences included.</p>
+</section>
+
+<section id="death">
+<h2 id="death-and-respawn">Death and respawn</h2>
+
+<p>So what happens when the player dies, if time can't rewind? In my projects, the player's soul is immortal, and respawns in a completely new body. The player gains the traits and perks of that new body, and loses everything connected to the old one. Sometimes they start in very different circumstances, and have a completely different journey toward mastering the universe they're in.</p>
+
+<p>Dying to reroll a better start isn't worth it, because each death skips time forward, which can erode improvements already made in the world. But the game never limits the player: in their new life they can do anything in the world that they humanly can, using their creativity to build from whatever advantages they do have, without needing to feel bitter about the disadvantages.</p>
+
+<p>There's one deliberate difference from how I think real life works: the player keeps their knowledge of the world. That gives them a cheat sheet for their next life, letting them grow wiser with each death, even as their character starts over. (It may not be so different from how evolution works, where each generation's genes carry forward a little of what helped the last one survive.)</p>
+
+<p>I think this model feels far more meaningful than rewinding or arbitrary respawning, as a metagame for a persistent universe. Death matters, because it costs you a body and time. But it never ends the game, because the universe goes on, and so do you.</p>
+</section>
+
+<section id="in-motion">
+<h2 id="start-in-motion">Start the universe already in motion</h2>
+
+<p>A related point. My game universes don't have a beginning. They're generated already in motion, in a relative equilibrium, and the game just starts there, with no mechanism that will eventually end it.</p>
+
+<p>It makes no sense to start a game universe in some primordial state, right after a big bang: just particles, dust and gas, with no planets, stars or galaxies, let alone nature or civilizations. Nothing interesting has happened yet. Start where things are already alive.</p>
+
+<p>The same goes for the ending. My universes don't assume they'll eventually cool and die. They keep going indefinitely. Disasters can still happen, even huge ones that reset a whole region, but only one region at a time, never the entire universe. The player can never press a button that ends everything.</p>
+</section>
+
+<section id="personal">
+<h2 id="a-personal-note">A personal note: do good today</h2>
+
+<p>These designs come from my real-life view, so I'll share it briefly. It's my personal belief, not something I'm asking you to adopt. But the reasoning behind it is worth considering whatever you believe.</p>
+
+<p>I think we humans are, in a sense, immortal. Not our bodies, our souls. When a body dies, the soul goes on and eventually returns in a new life. If I became alive once, I don't see why it couldn't happen again.</p>
+
+<p>That might sound comforting, but to me it's also frightening. My memories, skills and experience belong to this body, not to my soul. In a new life I'd start from zero, with no control over where or who I'd be. Most people in the world don't live in fortunate circumstances. I could be born somewhere far harder than where I am now, without any of what I learned in this life.</p>
+
+<p>And here's what that means in practice. The world I'll be born into next is the world we're all shaping right now. If I neglect it, or harm it, I'm harming the place my future self will have to live in. If I make it a little better, even in a small way, I'm making my own future a little better too, and everyone else's. I believe in the butterfly effect, that small efforts can cascade into big changes over time. The worst thing is to not even try, or to actively sabotage the future.</p>
+
+<p>So if you have any freedom and health right now, take it seriously, and don't waste it. Improve life for yourself today without abusing others, and improve it for the people around you while you're at it. Whatever happens after this life, you'll live in tomorrow. Make it a good one.</p>
+
+<p>That's where the persistent universes in my designs come from. A world where time moves forward and consequences stay is a world where what you do matters. I think that's true of games, and I think it's true of life.</p>
+</section>
+</article>

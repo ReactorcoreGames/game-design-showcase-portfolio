@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Players Misbehave · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="Two scenarios about players doing what the developer didn&#x27;t want: being cruel to each other, and cheating. In both, the usual reaction is to blame the…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c15-when-players-misbehave.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 15: When Players Misbehave · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="Two scenarios about players doing what the developer didn&#x27;t want: being cruel to each other, and cheating. In both, the usual reaction is to blame the…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c15-when-players-misbehave.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 15: When Players Misbehave · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="Two scenarios about players doing what the developer didn&#x27;t want: being cruel to each other, and cheating. In both, the usual reaction is to blame the…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 15: When Players Misbehave",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c15-when-players-misbehave.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c14-intention-and-action.html">
+    <link rel="next" href="c16-good-intentions-violent-methods.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html" aria-current="page"><span class="n">15</span>When Players Misbehave</a><ol class="toc-secs"><li><a href="#scenario-1-toxic-players">Scenario 1: Toxic player behavior</a></li><li><a href="#why-competitive-games-self-destruct">Why competitive games self-destruct</a></li><li><a href="#scenario-2-cheating">Scenario 2: Players cheating</a></li><li><a href="#guiding-without-restricting">Guiding without restricting</a></li></ol></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>12 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c15-when-players-misbehave">
+                    <header>
+                    <p class="kicker">Part III · Chapter 15</p>
+                    <h1>When Players Misbehave</h1>
+                    </header>
+
+                    <section id="intro">
+                    <p>Two scenarios about players doing what the developer didn't want: being cruel to each other, and cheating. In both, the usual reaction is to blame the players and add rules, reports and bans. In both, the cause sits somewhere else entirely.</p>
+
+                    <p>Remember one line from <a href="c09-understanding-human-beings.html">Understanding Human Beings</a>: anything any human ever does is to meet a need. Misbehavior included. So when lots of players misbehave in the same way, the first question isn't "what's wrong with these people?". It's "what need is my game leaving them no other way to meet?"</p>
+                    </section>
+
+                    <section id="scenario-1">
+                    <h2 id="scenario-1-toxic-players">Scenario 1: Toxic player behavior<a class="anchor" href="#scenario-1-toxic-players" aria-label="Link to this section: Scenario 1: Toxic player behavior">#</a></h2>
+
+                    <h3 id="s1-story">Story<a class="anchor" href="#s1-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>A developer has created a competitive player-vs-player multiplayer game, and notices that some players are behaving in ways that can be described as hostile, toxic and malicious. This makes people leave the game and gives it a bad reputation, which is destroying the developer's business and future. The developer just wants everyone to have fun and enjoy the game, while staying profitable.</p>
+
+                    <h3 id="s1-action">Action<a class="anchor" href="#s1-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>The developer created a competitive player-vs-player game that puts people in a contrived circumstance to fight each other. Victory and enjoyment require the failure of the other person.</p>
+
+                    <h3 id="s1-problem">Problem<a class="anchor" href="#s1-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>Players began behaving maliciously toward each other during play. The community became toxic and hostile. Players leave, the game dies, profits drop.</p>
+
+                    <h3 id="s1-intention">Intention<a class="anchor" href="#s1-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>The developer wanted players to:</p>
+                    <ul>
+                    <li>grow in skill by using each other as opponents,</li>
+                    <li>get a challenge they felt an AI couldn't offer,</li>
+                    <li>treat each other with respect even when losing,</li>
+                    <li>and have a more social game, with real humans in it.</li>
+                    </ul>
+
+                    <h3 id="s1-mistake">Mistake<a class="anchor" href="#s1-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>The core structure of the game defines success, progress and satisfaction as winning. Winning requires everyone except the winner to lose. Victory is artificially scarce: only one participant at a time can have it.</p>
+
+                    <p>Follow the chain. Losing feels lousy, while winning is presented as great. So any human who accepts the structure of the activity will, consciously or not, become craftier at finding ways to win. That's natural human behavior, and the developer was unaware of it, overlooked it, or underestimated it.</p>
+
+                    <p>Unfortunately, hostility, toxicity, mind games and other damaging behaviors happen to be among the most effective strategies for winning in a scarce, competitive setting against other humans. Tilting your opponent works. Making the other team's weakest player feel worthless so they play worse works. Getting into someone's head works. They're also the most convenient strategies, however obviously horrible they are. The game rewards them, so the game teaches them.</p>
+
+                    <p>In other words, the developer grossly underestimated both how smart and how foolish human beings can be in pursuit of whatever goal is set in front of them, as long as they truly accept the idea they've been given, however flawed it is. The developer built what they thought would respect their intention, not what actually reflected it, and greatly underestimated how deep their design's consequences go. And that comes from a lack of understanding of human nature.</p>
+
+                    <p>Notice what the developer's intentions really were, in terms of needs: growth, challenge, respect and connection. Not one of those needs requires another person to lose. Every one of them can be met through cooperation, through challenge against the world or against an AI, or through people playing side by side. The competition was a bundled extra, and it was the one ingredient that poisoned all the others.</p>
+
+                    <p>And the usual fix makes it worse. Report buttons, chat filters and bans don't touch the cause. The structure keeps rewarding the behavior, so it keeps appearing, and now the game is also punishing people for doing what it rewards. That's the retributive use of force from <a href="c09-understanding-human-beings.html">Chapter 9</a>. It turns frustrated players into bitter ones, and bitter players either leave or come back angrier.</p>
+                    </section>
+
+                    <section id="competitive-lifecycle">
+                    <h2 id="why-competitive-games-self-destruct">Why competitive games self-destruct<a class="anchor" href="#why-competitive-games-self-destruct" aria-label="Link to this section: Why competitive games self-destruct">#</a></h2>
+
+                    <p>I used to play competitive human-vs-human games too: board games, card games and online games. Something about them always struck me as odd. Whenever I took part, or watched others play, the activity seemed to bring out the worst in the participants, as if by magic. If I asked them about it afterwards, they'd agree it was a silly way to behave and not okay. They couldn't explain why they'd turned into someone else, and usually brushed it off with "it's just a game, we're having fun".</p>
+
+                    <p>It didn't matter whether I did well or badly. Playing excellently, I'd get vote-kicked, falsely accused of cheating and told hurtful things. Playing poorly, I'd be mocked and belittled. It didn't matter who I played with, friends or strangers, face to face or through chat. And none of it appeared in singleplayer, collaborative or cooperative communities, even ones built around games full of brutal violence and edgy themes. Those were wholesome and friendly. Something in the competition itself was poisoning the well.</p>
+
+                    <p>The answer came from Alfie Kohn's <cite>No Contest: The Case Against Competition</cite>, which made me stop playing competitive human-vs-human games for good. I recommend it to every game designer. Its central point fits this scenario exactly: competition isn't a natural law. It's an arrangement people invented, usually bundled onto an activity as an unnecessary add-on, and it reliably makes people treat each other worse.</p>
+
+                    <p>Look at the lifecycle a competitive game goes through. I've watched it happen again and again:</p>
+
+                    <ol>
+                    <li><strong>The honeymoon.</strong> A new competitive game comes out. Everyone is new at it and the playing field is mostly fair; anyone has a real chance of winning. Memes flourish, updates keep it fresh, and people play without taking it seriously, exploring it with wonder.</li>
+                    <li><strong>Mastery.</strong> People get used to the mechanics and focus on mastering them or on other ways to make sure they win. Some get so good that it becomes intimidating or unfeasible for others to keep up. The playerbase starts to decline.</li>
+                    <li><strong>Cheating.</strong> Some players try to make up for a lack of time or skill with cheats. They're harshly judged and banned, often losing whatever money they paid, which makes them bitter and keeps them from coming back. The playerbase declines further.</li>
+                    <li><strong>Elitism.</strong> A select few dominate the game. A once happy place turns into a harsh scene where anyone who doesn't fit in with the elite is judged and shunned. The playerbase declines.</li>
+                    <li><strong>Rescue attempts.</strong> What's left of the community tries to improve the experience for newcomers. But newcomers quickly notice they're outclassed, and that others are visibly holding back for them, which feels fake and condescending. The playerbase keeps shrinking.</li>
+                    <li><strong>Abandonment.</strong> A new competitive game comes out, and everyone flocks to it for its honeymoon, before it repeats the same cycle. The old game, fully featured and fully working, with all its potential for new content, is forgotten, even by the few who once dominated it.</li>
+                    </ol>
+
+                    <p>Meanwhile, a good singleplayer game can stay timeless, keep a wholesome community and be something people return to again and again. So can online collaborative games.</p>
+
+                    <p>People talk about a competitive game "dying" as if it were natural and unavoidable. Think about how strange that is. If a game is good, why would people stop playing it? Why should it ever die? It dies because its core makes it collapse in on itself, wasting years of artistic and engineering excellence.</p>
+
+                    <h3 id="damages">What a competitive structure costs<a class="anchor" href="#damages" aria-label="Link to this section: What a competitive structure costs">#</a></h3>
+
+                    <p>Here's a summary of the damage a competitive core causes directly:</p>
+
+                    <ul>
+                    <li>It generates unnecessary drama.</li>
+                    <li>It pushes people to a boiling point where they do something harmful to themselves or someone else.</li>
+                    <li>It encourages hate, division and animosity between people who are otherwise friendly and caring.</li>
+                    <li>It literally rewards hurting others: "I win if you lose", or worse, "I win if I <em>make</em> you lose".</li>
+                    <li>It limits innovation in new mechanics, because everything new has to pass balance concerns.</li>
+                    <li>Because of that, studios look for other ways to monetize than new mechanics and content: progression systems, vanity items and fluff that never evolve the game.</li>
+                    <li>It makes engineers spend their time on anti-cheat systems instead of on content.</li>
+                    <li>It creates a situation where people can lose a product they paid for and become social outcasts, because the environment pushed them to get creative to keep up with people who had more time, better reflexes or more money.</li>
+                    <li>It makes modding a taboo, when the same modifications, tool-assisted runs and creative hacks are celebrated in singleplayer and collaborative games.</li>
+                    </ul>
+
+                    <p>Nobody wins. Most players lose most of the time and leave feeling miserable. The winners feel happy at the expense of those who lost, and many of them sense that the happiness is tainted, which shortens it. The developers built an expensive game with heroic effort, often at the cost of their own wellbeing, only for it to have a built-in defect that dooms it to expire. The competitive games that last a long time do so because of their excellent art, sound, mechanics and systems, which let them hang on despite the competitive core, not because of it.</p>
+
+                    <p>That's why my position is total: don't design around competition. Every need a competitive game claims to serve, challenge, mastery, excitement, social play, can be served without it. If you're looking for a starting point, every one of my own designs is built that way. And in <a href="c30-beyond-the-game.html">Beyond the Game</a>, the same reasoning applies to how studios relate to each other: it's forking, not competition, that drives innovation.</p>
+                    </section>
+
+                    <section id="scenario-2">
+                    <h2 id="scenario-2-cheating">Scenario 2: Players cheating<a class="anchor" href="#scenario-2-cheating" aria-label="Link to this section: Scenario 2: Players cheating">#</a></h2>
+
+                    <h3 id="s2-story">Story<a class="anchor" href="#s2-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>A developer notices that players are cheating in their game. The developer has a certain idea of what fun looks like and wants players to have this intended experience. In the developer's mind, cheating ruins the experience they crafted. And if the game is multiplayer, especially a competitive one, the developer thinks it also ruins the experience for everyone else.</p>
+
+                    <h3 id="s2-action">Action<a class="anchor" href="#s2-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>The developer used any or all of these in their design.</p>
+
+                    <p><strong>Artificial limitation of game content, for any arbitrary reason.</strong> For example:</p>
+                    <ul>
+                    <li>Segregating player capabilities into classes that only allow access to certain content and lock out the rest. Class-based character systems are a perfect example.</li>
+                    <li>Unlock systems that require invested effort to get content, whether for progression, longevity or a tutorial-like gradual introduction. All the same.</li>
+                    <li>Denying access to content because it's "not appropriate at this stage of the game", so that it simply doesn't exist until the developer decides it should.</li>
+                    <li>Tying access to content to a random number generator, so the player only gets it if a dice roll allows.</li>
+                    <li>Shops that require in-game or real currency to access content, running on an "artificial economy" whose prices can be inflated or deflated for "balance" instead of making sense within the game's universe.</li>
+                    <li>Content and systems that exist in the game's files but are kept out of the player's reach, like admin tools, debug functions and developer content.</li>
+                    <li>Any other content, feature or system that would be useful to the player in any way, restricted for an arbitrary reason.</li>
+                    </ul>
+
+                    <p><strong>Design structures that irritate or violate fundamental human needs by their very nature.</strong> These come in countless forms, and they're context-sensitive, so listing examples isn't very useful. It's more useful to look at the thinking that creates them:</p>
+                    <ul>
+                    <li>"The player must earn X! Getting anything for free is wrong!"</li>
+                    <li>"This sucks, but it's how things are done, so get used to it!"</li>
+                    <li>"The player should feel exactly how I want them to feel!"</li>
+                    <li>"The player must behave as I say, or else! No exceptions."</li>
+                    <li>"If the player behaves in a way I don't want, I'll punish them to teach them."</li>
+                    <li>"If the player obeys the rules, they'll be rewarded for their loyalty."</li>
+                    <li>"There's only one way to play the game. Everything else is wrong and punishable."</li>
+                    <li>"Player needs and feelings don't matter. My game overrides that."</li>
+                    <li>"The player only has access to things as I, the designer, allow them to."</li>
+                    </ul>
+
+                    <p>You might notice a pattern in these. An obsession with control. A culture of domination and scarcity. An attitude that favors the designer and neglects the player's feelings and needs, trying to meet the designer's needs without considering the player's as equally important. It's power over people, in game form.</p>
+
+                    <h3 id="s2-problem">Problem<a class="anchor" href="#s2-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>Players started cheating: finding ways to break the game, get around it, bend its rules, and generally go off the path the designer intended.</p>
+
+                    <h3 id="s2-intention">Intention<a class="anchor" href="#s2-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>The designer has a certain idea of the experience the player should have, and anything else would leave the experience ruined or lesser. In multiplayer, the designer wants every player to respect the rules, believing that a single cheater ruins the experience for everyone.</p>
+
+                    <h3 id="s2-mistake">Mistake<a class="anchor" href="#s2-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>With their design, the developer directly violated or irritated the players' fundamental needs for autonomy, freedom and power. Depending on the design, other needs like meaning and respect may have been violated too.</p>
+
+                    <p>The player's natural instinct is to correct the violation by taking back power for themselves. They do it by getting creative, crafty, unconventional and, if necessary, dubious. Cheating is one of those strategies for reclaiming a violated need. From the cheater's point of view, they're just finding a creative solution to a problem the developer's design imposed on them. The game locked away the thing they wanted, or made them grind for hours to get it, or put it behind a dice roll. The cheat removes the lock.</p>
+
+                    <p>The bottom line: cheating doesn't originate in the player who chooses to cheat. It originates in the game design. If a game makes me want to cheat, its design is flawed, because it failed to account for the very being that's supposed to play it, a human. It practically teases the human into breaking it, even though its intention and messaging say the opposite.</p>
+
+                    <p>Look at how cheating is treated in games without these structures. In a singleplayer sandbox, a console command that spawns any item isn't cheating. It's a feature people enjoy. Speedrunners who exploit glitches get celebrated. Modders who rewrite a game's rules get thanked. The same act becomes "cheating" only when the design made something artificially scarce and then told the player they mustn't get it.</p>
+
+                    <p>The solution is to remember that a human being plays the game, and to structure its systems so they respect the needs and feelings players naturally have. Finding the violations is simple: inspect the logic behind each structure, what it demands of the player, what circumstances it puts them in, and whether those two create an obvious conflict with a need.</p>
+                    </section>
+
+                    <section id="guiding">
+                    <h2 id="guiding-without-restricting">Guiding without restricting<a class="anchor" href="#guiding-without-restricting" aria-label="Link to this section: Guiding without restricting">#</a></h2>
+
+                    <p>"But then how do I give players a guided experience at all?" A fair question, since a designer does want to shape what players experience. Here's how to do it without building the structures that invite cheating. Part IV goes deeper into each.</p>
+
+                    <ul>
+                    <li><strong>Shape through the environment, not through locks.</strong> People do what's easy, cheap and pleasant. Make the path you'd like them to take the most attractive one, and they'll take it, without anything being forbidden.</li>
+                    <li><strong>Use the game's own natural laws.</strong> If something is hard to get, let it be hard for a reason that makes sense in the game's universe (it's far away, dangerous, rare in nature), not because an unlock tree says so. Players accept believable limits. They resent arbitrary ones.</li>
+                    <li><strong>Guide with information.</strong> Tell players what's possible, what's dangerous and what's recommended for a first time. Most players follow good advice gladly when they're free to ignore it.</li>
+                    <li><strong>Use soft limiters with an off switch.</strong> Limit the difficulty a first-time player meets in their first hours, and give experienced players a clear way to turn the limits off. That respects both. (<a href="c25-pacing-difficulty-and-progression.html">Pacing, Difficulty and Progression Without the Scam</a> covers this.)</li>
+                    <li><strong>Make everything available, and let the player choose.</strong> Abundance from the start removes the reason to cheat entirely. What's left is the challenge the player chose for themselves, which is the only kind they enjoy.</li>
+                    </ul>
+
+                    <p>A game built this way still has a designer's hand all over it. It's just a hand that offers instead of one that grips.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c14-intention-and-action.html"><span class="label">← Previous · Part III · Chapter 14</span><span class="pager-title">Intention and Action Are Two Things</span></a>
+                    <a class="pager-link next" href="c16-good-intentions-violent-methods.html"><span class="label">Next → · Part III · Chapter 16</span><span class="pager-title">Good Intentions, Violent Methods</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

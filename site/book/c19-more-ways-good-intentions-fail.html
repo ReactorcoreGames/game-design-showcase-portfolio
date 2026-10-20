@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Ways Good Intentions Fail · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="Six more scenarios, shorter than the ones before, because by now you can probably see the shape of each failure coming. Try it: read each Story and Action…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c19-more-ways-good-intentions-fail.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 19: More Ways Good Intentions Fail · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="Six more scenarios, shorter than the ones before, because by now you can probably see the shape of each failure coming. Try it: read each Story and Action…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c19-more-ways-good-intentions-fail.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 19: More Ways Good Intentions Fail · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="Six more scenarios, shorter than the ones before, because by now you can probably see the shape of each failure coming. Try it: read each Story and Action…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 19: More Ways Good Intentions Fail",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c19-more-ways-good-intentions-fail.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c18-afraid-the-game-is-too-short.html">
+    <link rel="next" href="p4-designing-the-game.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html" aria-current="page"><span class="n">19</span>More Ways Good Intentions Fail</a><ol class="toc-secs"><li><a href="#scenario-7-trailer-vs-game">Scenario 7: The trailer vs the game</a></li><li><a href="#scenario-8-sequel">Scenario 8: The sequel that failed its fans</a></li><li><a href="#scenario-9-user-acquisition">Scenario 9: User acquisition keeps failing</a></li><li><a href="#scenario-10-another-medium">Scenario 10: Adapting an experience from another medium</a></li><li><a href="#scenario-11-retention">Scenario 11: Player retention is always too low</a></li><li><a href="#scenario-12-angry-customers">Scenario 12: Customers angry about business decisions</a></li><li><a href="#more-scenarios">More scenarios to think through</a></li></ol></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>18 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c19-more-ways-good-intentions-fail">
+                    <header>
+                    <p class="kicker">Part III · Chapter 19</p>
+                    <h1>More Ways Good Intentions Fail</h1>
+                    </header>
+
+                    <section id="intro">
+                    <p>Six more scenarios, shorter than the ones before, because by now you can probably see the shape of each failure coming. Try it: read each Story and Action, and predict the Mistake before you read it.</p>
+                    </section>
+
+                    <section id="scenario-7">
+                    <h2 id="scenario-7-trailer-vs-game">Scenario 7: The trailer vs the game<a class="anchor" href="#scenario-7-trailer-vs-game" aria-label="Link to this section: Scenario 7: The trailer vs the game">#</a></h2>
+
+                    <h3 id="s7-story">Story<a class="anchor" href="#s7-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>Sometimes trailers are deliberately made to look better than the game, to trick people into buying it. I acknowledge that happens, but this scenario isn't about it. It's about a developer whose trailer, teaser or vertical-slice demo honestly shows what they want the final game to be, and who then makes a product that betrays that vision without meaning to.</p>
+
+                    <p>The games this scenario is about are usually experience-based: games meant to let the player live a fantasy, a role or a situation that doesn't need a finite linear story, and that can be repeated as often as the player wants. Being a spaceship pilot on explorations. A soldier at war. A firefighter in emergencies. A knight in tournaments. An engineer planning construction. A bird in nature. A dinosaur surviving in a jungle. A farmer growing a thriving garden. An operator of a complex machine. A manager running an operation. A hacker getting past systems. A human, living a life. And many more.</p>
+
+                    <p>The intention was a perpetual source of that experience, something the player could always return to. But the developer made the experience restricted and finite, for no real reason. Players finish it in hours and then wait years for the next one, desperately wanting more. If the developers wanted to play the game themselves, restricting it like that was about the most self-defeating thing they could have done. And the developer is stuck in an uphill battle too, working endlessly on separate, limited-use games, never able to fully satisfy anyone, unable to build on their previous work.</p>
+
+                    <h3 id="s7-action">Action<a class="anchor" href="#s7-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>The developer built the experience as a scripted campaign: a fixed sequence of handmade levels and missions, each one a specific situation recreated exactly, with the player on rails through it. The trailer showed the fantasy, "be a fighter pilot", but the game delivered a list of particular flights the developer had designed, to be completed once, in order, and then done.</p>
+
+                    <h3 id="s7-problem">Problem<a class="anchor" href="#s7-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>Players loved the first hours. Then the campaign ended. Replaying it meant repeating the exact same missions, now with no surprise left, so it felt like memorization rather than flying. The fantasy from the trailer, of <em>being</em> a pilot, turned out to be a guided tour of someone else's flights. Players felt let down without being able to say exactly why, since everything shown in the trailer really was in the game. Reviews praised the first impression and complained about the length. The game was finished and forgotten within weeks.</p>
+
+                    <h3 id="s7-intention">Intention<a class="anchor" href="#s7-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>To give players a lasting source of a particular experience: freedom, mastery, and the feeling of being someone or something else, whenever they wanted it.</p>
+
+                    <h3 id="s7-mistake">Mistake<a class="anchor" href="#s7-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>The developer made a game of memorization when the intention was an experience of being something. A scripted campaign is a gift from the author: a story to follow once. That's the right tool for a curated message, and the wrong tool for a role the player wants to live in again and again (<a href="c13-purpose-as-a-compass.html">Purpose as a Compass</a> explains the difference in meaning). The vision in the trailer was a role. The structure of the game was a story. They pulled in opposite directions, and the structure won.</p>
+
+                    <p>It's the common mistake applied to content: the developer recreated specific situations (the final result) instead of building the forces that produce such situations (the root cause). A game built as a framework, with systems where flights, emergencies or harvests happen naturally and differently each time, inside a structure that never has to end, would have delivered the trailer every time the player came back. Why make a finite game when the fantasy is infinite? <a href="c22-build-the-forces-not-the-desert.html">Build the Forces, Not the Desert</a> and <a href="c24-infinite-metagames.html">Infinite Metagames</a> show how.</p>
+                    </section>
+
+                    <section id="scenario-8">
+                    <h2 id="scenario-8-sequel">Scenario 8: The sequel that failed its fans<a class="anchor" href="#scenario-8-sequel" aria-label="Link to this section: Scenario 8: The sequel that failed its fans">#</a></h2>
+
+                    <h3 id="s8-story">Story<a class="anchor" href="#s8-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>An earlier game was a success and gathered a sizeable fanbase who really appreciated it and asked for more. So a sequel was planned, to satisfy the fans and grow the series. The intention was to make fans happy, grow the business and become more skilled as developers. The plan was more advanced art, higher-definition graphics and sound, and a more complex story and code, to make the sequel bigger and better than the original.</p>
+
+                    <p>This developer's priorities are in the right order: the good game comes first and profit second. That matters, because the mindset during development decides whether the game will even deserve the profit it hopes for.</p>
+
+                    <p>Despite real care and remarkable additions, the sequel was received poorly, and the fans pushed back. Some of their comments:</p>
+
+                    <ul>
+                    <li>"The developer forgot what made the original game so great."</li>
+                    <li>"The sequel feels so soulless, it comes off as pretentious."</li>
+                    <li>"This doesn't capture the spirit of what the series is supposed to be about."</li>
+                    <li>"Despite the improvements, it feels shallow in comparison."</li>
+                    <li>"It looks more complex, but it seems worse because of it."</li>
+                    <li>"I don't know why, but I wouldn't call this a good sequel. It seems... off."</li>
+                    </ul>
+
+                    <p>Fan comments are often this vague. Most fans can't explain their feelings, and may not fully understand them. And these are the better, more constructive ones. Many others are just "this sequel sucks" or "the developers are idiots", with nothing useful in them.</p>
+
+                    <h3 id="s8-action">Action<a class="anchor" href="#s8-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>The developer looked at the original game's features at face value. Kept the ones they thought were good, made them bigger and more detailed. Dropped the ones they thought were bad. Added things that were popular elsewhere and that fans had asked for. Upgraded the technology across the board. This is the Unaware Beginner's approach to "something old" from <a href="c02-three-projects-two-designers.html">Three Projects, Two Designers</a>, done with a big budget and the best intentions.</p>
+
+                    <h3 id="s8-problem">Problem<a class="anchor" href="#s8-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>The sequel had more of everything and less of what mattered. Fans felt it, struggled to name it, and left. New players who hadn't played the original found a competent but unremarkable game. The series lost the goodwill it had built.</p>
+
+                    <h3 id="s8-intention">Intention<a class="anchor" href="#s8-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>To give the fans more of what they loved, better than before, and to grow.</p>
+
+                    <h3 id="s8-mistake">Mistake<a class="anchor" href="#s8-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>Read the fan comments again, and notice that a perceptive person can find a common message in all of them. There is real, helpful information there. It isn't obvious, but they're all saying roughly this: "The sequel was made with different thinking than the original. The mindset that shaped every part of the old game was replaced with a new one, with different priorities, and those priorities produced different design decisions that don't add up to the same remarkable whole."</p>
+
+                    <p>Or more simply: the sequel doesn't aim at the same fundamental human needs the original did, so it doesn't add the same value to the players' lives.</p>
+
+                    <p>The developer never found out what the original's purpose was. Maybe nobody on the team ever knew, because the original was made by intuition, or by someone who has since left. Without the purpose, they upgraded the visible features, the final result, and the root cause got lost in the upgrade. A detailed art style can lose the readability that made the original's chaos fun. A complex story can bury the freedom that made the original feel like yours. Every change looked like an improvement on its own, and together they quietly removed the reason people loved the game.</p>
+
+                    <p>The fix starts before a single feature is planned: find the purpose of the original, from its creators if possible and from your own feelings while playing it if not, and then make every decision in the sequel by that purpose. Then "bigger and better" means more of what meets those needs, and nothing that dilutes them.</p>
+                    </section>
+
+                    <section id="scenario-9">
+                    <h2 id="scenario-9-user-acquisition">Scenario 9: User acquisition keeps failing<a class="anchor" href="#scenario-9-user-acquisition" aria-label="Link to this section: Scenario 9: User acquisition keeps failing">#</a></h2>
+
+                    <h3 id="s9-story">Story<a class="anchor" href="#s9-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>Whether the game is still in development or already released, the developer is looking for people to pick it up and play it.</p>
+
+                    <p>This scenario assumes the game is genuinely good: it enriches its players' lives by meeting their needs, without any intention of taking advantage of them. It also assumes the game doesn't depend on obscure references or niche choices in its art, theme, music or writing that would keep people from enjoying it.</p>
+
+                    <p>The intention is for as many people as possible to experience the game. Running a sustainable business and growing are secondary. (Remember that profit, success and sustainability are results of a good game, so they rely on it, which is why the good game always stays primary.)</p>
+
+                    <p>Despite real effort and a genuinely good game, each campaign to bring in players has minimal effect, gets a brief bump followed by a fade, or even creates contempt for the developer.</p>
+
+                    <h3 id="s9-action">Action<a class="anchor" href="#s9-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>The developer did what marketing advice usually recommends: bought ads that interrupt people in other apps and videos, ran giveaways and contests that required playing the game or sharing it, offered rewards for inviting friends, paid for placement, and aimed the campaigns as broadly as possible to "reach everyone". The ads used generic language and stock excitement ("the most epic adventure of the year!") because that's what ads usually sound like.</p>
+
+                    <h3 id="s9-problem">Problem<a class="anchor" href="#s9-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>The interruptions annoyed the people they interrupted, who started associating the game with being interrupted. The contests brought in people who wanted the prize, not the game, and they left as soon as the contest ended. The referral rewards turned friends' recommendations into something that felt like a sales pitch. The broad targeting reached mostly people who didn't have the need the game meets, or who had it met already. And the generic language made the game look like every other game, so the people who would have loved it scrolled past without noticing.</p>
+
+                    <h3 id="s9-intention">Intention<a class="anchor" href="#s9-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>To connect the game with the people it would enrich. In terms of needs: contribution (sharing something good), meaning (the work being experienced) and, secondarily, the developer's safety.</p>
+
+                    <h3 id="s9-mistake">Mistake<a class="anchor" href="#s9-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>The developer treated marketing as a separate activity bolted onto the game, instead of as part of the game. A player's experience doesn't begin at the main menu. It begins at the first ad, screenshot, store page or box art they see. That moment is part of the game's design, and it should serve the same purpose as everything inside the game (<a href="c30-beyond-the-game.html">Beyond the Game</a> goes into this). An ad that interrupts and pressures people is the opposite of a game about freedom, so it sends the wrong message before the player ever plays.</p>
+
+                    <p>Several other chapters' lessons stack up here. The contests and referral rewards are rewards for staying from <a href="c18-afraid-the-game-is-too-short.html">Chapter 18</a>, applied to acquisition: they bring people for the reward, and they leave with it. The broad targeting ignores why people aren't interested in a game: they're sated by other means (<a href="c13-purpose-as-a-compass.html">Chapter 13</a>). And the generic language fails at the most important thing a game's presentation has to do: make clear, in one glance, what need it meets and how. Clarity of value. Someone who has that need will recognize it instantly, if you show it honestly.</p>
+
+                    <p>The better strategy follows from the purpose. Find the people who have the need the game meets, show them the inspiration honestly, let the presentation itself feel like the game (the pilot's game whose store page reads like a flight-school acceptance letter), and give them easy ways to try it. Then let the players who love it tell their friends, without paying them to, because a genuine "thank you, you'll love this" is the most powerful acquisition there is.</p>
+                    </section>
+
+                    <section id="scenario-10">
+                    <h2 id="scenario-10-another-medium">Scenario 10: Adapting an experience from another medium<a class="anchor" href="#scenario-10-another-medium" aria-label="Link to this section: Scenario 10: Adapting an experience from another medium">#</a></h2>
+
+                    <h3 id="s10-story">Story<a class="anchor" href="#s10-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>The developer was inspired by a work in another medium: a board game, a card game, a film, a comic, an animated series, a book, or an unusual video game that needed special hardware. It gave them a vision of how well it would work as a regular video game. So they set out to bring that experience to console or PC as faithfully and respectfully as possible.</p>
+
+                    <p>Carefully and accurately, they recreated the original as identically as they could, and released it. But despite the accuracy, the game didn't deliver the same or a better experience than the original. Fans of the original said it was worse. The project was a failure, or at least far less effective than the original, with far less success than hoped.</p>
+
+                    <p>The intention was an equal or improved version of the original experience in a new format. The action was to copy the formula one-to-one. The developer had enjoyed the original and wanted that feeling again, because the old format had become inconvenient or mostly unavailable.</p>
+
+                    <h3 id="s10-action">Action<a class="anchor" href="#s10-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>The developer copied the original's rules, structure and presentation exactly. For a board game: the same turns, dice rolls, card draws, bookkeeping and phases, now on a screen. For a film: the same scenes, camera angles and pacing, now with a controller in the player's hand that mostly waits for the next cutscene.</p>
+
+                    <h3 id="s10-problem">Problem<a class="anchor" href="#s10-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>The board game adaptation felt slow and fiddly, and lonely without the people around the table. The film adaptation felt like a film with interruptions, or a game that kept taking itself away from the player. Fans of the original felt it had lost its magic. Newcomers wondered why it was designed so strangely.</p>
+
+                    <h3 id="s10-intention">Intention<a class="anchor" href="#s10-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>To get back the feelings the original gave, in a format that's convenient and available again, and maybe to make them even stronger.</p>
+
+                    <h3 id="s10-mistake">Mistake<a class="anchor" href="#s10-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>The developer copied the final result of another medium instead of its root cause. Every medium's form is shaped by its own limits. A board game uses dice, cards, turns and phases because humans have to run all the rules by hand, and randomness has to come from a physical object. A film uses fixed camera angles and fixed pacing because the viewer can't act. Those aren't the source of the magic. They're the solutions the original creators found to their medium's limitations, in service of a purpose.</p>
+
+                    <p>Moved into a video game, those solutions become arbitrary constraints. The computer can do all the bookkeeping instantly and simulate things dice could only approximate, so keeping the dice-and-phases structure keeps the costs of the old medium while throwing away the strengths of the new one. And some of the original's magic came from things the new medium can't copy at all, like the friends around the table, which need their own new answer.</p>
+
+                    <p>The fix is the specialist's approach from <a href="c02-three-projects-two-designers.html">Chapter 2</a>: play or watch the original and ask what it made you feel, find the needs behind those feelings, and then design natively for the video game medium to meet those needs as well as it possibly can. The result may look quite different from the original. If it gives the same feelings, more conveniently and more powerfully, the fans will recognize it as the real thing. (And sometimes the honest answer is that the original medium was already the best strategy for that purpose, and the right move is to make the original available again instead of adapting it. <a href="c11-from-inspiration-to-purpose.html">Choose the right medium.</a>)</p>
+                    </section>
+
+                    <section id="scenario-11">
+                    <h2 id="scenario-11-retention">Scenario 11: Player retention is always too low<a class="anchor" href="#scenario-11-retention" aria-label="Link to this section: Scenario 11: Player retention is always too low">#</a></h2>
+
+                    <h3 id="s11-story">Story<a class="anchor" href="#s11-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>Time after time, the developer works hard on a new game, releases it, uses powerful marketing to make players aware of it, and makes installing and playing it as easy as they can think of.</p>
+
+                    <p>Yet after doing this for many games in a row, retention is worryingly low every time. Something is wrong. Other games don't seem to have this problem, even similar ones with fewer features.</p>
+
+                    <p>The intention is long-term financial success, and the developer's plan for it is games that last as long as possible, with high retention, so players keep playing.</p>
+
+                    <h3 id="s11-action">Action<a class="anchor" href="#s11-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>Each game was built in the usual way: a finite campaign with a beginning and an end, content made by hand to be consumed once. When retention dropped, the developer added the standard retention tools on top: daily login rewards, streaks, time-limited events, battle passes and notifications.</p>
+
+                    <h3 id="s11-problem">Problem<a class="anchor" href="#s11-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>Players finished the campaign and left, because there was nothing left to do but repeat it. The retention tools kept some of them logging in for a while, but resentfully, and the numbers decayed anyway. Every new game started from zero, with all the previous game's content stranded in the previous game. The developer was running faster and faster to stay in the same place.</p>
+
+                    <h3 id="s11-intention">Intention<a class="anchor" href="#s11-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>Long-term financial safety, through players who stay for a long time.</p>
+
+                    <h3 id="s11-mistake">Mistake<a class="anchor" href="#s11-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>Retention is a side effect, like popularity. People stay with something as long as it keeps meeting their needs, and no longer. You can't make them stay by wanting them to, and the tools that try (dailies, streaks, events) are the padding and the punishments for leaving from <a href="c18-afraid-the-game-is-too-short.html">Chapter 18</a>. They trade long-term trust for short-term numbers.</p>
+
+                    <p>The deeper problem was structural. A finite game is designed to end. Its retention curve is decided the moment the developer chose a campaign with a final level. Adding retention tools to a game that's built to end is like adding locks to a building that's scheduled for demolition. And each new finite game threw away the work of the last.</p>
+
+                    <p>Games that keep their players have one thing in common: they never run out of reasons to play. A structure with an infinite overarching goal and finite local goals, content that multiplies instead of adding up, and a world that keeps going lets players come back for years, on their own schedule, because the game keeps meeting their needs. That's <a href="c24-infinite-metagames.html">Infinite Metagames</a>.</p>
+                    </section>
+
+                    <section id="scenario-12">
+                    <h2 id="scenario-12-angry-customers">Scenario 12: Customers angry about business decisions<a class="anchor" href="#scenario-12-angry-customers" aria-label="Link to this section: Scenario 12: Customers angry about business decisions">#</a></h2>
+
+                    <h3 id="s12-story">Story<a class="anchor" href="#s12-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>After earlier success, the developer wants to grow: more people, better audiovisual quality, a higher standard of scope and care. That needs more money. So the developer decides to change how it sells and monetizes its games.</p>
+
+                    <p>As the decisions are announced, there's a massive backlash. Players get angry, boycott the company, urge others to stop buying from it, and generally show a lot of contempt. Here are some of the most useful comments:</p>
+
+                    <ul>
+                    <li>"This company is milking its customers unfairly!"</li>
+                    <li>"These developers are greedy and manipulative!"</li>
+                    <li>"I've completely lost respect for this developer over how they're selling their game!"</li>
+                    <li>"I'm angry at how this company treats its users, it's just exploitative!"</li>
+                    <li>"I can't believe they'd go this low, this developer used to be so good and fair!"</li>
+                    <li>"What are they doing? Do they hate us? Do they want us to leave?"</li>
+                    </ul>
+
+                    <p>Believe it or not, I'm serious when I say these are useful. The tragedy is that they're phrased in a way that makes it very hard to hear what they're actually saying. They need translating with NVC. People have been taught to use judgement, shame, guilt and blame to make others change for thousands of years, unaware that it doesn't work, or without any other option they know of. Remember: humans only ever say "please" and "thank you". These are all "please".</p>
+
+                    <p>Translated, they say: "When the company made decisions X, Y and Z..."</p>
+                    <ul>
+                    <li>"...I feel upset, because I need fairness and respect in how my money and other people's is asked for."</li>
+                    <li>"...I feel hurt, because I need honesty and balance in how money is earned, for sustainability, peace and trust in the long run."</li>
+                    <li>"...I feel sad, because I long for consideration, and to trust that companies treat my needs as just as important as theirs."</li>
+                    <li>"...I feel angry, because I need safety in how people are treated."</li>
+                    <li>"...I feel disappointed, because I need consistency, for the company to keep making great games and stay caring toward its players."</li>
+                    <li>"...I feel confused, because I need clarity about the developer's intentions. Their actions and their statements don't match."</li>
+                    </ul>
+
+                    <p>The developer had no intention of manipulating anyone, making anyone angry or being unfair. Production costs went up and more money was needed. The fans themselves had asked for a bigger, better game. The decisions were simply meant to fund that growth. How on earth could it backfire?</p>
+
+                    <h3 id="s12-action">Action<a class="anchor" href="#s12-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>To raise more money, the developer reached for the strategies the industry commonly uses: raised the price while also adding paid DLC for content that used to be included, introduced a cash shop and a season pass, made some conveniences purchasable, moved some things to time-limited availability, and announced all of it in a press release full of words like "exciting new ways to enjoy" and "giving players more choice".</p>
+
+                    <h3 id="s12-problem">Problem<a class="anchor" href="#s12-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>The backlash above. Sales of the new game fell below the old one's. Long-time fans became vocal critics. The goodwill that had made the earlier success possible, and that the growth plan quietly depended on, was spent in a week.</p>
+
+                    <h3 id="s12-intention">Intention<a class="anchor" href="#s12-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>Financial safety for the growth that the fans themselves asked for, so the company could make bigger and better games for them.</p>
+
+                    <h3 id="s12-mistake">Mistake<a class="anchor" href="#s12-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>As the translated comments reveal, the strategies the developer used to raise money were, by their very nature, manipulative, forced and unfair, even though the developer and the company weren't. They didn't know the logic those strategies run on or their real consequences, or they didn't know of a better option and felt they had to use them, hesitantly, to solve the money problem. Selling back conveniences is the padding trick from Chapter 18 with a price tag. Time-limited availability is time gating. Content cut into DLC is content splitting. And the press release told players something different from what the decisions did, which is exactly the gap between statement and action that the last comment points at.</p>
+
+                    <p>There was a better strategy available, and it's the plainest one of all: an honest request. Tell the players what the company needs and why, what it plans to give, and what it's asking of them, in NVC terms: the observation (costs went up), the feeling (worried about sustaining this), the need (safety to keep making these games), and a clear request (support it in this specific way). Then give real value first, and make it easy to say thank you. These were fans who already loved the games and asked for more. Asked honestly, a lot of them would have wanted to help, because of the human need to give. Approached with tricks, they felt used. <a href="c30-beyond-the-game.html">Beyond the Game</a> covers honest monetization in practice.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="more-scenarios">More scenarios to think through<a class="anchor" href="#more-scenarios" aria-label="Link to this section: More scenarios to think through">#</a></h2>
+
+                    <p>The original list of scenarios was longer than this. Here are a few more, as short sketches. Try writing the Action, Problem, Intention and Mistake for each yourself. It's good practice for spotting the gap between intention and action in your own work.</p>
+
+                    <ul>
+                    <li><strong>"Make it fun!"</strong> The developer, wanting the game to be fun, adds clever twists, gimmicks and surprises everywhere. The player's reaction: "Oh no, what contrived thing is the developer going to put me through next?" (Hint: fun is needs being met, not cleverness being shown.)</li>
+                    <li><strong>Motivating people into real-life activity.</strong> A fitness or study app dressed as a game. (Hint: <a href="c12-game-or-interactive-tool.html">Game or Interactive Tool</a>.)</li>
+                    <li><strong>Taboo subjects treated as "only fantasy".</strong> A game that handles a painful real-world subject carelessly, on the assumption that fiction has no effect.</li>
+                    <li><strong>A story nobody needed.</strong> A game whose purpose is an experience that needs no narrative, with a narrative added anyway, which limits the experience in every possible way.</li>
+                    <li><strong>"Humans can't be that unreasonable, right?"</strong> A design that only works if every player behaves sensibly, released to a hundred thousand players. (Hint: Murphy's law.)</li>
+                    </ul>
+
+                    <p>The examples in this part have all happened in real life, and they're still repeated today, sometimes by the same people, sometimes by new ones. Watching it happen is painful and tragic, even when I'm not involved. People with amazing technical skills and a genuine wish to make life more wonderful end up destroying years of effort with design mistakes. I feel sad about it. And I hope these scenarios help you see how meaningless an intention becomes when the action, the thing that actually matters, doesn't carry that intention at its core.</p>
+
+                    <p>Part IV is about building actions that do.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c18-afraid-the-game-is-too-short.html"><span class="label">← Previous · Part III · Chapter 18</span><span class="pager-title">Afraid the Game Is Too Short</span></a>
+                    <a class="pager-link next" href="p4-designing-the-game.html"><span class="label">Next → · Part IV</span><span class="pager-title">The Technical Side: Designing the Game</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

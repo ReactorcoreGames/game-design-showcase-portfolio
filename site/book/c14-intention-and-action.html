@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intention and Action Are Two Things · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="The designer creates something, strongly believing it will work a certain way, simply because that&#x27;s what they intended. They assume things will work as…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c14-intention-and-action.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 14: Intention and Action Are Two Things · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="The designer creates something, strongly believing it will work a certain way, simply because that&#x27;s what they intended. They assume things will work as…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c14-intention-and-action.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 14: Intention and Action Are Two Things · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="The designer creates something, strongly believing it will work a certain way, simply because that&#x27;s what they intended. They assume things will work as…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 14: Intention and Action Are Two Things",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c14-intention-and-action.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="p3-intention-is-not-action.html">
+    <link rel="next" href="c15-when-players-misbehave.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html" aria-current="page"><span class="n">14</span>Intention and Action Are Two Things</a><ol class="toc-secs"><li><a href="#the-mistake">The mistake</a></li><li><a href="#how-the-scenarios-work">How the scenarios work</a></li><li><a href="#where-the-mistake-comes-from">Where the mistake comes from</a></li><li><a href="#the-four-stages-of-learning">The four stages of learning</a></li><li><a href="#foreseeing-consequences">Foreseeing consequences before they happen</a></li><li><a href="#before-the-scenarios">Before the scenarios</a></li></ol></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>7 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c14-intention-and-action">
+                    <header>
+                    <p class="kicker">Part III · Chapter 14</p>
+                    <h1>Intention and Action Are Two Things</h1>
+                    </header>
+
+                    <section>
+                    <h2 id="the-mistake">The mistake<a class="anchor" href="#the-mistake" aria-label="Link to this section: The mistake">#</a></h2>
+
+                    <p>The designer creates something, strongly believing it will work a certain way, simply because that's what they intended. They assume things will work as planned because they want them to, without taking into account reality, the real world and the real people around them.</p>
+
+                    <p>But intention and action are separate, different things. They aren't one and the same. I may want my design to work a certain way, and that guarantees nothing.</p>
+
+                    <p>Here's the part that makes it so hard to see. Players never experience your intention. They only ever experience your action: the design you actually built, the systems as they actually behave, the words as they actually read. Your intention stays in your head. If the action doesn't carry the intention inside it, the intention might as well not exist. From the player's side, the design <em>is</em> what you meant.</p>
+
+                    <p>So a developer who intends to make a friendly community and builds a game where you can only win by making someone else lose has, as far as the players can tell, built a game about making other people lose. And the players will behave accordingly.</p>
+                    </section>
+
+                    <section id="format">
+                    <h2 id="how-the-scenarios-work">How the scenarios work<a class="anchor" href="#how-the-scenarios-work" aria-label="Link to this section: How the scenarios work">#</a></h2>
+
+                    <p>The next chapters go through real situations where this happened. Some are specific cases, others are broader patterns, but all of them have happened in real projects, with real disappointments and real damage, despite genuine intentions. Each one uses the same format:</p>
+
+                    <dl>
+                    <dt>Story</dt>
+                    <dd>A short description of the whole situation.</dd>
+                    <dt>Action</dt>
+                    <dd>What the developer did.</dd>
+                    <dt>Problem</dt>
+                    <dd>What happened.</dd>
+                    <dt>Intention</dt>
+                    <dd>What the developer wanted to happen.</dd>
+                    <dt>Mistake</dt>
+                    <dd>Why it failed: the gap between the action and the intention, and which needs were violated.</dd>
+                    </dl>
+
+                    <p>As you read them, try to predict the Problem from the Action before you read it. By the end of the part, you'll find you can.</p>
+
+                    <p>One thing to keep in mind throughout: none of the developers in these scenarios are villains. I picked them that way deliberately. People who set out to exploit others exist, and I don't appreciate what they do, but they aren't who this part is for. It's for the people who think they're doing the right thing and end up doing the opposite. That's the group most of us belong to at some point.</p>
+                    </section>
+
+                    <section id="why">
+                    <h2 id="where-the-mistake-comes-from">Where the mistake comes from<a class="anchor" href="#where-the-mistake-comes-from" aria-label="Link to this section: Where the mistake comes from">#</a></h2>
+
+                    <p>Mostly, it comes from simply not having the information, the awareness and the realization of all the possible consequences of a design idea. That includes not knowing that intention and action are different at all. But more than anything, it comes from not knowing about fundamental human needs and feelings. That one piece of knowledge lets a designer predict whether a design will violate needs or leave them safe, which tells them what will actually work in reality and line up with their intentions.</p>
+
+                    <p>It can also come from outside sources of false information: what society teaches, misinformed colleagues and friends, claims that fall for cognitive biases, memes, bad science, and other publications that propose ideas and believe they're good without seeing the root causes that paint a very different picture underneath. (This is the "question everything" problem from <a href="c04-question-everything.html">Chapter 4</a>.)</p>
+
+                    <p>And there's one more case. Someone skillful can make design look easy just by being good at it, which gives onlookers the false impression that design is easy to do. That's yet another cognitive bias trap. Be aware of it, so you don't step into it.</p>
+
+                    <p>The effect of the mistake is a designer who blindly tries to force their will onto players, regardless of the players' feelings and needs. That designer is essentially ignoring nature itself, by disrespecting and violating fundamental human needs, and nature responds the way it always does. The results are disastrous. A complete failure.</p>
+                    </section>
+
+                    <section id="four-stages">
+                    <h2 id="the-four-stages-of-learning">The four stages of learning<a class="anchor" href="#the-four-stages-of-learning" aria-label="Link to this section: The four stages of learning">#</a></h2>
+
+                    <p>There's a clever concept called the four stages of learning (or of competence). It's useful for understanding this mistake, and for quickly lifting yourself to a stage where it becomes very hard to make.</p>
+
+                    <ol>
+                    <li><p><strong>Unconscious incompetence.</strong> How I think: "I know I can do this, nothing can stop me!"<br>
+                    I overestimate my abilities and underestimate the difficulty of the subject.</p></li>
+                    <li><p><strong>Conscious incompetence.</strong> How I think: "Nope, I actually suck at this. I need guidance."<br>
+                    I realize the difficulty of the subject and start treating it with respect. I study.</p></li>
+                    <li><p><strong>Conscious competence.</strong> How I think: "I can do this. It's not effortless, but I can do it."<br>
+                    I begin to grasp the subject and can apply it, but I'm not yet a master.</p></li>
+                    <li><p><strong>Unconscious competence.</strong> How I think: "This is so easy I don't even have to think about it."<br>
+                    I finally, truly, know what I'm doing. I could teach it to others. I produce excellence consistently and confidently.</p></li>
+                    </ol>
+
+                    <p>Confusing intention and action belongs to the first stage. In the first stage, you don't know enough to know what could go wrong, so your intention feels like a guarantee.</p>
+
+                    <p>The great thing about the four stages is that once you've seen them, you can skip the first stage entirely and go straight to the second. You simply assume you know nothing whenever you meet a new subject, and you study it before attempting anything serious in it. That alone prevents a huge number of avoidable mistakes. It isn't pessimism. It's respect for the subject, and it's what keeps your intention from writing checks your action can't cash.</p>
+                    </section>
+
+                    <section id="foreseeing">
+                    <h2 id="foreseeing-consequences">Foreseeing consequences before they happen<a class="anchor" href="#foreseeing-consequences" aria-label="Link to this section: Foreseeing consequences before they happen">#</a></h2>
+
+                    <p>If you look closely at all the scenarios in this part, you'll notice they share one pattern. The developer intended things to happen a certain way, or people to behave a certain way. After publishing, the players behaved differently, or completely the opposite. The intended effect simply didn't happen.</p>
+
+                    <p>The thing is, these problems can be predicted and avoided long before they happen. As a designer I have a tremendous power to create designs that do what I intend. I can predict the consequences of a design far into the future, which saves time, prevents disappointment, avoids failure and actually gets me what I want from my designs. Every failure in the coming chapters was entirely preventable and foreseeable. This is how.</p>
+
+                    <h3 id="complete-investigation">A complete investigation<a class="anchor" href="#complete-investigation" aria-label="Link to this section: A complete investigation">#</a></h3>
+
+                    <p>I do a complete investigation of the potential consequences of my design:</p>
+
+                    <ol>
+                    <li>I gather information about the design idea.</li>
+                    <li>I organize it so I can browse it comfortably and efficiently.</li>
+                    <li>I look at each design decision in detail, however small or large.</li>
+                    <li>I analyze and simplify each decision until I can see what it does and what it relies on.</li>
+                    <li>I list every possible effect I can logically deduce that the decision could create, using the information I've gathered. Not only on the mechanics, but on the players' needs: which needs does this meet, and which could it violate? What will a player who is tired, broke, angry, ten years old, or desperate to win do with this?</li>
+                    <li>If I'm unsure whether I've listed all the consequences, or whether a certain consequence can or can't happen, I do whatever I need to find out: draw mind maps, try experiments, look for other games that tried the idea before, build cheap test prototypes, make spreadsheets, look at projects and art in other media, ask people.</li>
+                    <li>I repeat this as often as I need to, until I'm satisfied the design is foolproof.</li>
+                    </ol>
+
+                    <p>I never start working on the final product until the design has been verified this way. The investigation costs hours or days. Skipping it can cost years.</p>
+
+                    <h3 id="murphys-law">Murphy's law<a class="anchor" href="#murphys-law" aria-label="Link to this section: Murphy&#x27;s law">#</a></h3>
+
+                    <p>There's a well-known saying called Murphy's law: "Anything that can go wrong, will go wrong."</p>
+
+                    <p>For a designer, it means this: if you have even a small doubt that some consequence of a design could go wrong, treat it as a certainty. It sounds paranoid, so let me show why it's simply arithmetic. A design that goes wrong for one player in a thousand will, in a game with a hundred thousand players, go wrong a hundred times. Each of those hundred people will tell others. Some will write reviews. A few will make videos. The rare case isn't rare at scale. It's guaranteed.</p>
+
+                    <p>This is why good design is paranoid design. Not anxious, not afraid. Paranoid in the sense of having already looked at every way it can break, and having closed those ways before anyone walks through them.</p>
+                    </section>
+
+                    <section id="last-words">
+                    <h2 id="before-the-scenarios">Before the scenarios<a class="anchor" href="#before-the-scenarios" aria-label="Link to this section: Before the scenarios">#</a></h2>
+
+                    <p>Unfortunately, I don't trust that this information will fully protect you from making even one mistake. I've learned a lot in my life through failure, my own and other people's, and I don't know whether it's possible to grasp the importance of all this without at least one remarkable failure that shakes you up.</p>
+
+                    <p>If you can avoid failures entirely, I'll be extremely happy that such a thing is possible.</p>
+
+                    <p>Either way, this information is here to keep needless failures to a minimum, and to give you a shortcut to mastering game design in far less time than it took me. That's pretty much the whole purpose of this book.</p>
+
+                    <p>Good luck and stay smart.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="p3-intention-is-not-action.html"><span class="label">← Previous · Part III</span><span class="pager-title">Intention Is Not Action</span></a>
+                    <a class="pager-link next" href="c15-when-players-misbehave.html"><span class="label">Next → · Part III · Chapter 15</span><span class="pager-title">When Players Misbehave</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

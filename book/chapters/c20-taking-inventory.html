@@ -1,0 +1,103 @@
+<article class="chapter" id="c20-taking-inventory">
+<header>
+<p class="kicker">Part IV · Chapter 20</p>
+<h1>Taking Inventory</h1>
+</header>
+
+<section id="intro">
+<p>Before designing anything, find out what you're working with. Taking inventory means understanding what's available in each of the four parts of the Holy Grail from <a href="c07-the-holy-grail.html">Chapter 7</a>: the purpose, the technology, the human being, and the skills and resources you can actually put in. A design that ignores any of them will hit a wall later, and it's always cheaper to find the wall on paper.</p>
+</section>
+
+<section id="purpose">
+<h2 id="understanding-the-purpose">Understanding the purpose</h2>
+
+<p>This one comes first because everything else is measured against it. By now you know how: the inspiration, the feelings, the needs, the purpose (<a href="c11-from-inspiration-to-purpose.html">From Inspiration to Purpose</a>). Write it down. Keep it somewhere you'll see it every working day. If you can't state it in a sentence or two, you aren't ready to take inventory of anything else, because you won't know what you're taking inventory <em>for</em>.</p>
+
+<p>The purpose also defines priority. It tells you which features are primary (the project fails without them), which are secondary (they make the primary ones better), and which are tertiary (nice if there's time). When time or money runs short, and it will, this order tells you what to cut without agonizing over it.</p>
+</section>
+
+<section id="technology">
+<h2 id="understanding-the-technology">Understanding the technology and the platform</h2>
+
+<p>Every platform has limits: processing power, memory, storage, screen size, input methods, network, battery. Every engine and tool has its own limits on top of those. The design has to keep the technology within its operating limits, never overdrawn or bent in ways it can't support. That's the first part of a perfect design from <a href="c07-the-holy-grail.html">Chapter 7</a>, and it's the one designers most often treat as somebody else's problem.</p>
+
+<h3 id="crab-bomb">The crab bomb</h3>
+
+<p>Here's what happens when a design ignores it. <cite>Cortex Command</cite>, the physics-driven game I made official content for, could only handle 255 objects on a level. A single equipped soldier was made of about 10 objects, and every item, door, ship and character used up those slots fast. Past 255, the game's internal object IDs got mixed up, and when something exploded, other things around the level would explode too, however safe they were. And above about 250 objects the game lagged so heavily it was unplayable anyway.</p>
+
+<p>That was normal in the game. Official content, mods and ordinary player freedom crossed the limit regularly. The infamous "crab bomb" shows how easily it happened. Players could order a delivery craft from a catalog and fill it with any cargo they liked, and crabs happened to be free. So people packed a craft with as many crabs as it would take. When its doors opened, a flood of physics-driven ragdoll crabs poured out at once, and the whole game went haywire. The game never limited how much weight, how many passengers or how much volume a delivery craft could carry, so nothing stopped a single order from overloading everything.</p>
+
+<p>That's poor game design, and it's worth being precise about why. Player freedom is fine and desirable. But when it makes your computer lock up, something has gone wrong in the foundations. Good design respects player freedom and the computer's limits equally, and finds a solution that satisfies both, not one at the expense of the other. A design that respected the limit from the start would have made levels, units and spawning work within it, and the players would never have known the limit existed.</p>
+
+<h3 id="know-your-tech">Know what your technology can do</h3>
+
+<ul>
+<li><strong>Find the limits by stress-testing.</strong> Don't guess. Spawn a thousand objects and see what happens. Fill the save file. Run it on the weakest machine you intend to support. The numbers you find are part of the design, as real as gravity.</li>
+<li><strong>Recognize its versatility.</strong> Limits are half the story. Every technology also has strengths it's unusually good at, sometimes ones nobody has used fully. <cite>Cortex Command</cite> had fully destructible terrain, and our early official levels barely used it, which was a waste of the game's greatest strength. Ask what your technology does well that others don't, and lean into that.</li>
+<li><strong>Design per instance, not per showcase.</strong> An explosion that looks amazing alone may bring the game to its knees when ten happen at once in real play. We made exactly this mistake: effects built to impress in isolation, which made the game lag and freeze in actual battles. Design for the busiest moment the game will really have.</li>
+</ul>
+
+<p>Technology also covers the player's hardware, not just yours. Not everyone has a powerful computer, and a lot of people in the world have weak ones. Optimization isn't only a technical nicety; it decides who gets to play your game at all. (<a href="c30-beyond-the-game.html">Beyond the Game</a> comes back to this.)</p>
+</section>
+
+<section id="human">
+<h2 id="understanding-the-human">Understanding the human being</h2>
+
+<p>The second part of the Grail is the human player: their needs and feelings (all of Part II), and also their body and mind as physical things with their own limits.</p>
+
+<ul>
+<li><strong>Attention is limited.</strong> A human can focus on one thing at a time, and is only in one place at a time. A design that asks a player to watch six things at once is asking for something no human can do.</li>
+<li><strong>Reflexes, precision and stamina are limited.</strong> They differ between people and they get worse when someone is tired. A design that needs perfect inputs for long stretches will exhaust people.</li>
+<li><strong>Memory is limited.</strong> Players forget rules, controls and story between sessions, especially returning players who come back after months.</li>
+<li><strong>Bodies have needs.</strong> Players need to eat, drink, go to the toilet, rest, sleep and move. A game that can't be paused or saved fights all of those.</li>
+</ul>
+
+<p>Here's a concrete example of what ignoring this looks like. In <cite>Cortex Command</cite>'s early skirmish mode, without realizing it, we were asking the player to personally control a group of extremely fragile, cumbersome soldiers in a hazardous environment, against an automated AI enemy that controlled all its units at once, with infinite resources, and no way to pause or slow time. All while keeping track of several characters at once so none of them got neglected or died in some silly way. That's inhuman. No human can stay sharp enough for that, and losing everything to the smallest mistake wasn't challenge; it was a design that forgot a human was playing. Scaled down to small squads of three or four customized soldiers, focused on objectives instead of resource micromanagement, the same game would have fit a human being.</p>
+
+<p>The controls and interface are where the body and the game meet, so they deserve the most care. Learn the basics of user interface and user experience design. Show important information clearly. Write text that's understandable without knowing what's in the developer's head. And regularly sit down with the game, pretend to be clueless, and imagine how it feels to someone who doesn't know anything about it. If you can't imagine it, watch someone who really doesn't know it play.</p>
+</section>
+
+<section id="resources">
+<h2 id="understanding-skills-and-resources">Understanding skills and resources</h2>
+
+<p>The fourth part of the Grail pulls against the other three: what you can actually, concretely put into the project, without any doubt.</p>
+
+<ul>
+<li><strong>Time.</strong> How many hours a week, really, after work, sleep, family and life? For how many months or years can you keep it up?</li>
+<li><strong>People.</strong> Who is working on this, with what skills, at what level, and how reliably?</li>
+<li><strong>Money.</strong> What's available for tools, assets, hardware, help and survival while the project is made?</li>
+<li><strong>Skills.</strong> What can you do yourself, what can you learn in reasonable time, and what has to come from someone else?</li>
+<li><strong>Tools and hardware.</strong> What do you have, and what are their limits?</li>
+<li><strong>Health and support.</strong> Can you finish this without burning out, going broke or losing the people around you?</li>
+</ul>
+
+<p>Be honest here. Optimism in this list costs years later. Everything takes longer than it seems; <a href="c28-the-design-process.html">The Design Process</a> has a rule of thumb for how much longer. A design that needs ten artists when you have zero isn't a design yet, it's a wish. That doesn't mean shrinking the dream. It means designing the dream so it can be built with what you have: simpler art that's fast to produce, systems that generate content instead of hand-placing it, a smallest playable version that grows. Parts IV and V are full of ways to do exactly that.</p>
+</section>
+
+<section id="respect">
+<h2 id="respect-for-the-human">Respect for the human</h2>
+
+<p>One more thing to take inventory of, because it touches every part above: the player's life outside the game. A game is a guest in someone's life. A good guest respects the host.</p>
+
+<dl>
+<dt>Their time</dt>
+<dd>No padding, no hidden delays, no unskippable anything (<a href="c18-afraid-the-game-is-too-short.html">Chapter 18</a> is the full list of what not to do). Get the player to what they came for as directly as possible.</dd>
+<dt>Their saves</dt>
+<dd>Let them save whenever they need to stop, and let them stop without losing anything. Let them back up their save files and move them to a new computer. A player's progress is theirs.</dd>
+<dt>Their body</dt>
+<dd>Make the game pausable. Offer reminders to drink, eat and rest if they want them. Show the real-world time somewhere, so an evening doesn't vanish unnoticed.</dd>
+<dt>Their money</dt>
+<dd>Be honest about what things cost, and never pressure. (<a href="c17-money.html">Money</a> showed what happens otherwise.)</dd>
+<dt>Their mind</dt>
+<dd>Don't manipulate, don't nag, don't guilt. Let them leave whenever they want, and welcome them back whenever they return.</dd>
+</dl>
+
+<p>Note that none of this is a restriction on the player. The robot game from <a href="c02-three-projects-two-designers.html">Chapter 2</a> only asks for reminders and a clock, never forced breaks. Forcing a player to rest would violate their autonomy just as much as forcing them to keep playing. Respect means giving them what they need to choose well, and then trusting their choice.</p>
+</section>
+
+<section id="inventory-done">
+<h2 id="with-the-inventory-taken">With the inventory taken</h2>
+
+<p>You now know what you're aiming for, what the machine can do, what the human can do, and what you can do. That's the map of the territory. The rest of Part IV is about how to build on it, starting from the ground up.</p>
+</section>
+</article>

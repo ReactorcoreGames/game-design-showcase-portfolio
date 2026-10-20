@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with People · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="Whether you&#x27;re leading a team, joining one, talking to players or just trying to get help, game development is full of people. Everything from Understanding…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c29-working-with-people.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 29: Working with People · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="Whether you&#x27;re leading a team, joining one, talking to players or just trying to get help, game development is full of people. Everything from Understanding…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c29-working-with-people.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 29: Working with People · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="Whether you&#x27;re leading a team, joining one, talking to players or just trying to get help, game development is full of people. Everything from Understanding…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 29: Working with People",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c29-working-with-people.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c28-the-design-process.html">
+    <link rel="next" href="c30-beyond-the-game.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html" aria-current="page"><span class="n">29</span>Working with People</a><ol class="toc-secs"><li><a href="#nvc-with-a-team">NVC with a team</a></li><li><a href="#message-sent-message-received">Message sent = message received?</a></li><li><a href="#a-common-goal">A common goal, the same vision</a></li><li><a href="#gratitude-not-praise">Gratitude, not praise</a></li><li><a href="#translating-feedback">Translating feedback</a></li><li><a href="#people-dont-always-know-what-they-want">People don&#x27;t always know what they want</a></li><li><a href="#deadlines">Deadlines</a></li><li><a href="#the-influence-of-others">The influence of others</a></li></ol></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>8 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c29-working-with-people">
+                    <header>
+                    <p class="kicker">Part V · Chapter 29</p>
+                    <h1>Working with People</h1>
+                    </header>
+
+                    <section id="intro">
+                    <p>Whether you're leading a team, joining one, talking to players or just trying to get help, game development is full of people. Everything from <a href="c09-understanding-human-beings.html">Understanding Human Beings</a> applies here, pointed at the people you work with instead of the people who play. This chapter collects the parts that matter most.</p>
+                    </section>
+
+                    <section id="nvc-teams">
+                    <h2 id="nvc-with-a-team">NVC with a team<a class="anchor" href="#nvc-with-a-team" aria-label="Link to this section: NVC with a team">#</a></h2>
+
+                    <p>The same two questions run every working relationship: what is alive in me right now, and what is alive in them? Clarity and empathy. With both, a path to a solution that works for everyone becomes visible.</p>
+
+                    <p>That's the meaning of the original note I wrote to myself: <strong>compromises don't exist. Everyone <em>can</em> be satisfied.</strong> A compromise is when everyone gives up a little of what they need so nobody gets all of it. It looks fair, but everyone walks away a little unhappy, and that unhappiness builds up across a project. Looking for the solution that meets everyone's needs takes longer at first. It's also the only thing that keeps a team together for years.</p>
+
+                    <p>It works because of a principle from Chapter 9: needs are universal, and strategies are what clash. Two people arguing over whether a feature should exist are usually arguing about strategies. Ask each one what need the strategy is for. Very often, both needs can be met by a third option neither had thought of. And sometimes, once people truly understand the cost behind a strategy they were attached to, the "superior" strategy loses its value to them, and they let go of it willingly.</p>
+
+                    <p>This fits with one designer per project (<a href="c27-what-a-game-designer-really-does.html">Chapter 27</a>). The designer is the person who does this work: listens to every need, and finds the design that meets all of them as fully as possible. One decision-maker, many voices, nobody sacrificed.</p>
+
+                    <p>Be firm, but compassionate. Meeting everyone's needs doesn't mean doing whatever anyone asks. It means staying true to the purpose and to your own needs, while taking everyone else's just as seriously. You can say no to a strategy and still fully honor the need behind it.</p>
+                    </section>
+
+                    <section id="message-sent">
+                    <h2 id="message-sent-message-received">Message sent = message received?<a class="anchor" href="#message-sent-message-received" aria-label="Link to this section: Message sent = message received?">#</a></h2>
+
+                    <p>Never assume. Always verify. The most common cause of wasted work on a team is a message that was sent clearly, in the sender's head, and received as something else.</p>
+
+                    <p>The simplest tool there is: <strong>ask for a recap.</strong> After explaining something important, ask the other person to say back what they heard. Not "did you understand?" (everyone says yes) but "can you tell me what you heard, in your own words?" Then do the same for them: when they've told you something important, recap it back and ask if you got it right. It takes a minute. It saves weeks.</p>
+
+                    <p>Please note that asking for a recap isn't a test or an accusation. Say why you're asking: "I want to make sure I explained it well." Then it's a gift, not a quiz.</p>
+
+                    <h3 id="be-specific">Be specific and spell it out<a class="anchor" href="#be-specific" aria-label="Link to this section: Be specific and spell it out">#</a></h3>
+
+                    <p>People can't read minds. If you want something from someone, ask for it specifically. "Make the menu feel better" isn't a request anyone can fulfill. "Make the main menu load in under a second and show the continue button first" is.</p>
+
+                    <p>That's the R in OFNR from <a href="c11-from-inspiration-to-purpose.html">Chapter 11</a>: a clear, positive, doable request. Positive means asking for what you want, not what you don't ("show the health bar at all times", not "stop hiding the health bar"). Doable means the person can actually do it, and you'll both know when it's done.</p>
+
+                    <h3 id="observe">Observe without judging<a class="anchor" href="#observe" aria-label="Link to this section: Observe without judging">#</a></h3>
+
+                    <p>When something isn't working, describe what you saw, not what you think of it. "The build was two days late, and the save system wasn't in it" is an observation. "You're unreliable" is a judgement. The observation can be discussed and solved. The judgement makes the other person defend themselves, and now you're arguing about who they are instead of about the save system.</p>
+
+                    <h3 id="dont-cry-wolf">Don't cry wolf<a class="anchor" href="#dont-cry-wolf" aria-label="Link to this section: Don&#x27;t cry wolf">#</a></h3>
+
+                    <p>Never call something urgent, critical or a disaster unless it really is. Ever. A team that has heard "this is critical" about ten minor things won't respond properly to the eleventh, which is real.</p>
+                    </section>
+
+                    <section id="shared-vision">
+                    <h2 id="a-common-goal">A common goal, the same vision<a class="anchor" href="#a-common-goal" aria-label="Link to this section: A common goal, the same vision">#</a></h2>
+
+                    <p>A team works when everyone is aiming at the same purpose (<a href="c08-purpose.html">Chapter 8</a>). Share the purpose with everyone, not just the plan. People who understand why a thing is being made can make good decisions on their own, inside the leeway of their blueprints. People who only know what's being made have to ask about everything, or guess.</p>
+
+                    <p>The best way to share a vision is to show it. A demonstrable vertical slice, or the barebones playable game, says more than any document. Once people can touch the game, they understand it.</p>
+
+                    <p>That's also true when you're trying to get people to join you at all. In the early stages, don't expect anyone to help unless they're family or close friends with spare time. Game development is slow, complicated and full of obstacles, so an unproven project looks too risky to a stranger. Once you've built it far enough that it's somewhat playable and someone else can see its potential, it gets much easier to bring people on. It isn't fair that you have to do so much work up front without anyone's support, but that's how it usually goes, so plan for it.</p>
+
+                    <p>And never trick people into working for you. Any short-term gain from that turns into lasting resentment, a bad reputation and more loneliness. Build every working relationship on trust, fairness, honesty and openness. Those last longer, and they're infinitely more rewarding.</p>
+                    </section>
+
+                    <section id="gratitude">
+                    <h2 id="gratitude-not-praise">Gratitude, not praise<a class="anchor" href="#gratitude-not-praise" aria-label="Link to this section: Gratitude, not praise">#</a></h2>
+
+                    <p>Celebrate successes, and express gratitude. But not praise and not compliments. That might sound odd, so here's the difference.</p>
+
+                    <p><strong>Praise</strong> is a judgement, just a positive one: "Great job!", "You're so talented!", "You're the best artist we've got." It puts the speaker in the position of judge. It's vague, so the person doesn't learn what actually worked. And like all rewards, it teaches people to work for approval, which means they also learn to fear its absence. (That's the "constant praise" padding from <a href="c18-afraid-the-game-is-too-short.html">Chapter 18</a>, in an office.)</p>
+
+                    <p><strong>Gratitude</strong> in NVC terms says what the person did, how it made your life better, and which of your needs it met: "When you rebuilt the save system, I felt so relieved, because I'd been worried about players losing progress. Thank you." It's specific, it's honest, and it tells the person exactly what made a difference, so they can do more of it. It also connects two people, instead of ranking one of them.</p>
+
+                    <p>Celebrate the milestones together too: the first time the game is playable from start to end, the first player who loves it. Celebrating progress keeps everyone's motivation alive, yours included.</p>
+                    </section>
+
+                    <section id="feedback">
+                    <h2 id="translating-feedback">Translating feedback<a class="anchor" href="#translating-feedback" aria-label="Link to this section: Translating feedback">#</a></h2>
+
+                    <p>Players are excellent at detecting problems, and usually bad at explaining them. They'll say "the combat feels off", "this sequel has no soul", or "the developers are idiots". The feeling is almost always accurate. The explanation, if there is one, is often wrong, and the suggested fix is often worse.</p>
+
+                    <p>So translate. Remember that people only ever say "please" and "thank you". Every complaint is a request for a need to be met, phrased in the only way the person knew how at that moment. Look for the feeling and the need under the words, as in the translated comments in <a href="c19-more-ways-good-intentions-fail.html">Scenario 12</a>. "The combat feels off" might mean "I'm frustrated because I need to feel in control, and the attacks don't go where I aim them." Now you have something you can fix.</p>
+
+                    <p>Take the detection seriously, and the prescription with a grain of salt. If many players say a level is too hard, something about it is violating a need. It might not be the difficulty itself. It might be unclear information, a bad checkpoint, a camera that hides the danger. Find the root cause before you change anything.</p>
+
+                    <p>And remember that players ignoring your game is feedback too.</p>
+
+                    <h3 id="bad-faith">People acting in bad faith<a class="anchor" href="#bad-faith" aria-label="Link to this section: People acting in bad faith">#</a></h3>
+
+                    <p>Most harsh feedback comes from people who care and don't have better words. But not all of it. Online, there are also people deliberately trying to provoke, deceive or harm: trolls, harassers, people paid to push opinions while posing as ordinary players, and people who've been hurt so much that hurting others has become their strategy. They look ordinary, and some of what they write is carefully crafted to fool you.</p>
+
+                    <p>You don't need to label them to protect yourself. Look at the behavior. Is the person trying to get a need met, or trying to make you feel there's something wrong with you? When it's a hate mob, a review written as a personal attack, or a stream of messages meant to wear you down, remember that people's judgements are mostly descriptions of themselves, not of you. NVC gives you a shield here: you can hear the pain without accepting the verdict. Reading about manipulation, bullying, narcissistic abuse and logical fallacies helps you recognize these patterns early. Stay true to yourself.</p>
+                    </section>
+
+                    <section id="intentions">
+                    <h2 id="people-dont-always-know-what-they-want">People don't always know what they want<a class="anchor" href="#people-dont-always-know-what-they-want" aria-label="Link to this section: People don&#x27;t always know what they want">#</a></h2>
+
+                    <p>As <a href="c02-three-projects-two-designers.html">Chapter 2</a> showed with partners, what people say they want and what they actually need can be very different things. They ask for A, and they're doing B. That's true of teammates, bosses, publishers and players alike.</p>
+
+                    <p>So don't take a request at face value, and don't dismiss it either. Ask what it's for. Ask what they hope will happen. Ask how they'll know it worked. Then design for that. People are often delighted to get something different from what they asked for, as long as it meets the need they actually had.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="deadlines">Deadlines<a class="anchor" href="#deadlines" aria-label="Link to this section: Deadlines">#</a></h2>
+
+                    <p>Deadlines change how people work, and not always for the better. Under a tight deadline, focus narrows to "done" instead of "good". Care for the game itself drops. People cut the corners nobody will see this month, which are exactly the corners that matter in two years. And fear starts making the decisions, which is how <a href="c18-afraid-the-game-is-too-short.html">Scenario 6</a> happens.</p>
+
+                    <p>Some deadlines are real: a contract, a platform event, the money running out. Treat those honestly, and plan the scope to fit them, using the barebones-first build order so there's always a complete game to ship. But don't invent artificial deadlines to "motivate" people. That's a punishment wearing a calendar. A team that understands the purpose and can see the progress doesn't need fear to keep moving.</p>
+                    </section>
+
+                    <section id="influence">
+                    <h2 id="the-influence-of-others">The influence of others<a class="anchor" href="#the-influence-of-others" aria-label="Link to this section: The influence of others">#</a></h2>
+
+                    <p>The people closest to you shape your thoughts and behavior more than you notice. It's often said that you become something like the average of the five people you spend the most time with. If those people constantly tell you your dream is unrealistic, mock ambition, or pull you toward copying whatever's popular, it will wear you down, however strong you are.</p>
+
+                    <p>So choose your influences consciously. Spend time with people who support your growth, even when they challenge you. Distance yourself from influences that drain you or push you away from the voice in your own heart. Listen to yourself, and trust your instincts. They're your library of experiences talking.</p>
+
+                    <p>And be that kind of influence for others. Building a community, a team or a culture of healthy relationships is part of the job. It's what lets people do their best work, and keep doing it for years.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c28-the-design-process.html"><span class="label">← Previous · Part V · Chapter 28</span><span class="pager-title">The Design Process</span></a>
+                    <a class="pager-link next" href="c30-beyond-the-game.html"><span class="label">Next → · Part V · Chapter 30</span><span class="pager-title">Beyond the Game</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

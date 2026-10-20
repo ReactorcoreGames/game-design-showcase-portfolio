@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Metagames · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="The metagame is the way a game is structured: how it&#x27;s organized, how it begins, how it flows and how it ends. The moment-to-moment game happens inside it.…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c24-infinite-metagames.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 24: Infinite Metagames · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="The metagame is the way a game is structured: how it&#x27;s organized, how it begins, how it flows and how it ends. The moment-to-moment game happens inside it.…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c24-infinite-metagames.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 24: Infinite Metagames · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="The metagame is the way a game is structured: how it&#x27;s organized, how it begins, how it flows and how it ends. The moment-to-moment game happens inside it.…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 24: Infinite Metagames",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c24-infinite-metagames.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c23-content-that-multiplies.html">
+    <link rel="next" href="c25-pacing-difficulty-and-progression.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html" aria-current="page"><span class="n">24</span>Infinite Metagames</a><ol class="toc-secs"><li><a href="#what-an-infinite-metagame-is">What an infinite metagame is</a></li><li><a href="#why-it-matters">Why it matters</a></li><li><a href="#why-finite-structures-fail">Why the usual structures fail</a></li><li><a href="#two-goals">The winning combination: an infinite goal and a finite goal</a></li><li><a href="#new-game-plus-as-a-bridge">New Game+ as a bridge</a></li><li><a href="#worked-example-astroneer">Worked example: making a finished game infinite</a></li><li><a href="#it-isnt-hard">It isn&#x27;t hard, it&#x27;s organization</a></li></ol></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>14 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c24-infinite-metagames">
+                    <header>
+                    <p class="kicker">Part IV · Chapter 24</p>
+                    <h1>Infinite Metagames</h1>
+                    </header>
+
+                    <section id="what">
+                    <h2 id="what-an-infinite-metagame-is">What an infinite metagame is<a class="anchor" href="#what-an-infinite-metagame-is" aria-label="Link to this section: What an infinite metagame is">#</a></h2>
+
+                    <p>The metagame is the way a game is structured: how it's organized, how it begins, how it flows and how it ends. The moment-to-moment game happens inside it. The metagame wraps it, gives it meaning and context, and ties it all together into a complete experience.</p>
+
+                    <p>Most games have a finite metagame. They start a certain way, progress in a certain way, and end. Once they end, nothing is valid anymore, so the only option is to reset everything to the start. Think of a board game: play until someone wins, put everything back in the box, and that session is gone forever. Chess always starts with two rows on each side and ends at checkmate. You can't keep playing after that without starting over.</p>
+
+                    <p>An infinite metagame has no ultimate end point, no final goal and no moment where the game has to reset. You can keep playing it virtually forever, with all your progress and achievements still valid, for as long as your save file exists.</p>
+
+                    <p>That's why I say <strong>infinite playability</strong>, not "replayability". A replayable game ends and you play it again. An infinite game doesn't end. You don't replay it. You just keep playing it.</p>
+
+                    <p>And to be clear, I don't mean cheap endless-runner mobile games. I mean the long-form singleplayer adventure campaigns that normally run ten to a hundred hours with lots of content. This is about making those infinite.</p>
+                    </section>
+
+                    <section id="why">
+                    <h2 id="why-it-matters">Why it matters<a class="anchor" href="#why-it-matters" aria-label="Link to this section: Why it matters">#</a></h2>
+
+                    <p>If you're new to games, or the fun comes from things around the game (friends, events), a finite structure probably won't bother you. If the game exists to deliver one story or one curated ride, it won't bother you much either, especially if it's short.</p>
+
+                    <p>But a lot of players reach a point where it bothers them a great deal:</p>
+
+                    <ul>
+                    <li>They've seen plenty of inspiring stories, and now they want to go out and do cool things themselves, in their own style, instead of being a spectator again.</li>
+                    <li>They want depth: to commit to one game and truly master it, instead of relearning a new set of rules every time and flushing all their skill and muscle memory down the toilet when each game ends.</li>
+                    <li>They loved a game's mechanics, systems and content, but its finite structure cut it off and reset everything just as they'd warmed up.</li>
+                    <li>They wanted to see a game keep getting updates and content, but its story and structure made it impossible to continue past the ending.</li>
+                    </ul>
+
+                    <p>Those are real needs going unmet: mastery, meaning, freedom, continuity. An infinite metagame, combined with content organized to multiply, meets them.</p>
+
+                    <p>Please note that an infinite metagame only makes sense when the enjoyment of the game comes directly from its mechanics: driving, fighting, building, solving, exploring, experimenting, relaxing, fooling around. If people are mainly there to hear a story or learn something specific, a finite, handmade structure serves that purpose better. As always, the purpose decides.</p>
+                    </section>
+
+                    <section id="finite-fails">
+                    <h2 id="why-finite-structures-fail">Why the usual structures fail<a class="anchor" href="#why-finite-structures-fail" aria-label="Link to this section: Why the usual structures fail">#</a></h2>
+
+                    <p>Most traditional game structures can be summed up as "the longer you play, the harder it gets, until you give up". Difficulty keeps rising, the pace gets more frantic, and eventually you can't keep up, physically or mentally. You're doomed to lose by design. That isn't fun, and it isn't humane. My aim when I play any game is to master it so I can keep succeeding, even with a few mistakes and setbacks along the way. Winning should be normal, not something the game is built to deny me.</p>
+
+                    <h3 id="zero-to-hero">The zero-to-hero scam<a class="anchor" href="#zero-to-hero" aria-label="Link to this section: The zero-to-hero scam">#</a></h3>
+
+                    <p>The most common progression structure goes like this:</p>
+
+                    <ul>
+                    <li><strong>Early game:</strong> you start weak, poor and limited, so most of the content is out of reach. The game is hardest exactly when the player is still learning it. Returning experienced players can't skip it without cheating.</li>
+                    <li><strong>Mid game:</strong> a slog where your attention goes to the progression system instead of the present moment. Accumulate power, wealth and access.</li>
+                    <li><strong>Late game:</strong> the early content is now useless clutter in your inventory, menus and shops. You're at your strongest, so nothing offers any resistance. Even the good mechanics no longer have a meaningful context, because the story has reached its dead end. The game is spent.</li>
+                    </ul>
+
+                    <p>I call it a scam because the player is led around a hamster wheel hoarding power, wealth and skill, only to find there's no place or reason left to use them. A carrot on a stick, always just out of reach, that turns out to be cardboard when you finally get it.</p>
+
+                    <h3 id="scaling">Scaling opponents and scaling zones<a class="anchor" href="#scaling" aria-label="Link to this section: Scaling opponents and scaling zones">#</a></h3>
+
+                    <p>Some games scale the enemies with the player. That brings back the first problem: the enemies grow until dealing with them is exhausting, and you give up. It also creates a sense of reality dissonance. The universe seems to revolve around you, adjusting everything to match your strength whether or not it makes sense. If you keep beating your enemies, shouldn't they get weaker, poorer and fewer, with setbacks in their supplies and organization? And with every enemy scaled up, the easy encounters that give the player a breather disappear. No calm moments, only an endless ramp.</p>
+
+                    <p>Scaled zones are the open-world version: some areas easy, others progressively harder. You're technically free to go anywhere, but the harder zones are pointless until you meet level requirements. It's a linear game wearing an open-world mask. Zones become isolated bubbles that never change and never affect each other, and earlier areas become pointless once you "graduate" from them. The real world doesn't work that way. Your hometown doesn't freeze in place once you've grown up.</p>
+
+                    <h3 id="roguelites">Roguelites<a class="anchor" href="#roguelites" aria-label="Link to this section: Roguelites">#</a></h3>
+
+                    <p>Roguelites combine scaling with zero-to-hero, and add a reset at the climax. They're often tuned so you're more likely to fail than win regardless of skill. Sometimes each run unlocks marginal upgrades that make you more fairly matched against the opponents, which really means the player was deliberately made weak, so they have to grind through author-induced poverty before the game becomes fair. No game should waste a person's time on purpose.</p>
+
+                    <p>And every run follows the same shape: calm and easy at the start, ramping up, ending in an intense final battle. Why not start in the middle and have a calm before the storm? Or start with a blast? Or have a gentle run sometimes, just to enjoy the mechanics without the ramp?</p>
+
+                    <h3 id="survival-modes">"Infinite survival" modes<a class="anchor" href="#survival-modes" aria-label="Link to this section: &quot;Infinite survival&quot; modes">#</a></h3>
+
+                    <p>Endless survival modes, where the player is guaranteed to eventually die with no way to win or change their fate, look infinite but aren't. They're a ramp with no top. They feel arbitrary, futile and meaningless. A true infinite game is sectioned into sessions you can complete, and continued from where you left off, with something persistent showing that your actions mattered.</p>
+
+                    <h3 id="the-root">The root of all of these<a class="anchor" href="#the-root" aria-label="Link to this section: The root of all of these">#</a></h3>
+
+                    <p>All of these structures fail for the same reason: they work against nature instead of being inspired by it. The moment a metagame relies on arbitrary rules, it violates players' needs for freedom, believability (common sense, not accurate realism), meaning and clarity (consistent rules, with nothing magically applying to some things and not others). That breaks immersion and flow, and it kills motivation.</p>
+
+                    <p>Worst of all, none of them can be made infinite. They're linear by nature, flowing in one direction until they reach a point where they can't continue: the player becomes permanently overpowered, the opponents do, or both get stuck in an endless arms race.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="two-goals">The winning combination: an infinite goal and a finite goal<a class="anchor" href="#two-goals" aria-label="Link to this section: The winning combination: an infinite goal and a finite goal">#</a></h2>
+
+                    <p>The usual objection to infinite games is fair: without a story, endless play feels aimless. Scripted narrative does give meaning, structure and progression. Take it away and the game can feel hollow. I agree.</p>
+
+                    <p>You can watch it happen in creative sandbox games that have no goal at all. Once players have built everything they can think of, many turn to destruction: blowing up their own creations, flooding their towns with lava, throwing their character off cliffs in ever more elaborate ways. That's not players being weird. It's the need for meaning, unmet, looking for any strategy left in reach, and destruction is the last kind of change the sandbox still offers. It's a clear sign the game ran out of reasons, not out of content.</p>
+
+                    <p>But scripted narrative is handmade, so it's always finite. Writing it is slow, exhausting work. It yields one-sided content with little room to break out beyond what the author wrote. Every branch has to be written by hand, which quickly becomes a workload no human can sustain.</p>
+
+                    <p>The answer is two layers.</p>
+
+                    <h3 id="overarching">The infinite overarching goal<a class="anchor" href="#overarching" aria-label="Link to this section: The infinite overarching goal">#</a></h3>
+
+                    <p>The overarching goal gives the player context and an ongoing narrative: their role or mission, their profession, who they are, why they're doing what they do, and what the world is like and how they affect it. As a goal, it's never directly reached. It's always ongoing. It gives the player a general direction.</p>
+
+                    <p>Some examples:</p>
+                    <ul>
+                    <li>You run a postal service, sorting and delivering mail for all kinds of quirky individuals and seeing their reactions.</li>
+                    <li>You're a space explorer, charting the cosmos, recovering artifacts and samples, helping scientists back home advance your civilization.</li>
+                    <li>You manage a city's sewer maintenance team, clearing blockages and extracting things that don't belong there.</li>
+                    <li>You fix broken machines and help people regain lost abilities.</li>
+                    <li>You're a roaming skateboarder, painting the city to lift the citizens' mood.</li>
+                    <li>You run a demolition company that clears expired buildings while putting on a show.</li>
+                    <li>You operate an interstellar mining company, helping your civilization prosper sustainably.</li>
+                    </ul>
+
+                    <p>Notice what they have in common. In each one, the player <strong>performs a service for someone</strong> and <strong>creates a benefit for someone</strong>. That's no accident. Working as a professional or a company is an infinite task: as long as there are people, there will be clients to serve. You might retire or move, but someone carries on in your footsteps. As a narrative frame for an infinite game, it fits perfectly, it feels natural, and it's general enough to leave a lot of room for whatever happens.</p>
+
+                    <p>Best of all, it connects with one of the most powerful and satisfying feelings in the world: seeing your actions make someone else happy. (That's the need to give from <a href="c12-game-or-interactive-tool.html">Chapter 12</a>, inside the game.) So the "customer reaction" has to be a real feature, not an afterthought. Feedback from the people you serve, whatever shape they take, is absolutely vital.</p>
+
+                    <h3 id="local">The finite local goal<a class="anchor" href="#local" aria-label="Link to this section: The finite local goal">#</a></h3>
+
+                    <p>The local goal is a clear task with a definite start, progress and end. It's always specific and always possible to finish completely. The overarching goal works as a factory for local goals: bite-sized sessions with a clear structure and a clear ending.</p>
+
+                    <p>Local goals can be nested:</p>
+                    <ul>
+                    <li><strong>Campaign:</strong> a major multi-stage task spurred by the overarching goal.</li>
+                    <li><strong>Quest:</strong> a multi-step task within the campaign.</li>
+                    <li><strong>Objective:</strong> a single-step action within a quest.</li>
+                    </ul>
+
+                    <p>For the postal service:</p>
+                    <ul>
+                    <li><strong>Campaign:</strong> a major holiday is coming, and the office is flooded with packages and postcards. Get them all sorted and delivered!</li>
+                    <li><strong>Quest:</strong> a sender arrives in a trenchcoat and sunglasses. The fork they want to send seems to be made of jelly. Package it so it arrives unharmed!</li>
+                    <li><strong>Objectives:</strong> ask who it's for. Investigate the jelly's properties. Wrap it in the right material without leaks. Move it to the right chute. Load the truck carefully. Drive and deliver.</li>
+                    </ul>
+
+                    <p>In the end, it looks and feels like a typical singleplayer campaign, except the campaigns, quests and objectives are all generated. A campaign might last ten hours or ten minutes, and a quest is a fraction of that. A player with an evening free sits down, plays a quest or a campaign with a clear start, progress and finish, and stops satisfied. Next week, a new campaign is waiting. The narrative context never expires, never locks them out, and never forces a reset.</p>
+                    </section>
+
+                    <section id="new-game-plus">
+                    <h2 id="new-game-plus-as-a-bridge">New Game+ as a bridge<a class="anchor" href="#new-game-plus-as-a-bridge" aria-label="Link to this section: New Game+ as a bridge">#</a></h2>
+
+                    <p>What about games that already have a scripted story? They can still become infinite, through New Game+.</p>
+
+                    <ul>
+                    <li>In the regular <strong>New Game</strong>, a first-time player goes through a curated version of the campaign, with restrictions on what they meet and how, and content held back for story reasons. Think of it as a thinly veiled tutorial for the real game.</li>
+                    <li>In <strong>New Game+</strong>, those restrictions are lifted. The campaign can be shuffled and remixed, the story is retold but no longer enforced, parts of it are skippable, and the focus shifts to the gameplay. It can even twist the story to allow situations the original never could.</li>
+                    </ul>
+
+                    <p>Even inside the story's confines, a lot is possible: randomize enemy numbers, change the supplies, replace some sections with gameplay-centered versions. After the first run you'd otherwise know who you'll fight, where and with what, which makes replays too predictable to be interesting.</p>
+
+                    <p>There's an honest limit here. A story-driven game still loops its story, and the player can feel stuck in a time loop, which strains their need for meaning even if the gameplay is great. One way around it is a playful layer on top that acknowledges the repeats, as a running joke between the game and the player, a sort of multiverse blooper reel where both of you laugh as the story gets more and more twisted. To truly get past the limit, though, the game has to be driven by the player's own journey rather than the author's script. That's the two-goal structure above.</p>
+                    </section>
+
+                    <section id="astroneer">
+                    <h2 id="worked-example-astroneer">Worked example: making a finished game infinite<a class="anchor" href="#worked-example-astroneer" aria-label="Link to this section: Worked example: making a finished game infinite">#</a></h2>
+
+                    <p>To show these ideas on a real game, here's a proposal I wrote for <cite>Astroneer</cite>, a space exploration and base-building game. I wrote it for the developers, tailored to the game as it was at version 1.0 (before its later "Awakening" update), as an add-on that would extend the game past its ending rather than overhaul it.</p>
+
+                    <h3 id="astroneer-problem">The problem<a class="anchor" href="#astroneer-problem" aria-label="Link to this section: The problem">#</a></h3>
+
+                    <p>In <cite>Astroneer</cite>, you start on one planet with nothing, unlock technology, gather resources and gradually conquer seven planets and moons, reaching each core and completing its quests. You build bases, set up logistics between planets and automate production. By the endgame, players have megabases that can make anything at the press of a button.</p>
+
+                    <p>The main source of meaning was the quests, and they were finite. To get quests again, you had to reset everything. Without them, there was no official outlet for everything the player had built. I could print hundreds of rovers and hoard tons of resources, but with no real reason to use them, what's the point?</p>
+
+                    <p>The worlds also couldn't regenerate. Soil removed was gone forever, and so were the resources collected. With continued play, every planet would end up stripped bare: paper-thin roads and a megabase floating on a scrap of land, with nothing left to do. Many players saw this coming and lost interest. Some made their last meaningful act building the biggest self-destruct explosion they could. That's a sad place for a game to funnel people toward, and it doesn't have to.</p>
+
+                    <h3 id="astroneer-proposal">The proposal: the 8th planet<a class="anchor" href="#astroneer-proposal" aria-label="Link to this section: The proposal: the 8th planet">#</a></h3>
+
+                    <p>At the end of the game, the player activates a gateway hub above the sun. Originally a portal appears, the character walks through, and the credits roll. In the proposal, the hub is instead a celestial teleporter that temporarily pulls a new, procedurally generated planet into the solar system from somewhere else in the universe. Everything until then was the warm-up.</p>
+
+                    <ul>
+                    <li><strong>The overarching goal:</strong> keep exploring the universe from your own backyard, one visiting planet at a time. (The lore explains it: that's what the ancient builders of the solar system used the hub for, until an accident wiped them out.)</li>
+                    <li><strong>The local goals:</strong> each 8th planet comes with two to five generated missions that ask the player to bring their resources, vehicles and factories from the original seven planets to solve problems there. Move something from A to B. Blow something up. Dig something out. Feed something power. Investigate a signal. Clean up a hazard. Help someone set up an outpost. Simple, job-like tasks, using the game's most fun mechanics.</li>
+                    <li><strong>The regular world and the wilderness:</strong> the seven original planets stay persistent, with everything the player built. The 8th planet is disposable. When its missions are done, the player can "retire" it, and it's deleted to make room for the next.</li>
+                    <li><strong>Renewal:</strong> rare "reset bombs" found in older planets' cores let the player regenerate one exhausted section of an original planet, restoring soil and resources with a fresh random layout. That solves the stripped-bare problem, and quietly keeps the save file from growing forever.</li>
+                    <li><strong>Feedback and a breather:</strong> after each campaign, an intermission screen shows the campaign's stats, and offers an exit point to remind the player that the real world exists too, before they save and quit or continue to the next planet.</li>
+                    </ul>
+
+                    <p>The feasibility was the point. Almost all the content already existed. The generator could reuse, recolor and reshuffle the existing flora, props and terrain, and only the new cores and reset devices would need new content. The planet generator itself is just a heuristics tree like the one in <a href="c23-content-that-multiplies.html">Chapter 23</a>: big or small? Hot or cold (which decides its orbit and how well solar panels work)? Dense or hollow (gravity)? Atmosphere or not (wind power)? Teeming with life or barren? Rich or poor in resources (and if poor, more wrecks and anomalies to compensate)? Exotic or mundane? Hostile or tame? Those answers narrow the next layer of decisions, and a third layer picks missions that suit the planet, so a long haul across rough terrain gets a shorter distance.</p>
+
+                    <p>And because the content would be multiplicative, every future update would multiply. One new rock, plant or flower tagged for the generator adds thousands of possible planet combinations. New mission templates multiply the missions. New reward types make every campaign more worth doing.</p>
+
+                    <p>That's the whole method in one case: keep what the game does well (here, the satisfying payoff of building infrastructure and seeing it work), find what makes the structure finite (finite quests, worlds that can't regenerate), and replace it with an infinite overarching goal, generated local goals, a persistent home and a disposable wilderness. No overhaul of the core game required.</p></section>
+
+                    <section id="not-hard">
+                    <h2 id="it-isnt-hard">It isn't hard, it's organization<a class="anchor" href="#it-isnt-hard" aria-label="Link to this section: It isn&#x27;t hard, it&#x27;s organization">#</a></h2>
+
+                    <p>Infinite games aren't harder to build than finite ones. A campaign generator is a branching tree of if/else statements and a random function, which is the most basic kind of code there is, easier than the game mechanics themselves. It's purely a matter of organizing the game and its content in a smarter way, and then using the full potential of that structure.</p>
+
+                    <p>And the benefits are large. The game can stay alive far longer, even forever. It can earn more over its lifetime. It becomes fertile ground for a dedicated community that plays for years, and that comes back after months away to find a fresh experience waiting, with all their progress intact.</p>
+
+                    <p>The next chapter is about how to pace and balance a game that never ends, and the one after it is about the world it takes place in.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c23-content-that-multiplies.html"><span class="label">← Previous · Part IV · Chapter 23</span><span class="pager-title">Content That Multiplies</span></a>
+                    <a class="pager-link next" href="c25-pacing-difficulty-and-progression.html"><span class="label">Next → · Part IV · Chapter 25</span><span class="pager-title">Pacing, Difficulty and Progression Without the Scam</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

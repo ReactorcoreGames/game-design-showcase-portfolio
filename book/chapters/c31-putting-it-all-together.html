@@ -1,0 +1,213 @@
+<article class="chapter" id="c31-putting-it-all-together">
+<header>
+<p class="kicker">Part V · Chapter 32</p>
+<h1>Putting It All Together</h1>
+</header>
+
+<section id="intro">
+<p>Everything in this book, used together, on three projects. The original plan for this chapter named three examples: a project derived from a small game I liked, a project to spread Nonviolent Communication, and the ultimate dream game. Each one shows a different side of the method.</p>
+
+<ul>
+<li><strong>The derivative</strong> shows how a small, finite game becomes a foundation for something infinite.</li>
+<li><strong>The NVC project</strong> shows the fork between a game and an interactive tool, and how to do the tool honestly.</li>
+<li><strong>The dream game</strong> shows the whole technical side working together on the biggest design, including the wall it hit and how the purpose got it past.</li>
+</ul>
+
+<p>Each walkthrough follows the same path: inspiration, feelings and needs, purpose, the medium, inventory, foundations, content, structure, and the first build. Notice how each step answers questions the previous one raised, and how the purpose settles every decision.</p>
+</section>
+
+<section id="walkthrough-1">
+<h2 id="walkthrough-1-a-derivative">Walkthrough 1: from a small ragdoll game to a universe</h2>
+
+<h3 id="w1-inspiration">The inspiration</h3>
+
+<p><cite>Floppy Heroes</cite> is a simple gladiator-like game. Two or more ragdoll characters with armor and weapons fly freely through the air, but can't control their rotation. They try to collide cleverly, dealing damage while protecting their weak spots (exposed skin, the head) through careful positioning and timing of their limbs, armor and swords. There's a basic versus mode, and a ten-level gauntlet against randomized opponents with increasingly dangerous gear. You can unlock and customize your character. That's it. No further metagame.</p>
+
+<p>I found it really satisfying, despite how simple it is. And I also felt it was too simple and restrictive to enjoy beyond a few sessions.</p>
+
+<h3 id="w1-needs">Feelings and needs</h3>
+
+<p>Two sets of feelings, as in the robot game of <a href="c02-three-projects-two-designers.html">Chapter 2</a>. While playing: delight, amusement, absorption, the tactile satisfaction of physics doing something unexpected. After a few sessions: restless, disappointed, wanting more. Translated: the game met needs for play, physical mastery, surprise and humor, and then stopped meeting the need for variety and meaning, because its structure ran out.</p>
+
+<p>Notice what that tells me. The mechanic isn't the problem; it's wonderful. The structure is the problem. That's the specialist's approach to "something old": keep what meets the needs, find where the old design stops meeting them.</p>
+
+<h3 id="w1-first-idea">The first idea, and why it wasn't enough</h3>
+
+<p>My first thought was the beginner's: make my own version with free rotation, guns and futuristic gear, and more interesting levels with hazards and props. Bigger, more features. But checked against the needs, that only adds content to a finite structure. It would meet the need for variety a little longer, and then run out the same way. Additive content on a dead end.</p>
+
+<h3 id="w1-purpose">Finding the real purpose</h3>
+
+<p>Then I looked at some of my older design documents, especially one for a universe-simulation "super game", and saw the connection. The ragdoll room battler is a perfect moment-to-moment core for something much bigger. The purpose became: the tactile joy of free-flying physics characters, in a world that never runs out of new situations to use it in.</p>
+
+<p>That purpose is a mechanics-driven one, so the medium is clearly a game, and the structure has to be infinite (<a href="c24-infinite-metagames.html">Chapter 24</a>).</p>
+
+<h3 id="w1-design">The design that follows</h3>
+
+<p>The result is a design I call RoomSpace. Every step comes from the purpose:</p>
+
+<ul>
+<li><strong>The world is made of rooms,</strong> like 2D terrariums or aquariums seen from the side, each with its own local climate: weather, gravity, flora and fauna, liquids, gases, materials. The original game's arena became the building block of a universe. A room can be a spot on a planet's surface, underground, underwater, in the sky or in deep space.</li>
+<li><strong>Rooms connect</strong> through doors, and influence each other: what happens in one affects its neighbors. Thousands of rooms make planets, and planets make a universe.</li>
+<li><strong>The characters keep the core feel:</strong> ragdoll humans who can push against gravity and move anywhere in a room, like fish in an aquarium. Any character can interact with any object, item or element, which makes all items multiplicative (<a href="c23-content-that-multiplies.html">Chapter 23</a>).</li>
+<li><strong>Biomes come from forces,</strong> not templates (<a href="c22-build-the-forces-not-the-desert.html">Chapter 22</a>). The generator adds materials and conditions, and the climate and biome emerge. Players can change a room's climate through their actions, turning a desert into a forest and back.</li>
+<li><strong>The universe follows equivalent exchange:</strong> matter is never created or destroyed, only transformed. That's the "natural laws" link of the dependency chain (<a href="c21-foundations-before-content.html">Chapter 21</a>), and it gives balance for free.</li>
+<li><strong>Hardware is a law of nature.</strong> Only the room the player is in is fully simulated. Every other room is a semi-dormant file, updated when needed by a background "universe events" process, which can trigger events when the player arrives. That keeps the universe huge but always within the computer's limits (<a href="c26-worlds-that-last.html">Chapter 26</a>).</li>
+<li><strong>The metagame is a platform.</strong> The same universe can host conquest, adventure, terraforming, investigation, or all of them at once, through an infinite overarching goal and generated campaigns. Like waking up on a free Sunday and deciding what kind of day it'll be.</li>
+</ul>
+
+<h3 id="w1-build">The first build</h3>
+
+<p>Here's where scope maximization pays off (<a href="c28-the-design-process.html">Chapter 28</a>). The full design is huge, but the first build is tiny: one ragdoll character, one bare room, a few basic weapons and armor pieces, and a game manager that sets up the room and resets it. That's basically the original game with free rotation, which is exactly the first idea I had. The difference is that now it's built on a framework designed to grow: each system can later be swapped for a more advanced one that was planned from the start, until the room battler has grown into the full universe, without ever needing a rewrite from scratch.</p>
+
+<p>The simple idea and the huge idea turned out to be the same project at two points in time. The design work is what connects them.</p>
+
+<aside class="note">
+<p>The same ragdoll base also led to several smaller designs in my catalogue, each going a different direction because each had a different purpose: one about mecha combat, one about a heavy metal mosh pit, one a strange romance. Same mechanic, different needs, completely different games. That's purpose at work.</p>
+</aside>
+</section>
+
+<section id="walkthrough-2">
+<h2 id="walkthrough-2-an-nvc-project">Walkthrough 2: a project to spread NVC</h2>
+
+<h3 id="w2-inspiration">The inspiration</h3>
+
+<p>Discovering Nonviolent Communication was one of the most important things that ever happened to me. It explained so much about people, conflict and myself that I'd been confused by my whole life. And I felt two things at once: huge relief and hope, and frustration and sadness that nobody had taught me this sooner, and that most people still haven't heard of it. So the urge comes: make something that spreads it.</p>
+
+<h3 id="w2-needs">Feelings and needs</h3>
+
+<p>Relief and hope: met needs for understanding, peace and connection. Frustration and sadness: unmet needs for contribution (I want others to have this too), for a more peaceful world, and for being understood myself. So the purpose of the project is mostly the need to give (<a href="c12-game-or-interactive-tool.html">Chapter 12</a>): to contribute to other people's lives by passing on something that made mine more wonderful.</p>
+
+<h3 id="w2-fork">The fork: game or tool?</h3>
+
+<p>This is the most important decision in this project, and the most tempting one to get wrong. The obvious beginner's idea is "a fun game that teaches NVC": cute characters, points for using the right words, levels that unlock as you learn. That's gamification, and it would fail for every reason in Chapter 12. The intention is a real-life change (people actually communicating differently), so if I disguise it as a game, players will eventually notice they're being taught, feel manipulated, and associate NVC itself with being manipulated. That would be a disaster for a project whose whole point is honesty and connection.</p>
+
+<p>So the honest choice is an <strong>interactive tool</strong>, and it says so up front: "This will help you understand people and be understood. Here's how. Try it."</p>
+
+<h3 id="w2-design">Designing the tool</h3>
+
+<p>Following the four steps for an awareness tool from Chapter 12:</p>
+
+<ol>
+<li><strong>Re-create the inspiration.</strong> The moment that moved me was seeing a conflict dissolve when the needs underneath it were finally heard. So the tool opens with that experience: a short, real-feeling exchange where two people are stuck in judgements and blame, and then the same exchange where one of them hears the need behind the other's words, and everything changes. The user doesn't read about it. They watch it happen, and feel the difference.</li>
+<li><strong>Show the need behind it.</strong> Then the tool shows what was going on underneath: the feelings and needs on both sides, using the feelings and needs lists. The point is the realization that the "enemy" needed the same things as everyone else.</li>
+<li><strong>Offer a concrete way to use it.</strong> Practice, on the user's own material. They write down something someone said to them, or something they said, and the tool walks them through translating it: what was observed, what was felt, what was needed, what could be requested. The feelings and needs lists are always at hand, the way you'd print them out for a partner (<a href="c02-three-projects-two-designers.html">Chapter 2</a>). Practice scenarios come from situations people actually face, including some from game development: an angry review, a teammate who missed a deadline, a partner who wants a feature you think is wrong.</li>
+<li><strong>Show the effect.</strong> The most important step. The tool invites the user to try one translation in real life, and come back and note what happened. Their own growing record of real conversations that went better is the only progress bar the tool has.</li>
+</ol>
+
+<p>What it deliberately doesn't have: points, grades, streaks, achievements, praise, or any nagging to come back. Those would contradict the very thing it teaches. People who have the need will come and come back because it keeps meeting it. That's power with people, applied to the tool itself.</p>
+
+<h3 id="w2-side-effect">And if I want to make a game?</h3>
+
+<p>There's a second, separate option, and it's important to keep it separate. If I ever make a <em>game</em> where NVC appears, it has to be a real game first, with its own purpose. Say a postal-service game with an infinite overarching goal (<a href="c24-infinite-metagames.html">Chapter 24</a>), where some quests involve neighbors in a dispute. If the game's world simply works in such a way that hearing what each side needs resolves the dispute better than taking sides, players will get practice at it as a side effect, just because it's the most effective way to play. No lessons, no lectures. If it ever started to feel like a lesson, I'd take it out, because the game comes first.</p>
+
+<h3 id="w2-beyond">Beyond the tool</h3>
+
+<p>Sharing it follows from the purpose: it should be free, because the purpose is to give, and money in the way would block exactly the people who need it most. Support for its creator can come from those who want to say thank you (<a href="c30-beyond-the-game.html">Chapter 30</a>). And the presentation should feel like what it is: calm, warm and honest, not flashy. Its store page should read like an invitation, because that's what it is.</p>
+</section>
+
+<section id="walkthrough-3">
+<h2 id="walkthrough-3-the-dream-game">Walkthrough 3: the ultimate dream game</h2>
+
+<h3 id="w3-inspiration">The inspiration</h3>
+
+<p>You'll read in <a href="c32-growing-as-a-designer.html">Growing as a Designer</a> how much of my life went into <cite>Cortex Command</cite>: clumsy physics soldiers delivered by rocket, every bullet a real object, terrain you dig through. Over the years more games piled on top of it: the grid tactics of <cite>Advance Wars</cite>, the fort under fire of <cite>Forts</cite>, the ship systems of <cite>FTL</cite>, the squad preparation of <cite>XCOM</cite>. And under all of them, an old fantasy: the mobile fortress, a base that carries your squads, factories and guns right into the fight.</p>
+
+<p>The dream is all of it in one game, set in my own AAL universe. Its working name is AAL Bunkerships, after those mobile fortresses. On my site it's called <cite>Tactical Arsenal Command</cite>.</p>
+
+<h3 id="w3-needs">Feelings and needs</h3>
+
+<p>While playing those games: absorbed, playful, clever when a plan worked, and delighted when the physics did something nobody planned, like a fallen soldier's rifle tumbling down a shaft and going off at the bottom. After a match: tired, and strangely empty. That bothered me enough to write out why. I found two causes.</p>
+
+<ul>
+<li><strong>Friction.</strong> Strategy matches demand constant vigilance, and the best part is the sigh of relief at the end. Friction grows a need for efficiency, session after session, so I'd rush and brute-force just to get away from it sooner.</li>
+<li><strong>The reset.</strong> All the care I put into a base and its logistics was thrown away when the match ended, and the next map started from zero. If the structure doesn't value finesse, why bother with it next time?</li>
+</ul>
+
+<p>Translated: those games met needs for play, creativity, competence, surprise and humor, and left needs for meaning (work that counts), continuity, ease and autonomy unmet. The purpose: <strong>the playful, inventive joy of tactical physics combat, in a campaign where everything you build and every battle you fight counts, without the friction.</strong></p>
+
+<h3 id="w3-medium">The medium</h3>
+
+<p>Commanding squads, mobile fortresses and starships is far too dangerous and too expensive for real life (<a href="c10-fun-is-the-fulfillment-of-needs.html">Chapter 10</a>), and the joy is in the mechanics, so it's a game. Because the missing needs are meaning and continuity, its structure has to be infinite (<a href="c24-infinite-metagames.html">Chapter 24</a>).</p>
+
+<p>Notice what the purpose doesn't ask for: a simulated universe, which RoomSpace needed. This purpose is about battles and the fleet you fight them with, so the world can be a galaxy of regions and missions. The purpose decides the scale, too.</p>
+
+<h3 id="w3-inventory">Inventory</h3>
+
+<p>Physics combat is expensive. Dozens of characters, projectiles, explosions and debris have to exist at once, and the game must never lag. So the technology shapes the design from the start (<a href="c20-taking-inventory.html">Chapter 20</a>):</p>
+
+<ul>
+<li><strong>Cheap bodies.</strong> Each character is one sprite moved by physics forces, not a ragdoll with limbs. Projectiles are fairly slow and effects are few, because many will fire at once. Terrain is tiles that can be partly destroyed, down to an indestructible bedrock.</li>
+<li><strong>A limit with a reason.</strong> How many ships and squads you can bring is set by your Command Core, the machine that controls them. It has a fixed processing capacity, like a party of six creatures in <cite>Pokémon</cite>. The hardware limit becomes a law of the world, not an arbitrary rule (<a href="c22-build-the-forces-not-the-desert.html">Chapter 22</a>).</li>
+</ul>
+
+<p>The human side: no level ever has a bottomless pit or an instant death. In the sky, in orbit or at sea, everything carries an emergency float that brings it back up, so even a gun thrown overboard floats back within reach. And the resources: one designer, and a design this big. That decides the first build.</p>
+
+<h3 id="w3-foundations">Foundations</h3>
+
+<p>Before any gun or ship, the standards (<a href="c21-foundations-before-content.html">Chapter 21</a>): one weapon system that can represent any firearm, melee weapon, shield, tool or grenade; one character system for humans and non-humans alike; standardized elements (fire, smoke, electricity, acid, water, oil, plasma), status effects, and resources that come in renewable and nonrenewable forms.</p>
+
+<p>Bunkerships follow the same rules as everything else. Every system on board is a physical module you can see and shoot: the reactor, airlocks, hangars, heat sinks, the maintenance network. If it exists, it works, and that's its capacity. That gives balance by real-life logic (<a href="c25-pacing-difficulty-and-progression.html">Chapter 25</a>): a bigger ship has more to maintain and more weak points, like the exhaust port on a certain moon-sized battle station. The difficulty doesn't rise or fall with wealth; it changes flavor.</p>
+
+<h3 id="w3-content">Content</h3>
+
+<p>Instead of fixed factions, the game has brands. An automated galactic arms supplier with no favorites sells several, each a complete military kit with its own style. Before a campaign you choose your licenses: one brand gets the best discount, and every extra one costs more. Because everything is built on the same standards, every brand's gear works with every character and every other brand, so each new item multiplies instead of adding (<a href="c23-content-that-multiplies.html">Chapter 23</a>).</p>
+
+<p>Missions are generated from templates (rescue, recon, delivery, infiltration, sabotage, chase and escape, bunkership against bunkership) and chained across a turn-based grid map of the region. Opponents come from AI archetypes based on the seven deadly sins and virtues, which shape their designs and tactics. Modders can add to all of it.</p>
+
+<h3 id="w3-structure">Structure, and the wall</h3>
+
+<p>The first structure I had was <cite>Cortex Command</cite>'s own: factions fighting over resources on fair, balanced maps, red against blue. Checked against the purpose, it was exactly the wall from my notes. Every match funnels into a competition of elimination, and then resets. Finite, full of friction, and none of it counts.</p>
+
+<p>The way through was the service frame from <a href="c24-infinite-metagames.html">Chapter 24</a>. The player is an agent of a large administration agency, clearing threats from a galaxy. That's the infinite overarching goal. When a galaxy is secure, a small pioneer team moves on to the next one, which has quirks of its own. The local goals are missions on a bounty board: accept them, save them for later or dismiss them. Nothing is forced.</p>
+
+<ul>
+<li><strong>Progress never goes backwards.</strong> A victory advances the galaxy; a failure only delays it, and someone else in the agency picks up the slack. You can't lose the game or ruin it.</li>
+<li><strong>The fleet persists.</strong> Ships and squads are built from your blueprints and wait in a huge hangar, where you name them and keep a journal of their operations. They can be lost. You can't.</li>
+<li><strong>The friction moves out.</strong> The slow economy lives in separate, peaceful regions, where you first mine and then restore the land to life, shipping supplies to the front. Combat regions are about action.</li>
+<li><strong>Abundance from the start.</strong> You begin with more than you need, and the hangar holds default ships for at least ten failed campaigns in a row. What you learn isn't scraping by; it's that you can't brute-force every problem.</li>
+<li><strong>A memento.</strong> Each finished galaxy produces a unique generated artwork, a badge of that job that feels personal (<a href="c26-worlds-that-last.html">Chapter 26</a>).</li>
+</ul>
+
+<p>The factions stayed, but not as red against blue. Rival factions are run by AI commanders whose styles come from the seven deadly sins and their opposite virtues, and each style has its strengths and a weakness to find. A proud commander builds symmetrical, perfect bases with elite units, overspends on looks, and does everything by the book, so you can outsmart their outsmarting: set a trap, and another one next to it. A greedy commander decks out the core of their base to insane levels, but sends attack squads out half-equipped, throws away cannon fodder, leaves the outer defenses thin, and gets distracted by small prizes. You meet a real variety of opponents instead of one AI with a difficulty slider, and when you lose, they regroup and reshuffle, so a second attempt is never a save-load repeat.</p>
+
+<p>Around the factions live the elements that belong to nobody: wildlife, bandits, rogue machines, independents, sometimes space monsters, turning up mid-battle as hazards or opportunities. Up to four factions can share a region, allied or betraying each other, each chasing its own objectives, trying not to be bothered by the others, or trying to survive someone hunting them. It's less a team fight and more an ecosystem, and much of the drama comes from what everyone else is doing.</p>
+
+<p>Basing the opponents on sins and virtues also settled a worry. In my notes I caught myself writing sneering villains, and saw the risk: players would see real people in them, and the game would rehearse contempt for those people for hours. Behaviors that anyone can fall into don't point at any real group, so the opponents stay fictional. <a href="c30a-handle-with-care.html">Handle With Care</a> explains why that matters.</p>
+
+<h3 id="w3-build">The first build</h3>
+
+<p>This one is different from walkthrough 1. The first build isn't one small version of the game but a series of small games, each a piece of the dream, each barebones but complete enough to release on its own:</p>
+
+<ul>
+<li>A "break the targets" run: one sluggish physics character, one gun, a randomized level, and confetti at the exit.</li>
+<li>A grid tactics game with three rock-paper-scissors units racing for the enemy core.</li>
+<li>A star map run of branching choices and limited resources.</li>
+<li>A loadout maker and a bunkership designer, both built around fulfilling clients' orders.</li>
+<li>Portrait, emblem and galaxy generators. The galaxy one later becomes the memento.</li>
+</ul>
+
+<p>Each one is a proving ground for one system and the standards under it (<a href="c28-the-design-process.html">Chapter 28</a>). Then they grow, and get combined into the full game, the way a game like <cite>Terraria</cite> grew from a solid foundation. It's the same principle as before, the smallest complete thing first, applied to a design too big for a single first step.</p>
+
+<p>And it doesn't have to be built alone. The same standards that make every brand compatible also make it possible for other creators to add brands of their own, and to be paid for them (<a href="c30-beyond-the-game.html">Chapter 30</a>).</p>
+</section>
+
+<section id="pattern">
+<h2 id="the-pattern">The pattern</h2>
+
+<p>Three very different projects: a physics toy, a communication tool and a galaxy-sized tactics game. The method was the same each time.</p>
+
+<ol>
+<li>Start from the inspiration, and find the feelings on both sides of it.</li>
+<li>Translate them into needs, and the needs into a purpose.</li>
+<li>Choose the medium the purpose calls for, and decide honestly: game or tool.</li>
+<li>Take inventory: the technology, the human, the resources.</li>
+<li>Build foundations and forces before content.</li>
+<li>Make content that multiplies, inside a structure that doesn't have to end, when the purpose calls for it.</li>
+<li>Maximize the scope on paper, and build the smallest complete version first.</li>
+<li>Carry the purpose out into everything around the game.</li>
+<li>At every single decision along the way: does this serve the purpose?</li>
+</ol>
+
+<p>That's the Holy Grail, in practice.</p>
+</section>
+</article>

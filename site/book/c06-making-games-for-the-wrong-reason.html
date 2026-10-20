@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Games for the Wrong Reason · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="This isn&#x27;t part of the common mistake itself, but it&#x27;s one of the biggest things that push people into it.">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c06-making-games-for-the-wrong-reason.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 6: Making Games for the Wrong Reason · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="This isn&#x27;t part of the common mistake itself, but it&#x27;s one of the biggest things that push people into it.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c06-making-games-for-the-wrong-reason.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 6: Making Games for the Wrong Reason · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="This isn&#x27;t part of the common mistake itself, but it&#x27;s one of the biggest things that push people into it.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 6: Making Games for the Wrong Reason",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c06-making-games-for-the-wrong-reason.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c05-popularity-is-a-side-effect.html">
+    <link rel="next" href="c07-the-holy-grail.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html" aria-current="page"><span class="n">6</span>Making Games for the Wrong Reason</a><ol class="toc-secs"><li><a href="#intrinsic-and-extrinsic">Intrinsic and extrinsic reasons</a></li><li><a href="#why-it-fails">Why it fails</a></li><li><a href="#six-effects">The six effects of an extrinsic goal</a></li><li><a href="#what-to-do-instead">What to do instead</a></li></ol></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>7 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c06-making-games-for-the-wrong-reason">
+                    <header>
+                    <p class="kicker">Part I · Chapter 6</p>
+                    <h1>Making Games for the Wrong Reason</h1>
+                    </header>
+
+                    <section id="extrinsic">
+                    <h2 id="intrinsic-and-extrinsic">Intrinsic and extrinsic reasons<a class="anchor" href="#intrinsic-and-extrinsic" aria-label="Link to this section: Intrinsic and extrinsic reasons">#</a></h2>
+
+                    <p>This isn't part of the common mistake itself, but it's one of the biggest things that push people into it.</p>
+
+                    <p>Everything so far was written for the well-intentioned developer whose primary goal is to make a good game for the sake of a good game. An <em>intrinsic</em> purpose.</p>
+
+                    <p>Some of you may be reading this with the intention of making games for an <em>extrinsic</em> reason: for money, to be heard, to be understood, to change the world, to raise awareness, to teach, to research, to find meaning, to get love, to be accepted, to experiment or for any other reason where the game itself isn't the goal, but a tool for getting that outside thing.</p>
+
+                    <p>If those extrinsic things are strictly a secondary or tertiary goal for you, you have nothing to worry about.</p>
+
+                    <p>But if any of them is your PRIMARY goal, the main reason you started and keep going with game development, there's a massive problem.</p>
+
+                    <p>An intrinsically good game and an extrinsic goal pull in opposite directions. And here's the irony: you need a good game to reach the extrinsic goal. So a strategy where the good game is only the SECONDARY goal is outright suicidal.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="why-it-fails">Why it fails<a class="anchor" href="#why-it-fails" aria-label="Link to this section: Why it fails">#</a></h2>
+
+                    <p>Psychologically, a human being can only truly focus on one thing at a time. On top of that, the desire to reach an extrinsic goal creates heightened anxiety, and that anxiety directly harms any attempt at making an intrinsically good game. You can't think about what makes a good game while you're preoccupied with how to get something unrelated. It isn't possible.</p>
+
+                    <p>Look at the mainstream games industry. Games made by studios and companies whose PRIMARY concern is revenue tend to be clones, copies, rehashes or derivatives of older products, with only minor, bias-driven changes. More often than not, a commercially successful game from a profit-driven company took a remarkable game that someone else originally made for its own sake, intrinsically, and used it as a copy-paste template, adding more impressive audiovisuals and bigger marketing with their superior resources. Trace back the history of most big companies and you'll see it for yourself. There's always an originally intrinsic game that got copied into a commercial success.</p>
+
+                    <p>Similarly, edutainment has struggled for a long time to succeed with "games for education", and gamification ventures have shown only short-term results. That's no surprise once you understand that gamification is an attempt to manipulate behavior, and that people eventually notice the manipulation. (<a href="c12-game-or-interactive-tool.html">Game or Interactive Tool</a> explains this properly.)</p>
+
+                    <p>Meanwhile, creators of every kind find themselves paralyzed, unable to come up with ideas, prototypes and concepts, while they're preoccupied with a primary extrinsic goal of any kind, not just money or education.</p>
+
+                    <p>It's both sad and a little amusing to watch, like a child trying to fit a square peg into a round hole, or a dog chasing its own tail. But I'd rather stop it than let it continue.</p>
+
+                    <p>The very same problem appears all over society, in families, schools, workplaces and organizations, in the form of rewards and punishments. Alfie Kohn's book <cite>Punished by Rewards</cite> explains in detail why extrinsic goals are poison for creating anything intrinsically good. He talks about education and families, but the principles apply to game design perfectly. I recommend reading his book or watching his lectures. While you do, read "rewards" as "extrinsic goals", "students" as "designers and developers", and "learning" as "a good game". It's frightening how accurately it fits. And this isn't something I'm making up: countless studies have been done on the effects of rewards on students, or in this case, extrinsic goals on designers.</p>
+                    </section>
+
+                    <section>
+                    <h2 id="six-effects">The six effects of an extrinsic goal<a class="anchor" href="#six-effects" aria-label="Link to this section: The six effects of an extrinsic goal">#</a></h2>
+
+                    <p>To summarize briefly, an extrinsic goal does at least these things:</p>
+
+                    <dl>
+                    <dt>Extrinsic goals are not a motivator.</dt>
+                    <dd>They don't motivate you to make a good game. They only motivate you to get the extrinsic goal itself.</dd>
+
+                    <dt>Extrinsic goals ignore reasons.</dt>
+                    <dd>Solving design problems requires being intrinsically interested in the game itself, so you can understand the core reasons behind things. Thinking about the extrinsic goal clouds that ability, suppresses it and steals focus away from it.</dd>
+
+                    <dt>Extrinsic goals discourage risk-taking.</dt>
+                    <dd>When the extrinsic goal is the priority, design decisions and the whole development process bend toward reaching it faster and more surely. That means shying away from experiments, from what's best for the game and from trying new things, in favor of certainty, safety and speed. The result is a lack of creativity, innovation and variety, which leads to stagnation, prevents growth, endangers long-term sustainability and wears out players with sameness.</dd>
+
+                    <dt>Extrinsic goals undermine interest.</dt>
+                    <dd>It's mentally hard to care about the game you're making (which you must, to make it good) when the extrinsic goal is constantly front and center as the top priority.</dd>
+
+                    <dt>Extrinsic goals are addictive.</dt>
+                    <dd>As a primary focus, they feed a loop of perpetual frustration: you feel miserable until you get the extrinsic thing, and then you feel miserable and empty after you get it. So you keep chasing more, like a bad drug, never properly fulfilled. Meanwhile, keeping up the motivation to make an actually good game, to create real value, gets harder and harder, which sabotages your long-term success and survival.</dd>
+
+                    <dt>Extrinsic goals create pressure.</dt>
+                    <dd>Since the extrinsic goal and an intrinsically good game pull in opposite directions, there's always uncertainty, because you're trying to make the final result be the path to that result. That creates pressure and anxiety, because you're attempting something that is literally impossible. Without knowing why, you'll have a nagging feeling that something is off and that nothing guarantees success. Unless you're blindly certain you can't fail, with no real basis for it.</dd>
+                    </dl>
+
+                    <p>In short, if your development is PRIMARILY driven by an extrinsic goal, I predict your chances of success are close to nonexistent. Basically, you're doomed to fail. And the damage spreads beyond the project: a product made primarily for an extrinsic goal disappoints both its users and its creator, damages the relationship between them, corrupts customer goodwill and trust, and harms the creator's reputation. It makes life less wonderful for you and for everyone around you.</p>
+                    </section>
+
+                    <section id="the-fix">
+                    <h2 id="what-to-do-instead">What to do instead<a class="anchor" href="#what-to-do-instead" aria-label="Link to this section: What to do instead">#</a></h2>
+
+                    <p>I'm not saying the solution is to ignore your desire for that extrinsic thing. Absolutely not. The solution isn't to "just let it go". Behind the extrinsic goal there's a precious need, a good reason. It just can't be reached directly. You can't achieve an extrinsic goal by going straight for it, because the extrinsic goal is the result, not the path to the result. Making it the primary goal is a failed strategy for meeting that precious need.</p>
+
+                    <p>So do this instead:</p>
+
+                    <ol>
+                    <li><strong>Acknowledge the need</strong> behind the extrinsic goal, and that it matters.</li>
+                    <li><strong>Acknowledge</strong> that getting it through a game project as the PRIMARY priority is impossible.</li>
+                    <li><strong>Stop going for it directly.</strong> Don't stomp it down, smother it or forget it. Just recognize that trying to get it while primarily thinking about it can't work.</li>
+                    <li><strong>Set it aside for a while.</strong> Put it out of your mind and seek to create something fun for its own sake. Get inspired, get excited, get interested in making something for its own worth.</li>
+                    <li><strong>Bring it back, as SECONDARY.</strong> Your primary priority is dead set on making the best product for the sake of the best product. Within that, you look for opportunities to reach the extrinsic goal, but only in ways that DO NOT compromise the product or that primary priority.</li>
+                    </ol>
+
+                    <p>Developed this way, you can achieve the extrinsic goal. From the outside it will look like you achieved it as a side effect. That's intended, and it's the best way to get there.</p>
+
+                    <p>Let me put it in terms of popularity and profit, since those are the most common ones. I can't create popularity by chasing popularity as my primary focus. I get popularity by making a compelling, remarkable product as my primary focus. Focusing primarily on popularity or profit is suicidal, because it distracts me from making the very thing that creates the value that leads to popularity and profit. There's no popularity or profit to be had if there's nothing valuable to generate it.</p>
+
+                    <p>To be clear, I'm not saying that thinking about popularity or profit will ruin a project. I'm saying that thinking about them as the <em>primary</em> focus will. As a secondary or tertiary priority, they won't interfere with creating the value that brings them. In other words, a project must never start from "I want to create popularity and profit". That creates a massive mental block against solving problems and coming up with creative ideas.</p>
+
+                    <p>This book is about creating the best game design possible, not about getting an extrinsic goal. If your goal really is just popularity or profit, your best bet is to copy existing games and cash in on them. But if you want to change the world, earn genuine popularity and well-deserved profit, and serve people to make life more wonderful for everyone, yourself included, you'll need to trust that these things come to you naturally when you focus completely on creating the best possible game design for an inspired purpose. Make real value that enriches the player's life your primary priority, and make design decisions that don't compromise your need for financial success, or whatever else you need, along the way, without ever violating the needs of the player.</p>
+
+                    <aside class="note">
+                    <p><strong>Be warned: this is very easy to screw up.</strong> If at any point you slip back into making the extrinsic goal your primary priority during development, you're at great risk of massive damage to your project, wiping out your chances of both a good product and the extrinsic goal. This tends to happen in desperate, urgent situations, exactly when it's hardest to act rationally. I've found that knowing about this mistake and reminding yourself of it can be enough to prevent it. Please keep it in mind whenever you find yourself trying to rush. It's never worth it.</p>
+                    </aside>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c05-popularity-is-a-side-effect.html"><span class="label">← Previous · Part I · Chapter 5</span><span class="pager-title">Popularity Is a Side Effect</span></a>
+                    <a class="pager-link next" href="c07-the-holy-grail.html"><span class="label">Next → · Part I · Chapter 7</span><span class="pager-title">The Holy Grail</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

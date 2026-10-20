@@ -51,10 +51,11 @@ The full plan, reasons and decisions are in `workflow/site-plan.md`. Read it bef
 
 ### D. The book: *Game Design Technology: The Holy Grail of Fun*
 
-- [ ] D1: audit and outline of the original, the bible and the articles
-- [ ] D1: Reactorcore approves the outline
-- [ ] D2–D6: write the book, one part per session (split set by the outline)
-- [ ] D7: online edition at `site/book/`
+- [x] D1: audit and outline of the original, the bible and the articles
+- [x] D1: Reactorcore approves the outline
+- [x] D2–D6: write the book, one part per session (split set by the outline)
+- [x] D7: online edition at `site/book/`
+- [x] Back matter (b1–b5): needs at a glance, question kit, padding checklist, further reading, glossary
 - [ ] D8: offline HTML zip plus EPUB build, and the itch.io page
 - [ ] D9: refresh `2a-bible.md` and `2b-bible.md` from the finished book
 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Result vs Root Cause · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="When it comes to game design, the easiest mistake to make is to approach a project with the mindset of creating the final result, instead of making that…">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c01-final-result-vs-root-cause.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 1: Final Result vs Root Cause · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="When it comes to game design, the easiest mistake to make is to approach a project with the mindset of creating the final result, instead of making that…">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c01-final-result-vs-root-cause.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 1: Final Result vs Root Cause · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="When it comes to game design, the easiest mistake to make is to approach a project with the mindset of creating the final result, instead of making that…">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 1: Final Result vs Root Cause",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c01-final-result-vs-root-cause.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="p1-the-common-mistake.html">
+    <link rel="next" href="c02-three-projects-two-designers.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html" aria-current="page"><span class="n">1</span>Final Result vs Root Cause</a><ol class="toc-secs"><li><a href="#what-it-is">What the common mistake is</a></li><li><a href="#a-game-example">A game example</a></li><li><a href="#an-interactive-tool-example">An interactive tool example</a></li><li><a href="#in-short">In short</a></li></ol></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html"><span class="n">17</span>Money</a></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>7 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c01-final-result-vs-root-cause">
+                    <header>
+                    <p class="kicker">Part I · Chapter 1</p>
+                    <h1>Final Result vs Root Cause</h1>
+                    </header>
+
+                    <section id="the-mistake">
+                    <h2 id="what-it-is">What the common mistake is<a class="anchor" href="#what-it-is" aria-label="Link to this section: What the common mistake is">#</a></h2>
+
+                    <p>When it comes to game design, the easiest mistake to make is to approach a project with the mindset of creating the final result, instead of making that final result happen as a side effect of a root cause.</p>
+
+                    <p>To explain it a different way: the common mistake is to take that initial vision/inspiration/fantasy/dream/wish/idea and create it directly. To imitate/mimic it exactly as it is, instead of understanding the reasons behind it and using that understanding to create something that will become the proper fulfillment of that vision.</p>
+
+                    <p>Why is that a mistake? Because the vision is not guaranteed to bring fulfillment. It's merely a guess. It's only one of infinite possible strategies for fulfilling the root causes behind it, and it may well be a flawed one. Creating a project this way is blind.</p>
+
+                    <p>With only the final result in mind, nothing tells you whether a given design decision serves the root cause behind your idea. You're far more likely to make mistakes or bad design decisions that actually make the project worse, or that turn out to be a useless waste of time.</p>
+
+                    <p>The root cause, on the other hand, the understanding of the real reasons behind the vision, gives you a real guarantee that the project will fulfill what the vision was supposed to fulfill. Creating a project this way is confident, clear and effective.</p>
+
+                    <p>That root cause is fundamental human needs. I'll explain them in detail in <a href="c09-understanding-human-beings.html">Understanding Human Beings</a>. For now, the short version: video games and interactive tools are just some of infinitely many strategies to meet those needs. Some strategies are poor, others are more effective, and the ones that connect with the root causes are the most effective of all.</p>
+
+                    <p>When you clearly understand the root cause, you have complete information to make the best choice at every single design decision in your project. You'll know exactly what's needed and what isn't, which lets you work effectively and avoid wasting time, resources and effort on things that would have a bad or useless effect. In other words, understanding the root cause gives you mastery over any project.</p>
+                    </section>
+
+                    <section id="game-example">
+                    <h2 id="a-game-example">A game example<a class="anchor" href="#a-game-example" aria-label="Link to this section: A game example">#</a></h2>
+
+                    <p>Let's say you were inspired by a game/movie/music/comic/book/nature/event/experience or anything similar, and an idea came to you that involves making a game.</p>
+
+                    <p>The common mistake is to recreate the vision directly without first finding out the root causes behind it. If you saw a movie about exploring alien worlds, the wrong thing to do would be to build alien worlds and gameplay systems so you can repeat for yourself what was done in the movie.</p>
+
+                    <p>Instead, look at the root causes of the vision. How did it make you feel? Using those feelings, you can pinpoint what the root causes are and see what the real purpose of the project is. (The exact process is in <a href="c11-from-inspiration-to-purpose.html">From Inspiration to Purpose</a>.) The root cause can change your design decisions a lot. Here's what it might turn out to be, using the alien world example:</p>
+
+                    <ul>
+                    <li><strong>Challenge.</strong> To improve yourself as a person, to grow spiritually, intellectually or physically. Survive on the hazardous alien planet using your skill and limited resources.</li>
+                    <li><strong>Empowerment.</strong> To feel capable, confident and free. Conquer and reshape the alien planet at your will with godlike power.</li>
+                    <li><strong>Variety.</strong> To discover and explore something you've never been exposed to, to see something new. The planet is full of mysteries and cool random things to find and document.</li>
+                    <li><strong>Beauty and satisfaction.</strong> To get joy from seeing, hearing or doing something that pleases your senses. Fly through the planet, interact with it, take in beautiful vistas and curious details, and enjoy simply being there.</li>
+                    </ul>
+
+                    <p>These are only a few of the possible root causes. Whichever one it is (or several of them), it can drastically change what every part of the game looks like: the genre, the aesthetic style, the mechanics, the UI design, the marketing, the controls, the narrative, the context, the theme. Four games about the same alien planet, and they'd barely resemble each other.</p>
+
+                    <p>If you don't know the root cause, there's a high risk you'll accidentally make design decisions that conflict with the purpose behind your vision, or add systems and content that don't enrich the experience, or make it worse, confused and messy. And here's the consequence that people tend to underestimate: you usually won't find out until the game is built. By then the wasted months or years are already spent.</p>
+
+                    <p>If you do know the root cause, you can avoid these mistakes and always have a clear compass that points toward the best design decision for any part of the game, at any time. No confusion, no wasted time. A direct, efficient path that makes sure your vision actually satisfies you, instead of blindly missing the point.</p>
+                    </section>
+
+                    <section id="tool-example">
+                    <h2 id="an-interactive-tool-example">An interactive tool example<a class="anchor" href="#an-interactive-tool-example" aria-label="Link to this section: An interactive tool example">#</a></h2>
+
+                    <p>The same thing applies to a real-life issue. Let's say something inspired or troubled you, and an idea came to you for an interactive tool to address it.</p>
+
+                    <p>Again, the common mistake is to build the tool and hand it to people without connecting with the root cause first. If you're making a tool to raise awareness of climate change, or to teach math, a language, cooperation or some skill, the wrong way to do it is to just teach it directly.</p>
+
+                    <p>Why is that wrong? Because the user has no context, no reference experience of why it matters or how it would make their life more wonderful. If the tool only teaches without explaining why, the user can't find the motivation to care. If it explains why and teaches it, but doesn't show how it would make the user's own life more wonderful, it leaves them confused and concerned: they know it's important, but they can't connect with it. They have nothing to compare it with.</p>
+
+                    <p>Here's the thing to notice. The reason you're working on the project at all is exactly that context, that reference experience. You needed it to start. It's the very thing that drives you and makes you care about putting effort into the project. Because of it, you can see why the project needs to be made and shared.</p>
+
+                    <p>The user of your tool needs that same context to care about it as much as you do. It's essential for everyone involved, not just the developer, so ignoring it or forgetting it would be a dire mistake.</p>
+
+                    <p>So look at the root cause of the tool and reveal that reference experience, then use it as the starting point and main driving force of the tool. Instead of directly teaching/raising awareness/motivating, give the user the same experience that made you care, and integrate the teaching into it. Then show clearly how the tool concretely makes the user's life better.</p>
+
+                    <p>A couple of quick examples:</p>
+
+                    <ul>
+                    <li><strong>Climate change awareness.</strong> Show what frightened you, how it made you feel and how your life would be better if people did what you're asking them to do. Then, within the context of that experience, show them what to do and clearly demonstrate why you think it works.</li>
+                    <li><strong>Teaching math.</strong> Show what inspired you, how it made you feel and how math lets you make life more wonderful. Show how life would be better for you if other people knew math and used it. Then teach math in the context of what inspired you, so the user sees concretely why it works and how to use it.</li>
+                    <li><strong>Teaching cooperation.</strong> Share the experience that troubled you, how it made you feel and how life would be better if people cooperated. Teach the tools for cooperating, using your own experience as the setting, since a real example shows how it applies in real life. You can expand to other settings later, but not before the personal experience, because that's the strongest and clearest reference you have.</li>
+                    <li><strong>Teaching a skill or technique.</strong> Same process again: your reference, your feelings, how it would make life wonderful for you. Then teach the skill within that context, and finish by demonstrating it in action in a real situation. The user will see its effectiveness and value on their own.</li>
+                    </ul>
+
+                    <p>Essentially, your outspiration becomes their inspiration. You breathe out, others breathe in what you breathed out. That's what inspiration is.</p>
+
+                    <p>You may have noticed that in these examples I keep talking about how to make life wonderful <em>for you</em>, not for others. If that sounds selfish to you, you'll soon find out that "selfish" isn't what's going on. Your needs are a gift. <a href="c09-understanding-human-beings.html">Understanding Human Beings</a> explains why.</p>
+
+                    <aside class="note">
+                    <p>A tool like this is honest about being a tool. It doesn't pretend to be a game. That difference is so important that it gets its own chapter, <a href="c12-game-or-interactive-tool.html">Game or Interactive Tool</a>.</p>
+                    </aside>
+                    </section>
+
+                    <section id="summary">
+                    <h2 id="in-short">In short<a class="anchor" href="#in-short" aria-label="Link to this section: In short">#</a></h2>
+
+                    <p>So that's that. The common mistake is trying to solve a problem on the surface without addressing its hidden root causes. There's a well-known saying, usually credited to Einstein, that we can't solve our problems with the same thinking we used when we created them. This is exactly that.</p>
+                    <p>Next I'll show how the mistake plays out in real projects, using my own experiences.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="p1-the-common-mistake.html"><span class="label">← Previous · Part I</span><span class="pager-title">The Common Mistake</span></a>
+                    <a class="pager-link next" href="c02-three-projects-two-designers.html"><span class="label">Next → · Part I · Chapter 2</span><span class="pager-title">Three Projects, Two Designers</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

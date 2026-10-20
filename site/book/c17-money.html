@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money · Game Design Technology</title>
+    <!-- Built by tools/book.py from book/chapters/. Edit the chapter fragment, this template or the tool, not this file. -->
+
+    <meta name="description" content="This chapter is one long scenario, because money is where good intentions most often turn into real harm, and where the harm hides best.">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c17-money.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Chapter 17: Money · Game Design Technology: The Holy Grail of Fun">
+    <meta property="og:description" content="This chapter is one long scenario, because money is where good intentions most often turn into real harm, and where the harm hides best.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c17-money.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Chapter 17: Money · Game Design Technology: The Holy Grail of Fun">
+    <meta name="twitter:description" content="This chapter is one long scenario, because money is where good intentions most often turn into real harm, and where the harm hides best.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Chapter",
+        "name": "Chapter 17: Money",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/c17-money.html",
+        "isPartOf": {
+            "@type": "Book",
+            "name": "Game Design Technology: The Holy Grail of Fun",
+            "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/book/",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "author": {
+                "@type": "Person",
+                "name": "Reactorcore"
+            }
+        }
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+    <link rel="prev" href="c16-good-intentions-violent-methods.html">
+    <link rel="next" href="c18-afraid-the-game-is-too-short.html">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="book">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="./" aria-current="page">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet book-page">
+        <div class="book-layout">
+        <nav class="book-toc" aria-label="Book contents">
+            <details id="book-toc">
+                <summary><span class="label">Contents</span></summary>
+                <a class="toc-book" href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology</a>
+                <p class="toc-group">Before you start</p><ol><li><a href="f1-foreword.html"><span class="n"></span>Foreword</a></li><li><a href="f2-how-to-read.html"><span class="n"></span>How to Read This Book</a></li><li><a href="f3-definitions.html"><span class="n"></span>My Definitions</a></li></ol><p class="toc-group"><a href="p1-the-common-mistake.html">Part I · The Common Mistake</a></p><ol><li><a href="c01-final-result-vs-root-cause.html"><span class="n">1</span>Final Result vs Root Cause</a></li><li><a href="c02-three-projects-two-designers.html"><span class="n">2</span>Three Projects, Two Designers</a></li><li><a href="c03-how-i-learned-this.html"><span class="n">3</span>How I Learned This the Hard Way</a></li><li><a href="c04-question-everything.html"><span class="n">4</span>Question Everything</a></li><li><a href="c05-popularity-is-a-side-effect.html"><span class="n">5</span>Popularity Is a Side Effect</a></li><li><a href="c06-making-games-for-the-wrong-reason.html"><span class="n">6</span>Making Games for the Wrong Reason</a></li><li><a href="c07-the-holy-grail.html"><span class="n">7</span>The Holy Grail</a></li></ol><p class="toc-group"><a href="p2-the-mindset.html">Part II · The Mindset</a></p><ol><li><a href="c08-purpose.html"><span class="n">8</span>Purpose: Everything Exists for a Reason</a></li><li><a href="c09-understanding-human-beings.html"><span class="n">9</span>Understanding Human Beings</a></li><li><a href="c10-fun-is-the-fulfillment-of-needs.html"><span class="n">10</span>Fun Is the Fulfillment of Needs</a></li><li><a href="c11-from-inspiration-to-purpose.html"><span class="n">11</span>From Inspiration to Purpose</a></li><li><a href="c12-game-or-interactive-tool.html"><span class="n">12</span>Game or Interactive Tool</a></li><li><a href="c13-purpose-as-a-compass.html"><span class="n">13</span>Purpose as a Compass</a></li></ol><p class="toc-group"><a href="p3-intention-is-not-action.html">Part III · Intention Is Not Action</a></p><ol><li><a href="c14-intention-and-action.html"><span class="n">14</span>Intention and Action Are Two Things</a></li><li><a href="c15-when-players-misbehave.html"><span class="n">15</span>When Players Misbehave</a></li><li><a href="c16-good-intentions-violent-methods.html"><span class="n">16</span>Good Intentions, Violent Methods</a></li><li><a href="c17-money.html" aria-current="page"><span class="n">17</span>Money</a><ol class="toc-secs"><li><a href="#scenario-5-monetization">Scenario 5: A monetization strategy ends in disaster</a></li><li><a href="#a-note-on-cosmetic-items">A note on cosmetic items</a></li></ol></li><li><a href="c18-afraid-the-game-is-too-short.html"><span class="n">18</span>Afraid the Game Is Too Short</a></li><li><a href="c19-more-ways-good-intentions-fail.html"><span class="n">19</span>More Ways Good Intentions Fail</a></li></ol><p class="toc-group"><a href="p4-designing-the-game.html">Part IV · The Technical Side: Designing the Game</a></p><ol><li><a href="c20-taking-inventory.html"><span class="n">20</span>Taking Inventory</a></li><li><a href="c21-foundations-before-content.html"><span class="n">21</span>Foundations Before Content</a></li><li><a href="c22-build-the-forces-not-the-desert.html"><span class="n">22</span>Build the Forces, Not the Desert</a></li><li><a href="c23-content-that-multiplies.html"><span class="n">23</span>Content That Multiplies</a></li><li><a href="c24-infinite-metagames.html"><span class="n">24</span>Infinite Metagames</a></li><li><a href="c25-pacing-difficulty-and-progression.html"><span class="n">25</span>Pacing, Difficulty and Progression Without the Scam</a></li><li><a href="c26-worlds-that-last.html"><span class="n">26</span>Worlds That Last</a></li></ol><p class="toc-group"><a href="p5-building-sharing-and-growing.html">Part V · The Technical Side: Building, Sharing and Growing</a></p><ol><li><a href="c27-what-a-game-designer-really-does.html"><span class="n">27</span>What a Game Designer Really Does</a></li><li><a href="c28-the-design-process.html"><span class="n">28</span>The Design Process</a></li><li><a href="c29-working-with-people.html"><span class="n">29</span>Working with People</a></li><li><a href="c30-beyond-the-game.html"><span class="n">30</span>Beyond the Game</a></li><li><a href="c30a-handle-with-care.html"><span class="n">31</span>Handle With Care</a></li><li><a href="c31-putting-it-all-together.html"><span class="n">32</span>Putting It All Together</a></li><li><a href="c32-growing-as-a-designer.html"><span class="n">33</span>Growing as a Designer</a></li><li><a href="c33-what-a-good-game-is.html"><span class="n">34</span>What a Good Game Is</a></li></ol><p class="toc-group">Back matter</p><ol><li><a href="b1-needs-at-a-glance.html"><span class="n"></span>Needs at a Glance</a></li><li><a href="b2-the-question-kit.html"><span class="n"></span>The Question Kit</a></li><li><a href="b3-the-padding-checklist.html"><span class="n"></span>The Padding Checklist</a></li><li><a href="b4-further-reading.html"><span class="n"></span>Further Reading</a></li><li><a href="b5-glossary.html"><span class="n"></span>Glossary</a></li></ol>
+                <a class="toc-itch" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">Offline edition: coming to itch.io ↗</a>
+            </details>
+        </nav>
+
+            <div class="book-main">
+                <p class="book-bar"><a href="./"><img class="logo pixel" src="book-logo.png" alt="" width="86" height="86">Game Design Technology: The Holy Grail of Fun</a><span>14 min read</span></p>
+                <div class="prose">
+                    <article class="chapter" id="c17-money">
+                    <header>
+                    <p class="kicker">Part III · Chapter 17</p>
+                    <h1>Money</h1>
+                    </header>
+
+                    <section id="intro">
+                    <p>This chapter is one long scenario, because money is where good intentions most often turn into real harm, and where the harm hides best.</p>
+
+                    <p>I want to say up front: there are developers who really do intend to extract as much money from their customers as possible, whatever they say in public. I'm fully aware of that, and I don't appreciate what they do. But this scenario isn't about them. It's strictly about the genuinely caring people who make poor decisions because of biases and the common mistake. The ones who think they're doing the right thing and end up doing the opposite, often without realizing it, or doing it hesitantly because they believe there's no other option if they want to survive. Please keep that in mind throughout.</p>
+                    </section>
+
+                    <section id="scenario-5">
+                    <h2 id="scenario-5-monetization">Scenario 5: A monetization strategy ends in disaster<a class="anchor" href="#scenario-5-monetization" aria-label="Link to this section: Scenario 5: A monetization strategy ends in disaster">#</a></h2>
+
+                    <h3 id="s5-story">Story<a class="anchor" href="#s5-story" aria-label="Link to this section: Story">#</a></h3>
+                    <p>While developing the monetization for their online game, which needs constant maintenance money, a developer came up with a plan: rich players would pay more, carrying the cost for poorer players, so the game's upkeep would be covered and everyone would be happy, with each group contributing a respectable amount.</p>
+
+                    <p>To make it happen, they created an in-game shop with microtransactions at various prices. The products were vanity-only: badges, clothes, hats, hairstyles, color schemes, alternative character models, accessories and so on. They gave no advantage over other players and didn't interfere with progression or the game's function in any way. They were meant more as a token of gratitude for supporting the game than as a gameplay booster. Owning them showed you'd done your part to support the game, and made you look, sound or feel more remarkable and special than players who hadn't bought anything.</p>
+
+                    <p>The developer then marketed these items using common manipulative advertising. And soon they started receiving reports of poor players spending their last savings, going into debt and getting hooked by the same advertising that was meant for the wealthy. A lot of misery and damage followed. The developer intended none of it.</p>
+
+                    <p>They had believed the manipulative tactics were a "necessary evil" that would only really affect the people who could afford it, the wealthy, for whom losing a little extra money is mostly harmless. They trusted that people with little money would be reasonable with it. They trusted that flashy adverts designed to exploit weaknesses in human psychology would somehow not affect the people they weren't aimed at. Before you ask: yes, human beings really can make a decision this unwise fairly easily, especially when they're rushing to finish a project while something vital is under threat, like financial survival. Losing that would be catastrophic, and rash decisions are easy to make under those conditions.</p>
+
+                    <p>There's also a version of this story where the shop sells useful items: progression skips, advantages over other players, or something that's normally abundant in a game, made artificially scarce so players pay, with the game becoming subtly frustrating or inconvenient for anyone who doesn't. The "vanity only" version is the tamer, more humane one. But the same genuine intentions often sit behind the "pay to win" version too, which can bring in far more money in the short term, with devastating long-term damage that often only shows years later. It dooms both the users and the developers. It's never worth it.</p>
+
+                    <h3 id="s5-action">Action<a class="anchor" href="#s5-action" aria-label="Link to this section: Action">#</a></h3>
+                    <p>The developer created an in-game shop selling exclusive vanity items, available only to paying users and meant mostly for the wealthy.</p>
+
+                    <p>But that part is only secondary. The primary, most important thing is <em>how</em> they presented the items: how they advertised and framed them. The marketing. That's the real cause of what happened in this scenario.</p>
+
+                    <p>The items were marketed with any and all of the common manipulative marketing strategies, known as <strong>dark design patterns</strong>. These are dishonest methods that use fundamental human needs to exploit customers, valuing the developer's needs at the expense of the customer's. The long-term welfare of the players is implicitly treated as unimportant.</p>
+
+                    <p>Using dark patterns doesn't automatically mean the developer is malicious. The common mistake applies to marketing just as it applies to game design. They used them because someone else seemed to succeed with them in the short term, because it's traditional, because someone said so, because they were readily available. The developer was simply unaware of the consequences and of how dark patterns really work, thinking they were doing the right thing, without realizing they were handling a weapon of mass misery.</p>
+
+                    <p>Listing every dark pattern is pointless, since there are potentially infinite ones, and new ones appear whenever a new opportunity does. Even a mildly creative mind can invent a new manipulation scheme for a new situation. It's far more effective to understand the mindset dark patterns come from, which lets you spot them without having to become a victim first. To give a brief burst of examples:</p>
+
+                    <ul>
+                    <li>appeal to sexuality,</li>
+                    <li>artificial scarcity,</li>
+                    <li>easy to join, hard to leave,</li>
+                    <li>bait and switch,</li>
+                    <li>distracting attention,</li>
+                    <li>disguised traps,</li>
+                    <li>deliberate obstacles,</li>
+                    <li>hiding key information,</li>
+                    <li>taking advantage of human mistakes,</li>
+                    <li>last-minute hidden costs,</li>
+                    <li>preventing comparison,</li>
+                    <li>forcing unwanted services,</li>
+                    <li>trick questions.</li>
+                    </ul>
+
+                    <p>The subject is huge and worth studying, both to make yourself resistant to it and to notice if you're about to use it by accident. Searching for media manipulation, dark design patterns, psychological manipulation tactics and the tactics of narcissistic abuse will give you a wealth of material. Usually, just being aware of these things makes you highly resistant to them.</p>
+
+                    <p>One thing to know about all of them: they're subtle. Very sneaky, very low-profile, very inconspicuous. They're often masked behind a friendly facade, so the developer appears innocent, lawful and caring. Where laws and social standards would normally condemn such behavior outright, the subtlety often lets the developer appear to be on the right side of the law, however harmful the actions really are.</p>
+
+                    <p>On the bright side, these strategies aren't sustainable. They become progressively harder to repeat, because of resistance, legislation and the wariness of people who fell for them before. Being manipulated feels horrible, so victims naturally act to prevent it happening again. The environment keeps getting more hostile, so manipulation gets more and more costly to maintain. It's also stressful and bad for the health of the people doing it. And if it's found out, the backlash, from authorities or from the users themselves, can be enough to destroy the whole business, however good the intentions were. It's very hard to tell a person you didn't mean it when they're furious about what your actions did to them. Manipulation makes people want revenge on you instead of wanting to understand you and help you do better. It's never worth it.</p>
+
+                    <h3 id="s5-problem">Problem<a class="anchor" href="#s5-problem" aria-label="Link to this section: Problem">#</a></h3>
+                    <p>Many things happen, gradually, over days, months or years.</p>
+
+                    <p><strong>In the short term</strong>, the metrics look like success. Money pours in, user numbers grow, and lots of people are playing.</p>
+
+                    <p><strong>Shortly after</strong>, things start going bad. Savvy media outlets, prominent people and publications point out the dark patterns in the game. Their audiences learn to avoid the game, to frown on it, to boycott it, and some actively work against it. Already at this stage, many people are less likely ever to play it, and acquiring new users in those audiences gets far harder. That's a lot of lost money and players, plus serious damage to reputation and trust.</p>
+
+                    <p>The wealthy players who were supposed to pay more are likely to resent being targeted for their money. Some stay away. Others play but deliberately never spend a cent out of spite, even when it's inconvenient for them. It feels meaningful and satisfying to refuse an attempt at manipulation. Wealthy people often sense when something is trying to sucker them out of their money, since they deal with it regularly, and if they don't, their communities tell them.</p>
+
+                    <p><strong>Further down the line</strong>, even players who never heard any of the warnings will eventually notice what the game is trying to do, on their own, through the same instincts that normally help them optimize their lives. It's unavoidable: humans are very good at noticing patterns. They'll feel growing resistance to the game until they leave.</p>
+
+                    <p>But that isn't the worst of it.</p>
+
+                    <h3 id="timebombs">The timebombs<a class="anchor" href="#timebombs" aria-label="Link to this section: The timebombs">#</a></h3>
+
+                    <p>Some people haven't noticed the manipulation yet. Others have noticed, but something anchors them to the game: the time they've invested, emotional pain the game helps them cope with, relationships tied to it. These people can become timebombs.</p>
+
+                    <p>They're what makes this so dangerous, because the players who stay make the game look fine. They make it look like the tactics did exactly what the developer intended. It's an illusion of success that tells the developer their actions were justified and that they work.</p>
+
+                    <p>Underneath it, damage is quietly building, sometimes for months or years, before it becomes critical and shows itself, usually explosively. Timebombs come in many varieties. Here are a few of the ways manipulation turns into disaster for people who never saw it coming.</p>
+
+                    <dl>
+                    <dt>The bills that couldn't be paid</dt>
+                    <dd>A person falls for advertising that deliberately uses human psychological weaknesses, and after spending a considerable amount on the game, finds they can't pay rent, buy food or pay their bills. They face hunger, ridicule, possibly homelessness, a bad credit record and debt. Then they're blamed, shamed and guilted for having been manipulated, which is as absurd as it is cruel: the system that made them a victim scolds them for being one. This can lead to depression, bitterness, loss of trust, desperate measures and falling out of society entirely. It can happen to anyone, of any age, children and the elderly included.</dd>
+
+                    <dt>The child and the bill</dt>
+                    <dd>A child falls into traps that encourage and praise them for spending money in the game, the more the better. The bill grows until the parents discover it, to their horror. The family has a limited budget, the parents are busy, and other pressing expenses can't wait, so this bill shakes everything. The parents spend a lot of time trying to get the money back, if that's even possible, or take emergency measures to survive the loss. The stress makes them lash out at the child, blaming, punishing and judging them for something the developer's design caused. The relationship between the child and the parents suffers badly, which makes future communication harder and can spill over into school, friendships and later life.</dd>
+
+                    <dt>The person looking for relief</dt>
+                    <dd>Someone going through depression, hoping for some relief, gets hooked by the game's manipulative systems instead. The game soothes their feelings without addressing them, lulling them into a false sense of safety and dependence, all so they play longer, spend more and invite their friends into the same trap. The suppressed feelings confuse them further and deepen the depression, until they reach a point where they can't handle the pain, instead of being encouraged to face it and heal. This can turn a sad person into a desperate one, who either lashes out at others or at themselves, or shuts down entirely and loses hope. Neither is good for anyone.</dd>
+
+                    <dt>The player who can't let go</dt>
+                    <dd><p>A person who has lost all joy in the game finds it hard to quit, because of the time and money they were manipulated into putting in. So they keep playing begrudgingly, to get their money's and time's worth, however counterintuitive that is. They suffer, telling themselves "the game has its good sides", "the good outweighs the bad", "it might get better".</p>
+                    <p>When a person has put a lot of time and resources into something, often until it's a habit, letting go is painful. It's like throwing away an unfinished artwork after years of work on it. Humans naturally form emotional bonds with what they're deeply involved in, and those bonds can't be cut instantly without feelings of loss, confusion, anger and frustration.</p>
+                    <p>Such a person can do a lot of damage, to themselves and to the developer. They keep doing something they hate, full of bitterness and resentment, toward themselves (which harms their health) and toward others (which makes connection harder). In the community, their feelings become a source of disruption, slowly poisoning it and spreading their pain to other players. The usual response is to ban them, which doesn't solve anything and makes it worse. The population shrinks, angry people pile up, and the whole business goes down. A complete failure on all sides, with a lot of damage left to heal afterwards.</p></dd>
+                    </dl>
+
+                    <p>These examples are dramatic, and they describe the worst cases. I think it's important to know the worst things manipulation can do. Remember Murphy's law from <a href="c14-intention-and-action.html">Chapter 14</a>: at the scale of a game's playerbase, the worst case isn't hypothetical. It's guaranteed to happen to someone. And these are only some of the possible outcomes. Things often go wrong in surprising and creative ways I can't predict, so it's wise to assume the worst, plan for it, and never use manipulation, even with benevolent intentions.</p>
+
+                    <h3 id="metrics">Why the numbers can't warn you<a class="anchor" href="#metrics" aria-label="Link to this section: Why the numbers can&#x27;t warn you">#</a></h3>
+
+                    <p>The worst of all is that metrics, data and statistics can't show what's really happening behind each unit they count. Without knowing the person, without access to their private life and their innermost thoughts, the kind only a best friend or a relative would have, you can't see these coming if you rely on metrics to tell you how well you're doing. The spreadsheet shows a player who spent a lot and played every day. It can't show that the player is behind on rent, or that they hate every minute.</p>
+
+                    <p>This is a major problem and a very subtle one, usually only evident after a long time, when it's too late to act. It's the part that makes me most anxious. I only understood how stealthy it is after observing many different situations play out, being a victim myself several times, and watching others, sometimes people close to me, suffer from it. It took a lot of pain for me to see how serious it is and to learn to notice its sources.</p>
+
+                    <p>I'm worried that what I've written won't be enough to convey this without you going through the same experiences. I'm also worried that some of you will feel skeptical or irritated, and think this is overly dramatic or naive. The subtlety makes it hard to show in a way that's instantly obvious, like pointing at the sky and saying it's blue. Really showing it would mean spending weeks or months together, closely analyzing a complex system with many moving parts. So I ask you to be open to the possibility that this is as serious, far-reaching and stealthy as I'm telling you, even if right now it feels unreal.</p>
+
+                    <h3 id="s5-intention">Intention<a class="anchor" href="#s5-intention" aria-label="Link to this section: Intention">#</a></h3>
+                    <p>The developer's intention was a sustainable economy: enough money over the long term to stay financially safe for as long as possible. It may not look like it from their actions, but the very idea of having rich and poor players contribute differently shows a desire for sustainability and fairness. They wanted the cost spread evenly, not to rob everyone blind for quick gain and disappear. They weren't villains. They wanted an ongoing project built to last, treating each group of customers according to their situation.</p>
+
+                    <p>A big part of why such a developer ends up here is the world around them. Society runs on the idea that you must have money to survive, that everything has a "worth", and that people must "earn" what they "deserve". Within that system, companies, developers and individuals are strongly pushed, if not forced, to acquire as much money as possible. Making life more wonderful isn't part of the system's logic, and ethics is an afterthought added on top of it. The developer just has a need for safety, and does what the system around them implicitly says will meet it: get more money. Other economic models have been proposed that build human needs and sustainability into their core (Max-Neef's human-scale development is one), and if you're ever in a position to shape systems like that, they're worth a look. But as a game designer, you can't wait for the world to change. You have to design well inside the world as it is.</p>
+
+                    <p>Still, the bottom line is that the developer was trying to meet their need for safety, make people happy with the game, and build a system that was fair to every wealth group, so the game's development and the business could continue. No evil intent.</p>
+
+                    <h3 id="s5-mistake">Mistake<a class="anchor" href="#s5-mistake" aria-label="Link to this section: Mistake">#</a></h3>
+                    <p>The developer believed that each wealth group would behave the way the developer wanted, instead of seeing everyone as the same universal human being, who will do whatever seems most attractive to them, rich or poor.</p>
+
+                    <p>Every human being works the same at a basic level. Everyone has the same fundamental needs and feelings. So an attractive, manipulative advertisement works just as well on a person it was never "meant" for. An advertisement doesn't check your bank balance before it reaches your feelings.</p>
+
+                    <p>And if an advertisement touches a need a person is really longing for, like the need for meaning, belonging or being seen as special, it can override the need for safety and get the person to do what it asks, even when that's harmful to them. That's how wartime propaganda gets people to sacrifice their lives for the promise of meaning. It's frightening how powerful it is.</p>
+
+                    <p>That's why the poorer players fell for advertising aimed at the wealthy. And there's an uncomfortable irony in it. Wealthier people often have more practice spotting sales tactics, more people around them who warn them, and more margin for error. Poorer people are more often stressed, short on time and without that margin, and those are exactly the conditions in which manipulation works best. The tactic hits hardest the very people it was supposed to spare.</p>
+
+                    <p>Not knowing how human beings and their psychology work, the developer couldn't anticipate this, so the strategy was doomed from the start. With that basic knowledge, they could have avoided it, preventing tragedies, saving relationships, perhaps even saving lives. It was unwise to try such an idea blindly, without investigating the possible consequences or even checking its logic, especially when the customers' most important resource was at stake: the money that controls their access to food, shelter and water.</p>
+                    </section>
+
+                    <section id="about-cosmetics">
+                    <h2 id="a-note-on-cosmetic-items">A note on cosmetic items<a class="anchor" href="#a-note-on-cosmetic-items" aria-label="Link to this section: A note on cosmetic items">#</a></h2>
+
+                    <p>Since the scenario centers on vanity items, a few words on them by themselves.</p>
+
+                    <p>Cosmetic items aren't the problem in this story. The manipulative marketing is. Sold honestly, as a way for players who love the game to support it and get something nice in return, cosmetics are one of the gentler ways to fund a game. They don't touch the gameplay, and nobody is forced to buy them.</p>
+
+                    <p>What I'm wary of is how easily they get framed as status symbols. When owning them is presented as being better than the people who don't, they divide the community into "us" and "them": the payers and the non-payers. Labels and judgements start flying in both directions, envy grows, and the game's social space turns hostile, which is the toxicity of <a href="c15-when-players-misbehave.html">Scenario 1</a> arriving by another door. So if you sell cosmetics, frame them as a thank-you, not a rank. And make sure the game itself is complete and abundant for everyone, so that buying something is a gift, never an escape from a game that's been made deliberately worse.</p>
+
+                    <p>That last point is the real line. The question is never "is this item cosmetic or functional?". It's "is the player paying because they want to say thank you, or because the game is pressuring them?" The first is the human need to give, from <a href="c12-game-or-interactive-tool.html">Game or Interactive Tool</a>. The second is the scenario you just read. <a href="c30-beyond-the-game.html">Beyond the Game</a> goes through honest ways to make money in detail.</p>
+                    </section>
+                    </article>
+                </div>
+
+                <aside class="offline panel" aria-label="Offline edition">
+                    <span class="icon" style="--icon: url(../icons/open-book-lorc.png)" aria-hidden="true"></span>
+                    <div>
+                        <p class="label">Offline edition</p>
+                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                    </div>
+                    <a class="btn" href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                </aside>
+
+                <nav class="pager" aria-label="Previous and next">
+                    <a class="pager-link prev" href="c16-good-intentions-violent-methods.html"><span class="label">← Previous · Part III · Chapter 16</span><span class="pager-title">Good Intentions, Violent Methods</span></a>
+                    <a class="pager-link next" href="c18-afraid-the-game-is-too-short.html"><span class="label">Next → · Part III · Chapter 18</span><span class="pager-title">Afraid the Game Is Too Short</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="./"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Contents</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
+                <p>Offline edition: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">coming to itch.io</a></p>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {   // the contents list is open beside the text on wide screens, a tap-to-open box on narrow ones
+            var toc = document.getElementById("book-toc"), wide = window.matchMedia("(min-width: 1140px)");
+            function fit() { toc.open = wide.matches; }
+            fit();
+            wide.addEventListener("change", fit);
+            var cur = toc.querySelector('a[aria-current="page"]'), nav = toc.parentNode;
+            if (cur && wide.matches) nav.scrollTop = cur.offsetTop - nav.clientHeight / 3;
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<article class="chapter" id="c22-build-the-forces-not-the-desert">
+<header>
+<p class="kicker">Part IV · Chapter 22</p>
+<h1>Build the Forces, Not the Desert</h1>
+</header>
+
+<section id="throwaway">
+<h2 id="the-throwaway-toy">The throwaway toy</h2>
+
+<p>Most games can be boiled down to a "throwaway toy", a consumable thrill. There's barely any effort, or even thought, put into making sure the project and its assets get used to their full potential and last.</p>
+
+<p>Look at where the time goes. Weeks, months and years are spent on content and experiences that are consumed in seconds, minutes or hours. On top of that, the experience is narrow, restricted, shallow and one-dimensional: playable in exactly one way, the way the developer dictated. In terms of making people happy in the long run, or running a game business sustainably, that's a disaster. The creation of content is bottlenecked, and the content that does get made isn't flexible, so it's worth less to the player too.</p>
+
+<p>Why is it so common? Because developers still see making a game through the lens of making a movie. A project usually starts from the idea of constructing a specific situation and recreating it, with the player on scripted rails through it. That's forcing a square peg into a round hole: taking a medium whose whole strength is freedom and interactivity, and making it constrained and scripted. It's like a teacher who tells you to sit down, shut up and obey, and expects you to have a profound moment of learning. It doesn't work. It violates the player's need to be curious, to play and explore, and to fail without fear.</p>
+
+<p>There's a far better way. And it isn't more work. It's mostly a matter of reorganizing how a game and its content are built, which means reframing the mindset behind it. The amount of work is about the same as the old way. The potential, value and flexibility are far better.</p>
+</section>
+
+<section id="framework-driven">
+<h2 id="framework-driven-design">Framework-driven design</h2>
+
+<p>Instead of recreating a specific situation as the starting point, build a framework where that situation can happen naturally. Create an environment where the player can make that situation happen by coincidence. Allow every variation and mutation of it. Make it possible for things to happen that you didn't anticipate but that are cool and welcome anyway. Let emergent systems, however basic, take precedence over solutions that skip straight to the result.</p>
+
+<ul>
+<li><strong>Don't make a desert.</strong> Make an area with lots of sand, harsh sunlight and high heat, which results in a desert.</li>
+<li><strong>Don't make a forest.</strong> Make an area with fertile soil, humidity, gentle sunlight, an atmosphere and compatible flora and fauna.</li>
+<li><strong>Don't make a tundra.</strong> Make an area with humidity, precipitation, cold temperatures and weak sunlight.</li>
+<li><strong>Don't make a lava zone.</strong> Make terrain with volcanic activity that produces ash and lava, hard but brittle rock, seismic activity that shifts it, low humidity and ash clouds that block the sun.</li>
+<li><strong>Don't make prefabs.</strong> Make the source elements prefabs are made of, and assemble them with simple if/else rules into a final result, like building a custom sandwich.</li>
+</ul>
+
+<p>Notice what this is. It's the common mistake from <a href="c01-final-result-vs-root-cause.html">Chapter 1</a>, applied to content. The desert is the final result. Sand, sun and heat are the root cause. Focus on the source of a thing, not the final result. Notice which elements or forces lead to the result, how they relate to each other, and which comes first.</p>
+
+<p>And look at what it gets you. Forests, deserts, tundras and lava lands become far more varied, because each one is a different mix of the same forces. Hybrid biomes appear on their own, a little of both, or a crazy mix that becomes an unexpected cool new biome. Even within one biome, the system can make a lush forest or a sparse one just by changing the water or the soil. You designed four biomes and got hundreds.</p>
+
+<h3 id="more-examples">The same idea, everywhere</h3>
+
+<ul>
+<li><strong>Don't make pre-made unique characters.</strong> Make a modular character, a paper doll, that can take any limbs, facial features, clothing, accessories, colors and patterns. Generate names from lists of words or syllables. Roll background and personality from a mix of options that define their behavior and style.</li>
+<li><strong>Don't make scripted campaigns.</strong> They offer one experience, and a narrow one. Make a campaign generator that mixes and combines content freely, for maximum reuse, more emergent play and exponential variety.</li>
+<li><strong>Don't make a linear sequence of levels.</strong> Prefer an open world, or at least a level select where levels can be played in any order and shuffled for each campaign.</li>
+</ul>
+
+<p>To be clear, none of this requires an intricate universe simulator. All you need is a list of building blocks with parameters, a simple if/else tree, and a little random(1,9) thrown in. The content itself is built paper-doll style: everything made of modules and components, often drawn in grayscale and tinted by the program during play. Even a small pool of content made this way can give many times more hours of play than the throwaway approach, and the play is more interesting, because it's emergent instead of scripted. <a href="c23-content-that-multiplies.html">Content That Multiplies</a> goes into the practical details.</p>
+</section>
+
+<section>
+<h2 id="thinking-in-wholes">Thinking in wholes</h2>
+
+<p>Framework-driven design is one form of a wider habit: looking at a game as a whole, made of parts that affect each other, instead of as a pile of separate features.</p>
+
+<h3 id="mechanics-have-purposes">Every mechanic has a purpose too</h3>
+
+<p>In <a href="c11-from-inspiration-to-purpose.html">From Inspiration to Purpose</a> I said the five steps work on the whole game, and that the same thinking applies to individual mechanics. Here's how. Each mechanic is a small strategy to meet needs, inside the bigger strategy that is the game. So for each one, ask the same questions you asked of the game: what does this make the player feel, which needs does it meet, and does it violate any? Then ask the purpose question: does this mechanic serve the game's purpose?</p>
+
+<p>A mechanic can pass the first test and fail the second. A deep crafting system might meet needs for creation and mastery beautifully, and still be wrong for a game whose purpose is momentum and flow, because every stop to craft breaks the flow. That doesn't make crafting bad. It makes it wrong for this game. Judging a mechanic in isolation ("is this a good mechanic?") is how games end up as collections of good mechanics that don't add up to a good game.</p>
+
+<h3 id="systems-thinking">Systems thinking</h3>
+
+<p>Every part of a game touches other parts. Change the movement speed and you've changed the level sizes, the enemy reaction times, the camera, the difficulty and the pacing. So when you change anything, follow the effects outward: what does this touch, and what does that touch? This is the investigation from <a href="c14-intention-and-action.html">Chapter 14</a>, applied to the game's own parts instead of its players.</p>
+
+<h3 id="biomimicry">Observe reality</h3>
+
+<p>Nature has been solving the problem of building lasting, self-balancing, endlessly varied systems for a very long time. When you're stuck on how a system should work, look at how the real world does something similar: how ecosystems balance, how cities grow, how economies recover, how erosion shapes land. You don't have to copy it. Borrow the principle, as the desert example does.</p>
+
+<h3 id="top-down-bottom-up">Top-down and bottom-up</h3>
+
+<p>There are two directions to build a universe from. Top-down starts from the largest scale (galaxies, planets, continents, nations) and works down to the details. Bottom-up starts from the smallest pieces (the materials, the creatures, the individual rules) and lets the larger structures emerge from them. Neither is right on its own. The scale the player mostly plays at usually decides which to start from, and a good design checks the other direction too, so the big picture and the small pieces agree.</p>
+</section>
+
+<section id="believable">
+<h2 id="believable-not-realistic">Believable, not realistic</h2>
+
+<p>"Build the forces" might sound like "simulate reality". It isn't. The goal is believability, not realism.</p>
+
+<p><strong>Realism</strong> is copying how the real world works, in detail. It's expensive, it's often not fun, and it's frequently not even what players expect, because real life is full of tedious things nobody wants to experience in a game.</p>
+
+<p><strong>Believability</strong> is the world making sense on its own terms. Things behave consistently. Causes lead to effects the player can understand. There are no magic rules that apply to some things and not others for no reason. A believable world can have flying castles and plasma cannons, as long as they follow the world's own laws.</p>
+
+<p>Why does believability matter so much? Because it meets needs: clarity (understanding how the world works), safety (being able to predict it), and freedom (being able to act in it with confidence). A believable world lets players form plans and use their own judgement. An inconsistent one makes every plan a guess, and players stop trying. Notice also that believability is what makes framework-driven design possible: forces only produce sensible results if the rules are consistent.</p>
+
+<h3 id="player-first">The player comes first</h3>
+
+<p>When realism and the player's experience pull in different directions, the player wins, every time. Override realism wherever it would make the game worse to play. If a contrivance is needed, it should always be in the player's favor.</p>
+
+<ul>
+<li><strong>Favor convenience over realism.</strong> Real soldiers can't carry fifty grenades. If carrying fifty grenades makes the game better for its purpose, let them, and find a believable reason (a clever backpack, a supply drone), or just don't draw attention to it.</li>
+<li><strong>Use abstraction.</strong> Simplify. Remove middlemen. Omit the unimportant. A game about running a starship doesn't need the crew to use the toilet. It needs the parts of running a starship that meet the game's purpose, presented in a way that keeps the feel of the whole.</li>
+<li><strong>Design by necessity.</strong> Add a system because the purpose needs it, not because reality has it. Reality has everything. Your game has room for only what matters.</li>
+</ul>
+
+<p>Real-world knowledge is still enormously useful, as <a href="c21-foundations-before-content.html">Chapter 21</a> showed. It's a library of believable rules you can borrow from. The trick is to borrow the rules that serve the purpose and leave the rest. Piggybacking on reality wholesale is limiting. Picking from it intelligently is powerful.</p>
+</section>
+
+<section id="no-arbitrary-limits">
+<h2 id="natural-limits">Natural limits, not arbitrary ones</h2>
+
+<p>The same thinking applies to limits. When you need to stop the player from going somewhere or doing something, use the world's own laws, never an arbitrary measure.</p>
+
+<ul>
+<li><strong>No invisible walls.</strong> Don't block the player with an invisible barrier or by quietly disabling their abilities. Design the environment and the player's abilities so the limits come naturally and intuitively: a cliff too steep to climb, water too deep to cross without a boat, cold that kills without the right gear. Never use a measure that wouldn't make sense if it were real.</li>
+<li><strong>If the player has a gun, they can shoot anyone with it.</strong> Including an important character the story depends on. Design the story as if a random lightning bolt could strike anyone at any moment. Make the game still completable if a key character dies, with a different ending that reflects it. Don't make the player instantly fail because they did something against the script. Give them a branch where they went their own way, and let their ending reflect it.</li>
+<li><strong>Use the systems you built.</strong> If the game has destructible terrain, a buy menu that can drop anything anywhere, or characters that can carry anything, then build the levels, campaigns and stories to embrace those systems, not to cut them down so they barely matter. Don't build destructible terrain and then be too timid to let it matter because some scripted moment would be ruined if the player blew a hole around it.</li>
+</ul>
+
+<p>That last point is about ego, and it's worth being honest about. When a developer suppresses their own game's systems to force a specific scripted moment, they're meeting their own need (to have the player see the moment exactly as imagined) at the expense of the player's. The result is ludonarrative dissonance: the story says one thing while the systems say another. The game's systems promise freedom, and the script takes it away. If you want to provide tightly controlled experiences, a non-interactive medium like a film, a comic or a book does that far better. If you're making a game, let the game be a game.</p>
+</section>
+
+<section id="better-business">
+<h2 id="throwaway-is-worse-business">Throwaway is worse business, too</h2>
+
+<p>The throwaway model doesn't even benefit the developer. It takes forever to make a game that gives momentary entertainment, is sold once (often at a discount), and has a narrow window in which it can be marketed and sold at all. A throwaway game can be so shallow that watching ten minutes of someone else playing it feels like enough to be "done" with it, even when it's free. I can often glance at one and think "I get it", with no wish to play it.</p>
+
+<p>It also feeds the idea that games are nonsense: useless, a waste of time, with no real benefit to anyone. Unfortunately that's true for most games, because they were designed by a mindset that sees games as nothing more than throwaway thrills.</p>
+
+<p>Once a developer sees that a game can be more than that, they gain far more than better games. Framework-driven games give players more play from less content, and every addition multiplies everything that came before. That means healthier careers, steadier income and an effort-to-outcome ratio that finally makes sense. The next two chapters show how.</p>
+</section>
+</article>

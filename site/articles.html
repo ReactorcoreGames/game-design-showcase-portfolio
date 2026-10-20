@@ -70,6 +70,12 @@
         .featured h2 a::after { content: ""; position: absolute; inset: 0; }
         .featured p { color: var(--text-dim); max-width: 70ch; }
         @media (max-width: 640px) { .featured { grid-template-columns: 1fr; } }
+        /* The book's panel runs on its own green, with the green logo variant. */
+        .book-feature { --c: var(--tint-green); }
+        .book-feature .eyebrow { color: var(--c); }
+        .book-feature .logo.lit { filter: drop-shadow(0 0 10px rgba(57, 255, 90, 0.5)) drop-shadow(0 0 30px rgba(57, 255, 90, 0.22)); }
+        .book-feature .btn-primary { --c: var(--tint-green); color: #021a06; }
+        .book-feature .btn-primary:hover { --edge: #b4ffc2; background-color: #b4ffc2; }
 
         .shelf { padding: 3rem 0 0.5rem; }
         .shelf-head { margin-bottom: 1.2rem; }
@@ -119,6 +125,7 @@
         <nav class="site-nav" aria-label="Main">
             <a class="nav-optional" href="./#designs">Designs</a>
             <a class="nav-optional" href="articles.html" aria-current="page">Articles</a>
+            <a class="nav-optional" href="book/">Book</a>
             <a class="nav-optional" href="aal/">Universe</a>
             <a class="nav-keep" href="links.html">Links</a>
             <a class="btn btn-sm nav-keep" href="hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
@@ -133,6 +140,15 @@
             <p>Every design in this portfolio rests on the ideas in these articles: that games are satisfiers of real human needs, that a game can keep giving through an infinite metagame instead of ending, and that the industry's defaults are worth questioning.</p>
             <p>They're long-form and opinionated, written for designers, developers, employers, and anyone who wants games to be more than a way to pass time.</p>
         </section>
+        <article class="featured book-feature panel">
+            <img class="logo pixel lit" src="book/book-logo.png" alt="" width="86" height="86">
+            <div>
+                <p class="eyebrow">The book · free to read online</p>
+                <h2><a href="book/">Game Design Technology: The Holy Grail of Fun</a></h2>
+                <p>The ideas behind these articles, gathered into one method and taken all the way through: why fun comes from meeting human needs, how good intentions still go wrong, and how to design, build and share a game that meets those needs. 34 chapters, one per page.</p>
+                <span class="btn btn-primary" aria-hidden="true">Read the book</span>
+            </div>
+        </article>
         <div id="featured"></div>
         <div id="shelves"></div>
         <noscript><p>This catalog needs JavaScript to display. The articles are also listed on <a href="https://www.patreon.com/ReactorcoreGames">Patreon</a>.</p></noscript>
