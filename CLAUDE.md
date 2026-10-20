@@ -31,7 +31,7 @@ site/                  THE PUBLISHED SITE. Only this folder is deployed.
 book/
   chapters/            THE BOOK'S TEXT: one HTML fragment per page (conventions and order in book/README.md)
   fonts/               IBM Plex Sans for the offline edition (the site loads it from Google Fonts)
-  release/             itch.io material: readme.md (goes in the zip), promo.md (store page text), epub-cover.jpg,
+  release/             itch.io material: readme.md (goes in the zip), epub-cover.jpg,
                        promo/ (cover, thumbnail, screenshots, from tools/book_promo.py)
 designs/
   MANIFEST.md          source of truth: which design feeds which page, slugs, status

@@ -4,7 +4,7 @@
 
 Each file in `chapters/` is one page of the book, written once as an HTML fragment: just the content, no `<html>`, `<head>`, navigation or styles. The online edition (`site/book/`, D7) and the offline zip and EPUB (`tools/book.py`, D8) both wrap these same files, so this folder is the only place the text lives.
 
-After changing the text: `python tools/book.py build` for the site, and `python tools/book.py release` (or `build_release.bat`) for new itch.io downloads in `dist/`. `release/` holds the itch.io material (the zip's readme, the store page text in `promo.md`, the images); `python tools/book_promo.py` redraws the images, which only matters if the look or the chapter titles change. `fonts/` is IBM Plex Sans, which the offline edition carries because the site gets it from Google Fonts.
+After changing the text: `python tools/book.py build` for the site, and `python tools/book.py release` (or `build_release.bat`) for new itch.io downloads in `dist/`. `release/` holds the itch.io material (the zip's readme and the images; the store page text is in Reactorcore's `wip/book-promo.md`); `python tools/book_promo.py` redraws the images, which only matters if the look or the chapter titles change. `fonts/` is IBM Plex Sans, which the offline edition carries because the site gets it from Google Fonts.
 
 ## Fragment conventions
 

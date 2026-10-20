@@ -62,10 +62,9 @@ WORDS_PER_MINUTE = 230               # same as tools/articles.py
 TITLE = "Game Design Technology"
 SUBTITLE = "The Holy Grail of Fun"
 FULL_TITLE = f"{TITLE}: {SUBTITLE}"
-# The offline edition's store page is made once the download exists (D8). Until then this points to
-# the itch.io profile, which shows the rest of the catalog anyway.
-ITCH_URL = "https://reactorcore.itch.io/"
-ITCH_LABEL = "coming to itch.io"
+# The offline edition's store page.
+ITCH_URL = "https://reactorcore.itch.io/game-design-technology-the-holy-grail-of-fun"
+ITCH_LABEL = "on itch.io"
 
 # Reading order: (group id, group label, fragment stems). A part's label is taken from its opener
 # page ("Part I · The Common Mistake"), so only front and back matter name themselves here.
@@ -373,9 +372,9 @@ def edition_panel(ed: Edition) -> str:
                     <span class="icon" style="--icon: {ed.icon("open-book-lorc")}" aria-hidden="true"></span>
                     <div>
                         <p class="label">Offline edition</p>
-                        <p>A download of the whole book, to keep and read without a connection, is coming to itch.io. This online edition stays free to read.</p>
+                        <p>A download of the whole book, to keep and read without a connection, is on itch.io. This online edition stays free to read.</p>
                     </div>
-                    <a class="btn" href="{ITCH_URL}" target="_blank" rel="noopener">reactorcore.itch.io ↗</a>
+                    <a class="btn" href="{ITCH_URL}" target="_blank" rel="noopener">Get it on itch.io ↗</a>
                 </aside>"""
 
 
