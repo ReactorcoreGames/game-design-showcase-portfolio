@@ -30,6 +30,9 @@ site/                  THE PUBLISHED SITE. Only this folder is deployed.
     thumbnails/        <prefix>_2_vignette_thumb.jpg (nexus cards)
 book/
   chapters/            THE BOOK'S TEXT: one HTML fragment per page (conventions and order in book/README.md)
+  fonts/               IBM Plex Sans for the offline edition (the site loads it from Google Fonts)
+  release/             itch.io material: readme.md (goes in the zip), promo.md (store page text), epub-cover.jpg,
+                       promo/ (cover, thumbnail, screenshots, from tools/book_promo.py)
 designs/
   MANIFEST.md          source of truth: which design feeds which page, slugs, status
   standby/             designs awaiting a page
@@ -49,7 +52,10 @@ image-prompts/         <slug>.json image specs (+ legacy/ old prompt txts)
 tools/images.py        spec -> BAIG -> resized JPEGs + thumbnails in site/
 tools/sitemap.py       rebuilds site/sitemap.xml from site/projects.js, site/articles.js and site/book/
 tools/articles.py      Google Docs exports (assets/gd articles raw/) -> site/articles/ pages + WebP images
-tools/book.py          book/chapters/ -> site/book/ (contents + one page per chapter); D8 adds the offline zip + EPUB
+tools/book.py          book/chapters/ -> site/book/ (build), and the itch.io zip + EPUB into dist/ (release)
+tools/book_promo.py    renders book/release/ images with headless Edge, then reruns the release
+build_release.bat      double-click wrapper for `python tools/book.py release`
+dist/                  (gitignored) release builds
 tools/brand.py         fonts, logo/favicons and icon masks from assets/ into site/
 archive/               unused alternate images
 assets/                (gitignored) raw source material: fonts, game-icons pack, identity images,

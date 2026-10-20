@@ -21,3 +21,6 @@ assets/
 
 # Reactorcore's working notes
 wip/
+
+# Release builds (python tools/book.py release)
+dist/

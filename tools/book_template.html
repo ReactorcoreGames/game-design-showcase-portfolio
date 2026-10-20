@@ -8,52 +8,19 @@
 
     <meta name="description" content="$description">
     <meta name="author" content="Reactorcore">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="$url">
-
-    <meta property="og:type" content="$og_type">
-    <meta property="og:site_name" content="Reactorcore Games">
-    <meta property="og:title" content="$og_title">
-    <meta property="og:description" content="$description">
-    <meta property="og:url" content="$url">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ReactorcoreDev">
-    <meta name="twitter:title" content="$og_title">
-    <meta name="twitter:description" content="$description">
-    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
-
-    <script type="application/ld+json">
-$ld_json
-    </script>
-
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="../favicon.ico" sizes="32x32">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="manifest" href="../site.webmanifest">
-    <meta name="theme-color" content="#040b16">
-$prev_next_links
-    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../theme.css">
-    <link rel="stylesheet" href="book.css">
-    <script src="../fx.js" defer></script>
+$meta
+$head_assets
 </head>
 <body class="$body_class">
     <header class="site-header">
-        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <a class="brand" href="$site"><img class="logo" src="${assets}logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
         <nav class="site-nav" aria-label="Main">
-            <a class="nav-optional" href="../#designs">Designs</a>
-            <a class="nav-optional" href="../articles.html">Articles</a>
-            <a class="nav-optional" href="./" aria-current="page">Book</a>
-            <a class="nav-optional" href="../aal/">Universe</a>
-            <a class="nav-keep" href="../links.html">Links</a>
-            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+            <a class="nav-optional" href="${site}#designs">Designs</a>
+            <a class="nav-optional" href="${site}articles.html">Articles</a>
+            <a class="nav-optional" href="$home" aria-current="page">Book</a>
+            <a class="nav-optional" href="${site}aal/">Universe</a>
+            <a class="nav-keep" href="${site}links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="${site}hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
         </nav>
     </header>
 
@@ -62,12 +29,12 @@ $main
     <footer class="site-footer">
         <div class="wrap">
             <div>
-                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="./">Contents</a></p>
-                <p>Offline edition: <a href="$itch_url" target="_blank" rel="noopener">coming to itch.io</a></p>
-                <p>All my links: <a href="../links.html">every link in one place</a></p>
+                <p><cite>Game Design Technology: The Holy Grail of Fun</cite> by Reactorcore · <a href="$home">Contents</a></p>
+                <p>$footer_edition</p>
+                <p>All my links: <a href="${site}links.html">every link in one place</a></p>
             </div>
             <div>
-                <p>Reactorcore Games · <a href="../">Back to the designs</a></p>
+                <p>Reactorcore Games · <a href="$site">Back to the designs</a></p>
                 <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
                 <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
             </div>
