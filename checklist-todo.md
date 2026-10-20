@@ -58,7 +58,7 @@ The full plan, reasons and decisions are in `workflow/site-plan.md`. Read it bef
 - [x] Back matter (b1–b5): needs at a glance, question kit, padding checklist, further reading, glossary
 - [x] D8: offline HTML zip plus EPUB build, promo images and itch.io page text (`build_release.bat`, `book/release/`)
 - [x] D8: publish the itch.io page, then set `ITCH_URL` and `ITCH_LABEL` in `tools/book.py` and rebuild the site
-- [ ] D9: refresh `2a-bible.md` and `2b-bible.md` from the finished book
+- [x] D9: refresh `2a-bible.md` and `2b-bible.md` from the finished book
 
 ## 2. Pilot: set the quality bar
 

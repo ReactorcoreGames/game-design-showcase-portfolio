@@ -38,8 +38,9 @@ designs/
   standby/             designs awaiting a page
   done/                designs that have a page (plus a few retired ones, see manifest)
 reference/
-  bible/               Reactorcore's design mentality bible (2a + 2b), read for every page,
-                       plus game-design-technology-original.html, the unfinished book it came from
+  bible/               the design bible (2a mindset + 2b technical side and page guidance), the book's
+                       short form, read for every page,
+                       plus game-design-technology-original.html, the book's unfinished original
   lore/                AAL universe lore, for AAL-set projects only
   outreach/            article links, contact links, revshare/hire-me post texts
 workflow/
