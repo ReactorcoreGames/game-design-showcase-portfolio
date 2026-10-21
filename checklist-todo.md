@@ -87,7 +87,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Justice Will Glass Them
 - [x] Mafia_Takedown
 - [x] Megalodon
-- [ ] Mosh_Pit_Mayhem ⚑
+- [x] Mosh_Pit_Mayhem ⚑
 - [ ] MutantLoveQuest ⚑
 - [ ] Planetary Ring Miner
 - [ ] Poo Storm Janitor Powersuit

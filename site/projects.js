@@ -241,8 +241,8 @@ window.PROJECTS = [
     page: "Mosh_Pit_Mayhem.html", prefix: "moshpit",
     title: "Mosh Pit Mayhem", subtitle: "Heavy Metal Brawler",
     icon: "guitar-lorc", tint: "magenta",
-    blurb: "A ragdoll brawler set at heavy metal concerts. Momentum-driven fights in microgravity mosh pits, with healing between songs.",
-    genres: ["ragdoll", "action"], tags: ["brawler", "music", "heavy metal"],
+    blurb: "A mouse-only human demolition derby in front of a metal stage. Momentum decides who gets hurt, limbs fly, medics sew everyone back together between songs, and the floor becomes a painting of the night.",
+    genres: ["ragdoll", "action"], tags: ["brawler", "heavy metal", "momentum", "mouse only"],
     status: "concept", added: "2025-10-08"
   },
   {

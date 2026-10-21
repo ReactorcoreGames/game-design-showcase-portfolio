@@ -1,0 +1,21 @@
+{
+  "slug": "Mosh_Pit_Mayhem-mini",
+  "out": "site/projects/mini/moshpit",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Concert photograph at night, heavy metal show, crimson and purple stage light, smoke, sweat. ",
+  "notes": "Mood-only mini images for Mosh_Pit_Mayhem.html, beside the lore, game layer and feature text. SDXL (free): gen Mosh_Pit_Mayhem-mini --model sdxl --max 999, then finish Mosh_Pit_Mayhem-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "pit", "ratio": "3:2", "prompt": "Long-haired metal fans slamming into each other in a mosh pit in front of a stage."},
+    {"n": 2, "name": "band", "ratio": "3:2", "prompt": "A heavy metal band playing on stage, guitarist headbanging, drummer behind, smoke and red lights."},
+    {"n": 3, "name": "medics", "ratio": "3:2", "prompt": "Paramedics in a festival medical tent stitching up a grinning long-haired metal fan on a cot."},
+    {"n": 4, "name": "song", "ratio": "3:2", "prompt": "A circle pit seen from above, fans running in a ring and crashing into each other."},
+    {"n": 5, "name": "concert", "ratio": "3:2", "prompt": "A packed concert hall at night, a sea of raised horns hands in front of a blazing stage."},
+    {"n": 6, "name": "tour", "ratio": "3:2", "prompt": "An old tour bus driving down a highway at night toward the lights of a city."},
+    {"n": 7, "name": "break", "ratio": "3:2", "prompt": "Sweaty metal fans resting against a crowd barrier between songs, drinking water."},
+    {"n": 8, "name": "barrier", "ratio": "3:2", "prompt": "A steel crowd barrier at the front of a concert, a fan leaping off it into the crowd."},
+    {"n": 9, "name": "limbs", "ratio": "3:2", "prompt": "A lost leather boot and a studded wristband lying on a dirty concert floor under red light."},
+    {"n": 10, "name": "floor", "ratio": "3:2", "prompt": "A concrete concert floor covered in dark red stains, dirt smears and footprints after the show."}
+  ]
+}
