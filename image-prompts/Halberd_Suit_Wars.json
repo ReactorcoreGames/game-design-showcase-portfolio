@@ -1,0 +1,14 @@
+{
+  "slug": "Halberd_Suit_Wars",
+  "prefix": "stellarconflict",
+  "preset": "01 Main - Digital Comic",
+  "style": "Dark military sci-fi, dramatic lighting, volumetric space fog, detailed mechanical textures. Deep navy space with olive drab armor, bright amber weapon discharges and cyan thruster flames.",
+  "notes": "Rewrite (2026-10). All five images are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated. The preset is the closest match to how they look, not the one they were made with.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide orbital shot of two chunky, heavily armored humanoid combat suits with bulky jetpack thrusters in a beam rifle duel amid an asteroid field and colony cylinders, sparking wreckage floating in zero gravity, distant planets and stations."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Close low-angle shot of two bulky humanoid mecha in melee, a glowing heat sword arcing between them, battle-damaged knight-like armor, hydraulic fluid spraying from a severed joint exploding in an orange fireball."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Three versions of a bulky humanoid mecha side by side: light armor with sleek panels, medium armor, and heavy armor with massive reinforced plating, each with its own limb armor modules and thrusters."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Heroic low-angle portrait of an imposing bulky humanoid combat suit with massive jetpack thrusters against a starfield, holding an oversized beam rifle, battle-scarred armor."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide orbital vista of a planet's surface with colonies, stations and megastructures, fleets of humanoid mecha and warships staged around them, moons and a ringed planet in the sky."}
+  ]
+}

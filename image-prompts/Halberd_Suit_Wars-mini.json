@@ -1,0 +1,21 @@
+{
+  "slug": "Halberd_Suit_Wars-mini",
+  "out": "site/projects/mini/stellarconflict",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi war film still in orbit, olive drab mecha, amber beam light. ",
+  "notes": "Mood-only mini images for Halberd_Suit_Wars.html, beside the lore, game layer and feature text. SDXL (free): gen Halberd_Suit_Wars-mini --model sdxl --max 999, then finish Halberd_Suit_Wars-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "colonies", "ratio": "3:2", "prompt": "Giant rotating colony cylinders floating in space above a blue planet, a moon behind them."},
+    {"n": 2, "name": "suit", "ratio": "3:2", "prompt": "A humanoid war machine as tall as a building standing in a hangar, holding a huge rifle."},
+    {"n": 3, "name": "arena", "ratio": "3:2", "prompt": "Armored humanoid robots drifting among asteroids and wrecked ships, firing glowing beams."},
+    {"n": 4, "name": "operation", "ratio": "3:2", "prompt": "A tactical map table glowing with battle positions in a dim military command room."},
+    {"n": 5, "name": "war", "ratio": "3:2", "prompt": "A grey moon with a fortified base, warships in orbit and flashes of battle in the distance."},
+    {"n": 6, "name": "briefing", "ratio": "3:2", "prompt": "Pilots in flight suits resting in a ready room between sorties, helmets on the bench."},
+    {"n": 7, "name": "limb", "ratio": "3:2", "prompt": "A robot arm bursting into a fireball in space, oil and sparks spraying from the joint."},
+    {"n": 8, "name": "pilot", "ratio": "3:2", "prompt": "A tiny astronaut with a jetpack and a bazooka floating near a wrecked giant robot."},
+    {"n": 9, "name": "squad", "ratio": "3:2", "prompt": "Three armored humanoid robots in formation boosting through space, thruster trails behind."},
+    {"n": 10, "name": "retreat", "ratio": "3:2", "prompt": "A damaged humanoid robot with one arm gone flying away from a battle toward a carrier ship."}
+  ]
+}

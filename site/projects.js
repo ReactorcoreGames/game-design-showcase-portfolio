@@ -144,9 +144,9 @@ window.PROJECTS = [
   {
     page: "Halberd_Suit_Wars.html", prefix: "stellarconflict",
     title: "Halberd Suit Wars", subtitle: "Ragdoll Mecha Combat",
-    icon: "mecha-head-delapouite", tint: "blue",
-    blurb: "Physics-driven humanoid mecha duels with limb-by-limb targeting. Lose the suit and the fight goes on: pilots eject and keep fighting as fragile humans.",
-    genres: ["mecha", "ragdoll", "action"], tags: ["limb targeting", "ejection", "duels"],
+    icon: "halberd-lorc", tint: "yellow",
+    blurb: "Zero-gravity mecha slugfests in the spirit of early Gundam: armor per limb, limbs that don't come back, pilots scarcer than machines, and retreat as a real choice.",
+    genres: ["mecha", "ragdoll", "action"], tags: ["squad tactics", "ejection", "zero gravity", "war campaign"],
     status: "concept", added: "2025-10-08"
   },
   {
