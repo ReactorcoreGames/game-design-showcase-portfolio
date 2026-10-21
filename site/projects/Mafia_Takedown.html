@@ -1,775 +1,442 @@
-<!--
-Image filenames needed:
-mafiatakedown_1_title.jpg - Urban crime scene with vigilante silhouette against corrupt cityscape
-mafiatakedown_2_vignette.jpg - Ragdoll physics combat in corporate office environment with dismemberment action
-mafiatakedown_3_feature.jpg - Equipment system showing makeshift weapons and improvised armor pieces
-mafiatakedown_4_boxart.jpg - Dramatic vigilante hero pose with urban crime backdrop, 2:3 aspect ratio
-mafiatakedown_5_story.jpg - Wide overworld view of corrupt metropolitan cityscape showing corporate towers, slums, and criminal territories
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mafia Takedown: Dismemberment Ragdoll Vigilante</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Mafia Takedown is a 2D physics-based vigilante action game where players control ragdoll heroes fighting organized crime through strategic dismemberment combat and improvised weaponry. Features consequence-driven gameplay and meaningful legacy system.">
-    <meta name="keywords" content="Mafia Takedown, ragdoll vigilante, dismemberment combat, physics-based action, organized crime, tactical dismemberment, improvised weapons, vigilante justice">
+
+    <meta name="description" content="A game design concept by Reactorcore: a side-view ragdoll fighting game where one ordinary person takes on a whole criminal gang, room by room, with whatever's lying around. Armor per limb, limbs that come off, and when a vigilante falls, someone who knew them takes up the mask.">
+    <meta name="keywords" content="game design concept, ragdoll physics, vigilante, dismemberment, physics fighting, succession, soft death, Floppy Heroes inspired, Kick-Ass inspired, Reactorcore">
     <meta name="author" content="Reactorcore Games">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Mafia_Takedown.html">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Mafia Takedown: Dismemberment Ragdoll Vigilante - Reactorcore Games">
-    <meta property="og:description" content="2D physics-based vigilante action game where players control ragdoll heroes fighting organized crime through strategic dismemberment combat and improvised weaponry.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mafiatakedown_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Mafia_Takedown.html">
+
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Reactorcore Games">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:title" content="Mafia Takedown: Dismemberment Ragdoll Vigilante">
+    <meta property="og:description" content="A game design concept: take down a whole gang one room at a time in slow, physical ragdoll fights. When a vigilante falls, the mask passes on. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Mafia_Takedown.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mafiatakedown_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a masked vigilante and a man in a suit collide in mid-air in a wrecked office">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mafia Takedown: Dismemberment Ragdoll Vigilante - Reactorcore Games">
-    <meta name="twitter:description" content="2D physics-based vigilante action game where players control ragdoll heroes fighting organized crime through strategic dismemberment combat and improvised weaponry.">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Mafia Takedown: Dismemberment Ragdoll Vigilante">
+    <meta name="twitter:description" content="A game design concept: take down a whole gang one room at a time. When a vigilante falls, the mask passes on.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mafiatakedown_2_vignette.jpg">
-    <meta name="twitter:creator" content="@ReactorcoreGames">
-    <meta name="twitter:site" content="@ReactorcoreGames">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "VideoGame",
-        "name": "Mafia Takedown",
-        "alternateName": "Mafia Takedown: Dismemberment Ragdoll Vigilante",
-        "description": "2D physics-based vigilante action game where players control ragdoll heroes fighting organized crime through strategic dismemberment combat and improvised weaponry.",
-        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mafiatakedown_2_vignette.jpg",
+        "name": "Mafia Takedown: Dismemberment Ragdoll Vigilante",
+        "description": "A game design concept, not a released game: a side-view ragdoll fighting game with armor per limb and dismemberment, in which a vigilante fights through a gang's rooms to its leader, and a fallen vigilante is succeeded by someone close to them, across an endless series of towns.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Fighting", "Physics"],
+        "gamePlatform": "PC",
         "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Mafia_Takedown.html",
-        "genre": ["Action", "Vigilante", "Physics"],
-        "gameItem": "Video Game",
-        "operatingSystem": "PC",
-        "applicationCategory": "Game",
-        "author": {
-            "@type": "Organization",
-            "name": "Reactorcore Games",
-            "url": "https://reactorcore.itch.io/"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Reactorcore Games",
-            "url": "https://reactorcore.itch.io/"
-        },
-        "datePublished": "2025",
-        "inLanguage": "en-US",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "1"
-        },
-        "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mafiatakedown_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#14100d">
+
+    <link rel="preload" href="../fonts/operation-napalm-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
+        /* Mafia Takedown: rain-dark brown-black lit by sodium streetlight amber, blood red for the
+           fight, a tired newsprint cream for highlights. Operation Napalm Italic, a stencil, for the
+           title and headings, Turret Road Medium for the subtitle and kickers. */
+        @font-face { font-family: "Operation Napalm"; src: url("../fonts/operation-napalm-italic.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Turret Road"; src: url("../fonts/turret-road-medium.woff2") format("woff2"); font-display: swap; }
+
         :root {
-            --background-color: #2a2420;
-            --container-bg: #3d3328;
-            --border-color: #8b7355;
-            --text-color: #e8dcc6;
-            --accent-color: #c4a772;
-            --title-gradient-1: #d4b876;
-            --title-gradient-2: #a68b4a;
-            --title-shadow: #1a1612;
-            --subtitle-color: #9d8662;
-            --card-shadow: rgba(26, 22, 18, 0.6);
-            --highlight-color: #f2e5d1;
+            --flow-1: #14100d;
+            --flow-2: #3a2418;
+            --grid-minor: rgba(240, 210, 160, 0.04);
+            --grid-major: rgba(240, 210, 160, 0.09);
+            --p-ground: rgba(22, 17, 14, 0.95);
+            --p-panel: #221a15;
+            --p-1: #e8a93c;
+            --p-2: #e0453a;
+            --p-3: #f2e6cf;
+            --p-text: #e2d9cb;
+            --p-dim: #ad9f8c;
+            --p-line: rgba(240, 210, 160, 0.15);
+            --font-title: "Operation Napalm", "Segoe UI", sans-serif;
+            --font-sub: "Turret Road", "Segoe UI", sans-serif;
+            --shade: #0c0907;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "dying streetlight": a sodium-amber glow hums around the letters and
+           stutters out twice, the way an old streetlamp does in the rain. Dark layered shadows keep
+           it legible when the lamp is out. */
+        .p-name {
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            animation: lamp 7s linear infinite;
         }
+        @keyframes lamp {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(232, 169, 60, 0.55); }
+            61% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(232, 169, 60, 0.55); }
+            62% { color: #cfc3ae; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade); }
+            64% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(232, 169, 60, 0.7); }
+            66% { color: #cfc3ae; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade); }
+            70% { color: #cfc3ae; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade); }
+            72% { color: #fff4dc; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 30px rgba(232, 169, 60, 0.85); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: lamp-line 7s linear infinite;
+        }
+        @keyframes lamp-line {
+            0%, 61%, 100% { box-shadow: 0 0 8px rgba(224, 69, 58, 0.5); opacity: 0.9; }
+            62%, 66%, 70% { box-shadow: none; opacity: 0.45; }
+            64%, 72% { box-shadow: 0 0 14px rgba(224, 69, 58, 0.9); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 7s linear infinite; }
+        @keyframes h2-line { 0%, 61%, 100% { box-shadow: 0 0 8px rgba(232, 169, 60, 0.5); } 62%, 66%, 70% { box-shadow: none; } }
+        h2, h3 { font-weight: 400; letter-spacing: 0.03em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.08em; }
+        .p-keygroup h3 { font-family: var(--font-sub); }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, var(--background-color) 0%, #1f1c18 100%);
-            color: var(--text-color);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        .reactorcore-label {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            font-size: 12px;
-            opacity: 0.7;
-            z-index: 1000;
-        }
-
-        .reactorcore-label a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .reactorcore-label a:hover {
-            opacity: 1;
-        }
-
-        .title-section {
-            position: relative;
-            height: 600px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: url('images/mafiatakedown_1_title.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        .title-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(rgba(42, 36, 32, 0.4), rgba(26, 22, 18, 0.6));
-            z-index: 1;
-        }
-
-        .title-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            text-shadow: 3px 3px 6px var(--title-shadow), 0 0 20px rgba(212, 184, 118, 0.3);
-            color: var(--title-gradient-1);
-            animation: emberGlow 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes emberGlow {
-            0% { text-shadow: 3px 3px 6px var(--title-shadow), 0 0 15px rgba(212, 184, 118, 0.3), 0 0 25px rgba(166, 139, 74, 0.2); }
-            100% { text-shadow: 3px 3px 8px var(--title-shadow), 0 0 25px rgba(212, 184, 118, 0.5), 0 0 35px rgba(166, 139, 74, 0.3); }
-        }
-
-        .subtitle {
-            font-size: 1.8rem;
-            color: var(--subtitle-color);
-            font-weight: 300;
-            text-shadow: 2px 2px 4px var(--title-shadow);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            margin: 4rem 0;
-            padding: 2rem;
-            background: var(--container-bg);
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 24px var(--card-shadow);
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--title-gradient-1);
-            text-shadow: 2px 2px 4px var(--title-shadow), 0 0 15px rgba(212, 184, 118, 0.3);
-            animation: breathingGlow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes breathingGlow {
-            0% { text-shadow: 2px 2px 4px var(--title-shadow), 0 0 10px rgba(212, 184, 118, 0.2); }
-            100% { text-shadow: 2px 2px 4px var(--title-shadow), 0 0 20px rgba(212, 184, 118, 0.4); }
-        }
-
-        .overview-text {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cards-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .info-card {
-            background: linear-gradient(145deg, #4a4034, #3d3328);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .info-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-        }
-
-        .info-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        .controls-list {
-            background: #332d24;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            border: 1px solid var(--border-color);
-        }
-
-        .controls-list h4 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .control-item {
-            display: flex;
-            margin-bottom: 0.8rem;
-            font-family: 'Courier New', monospace;
-        }
-
-        .control-key {
-            background: var(--accent-color);
-            color: var(--background-color);
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
-            margin-right: 1rem;
-            font-weight: bold;
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .vignette-section {
-            position: relative;
-            margin: 4rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px var(--card-shadow);
-        }
-
-        .vignette-image {
-            width: 100%;
-            height: 600px;
-            background-image: url('images/mafiatakedown_2_vignette.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(42, 36, 32, 0.9);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-            max-width: 400px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        }
-
-        .vignette-quote p {
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--highlight-color);
-            margin: 0;
-        }
-
-        .story-section {
-            position: relative;
-            margin: 4rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px var(--card-shadow);
-        }
-
-        .story-image {
-            width: 100%;
-            height: 600px;
-            background-image: url('images/mafiatakedown_5_story.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .story-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(42, 36, 32, 0.9);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-            max-width: 400px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        }
-
-        .story-quote p {
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--highlight-color);
-            margin: 0;
-        }
-
-        .game-layers {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .layer-card {
-            background: linear-gradient(135deg, #443a30, #3d3328);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            border-left: 6px solid var(--accent-color);
-            transition: transform 0.3s ease;
-        }
-
-        .layer-card:hover {
-            transform: translateX(10px);
-        }
-
-        .layer-card h4 {
-            color: var(--accent-color);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, #4a4034, #3d3328);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .feature-card h4 {
-            color: var(--title-gradient-1);
-            font-size: 1.6rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 1px 1px 3px var(--title-shadow);
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 600px;
-            background-image: url('images/mafiatakedown_3_feature.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
-            margin: 2rem 0;
-            position: relative;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        .feature-quote {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            background: rgba(42, 36, 32, 0.95);
-            padding: 1rem 1.5rem;
-            border-radius: 6px;
-            border-left: 3px solid var(--accent-color);
-            max-width: 350px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
-        }
-
-        .feature-quote p {
-            font-style: italic;
-            color: var(--highlight-color);
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin: 4rem 0;
-            align-items: center;
-        }
-
-        .boxart-image {
-            width: 100%;
-            aspect-ratio: 2/3;
-            background-image: url('images/mafiatakedown_4_boxart.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 12px;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-        }
-
-        .boxart-image:hover {
-            transform: scale(1.02);
-        }
-
-        .boxart-content {
-            background: var(--container-bg);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 24px var(--card-shadow);
-        }
-
-        .boxart-title {
-            font-size: 2rem;
-            color: var(--title-gradient-1);
-            margin-bottom: 1.5rem;
-            text-shadow: 1px 1px 3px var(--title-shadow);
-        }
-
-        .footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: var(--container-bg);
-            margin-top: 4rem;
-            border-top: 2px solid var(--border-color);
-        }
-
-        .footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.3rem;
-            }
-            
-            .cards-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .vignette-quote, .feature-quote, .story-quote {
-                position: relative;
-                bottom: auto;
-                left: auto;
-                margin-top: 1rem;
-                max-width: 100%;
-            }
-        }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1.05rem; } }
     </style>
 </head>
 <body>
-    <div class="reactorcore-label">
-        <a href="https://www.patreon.com/ReactorcoreGames" target="_blank">Reactorcore's Personal Game Design Project</a>
-    </div>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <header class="title-section">
-        <div class="title-overlay"></div>
-        <div class="title-content">
-            <h1>Mafia Takedown</h1>
-            <div class="subtitle">Dismemberment Ragdoll Vigilante</div>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/mafiatakedown_1_title.jpg" alt="A masked figure in dark gear stands on a fire escape above a rainy city street at night, police cars parked below and office towers fading into the fog." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Mafia Takedown</span><span class="p-sub">Dismemberment Ragdoll Vigilante</span></h1>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <section class="section">
-            <h2>🔫 Game Overview</h2>
-            <div class="overview-text">
-                <p><strong>Mafia Takedown</strong> is a 2D physics-based vigilante action game where players control ragdoll heroes fighting organized crime through strategic dismemberment combat. Navigate urban environments as an endless stream of vigilantes, each continuing the mission when their predecessor falls.</p>
-                <br>
-                <p>Master tactical positioning and improvised weaponry to dismantle criminal organizations piece by piece. Every battle matters in this consequence-driven experience where fallen heroes inspire others to take up the fight.</p>
-                <br>
-                <p>Features procedurally generated crime syndicates, realistic physics-based combat, and a meaningful legacy system that transforms defeat into motivation for the next hero in line.</p>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/fedora-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
             </div>
-        </section>
-
-        <div class="cards-row">
-            <div class="info-card">
-                <h3>🎯 Target Audience</h3>
-                <p><strong>Action Enthusiasts</strong> who appreciate physics-based combat systems and strategic dismemberment mechanics. Players seeking meaningful consequence in their gameplay choices.</p>
-                <br>
-                <p><strong>Tactical Gamers</strong> who enjoy positioning-based combat over button-mashing, with emphasis on equipment management and environmental awareness.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>⚖️ Game's Purpose</h3>
-                <p><strong>Cathartic Justice:</strong> Provides a safe outlet for frustrations with corruption and injustice through vigilante fantasy gameplay.</p>
-                <br>
-                <p><strong>Mastery & Growth:</strong> Develops tactical thinking, spatial awareness, and resource management skills through challenging physics-based scenarios.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>🔥 Core Concept</h3>
-                <p><strong>Consequence-Driven Combat:</strong> Every action has permanent results - lost limbs stay lost, broken weapons stay broken, fallen heroes inspire successors.</p>
-                <br>
-                <p><strong>Strategic Dismemberment:</strong> Victory requires tactical removal of opponent capabilities through precise physics-based interactions.</p>
-            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
         </div>
 
-        <div class="story-section">
-            <div class="story-image">
-                <div class="story-quote">
-                    <p>"A city where power flows to those who seize it through violence and corruption. Where justice is a commodity only the powerful can afford."</p>
-                </div>
-            </div>
-        </div>
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/domino-mask-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Mafia Takedown is a side-view ragdoll fighting game about one ordinary person who decides a gang has run their town for long enough, and goes in through the front door alone. Room by room, with whatever's lying around, they fight their way up to the people at the top.</p>
+            <p>Every fighter is a floppy paper doll with armor on each body part. You win a fight by bumping your weapon or your boots into the right part of the right person: <strong>armor breaks first, then limbs come off</strong>, and a lost head or chest ends it. It's slow, physical and tricky, and the vigilante will very likely die along the way.</p>
+            <p>That's not the end. <strong>When a vigilante falls, someone who knew them takes up the mask</strong> and starts again, until the gang is gone. The game is a spinoff of Reactorcore's Floppy Heroes remix, a ragdoll gladiator game, retold in the spirit of Kick-Ass and Sin City, with the succession of The Phantom comics.</p>
 
-        <section class="section">
-            <h2>📜 Lore & Story</h2>
-            <div class="overview-text">
-                <p><strong>Metro Babylon</strong> - once a symbol of progress and prosperity, now a sprawling metropolis rotting from within. Three decades of unchecked corporate power have transformed the city into a feudal state where criminal organizations operate as shadow governments, each claiming territory through intimidation and violence.</p>
-                <br>
-                <p><strong>The System Has Failed.</strong> Police departments have been systematically defunded and corrupted. Courts serve the highest bidder. Politicians auction their votes to the most generous campaign contributors. The legitimate economy has withered as organized crime infiltrates every sector - construction, waste management, transportation, hospitality, even healthcare.</p>
-                <br>
-                <p><strong>Corporate Towers and Crime Families</strong> divide the city between them. In the gleaming financial district, white-collar criminals launder billions through shell companies and offshore accounts. In the industrial sectors, traditional mob families control shipping ports and manufacturing. In the sprawling suburbs, street gangs push drugs and run protection rackets while corrupt police look the other way.</p>
-                <br>
-                <p><strong>What's at Stake:</strong> The soul of an entire generation. Children grow up believing that corruption is normal, that violence is the only language of power, that honest work is for suckers. Small business owners pay tribute to multiple crime families just to keep their doors open. Families live in fear, neighborhoods decay, and hope dies one extorted payment at a time.</p>
-                <br>
-                <p><strong>But Heroes Still Rise.</strong> In this urban wasteland, ordinary people occasionally reach their breaking point. A shopkeeper whose family is threatened. A teacher whose students are being recruited by gangs. A veteran who came home to find their community destroyed by drugs and corruption. When the system offers no justice, some decide to create their own.</p>
-                <br>
-                <p>These impromptu vigilantes rarely survive their first mission. But their sacrifice inspires others. A fallen hero's brother picks up the fight. A neighbor who witnessed their courage finds unexpected strength. Word spreads through encrypted messaging apps and underground networks - someone is finally fighting back.</p>
-                <br>
-                <p><strong>The War Has Begun.</strong> Not between armies or nations, but between organized evil and disorganized good. Between those who profit from suffering and those who refuse to accept it. Every campaign represents one small corner of the city where ordinary people decided they'd had enough.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>🕹️ Controls & Interface</h2>
-            <div class="controls-list">
-                <h4>Mouse + Keyboard Controls</h4>
-                <div class="control-item">
-                    <div class="control-key">M1</div>
-                    <div>Move character toward mouse cursor</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">M2</div>
-                    <div>Rotate character to face cursor direction</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">E / M4</div>
-                    <div>Activate equipped item functions</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Q / M5</div>
-                    <div>Throw current item / Pick up nearby items</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">W / Shift</div>
-                    <div>Boost mode: Accelerate faster toward cursor</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Wheel</div>
-                    <div>Zoom in/out with tactical slow-motion</div>
-                </div>
-            </div>
-            <p><strong>Camera System:</strong> Dynamic Soldat-style camera that follows the action between player and enemies, with intelligent zoom and positioning that keeps combat visible while respecting arena boundaries.</p>
-            <br>
-            <p><strong>Interaction Model:</strong> Direct mouse-driven character manipulation creates intuitive connection between player intent and ragdoll movement, emphasizing spatial awareness and positioning strategy.</p>
-        </section>
-
-        <div class="vignette-section">
-            <div class="vignette-image">
-                <div class="vignette-quote">
-                    <p>"Every collision matters. Every limb lost changes everything. One mistake, one perfect strike - that's the difference between justice and becoming another casualty."</p>
-                </div>
-            </div>
-        </div>
-
-        <section class="section">
-            <h2>🏗️ Game Layers</h2>
-            <div class="game-layers">
-                <div class="layer-card">
-                    <h4>1. Moment-to-Moment Combat</h4>
-                    <p>Physics-driven ragdoll battles where players maneuver their vigilante through microgravity arenas, strategically colliding with criminal opponents to systematically remove their armor, weapons, and limbs. Every impact creates realistic knockback and recoil forces that skilled players can exploit for positioning advantages.</p>
-                </div>
-
-                <div class="layer-card">
-                    <h4>2. Mission Campaigns (Low Metagame)</h4>
-                    <p>Procedurally generated gauntlets of 5-15 arena battles against specific criminal organizations. Each campaign represents one vigilante's complete mission to dismantle a crime syndicate. Success means the organization is destroyed forever; failure means the vigilante dies and a new hero must attempt the same mission from the beginning.</p>
-                </div>
-
-                <div class="layer-card">
-                    <h4>3. City-Wide Legacy (High Metagame)</h4>
-                    <p>An endless cycle of vigilante heroism where successful missions are commemorated in a Hall of Fame, while fallen heroes inspire new champions from their community - family members, friends, activists, and strangers motivated by the original vigilante's sacrifice. Each new hero brings different equipment and fighting styles.</p>
-                </div>
-
-                <div class="layer-card">
-                    <h4>4. Practical Play Flow</h4>
-                    <p>Quick startup leads directly into character customization and mission selection. Individual battles last 2-5 minutes with immediate restart options. Complete campaigns can be finished in 30-90 minutes, with natural break points between missions. Failed campaigns immediately offer replacement hero selection and loadout customization.</p>
-                </div>
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love physics fights where every hit is a real collision (Toribash, Stair Dismount, Floppy Heroes), and the old fantasy of the bystander who finally stands up to the bullies.</p>
+                    <p>They're tired of two kinds of death: the reload that makes failure meaningless, and the <strong>permadeath that wipes everything</strong> and teaches them to stop taking risks.</p>
+                    <p>Controls are mostly the mouse, plus a few keys. Fights are slow and deliberate, so positioning matters far more than reflexes.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/scales-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Challenge and mastery:</strong> reading armor, angles and recoil, and outlasting a whole building of opponents.</p>
+                    <p><strong>Meaning:</strong> deaths are permanent and they count. Each fallen vigilante is remembered by name, and the one who finishes the job does it for all of them.</p>
+                    <p><strong>Protection:</strong> force used to free a town from people who hurt it, not to punish anyone.</p>
+                    <p>It avoids draining <strong>autonomy</strong> (you pick which towns to help and how hard the first attempt is) and <strong>fairness</strong> (the same rules bind everyone, and the gang is predictable on purpose).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/candle-flame-lorc.png)"></span>Core concept</h3>
+                    <p>Most games treat the hero's death in one of two ways: it never happened (reload), or nothing you did matters any more (start from scratch).</p>
+                    <p>Here, <strong>death is real and the mission continues</strong>. The vigilante stays dead, the thugs they took down stay down, and the next person carries on from the front door.</p>
+                    <p>Each takedown is a complete story with an ending. When it's done, another town needs someone.</p>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <h2>🎮 Game Modes</h2>
-            <div class="cards-row">
-                <div class="info-card">
-                    <h3>⚔️ Legacy Campaign (Default)</h3>
-                    <p><strong>Core Experience:</strong> The main mode where players tackle procedurally generated criminal organizations with permadeath consequences. When a vigilante falls, their story ends but inspires a new hero to continue the fight.</p>
-                    <br>
-                    <p><strong>Session Length:</strong> Variable campaigns (5-15 battles) with natural stopping points. Perfect for both quick tactical sessions and extended justice-dealing marathons.</p>
-                </div>
+        <figure class="p-shot">
+            <img src="../projects/images/mafiatakedown_5_story.jpg" alt="A hazy city at dusk seen from above: glass towers, a smoking factory, low blocks covered in graffiti, police lights and small fires scattered through the streets." width="1280" height="720" loading="lazy">
+            <figcaption>"Every town is generated with its own name, and every one has a gang with its own name running it."</figcaption>
+        </figure>
 
-                <div class="info-card">
-                    <h3>🏟️ Arena Practice</h3>
-                    <p><strong>Skills Development:</strong> Single-battle scenarios for mastering combat mechanics, testing equipment combinations, and learning advanced physics techniques without campaign consequences.</p>
-                    <br>
-                    <p><strong>Tactical Training:</strong> Experiment with different vigilante builds and fighting styles in controlled environments before committing to full campaigns.</p>
-                </div>
-            </div>
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/modern-city-delapouite.png)"></span>Lore and story</h2>
+            <h3>Towns with a problem</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/01-town.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Every story happens in a different town, each with its own name, and each run by its own gang with its own name. The gangs aren't any real-world group. They're defined by what they do: protection rackets, threats, front businesses, people who are afraid to talk. They hide in corporate towers, office floors, apartment blocks, malls and fenced compounds.</p>
+
+            <h3>Someone who's had enough</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/02-alias.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The vigilante is nobody special: a person with a mask, an alias and a grudge on behalf of their town. They're the only one brave enough, or angry enough, to try taking the whole organization apart on their own.</p>
+
+            <h3>The mask passes on</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/03-mask.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>If the vigilante dies, the alias doesn't. Someone close to them puts on the mask out of respect and carries on: their mom or dad, a brother, sister or cousin, an uncle, a grandparent, their own grown child, a friend, a friend of a friend, a classmate, a colleague, an inspired fan, a local activist, a police officer or a paramedic who saw too much, a defector from the gang itself, a bored teenager, a local weirdo, or a total stranger nobody can explain.</p>
+            <p>Each successor has their own name and looks, and some dress like the original. To the gang it seems as if the vigilante can't be killed.</p>
+
+            <h3>The job right now</h3>
+            <p>Get through the gang's turf, room by room, to the last room and the people in charge. Once they're gone, the town is free, the vigilante retires, and that story is over for good.</p>
         </section>
 
-        <section class="section">
-            <h2>⚙️ Game Features & Mechanics</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>🎯 Strategic Ragdoll Physics Combat</h4>
-                    <p>Combat centers on realistic collision-based interactions where every body part, armor piece, and weapon has individual hit points and physics properties. Players must carefully position their ragdoll vigilante to strike opponents' weak points while protecting their own vulnerable areas.</p>
-                    <br>
-                    <p><strong>Collision Dynamics:</strong> Every impact generates knockback and recoil forces that experienced players learn to chain together for devastating combination attacks. Weapon-to-weapon collisions damage both items without harming characters, while body-to-body impacts hurt both parties equally.</p>
-                    <br>
-                    <p><strong>Tactical Dismemberment:</strong> Victory comes through systematic removal of opponent capabilities - destroying armor to expose vulnerable limbs, dismembering weapon-holding hands, or landing precise headshots. Each lost limb fundamentally changes combat dynamics.</p>
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>The fights are floaty on purpose. As in Floppy Heroes, fighters drift through each room as if gravity were turned way down, so you steer your ragdoll with the mouse and every fight is about momentum, angles and which part of you arrives first.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>Mouse 1</dt><dd>Move toward the pointer</dd></div>
+                        <div><dt>Mouse 2</dt><dd>Turn to face the pointer</dd></div>
+                        <div><dt>Let go</dt><dd>Air brake: drift to a stop</dd></div>
+                    </dl>
                 </div>
-
-                <div class="feature-card">
-                    <h4>🛡️ Improvised Equipment System</h4>
-                    <p>Vigilantes fight with civilian-grade and makeshift weapons: kitchen knives, baseball bats, stolen police batons, improvised armor from construction materials, and scavenged gang weapons. Everything has limited durability and may break mid-battle.</p>
-                    <br>
-                    <p><strong>Equipment Properties:</strong> Each item has unique weight, damage, durability, and physics characteristics. Heavy weapons hit harder but reduce mobility, while light weapons offer speed at the cost of stopping power. Armor pieces provide protection but add weight and bulk.</p>
-                    <br>
-                    <p><strong>Scavenging System:</strong> Players constantly acquire new gear from defeated enemies and arena spawns, forcing rapid adaptation to new fighting styles. A crowbar-wielding vigilante might finish the battle dual-wielding switchblades after their original weapon breaks.</p>
+                <div class="p-keygroup">
+                    <h3>Boost</h3>
+                    <dl>
+                        <div><dt>W / Shift / Space</dt><dd>Hold for rocket mode: accelerate harder toward the pointer</dd></div>
+                        <div><dt>Tap</dt><dd>A short boost burst, with a cooldown</dd></div>
+                    </dl>
                 </div>
-
-                <div class="feature-card">
-                    <h4>💀 Meaningful Death & Legacy System</h4>
-                    <p>When a vigilante falls, they stay dead - no respawning, no retries, no time rewind. Instead, their sacrifice motivates someone from their community to take up the fight: family members, friends, coworkers, or inspired strangers who witnessed the original hero's courage.</p>
-                    <br>
-                    <p><strong>Replacement Heroes:</strong> Each new vigilante brings different equipment, fighting styles, and personal motivation. A fallen college student might be replaced by their vengeful father with military training, or a determined friend with different weapon preferences.</p>
-                    <br>
-                    <p><strong>Memorial System:</strong> Successful campaigns are recorded with the names of all heroes who contributed to victory, while fallen heroes are remembered in a graveyard of noble sacrifices. Every death has permanent meaning and consequence.</p>
+                <div class="p-keygroup">
+                    <h3>Hands</h3>
+                    <dl>
+                        <div><dt>E / Mouse 4</dt><dd>Use what you're holding (tap: main use, hold: second use)</dd></div>
+                        <div><dt>Q / Mouse 5</dt><dd>Throw what you're holding, or pick up the nearest item</dd></div>
+                    </dl>
                 </div>
+                <div class="p-keygroup">
+                    <h3>View</h3>
+                    <dl>
+                        <div><dt>Wheel</dt><dd>Zoom in and out; zooming briefly drops to slow motion</dd></div>
+                        <div><dt>Pointer</dt><dd>The camera sits between you and the pointer, inside the room</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Every hit pops with a little burst of <strong>knockback and recoil for both sides</strong>, a moment of slow motion, and floating damage numbers for each, so you can see exactly what a collision cost. Your character's face turns to look where you aim, and winces when hit.</p>
+        </section>
 
-                <div class="feature-image">
-                    <div class="feature-quote">
-                        <p>"From kitchen knives to stolen police gear - whatever it takes to level the playing field against organized crime."</p>
+        <figure class="p-shot">
+            <img src="../projects/images/mafiatakedown_2_vignette.jpg" alt="In a wrecked office, a masked vigilante in dark armor and a man in a suit collide in mid-air among flying papers and shattered glass." width="1280" height="720" loading="lazy">
+            <figcaption>"Every hit pushes both fighters apart. A good strike can still send you spinning into the next one."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/punch-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One room, one fight</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/04-room.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>An enclosed room of the gang's turf, seen from the side: an office floor, a back kitchen, a parking garage, a penthouse. You drift in, read who's waiting and what they're wearing, and look for an opening.</p>
+                        <p>You chip away at their armor, knock the weapon out of their hand or take the hand itself, and keep your own head and chest out of reach. Items lie around the room or turn up mid-fight, and some rooms have traps of their own: grinders, saw blades, spikes on sensors, walls that punch out.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stairs-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A takedown</h3>
+                        <p>A takedown is one gang in one town: a gauntlet of <strong>5 to 15 rooms</strong> from the front door to the leadership, fought in order. Opponents arrive partly armed (a quarter, half or three-quarters of a full kit) or fully equipped, and the rooms escalate in what they throw at you:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Room</th><th scope="col">Who's in it</th><th scope="col">What changes</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">1 vs 1</th><td data-label="Who">One thug</td><td data-label="Changes">A straight duel</td></tr>
+                                    <tr><th scope="row">Half-size</th><td data-label="Who">A small, quick one</td><td data-label="Changes">Half the health, armor and damage, same speed</td></tr>
+                                    <tr><th scope="row">1 vs 2, 1 vs 3</th><td data-label="Who">A group</td><td data-label="Changes">Use them against each other</td></tr>
+                                    <tr><th scope="row">Giant</th><td data-label="Who">A brute twice your size</td><td data-label="Changes">Double health and armor, same damage and speed</td></tr>
+                                    <tr><th scope="row">Mega giant, titan</th><td data-label="Who">Four or eight times your size</td><td data-label="Changes">Health and armor scale up, damage and speed don't</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>If the vigilante dies, the successor starts again from the first room. The thugs who were taken down stay dead, but a gang has recruits, and the rooms fill up again.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/newspaper-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Every town that needed someone</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/05-archive.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Across the world there are endless towns and endless gangs, and endless ordinary people taking them on. The game offers <strong>three cases at a time</strong>. You take one, set others aside for later, or leave one to the locals to handle on their own. You also pick how intense the first attempt will be: who's waiting in the rooms, and what you start with. Each successor can keep that setting or change it.</p>
+                        <p>When a gang falls, the game stops for a moment: a memorial for everyone who died taking it down, with every vigilante you played listed by name, and a moment of silence for the town's own victims. Then the gang's name is stamped <strong>destroyed</strong> over the town, free again.</p>
+                        <p>Each takedown goes into an archive styled as a newspaper, with a snapshot of the last fight, to browse and remember. A case you left to the locals isn't in it, because you weren't there.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A room, an evening, a town</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/06-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A room takes a minute or a few. A takedown, with a successor or two, fills an evening or so. The game saves between rooms, so you can stop after any fight and come back to the same vigilante in the same doorway.</p>
+                        <p>Fed up with a case? You can drop it at any time and leave it to the locals. You just won't be in that town's story.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/files-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the takedowns</strong>, an endless run of towns, each a story with a beginning and an end. It nests like this:</p>
+            <div class="p-nest" aria-label="The takedowns, outermost first">
+                <div><span>The archive</span><small>Every town you've freed, as long as you care to keep going.</small>
+                    <div><span>A takedown</span><small>One town, one gang, one alias: 5 to 15 rooms to the top.</small>
+                        <div><span>A vigilante's attempt</span><small>From the front door until they win or fall.</small>
+                            <div><span>A room</span><small>One fight, a minute or a few.</small></div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="feature-card">
-                    <h4>🏢 Dynamic Criminal Organizations</h4>
-                    <p>Each campaign targets a procedurally generated crime syndicate with unique identity: organization name, base locations, member types, equipment preferences, and criminal specialties. No two campaigns face identical opposition.</p>
-                    <br>
-                    <p><strong>Organization Variety:</strong> Fight corporate corruption in glass office towers, street gangs in warehouse districts, or mob operations in underground clubs. Each organization type brings different enemy configurations, environmental hazards, and tactical challenges.</p>
-                    <br>
-                    <p><strong>Procedural Opposition:</strong> Enemy loadouts and battle scenarios are generated using intelligent heuristics that ensure challenging but fair encounters. Organizations might specialize in heavy weapons, defensive tactics, or overwhelming numbers.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>🌆 Urban Combat Environments</h4>
-                    <p>Battle through corporate boardrooms, underground parking garages, penthouse offices, back-alley hideouts, and abandoned warehouses. Each arena includes environmental hazards, item spawn points, and destructible elements that affect combat flow.</p>
-                    <br>
-                    <p><strong>Environmental Storytelling:</strong> Arena design reflects the criminal organization's nature and operations. Drug labs have chemical hazards, corporate offices feature security systems, while gang hideouts contain improvised fortifications and weapon caches.</p>
-                    <br>
-                    <p><strong>Dynamic Arenas:</strong> Mid-battle events can alter combat: security alarms triggering reinforcements, structural damage changing arena layout, or crowd interference throwing items into the fight. Players must adapt to evolving battlefield conditions.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>⚖️ Justice Achievement System</h4>
-                    <p>Every successfully dismantled criminal organization is permanently recorded with details of the campaign: which heroes participated, how many battles were fought, what final victory looked like. Failed campaigns honor fallen heroes while documenting the organization that remains active.</p>
-                    <br>
-                    <p><strong>Hall of Fame:</strong> Browse past victories like newspaper archives, complete with screenshots of final victories and lists of heroes who contributed to each organization's downfall. Successful vigilantes retire to live happily ever after.</p>
-                    <br>
-                    <p><strong>Ongoing Motivation:</strong> The persistent record of active criminal organizations provides clear goals and motivation. Players can see which syndicates remain operational and choose their next target based on personal preference or tactical considerations.</p>
-                </div>
             </div>
         </section>
 
-        <section class="section">
-            <h2>🎭 Design Trivia</h2>
-            <p><strong>Vigilante Fiction Inspiration:</strong> Drawing from gritty urban hero stories like <em>Kick-Ass</em>, <em>Sin City</em>, and <em>The Punisher</em>, the game explores what happens when ordinary people decide to fight organized crime with improvised weapons and determination.</p>
-            <br>
-            <p><strong>Physics-First Design:</strong> Every game mechanic emerges from realistic ragdoll physics and collision detection. No artificial health bars or damage multipliers - everything works through consistent physical interactions that players can learn and master.</p>
-            <br>
-            <p><strong>Meaningful Consequence Philosophy:</strong> Inspired by classic roguelikes, the game rejects save-scumming and quick-loading in favor of permanent consequences that create genuine emotional weight. Every decision matters because every result is permanent.</p>
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/fedora-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/family-tree-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Soft death: the mask passes on</h3>
+                        <p>Reloading a save makes a death not count: the game becomes a prophecy you're bound to fulfil, and nothing you do is really yours. Permadeath swings the other way and punishes every risk until you stop experimenting. Mafia Takedown takes a third path.</p>
+                        <p>The character <strong>really dies</strong>, and the death stays in the story. Then someone who knew them takes up the alias, with their own name, face and kit, and starts again from the first room. The takedown only fails if you walk away from it.</p>
+                        <p>It turns the most likely event in a hard game, dying, into the thing that gives each takedown its meaning. By the end, a gang might have fallen to a vigilante's grandmother, avenging her grandson and his cousin before her.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/mafiatakedown_3_feature.jpg" alt="Six different people in black eye masks stand side by side in a wet brick alley at night: an old man with a pipe, a teenage girl, a nurse holding a small pan, a builder, a man in a suit with a stick, and a grey-haired woman in a leather coat." width="1280" height="720" loading="lazy">
+                            <figcaption>"When a vigilante dies, someone close to them takes up the mask and the alias, and starts again from the first room."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/layered-armor-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Armor first, then the body</p>
+                        <h3>Every part of the body is its own fight</h3>
+                        <p>Each body part (head, upper and lower torso, upper and lower arms and legs, hands and feet) can wear its own piece of armor, and has its own health. A part can only be hurt once its armor has shattered. Every piece of armor has its own stats: health, weight, <strong>thorn damage</strong> (what it does to whoever hits it), knockback and recoil.</p>
+                        <p>What hits what decides who gets hurt:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Contact</th><th scope="col">Result</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Weapon on body</th><td>Damages their armor or the bare part, and wears your weapon a little</td></tr>
+                                    <tr><th scope="row">Weapon on weapon</th><td>Neither body is hurt; both weapons lose durability</td></tr>
+                                    <tr><th scope="row">Your feet on their body</th><td>Damages them, not your feet</td></tr>
+                                    <tr><th scope="row">Feet on feet</th><td>Zero damage, but the usual push on both</td></tr>
+                                    <tr><th scope="row">Feet on a weapon</th><td>Your feet take the weapon's damage</td></tr>
+                                    <tr><th scope="row">Body on body</th><td>Both sides take equal damage, unless armor's thorns tip it</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Damage per contact is fixed, with no bonus for speed, so a careful poke is as good as a wild swing. About one piece in twenty spawns with a <strong>colored trait</strong> that bends its numbers: red for attack, green for defense, blue for speed, brown for a tortoise-heavy plate, white for home-run knockback, black for lethal hits at a cost in weight.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crowbar-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Whatever's lying around</p>
+                        <h3>Weapons, shields, and the kitchen sink</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/07-items.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Before a takedown, you choose your vigilante's look, alias colors, starting armor and two one-handed items or one two-handed one. Inside, you'll lose most of it, and <strong>scavenge</strong> from what the rooms and the fallen leave behind: melee weapons, shields, guns, hybrids of all three, armor, food and repair kits.</p>
+                        <p>Pick-up grabs whatever's nearest your chest, so in a pile you may have to grab, turn and toss a few things to get the one you want. A two-handed weapon in a single remaining hand flails around awkwardly. Guns fire slow projectiles with limited ammunition and break quickly if you club with them. There are <strong>no explosions</strong>: every hit in the game is one object touching another.</p>
+                        <p>Anything thrown becomes a weapon for a moment, glowing green until it lands.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/lost-limb-quoting.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Losing a hand changes the plan</p>
+                        <h3>Limbs that come off</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/08-limbs.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every part except the head and upper torso can be lost. A part whose health runs out breaks away and floats off, spraying blood for a moment; hit it hard enough and it bursts apart. Lose a hand and you lose what it held. Lose both legs and you lose your best kicking weapons. Lose the head or the upper torso and the fight is over.</p>
+                        <p>The fastest way to win is the head, but the rest of the body, its armor and its weapon keep getting in the way. A lost limb can be <strong>grown back by eating</strong>: grab food and use it, or, with no hands left, nuzzle into it with your head. Food only regrows lost parts, never heals damaged ones, so each hit keeps its weight. Rare kits fully heal or repair.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/brute-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">One against a horde, fairly</p>
+                        <h3>A dumb, predictable gang</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/09-gang.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>It's one person against a whole organization, so the gang is deliberately simple. A thug with a melee weapon flies at you, turning lazily to face you, bounces off after a hit, backs away for a second or three, sometimes waits, then comes again. A gunman fires the moment he's lined up, with no aiming ahead.</p>
+                        <p>They're <strong>dumb and predictable, but chaotic</strong>, because momentum and spin make even a simple plan go sideways. That's where the player's edge comes from, along with a slow pace that leaves time to think. No friendly fire for anyone, but allies still collide with you, so you can't hide inside a friend.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/circular-sawblade-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Chaos you can read</p>
+                        <h3>Clear signals in a messy fight</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mafiatakedown/10-signals.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A fight scatters limbs, armor and broken weapons everywhere, so the game outlines everything by state. <strong>White</strong> means alive and active. <strong>Red</strong> means inert wreckage: it can be pushed around but hurts no one. <strong>Green</strong> means a thrown object in flight, still able to hurt. Team markers show who's on which side.</p>
+                        <p>Shots crack the walls where they land, and the camera keeps every fighter in view, panning and zooming as needed, so a trap is always seen before you drift into it.</p>
+                    </div>
+                </li>
+            </ol>
         </section>
 
-        <div class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-content">
-                <h3 class="boxart-title">Mafia Takedown</h3>
-                <p><strong>When the system fails, heroes rise.</strong></p>
-                <br>
-                <p>Experience visceral physics-based combat as you control an endless line of vigilante heroes fighting organized crime. Master tactical dismemberment, improvised weaponry, and consequence-driven gameplay where every battle permanently shapes your war against corruption.</p>
-                <br>
-                <p>Build your legend one fallen crime syndicate at a time. Honor your fallen comrades. Inspire the next generation of heroes.</p>
-                <br>
-                <p><em>Justice never dies - it just finds new hands to wield it.</em></p>
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/mafiatakedown_4_boxart.jpg" alt="Box art: a vigilante in a black hoodie and a black face mask grips a red-handled axe in the doorway of a wrecked office at night, papers strewn across the floor." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">A note taped to the gang's front door</p>
+                <h2 id="sendoff">Mafia Takedown: Dismemberment Ragdoll Vigilante</h2>
+                <p>You've had this town long enough. The corner shop, the bus depot, the people who stopped talking. I'm coming in through this door, and I'm not stopping until I reach the top floor.</p>
+                <p>Maybe I won't make it. Then someone else will come through this door wearing this mask. My brother. My neighbor. One of yours, even. They'll know the way, and they'll know your names.</p>
+                <p><strong>You can stop a vigilante. You can't stop the mask.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Floppy Heroes, Kick-Ass, Sin City and The Phantom</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Operation Napalm (CC0), Turret Road, Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
         </div>
-    </div>
-
-    <footer class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
     </footer>
-
-    <script>
-        // Add smooth scrolling behavior
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Removed parallax effect to keep title section static
-    </script>
 </body>
 </html>

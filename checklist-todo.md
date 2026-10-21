@@ -85,7 +85,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Halberd_Suit_Wars
 - [x] HazardMissionTeam (2)
 - [x] Justice Will Glass Them
-- [ ] Mafia_Takedown
+- [x] Mafia_Takedown
 - [ ] Megalodon
 - [ ] Mosh_Pit_Mayhem ⚑
 - [ ] MutantLoveQuest ⚑

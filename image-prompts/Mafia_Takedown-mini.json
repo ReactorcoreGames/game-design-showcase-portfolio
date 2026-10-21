@@ -1,0 +1,21 @@
+{
+  "slug": "Mafia_Takedown-mini",
+  "out": "site/projects/mini/mafiatakedown",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic noir film still, rainy night, warm amber streetlight, deep shadows, touches of blood red. ",
+  "notes": "Mood-only mini images for Mafia_Takedown.html, beside the lore, game layer and feature text. SDXL (free): gen Mafia_Takedown-mini --model sdxl --max 999, then finish Mafia_Takedown-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "town", "ratio": "3:2", "prompt": "A small city street at night run by a gang, shuttered shops and a black car idling outside a bar."},
+    {"n": 2, "name": "alias", "ratio": "3:2", "prompt": "Photograph of a man in a dark hoodie tying a black cloth mask over his eyes in a dim apartment hallway."},
+    {"n": 3, "name": "mask", "ratio": "3:2", "prompt": "Photograph of a black cloth mask lying on a wooden kitchen table beside a lit candle and a framed photo."},
+    {"n": 4, "name": "room", "ratio": "3:2", "prompt": "A dark office floor at night with overturned desks and papers floating in the air after a fight."},
+    {"n": 5, "name": "archive", "ratio": "3:2", "prompt": "A stack of old newspapers on a desk under a lamp, a front page photo of a ruined building."},
+    {"n": 6, "name": "evening", "ratio": "3:2", "prompt": "A person resting on a fire escape at night, looking at the city lights, a cup of coffee beside them."},
+    {"n": 7, "name": "items", "ratio": "3:2", "prompt": "A pile of improvised weapons on a garage floor: a crowbar, a frying pan, a fire axe, a metal pipe."},
+    {"n": 8, "name": "limbs", "ratio": "3:2", "prompt": "Photograph of a pale plastic mannequin arm lying in a puddle on a wet concrete floor under a flickering lamp."},
+    {"n": 9, "name": "gang", "ratio": "3:2", "prompt": "A row of thugs in cheap suits waiting in a smoky corridor, holding bats and pipes."},
+    {"n": 10, "name": "signals", "ratio": "3:2", "prompt": "A spinning circular saw blade throwing sparks in a dark industrial room."}
+  ]
+}

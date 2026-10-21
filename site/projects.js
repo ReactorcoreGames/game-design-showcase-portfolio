@@ -289,8 +289,8 @@ window.PROJECTS = [
     page: "Mafia_Takedown.html", prefix: "mafiatakedown",
     title: "Mafia Takedown", subtitle: "Dismemberment Ragdoll Vigilante",
     icon: "fedora-lorc", tint: "red",
-    blurb: "Ragdoll vigilantes take apart organized crime one limb at a time. When a hero falls, the next one picks up the mission.",
-    genres: ["ragdoll", "action"], tags: ["vigilante", "crime", "dismemberment"],
+    blurb: "One ordinary person takes a whole gang apart, room by room, in slow ragdoll fights with armor on every limb. When a vigilante falls, someone close to them takes up the mask.",
+    genres: ["ragdoll", "action", "physics"], tags: ["vigilante", "dismemberment", "soft death", "succession"],
     status: "concept", added: "2025-10-08"
   },
   {

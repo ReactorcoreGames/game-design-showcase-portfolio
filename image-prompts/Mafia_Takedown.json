@@ -1,0 +1,14 @@
+{
+  "slug": "Mafia_Takedown",
+  "prefix": "mafiatakedown",
+  "preset": "02 Photo - E - Cinematic",
+  "style": "Gritty rainy night noir, warm sodium streetlight, dark bronze and amber palette with muted gold accents, deep shadows, film grain.",
+  "notes": "Rewrite (2026-10). Images 1, 2 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 3 (a gear flat-lay with POLICE lettering) and image 4 (painted text and a bat-emblem mask that read as a famous comic hero) are new: gen Mafia_Takedown --only 3,4, then finish Mafia_Takedown --only 3,4.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide establishing shot of a rain-soaked city street at night under towering office buildings, the silhouette of a masked vigilante standing on a fire escape, glowing windows, neon reflections in puddles, police cars parked below."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Low-angle mid-action shot in a modern corporate office: a vigilante in improvised armor collides in mid-air with a suited criminal, office furniture breaking, shattered glass and papers frozen in the air."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Medium-wide shot in a dim back alley at night after rain: six very different ordinary people stand side by side facing the camera, all wearing the same simple black cloth eye mask tied at the back. An elderly man in a knitted cardigan holding a metal pipe, a teenage girl in a grey hoodie with a baseball bat, a middle-aged woman in plain blue hospital scrubs with a frying pan, a burly bearded builder in a dusty work jacket with a fire axe, a young man in a rumpled office suit with a crowbar, and a grey-haired woman in a long dark raincoat with a wooden chair leg. Plain wet brick walls, a single warm streetlight above, a puddle reflecting them. Plain clothing with no logos, badges, signs or lettering anywhere."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Low-angle portrait of a lone vigilante in a plain dark hoodie, cargo trousers and a simple black cloth eye mask tied at the back, gripping a red fire axe in both hands, standing in the doorway of a wrecked high-rise office at night. Overturned desks, scattered papers swirling in the air and a shattered glass wall behind, city lights glowing through rain-streaked windows. Plain clothes with no emblem, no cape and no logo. Dark empty ceiling space above the head. No text, signs or lettering anywhere."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Aerial shot of a city at dusk: glass towers of the financial district, smoking factories, decaying blocks with graffiti, small fires and police lights scattered through the haze."}
+  ]
+}
