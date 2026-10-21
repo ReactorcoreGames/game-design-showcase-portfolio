@@ -1,0 +1,14 @@
+{
+  "slug": "HazardMissionTeam (2)",
+  "prefix": "hazardteam",
+  "preset": "01 Main - 3D High Poly",
+  "style": "Cinematic sci-fi, dramatic rim lighting, metallic surfaces, rugged work gear. Earth tones and charcoal with bright hazard-yellow accents and warm amber glow.",
+  "notes": "Rewrite (2026-10). Images 1, 2, 4 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated (the preset is the closest match to how they look). Image 3 was regenerated because the old one was a holographic HUD with words on it: gen \"HazardMissionTeam (2)\" --only 3, then finish \"HazardMissionTeam (2)\" --only 3.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide low shot of four humanoid androids in protective suits with glowing orange visors working together in a crystalline underground cavern: one drilling, one carrying building blocks, one with a holographic tablet, one with rescue gear."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Elevated shot of an android response team running a rescue during a storm: hover platforms, yellow utility vehicles and an excavator around a collapsing settlement, civilians being led to safety."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Side-view cross-section of a hillside and the ground beneath it, like an ant farm. On the surface, a small frontier base of prefab huts, a wind turbine and a parked yellow utility truck. Below, layered soil, rock and glittering ore veins cut through by dug tunnels, ladders and a lift shaft. Small workers in charcoal and hazard-yellow suits with glowing orange visors dig with drills, push a loaded mine cart and carry crates. A pocket of underground water on one side, a nest of large creature eggs in a side cave, and a glowing layer of lava at the very bottom."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Heroic portrait of five android specialists in color-coded gear standing in formation in front of a thriving futuristic city, connected worlds glowing in the sky, the leader holding a device."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide aerial view of a network of worlds and settlements, industrial, agricultural and research sites joined by glowing golden transit routes, planets and nebulae in the sky, a small team watching from a platform."}
+  ]
+}

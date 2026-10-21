@@ -144,7 +144,7 @@ window.PROJECTS = [
   {
     page: "Halberd_Suit_Wars.html", prefix: "stellarconflict",
     title: "Halberd Suit Wars", subtitle: "Ragdoll Mecha Combat",
-    icon: "halberd-lorc", tint: "yellow",
+    icon: "halberd-lorc", tint: "green",
     blurb: "Zero-gravity mecha slugfests in the spirit of early Gundam: armor per limb, limbs that don't come back, pilots scarcer than machines, and retreat as a real choice.",
     genres: ["mecha", "ragdoll", "action"], tags: ["squad tactics", "ejection", "zero gravity", "war campaign"],
     status: "concept", added: "2025-10-08"
@@ -217,8 +217,8 @@ window.PROJECTS = [
     page: "HazardMissionTeam (2).html", prefix: "hazardteam",
     title: "Hazard Mission Team", subtitle: "Settlement Crisis Response",
     icon: "gas-mask-lorc", tint: "yellow",
-    blurb: "Lead an elite crisis-response team of android operators through real-time logistics action, tackling impossible missions across exotic worlds.",
-    genres: ["strategy", "action"], tags: ["crisis response", "logistics", "androids"],
+    blurb: "A Clonk-style settlement game as a service: dig, build and haul through generated missions for clients, and watch the world map grow with every finished job.",
+    genres: ["sandbox", "strategy", "action"], tags: ["digging", "logistics", "service", "procedural missions"],
     status: "concept", added: "2025-10-08"
   },
   {

@@ -83,7 +83,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Custom Dismount ⚑
 - [x] EradicationWars
 - [x] Halberd_Suit_Wars
-- [ ] HazardMissionTeam (2)
+- [x] HazardMissionTeam (2)
 - [ ] Justice Will Glass Them
 - [ ] Mafia_Takedown
 - [ ] Megalodon

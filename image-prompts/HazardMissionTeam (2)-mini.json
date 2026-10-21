@@ -1,0 +1,21 @@
+{
+  "slug": "HazardMissionTeam (2)-mini",
+  "out": "site/projects/mini/hazardteam",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic film still of frontier work sites, dusty earth tones, hazard yellow gear. ",
+  "notes": "Mood-only mini images for HazardMissionTeam (2).html, beside the lore, game layer and feature text. SDXL (free): gen \"HazardMissionTeam (2)-mini\" --model sdxl --max 999, then finish \"HazardMissionTeam (2)-mini\" --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "vanguard", "ratio": "3:2", "prompt": "A small team in yellow work gear standing on a ridge above untouched wilderness, a city glowing far behind them."},
+    {"n": 2, "name": "crew", "ratio": "3:2", "prompt": "A row of rugged grey work robots with orange visors waiting in a hangar, an operator at a console."},
+    {"n": 3, "name": "site", "ratio": "3:2", "prompt": "Workers digging a tunnel into a hillside with lamps and a drill, a wooden lift at the entrance."},
+    {"n": 4, "name": "chain", "ratio": "3:2", "prompt": "A new steel bridge being raised across a canyon by cranes at sunset."},
+    {"n": 5, "name": "network", "ratio": "3:2", "prompt": "A sprawling map table showing cities, farms and roads spreading across a continent."},
+    {"n": 6, "name": "evening", "ratio": "3:2", "prompt": "A work crew relaxing around a campfire next to their parked yellow truck at dusk."},
+    {"n": 7, "name": "loadout", "ratio": "3:2", "prompt": "Crates, tools, ropes and a small vehicle being loaded into a landing craft in a dusty hangar."},
+    {"n": 8, "name": "operators", "ratio": "3:2", "prompt": "Operators in headsets at a row of control desks, each screen showing a robot's view of a work site."},
+    {"n": 9, "name": "contingency", "ratio": "3:2", "prompt": "Supply drop crates with yellow parachutes landing beside a half-built outpost."},
+    {"n": 10, "name": "monument", "ratio": "3:2", "prompt": "A tall new monument in the square of a thriving young town, people walking by."}
+  ]
+}
