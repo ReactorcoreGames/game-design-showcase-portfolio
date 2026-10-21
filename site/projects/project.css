@@ -53,11 +53,20 @@ h2, h3 { font-family: var(--font-title); }
 }
 .sheet::before, .sheet::after { border-color: var(--p-1); }
 
-/* ---------- Hero: the title image, with the title over its lower left ---------- */
+/* ---------- Hero: the whole 16:9 title image, with the title over its lower left ---------- */
 
-.p-hero { position: relative; isolation: isolate; border-bottom: 1px solid color-mix(in srgb, var(--p-1) 50%, transparent); background: var(--flow-1); }
-.p-hero-img { width: 100%; height: min(80vh, 56.25vw); min-height: 220px; object-fit: cover; }
-.p-hero-title { position: absolute; left: 0; right: 0; bottom: clamp(1.2rem, 4vw, 3.2rem); }
+/* The image is never cropped: the frame is as wide as the screen allows while the whole image
+   still fits under the header, and the page background shows at its sides on wide screens. */
+.p-hero { border-bottom: 1px solid color-mix(in srgb, var(--p-1) 50%, transparent); }
+.p-hero-frame {
+    position: relative; isolation: isolate;
+    width: min(100%, calc((100svh - var(--header-h)) * 16 / 9));
+    margin-inline: auto;
+    background: var(--flow-1);
+    box-shadow: 0 0 60px -10px rgba(0, 0, 0, 0.9);
+}
+.p-hero-img { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+.p-hero-title { position: absolute; left: clamp(1rem, 4vw, 3.5rem); right: 1rem; bottom: clamp(1rem, 4vw, 3rem); }
 .p-title { margin: 0; text-transform: none; letter-spacing: normal; line-height: 1; }
 .p-name {
     display: block;
@@ -73,7 +82,7 @@ h2, h3 { font-family: var(--font-title); }
     color: var(--p-1);
 }
 @media (max-width: 760px) {
-    .p-hero-title { position: static; padding-top: 1.4rem; }
+    .p-hero-title { position: static; padding: 1.4rem var(--gutter) 0; }
 }
 
 /* ---------- ID strip: icon badge, project label, the free-to-fork line ---------- */
@@ -91,6 +100,8 @@ h2, h3 { font-family: var(--font-title); }
 }
 .p-label:hover { color: var(--p-3); }
 .p-fork { margin: 0; color: var(--p-text); font-size: 1rem; }
+.p-md { flex: none; --c: var(--p-1); }
+@media (max-width: 620px) { .p-md { width: 100%; } }
 .p-fork b { font-family: var(--font-ui); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--p-1); margin-right: 0.35rem; }
 
 /* ---------- Sections ---------- */
@@ -142,6 +153,22 @@ h2, h3 { font-family: var(--font-title); }
 .p-feature .p-shot figcaption { left: 1rem; bottom: 1rem; }
 @media (max-width: 760px) {
     .p-shot figcaption, .p-feature .p-shot figcaption { position: static; max-width: none; border-top: 0; }
+}
+
+/* ---------- Mini images ---------- */
+
+/* Small mood pictures (320x240, SDXL) floated beside the text of lore, layer and feature
+   sections. They add flavor only, so they're decorative: alt="" and left out of the Markdown. */
+.p-mini { float: right; width: min(320px, 36%); margin: 0.35rem 0 1rem 1.6rem; }
+.p-mini img {
+    width: 100%; height: auto; aspect-ratio: 4 / 3;
+    border: 1px solid color-mix(in srgb, var(--p-1) 35%, transparent);
+    box-shadow: 0 14px 34px -16px rgba(0, 0, 0, 0.9);
+}
+.p-body::after { content: ""; display: block; clear: both; }
+.p-prose h2, .p-prose h3 { clear: both; }
+@media (max-width: 620px) {
+    .p-mini { float: none; width: 100%; max-width: 320px; margin: 0.2rem 0 1rem; }
 }
 
 /* ---------- Controls ---------- */
@@ -253,8 +280,10 @@ kbd {
 
 /* ---------- Box art send-off: two equal columns at every width ---------- */
 
+/* project.js sets --box-w so the box art comes out exactly as tall as the card beside it.
+   Without it, the art takes two fifths of the width. */
 .p-sendoff {
-    display: grid; grid-template-columns: 1fr 1fr; gap: clamp(0.8rem, 3vw, 2.4rem); align-items: center;
+    display: grid; grid-template-columns: var(--box-w, minmax(0, 2fr)) minmax(0, 3fr); gap: clamp(0.8rem, 3vw, 2.4rem); align-items: start;
     margin-top: clamp(2.6rem, 6vw, 4rem);
 }
 .p-sendoff img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid color-mix(in srgb, var(--p-1) 50%, transparent); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.9); }
@@ -263,7 +292,6 @@ kbd {
 .p-sendoff p { font-size: clamp(0.82rem, 0.75rem + 0.45vw, 1.05rem); line-height: 1.5; }
 .p-sendoff .btn { margin-top: 0.4rem; white-space: normal; text-align: center; }
 @media (max-width: 620px) {
-    .p-sendoff { align-items: start; }
     .p-sendoff img { position: sticky; top: calc(var(--header-h) + 0.8rem); }
 }
 @media (max-width: 480px) {

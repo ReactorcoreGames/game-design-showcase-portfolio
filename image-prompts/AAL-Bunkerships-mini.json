@@ -1,0 +1,21 @@
+{
+  "slug": "AAL-Bunkerships-mini",
+  "out": "site/projects/mini/aalsw",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, gritty military, olive green and red tones. ",
+  "notes": "Mood-only mini images for AAL-Bunkerships.html, beside the lore, game layer and feature text. SDXL (free): gen AAL-Bunkerships-mini --model sdxl --max 999, then finish AAL-Bunkerships-mini --model sdxl. Each prompt is the section's own opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "golden-age", "ratio": "3:2", "prompt": "A peaceful gleaming space colony city where people, friendly aliens and machines live together in a kind, abundant civilization, starships rising over green parks."},
+    {"n": 2, "name": "whos-out-there", "ratio": "3:2", "prompt": "Renegades, would-be dictators and plain thugs who have grabbed a star system for themselves and run it on piracy, vandalism and plunder."},
+    {"n": 3, "name": "moment-to-moment", "ratio": "3:2", "prompt": "Side-view combat where everything is a physical object. You lead from the front with one soldier while the others hold, follow or flank."},
+    {"n": 4, "name": "region", "ratio": "3:2", "prompt": "A war room table with a glowing square grid map of a planet's surface, unit markers and fog, officers leaning over it."},
+    {"n": 5, "name": "hangar", "ratio": "3:2", "prompt": "Your fleet lives in an enormous hangar, built from your own blueprints. You name your ships and keep a journal of their operations."},
+    {"n": 6, "name": "evening", "ratio": "3:2", "prompt": "Prepare in the hangar, where time stands still, so you can tinker for as long as you like."},
+    {"n": 7, "name": "command-core", "ratio": "3:2", "prompt": "Every faction's forces in a region run through a Command Core: a hardy metal ball, the king piece of the board."},
+    {"n": 8, "name": "brands", "ratio": "3:2", "prompt": "Complete military kits, each with its own style, covering soldiers, weapons, vehicles, turrets, ship modules and gear."},
+    {"n": 9, "name": "fog", "ratio": "3:2", "prompt": "The map starts dark. Scouts, flares, towers and spy satellites push back the fog."},
+    {"n": 10, "name": "restore", "ratio": "3:2", "prompt": "When the land is spent, you restore it to life and move your equipment to the next site."}
+  ]
+}

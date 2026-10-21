@@ -6,12 +6,15 @@ produce files at exactly those paths.
 
 A spec with an "out" folder (relative to the repo) is a free-form section spec instead of a
 project's five: any number of images, each with a "name", saved as <out>/<NN>-<name>.jpg
-and no thumbnail. The AAL page (site/aal/) uses one.
+and no thumbnail. The AAL page (site/aal/) uses one, and so do the project pages' mini images:
+those specs add "size" ([320, 240]: centre-crop and resize to exactly that), "quality" (JPEG,
+default 82) and "lead" (text put in front of every prompt, for SDXL).
 
     python tools/images.py check  [slug ...]             validate specs, show lengths and image count
     python tools/images.py gen    slug ... [--dry-run]   generate through BAIG (klein4b, Standard tier)
                                    [--model M --only 1,6]  ... or reroll some images on another model
     python tools/images.py finish slug ... [--only 3]    resize + JPEG (+ thumbnail) into site/
+    python tools/images.py collage slug ...              numbered contact sheet of finished images into wip/shots/
     python tools/images.py recompress [--apply]          re-encode existing site images (report only by default)
 
 No slug given to check = every spec. gen refuses to queue more than --max images
@@ -173,7 +176,8 @@ def cmd_gen(args) -> None:
             # an --only run gets its own short prompt file name (BAIG keeps 16 characters and turns - into _)
             run = "_" + hashlib.md5(",".join(str(i["n"]) for i in imgs).encode()).hexdigest()[:6] if only else ""
             pfile = pdir / f"{ratio_tag(ratio)}{run}.txt"
-            lines = [(args.lead + img["prompt"].strip()) for img in imgs]
+            lead = args.lead or spec.get("lead", "")
+            lines = [(lead + img["prompt"].strip()) for img in imgs]
             pfile.write_text("\n".join(lines) + "\n", encoding="utf-8")
             # line number -> image n, so finish can map BAIG's output back
             (pfile.with_suffix(".map.json")).write_text(json.dumps([i["n"] for i in imgs]))
@@ -218,6 +222,19 @@ def scale_to_area(im: Image.Image, pixels: int = TARGET_PIXELS) -> Image.Image:
     return im.resize(size, Image.LANCZOS)
 
 
+def fit_size(im: Image.Image, size: list[int]) -> Image.Image:
+    """Centre-crop to the size's aspect ratio, then resize to exactly that size (mini images)."""
+    w, h = im.size
+    tw, th = size
+    if w * th > h * tw:
+        cw = round(h * tw / th)
+        im = im.crop(((w - cw) // 2, 0, (w - cw) // 2 + cw, h))
+    else:
+        ch = round(w * th / tw)
+        im = im.crop((0, (h - ch) // 2, w, (h - ch) // 2 + ch))
+    return im.resize((tw, th), Image.LANCZOS)
+
+
 def save_jpeg(im: Image.Image, path: Path, quality: int = JPEG_QUALITY) -> int:
     path.parent.mkdir(parents=True, exist_ok=True)
     im.convert("RGB").save(path, "JPEG", quality=quality, optimize=True, progressive=True)
@@ -233,9 +250,9 @@ def cmd_finish(args) -> None:
             if only is not None and img["n"] not in only:
                 continue
             src = find_raw(slug, img.get("model", args.model), img["n"])
-            im = scale_to_area(Image.open(src))
+            im = fit_size(Image.open(src), spec["size"]) if spec.get("size") else scale_to_area(Image.open(src))
             dest = dest_path(spec, img)
-            size = save_jpeg(im, dest)
+            size = save_jpeg(im, dest, spec.get("quality", JPEG_QUALITY))
             print(f"{dest.relative_to(REPO)}  {im.size[0]}x{im.size[1]}  {size // 1024} KB")
             if img["n"] == 2 and not spec.get("out"):
                 thumb = Image.open(src).convert("RGB")
@@ -244,6 +261,37 @@ def cmd_finish(args) -> None:
                 tdest = SITE_THUMBS / f"{prefix}_2_vignette_thumb.jpg"
                 tsize = save_jpeg(thumb, tdest)
                 print(f"{tdest.relative_to(REPO)}  {THUMB_SIZE[0]}x{THUMB_SIZE[1]}  {tsize // 1024} KB")
+
+
+def cmd_collage(args) -> None:
+    """A numbered contact sheet of a spec's finished images, for reviewing a batch at a glance."""
+    from PIL import ImageDraw
+    out_dir = REPO / "wip" / "shots"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for slug in args.slugs:
+        spec = load_spec(slug)
+        tiles = []
+        for img in sorted(spec["images"], key=lambda i: i["n"]):
+            path = dest_path(spec, img)
+            if path.exists():
+                tiles.append((img["n"], Image.open(path).convert("RGB")))
+        if not tiles:
+            sys.exit(f"{slug}: no finished images yet")
+        tw = max(t.size[0] for _, t in tiles)
+        th = max(t.size[1] for _, t in tiles)
+        cols = min(len(tiles), args.cols)
+        rows = math.ceil(len(tiles) / cols)
+        pad = 8
+        sheet = Image.new("RGB", (cols * (tw + pad) + pad, rows * (th + pad) + pad), (24, 24, 24))
+        draw = ImageDraw.Draw(sheet)
+        for i, (n, t) in enumerate(tiles):
+            x, y = pad + (i % cols) * (tw + pad), pad + (i // cols) * (th + pad)
+            sheet.paste(t, (x, y))
+            draw.rectangle((x, y, x + 34, y + 26), fill=(0, 0, 0))
+            draw.text((x + 8, y + 6), f"{n:02d}", fill=(255, 255, 255))
+        dest = out_dir / f"{slug}.png"
+        sheet.save(dest)
+        print(dest.relative_to(REPO))
 
 
 def cmd_recompress(args) -> None:
@@ -288,6 +336,11 @@ def main() -> None:
     p.add_argument("--model", default="klein4b")
     p.add_argument("--only", help="finish only these image numbers (a rewrite that regenerated some of them)")
     p.set_defaults(func=cmd_finish)
+
+    p = sub.add_parser("collage")
+    p.add_argument("slugs", nargs="+")
+    p.add_argument("--cols", type=int, default=5)
+    p.set_defaults(func=cmd_collage)
 
     p = sub.add_parser("recompress")
     p.add_argument("--apply", action="store_true")
