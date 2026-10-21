@@ -1,0 +1,20 @@
+{
+  "slug": "ChainReactionDemolitionPunch-mini",
+  "out": "site/projects/mini/chainreaction",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic film still, demolition site at dusk, molten orange glow and grey ash. ",
+  "notes": "Mood-only mini images for ChainReactionDemolitionPunch.html, beside the lore, game layer and feature text. SDXL (free): gen ChainReactionDemolitionPunch-mini --model sdxl --max 999, then finish ChainReactionDemolitionPunch-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "company", "ratio": "3:2", "prompt": "A giant worker in an orange hard hat and yellow safety vest standing before an old condemned building."},
+    {"n": 2, "name": "job", "ratio": "3:2", "prompt": "Old empty concrete buildings with boarded windows behind an orange site fence at dusk."},
+    {"n": 3, "name": "punch", "ratio": "3:2", "prompt": "A wall bursting open into glowing white-hot stone fragments, sparks and dust flying."},
+    {"n": 4, "name": "stage", "ratio": "3:2", "prompt": "Several old stone buildings on bare brown ground, one already collapsing into grey ash."},
+    {"n": 5, "name": "list", "ratio": "3:2", "prompt": "A city skyline at dusk dotted with construction cranes, old buildings making way for new."},
+    {"n": 6, "name": "meter", "ratio": "3:2", "prompt": "A huge clenched fist in a work glove, glowing orange with heat, about to strike."},
+    {"n": 7, "name": "blasts", "ratio": "3:2", "prompt": "A string of small explosions going off one after another along the side of a stone building."},
+    {"n": 8, "name": "budget", "ratio": "3:2", "prompt": "Molten orange stone slowly cooling into grey ash, embers fading in the dark."},
+    {"n": 9, "name": "buildings", "ratio": "3:2", "prompt": "Strange blocky stone buildings of stacked rectangles, towers, ledges and overhangs on flat ground."}
+  ]
+}

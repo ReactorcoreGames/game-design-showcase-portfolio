@@ -303,10 +303,10 @@ window.PROJECTS = [
   },
   {
     page: "ChainReactionDemolitionPunch.html", prefix: "chainreaction",
-    title: "Chain Reaction Demolition Punch", subtitle: "Cyclops Building Destruction",
+    title: "Chain Reaction Demolition Punch", subtitle: "Falling Sand Demolition",
     icon: "fulguro-punch-lorc", tint: "orange",
-    blurb: "A one-eyed alien superhero recycles buildings with cosmic strength. Pick the right spot to punch and alien heat transfer sets off chain reactions.",
-    genres: ["physics", "falling-sand", "puzzle"], tags: ["demolition", "superhero", "chain reactions"],
+    blurb: "A cyclops superhero punches generated buildings, and the hot shrapnel melts the stone into ash in a cascading chain reaction. One punch, then watch it go.",
+    genres: ["physics", "falling-sand", "puzzle"], tags: ["demolition", "superhero", "chain reactions", "stress relief"],
     status: "concept", added: "2025-10-08"
   },
   {
