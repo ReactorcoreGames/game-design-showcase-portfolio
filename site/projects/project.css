@@ -1,0 +1,279 @@
+/* The showcase page template, shared by every page in site/projects/. Load it after ../theme.css.
+
+   theme.css gives the site chrome (header, footer, Oxanium labels, IBM Plex body text) and the
+   page background: the looping colour flow (body::before) and the blueprint grid (body::after).
+   This file lays out a showcase page. Each page then sets its own identity in a short <style>:
+
+     :root {
+         --flow-1, --flow-2      the background flow's two colours (dark base, glow)
+         --grid-minor, --grid-major   the blueprint grid's line colours, tinted to the palette
+         --p-ground              the reading sheet's colour (keep it near-opaque)
+         --p-panel               cards and panels
+         --p-1, --p-2, --p-3     accent, second accent, highlight (bold text, key words)
+         --p-text, --p-dim       body text and quieter text
+         --p-line                borders
+         --font-title, --font-sub    the page's display fonts (@font-face from ../fonts/)
+     }
+
+   plus the title animation (keyframes on .p-name / .p-sub) and anything only that page needs.
+   Every component below reads those tokens, so a new page is content, colours and a font or two. */
+
+:root {
+    --flow-speed: 18s;   /* the same flow speed on every project page; only the colours change */
+    --p-ground: rgba(14, 16, 12, 0.95);
+    --p-panel: #191d14;
+    --p-1: #13ffe6;
+    --p-2: #4fb8ff;
+    --p-3: #ffffff;
+    --p-text: #dfe6d8;
+    --p-dim: #aab3a0;
+    --p-line: rgba(255, 255, 255, 0.14);
+    --font-title: var(--font-head);
+    --font-sub: var(--font-ui);
+    --sheet-pad: clamp(1.2rem, 4vw, 3.5rem);
+}
+@media (max-width: 620px) { :root { --sheet-pad: var(--gutter); } }
+
+body { color: var(--p-text); }
+a { color: var(--p-1); }
+strong, b { color: var(--p-3); }
+::selection { background: color-mix(in srgb, var(--p-1) 40%, transparent); }
+h2, h3 { font-family: var(--font-title); }
+.eyebrow { color: var(--p-1); }
+
+/* The reading sheet, recoloured to the page. */
+.sheet {
+    background-color: var(--p-ground);
+    background-image:
+        linear-gradient(var(--grid-minor) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+    border-color: var(--p-line);
+    margin-top: 0;
+    padding-top: 0.5rem;
+}
+.sheet::before, .sheet::after { border-color: var(--p-1); }
+
+/* ---------- Hero: the title image, with the title over its lower left ---------- */
+
+.p-hero { position: relative; isolation: isolate; border-bottom: 1px solid color-mix(in srgb, var(--p-1) 50%, transparent); background: var(--flow-1); }
+.p-hero-img { width: 100%; height: min(80vh, 56.25vw); min-height: 220px; object-fit: cover; }
+.p-hero-title { position: absolute; left: 0; right: 0; bottom: clamp(1.2rem, 4vw, 3.2rem); }
+.p-title { margin: 0; text-transform: none; letter-spacing: normal; line-height: 1; }
+.p-name {
+    display: block;
+    font-family: var(--font-title); font-weight: 400;
+    font-size: clamp(2.4rem, 1.2rem + 5.4vw, 6rem);
+    color: var(--p-3);
+}
+.p-sub {
+    display: inline-block; position: relative;
+    margin-top: 0.5rem;
+    font-family: var(--font-sub); font-weight: 400;
+    font-size: clamp(1.15rem, 0.8rem + 1.7vw, 2.2rem); letter-spacing: 0.06em;
+    color: var(--p-1);
+}
+@media (max-width: 760px) {
+    .p-hero-title { position: static; padding-top: 1.4rem; }
+}
+
+/* ---------- ID strip: icon badge, project label, the free-to-fork line ---------- */
+
+.p-id {
+    display: flex; align-items: center; gap: 1rem 1.2rem; flex-wrap: wrap;
+    padding: 1.3rem 0 1.4rem; margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--p-line);
+}
+.p-id .id-badge { --tint: var(--p-1); color: var(--p-1); }
+.p-id-text { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; flex: 1 1 12rem; }
+.p-label {
+    font-family: var(--font-ui); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--p-dim); text-decoration: none; width: fit-content;
+}
+.p-label:hover { color: var(--p-3); }
+.p-fork { margin: 0; color: var(--p-text); font-size: 1rem; }
+.p-fork b { font-family: var(--font-ui); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--p-1); margin-right: 0.35rem; }
+
+/* ---------- Sections ---------- */
+
+.p-section { padding: clamp(2.2rem, 5vw, 3.4rem) 0 0; }
+.p-section > h2 { margin-bottom: 1.1rem; }
+.p-section > p, .p-prose p { max-width: 72ch; }
+.p-prose h3 { margin: 1.8rem 0 0.6rem; color: var(--p-1); font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem); }
+.p-lead { font-size: clamp(1.08rem, 1rem + 0.4vw, 1.25rem); color: var(--p-text); max-width: 68ch; }
+.section-mark .icon { color: var(--p-1); }
+.section-mark::after { background: linear-gradient(90deg, color-mix(in srgb, var(--p-1) 70%, transparent), transparent); }
+
+/* Cards: the three-card row, and panels in general. */
+.p-trio { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 2.2rem; }
+@media (max-width: 900px) { .p-trio { grid-template-columns: 1fr; } }
+.p-card {
+    --c: var(--p-1);
+    padding: clamp(1.1rem, 2.5vw, 1.6rem);
+    background-color: var(--p-panel);
+    border: 1px solid color-mix(in srgb, var(--c) 35%, transparent);
+    box-shadow: inset 3px 0 0 var(--c);
+    transition: border-color .2s, background-color .2s;
+}
+.p-card:hover { border-color: var(--c); background-color: color-mix(in srgb, var(--c) 6%, var(--p-panel)); }
+.p-card h3 { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.8rem; font-size: 1.1rem; color: var(--c); }
+.p-card h3 .icon { width: 1.5em; height: 1.5em; }
+.p-card p { margin: 0 0 0.75em; font-size: 1rem; }
+.p-card p:last-child { margin-bottom: 0; }
+.p-card strong { color: var(--c); }
+
+/* ---------- Images with a quote ---------- */
+
+/* The quote sits bottom-left on the image, as its own card; the image itself is never dimmed.
+   On phones the quote moves under the image. */
+.p-shot { position: relative; margin: clamp(2.2rem, 5vw, 3.2rem) calc(-1 * var(--sheet-pad)) 0; }
+.p-shot img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--p-panel); }
+.p-shot figcaption {
+    position: absolute; left: var(--sheet-pad); bottom: var(--sheet-pad);
+    max-width: min(34rem, 60%);
+    padding: 0.9rem 1.1rem;
+    font-size: clamp(1rem, 0.9rem + 0.4vw, 1.2rem); line-height: 1.45; font-style: italic;
+    color: var(--p-3);
+    background: color-mix(in srgb, var(--flow-1) 86%, transparent);
+    border: 1px solid color-mix(in srgb, var(--p-1) 50%, transparent);
+    box-shadow: inset 3px 0 0 var(--p-1), 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+}
+.p-shot figcaption cite { display: block; margin-top: 0.4rem; font-style: normal; font-family: var(--font-ui); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--p-1); }
+.p-feature .p-shot { margin: 1.4rem 0 0.4rem; }
+.p-feature .p-shot figcaption { left: 1rem; bottom: 1rem; }
+@media (max-width: 760px) {
+    .p-shot figcaption, .p-feature .p-shot figcaption { position: static; max-width: none; border-top: 0; }
+}
+
+/* ---------- Controls ---------- */
+
+.p-keys { display: grid; gap: 6px clamp(18px, 3vw, 36px); grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 1.4rem 0 1.6rem; }
+@media (max-width: 760px) { .p-keys { grid-template-columns: 1fr; } }
+.p-keygroup h3 { margin: 0 0 0.5rem; font-family: var(--font-ui); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--p-1); }
+.p-keygroup dl { margin: 0 0 1rem; }
+.p-keygroup div { display: grid; grid-template-columns: 5.6rem minmax(0, 1fr); gap: 0.7rem; align-items: baseline; padding: 0.3rem 0; border-bottom: 1px dashed var(--p-line); }
+.p-keygroup dt { font-family: var(--font-mono); font-size: 0.85rem; color: var(--p-3); }
+.p-keygroup dd { margin: 0; font-size: 0.96rem; color: var(--p-text); }
+kbd {
+    display: inline-block; min-width: 1.6em; padding: 0.05em 0.4em; text-align: center;
+    font-family: var(--font-mono); font-size: 0.85em; color: var(--p-3);
+    background: var(--p-panel); border: 1px solid var(--p-line); border-bottom-width: 2px;
+}
+
+/* ---------- Game layers and features: wide stacked cards ---------- */
+
+.p-stack { list-style: none; margin: 1.4rem 0 0; padding: 0; display: grid; gap: 12px; }
+.p-layer, .p-feature {
+    --c: var(--p-1);
+    position: relative;
+    display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0 1.2rem;
+    padding: clamp(1.1rem, 2.6vw, 1.7rem);
+    background-color: var(--p-panel);
+    border: 1px solid color-mix(in srgb, var(--c) 32%, transparent);
+    transition: border-color .2s;
+}
+.p-layer:hover, .p-feature:hover { border-color: var(--c); }
+.p-layer > .p-mark, .p-feature > .p-mark {
+    display: grid; place-items: center; width: 3.4rem; height: 3.4rem;
+    color: var(--c); border: 1px solid var(--c);
+    background: color-mix(in srgb, var(--c) 10%, transparent);
+    box-shadow: 0 0 18px -8px var(--c);
+}
+.p-mark .icon { width: 2rem; height: 2rem; }
+.p-body { min-width: 0; }
+.p-kicker { margin: 0 0 0.2rem; font-family: var(--font-ui); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c); }
+.p-layer h3, .p-feature h3 { margin: 0 0 0.7rem; font-size: clamp(1.1rem, 1rem + 0.6vw, 1.45rem); color: var(--p-3); }
+.p-body p { margin: 0 0 0.8em; max-width: 74ch; }
+.p-body p:last-child { margin-bottom: 0; }
+.p-body strong { color: var(--c); }
+.p-body ul { margin: 0 0 0.9em; padding-left: 1.2em; max-width: 72ch; }
+.p-body li { margin: 0.25em 0; }
+.p-body li::marker { color: var(--c); }
+@media (max-width: 620px) {
+    .p-layer, .p-feature { grid-template-columns: 1fr; }
+    .p-layer > .p-mark, .p-feature > .p-mark { width: 2.8rem; height: 2.8rem; margin-bottom: 0.8rem; }
+    .p-mark .icon { width: 1.6rem; height: 1.6rem; }
+}
+
+/* ---------- Diagram kit ---------- */
+
+/* A styled table (modes, comparisons). The wrapper scrolls on its own if a phone is too narrow. */
+.p-table-wrap { overflow-x: auto; margin: 1.4rem 0 1.3rem; border: 1px solid var(--p-line); }
+.p-table { width: 100%; border-collapse: collapse; font-size: 0.97rem; }
+.p-table th, .p-table td { padding: 0.7rem 0.9rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--p-line); }
+.p-table thead th { font-family: var(--font-ui); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--p-1); background: color-mix(in srgb, var(--p-1) 8%, var(--p-panel)); }
+.p-table tbody th { font-family: var(--font-ui); font-weight: 600; color: var(--p-3); white-space: nowrap; }
+.p-table tbody tr { background: var(--p-panel); transition: background-color .2s; }
+.p-table tbody tr:hover { background: color-mix(in srgb, var(--p-1) 6%, var(--p-panel)); }
+.p-table tr:last-child > * { border-bottom: 0; }
+/* On phones a table becomes a stack of rows: the row heading on top, each cell under it with its
+   column name taken from data-label. */
+@media (max-width: 620px) {
+    .p-table thead { display: none; }
+    .p-table tr { display: block; padding: 0.7rem 0; border-bottom: 1px solid var(--p-line); }
+    .p-table tr:last-child { border-bottom: 0; }
+    .p-table th, .p-table td { display: block; border: 0; padding: 0.15rem 0.9rem; }
+    .p-table tbody th { white-space: normal; padding-bottom: 0.3rem; }
+    .p-table td[data-label]::before {
+        content: attr(data-label) ": ";
+        font-family: var(--font-ui); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--p-1);
+    }
+}
+
+/* A chain of steps with arrows: left to right on wide screens, top to bottom on phones. */
+.p-chain { list-style: none; margin: 1.4rem 0 0.6rem; padding: 0; display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px 28px; }
+.p-chain li {
+    --c: var(--p-1);
+    position: relative; flex: 1 1 9rem;
+    padding: 0.7rem 0.9rem;
+    background: var(--p-panel); border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); border-top: 3px solid var(--c);
+    font-size: 0.93rem; line-height: 1.4;
+}
+.p-chain li b { display: block; margin-bottom: 0.25rem; font-family: var(--font-ui); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.82rem; color: var(--c); }
+.p-chain li:not(:last-child)::after {
+    content: "\2192"; position: absolute; right: -22px; top: 50%; translate: 0 -50%;
+    font-family: var(--font-ui); font-size: 1.1rem; color: var(--p-dim);
+}
+@media (max-width: 760px) {
+    .p-chain { flex-direction: column; gap: 22px; }
+    .p-chain li { flex: none; }
+    .p-chain li:not(:last-child)::after { content: "\2193"; right: auto; left: 1rem; top: auto; bottom: -21px; translate: none; }
+}
+
+/* Nested frames: each layer of a structure inside the one above it. */
+.p-nest { margin: 1.4rem 0 0.6rem; }
+.p-nest > div, .p-nest div div {
+    --c: var(--p-1);
+    padding: 0.8rem 0.9rem 0.9rem;
+    border: 1px solid color-mix(in srgb, var(--c) 55%, transparent);
+    background: color-mix(in srgb, var(--c) 6%, transparent);
+}
+.p-nest div div { margin-top: 0.7rem; }
+.p-nest span { display: block; font-family: var(--font-ui); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c); }
+.p-nest small { display: block; color: var(--p-dim); font-size: 0.9rem; line-height: 1.4; margin-top: 0.15rem; }
+
+/* ---------- Box art send-off: two equal columns at every width ---------- */
+
+.p-sendoff {
+    display: grid; grid-template-columns: 1fr 1fr; gap: clamp(0.8rem, 3vw, 2.4rem); align-items: center;
+    margin-top: clamp(2.6rem, 6vw, 4rem);
+}
+.p-sendoff img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid color-mix(in srgb, var(--p-1) 50%, transparent); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.9); }
+.p-sendoff .p-card { padding: clamp(0.8rem, 3vw, 2rem); }
+.p-sendoff h2 { font-size: clamp(1.05rem, 0.7rem + 2vw, 2rem); margin: 0 0 0.8rem; }
+.p-sendoff p { font-size: clamp(0.82rem, 0.75rem + 0.45vw, 1.05rem); line-height: 1.5; }
+.p-sendoff .btn { margin-top: 0.4rem; white-space: normal; text-align: center; }
+@media (max-width: 620px) {
+    .p-sendoff { align-items: start; }
+    .p-sendoff img { position: sticky; top: calc(var(--header-h) + 0.8rem); }
+}
+@media (max-width: 480px) {
+    .p-sendoff .btn { padding: 0.5rem 0.6rem; font-size: 0.72rem; letter-spacing: 0.06em; }
+}
+
+/* The footer, recoloured to the page. */
+.site-footer { background: color-mix(in srgb, var(--flow-1) 88%, transparent); border-top-color: var(--p-line); }
+.site-footer a:hover { color: var(--p-1); }
+
+@media (prefers-reduced-motion: reduce) {
+    .p-name, .p-sub, .p-sub::after, .section-mark::after { animation: none !important; }
+}

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Bunkerships: Tacticool Physics Squads</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: command clumsy physics squads and mobile fortresses called bunkerships across a persistent galaxy. Cortex Command-style combat, Advance Wars-style grid tactics, and a campaign where nothing you build is thrown away.">
+    <meta name="keywords" content="game design concept, physics squad tactics, bunkership, mobile fortress, Cortex Command inspired, Advance Wars inspired, turn-based overworld, destructible terrain, infinite metagame, AAL universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/AAL-Bunkerships.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Bunkerships: Tacticool Physics Squads">
+    <meta property="og:description" content="A game design concept: physics squads, mobile fortresses and a galaxy where progress never goes backwards. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/AAL-Bunkerships.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aalsw_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: soldiers firing from cover as an explosion tears through a tiled corridor">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Bunkerships: Tacticool Physics Squads">
+    <meta name="twitter:description" content="A game design concept: physics squads, mobile fortresses and a galaxy where progress never goes backwards.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aalsw_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Bunkerships: Tacticool Physics Squads",
+        "alternateName": "Tactical Arsenal Command",
+        "description": "A game design concept, not a released game: 2D physics squad combat and mobile fortresses (bunkerships), commanded across a turn-based overworld, inside an infinite campaign where progress never goes backwards. Set in Reactorcore's AAL universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Tactics", "Strategy", "Action"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/AAL-Bunkerships.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aalsw_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0d1009">
+
+    <link rel="preload" href="../fonts/stormfaze.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+
+    <style>
+        /* AAL Bunkerships: olive drab and bone, with signal red for anything live and Apron's gold
+           kept for Apron. Stormfaze for the title and headings, Operation Napalm's stencil for the
+           subtitle and kickers. */
+        @font-face { font-family: "Stormfaze"; src: url("../fonts/stormfaze.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Operation Napalm"; src: url("../fonts/operation-napalm.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0d1009;
+            --flow-2: #2c3517;
+            --grid-minor: rgba(214, 205, 150, 0.045);
+            --grid-major: rgba(214, 205, 150, 0.10);
+            --p-ground: rgba(16, 19, 11, 0.95);
+            --p-panel: #1a1f12;
+            --p-1: #ff4b36;
+            --p-2: #a9bb5c;
+            --p-3: #ecdfb2;
+            --p-text: #dadac8;
+            --p-dim: #a7a98f;
+            --p-line: rgba(220, 210, 160, 0.16);
+            --gold: #e9b62f;
+            --font-title: "Stormfaze", "Segoe UI", sans-serif;
+            --font-sub: "Operation Napalm", "Segoe UI", sans-serif;
+            --shade: #0b0d07;
+        }
+
+        /* Title effect, "target lock": a red glow sweeps across the name like a reticle searching,
+           over layered dark shadows that keep it legible on the busy art at the glow's dimmest. */
+        .p-name {
+            text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 0 0 22px var(--shade), 3px 3px 0 var(--shade);
+            animation: lock-sweep 7s ease-in-out infinite;
+        }
+        @keyframes lock-sweep {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 0 0 22px var(--shade), 3px 3px 0 var(--shade), -14px 0 26px rgba(255, 75, 54, 0.0); }
+            40% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 0 0 22px var(--shade), 3px 3px 0 var(--shade), -10px 0 28px rgba(255, 75, 54, 0.55); }
+            55% { color: #fff7de; text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 0 0 22px var(--shade), 3px 3px 0 var(--shade), 0 0 34px rgba(255, 75, 54, 0.85); }
+            70% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 0 0 22px var(--shade), 3px 3px 0 var(--shade), 12px 0 28px rgba(255, 75, 54, 0.4); }
+        }
+        .p-sub { text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        /* The reticle settling under the subtitle. */
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            box-shadow: 0 0 6px rgba(255, 75, 54, 0.5);
+            animation: lock-line 7s ease-in-out infinite;
+        }
+        @keyframes lock-line {
+            0%, 40%, 100% { box-shadow: 0 0 6px rgba(255, 75, 54, 0.4); opacity: 0.7; }
+            55% { box-shadow: 0 0 16px rgba(255, 75, 54, 0.95), 0 0 30px rgba(255, 75, 54, 0.5); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 7s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 55% { box-shadow: 0 0 10px rgba(255, 75, 54, 0.6); } }
+
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 1rem; letter-spacing: 0.1em; }
+        .apron { --c: var(--gold); }
+        .apron h3 { color: var(--gold); }
+        .p-prose .apron { margin: 1.6rem 0; max-width: 74ch; }
+
+        /* The commanders table: sin and virtue side by side. */
+        .virtues td { width: 50%; font-size: 0.94rem; line-height: 1.5; }
+        @media (max-width: 620px) { .virtues td { width: auto; padding-block: 0.35rem; } }
+        .virtues td b { color: var(--p-3); font-family: var(--font-ui); font-weight: 600; letter-spacing: 0.04em; }
+        .virtues td i { color: var(--p-1); font-style: normal; font-family: var(--font-ui); font-weight: 600; font-size: 0.82em; letter-spacing: 0.08em; text-transform: uppercase; }
+        .virtues thead th:last-child { color: var(--p-2); }
+
+        .p-nest > div { --c: var(--p-1); }
+        .p-nest > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div { --c: var(--gold); }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <img class="p-hero-img" src="../projects/images/aalsw_1_title.jpg" alt="A squad of soldiers in olive armor advances through a ruined bunker under laser fire, a gunship hovering behind them." width="1280" height="720" fetchpriority="high">
+        <div class="p-hero-title wrap">
+            <h1 class="p-title"><span class="p-name">AAL Bunkerships</span><span class="p-sub">Tacticool Physics Squads</span></h1>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/crosshair-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/battleship-cathelineau.png)"></span>Game overview</h2>
+            <p class="p-lead">AAL Bunkerships is a 2D side-view tactics game about clumsy, inventive physics soldiers and the mobile fortresses that carry them into battle. Every bullet is a real object, every wall can be dug through, and the best moments are the ones nobody planned.</p>
+            <p>Above the battles sits a turn-based grid map of the region, in the spirit of Advance Wars, where you move squads and bunkerships, scout through fog, set traps and decide where and how to strike. Above that sits a whole galaxy, worked through one job at a time as an agent of a galactic colonization agency.</p>
+            <p>It takes Cortex Command's physics combat, Advance Wars' grid, the fort under fire from Forts, FTL's ship systems and XCOM's squad preparation, and fixes the one thing they share: when the match ends, everything you built is thrown away. Here, nothing is. Your fleet, your victories and your galaxy stay.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love tactical sandboxes like Cortex Command, Advance Wars, Forts, FTL and XCOM, and who come out of a match absorbed but tired, and strangely empty.</p>
+                    <p>They already get plenty of challenge. What they're hungry for is <strong>work that counts</strong>: a base worth caring for, a fleet with a history, a reason to play with finesse instead of rushing to the end.</p>
+                    <p>The interface is deep (squads, ships, loadouts, a strategy map), but every part is streamlined: chores are automated or optional, nothing is timed against you, and the game pauses anywhere.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and creativity:</strong> the inventive, often hilarious joy of physics combat, where a plan can work in ways nobody predicted.</p>
+                    <p><strong>Competence:</strong> commanding squads, designing ships and watching your ideas hold up under fire.</p>
+                    <p><strong>Meaning and continuity:</strong> every battle moves something forward, and everything you build lasts.</p>
+                    <p>It deliberately avoids draining <strong>ease</strong> (the slow economy is kept out of the fights), <strong>autonomy</strong> (no job is forced) and <strong>rest</strong> (stop after any mission and lose nothing).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Strategy games usually end in a fair, balanced match that funnels into a contest of elimination, then resets to zero. All the friction, and none of it counts.</p>
+                    <p>AAL Bunkerships replaces the match with <strong>a service that never ends</strong>: clearing threats from a galaxy for a colonization agency, one bounty at a time. A victory advances the galaxy; a failure only delays it.</p>
+                    <p><strong>Progress never goes backwards</strong>, your fleet persists, and you start with more than you need, so you play for the fight itself, not to scrape by.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aalsw_5_story.jpg" alt="A green-skied colony world crowded with ring stations and towers, starships trading fire in the foreground and a huge creature drifting in the distance." width="1280" height="720" loading="lazy">
+            <figcaption>"The war at home ended a long time ago. Out here, past the settled stars, somebody still has to clear the way."<cite>Agency recruitment briefing</cite></figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span>Lore &amp; story</h2>
+            <h3>The Golden Age, and the rest of the galaxy</h3>
+            <p>The game is set in the <a href="../aal/">AAL universe</a>, in its Golden Age. The Eradication Wars, fought between humans in a small pocket of space around the Sun, are long over. Their winners became Homo mugen: immortal, endlessly adaptable people who live alongside friendly aliens and machines in a kind, abundant civilization.</p>
+            <p>Now that civilization is spreading into the rest of the Milky Way, and that's where you come in. You're an agent of a galactic colonization agency, one of countless agents who prepare star systems for settlement and keep them safe.</p>
+
+            <h3>Who's out there</h3>
+            <p>The wider galaxy isn't empty. Besides alien peoples who are glad of the company, it holds escapees and remnants of the Eradication Wars, renegades, would-be dictators and plain thugs who have grabbed a star system for themselves and run it on piracy, vandalism and plunder. Here and there, pockets of space monsters lurk as well, though the truly enormous ones live beyond the galaxy.</p>
+            <p>These commanders rarely fight in person. They run their forces remotely through a Command Core, and taunt you like 90s cartoon villains while they do it.</p>
+
+            <article class="p-card apron">
+                <h3><span class="icon" style="--icon: url(../icons/shop-delapouite.png)"></span>Gold Apron</h3>
+                <p>Everyone, you and your enemies alike, shops at the same place. Gold Apron is an anomaly: a space monster that turned symbiotic, an ancient automated hive of machines running a galaxy-wide catalog store. Companies, AAL among many others, submit blueprints. Apron manufactures, packs and ships whatever anyone orders, from a lawnmower to a battle tank, to anyone at all.</p>
+                <p>It trades peacefully, defends itself without mercy and covers itself in gold for no reason anyone has found. Nobody can reason with it, and nobody needs to, because it's far too convenient. In civilized space, customs officers turn back anything harmful.</p>
+                <p>The troops it sells are <strong>puppets</strong>: bodies without minds, bound to the account that bought them. They cry out when hit, but only the way a machine shows a warning light. Nobody in the fight is a real victim.</p>
+            </article>
+
+            <h3>The job right now</h3>
+            <p>A bounty board full of jobs, a hangar full of ships and the next region waiting. Clear it, then the next one, until the galaxy is secure. Then a small pioneer team heads for the next galaxy, which has quirks of its own.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls &amp; interface</h2>
+            <p>You directly control one soldier at a time, the way you would in a shooter, and can switch to any other whenever you like. The rest of the squad follows simple orders: sentry, patrol, go there, follow, evacuate, use that, ambush, sleep.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>A / D</dt><dd>Move left and right, or turn around</dd></div>
+                        <div><dt>W</dt><dd>Jump, jetpack, or up in zero gravity</dd></div>
+                        <div><dt>S</dt><dd>Crouch, drop down, or down in zero gravity</dd></div>
+                        <div><dt>Space</dt><dd>Directional dash or boost</dd></div>
+                        <div><dt>Shift</dt><dd>The body's special: focus, sprint, scan…</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim; the camera leans the way you look</dd></div>
+                        <div><dt>Left click</dt><dd>Use what you're holding</dd></div>
+                        <div><dt>Mouse 4</dt><dd>Its secondary function</dd></div>
+                        <div><dt>Mouse 5</dt><dd>Quick melee, quick item or quick tool</dd></div>
+                        <div><dt>R</dt><dd>Reload</dd></div>
+                        <div><dt>1–9</dt><dd>Quick-equip weapons, items and abilities</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Items</h3>
+                    <dl>
+                        <div><dt>F</dt><dd>Tap to pick up, hold to scoop everything nearby</dd></div>
+                        <div><dt>G</dt><dd>Tap to drop, hold to wind up a throw</dd></div>
+                        <div><dt>E</dt><dd>Use or interact</dd></div>
+                        <div><dt>Right click</dt><dd>Tactical pie menu and inventory</dd></div>
+                        <div><dt>Q</dt><dd>Cancel, stop, or grab on to a ledge</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Squad &amp; menus</h3>
+                    <dl>
+                        <div><dt>Z / C</dt><dd>Previous or next soldier; both for free select</dd></div>
+                        <div><dt>X</dt><dd>Buy menu and mission menu</dd></div>
+                        <div><dt>Wheel</dt><dd>Zoom in for a closer look</dd></div>
+                        <div><dt>Esc</dt><dd>Pause menu, everywhere</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Soldiers are mostly humanoid, but not always: some crab-like bodies trade a human's flexibility for abilities of their own. Anyone can carry several weapons, dual-wield, wear gear, ride as a passenger, duck to half height or go prone, and pick up, drop or throw anything they're holding. The view is pulled back far enough to see the fight and close enough to read each soldier.</p>
+            <p>Ammunition is limited but plentiful, and resupply is in the buy menu: premade orders arrive fast, custom ones take a little longer. How much you can field is set by your Command Core: <strong>four soldiers plus one extra unit of any size, two vehicles or robots, and two aircraft</strong> that come and go from off screen.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aalsw_2_vignette.jpg" alt="Soldiers fire from behind a tiled wall as an explosion throws chunks of floor into the air and tracer rounds streak past." width="1280" height="720" loading="lazy">
+            <figcaption>"The sniper went down, and his rifle tumbled down the shaft, hit the floor and went off. Nobody planned it. Everybody saw it."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <p>Four layers, each inside the one above it. The battles are the fun; everything above them exists to make the battles count.</p>
+            <div class="p-nest" aria-label="Structure of the game, outermost first">
+                <div><span>The galaxy</span><small>The agency's job: secure it, then move on to the next. Never ends.</small>
+                    <div><span>A region</span><small>A turn-based grid map, up to four factions, played to the end.</small>
+                        <div><span>A mission</span><small>A short chain of battles, built from a template.</small>
+                            <div><span>A battle</span><small>Side-view physics combat with your squad and bunkership.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/target-shot-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A squad made of physics</h3>
+                        <p>Side-view combat where everything is a physical object. You lead from the front with one soldier while the others hold, follow or flank.</p>
+                        <p>Firefights are slow enough to think in and chaotic enough to surprise you: cover gets blown apart, a grenade bounces back, a jetpacker lands on the wrong ledge. Between fights, the same hands work your bunkership: repairing, rearranging modules, swapping loadouts.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/radar-sweep-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A region, from landing to victory</h3>
+                        <p>A region is a grid map of somewhere: a planet's surface, its orbit, deep space, the crust, or even the molten core. Up to four factions share it, plus wildlife and bandits who belong to nobody.</p>
+                        <p>You arrive with an <strong>injector ship</strong> that punches into the ground and becomes your first base. Then you expand, build bunkerships, scout, set traps and hunt for the enemy's Command Core. Every region can be won by direct assault, slow attrition, guerrilla raids, stealth or any mix of them.</p>
+                        <p>Lose a fight and you pull back to rethink your fleet. In a chain of regions, the ones you've cleared stay cleared.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The agency, the hangar and the galaxy</h3>
+                        <p>The goal that never runs out: securing a galaxy for settlement, one bounty at a time, then moving on to the next. Jobs wait on a <strong>bounty board</strong>, where you accept them, save them for later or leave them to another agent.</p>
+                        <p>Your fleet lives in an enormous <strong>hangar</strong>, built from your own blueprints. You name your ships and keep a journal of their operations. Ships and squads can be lost; you can't.</p>
+                        <p>Between jobs, <strong>peaceful regions</strong> of your own play like a calm 4X game: mine, build, ship supplies to the front, then restore the land to life. Each finished galaxy leaves a generated artwork, a memento of that job, unlike anyone else's.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--gold)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One evening, start to finish</h3>
+                        <p>Launch the game to a slowly shifting montage of battle scenes. Open the bounty board and pick a job that fits the evening you have: a ten-minute rescue, or a region you'll work on for a few nights.</p>
+                        <p>Prepare in the hangar, where time stands still, so you can tinker for as long as you like. Launch, fight, and stop at the end of any mission, or quit from the pause menu at any moment and the game saves itself. Nothing decays while you're away, and nothing nags you to come back.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span>Game modes</h2>
+            <p>There's one game, not a menu of modes. Jobs differ in how long they take and how intense they are, so you choose by the time and the mood you're in.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Job shape</th><th scope="col">What happens</th><th scope="col">Length</th><th scope="col">Feel</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Single battle</th><td>One fight: a squad raid, a defense, a bunkership duel</td><td data-label="Length">Minutes</td><td data-label="Feel">Sharp</td></tr>
+                        <tr><th scope="row">Gauntlet</th><td>Battles back to back, up to about ten stages, with checkpoints</td><td data-label="Length">Under an hour</td><td data-label="Feel">Rising</td></tr>
+                        <tr><th scope="row">Forked battles</th><td>Branching battles where you pick the route, the way FTL or Star Fox 64 does</td><td data-label="Length">An hour or two</td><td data-label="Feel">Varied</td></tr>
+                        <tr><th scope="row">Single region</th><td>One overworld map, played to the end</td><td data-label="Length">An evening or more</td><td data-label="Feel">Strategy with sharp fights</td></tr>
+                        <tr><th scope="row">Chained regions</th><td>Several regions in a row; each one cleared stays cleared</td><td data-label="Length">Several evenings</td><td data-label="Feel">A long campaign</td></tr>
+                        <tr><th scope="row">Forked regions</th><td>Branching routes through several regions</td><td data-label="Length">Several evenings</td><td data-label="Feel">A long campaign, your route</td></tr>
+                        <tr><th scope="row">Peaceful region</th><td>Mining, industry and restoration, no combat</td><td data-label="Length">Five minutes to an hour</td><td data-label="Feel">Calm</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>The "endgame" is what you make of it: challenge runs with restrictions you set yourself, or easy runs just to enjoy the flow of a good fight.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/battleship-cathelineau.png)"></span>Features &amp; mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/target-shot-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Foundations</p>
+                        <h3>Physics on a budget</h3>
+                        <p>Physics combat is expensive: dozens of soldiers, projectiles, explosions and debris at once, and the game must never stutter. So the technology shapes the design from the very first line.</p>
+                        <p>Each soldier is <strong>one sprite moved by physics forces</strong>, not a ragdoll of limbs. Projectiles are fairly slow and effects are few, because many will fire at once. Terrain is tiles that can be partly destroyed, down to an indestructible bedrock.</p>
+                        <p>And <strong>there are no bottomless pits or instant deaths</strong>. In the sky, in orbit or at sea, everything carries an emergency float that brings it back up, so even a gun thrown overboard drifts back within reach.</p>
+                        <p>Before any gun exists, the standards do: one weapon system that can represent any firearm, blade, shield, tool or grenade; one character system for humans and non-humans alike; and standard elements (fire, smoke, electricity, acid, water, oil, plasma) and status effects that behave the same everywhere. Each link below depends on everything to its left:</p>
+                        <ol class="p-chain" aria-label="What depends on what">
+                            <li><b>The computer</b>How many bodies and bullets can exist at once</li>
+                            <li><b>The premise</b>Squads and fortresses in a galaxy-wide service</li>
+                            <li style="--c: var(--p-2)"><b>Natural laws</b>Elements, materials, floats, the Command Core</li>
+                            <li style="--c: var(--p-2)"><b>Environments</b>Tiles, bedrock, gravity, gas and liquid zones</li>
+                            <li style="--c: var(--p-3)"><b>Soldiers &amp; ships</b>Bodies, vehicles, bunkership modules</li>
+                            <li style="--c: var(--p-3)"><b>The guns</b>Last of all, built on all of it</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/battleship-cathelineau.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Bunkerships: fortresses that move</h3>
+                        <p>A bunkership is a base, a factory and a barracks that carries your squads, guns and machines straight into the fight, whether it drives, sails, flies, dives, drills or crosses space.</p>
+                        <p><strong>Every system on board is a physical module</strong> you can see, walk to and shoot: the reactor, airlocks, hangars, heat sinks, turrets, silos, sensors, escape pods, squad banks, the maintenance network. If it exists, it works, and that's its capacity. So a bigger ship has more to maintain and more weak points, like the exhaust port on a certain moon-sized battle station. Getting rich doesn't make the game easier or harder; it changes its flavor.</p>
+                        <p>Ship duels are battles of their own. The faster ship chooses the range, and both sides fight across the gap with squads and small craft. A ship can <strong>flip itself end to end</strong> after a loudly announced countdown, turning a salvo meant for its front onto its armored back. A losing ship can try to warp away while the winner's reactor pins it in place. Anything friendly inside the warp zone comes along, and enemy boarders are left falling where the floor used to be.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/aalsw_3_feature.jpg" alt="Side-view cutaway of an olive bunkership hovering over a rocky battlefield: a glowing reactor at its center, a dropship in the hangar below, soldiers on every deck, turrets firing from the hull while a rear module takes a hit." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every machine on board is real. Find the one they forgot to armor."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/processor-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A limit with a reason</p>
+                        <h3>The Command Core</h3>
+                        <p>Every faction's forces in a region run through a Command Core: a hardy metal ball, the king piece of the board. Destroy it or steal it, and that faction is out of the region.</p>
+                        <p>It also explains the limits. <strong>The Core has a fixed processing capacity</strong>, like a party of six creatures in Pokémon. Each ship, squad and injector takes a share of it, and that decides how much you can bring. Anything that strays outside its influence goes limp until it's towed back. The computer's real hardware limit becomes a law of the world instead of an arbitrary rule.</p>
+                        <p>The Core can sit in an armored cradle deep underground, ride aboard a bunkership or travel with a sneaking squad. It can even be faked: a convincing decoy, maybe booby-trapped, means the enemy's princess is in another castle.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cardboard-box-closed-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Content that multiplies</p>
+                        <h3>Brands instead of factions</h3>
+                        <p>There are no fixed armies to pick from. There are <strong>brands</strong>: complete military kits sold through Gold Apron, each with its own style and its own way of playing, covering soldiers, weapons, vehicles, turrets, ship modules and gear.</p>
+                        <p>Before a campaign you choose your licences. <strong>One brand gets the best discount</strong>, each extra one costs more, and the all-brands pass is the priciest and slowest of all. Now and then Apron has a hiccup that makes a brand or an item unavailable to you for a mission, which is a good reason to keep a second setup ready.</p>
+                        <p>Because every brand is built on the same standards, <strong>every brand's gear works with every character and every other brand</strong>. A new item doesn't just add one thing; it combines with everything already there. Modders and creators can add items, or whole new brands, the same way.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/radar-sweep-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The grid above the battles</p>
+                        <h3>Move first, decide after</h3>
+                        <p>Regions play on a square grid, as in Advance Wars, with one twist: <strong>you move a unit first, then choose what to do</strong> based on where it ended up. A ghost trail shows how far it can go.</p>
+                        <p>The map starts dark. Scouts, flares, towers and spy satellites push back the fog, and everything leaves a signature: a big mining operation is loud, hot and visible to everyone, and so is every delivery you order from Apron, unless you pay for scan-proof packaging. <strong>Stealth is a real choice</strong>: a quiet hidden base can't go shopping, so it builds in secret from supplies smuggled in from a loud one.</p>
+                        <p>Battles start when units meet on neighboring tiles. A faction next door can watch through a disposable drone and slip one sneaky delivery into someone else's fight. And factions leave each other "messages": a trap with a real prize inside, a gift that's really a setup, a taunt, a distraction.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/path-distance-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Generated, not scripted</p>
+                        <h3>Missions from templates</h3>
+                        <p>Missions are built from templates and chained together: prisoner hunts and rescues, hits, recon, deliveries, anomalies to explore, infiltration and sabotage, assaults and defenses, chases and escapes, bunkership against bunkership.</p>
+                        <p>Each template is a short chain of battles with a few branches, filled from the generator's parts: the region, the opponent, their brands, the weather, what's guarded and where. An infiltration, for example:</p>
+                        <ol class="p-chain" aria-label="An infiltration mission, step by step">
+                            <li><b>Gather intel</b>A recon run, a spy satellite, or go in blind</li>
+                            <li><b>Get past the line</b>Checkpoints, wildlife, hazards, tripwires</li>
+                            <li style="--c: var(--p-2)"><b>Inside the target</b>Steal, sabotage, rescue, download or plant</li>
+                            <li style="--c: var(--p-3)"><b>Get out</b>Back the way you came, or by float if it all goes loud</li>
+                        </ol>
+                        <p>If an alarm trips, their alpha squad comes hunting through the corridors, and the mission changes shape. Add one new template, tile type or hazard, and it turns up across every campaign.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/chess-knight-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Opponents with personalities</p>
+                        <h3>Commanders built from sins and virtues</h3>
+                        <p>Every rival commander follows one of the seven deadly sins or its opposite virtue. It shapes how they design bases and ships, equip squads, spend money and fight. <strong>Neither side is better: each has a strength, and a weakness to find.</strong></p>
+                        <div class="p-table-wrap">
+                            <table class="p-table virtues">
+                                <thead><tr><th scope="col">Sin</th><th scope="col">Virtue</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Pride.</b> Perfect, symmetrical bases and elite units. <i>Weak spot:</i> does everything by the book. Set a trap, then another one next to it.</td><td><b>Humility.</b> Cheap, practical designs and random experiments. <i>Weak spot:</i> never commits to anything, so it can be overpowered.</td></tr>
+                                    <tr><td><b>Greed.</b> A core room decked out to insane levels; scavenges everything. <i>Weak spot:</i> half-equipped attack squads, thin outer defenses, distracted by small prizes.</td><td><b>Generosity.</b> Strong outer defenses and well-equipped, cherished units. <i>Weak spot:</i> a cozy, barely guarded interior. Infiltrators feast.</td></tr>
+                                    <tr><td><b>Lust.</b> Fast, passionate strike teams that hunt you and steal. <i>Weak spot:</i> neglects its bases; the core is often unguarded.</td><td><b>Chastity.</b> Slow, methodical, heavily fortified. <i>Weak spot:</i> can't keep up with fast, daring raids.</td></tr>
+                                    <tr><td><b>Wrath.</b> Sudden, overwhelming frontal assaults. Shock and awe. <i>Weak spot:</i> forgets its flanks; easy to bait with taunts and ambush.</td><td><b>Patience.</b> Traps, stockpiles, harassment and a superweapon in the works. <i>Weak spot:</i> slow to act. Sabotage the wonder weapon.</td></tr>
+                                    <tr><td><b>Gluttony.</b> Wild variety, daring rushes, goes for the biggest target. <i>Weak spot:</i> spends money as soon as it has it; falls for big distractions.</td><td><b>Moderation.</b> Balanced and steady, with no glaring exploits. <i>Weak spot:</i> predictable, and never changes its designs.</td></tr>
+                                    <tr><td><b>Envy.</b> Ploys, jamming and economic sabotage to drag you down. <i>Weak spot:</i> weak in a real fight; its ploys can be guessed.</td><td><b>Admiration.</b> Mirrors whoever is the biggest threat. <i>Weak spot:</i> always one step behind, and reveals its next designs.</td></tr>
+                                    <tr><td><b>Sloth.</b> Turtles behind armor, artillery and snipers, with deep reserves. <i>Weak spot:</i> baffling holes in its defenses and whimsical retreats.</td><td><b>Diligence.</b> Relentless, steady pressure; very alert. <i>Weak spot:</i> single-minded and telegraphed. A prepared defense picks it apart.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Up to four factions can share a region, allied or betraying each other, with wildlife, bandits, rogue machines and the odd space monster turning up as hazards or chances. When you lose a fight, the commander regroups and reshuffles, so a second attempt is never a repeat of the first.</p>
+                        <p>Because opponents are built from behaviors anyone can fall into, never from real groups of people, nobody real is the villain.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/auto-repair-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Friction moved out</p>
+                        <h3>The hangar and the peaceful regions</h3>
+                        <p>The slog of strategy games (gathering, stockpiling, building up an economy) doesn't belong in a fight, so it lives somewhere else. <strong>Peaceful regions</strong> play like a calm 4X game: survey, set up industry, build ships from your blueprints and send them to the front. When the land is spent, you <strong>restore it to life</strong>, the way Terra Nil does, and move your equipment to the next site.</p>
+                        <p><strong>You start with more than you need.</strong> The hangar holds default designs and ready ships for at least ten failed campaigns in a row. The lesson isn't scraping by; it's that you can't brute-force every problem.</p>
+                        <p>After a won campaign your ships and squads come home, and whatever you didn't build on site is refunded. What you did build stays behind as ruins, and when that region later becomes a peaceful one, those ruins are waiting to be explored and reclaimed.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/notebook-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A galaxy that remembers</p>
+                        <h3>Nothing un-happens</h3>
+                        <p>Time only moves forward. A victory advances the galaxy, a failure delays it, and someone else in the agency picks up the slack. <strong>You can't lose the game or ruin it.</strong> The universe keeps turning, too: rush in with a weak fleet and fail, and the opposition gains ground while you prepare, so the next attempt is a different problem, never a reload.</p>
+                        <p>Your record keeps itself: named ships with their operation journals, a galaxy map that brightens as regions are secured, and, when a galaxy is done, <strong>a unique generated artwork</strong> that marks the job. It celebrates and remembers with you. It doesn't pay out.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/aalsw_4_boxart.jpg" alt="Box art: an armored soldier with a rifle stands before a bunker hull, a squad behind, a starship above a planet's curve." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">The agency is hiring</p>
+                <h2 id="sendoff">AAL Bunkerships: Tacticool Physics Squads</h2>
+                <p>The galaxy is open for settlement, and somebody has to clear the way. Thugs have dug into star systems, would-be warlords taunt from behind their Command Cores, and Gold Apron will sell anyone anything.</p>
+                <p>Your hangar is full. Your squads are clumsy, brave and made of physics. Your bunkership is a fortress that flies, dives and drills. Every job moves the galaxy forward, and nothing you build is ever thrown away.</p>
+                <p><strong>Report to the hangar, agent.</strong></p>
+                <a class="btn" href="../index.html#free-to-fork" style="--c: var(--p-1)">Free to fork: build it yourself</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Stormfaze and Operation Napalm (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

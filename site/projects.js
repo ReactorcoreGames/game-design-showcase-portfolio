@@ -62,11 +62,11 @@ window.PROJECTS = [
     status: "concept", added: "2025-10-08"
   },
   {
-    page: "AALSW.html", prefix: "aalsw",
-    title: "Tactical Arsenal Command", subtitle: "Strategic Squad Combat",
-    icon: "crosshair-delapouite", tint: "orange",
-    blurb: "Directly control well-equipped operatives through fully destructible environments, with modular loadouts, real ballistics and a persistent galactic conquest metagame.",
-    genres: ["strategy", "action", "physics"], tags: ["squad tactics", "loadouts", "destructible terrain"],
+    page: "AAL-Bunkerships.html", prefix: "aalsw",
+    title: "AAL Bunkerships", subtitle: "Tacticool Physics Squads",
+    icon: "crosshair-delapouite", tint: "red",
+    blurb: "Clumsy physics squads and mobile fortresses, commanded across a turn-based galaxy map. Every system on a ship is a module you can shoot, and nothing you build is ever thrown away.",
+    genres: ["strategy", "action", "physics"], tags: ["squad tactics", "bunkerships", "destructible terrain", "infinite campaign"],
     universe: "aal", status: "concept", added: "2025-10-04"
   },
   {

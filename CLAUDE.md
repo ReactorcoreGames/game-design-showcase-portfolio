@@ -25,7 +25,7 @@ site/                  THE PUBLISHED SITE. Only this folder is deployed.
   aal/                 the AAL Universe page (index.html) and its images/, from image-prompts/aal.json
   book/                the book's online edition, built by tools/book.py from book/chapters/ (don't hand-edit
                        the .html), plus book.css and book-logo.png
-  projects/            one <slug>.html per project
+  projects/            one <slug>.html per project, plus project.css (the shared showcase template)
     images/            <prefix>_<1-5>_<role>.jpg
     thumbnails/        <prefix>_2_vignette_thumb.jpg (nexus cards)
 book/
@@ -84,7 +84,7 @@ Only `tools/images.py gen` without `--dry-run` spends anything. Run it only when
 
 ## Conventions
 
-- **Published URLs are frozen.** Never rename an existing page or its images. Untidy names like `HazardMissionTeam (2).html` stay.
+- **Published URLs are frozen.** Never rename an existing page or its images. Untidy names like `HazardMissionTeam (2).html` stay. The one exception, Reactorcore's call: `AALSW.html` became `AAL-Bunkerships.html` (the game's real name), and `AALSW.html` stays as a redirect stub.
 - **New slugs** are lowercase kebab-case, used for both the page file and the image prefix.
 - Everything outside `site/` is public in the GitHub repo by choice. Reactorcore wants people to learn from the designs and the bible. Never put credentials or copyrighted third-party assets (ripped sprites etc.) in the repo. The one exception is the two guest articles, which are reposted with their authors' permission and credited at the top.
 - Reactorcore stays anonymous: no real name anywhere in the repo, file names and metadata included. Don't highlight Finland. See the identity rules in `workflow/site-plan.md`.

@@ -39,6 +39,10 @@ FONTS = [
     ("Oxanium-Medium.ttf", "oxanium-medium.woff2", None, None),
     ("Oxanium-SemiBold.ttf", "oxanium-semibold.woff2", None, None),
     ("Orbitron[wght].ttf", "rc-display-black.woff2", {"wght": 900}, "RC Display"),
+    # Project pages' own display fonts (see workflow/page-brief.md). Check each font's
+    # embedded licence first; prefer CC0 and SIL OFL ones.
+    ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships
+    ("OperationNapalm-Regular.ttf", "operation-napalm.woff2", None, None),  # CC0, AAL-Bunkerships
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 
@@ -72,6 +76,8 @@ def build_fonts() -> None:
             font = instantiateVariableFont(font, pin)
         if family:
             rename_family(font, family)
+        font.reader.tables.pop("SVG ", None)   # colour-glyph table; the pages use the plain outlines
+        font.tables.pop("SVG ", None)
         opts = subset.Options()
         opts.flavor = "woff2"
         opts.layout_features = ["*"]

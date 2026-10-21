@@ -11,7 +11,7 @@ and no thumbnail. The AAL page (site/aal/) uses one.
     python tools/images.py check  [slug ...]             validate specs, show lengths and image count
     python tools/images.py gen    slug ... [--dry-run]   generate through BAIG (klein4b, Standard tier)
                                    [--model M --only 1,6]  ... or reroll some images on another model
-    python tools/images.py finish slug ...               resize + JPEG (+ thumbnail) into site/
+    python tools/images.py finish slug ... [--only 3]    resize + JPEG (+ thumbnail) into site/
     python tools/images.py recompress [--apply]          re-encode existing site images (report only by default)
 
 No slug given to check = every spec. gen refuses to queue more than --max images
@@ -228,7 +228,10 @@ def cmd_finish(args) -> None:
     for slug in args.slugs:
         spec = load_spec(slug)
         prefix = spec["prefix"]
+        only = {int(n) for n in args.only.split(",")} if args.only else None
         for img in sorted(spec["images"], key=lambda i: i["n"]):
+            if only is not None and img["n"] not in only:
+                continue
             src = find_raw(slug, img.get("model", args.model), img["n"])
             im = scale_to_area(Image.open(src))
             dest = dest_path(spec, img)
@@ -283,6 +286,7 @@ def main() -> None:
     p = sub.add_parser("finish")
     p.add_argument("slugs", nargs="+")
     p.add_argument("--model", default="klein4b")
+    p.add_argument("--only", help="finish only these image numbers (a rewrite that regenerated some of them)")
     p.set_defaults(func=cmd_finish)
 
     p = sub.add_parser("recompress")

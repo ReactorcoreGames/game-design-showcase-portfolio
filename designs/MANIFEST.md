@@ -13,7 +13,7 @@ All 37 are `revisit`. Images are kept as they are unless a rewrite changes what 
 | Page file | Image prefix | Title | Source design(s) in `designs/done/` | Notes |
 |---|---|---|---|---|
 | `AAL-Stealth-Sector.html` | `stealth_sector` | AAL Stealth Sector: Covert Battleship Wars | `Battleships clone on steroids.txt` | |
-| `AALSW.html` | `aalsw` | Tactical Arsenal Command: Strategic Squad Combat | `AALSW CC summary of final design.md` | |
+| `AAL-Bunkerships.html` | `aalsw` | AAL Bunkerships: Tacticool Physics Squads | `AALSW CC summary of final design.md`, plus the wider Bunkerships docs outside the repo (`C:\08 Projects\Project_Bunkerships`) | **Pilot rewrite, `revisited`, image 3 pending (Nano Banana).** Renamed from `AALSW.html` ("Tactical Arsenal Command" was a Sonnet-era misname); `AALSW.html` is now a redirect stub, keep it. The image prefix stays `aalsw`. |
 | `AALSuperweapon.html` | `AALSuperweapon` | AAL Superweapon: Physics Combat Devastation | `AAL Superweapon.txt` | |
 | `ChainReactionDemolitionPunch.html` | `chainreaction` | Chain Reaction Demolition Punch | `falling-sand-pack/Chain Reaction Demolition Punch.md` | |
 | `City Buster.html` | `citybuster` | Orbital City Buster: Sand Breaker Ball | `City Buster game.md` | |
