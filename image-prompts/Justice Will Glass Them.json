@@ -1,0 +1,14 @@
+{
+  "slug": "Justice Will Glass Them",
+  "prefix": "justice",
+  "preset": "03 Style - Pixel Side View",
+  "style": "Moody pixel art, industrial military design. Dark violet to crimson sky, ember orange glow, hot magenta beam light.",
+  "notes": "Rewrite (2026-10). All five images are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated. The preset is the closest match to how they look, not the one they were made with.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide shot of a sleek angular space warship hovering in a dark sky above a sprawling fortified complex of concrete bunkers and turrets on rocky, burning terrain, glowing engine arrays."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Side view of a brilliant energy beam drilling down through a fortress cut away to show its layers of soil, concrete and metal, glowing molten debris cascading into the hole, hidden chambers and air pockets opening."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Inside a carved-out underground chamber, a stream of sand and debris pours through a hole in the ceiling and piles on the floor, glowing embers among the rubble, ruined concrete walls behind."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Low-angle hero shot of an imposing angular space warship against a turbulent sky, weapon arrays and engine glow, surface bunkers on the burning ground far below."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide view of several colony worlds across a starfield, patrol ships flying between planets along glowing routes, stations and orbital platforms dotting the void."}
+  ]
+}

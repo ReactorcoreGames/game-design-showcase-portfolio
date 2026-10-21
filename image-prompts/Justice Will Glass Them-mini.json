@@ -1,0 +1,21 @@
+{
+  "slug": "Justice Will Glass Them-mini",
+  "out": "site/projects/mini/justice",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still at night, deep violet sky, hot magenta beam light, molten amber. ",
+  "notes": "Mood-only mini images for Justice Will Glass Them.html, beside the lore, game layer and feature text. SDXL (free): gen \"Justice Will Glass Them-mini\" --model sdxl --max 999, then finish \"Justice Will Glass Them-mini\" --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "bunker", "ratio": "3:2", "prompt": "A heavily armored concrete bunker entrance dug deep into a mountainside, guarded by anti-aircraft guns."},
+    {"n": 2, "name": "warship", "ratio": "3:2", "prompt": "A huge dark police warship hovering high in a night sky above a colony world, searchlights below."},
+    {"n": 3, "name": "beam", "ratio": "3:2", "prompt": "A bright beam of energy from the sky melting a glowing hole down into layered rock."},
+    {"n": 4, "name": "fortress", "ratio": "3:2", "prompt": "A cross-section of a fortress buried under layers of rock, concrete and steel, a command room at the bottom."},
+    {"n": 5, "name": "route", "ratio": "3:2", "prompt": "A patrol ship flying past a chain of small colony planets in a violet nebula."},
+    {"n": 6, "name": "coffee", "ratio": "3:2", "prompt": "A cup of coffee steaming beside a glowing game screen on a desk at night."},
+    {"n": 7, "name": "guns", "ratio": "3:2", "prompt": "A rotary machine gun turret on a warship's hull firing tracers into the dark."},
+    {"n": 8, "name": "missiles", "ratio": "3:2", "prompt": "Missiles streaking up out of a crater in the ground toward the sky, smoke trails behind them."},
+    {"n": 9, "name": "clues", "ratio": "3:2", "prompt": "Thick cables and ventilation shafts running down through exposed rock toward something hidden below."},
+    {"n": 10, "name": "core", "ratio": "3:2", "prompt": "A gigantic explosion erupting from deep underground, a mountain lifting apart in fire."}
+  ]
+}

@@ -279,10 +279,10 @@ window.PROJECTS = [
   },
   {
     page: "Justice Will Glass Them.html", prefix: "justice",
-    title: "Justice Will Glass Them", subtitle: "Orbital Vengeance Obliteration",
-    icon: "police-badge-andymeneely", tint: "blue",
-    blurb: "A space police warship delivers precision justice by orbital bombardment, drilling through criminal fortresses layer by layer in falling-sand physics.",
-    genres: ["falling-sand", "arcade", "physics"], tags: ["orbital bombardment", "space police"],
+    title: "Justice Will Glass Them", subtitle: "Orbital Bunker Buster",
+    icon: "police-badge-andymeneely", tint: "magenta",
+    blurb: "A space police warship burns down through a buried dictator's layered fortress with a charge beam, shooting down the missiles that come back up, in falling-sand physics.",
+    genres: ["falling-sand", "arcade", "physics"], tags: ["destructible terrain", "space police", "point defense"],
     status: "concept", added: "2025-10-08"
   },
   {

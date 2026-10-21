@@ -62,6 +62,8 @@ FONTS = [
     ("Fragile Bombers.otf", "fragile-bombers.woff2", None, None),           # CC0, Halberd_Suit_Wars
     ("Iceland-Regular.ttf", "iceland.woff2", None, None),                   # SIL OFL, Halberd_Suit_Wars
     ("ExpletusSans-Bold.ttf", "expletus-sans-bold.woff2", None, None),      # SIL OFL, HazardMissionTeam (2)
+    ("MatrixTypeDisplay-Bold.ttf", "matrixtype-display-bold.woff2", None, None),  # CC0, Justice Will Glass Them
+    ("Micro5-Regular.ttf", "micro5.woff2", None, None),                     # SIL OFL, Justice Will Glass Them
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 
