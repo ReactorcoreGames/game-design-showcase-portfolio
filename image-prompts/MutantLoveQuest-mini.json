@@ -1,0 +1,21 @@
+{
+  "slug": "MutantLoveQuest-mini",
+  "out": "site/projects/mini/mutantlove",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Whimsical cinematic film still of a desert wasteland at golden hour, rusty scrap, dusty orange light, pink glow. ",
+  "notes": "Mood-only mini images for MutantLoveQuest.html, beside the lore, game layer and feature text. SDXL (free): gen MutantLoveQuest-mini --model sdxl --max 999, then finish MutantLoveQuest-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "glow", "ratio": "3:2", "prompt": "A crater glowing toxic green in the middle of a desert wasteland, rusty cars around it."},
+    {"n": 2, "name": "match", "ratio": "3:2", "prompt": "A rusty notice board covered in handwritten lonely hearts notes and a pink paper heart."},
+    {"n": 3, "name": "no", "ratio": "3:2", "prompt": "A grumpy village gate made of stacked rusty cars, a stern guard with folded arms in front."},
+    {"n": 4, "name": "arena", "ratio": "3:2", "prompt": "A small dusty fighting ring built from scrap metal and tires in a junkyard."},
+    {"n": 5, "name": "road", "ratio": "3:2", "prompt": "A broken highway winding through a desert between two distant scrap villages."},
+    {"n": 6, "name": "photo", "ratio": "3:2", "prompt": "An old instant photo of a strange happy couple pinned to a corkboard among many others."},
+    {"n": 7, "name": "evening", "ratio": "3:2", "prompt": "A cozy scrap-metal shack at sunset with a lantern glowing in the window."},
+    {"n": 8, "name": "sockets", "ratio": "3:2", "prompt": "A workbench covered in mismatched puppet arms and legs made of wood, stone and cloth."},
+    {"n": 9, "name": "stubborn", "ratio": "3:2", "prompt": "A huge stubborn man in a mayor's sash standing like a boulder in a dusty street."},
+    {"n": 10, "name": "trash", "ratio": "3:2", "prompt": "A pile of scrap and trash bags in a junkyard at dusk, a patched-up puppet climbing out."}
+  ]
+}

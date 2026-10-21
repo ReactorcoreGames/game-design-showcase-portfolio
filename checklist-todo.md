@@ -88,7 +88,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Mafia_Takedown
 - [x] Megalodon
 - [x] Mosh_Pit_Mayhem ⚑
-- [ ] MutantLoveQuest ⚑
+- [x] MutantLoveQuest ⚑
 - [ ] Planetary Ring Miner
 - [ ] Poo Storm Janitor Powersuit
 - [ ] RussiBiomonster ⚑

@@ -257,8 +257,8 @@ window.PROJECTS = [
     page: "MutantLoveQuest.html", prefix: "mutantlove",
     title: "Mutant Love Quest", subtitle: "Morphing Ragdoll Romance",
     icon: "tentacle-heart-lorc", tint: "magenta",
-    blurb: "A post-apocalyptic romantic comedy: a mutant fights through social obstacles to make their date, while their body parts transform every 30 seconds.",
-    genres: ["ragdoll", "action"], tags: ["romance", "comedy", "mutation"],
+    blurb: "A goofy wasteland slapfest: knock every gatekeeper out of the arena on the way to your date, with a random body you can re-roll one part at a time mid-fight.",
+    genres: ["ragdoll", "action"], tags: ["romance", "comedy", "mutation", "platform fighter"],
     status: "concept", added: "2025-10-08"
   },
   {

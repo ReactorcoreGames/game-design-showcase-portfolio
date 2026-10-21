@@ -1,0 +1,14 @@
+{
+  "slug": "MutantLoveQuest",
+  "prefix": "mutantlove",
+  "preset": "01 Main - 3D High Poly",
+  "style": "Stylized 3D toy render. Chunky puppet-like mutants built from stitched burlap, wood, stone and scrap parts. Dusty rust orange and sand palette with hot pink and electric blue glows.",
+  "notes": "Rewrite (2026-10). Images 1-4 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. The page had no story image, so only image 5 is new: gen MutantLoveQuest --only 5, then finish MutantLoveQuest --only 5.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide shot at golden hour of two chunky ragdoll mutants embracing on cracked wasteland ground, one with stone legs, the other holding a flamethrower arm, rusted cars and ruins around them."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Low-angle action shot of a chunky ragdoll mutant mid-fight in an arena, stone legs and a flamethrower arm, limbs glowing with colored energy, debris flying."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Close shot of a mutant ragdoll's body changing mid-fight, one arm crackling with energy, a stone leg, a long tongue out, glowing symbols in the air."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait of two chunky mutant ragdolls holding hands, one with stone legs and a tongue, the other with a flamethrower arm, a wasteland sunset and ruined houses behind."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "High wide view at golden hour across a cracked orange wasteland valley. On the left, a ramshackle village of scrap-metal shacks around a rusty water tower, with a little shrine built of hubcaps on a hill. Far across the valley on the right, a second scrap village behind a big gate of stacked rusty cars. A dusty broken highway winds between the two villages past wrecked cars, a softly glowing green crater, and a spiked raider buggy kicking up a trail of dust. Tiny chunky puppet-like mutant figures with mismatched limbs walk along the road."}
+  ]
+}

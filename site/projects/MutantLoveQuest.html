@@ -4,793 +4,421 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mutant Love Quest: Morphing Ragdoll Romance</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Mutant Love Quest is a post-apocalyptic romantic action game where morphing mutants navigate social obstacles using ragdoll physics. Features dynamic body morphing system and procedurally-generated romance campaigns.">
-    <meta name="keywords" content="Mutant Love Quest, morphing ragdoll romance, post-apocalyptic dating, mutant transformation, physics combat, procedural romance, body morphing system, wasteland romance">
+
+    <meta name="description" content="A game design concept by Reactorcore: a floaty ragdoll slapfest in a goofy radioactive wasteland. A mutant whose body keeps changing fights through everyone who says no, from their own parents to their date's, to reach the love they matched with in the next village over.">
+    <meta name="keywords" content="game design concept, ragdoll physics, platform fighter, mutation, romance, comedy, post-apocalyptic, wasteland, Smash Bros inspired, Floppy Heroes inspired, Reactorcore">
     <meta name="author" content="Reactorcore Games">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/MutantLoveQuest.html">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Mutant Love Quest: Morphing Ragdoll Romance - Reactorcore Games">
-    <meta property="og:description" content="Post-apocalyptic romantic action game where morphing mutants navigate social obstacles using ragdoll physics. Features dynamic body morphing system and procedurally-generated romance campaigns.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mutantlove_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/MutantLoveQuest.html">
+
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Reactorcore Games">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:title" content="Mutant Love Quest: Morphing Ragdoll Romance">
+    <meta property="og:description" content="A game design concept: slap some sense into everyone standing between two mutants in love, with a body that mutates mid-fight. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/MutantLoveQuest.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mutantlove_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="3D render: a chunky puppet-like mutant with a stone leg fires a toy flamethrower in a fighting ring">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mutant Love Quest: Morphing Ragdoll Romance - Reactorcore Games">
-    <meta name="twitter:description" content="Post-apocalyptic romantic action game where morphing mutants navigate social obstacles using ragdoll physics. Features dynamic body morphing system and procedurally-generated romance campaigns.">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Mutant Love Quest: Morphing Ragdoll Romance">
+    <meta name="twitter:description" content="A game design concept: slap some sense into everyone standing between two mutants in love, with a body that mutates mid-fight.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mutantlove_2_vignette.jpg">
-    <meta name="twitter:creator" content="@ReactorcoreGames">
-    <meta name="twitter:site" content="@ReactorcoreGames">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "VideoGame",
-        "name": "Mutant Love Quest",
-        "alternateName": "Mutant Love Quest: Morphing Ragdoll Romance",
-        "description": "Post-apocalyptic romantic action game where morphing mutants navigate social obstacles using ragdoll physics. Features dynamic body morphing system and procedurally-generated romance campaigns.",
-        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mutantlove_2_vignette.jpg",
+        "name": "Mutant Love Quest: Morphing Ragdoll Romance",
+        "description": "A game design concept, not a released game: a comedic ragdoll platform fighter in which a mutant with a randomly changing body knocks every disapproving gatekeeper out of the arena on the way to their date, in an endless series of generated love stories.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Fighting", "Comedy"],
+        "gamePlatform": "PC",
         "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/MutantLoveQuest.html",
-        "genre": ["Action", "Romance", "Adventure"],
-        "gameItem": "Video Game",
-        "operatingSystem": "PC",
-        "applicationCategory": "Game",
-        "author": {
-            "@type": "Organization",
-            "name": "Reactorcore Games",
-            "url": "https://reactorcore.itch.io/"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Reactorcore Games",
-            "url": "https://reactorcore.itch.io/"
-        },
-        "datePublished": "2025",
-        "inLanguage": "en-US",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "1"
-        },
-        "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/mutantlove_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
-    
-    <!-- 
-    Image Files Needed:
-    mutantlove_1_title.jpg - Mutant couple embracing in wasteland sunset with romantic warm lighting
-    mutantlove_2_vignette.jpg - Mid-combat scene showing colorful morphing mutant with various body parts in action
-    mutantlove_3_feature.jpg - Dynamic body morphing transformation sequence with glowing effects
-    mutantlove_4_boxart.jpg - Romantic movie poster style with two mutant protagonists holding hands in wasteland
-    -->
-    
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#1c1013">
+
+    <link rel="preload" href="../fonts/zeroes-two.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
+        /* Mutant Love Quest: a dusk-brown wasteland, hot pink for love, a toxic crater green for the
+           glow that made everyone like this, and sun-bleached sand for highlights. Zeroes Two for
+           the title and headings, Expletus Sans Medium for the subtitle and kickers. */
+        @font-face { font-family: "Zeroes Two"; src: url("../fonts/zeroes-two.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Expletus Sans"; src: url("../fonts/expletus-sans-medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
         :root {
-            --bg-primary: #2d2317;
-            --bg-secondary: #3d3025;
-            --bg-card: #4a3d2a;
-            --text-primary: #e8dcc0;
-            --text-secondary: #c4b59e;
-            --accent-primary: #ff6b9d;
-            --accent-secondary: #4ecdc4;
-            --border-glow: #ff8c42;
-            --shadow-dark: rgba(0, 0, 0, 0.6);
-            --shadow-glow: rgba(255, 140, 66, 0.3);
-            --gradient-start: #ff6b9d;
-            --gradient-end: #4ecdc4;
+            --flow-1: #1c1013;
+            --flow-2: #4a2020;
+            --grid-minor: rgba(255, 210, 190, 0.045);
+            --grid-major: rgba(255, 210, 190, 0.10);
+            --p-ground: rgba(28, 17, 19, 0.95);
+            --p-panel: #2a191c;
+            --p-1: #ff5fa8;
+            --p-2: #9fe35c;
+            --p-3: #ffe0b5;
+            --p-text: #ecdcd6;
+            --p-dim: #b8a39d;
+            --p-line: rgba(255, 210, 190, 0.15);
+            --font-title: "Zeroes Two", "Segoe UI", sans-serif;
+            --font-sub: "Expletus Sans", "Segoe UI", sans-serif;
+            --shade: #120a0b;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+
+        /* Title effect, "heartbeat": a pink glow beats twice, lub-dub, then rests, over dark
+           layered shadows that keep the title legible between beats. */
+        .p-name {
+            letter-spacing: 0.01em;
+            animation: heartbeat 2.2s ease-out infinite;
         }
-        
-        body {
-            font-family: 'Arial Black', 'Helvetica', sans-serif;
-            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
+        @keyframes heartbeat {
+            0%, 40%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 16px rgba(255, 95, 168, 0.25); }
+            8% { color: #fff3e6; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(255, 95, 168, 0.9); }
+            16% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(255, 95, 168, 0.35); }
+            24% { color: #fff3e6; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 34px rgba(255, 95, 168, 1); }
         }
-        
-        /* Patreon Link */
-        .patreon-link {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 12px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            z-index: 1000;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
+        .p-sub { color: var(--p-1); font-weight: 500; text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: heartbeat-line 2.2s ease-out infinite;
         }
-        
-        .patreon-link:hover {
-            opacity: 1;
-            color: var(--accent-primary);
+        @keyframes heartbeat-line {
+            0%, 40%, 100% { box-shadow: 0 0 4px rgba(159, 227, 92, 0.3); opacity: 0.7; }
+            8%, 24% { box-shadow: 0 0 14px rgba(255, 95, 168, 0.9), 0 0 24px rgba(159, 227, 92, 0.6); opacity: 1; }
         }
-        
-        /* Title Section with Background Image */
-        .hero-section {
-            position: relative;
-            height: 700px;
-            background-image: url('images/mutantlove_1_title.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(rgba(45, 35, 23, 0.3), rgba(45, 35, 23, 0.2));
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-        
-        .game-title {
-            font-size: 4rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-            text-shadow: 0 0 20px var(--border-glow), 0 0 40px var(--border-glow), 0 0 60px var(--border-glow);
-            animation: emberGlow 4s ease-in-out infinite alternate;
-        }
-        
-        .game-subtitle {
-            font-size: 1.8rem;
-            color: var(--accent-primary);
-            font-weight: 600;
-            text-shadow: 0 0 10px var(--accent-primary);
-            animation: emberGlow 4s ease-in-out infinite alternate-reverse;
-        }
-        
-        @keyframes emberGlow {
-            0% { text-shadow: 0 0 20px var(--border-glow), 0 0 30px var(--border-glow), 0 0 40px var(--border-glow); }
-            100% { text-shadow: 0 0 30px var(--border-glow), 0 0 50px var(--border-glow), 0 0 70px var(--border-glow); }
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        /* Section Headers */
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 30px;
-            text-align: center;
-            color: var(--text-primary);
-            text-shadow: 0 0 15px var(--accent-secondary);
-            animation: emberGlow 3s ease-in-out infinite alternate;
-        }
-        
-        /* Game Overview */
-        .game-overview {
-            text-align: center;
-            font-size: 1.2rem;
-            margin-bottom: 50px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            color: var(--text-secondary);
-        }
-        
-        .game-overview p {
-            margin-bottom: 20px;
-        }
-        
-        /* Three Cards Layout */
-        .three-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        
-        .card {
-            background: var(--bg-card);
-            border: 2px solid var(--border-glow);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px var(--shadow-dark), 0 0 20px var(--shadow-glow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px var(--shadow-dark), 0 0 30px var(--shadow-glow);
-        }
-        
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--accent-primary);
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        
-        .card-content {
-            color: var(--text-secondary);
-            text-align: center;
-        }
-        
-        /* Controls Section */
-        .controls-section {
-            background: var(--bg-card);
-            border: 2px solid var(--border-glow);
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 30px var(--shadow-dark);
-        }
-        
-        .controls-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .control-item {
-            background: var(--bg-secondary);
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid var(--accent-secondary);
-        }
-        
-        .control-key {
-            font-weight: bold;
-            color: var(--accent-primary);
-            font-size: 1.1rem;
-        }
-        
-        /* Vignette Image */
-        .vignette-section {
-            position: relative;
-            margin: 60px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px var(--shadow-dark);
-        }
-        
-        .vignette-image {
-            width: 100%;
-            height: 600px;
-            background-image: url('images/mutantlove_2_vignette.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            color: var(--text-primary);
-            padding: 20px;
-            border-radius: 10px;
-            font-style: italic;
-            font-size: 1.2rem;
-            max-width: 400px;
-            border-left: 4px solid var(--accent-primary);
-        }
-        
-        /* Game Layers */
-        .game-layers {
-            margin: 60px 0;
-        }
-        
-        .layer-card {
-            background: var(--bg-card);
-            border: 2px solid var(--border-glow);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px var(--shadow-dark);
-        }
-        
-        .layer-title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--accent-primary);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .layer-emoji {
-            font-size: 2rem;
-        }
-        
-        .layer-content {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-        
-        /* Game Modes */
-        .game-modes {
-            background: var(--bg-card);
-            border: 2px solid var(--border-glow);
-            border-radius: 15px;
-            padding: 40px;
-            margin: 60px 0;
-            box-shadow: 0 10px 30px var(--shadow-dark);
-        }
-        
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            gap: 30px;
-            margin: 60px 0;
-        }
-        
-        .feature-card {
-            background: var(--bg-card);
-            border: 2px solid var(--border-glow);
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px var(--shadow-dark);
-        }
-        
-        .feature-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--accent-primary);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .feature-emoji {
-            font-size: 2.5rem;
-        }
-        
-        .feature-content {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-        
-        /* Feature Image */
-        .feature-image-section {
-            position: relative;
-            margin: 60px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px var(--shadow-dark);
-        }
-        
-        .feature-image {
-            width: 100%;
-            height: 600px;
-            background-image: url('images/mutantlove_3_feature.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        
-        .feature-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            color: var(--text-primary);
-            padding: 20px;
-            border-radius: 10px;
-            font-style: italic;
-            font-size: 1.2rem;
-            max-width: 400px;
-            border-left: 4px solid var(--accent-secondary);
-        }
-        
-        /* Box Art Section */
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            gap: 40px;
-            margin: 60px 0;
-            background: var(--bg-card);
-            border: 2px solid var(--border-glow);
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px var(--shadow-dark);
-        }
-        
-        .boxart-image {
-            background-image: url('images/mutantlove_4_boxart.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            min-height: 400px;
-            aspect-ratio: 2/3;
-        }
-        
-        .boxart-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .boxart-title {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--accent-primary);
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px var(--accent-primary);
-        }
-        
-        .boxart-description {
-            color: var(--text-secondary);
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--bg-primary);
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 80px;
-            border-top: 2px solid var(--border-glow);
-        }
-        
-        footer p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-        
-        footer a {
-            color: var(--accent-primary);
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            color: var(--accent-secondary);
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .game-title {
-                font-size: 2.5rem;
-            }
-            
-            .game-subtitle {
-                font-size: 1.3rem;
-            }
-            
-            .hero-section {
-                height: 350px;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .vignette-quote,
-            .feature-quote {
-                position: relative;
-                bottom: auto;
-                left: auto;
-                margin-top: 20px;
-                max-width: none;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-        }
+        .section-mark::after { animation: h2-line 2.2s ease-out infinite; }
+        @keyframes h2-line { 0%, 40%, 100% { box-shadow: none; } 8%, 24% { box-shadow: 0 0 10px rgba(255, 95, 168, 0.75); } }
+        .p-kicker { font-family: var(--font-sub); font-weight: 500; letter-spacing: 0.06em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 500; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1.05rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
-    
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="game-title">Mutant Love Quest</h1>
-            <div class="game-subtitle">Morphing Ragdoll Romance</div>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/mutantlove_1_title.jpg" alt="3D render at golden hour: two chunky stitched puppet-like mutants hug in a wasteland, one with stone feet, the other holding a toy flamethrower, rusty cars and ruins behind them." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Mutant Love Quest</span><span class="p-sub">Morphing Ragdoll Romance</span></h1>
+            </div>
         </div>
-    </section>
-    
-    <div class="container">
-        <!-- Game Overview -->
-        <section class="game-overview">
-            <p>In a bizarre post-apocalyptic world where radiation has transformed humanity into morphing mutants, love still finds a way. Navigate through social obstacles, family disapproval, and wasteland raiders as your constantly-changing mutant protagonist fights their way to a romantic date using slapstick ragdoll physics.</p><br>
-            
-            <p>Experience the ultimate romantic comedy action game where every 30 seconds brings a new body configuration, requiring quick adaptation and strategic thinking. Will your mutant hero overcome bureaucratic gatekeepers, religious zealots, and protective parents to reach their Wasteland Tinder match?</p><br>
-            
-            <p>Combining the chaotic fun of physics-based combat with the heartwarming quest for love, Mutant Love Quest delivers endless procedurally-generated romantic adventures in the most unlikely of settings.</p>
-        </section>
-        
-        <!-- Three Cards -->
-        <section class="three-cards">
-            <div class="card">
-                <div class="card-title">🎯 Target Audience</div>
-                <div class="card-content">
-                    Players who enjoy quirky physics-based combat games with humor and heart. Appeals to fans of silly ragdoll games, romantic comedies, and unique post-apocalyptic settings. Perfect for those seeking lighthearted gaming experiences with surprising depth and replayability.
-                </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/tentacle-heart-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
             </div>
-            <div class="card">
-                <div class="card-title">💝 Game's Purpose</div>
-                <div class="card-content">
-                    Fulfills the human needs for connection, humor, and lighthearted challenge. Provides stress relief through absurd combat scenarios while celebrating the universal quest for love. Creates shared laughter and memorable moments through unpredictable mutant transformations.
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-title">⚡ Core Concept</div>
-                <div class="card-content">
-                    A constantly-morphing mutant battles through social obstacles using strategic physics combat. Random body part transformations force adaptation while hurt/smash damage mechanics create tactical depth. Every campaign tells a unique love story in a procedurally-generated wasteland world.
-                </div>
-            </div>
-        </section>
-        
-        <!-- Controls & Interface -->
-        <section class="controls-section">
-            <h2>🎮 Controls & Interface</h2>
-            <p style="color: var(--text-secondary); text-align: center; margin-bottom: 20px;">Master the art of mutant combat with intuitive controls that adapt to your ever-changing body configuration.</p>
-            
-            <div class="controls-grid">
-                <div class="control-item">
-                    <div class="control-key">WASD</div>
-                    <div>Move character around arena</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Mouse Aim</div>
-                    <div>Rotate character toward cursor</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Left Click</div>
-                    <div>Activate left side limbs</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Right Click</div>
-                    <div>Activate right side limbs</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Q</div>
-                    <div>Toggle torso passive ability</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">E</div>
-                    <div>Activate head ability</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Spacebar</div>
-                    <div>Flip horizontal facing direction</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">X</div>
-                    <div>Mutate random body part (30s cooldown)</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">F</div>
-                    <div>Jump/dash forward</div>
-                </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/heart-beats-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Mutant Love Quest is a goofy, floaty ragdoll slapfest in a radioactive wasteland. You play a mutant who has matched with someone in the next village over, and everyone between you and them says no: your parents, your village's officials, raiders on the road, their village's officials, and finally their parents.</p>
+            <p>So you slap some sense into them, one fight at a time, until each one is knocked clean out of the arena and concedes. It plays like a light, trashy take on Super Smash Bros: damage builds up until a big hit sends someone flying off the screen. The twist is your body. Your mutant's <strong>head, torso, arms and legs are random</strong> in every fight, and you can re-roll one of them mid-fight, so you're always adapting to a body you've never fought with before.</p>
+            <p>It's a spinoff of Reactorcore's Floppy Heroes remix, a ragdoll gladiator game, set in a world somewhere between Mad Max and the film Idiocracy.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>People who love the knock-them-off-the-stage chaos of platform fighters and the slapstick of ragdoll games, and like their post-apocalypse silly rather than grim.</p>
+                    <p>They want <strong>laughs and warmth</strong>, and they're tired of fighting games that ask them to grind one character's combos for months.</p>
+                    <p>WASD, the mouse and five keys. Every fight hands you a new body, so nobody starts out ahead on muscle memory.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/tentacle-heart-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and silliness:</strong> absurd bodies doing absurd things, and gatekeepers sent flying over the horizon.</p>
+                    <p><strong>Variety:</strong> a new set of limbs every fight, and a new one whenever you choose.</p>
+                    <p><strong>Love and connection:</strong> every quest ends with two people together, celebrated and remembered.</p>
+                    <p>It avoids draining <strong>acceptance</strong>: anyone can love anyone, and the only villains are people who say no. A lost fight is never the end: the mutant pulls themselves together and tries again.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/dna2-lorc.png)"></span>Core concept</h3>
+                    <p>Platform fighters are about mastering one chosen fighter. Here the fighter is <strong>rolled at random</strong>, so the skill you build is adapting: reading a new body and finding its trick fast.</p>
+                    <p>A romance usually has one story. Here <strong>each quest is a new couple</strong>, generated with names, villages and gatekeepers of their own, with no end to the people looking for love.</p>
+                </article>
             </div>
         </section>
-        
-        <!-- Vignette Image -->
-        <section class="vignette-section">
-            <div class="vignette-image">
-                <div class="vignette-quote">
-                    "Chaotic yet strategic, every morph brings new possibilities and new challenges. Love has never been this beautifully unpredictable."
-                </div>
-            </div>
+
+        <figure class="p-shot">
+            <img src="../projects/images/mutantlove_5_story.jpg" alt="3D render of an orange wasteland valley at golden hour: a scrap-metal village and a rusty water tower on the left, a gate of stacked cars on the right, a broken highway between them past a glowing green crater, small mutants walking beside a spiked buggy." width="1280" height="720" loading="lazy">
+            <figcaption>"Two villages, one dusty highway, and everyone along it has an opinion about your love life."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/radioactive-lorc.png)"></span>Lore and story</h2>
+            <h3>The glow</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/01-glow.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A strange radiation washed over the world and turned everyone into super mutants with unstable bodies: limbs that shift and change every so often, heads that do odd things, torsos with a mind of their own. Society carried on anyway, in scrap-metal villages along broken highways, as loud, petty and bureaucratic as ever.</p>
+
+            <h3>A match</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/02-match.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Lonely mutants post on the wasteland's dating board, and yours got a match: a mutant from the neighboring village, with a name, likes and dislikes of their own. Every quest rolls a new pair, of any gender, so love comes in every combination.</p>
+
+            <h3>Everyone says no</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/03-no.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Your own parents say no. The keepers of your village's shrine say no. The officials at the village gate want a form you don't have, and the mayor says no on principle. Raiders block the road. Then the other village starts over: its gatekeepers, its shrine keepers, its mayor, and finally your date's parents, who have Concerns.</p>
+            <p>None of them is evil. They're just in the way, and in this world, an argument is settled by slapping.</p>
+
+            <h3>The job right now</h3>
+            <p>Get from your village to theirs, knocking every no out of the arena on the way, and end the day in your date's arms.</p>
         </section>
-        
-        <!-- Game Layers -->
-        <section class="game-layers">
-            <h2>🏗️ Game Structure</h2>
-            
-            <div class="layer-card">
-                <div class="layer-title">
-                    <span class="layer-emoji">⚔️</span>
-                    Moment-to-Moment Gameplay
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You move your mutant around a side-view arena with WASD and turn it toward the mouse. Each mouse button fires the limbs on one side of your body, whatever they currently happen to be.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Move around the arena</dd></div>
+                        <div><dt>Mouse</dt><dd>Aim: rotate toward the pointer</dd></div>
+                        <div><dt>Space</dt><dd>Flip to face the other way</dd></div>
+                        <div><dt>F</dt><dd>Jump or dash forward</dd></div>
+                    </dl>
                 </div>
-                <div class="layer-content">
-                    Experience floaty ragdoll physics combat where your mutant protagonist morphs every 30 seconds, gaining new limbs with unique abilities. Master the hurt/smash combat system: use rapid hurt-class attacks to weaken opponents, then deliver powerful smash-class knockouts that send them flying from the arena. Adapt your strategy as your body randomly transforms, turning weaknesses into strengths through creative ability combinations.
+                <div class="p-keygroup">
+                    <h3>Limbs</h3>
+                    <dl>
+                        <div><dt>Mouse 1</dt><dd>Use the limbs on your left side</dd></div>
+                        <div><dt>Mouse 2</dt><dd>Use the limbs on your right side</dd></div>
+                    </dl>
                 </div>
-            </div>
-            
-            <div class="layer-card">
-                <div class="layer-title">
-                    <span class="layer-emoji">🗺️</span>
-                    Low Metagame (Romance Campaign)
+                <div class="p-keygroup">
+                    <h3>Head and torso</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Use your head's ability</dd></div>
+                        <div><dt>Q</dt><dd>Switch your torso's passive ability on or off</dd></div>
+                    </dl>
                 </div>
-                <div class="layer-content">
-                    Each campaign follows a complete love story across 11 levels: convince disapproving parents, local religious leaders, and village mayors in your home town (4 levels), survive three dangerous wasteland crossings filled with raiders, then overcome the same obstacles in your date's neighboring village (4 levels). Every campaign generates unique characters, village names, and romantic scenarios, ensuring fresh stories with each playthrough.
-                </div>
-            </div>
-            
-            <div class="layer-card">
-                <div class="layer-title">
-                    <span class="layer-emoji">💕</span>
-                    High Metagame (Endless Love Stories)
-                </div>
-                <div class="layer-content">
-                    The persistent experience revolves around an ever-growing collection of successful mutant couples. Each completed campaign adds a new love story to your achievement log, complete with generated names, personalities, and commemorative group photos. Watch as your wasteland world becomes populated with happy couples who found love despite the odds, creating a heartwarming legacy of romantic victories across the post-apocalyptic landscape.
-                </div>
-            </div>
-            
-            <div class="layer-card">
-                <div class="layer-title">
-                    <span class="layer-emoji">🎯</span>
-                    Practical Game Flow
-                </div>
-                <div class="layer-content">
-                    A typical session begins with character and romance setup, generating your mutant protagonist and their potential love interest. Players then embark on the 11-level romantic gauntlet, adapting to random morphs while strategically using hurt/smash combat to overcome social obstacles. Sessions conclude with either a heartwarming reunion cutscene and achievement logging, or a return to the character selection for a new romantic adventure. Perfect for both quick 20-minute attempts and longer strategic campaigns.
+                <div class="p-keygroup">
+                    <h3>Mutate</h3>
+                    <dl>
+                        <div><dt>X</dt><dd>Re-roll one random body part (30-second cooldown)</dd></div>
+                    </dl>
                 </div>
             </div>
+            <p>Every fighter turns <strong>steadily redder</strong> as they take damage, so you can see at a glance who's ready to be sent flying, including yourself.</p>
         </section>
-        
-        <!-- Game Modes -->
-        <section class="game-modes">
-            <h2>🎮 Game Mode</h2>
-            <div class="layer-title" style="justify-content: center; margin-bottom: 20px;">
-                <span class="layer-emoji">💘</span>
-                Romantic Quest Campaign
-            </div>
-            <div class="layer-content" style="text-align: center;">
-                The core experience is a procedurally-generated romantic adventure where each campaign tells the complete story of one mutant's quest for love. With randomized protagonists, dates, villages, and obstacles, every playthrough offers a fresh romantic comedy adventure. The 11-level structure provides the perfect balance of challenge and narrative satisfaction, ensuring each love story feels complete and meaningful while maintaining high replayability through endless procedural variations.
-            </div>
+
+        <figure class="p-shot">
+            <img src="../projects/images/mutantlove_2_vignette.jpg" alt="3D render: a chunky wooden puppet mutant with pigtails, a stone foot and glowing pink cables in its limbs fires a toy flamethrower in a fighting ring, looking alarmed." width="1280" height="720" loading="lazy">
+            <figcaption>"Every fight starts with a freshly rolled body: a random head, torso, and four random limbs."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/slap-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A slapfest in one arena</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/04-arena.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>You against one to four opponents, all floaty ragdolls with bodies as strange as yours. You look at what you've been given this time, work out what it's good at, wear the opponents down with quick hits, then land the big one that sends them sailing off the edge of the arena.</p>
+                        <p>When the body you rolled isn't working, you mutate a part and see what you get.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/path-distance-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>The quest: two villages, eleven fights</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/05-road.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A quest is one love story in three zones: <strong>four fights</strong> in your village (parents, shrine keepers, gatekeepers, mayor), <strong>three</strong> against raiders on the wasteland road, and <strong>four</strong> in theirs, ending with your date's parents.</p>
+                        <p>Some fights are one on one, others one against two, three or four, and some opponents are big or hardy, two, four or even eight times harder to knock away. Win the last one, and the quest ends in a still picture of the two of you hugging and kissing.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/photo-camera-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Every couple that found each other</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/06-photo.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each new quest generates a new couple: a new protagonist and a new date, with random names, genders, likes and dislikes, new villages with new names, a new cast of gatekeepers, and new arenas.</p>
+                        <p>Every completed quest joins a <strong>list of lovers who found each other</strong>, with a group photo of the couple and everyone they had to get past, each labelled with their name underneath. You can look back through it, and share the photos.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A fight, or a whole romance</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/07-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A fight takes a few minutes, and a whole quest about an evening. The game saves between fights, so the road waits for you at the next gatekeeper.</p>
+                    </div>
+                </li>
+            </ol>
         </section>
-        
-        <!-- Game Features -->
-        <section class="features-grid">
-            <h2>🔧 Game Features & Mechanics</h2>
-            
-            <div class="feature-card">
-                <div class="feature-title">
-                    <span class="feature-emoji">🧬</span>
-                    Dynamic Body Morphing System
-                </div>
-                <div class="feature-content">
-                    Every 30 seconds, your mutant protagonist undergoes a random transformation, swapping one body part for a completely different variant with unique properties. Stone legs provide damage resistance but slower movement, flamethrower arms offer ranged attacks, grappling tongues enable tactical positioning, and repulsive torsos create defensive barriers. This core mechanic ensures no two battles play the same, forcing constant adaptation and creating emergent strategic opportunities as players learn to maximize each morphed configuration.
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title">
-                    <span class="feature-emoji">👊</span>
-                    Hurt/Smash Combat Classes
-                </div>
-                <div class="feature-content">
-                    Combat revolves around a strategic two-phase system that rewards tactical thinking over button mashing. Hurt-class attacks are rapid, low-damage strikes that accumulate red damage tinting on opponents, making them increasingly vulnerable. Smash-class attacks are slower but leverage accumulated damage for massive knockback potential. Master the rhythm of weakening foes with hurt attacks, then timing decisive smash attacks to send them flying from the arena. This system creates natural combat flow and dramatic knockout moments.
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title">
-                    <span class="feature-emoji">🎭</span>
-                    Social Obstacle Combat
-                </div>
-                <div class="feature-content">
-                    Rather than mindless violence, combat represents passionate debates and social confrontations taken to slapstick extremes. Each opponent represents a different social barrier: protective parents, rigid religious leaders, bureaucratic gatekeepers, and opportunistic raiders. The ragdoll physics and morphing mechanics transform these conflicts into absurd physical comedy while maintaining the narrative context of overcoming societal obstacles to reach true love. Every knockout represents winning hearts and minds through determination and adaptability.
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title">
-                    <span class="feature-emoji">🎲</span>
-                    Procedural Romance Generation
-                </div>
-                <div class="feature-content">
-                    Each campaign creates a unique love story through sophisticated content generation systems. Mutant protagonists receive randomized names, appearances, personality traits, and romantic preferences, while their potential dates are similarly generated with compatible or complementary characteristics. Villages, obstacle characters, and even specific conflict scenarios are procedurally created, ensuring every romance feels personal and distinct. This system enables infinite replayability while maintaining narrative coherence and emotional investment in each generated couple.
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title">
-                    <span class="feature-emoji">🏆</span>
-                    Achievement Legacy System
-                </div>
-                <div class="feature-content">
-                    Successfully completed romances become permanent additions to your achievement gallery, complete with generated couple photos, relationship details, and village names. This creates a growing collection of heartwarming success stories that players can revisit and share. The system transforms individual campaigns into contributions to a larger narrative of love conquering adversity in the post-apocalyptic wasteland, providing long-term motivation and emotional satisfaction beyond immediate gameplay victories.
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title">
-                    <span class="feature-emoji">🎨</span>
-                    Adaptive Physics Comedy
-                </div>
-                <div class="feature-content">
-                    The ragdoll physics system creates naturally emergent comedic moments as morphed body parts interact unpredictably with combat situations. Mismatched limb combinations lead to hilarious movement patterns, unexpected ability interactions create surprising tactical opportunities, and the hurt/smash system generates dramatic slapstick knockouts. This emergent humor system ensures entertainment value even during failed attempts, maintaining positive player experience regardless of campaign outcomes while celebrating the absurdity of love in impossible circumstances.
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/love-letter-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the quest</strong>, one love story at a time, as many as you like. It nests like this:</p>
+            <div class="p-nest" aria-label="The quests, outermost first">
+                <div><span>The list of lovers</span><small>Every couple you've brought together, and their photos.</small>
+                    <div><span>A quest</span><small>One couple, two villages, eleven fights: about an evening.</small>
+                        <div><span>A zone</span><small>Your village, the wasteland road, or theirs.</small>
+                            <div><span>A fight</span><small>One gatekeeper or a gang of them: a few minutes.</small></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Feature Image -->
-        <section class="feature-image-section">
-            <div class="feature-image">
-                <div class="feature-quote">
-                    "The morphing system creates infinite tactical possibilities - just when you think you've mastered your strategy, your body changes the game entirely."
-                </div>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/dna2-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/perspective-dice-six-faces-random-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Mutation on demand</h3>
+                        <p>Your body is never settled. Every fight starts with a <strong>random head, torso and four limbs</strong>, drawn from a library of parts that each bring their own attributes, passive abilities or active abilities.</p>
+                        <p>And once every 30 seconds, you can press X to <strong>mutate</strong>: one part, chosen at random (head, torso, or any of the four limb sockets), is swapped for another of its kind. Losing badly with stone legs? Roll the dice. You might get something better, or something funnier.</p>
+                        <p>It turns the fighting game's usual skill, memorizing one character, into a different one: sizing up a body you've never had before and making it work, fast.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/mutantlove_3_feature.jpg" alt="3D render: a stitched burlap mutant with a stone leg and glowing pink joints sticks its tongue out mid-swing, crackling energy bursting from its fist against an opponent with a toy blaster, glowing heart symbols in the air." width="1280" height="720" loading="lazy">
+                            <figcaption>"Press X and one random body part, head, torso or any limb, is swapped for a new one, every 30 seconds."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stone-stack-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A library of body parts</p>
+                        <h3>What each part does</h3>
+                        <p>Each kind of part has its own job. Legs tend to be defensive and passive, arms offensive and active. The torso is passive too, with bonuses the legs don't have, and the head is active, with utility powers:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Part</th><th scope="col">Usually</th><th scope="col">For example</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Legs</th><td data-label="Usually">Passive, defensive</td><td data-label="Example">Legs of stone: you turn slowly, but take far less damage</td></tr>
+                                    <tr><th scope="row">Arms</th><td data-label="Usually">Active, offensive</td><td data-label="Example">An arm that shoots fire like a flamethrower</td></tr>
+                                    <tr><th scope="row">Torso</th><td data-label="Usually">Passive, toggled with Q</td><td data-label="Example">A torso that pushes away anything that gets close</td></tr>
+                                    <tr><th scope="row">Head</th><td data-label="Usually">Active utility, on E</td><td data-label="Example">A long tongue that works as a grappling hook, pulling you to walls or opponents to you</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The library is the game's content, and it multiplies: every new part combines with every part already in it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/spiked-tentacle-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Four sockets, any limb</p>
+                        <h3>Arms where the legs were</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/08-sockets.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The head and torso always stay where they are, but the four limb sockets don't care what goes in them. An arm can land where a leg was, and a leg where an arm was. You can end up with <strong>four arms and no legs</strong>, or four legs and no arms, and the controls still work: each mouse button fires whatever is on its side of your body.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/slap-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Soften them up, then send them flying</p>
+                        <h3>Hurt hits and smash hits</h3>
+                        <p>There's no dismemberment, no armor and no weapons in this one. Instead, damage builds up, shown by a fighter's deepening red tint, and the more damage someone has, the further a big hit sends them. Almost every attack belongs to one of two classes:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Class</th><th scope="col">How it hits</th><th scope="col">Uses built-up damage</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Hurt</th><td data-label="How">Quick, cheap, low damage, little knockback</td><td data-label="Damage">10%: it rarely sends anyone flying</td></tr>
+                                    <tr><th scope="row">Smash</th><td data-label="How">Slow, heavy, high damage, big knockback</td><td data-label="Damage">100%: a softened target goes over the horizon</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>So a fight has a rhythm: pepper them with hurt hits until they're glowing red, then wait for the opening to land a smash.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/brute-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Some people are harder to move</p>
+                        <h3>Stubborn gatekeepers</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/09-stubborn.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Opponents are as randomly built as you are, and some of them are simply bigger or hardier: <strong>two, four or even eight times</strong> harder to knock out of the arena. A mayor like that means working overtime, building up a lot of red before a smash will shift them.</p>
+                        <p>Group fights (one against two, three or four) are about keeping everyone in front of you, and letting a smash on one send them crashing into the others.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/trash-can-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Love doesn't give up</p>
+                        <h3>Knocked out, not done</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/mutantlove/10-trash.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>If you're the one sent flying, the quest doesn't end. Mutant bodies are hard to keep down: your mutant comes to in a scrap heap or a village healer's hut, pulls themselves back together, and walks back to the same gatekeeper, who's still standing there with their arms folded.</p>
+                        <p>Nothing is undone and nothing is taken away. You just try again, probably with a different body.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/mutantlove_4_boxart.jpg" alt="Box art, 3D render: two chunky mutants hold hands at sunset beside a rusty ruin, one a stitched burlap figure with stone legs and its tongue out, the other a grinning robot-like mutant with pink glowing eyes and a toy flamethrower." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Posted on the wasteland dating board</p>
+                <h2 id="sendoff">Mutant Love Quest: Morphing Ragdoll Romance</h2>
+                <p>Me: two arms, stone legs, a tongue that can pull me across a room (subject to change at any moment). Likes: long walks down broken highways. Dislikes: forms, mayors, and being told no.</p>
+                <p>You: in the next village over. Your parents will hate me. Mine already hate you. I'm coming anyway, and I'll slap my way through everyone in between.</p>
+                <p><strong>Every body changes. Love doesn't.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
             </div>
         </section>
-        
-        <!-- Box Art Section -->
-        <section class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-content">
-                <div class="boxart-title">Mutant Love Quest</div>
-                <div class="boxart-description">
-                    In a world where radiation has transformed humanity into morphing mutants, one truth remains unchanged: love conquers all. Experience the most heartwarming and hilarious post-apocalyptic romance as you battle through social obstacles, family disapproval, and wasteland dangers to reach your perfect match.<br><br>
-                    
-                    Every 30 seconds brings new challenges as your body morphs unpredictably, forcing you to adapt your combat strategy while maintaining your romantic mission. With procedurally-generated love stories, strategic ragdoll physics combat, and endless replayability, Mutant Love Quest proves that even in the strangest circumstances, love always finds a way.<br><br>
-                    
-                    <strong>Features endless romantic adventures, dynamic morphing mechanics, and the most unique dating simulator ever created.</strong>
-                </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
             </div>
-        </section>
-    </div>
-    
-    <footer>
-        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
+            <div>
+                <p>Inspired by Floppy Heroes, Super Smash Bros, Mad Max and the film Idiocracy</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Zeroes Two (CC0), Expletus Sans, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
     </footer>
-    
-    <script>
-        // Add some interactive hover effects
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.borderColor = 'var(--accent-primary)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.borderColor = 'var(--border-glow)';
-            });
-        });
-        
-        document.querySelectorAll('.feature-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.borderColor = 'var(--accent-secondary)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.borderColor = 'var(--border-glow)';
-            });
-        });
-    </script>
 </body>
 </html>
