@@ -1,0 +1,21 @@
+{
+  "slug": "Megalodon-mini",
+  "out": "site/projects/mini/megalodon",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still at night, deep navy sky, azure light, orange firelight and smoke. ",
+  "notes": "Mood-only mini images for Megalodon.html, beside the lore, game layer and feature text. SDXL (free): gen Megalodon-mini --model sdxl --max 999, then finish Megalodon-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "megalodon", "ratio": "3:2", "prompt": "A huge bulky armored blue firefighting helicopter with a water cannon hovering over a burning city."},
+    {"n": 2, "name": "rupture", "ratio": "3:2", "prompt": "A glowing blue rift torn open in the night sky, a helicopter silhouette falling into it."},
+    {"n": 3, "name": "history", "ratio": "3:2", "prompt": "An old medieval town on fire at night, burning meteor fragments falling from the sky."},
+    {"n": 4, "name": "block", "ratio": "3:2", "prompt": "A row of old wooden houses glowing with orange flames at night, white water spray arcing over them."},
+    {"n": 5, "name": "crisis", "ratio": "3:2", "prompt": "A meteor shower raining fiery fragments down onto a town at night."},
+    {"n": 6, "name": "log", "ratio": "3:2", "prompt": "A pilot's logbook open on a dashboard lit by blue cockpit lights, maps and photos of burned towns."},
+    {"n": 7, "name": "coffee", "ratio": "3:2", "prompt": "A cup of coffee steaming on a helicopter cockpit console at dawn, a smoking town below."},
+    {"n": 8, "name": "meteors", "ratio": "3:2", "prompt": "A flaming meteorite rushing straight toward the camera over a city at night."},
+    {"n": 9, "name": "buildings", "ratio": "3:2", "prompt": "Strange tall towers and wide warehouses made of brick, timber and steel against a night sky."},
+    {"n": 10, "name": "reserve", "ratio": "3:2", "prompt": "A huge steel water tank with pressure gauges inside a helicopter's armored hull, blue light."}
+  ]
+}

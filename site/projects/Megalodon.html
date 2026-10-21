@@ -3,744 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megalodon Firefighter: Tactical Crisis Response</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Megalodon Firefighter combines cellular automata physics with light-gun arcade action. Command a time-displaced azure mecha-helicopter through crisis scenarios where every water droplet and kinetic round matters in tactical firefighting.">
-    <meta name="keywords" content="Megalodon Firefighter, tactical crisis response, cellular automata, light-gun action, mecha-helicopter, firefighting, physics simulation, time-travel">
+    <title>Megalodon Firefighter: Light-Gun Fire Rescue</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a light-gun firefighting game in falling-sand physics. Aim the water cannon and autocannon of a time-lost mecha-helicopter at a burning city where every pixel of wood, stone, lava and water follows simple rules, and save as much of it as you can.">
+    <meta name="keywords" content="game design concept, falling sand, cellular automata, firefighting, light gun, helicopter, time travel, pixel physics, Reactorcore">
     <meta name="author" content="Reactorcore Games">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Megalodon.html">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Megalodon Firefighter: Tactical Crisis Response - Reactorcore Games">
-    <meta property="og:description" content="Combines cellular automata physics with light-gun arcade action. Command a time-displaced azure mecha-helicopter through crisis scenarios where every water droplet and kinetic round matters in tactical firefighting.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/megalodon_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Megalodon.html">
+
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Reactorcore Games">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:title" content="Megalodon Firefighter: Light-Gun Fire Rescue">
+    <meta property="og:description" content="A game design concept: a light-gun game where the scene is in danger, not you. Put out a pixel-simulated city fire and shoot down the meteors still falling on it. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Megalodon.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/megalodon_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Pixel art: blue water splashes onto burning wooden beams between grey stone blocks">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Megalodon Firefighter: Tactical Crisis Response - Reactorcore Games">
-    <meta name="twitter:description" content="Combines cellular automata physics with light-gun arcade action. Command a time-displaced azure mecha-helicopter through crisis scenarios where every water droplet and kinetic round matters in tactical firefighting.">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Megalodon Firefighter: Light-Gun Fire Rescue">
+    <meta name="twitter:description" content="A game design concept: a light-gun game where the scene is in danger, not you. Put out a pixel-simulated city fire.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/megalodon_2_vignette.jpg">
-    <meta name="twitter:creator" content="@ReactorcoreGames">
-    <meta name="twitter:site" content="@ReactorcoreGames">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "VideoGame",
-        "name": "Megalodon Firefighter",
-        "alternateName": "Megalodon Firefighter: Tactical Crisis Response",
-        "description": "Combines cellular automata physics with light-gun arcade action. Command a time-displaced azure mecha-helicopter through crisis scenarios where every water droplet and kinetic round matters in tactical firefighting.",
-        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/megalodon_2_vignette.jpg",
+        "name": "Megalodon Firefighter: Light-Gun Fire Rescue",
+        "description": "A game design concept, not a released game: a light-gun style firefighting game in falling-sand physics, where the player aims a mecha-helicopter's water cannon and autocannon at generated burning city scenes and falling meteorites, across nine-stage crises in different times and places.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Arcade", "Simulation", "Shooter"],
+        "gamePlatform": "PC",
         "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Megalodon.html",
-        "genre": ["Action", "Simulation", "Arcade"],
-        "gameItem": "Video Game",
-        "operatingSystem": "PC",
-        "applicationCategory": "Game",
-        "author": {
-            "@type": "Organization",
-            "name": "Reactorcore Games",
-            "url": "https://reactorcore.itch.io/"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Reactorcore Games",
-            "url": "https://reactorcore.itch.io/"
-        },
-        "datePublished": "2025",
-        "inLanguage": "en-US",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "1"
-        },
-        "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/megalodon_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0b1424">
+
+    <link rel="preload" href="../fonts/exo2-bold-italic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&family=Electrolize:wght@400&display=optional" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /* 
-        Image Files Required:
-        megalodon_1_title.jpg: Time-traveling mecha-helicopter arriving at a burning city scene with meteorites falling from a ruptured sky
-        megalodon_2_vignette.jpg: Intense cellular automata physics moment showing water pixels extinguishing fire pixels with visible material state changes
-        megalodon_3_feature.jpg: Close-up of dual weapon system - water cannon and kinetic autocannon - targeting falling space debris
-        megalodon_4_boxart.jpg: The anomalous azure mecha-copter emerging from a space-time vortex above a crisis scene
-        megalodon_5_story.jpg: Overworld view showing multiple temporal crisis zones scattered across a fractured timeline landscape
-        */
+        /* Megalodon Firefighter: a deep navy night washed in the mecha's azure, an aqua for water
+           and a steam white for highlights. The fire is left to the images. Exo 2 Bold Italic for
+           the title and headings, MatrixType Bold, a dot-matrix gunsight face, for the subtitle
+           and kickers. */
+        @font-face { font-family: "Exo 2"; src: url("../fonts/exo2-bold-italic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+        @font-face { font-family: "MatrixType"; src: url("../fonts/matrixtype-bold.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: #1a1a2e;
-            --container-bg: #16213e;
-            --border-color: #0f4c75;
-            --text-color: #e5e5e5;
-            --accent-azure: #71c6ff;
-            --accent-fire: #ff6b35;
-            --accent-earth: #8d5524;
-            --title-gradient-1: #3282b8;
-            --title-gradient-2: #bb2d3b;
-            --shadow-color: #ff6b35;
-            --card-shadow: rgba(50, 130, 184, 0.3);
-            --fire-glow: #ff4500;
-            --water-blue: #4682b4;
+            --flow-1: #0b1424;
+            --flow-2: #12345a;
+            --grid-minor: rgba(160, 210, 255, 0.045);
+            --grid-major: rgba(160, 210, 255, 0.10);
+            --p-ground: rgba(11, 19, 34, 0.95);
+            --p-panel: #13213a;
+            --p-1: #4fb0ff;
+            --p-2: #6fe8d6;
+            --p-3: #eef6ff;
+            --p-text: #d8e3f0;
+            --p-dim: #9daec4;
+            --p-line: rgba(160, 210, 255, 0.16);
+            --font-title: "Exo 2", "Segoe UI", sans-serif;
+            --font-sub: "MatrixType", "Segoe UI", sans-serif;
+            --shade: #060c17;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        body {
-            font-family: 'Electrolize', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .reactorcore-label {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            background: rgba(22, 33, 62, 0.9);
-            padding: 8px 12px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            font-size: 0.9em;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: background-color 0.3s;
-        }
-
-        .reactorcore-label:hover {
-            background: rgba(50, 130, 184, 0.9);
-            color: white;
-        }
-
-        .title-section {
-            position: relative;
-            height: 700px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: linear-gradient(rgba(26, 26, 46, 0.2), rgba(26, 26, 46, 0.4)),
-                        url('images/megalodon_1_title.jpg') center/cover;
-        }
-
-        .title-content {
-            text-align: center;
-            z-index: 2;
-        }
-
-        .main-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 4em;
-            font-weight: 900;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 0.2em;
-            color: white;
-            text-shadow: 
-                0 0 10px var(--fire-glow),
-                0 0 20px var(--fire-glow),
-                0 0 30px var(--fire-glow),
-                0 0 40px var(--fire-glow);
-            animation: emberGlow 3s ease-in-out infinite alternate;
-        }
-
-        .subtitle {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.8em;
-            color: var(--accent-azure);
-            text-shadow: 0 0 10px var(--accent-azure);
-            animation: emberGlow 3s ease-in-out infinite alternate-reverse;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        @keyframes emberGlow {
-            0% {
-                text-shadow: 
-                    0 0 5px var(--fire-glow),
-                    0 0 10px var(--fire-glow),
-                    0 0 15px var(--fire-glow),
-                    0 0 20px var(--fire-glow);
-            }
-            100% {
-                text-shadow: 
-                    0 0 10px var(--fire-glow),
-                    0 0 20px var(--fire-glow),
-                    0 0 30px var(--fire-glow),
-                    0 0 40px var(--fire-glow);
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-
-        h2 {
-            font-family: 'Orbitron', monospace;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            color: var(--accent-azure);
-            text-shadow: 0 0 10px var(--accent-azure);
-            animation: emberGlow 3s ease-in-out infinite alternate;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .overview {
-            font-size: 1.2em;
-            line-height: 1.8;
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 16px var(--card-shadow);
-        }
-
-        .three-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .card {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 16px var(--card-shadow);
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            border-color: var(--accent-azure);
-            box-shadow: 0 12px 24px var(--card-shadow);
-        }
-
-        .card h3 {
-            font-family: 'Orbitron', monospace;
-            color: var(--accent-fire);
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 5px var(--accent-fire);
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .controls-section {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 16px var(--card-shadow);
-        }
-
-        .weapon-system {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .weapon-card {
-            background: rgba(50, 130, 184, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-azure);
-        }
-
-        .weapon-card.autocannon {
-            background: rgba(255, 107, 53, 0.1);
-            border-left-color: var(--accent-fire);
-        }
-
-        .story-section {
-            position: relative;
-            margin: 60px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 12px 24px var(--card-shadow);
-        }
-
-        .story-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/megalodon_5_story.jpg') center/cover;
-            position: relative;
-        }
-
-        .vignette-section {
-            position: relative;
-            margin: 60px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 12px 24px var(--card-shadow);
-        }
-
-        .vignette-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/megalodon_2_vignette.jpg') center/cover;
-            position: relative;
-        }
-
-        .image-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: rgba(22, 33, 62, 0.9);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-azure);
+        /* Title effect, "water cannon": a jet of aqua light sweeps across the letters and leaves a
+           cool azure mist that fades, like a blast of water hitting a hot wall. Dark layered shadows
+           keep it legible throughout. */
+        .p-name {
             font-style: italic;
-            font-size: 1.1em;
-            text-shadow: 0 0 5px var(--text-color);
+            letter-spacing: 0.01em;
+            animation: jet 6s ease-out infinite;
         }
+        @keyframes jet {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(79, 176, 255, 0.3); }
+            8% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), -14px 0 18px rgba(111, 232, 214, 0.95), 0 0 30px rgba(79, 176, 255, 0.8); }
+            20% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 14px 0 24px rgba(111, 232, 214, 0.6), 0 0 40px rgba(79, 176, 255, 0.55); }
+            50% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(79, 176, 255, 0.35); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); font-size: clamp(1rem, 0.7rem + 1.3vw, 1.9rem); letter-spacing: 0.06em; text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: jet-line 6s ease-out infinite;
+        }
+        @keyframes jet-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(79, 176, 255, 0.3); opacity: 0.7; }
+            8% { box-shadow: 0 0 16px rgba(111, 232, 214, 1), 0 0 30px rgba(79, 176, 255, 0.7); opacity: 1; }
+            40% { box-shadow: 0 0 6px rgba(79, 176, 255, 0.4); opacity: 0.8; }
+        }
+        .section-mark::after { animation: h2-line 6s ease-out infinite; }
+        @keyframes h2-line { 0%, 30%, 100% { box-shadow: none; } 8% { box-shadow: 0 0 12px rgba(111, 232, 214, 0.8); } }
+        h2, h3 { font-style: italic; letter-spacing: 0.01em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.06em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-style: normal; font-weight: 400; }
 
-        .layers-section {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .layer-card {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border-left: 6px solid var(--accent-azure);
-            box-shadow: 0 8px 16px var(--card-shadow);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .layer-card:hover {
-            transform: translateX(10px);
-            box-shadow: 0 12px 24px var(--card-shadow);
-        }
-
-        .layer-card h3 {
-            font-family: 'Orbitron', monospace;
-            color: var(--accent-fire);
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 5px var(--accent-fire);
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .feature-card {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 16px var(--card-shadow);
-            transition: border-color 0.3s, transform 0.3s;
-        }
-
-        .feature-card:hover {
-            border-color: var(--accent-azure);
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            font-family: 'Orbitron', monospace;
-            color: var(--accent-azure);
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 5px var(--accent-azure);
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .feature-highlight {
-            font-family: 'Orbitron', monospace;
-            background: linear-gradient(135deg, var(--accent-azure), var(--accent-fire));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .feature-image-section {
-            position: relative;
-            margin: 60px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 12px 24px var(--card-shadow);
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/megalodon_3_feature.jpg') center/cover;
-            position: relative;
-        }
-
-        .mermaid-container {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 40px;
-            margin: 60px 0;
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 12px 24px var(--card-shadow);
-        }
-
-        .boxart-image {
-            width: 100%;
-            aspect-ratio: 2/3;
-            background: url('images/megalodon_4_boxart.jpg') center/cover;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-        }
-
-        .boxart-description h3 {
-            font-family: 'Orbitron', monospace;
-            color: var(--accent-fire);
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            text-shadow: 0 0 5px var(--accent-fire);
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: var(--container-bg);
-            border-top: 2px solid var(--border-color);
-            margin-top: 60px;
-        }
-
-        .footer a {
-            color: var(--accent-azure);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-shadow: 0 0 5px var(--accent-azure);
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5em;
-            }
-            
-            .subtitle {
-                font-size: 1.3em;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .boxart-image {
-                max-width: 300px;
-                margin: 0 auto;
-            }
-            
-            .three-cards {
-                grid-template-columns: 1fr;
-            }
-        }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .materials td:first-of-type { width: 100%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="reactorcore-label">
-        Reactorcore's Personal Game Design Project
-    </a>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <div class="title-section">
-        <div class="title-content">
-            <h1 class="main-title">Megalodon Firefighter</h1>
-            <div class="subtitle">Tactical Crisis Response</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <section class="section">
-            <div class="overview">
-                <p><strong>Megalodon Firefighter</strong> combines the emergent physics of cellular automata with the precision of light-gun arcade action, creating a unique tactical firefighting experience. Command a time-displaced azure mecha-helicopter through crisis scenarios where every water droplet and kinetic round matters.</p><br>
-
-                <p>Navigate the dual challenge of intercepting falling meteorites while managing cascading fire emergencies across procedurally generated cityscapes. Your anomalous craft, trapped between dimensions after a space-time incident, serves as humanity's guardian against temporal fire disasters that threaten to rewrite history.</p><br>
-
-                <p>Master the interplay of realistic material physics where wood burns, stone heats up and melts into lava, and water strategically deployed can mean the difference between salvation and catastrophe.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="three-cards">
-                <div class="card">
-                    <h3>🎯 Target Audience</h3>
-                    <p>Strategy and simulation enthusiasts who appreciate physics-based systems and crisis management scenarios. Players who enjoy light-gun arcade experiences and tactical decision-making under pressure.</p>
-                </div>
-                <div class="card">
-                    <h3>🎮 Game's Purpose</h3>
-                    <p>Fulfills human needs for <strong>competence</strong> (mastering complex physics systems), <strong>autonomy</strong> (strategic weapon and timing choices), and <strong>purpose</strong> (heroic time-guardian protecting history itself).</p>
-                </div>
-                <div class="card">
-                    <h3>⚡ Core Concept</h3>
-                    <p>Merges falling sand cellular automata with light-gun tactical shooting, creating emergent firefighting gameplay where physics simulation drives authentic crisis response strategies.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="story-section">
-            <div class="story-image">
-                <div class="image-quote">
-                    "Across fractured timelines and burning worlds, one guardian stands between chaos and history"
-                </div>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/megalodon_1_title.jpg" alt="Pixel art: a bulky azure armored helicopter flies out of a swirling blue vortex above a burning city at night, meteorites streaking down around it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Megalodon Firefighter</span><span class="p-sub">Light-Gun Fire Rescue</span></h1>
             </div>
         </div>
+    </header>
 
-        <section class="section">
-            <h2>Lore & Story</h2>
-            <div class="overview">
-                <p><strong>The Temporal Guardian Crisis:</strong> In the year 2387, humanity's first experimental space-time research facility suffered a catastrophic rupture during deep timeline analysis. The breach didn't just tear space—it fractured history itself, creating unstable temporal zones where past disasters resurface as reality-threatening anomalies.</p><br>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/helicopter-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
 
-                <p><strong>The Megalodon Incident:</strong> Your advanced crisis response mecha-helicopter, designation "Megalodon," was investigating routine space debris when it became caught in the facility's collapse vortex. Instead of destruction, the temporal energies bonded with your craft's quantum core, granting it an anomalous ability to phase between timeline fractures—but at a cost. You're now permanently displaced from linear time, appearing wherever and whenever history's most critical fire disasters need intervention.</p><br>
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/fire-extinguisher-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Megalodon Firefighter plays like a light-gun arcade game, Time Crisis or Virtua Cop with a crosshair on the screen, except that nobody's shooting at you. The danger is to the scene: a city block on fire, seen from the side, with more burning debris still falling from the sky.</p>
+            <p>The fire is a <strong>falling-sand simulation</strong>: every pixel of wood, stone, lava and water follows a few simple rules, so a fire spreads, heats the stone next to it, melts it into flowing lava, and keeps going until something stops it. You're the gunner of the Megalodon, a huge azure mecha-helicopter built for firefighting, with a water cannon to put fires out and an autocannon to shoot down meteors before they land.</p>
+            <p>The goal of every stage is the same: <strong>save as much as you can</strong>. It's a short, focused game in the spirit of the best Flash-era web games, built on the rules of falling-sand toys like The Powder Toy.</p>
 
-                <p><strong>The Mission:</strong> Each manifestation brings you to a moment where meteorite impacts threaten to burn away crucial historical developments. Your goal is clear: minimize damage to preserve the timeline's integrity. Whether it's protecting the library of Alexandria from space debris, saving Renaissance workshops from cosmic bombardment, or defending modern cities from temporal meteorite storms, every crisis you face has already shaped the world you once knew.</p><br>
-
-                <p><strong>Current Crisis:</strong> The game focuses on a series of nine interconnected space debris events threatening a critical urban center. Each successful intervention stabilizes one fracture in the timeline, but failure could unravel decades of technological and cultural progress. The clock isn't just ticking—it's fracturing.</p>
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>People who lose hours watching falling-sand toys burn and flow, and people who loved pointing a light gun at an arcade screen.</p>
+                    <p>Falling-sand sandboxes give them the simulation but <strong>no reason to play it</strong>; light-gun games give them the reason but only ever as shooting someone.</p>
+                    <p>The game is played with the mouse alone, and a crisis fits in an evening.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/life-buoy-delapouite.png)"></span>Game's purpose</h3>
+                    <p><strong>Care and protection:</strong> the satisfaction of saving things instead of destroying them.</p>
+                    <p><strong>Mastery:</strong> learning how fire, heat and lava really move, and where one well-aimed blast stops a whole chain.</p>
+                    <p><strong>Enjoyment:</strong> the simple beauty of a simulation where water hisses into steam and lava cools into black glass.</p>
+                    <p>It avoids draining <strong>rest</strong> (short stages, a generous water supply) and <strong>clarity</strong> (four materials, each with rules you can see working).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/crosshair-delapouite.png)"></span>Core concept</h3>
+                    <p>Falling-sand games are usually sandboxes with no goal, and light-gun games are on-rails shooting galleries.</p>
+                    <p>This one puts a <strong>clear, finite job</strong> on top of a simulation: one crisis, nine stages, as little damage as possible.</p>
+                    <p>Your best tool against meteors also starts fires, so <strong>every shot is a judgment call</strong>, not a reflex.</p>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Controls & Interface</h2>
-            <div class="controls-section">
-                <p><strong>Light-Gun Style Gameplay:</strong> Like Virtua Cop or Time Crisis, but instead of protecting yourself from danger, you're protecting the scene from destruction. Play from the cockpit perspective of your time-traveling mecha-helicopter with dual weapon systems.</p>
+        <figure class="p-shot">
+            <img src="../projects/images/megalodon_5_story.jpg" alt="Pixel art map of floating islands from different eras, castles, old villages and a modern city, joined by glowing paths, with the azure helicopter flying between them as meteorites fall." width="1280" height="720" loading="lazy">
+            <figcaption>"The Megalodon can't stay anywhere for long. It warps to another time and place, always just as something starts to burn."</figcaption>
+        </figure>
 
-                <div class="weapon-system">
-                    <div class="weapon-card">
-                        <h4>💧 Water Cannon System</h4>
-                        <p><strong>Mouse 1:</strong> Rapid-fire water shots<br>
-                        <strong>Alt-Fire:</strong> Charged water blast<br>
-                        <strong>Mouse 2:</strong> Replenish water reserves<br>
-                        <em>Creates explosion areas of extinguishing water pixels</em></p>
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/portal-lorc.png)"></span>Lore and story</h2>
+            <h3>The Megalodon</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/megalodon/01-megalodon.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The Megalodon is one of a kind: a big, bulky, heavily armored hybrid of mecha and helicopter, painted azure and built for turbo firefighting. It carries a water cannon fed from an enormous ultra-compressed reserve tank, and an autocannon for shooting falling debris out of the sky or blasting obstacles out of the way.</p>
+
+            <h3>The rupture</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/megalodon/02-rupture.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>On one mission, a rupture in space-time opened, and the Megalodon fell into it. It made it back out, but not cleanly. It's now tangled up with that rupture: every so often it warps to a different time and place, and it can't choose where or when.</p>
+            <p>The one thing that's always the same is where it lands: somewhere a shower of meteorites or space wreckage is about to set a town on fire. The tangle that keeps it from going home also gives it the chance to change how those days turned out.</p>
+
+            <h3>Fires across history</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/megalodon/03-history.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Each crisis is a different place in a different era, generated fresh: its own skyline of buildings, its own colors of timber and stone, its own shower of fire coming down from above.</p>
+
+            <h3>The job right now</h3>
+            <p>Hot debris has already landed, and the first fires have a head start. More is on its way down. Put out what's burning, stop the heat from melting the stone, shoot down what you can, and keep as much of this town standing as possible before the warp takes you away.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/mouse-delapouite.png)"></span>Controls and interface</h2>
+            <p>You don't fly the Megalodon. You're its gunner, looking at the scene from the side the way a light-gun player looks at the screen, and the mouse is your crosshair. Everything happens where you point.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Aim</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Move the crosshair</dd></div>
+                        <div><dt>Wheel</dt><dd>Switch between water cannon and autocannon</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Water cannon</h3>
+                    <dl>
+                        <div><dt>Mouse 1</dt><dd>Tap: rapid small water shots</dd></div>
+                        <div><dt>Hold M1</dt><dd>Charge a big water blast, release to fire</dd></div>
+                        <div><dt>Hold M2</dt><dd>Refill the active tank from the reserve</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Autocannon</h3>
+                    <dl>
+                        <div><dt>Mouse 1</dt><dd>Tap: rapid armor-piercing explosive rounds</dd></div>
+                        <div><dt>Hold M1</dt><dd>Charge an electromagnetic shot for hard targets</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Gauges</h3>
+                    <dl>
+                        <div><dt>Active tank</dt><dd>100 small shots or 50 big blasts</dd></div>
+                        <div><dt>Reserve</dt><dd>Huge, but finite: what's left for the whole stage</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The design names the two weapons and their modes; switching with the wheel is a suggestion. The reserve is generous enough to <strong>spray freely</strong>, so the gauge is a quiet limit in the corner, not a constant worry.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/megalodon_2_vignette.jpg" alt="Pixel art close-up: blue water droplets and a splash land on burning wooden beams between grey stone blocks, the flames breaking up where the water hits." width="1280" height="720" loading="lazy">
+            <figcaption>"A water pixel that touches burning wood puts the fire out, and is used up doing it."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/water-gun-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A burning block</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/megalodon/04-block.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>One side-view scene: three to seven generated buildings standing on the ground, with small burning pieces of debris already scattered across them. You read where the fire is spreading, which walls are getting hot, and what's still coming down, and decide where the next shot goes.</p>
+                        <p>A blast of water on a burning wall puts it out. A blast on hot stone cools it before it melts. A meteor caught in the crosshair can be shot down, if the shot won't do more harm than the meteor.</p>
                     </div>
-                    <div class="weapon-card autocannon">
-                        <h4>🔫 Kinetic Autocannon</h4>
-                        <p><strong>Tab to Switch:</strong> Kinetic AP-HE munitions<br>
-                        <strong>Quick Fire:</strong> Rapid meteorite interception<br>
-                        <strong>Charged Shot:</strong> Electromagnetic acceleration for hardened targets<br>
-                        <em>Demolishes obstacles and incoming threats</em></p>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/burning-meteor-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A crisis in nine stages</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/megalodon/05-crisis.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A crisis is one disaster: a single meteor shower whose <strong>nine clusters</strong> come down on nine parts of the same area, one per stage. Each stage ends when the fire is out, and its result is what survived.</p>
+                        <p>If the water reserve runs dry while something is still burning, that stage is lost and the area burns down. The crisis goes on to the next stage, and the result keeps what happened.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/scroll-unfurled-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The warp and the log</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/megalodon/06-log.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>When a crisis is over, the warp takes the Megalodon somewhere else, and there's always another fire. Every crisis you've flown goes into a <strong>log</strong>: where and when it was, and how much of it you saved.</p>
+                        <p>Each entry keeps the seed it was generated from, so you can fly <strong>the same crisis again</strong>, building for building and meteor for meteor, and see if you can save more of it this time, like retaking an exam you know you can do better.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A stage over coffee</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/megalodon/07-coffee.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A stage lasts a few minutes, a crisis about an evening. Between stages is the place to stop: the crisis waits there for you. The game starts in the log, so the next crisis or an old one to retake is a click away.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/sands-of-time-lorc.png)"></span>Game modes</h2>
+            <p>There's one mode, <strong>the warp</strong>: crisis after crisis in different times and places, with any old one available to fly again from the log.</p>
+            <div class="p-nest" aria-label="The warp, outermost first">
+                <div><span>The warp</span><small>Endless: wherever and whenever the next fire is.</small>
+                    <div><span>A crisis</span><small>One meteor shower, nine stages: about an evening.</small>
+                        <div><span>A stage</span><small>Three to seven buildings and one cluster of debris: a few minutes.</small>
+                            <div><span>A meteor</span><small>Shoot it down, or let it land and put out what it starts.</small></div>
+                        </div>
                     </div>
                 </div>
-
-                <p style="margin-top: 20px;"><strong>Tactical Crosshair Control:</strong> Mouse cursor positions targeting reticle for precision deployment of suppression systems across the crisis zone.</p>
             </div>
         </section>
 
-        <div class="vignette-section">
-            <div class="vignette-image">
-                <div class="image-quote">
-                    "Every pixel has purpose - water finds fire, heat travels through stone, and time itself depends on the cascade of tiny decisions"
-                </div>
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/helicopter-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/heavy-bullets-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Two guns, one judgment call</h3>
+                        <p>The <strong>water cannon</strong> is the firefighting tool. Both its rapid shots and its charged blast burst in a circle on impact: anything burning inside it goes out at once, and the burst sprays a ring of real water pixels that keep flowing and putting out fires until they're used up or evaporate.</p>
+                        <p>The <strong>autocannon</strong> is for meteors and obstacles: rapid armor-piercing explosive rounds, or a charged electromagnetic shot for the rarer, harder meteors and anything that blocks the water.</p>
+                        <p>That's the dilemma. A meteor shot in mid-air turns to harmless ash. But a miss lands in the town, and <strong>autocannon shells can set fires of their own</strong>, worse than the meteor would have. Sometimes the right call is to let it land and put out what it starts.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/megalodon_3_feature.jpg" alt="Pixel art cockpit view: a water cannon with a transparent blue tank on the left and a grey autocannon on the right, both firing at a large meteorite through the canopy." width="1280" height="720" loading="lazy">
+                            <figcaption>"Autocannon rounds can knock a meteor out of the sky. They can also set fire to the town under it."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cubes-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Falling sand, kept small</p>
+                        <h3>Four materials, simple rules</h3>
+                        <p>Everything on the screen is made of four materials, each with a handful of rules. That's enough for fires that spread, walls that melt and water that runs, and few enough that a player can learn all of them:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table materials">
+                                <thead><tr><th scope="col">Material</th><th scope="col">How it behaves</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Wood</th><td>Stays put. Catches fire from burning neighbors at about one pixel a second, burns for five minutes, then turns to ash. While burning, it heats any stone touching it.</td></tr>
+                                    <tr><th scope="row">Stone</th><td>Stays put and collects heat. At 100 heat it melts into lava, which flows, heats the stone it touches, and cools into inert black obsidian after ten minutes.</td></tr>
+                                    <tr><th scope="row">Water</th><td>Falls and flows sideways. Puts out burning wood, cools hot stone, and turns lava into obsidian, using itself up each time. Washes ash away without being used up. Evaporates after a minute.</td></tr>
+                                    <tr><th scope="row">Terrain</th><td>The ground itself: immune to everything. Water, ash and lava pile up on it.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Burning wood flickers with flames, and lava gives off rising smoke, so you can read the state of the fire at a glance.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/melting-metal-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Break the chain early</p>
+                        <h3>Heat that travels</h3>
+                        <p>The real danger isn't the flames you can see. It's the heat they pass into the stone, because melted stone turns into lava that runs downhill and heats more stone wherever it goes:</p>
+                        <ol class="p-chain" aria-label="How a fire becomes a lava flow">
+                            <li><b>Burning wood</b>Heats the stone it touches, 10 heat a second</li>
+                            <li style="--c: var(--p-2)"><b>Hot stone</b>Melts into lava at 100 heat</li>
+                            <li style="--c: var(--p-3)"><b>Lava</b>Flows, and heats more stone, 2 heat a second</li>
+                            <li style="--c: var(--p-dim)"><b>Obsidian</b>After ten minutes, inert black glass</li>
+                        </ol>
+                        <p>Water breaks the chain at every link: it puts out the wood, resets any stone above 20 heat back to zero, and freezes lava into obsidian on the spot. A quick blast on a warming wall early is worth a dozen shots on a lava flow later.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/meteor-impact-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">From anywhere, not just above</p>
+                        <h3>Meteors you see coming at you</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/megalodon/08-meteors.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>New debris falls during the firefighting, and it comes in toward the screen, the way targets do in a light-gun game, aimed at any spot in the scene rather than dropping in from the top edge. You see it grow and have a moment to decide.</p>
+                        <p>Shot down in flight, it bursts into ash that keeps its momentum, plus a push outward from the hit. Allowed to land, it goes off like a <strong>cluster bomb</strong>, spraying lava pixels from where it hit.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/modern-city-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Every town is new</p>
+                        <h3>Generated buildings</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/megalodon/09-buildings.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Buildings are drawn by a simple generator: one or more large rectangles for the body, then smaller rectangles and horizontal and vertical lines added by if/else rules for floors, beams, balconies and wiring. It can make anything from a small hut to a wide warehouse or a tall, strange tower, always connected to the ground.</p>
+                        <p>Each stage picks <strong>one color for its wood and one for its stone</strong>: wood in browns, tans, greens, yellows or blues (timber, cable, insulation), stone in darker, duller greys, reds or whites (brick, concrete, metal), and the ground darker still. Every town looks like its own place.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/fuel-tank-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Spray freely</p>
+                        <h3>A generous, finite reserve</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/megalodon/10-reserve.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The Megalodon's reserve tank is ultra-compressed and huge. You can spray as much as you like, refilling the active tank whenever you want, and for most of a stage you won't think about it.</p>
+                        <p>It's not infinite, though, and that keeps the water honest: a stage that's sprayed carelessly at the wrong fires can still run dry before the last wall is out. Water is the limit that the game's whole fail state hangs on, and it's shown plainly the whole time.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/megalodon_4_boxart.jpg" alt="Box art in pixel art: a blue helicopter with a helmeted pilot bursts through a cracked, glowing portal, burning scenes of a library and a city behind it." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Dispatch log, date unknown</p>
+                <h2 id="sendoff">Megalodon Firefighter: Light-Gun Fire Rescue</h2>
+                <p>Warp complete. Location: unknown. Year: unknown. Debris on the ground and burning, more inbound from above. Reserve tank full. Water cannon ready. Autocannon ready, use with care.</p>
+                <p>Nobody here asked for us, and nobody here will remember we came. But the town will still be standing tomorrow, more of it than there would have been.</p>
+                <p><strong>Wherever it burns. Whenever it burns.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by light-gun arcade games like Time Crisis and Virtua Cop, and falling-sand toys like The Powder Toy</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: MatrixType (CC0), Exo 2, Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
         </div>
-
-        <section class="section">
-            <h2>Game Layers</h2>
-            <div class="layers-section">
-                <div class="layer-card">
-                    <h3>1. Moment-to-Moment Gameplay</h3>
-                    <p>Light-gun style tactical aiming with real-time cellular automata physics. Every shot creates rippling consequences as water pixels extinguish fires, stone absorbs and transfers heat, and lava flows according to gravity and terrain. Choose between intercepting meteorites or direct fire suppression based on immediate tactical assessment.</p>
-                </div>
-                <div class="layer-card">
-                    <h3>2. Low Metagame</h3>
-                    <p>Navigate a 9-level crisis gauntlet representing a single temporal disaster event. Each level features 3-7 procedurally generated buildings with escalating complexity and meteorite cluster patterns. Success depends on minimizing total damage while managing finite but generous water reserves across the entire crisis sequence.</p>
-                </div>
-                <div class="layer-card">
-                    <h3>3. High Metagame</h3>
-                    <p>Maintain a temporal mission log of completed crisis interventions. Each completed gauntlet generates a unique seed that allows perfect recreation of that specific scenario for score improvement attempts. Like retaking an exam, players can revisit historical crises to achieve better damage prevention scores and master optimal intervention strategies.</p>
-                </div>
-                <div class="layer-card">
-                    <h3>4. Practical Game Flow</h3>
-                    <p>Quick session startup leads directly into crisis briefing → intense 5-10 minute tactical firefighting → immediate mission assessment with damage statistics → choice to replay for better score or advance to next temporal crisis. Sessions respect player time while maintaining high-intensity engagement.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Game Mode</h2>
-            <div class="card">
-                <h3>⏰ Temporal Crisis Response</h3>
-                <p>The core and only game mode focuses on <strong>high-intensity crisis management</strong> across varied temporal disasters. Each of the 9 levels presents a unique space debris emergency with procedurally generated building layouts ensuring no two crisis scenarios play identically.</p><br>
-                
-                <p><strong>Session Design:</strong> Short, intense 5-10 minute levels perfect for quick tactical gaming sessions. The light-gun arcade heritage means immediate action without complex setup or lengthy tutorials.</p><br>
-                
-                <p><strong>Replayability:</strong> Procedural building generation and varied meteorite patterns create infinite tactical variations. Seed-based replay system allows score improvement on specific scenarios that challenged you.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Game Features & Mechanics</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>🧬 Cellular Automata Physics Engine</h3>
-                    <p>Authentic falling sand simulation where <span class="feature-highlight">every pixel matters</span>. Wood burns and spreads fire at 1 pixel per second, stone accumulates heat and transforms into flowing lava at 100 heat points, and water pixels sacrifice themselves to extinguish fires and cool heated materials. The physics create emergent tactical scenarios where material behavior drives strategic decisions.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>⚡ Dual-Targeting Strategy System</h3>
-                    <p>Master the critical decision: <span class="feature-highlight">intercept meteorites mid-flight or fight fires directly</span>. Shooting meteorites creates harmless ash with momentum, but missing allows cluster bomb impacts that spray lava across the scene. Balance offensive interception with defensive suppression based on real-time crisis assessment.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>🏗️ Procedural Building Generation</h3>
-                    <p>Algorithm-driven architecture creates <span class="feature-highlight">realistic yet varied structures</span> using rectangle primitives and detail patterns. Each level generates 3-7 connected buildings with logical layouts that feel authentic while providing fresh tactical challenges every playthrough.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>🚁 Anomalous Mecha-Helicopter Platform</h3>
-                    <p>Command a unique <span class="feature-highlight">dual-weapon crisis response vehicle</span> displaced in time. Water cannon system provides rapid-fire and charged suppression capabilities, while kinetic autocannon delivers precision meteorite interception and obstacle demolition. Resource management between weapons creates tactical depth.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>📚 Temporal Guardian Narrative</h3>
-                    <p>Experience the story of <span class="feature-highlight">history's protector caught between dimensions</span>. Your mecha-helicopter, altered by a space-time rupture, now warps to different times and locations to prevent catastrophic fires from changing the course of history. Each crisis represents a critical moment that must be preserved.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>🎯 Light-Gun Crisis Adaptation</h3>
-                    <p>Innovative twist on arcade shooting: <span class="feature-highlight">protect the scene instead of yourself</span>. No player health or lives - success measured by minimizing environmental destruction. Creates unique tension where every missed shot costs civilian infrastructure rather than player progress.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="feature-image-section">
-            <div class="feature-image">
-                <div class="image-quote">
-                    "Dual weapons, dual purpose - kinetic force breaks the threat, flowing water heals the wound"
-                </div>
-            </div>
-        </div>
-
-        <section class="section">
-            <h2>Player Tactical Decision Flow</h2>
-            <div class="mermaid-container">
-                <div class="mermaid">
-                    flowchart TD
-                        A[Meteorite Detected] --> B{Assess Threat Level}
-                        B -->|High Threat| C[Switch to Autocannon]
-                        B -->|Low Threat| D[Maintain Water Cannon]
-                        C --> E{Target Hardness}
-                        E -->|Standard| F[Quick Fire Mode]
-                        E -->|Hardened| G[Electromagnetic Charge Shot]
-                        F --> H[Monitor Impact Zone]
-                        G --> H
-                        D --> I{Fire Spreading?}
-                        I -->|Yes| J[Immediate Water Response]
-                        I -->|No| K[Allow Controlled Impact]
-                        H --> L[Assess Damage]
-                        J --> L
-                        K --> L
-                        L --> M[Adjust Strategy for Next Threat]
-                        
-                        style A fill:#ff6b35
-                        style L fill:#3282b8
-                        style M fill:#8d5524
-                </div>
-            </div>
-        </section>
-
-        <section class="section boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-description">
-                <h3>Megalodon Firefighter</h3>
-                <p><strong>Experience physics-driven crisis response like never before.</strong> When time itself becomes the battlefield and every pixel tells a story of destruction or salvation, only precise tactical thinking and mastery of dual weapon systems can preserve history.</p><br>
-
-                <p>Command the anomalous azure mecha-helicopter through temporal fire disasters where cellular automata physics create authentic material interactions. Water extinguishes, stone heats and melts, ash spreads with momentum - and your choices determine whether civilization's greatest moments survive or burn.</p><br>
-
-                <p><strong>Key Features:</strong><br>
-                • Unique cellular automata firefighting gameplay<br>
-                • Light-gun style tactical combat system<br>
-                • Procedural crisis scenarios with infinite replayability<br>
-                • Dual weapon system: water suppression + kinetic interception<br>
-                • Time-traveling narrative with historical preservation stakes<br>
-                • Quick sessions perfect for intense tactical gaming</p>
-            </div>
-        </section>
-    </div>
-
-    <footer class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
     </footer>
-
-    <script>
-        mermaid.initialize({ 
-            startOnLoad: true,
-            theme: 'dark',
-            themeVariables: {
-                darkMode: true,
-                background: '#16213e',
-                primaryColor: '#3282b8',
-                primaryTextColor: '#e5e5e5',
-                primaryBorderColor: '#0f4c75',
-                lineColor: '#3282b8',
-                secondaryColor: '#ff6b35',
-                tertiaryColor: '#8d5524'
-            }
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+{
+  "slug": "Megalodon",
+  "prefix": "megalodon",
+  "preset": "03 Style - Pixel Side View",
+  "style": "Vibrant pixel art. Deep navy and azure palette with bright orange fire and metallic silver highlights.",
+  "notes": "Rewrite (2026-10). All five images are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated. The preset is the closest match to how they look, not the one they were made with.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Low-angle wide shot of a massive azure armored helicopter emerging from a swirling blue vortex above a burning city at night, meteorites streaking down trailing fire and smoke."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Close view of blocky water droplets splashing onto burning wooden beams between grey stone blocks, the fire hissing out where the water lands."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Cockpit view of two weapons aimed through the canopy at a falling meteorite cluster: on the left a water cannon with a transparent blue tank and pressure gauges, on the right an autocannon with an ammunition feed."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait action shot of the azure armored helicopter bursting through a cracked dimensional portal, a pilot at the controls, burning scenes from different eras behind it: a library, a modern city under meteorites, old stone buildings."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Isometric map of a fractured landscape of floating islands from different eras, castles, villages and a modern city, joined by glowing rift paths, the azure helicopter flying between them as meteorites fall."}
+  ]
+}

@@ -183,10 +183,10 @@ window.PROJECTS = [
   },
   {
     page: "Megalodon.html", prefix: "megalodon",
-    title: "Megalodon Firefighter", subtitle: "Tactical Crisis Response",
-    icon: "helicopter-delapouite", tint: "red",
-    blurb: "A time-displaced mecha-helicopter fights fire disasters simulated with cellular automata, combining water suppression with kinetic meteor interception.",
-    genres: ["falling-sand", "action", "vehicles"], tags: ["firefighting", "helicopter", "time travel"],
+    title: "Megalodon Firefighter", subtitle: "Light-Gun Fire Rescue",
+    icon: "helicopter-delapouite", tint: "blue",
+    blurb: "A light-gun game where the scene is in danger, not you: aim a time-lost mecha-helicopter's water cannon at a falling-sand city fire, and shoot down the meteors still coming.",
+    genres: ["falling-sand", "arcade", "vehicles"], tags: ["firefighting", "light gun", "time travel", "cellular automata"],
     status: "concept", added: "2025-10-08"
   },
   {
