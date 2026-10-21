@@ -167,7 +167,8 @@ h2, h3 { font-family: var(--font-title); }
     box-shadow: 0 14px 34px -16px rgba(0, 0, 0, 0.9);
 }
 .p-body::after { content: ""; display: block; clear: both; }
-.p-prose h2 { clear: both; }
+/* A subsection shorter than its mini must not let the next mini float in beside it. */
+.p-prose h2, .p-prose h3 { clear: both; }
 @media (max-width: 620px) {
     .p-mini { float: none; width: 100%; max-width: 320px; margin: 0.2rem 0 1rem; }
 }

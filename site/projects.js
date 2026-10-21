@@ -232,9 +232,9 @@ window.PROJECTS = [
   {
     page: "AALSuperweapon.html", prefix: "AALSuperweapon",
     title: "AAL Superweapon", subtitle: "Physics Combat Devastation",
-    icon: "ray-gun-lorc", tint: "cyan",
-    blurb: "A 2D action platformer: an immortal galactic agent wields modular, physics-driven weapons through vast alien laboratories. Unrestricted destruction, true empowerment.",
-    genres: ["action", "physics"], tags: ["platformer", "power fantasy", "weapons"],
+    icon: "ray-gun-lorc", tint: "red",
+    blurb: "A real power fantasy: an overpowered agent quad-wields modular guns through a planet-wide alien lab, in a hand-made campaign whose levels, enemies and finds reshuffle every playthrough.",
+    genres: ["action", "physics"], tags: ["platformer", "power fantasy", "physics shooter", "shuffled campaign"],
     universe: "aal", status: "concept", added: "2025-10-04"
   },
   {

@@ -1,0 +1,21 @@
+{
+  "slug": "AALSuperweapon-mini",
+  "out": "site/projects/mini/AALSuperweapon",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, alien laboratory, crimson and violet light. ",
+  "notes": "Mood-only mini images for AALSuperweapon.html, beside the lore, game layer and feature text. SDXL (free): gen AALSuperweapon-mini --model sdxl --max 999, then finish AALSuperweapon-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "monsters", "ratio": "3:2", "prompt": "Swarms of colossal space monsters in the dark between galaxies, far bigger than any fleet."},
+    {"n": 2, "name": "lab", "ratio": "3:2", "prompt": "A mysterious planet covered from pole to pole by a single ancient weapons laboratory complex."},
+    {"n": 3, "name": "agent", "ratio": "3:2", "prompt": "A fast armored agent in a crimson battlesuit, a one-person superweapon, standing in a dark corridor."},
+    {"n": 4, "name": "room", "ratio": "3:2", "prompt": "An armored warrior flying into a laboratory hall, firing four guns at once, explosions everywhere."},
+    {"n": 5, "name": "level", "ratio": "3:2", "prompt": "One sector of an alien laboratory complex, wrecked machinery and broken walls left behind after a fight."},
+    {"n": 6, "name": "complex", "ratio": "3:2", "prompt": "Endless halls and sectors of an alien laboratory planet stretching into the distance, many unexplored."},
+    {"n": 7, "name": "session", "ratio": "3:2", "prompt": "A sleek dark starship resting in orbit above a laboratory planet, its agent between missions."},
+    {"n": 8, "name": "flight", "ratio": "3:2", "prompt": "An armored warrior flying up a tall shaft, dashing past the walls, thrusters glowing."},
+    {"n": 9, "name": "carnage", "ratio": "3:2", "prompt": "Explosions, flying debris, sparks and wrecked robots tumbling through a laboratory hall."},
+    {"n": 10, "name": "nuke", "ratio": "3:2", "prompt": "A small nuclear blast flaring inside a laboratory hall, a shockwave throwing machines back."}
+  ]
+}

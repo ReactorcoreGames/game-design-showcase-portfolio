@@ -1,0 +1,14 @@
+{
+  "slug": "AALSuperweapon",
+  "prefix": "AALSuperweapon",
+  "preset": "02 Photo - E - Cinematic",
+  "style": "Sci-fi concept art, dramatic lighting, neon glows, metallic textures, particle effects, high contrast shadows. Palette of crimson red armor and cyan energy light.",
+  "notes": "Rewrite (2026-10). Images 1-4 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated. Image 5 was regenerated on Klein because the old one was an abstract orbital diagram that didn't show the planet-wide laboratory the lore describes: gen AALSuperweapon --only 5, then finish AALSuperweapon --only 5.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide-angle shot from a low perspective looking up at a lone armored crimson red battlesuit warrior with glowing cyan energy lines, standing in a vast alien laboratory corridor, dual-wielding modular weapons that emit bright particle effects, holographic displays on the walls."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Dynamic mid-action shot, tilted Dutch angle. A crimson battlesuit warrior leaps through explosive debris firing several weapons at once, physics destruction cascading around, enemy fragments and weapon parts flying, sparks and energy blasts streaking across the frame."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Extreme close-up of a modular crimson red futuristic gun, a box-like universal weapon platform glowing with cyan internal energy as it fires, blurred laboratory equipment and bokeh lights behind."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Heroic close portrait of a warrior in a crimson red battlesuit in a dynamic pose on an ashen moon-wide laboratory complex, energy-wreathed weapons in hand, a pale moon in the sky behind."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Establishing wide shot from high above a mysterious alien planet whose entire surface is covered by one vast ancient laboratory complex: endless grids of domed research halls, towering weapon test ranges, colossal cannon emplacements and reactor spires stretching to the curved horizon. Some sectors are ruined and scorched by old weapon tests, with craters and collapsed domes. Faint red warning lights and cyan power lines glow across the complex. A small sleek dark starship descends toward it, and an unfamiliar spiral galaxy hangs in the black sky."}
+  ]
+}

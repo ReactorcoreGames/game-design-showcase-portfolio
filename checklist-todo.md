@@ -76,7 +76,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 
 - [x] AAL-Stealth-Sector
 - [x] AALSW (now AAL-Bunkerships, the pilot)
-- [ ] AALSuperweapon
+- [x] AALSuperweapon
 - [ ] ChainReactionDemolitionPunch
 - [ ] City Buster
 - [ ] Collidotron
