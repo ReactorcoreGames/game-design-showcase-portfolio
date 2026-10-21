@@ -43,6 +43,8 @@ FONTS = [
     # embedded licence first; prefer CC0 and SIL OFL ones.
     ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships
     ("OperationNapalm-Regular.ttf", "operation-napalm.woff2", None, None),  # CC0, AAL-Bunkerships
+    ("Zero Hour.otf", "zero-hour.woff2", None, None),                       # CC0, graviton-mayhem
+    ("Squares Bold Free.otf", "squares-bold.woff2", None, None),            # SIL OFL, graviton-mayhem
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 

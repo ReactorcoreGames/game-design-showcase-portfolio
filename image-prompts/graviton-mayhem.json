@@ -1,0 +1,12 @@
+{
+  "slug": "graviton-mayhem",
+  "preset": "08 Games - Planetary Annihilation (Strategy/3D)",
+  "style": "Palette of gravity violet glow, ashen sand and grey terrain, with toxic lime highlights; dusky violet sky.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide low-angle shot of a huge armored hovering war machine with no legs, a wide angular hull floating just above a barren grey plain on a shimmering violet gravity field, a glowing violet sphere of energy held inside a large ring-shaped launcher mounted on its hull, faint violet ripples in the air around it. On the far horizon a long column of crude boxy armored tanks rolls toward it under a dusky sky, dust trailing behind them."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Top-down view straight down onto a walled sandy arena. A glowing violet energy sphere ricochets between crude boxy armored tanks, leaving a bright streak. Two tanks are crumpled together against the arena wall, a third is flipped on its side and exploding, sparks, smoke and scattered debris across the ground. More tanks roll in from the open edge of the arena."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Top-down view of a walled sandy arena. A bright glowing violet line traces the path of an energy sphere, zigzagging off the arena wall in four sharp bounces, each bounce marked by a small flash of light, ending at the side of a crude boxy armored tank parked next to a row of other tanks. The violet energy sphere is mid-flight on the line. Clean and readable composition."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait cover composition, heroic low angle. A huge armored hovering war machine with no legs, a wide angular hull floating on a shimmering violet gravity field, a large glowing violet energy sphere held inside a ring-shaped launcher on top of its hull, violet light rippling outward. Below it on a barren grey plain, a column of crude boxy armored tanks advances. Dusky violet sky."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Establishing wide shot of a barren frontier planet of grey dunes and rocky mesas, with small mining rigs and a domed research lab in the foreground. On the horizon a huge crashed landing craft smokes, and an endless column of crude boxy armored tanks pours out of it across the plain. A pale ringed moon hangs in the dusky violet sky."}
+  ]
+}

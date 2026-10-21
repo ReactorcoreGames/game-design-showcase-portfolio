@@ -163,6 +163,7 @@ def cmd_gen(args) -> None:
     if count > args.max and not args.dry_run:
         sys.exit(f"refusing: {count} > --max {args.max}")
 
+    failed = []
     for spec in plan:
         suffix = style_suffix(spec, presets, args.preset)
         out = WORK / spec["slug"] / f"raw-{args.model}"
@@ -173,8 +174,10 @@ def cmd_gen(args) -> None:
         for ratio, imgs in groups.items():
             pdir = prompt_dir(spec["slug"], args.model)
             pdir.mkdir(parents=True, exist_ok=True)
-            # an --only run gets its own short prompt file name (BAIG keeps 16 characters and turns - into _)
-            run = "_" + hashlib.md5(",".join(str(i["n"]) for i in imgs).encode()).hexdigest()[:6] if only else ""
+            # an --only run gets its own short prompt file name (BAIG keeps 16 characters and turns - into _).
+            # The prompts are part of the hash, so a reworded retry is a new batch, not the old failed one.
+            key = ",".join(str(i["n"]) for i in imgs) + "|" + "|".join(i["prompt"] for i in imgs)
+            run = "_" + hashlib.md5(key.encode()).hexdigest()[:6] if only else ""
             pfile = pdir / f"{ratio_tag(ratio)}{run}.txt"
             lead = args.lead or spec.get("lead", "")
             lines = [(lead + img["prompt"].strip()) for img in imgs]
@@ -187,7 +190,11 @@ def cmd_gen(args) -> None:
                 "--tier", "standard", "--style-text", suffix,
             ]
             print(f"\n== {spec['slug']} {ratio} ({len(imgs)} images)")
-            subprocess.run(cmd, cwd=BAIG, check=True)
+            # a failed job (e.g. a false-positive content flag) shouldn't stop the other ratio groups
+            if subprocess.run(cmd, cwd=BAIG).returncode != 0:
+                failed.append(f"{spec['slug']} {ratio}")
+    if failed:
+        sys.exit("some jobs failed (see above), rerun them with --only: " + ", ".join(failed))
 
 
 def prompt_dir(slug: str, model: str) -> Path:

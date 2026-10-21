@@ -52,6 +52,12 @@ All 37 are `revisit`. Images are kept as they are unless a rewrite changes what 
 
 `falling-sand-pack/!MST Falling Sand themed game projects build via AI.txt` is the original mega-doc the falling-sand pages were split out of. It's useful shared context for all of them.
 
+## New pages
+
+| Page file | Image prefix | Title | Source design(s) in `designs/done/` | Notes |
+|---|---|---|---|---|
+| `graviton-mayhem.html` | `graviton-mayhem` | Graviton Singularity Mecha: Physics Missile Mayhem | `Momentum Missile Mayhem 2 Redux.md` | **Pilot 2, status `page`** (on `dev` until reviewed). Klein images plus ten SDXL minis in `site/projects/mini/graviton-mayhem/`. AAL in spirit only, so no prefix. The enemy is "the Masterless Legion" (the doc's "Death Force" is M.D. Geist's name). |
+
 ## Released game: needs a page, no image generation
 
 | Slug | Title | Sources | Notes |
@@ -62,11 +68,10 @@ All 37 are `revisit`. Images are kept as they are unless a rewrite changes what 
 
 Proposed slugs. They are open to change until the page is built, then frozen. Files are in `designs/standby/`.
 
-**Naming rule.** Where the design doc names a project, use that name (AAL-universe projects keep the `AAL` prefix). Where it doesn't, the planning step proposes a title that fits the game's mood, and an AAL one if the game belongs in that universe. Projects built on someone else's IP or trademark (BLAME!, UNO, LEGO) credit their inspiration on the page, but the title and every in-game name are original stand-ins.
+**Naming rule.** Where the design doc names a project, use that name. A project gets the `AAL` prefix only if its design already has one; many games are set in the AAL universe in spirit only (side stories) and go without it. AAL Bunkerships was the one exception. Where it doesn't, the planning step proposes a title that fits the game's mood, and an AAL one if the game belongs in that universe. Projects built on someone else's IP or trademark (BLAME!, UNO, LEGO) credit their inspiration on the page, but the title and every in-game name are original stand-ins.
 
 | # | Proposed slug | Working title | Source file(s) | Notes |
 |---|---|---|---|---|
-| 1 | `graviton-mayhem` | Graviton Singularity Mecha: Physics Missile Mayhem | `Momentum Missile Mayhem 2 Redux.md` | |
 | 2 | `wobble-royale` | (ragdoll battle royale, singleplayer) | `PUBG battle royale better singleplayer.md` | Title TBD |
 | 3 | `planet-warfare` | Planet Warfare | `Planet Warfare.txt` | Biggest doc (50 KB). `designs/done/ALREADY DONE Pixel Sprites ala ReactorCore.txt` is its art-system companion. |
 | 4 | `roomspace` | RoomSpace | `RoomSpace.txt` | |

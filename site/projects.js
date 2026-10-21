@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "graviton-mayhem.html", prefix: "graviton-mayhem",
+    title: "Graviton Singularity Mecha", subtitle: "Physics Missile Mayhem",
+    icon: "black-hole-bolas-lorc", tint: "magenta",
+    blurb: "Fling gravity orbs and let a clumsy robot tank army crash itself to pieces. Bank shots, chain-reaction pile-ups and a frontier planet that never runs out of campaigns.",
+    genres: ["arcade", "physics", "mecha", "action"], tags: ["tower defense", "bank shots", "chain reactions", "procedural campaigns"],
+    status: "concept", added: "2026-10-21"
+  },
+  {
     page: "admiralwars.html", prefix: "admiralwars",
     title: "Admiral Wars Beyond", subtitle: "Strategic Warfare Evolution",
     icon: "chess-knight-skoll", tint: "blue",

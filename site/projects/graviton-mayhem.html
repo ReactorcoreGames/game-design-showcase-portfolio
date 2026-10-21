@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graviton Singularity Mecha: Physics Missile Mayhem</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a top-down arcade defense game where one gravity mecha flings orbs that knock a clumsy robot army into walls and into each other. Bank shots, chain-reaction crashes and an endless planet of campaigns.">
+    <meta name="keywords" content="game design concept, physics arcade, tower defense, bank shot, chain reaction, gravity weapons, mecha, top-down shooter, Momentum Missile Mayhem inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/graviton-mayhem.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Graviton Singularity Mecha: Physics Missile Mayhem">
+    <meta property="og:description" content="A game design concept: fling gravity orbs and let a clumsy tank army crash itself to pieces. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/graviton-mayhem.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/graviton-mayhem_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a violet gravity orb ricochets across a battlefield as tanks slam into each other">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Graviton Singularity Mecha: Physics Missile Mayhem">
+    <meta name="twitter:description" content="A game design concept: fling gravity orbs and let a clumsy tank army crash itself to pieces.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/graviton-mayhem_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Graviton Singularity Mecha: Physics Missile Mayhem",
+        "description": "A game design concept, not a released game: a top-down arcade defense game where a gravity mecha flings orbs that knock a clumsy robot tank army into walls and into each other, in endlessly generated campaigns across a frontier planet.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Arcade", "Tower defense", "Action"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/graviton-mayhem.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/graviton-mayhem_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#120e1a">
+
+    <link rel="preload" href="../fonts/zero-hour.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Graviton Singularity Mecha: gravity violet over ashen sand, with a toxic lime accent for
+           anything the mecha deploys. Zero Hour for the title and headings, Squares Bold for the
+           subtitle. */
+        @font-face { font-family: "Zero Hour"; src: url("../fonts/zero-hour.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Squares Bold"; src: url("../fonts/squares-bold.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #120e1a;
+            --flow-2: #2c2044;
+            --grid-minor: rgba(200, 180, 255, 0.045);
+            --grid-major: rgba(200, 180, 255, 0.10);
+            --p-ground: rgba(18, 15, 26, 0.95);
+            --p-panel: #1d1828;
+            --p-1: #b57cff;
+            --p-2: #c6f04a;
+            --p-3: #ecdfc6;
+            --p-text: #ddd7e6;
+            --p-dim: #a99fb9;
+            --p-line: rgba(200, 180, 255, 0.16);
+            --font-title: "Zero Hour", "Segoe UI", sans-serif;
+            --font-sub: "Squares Bold", "Segoe UI", sans-serif;
+            --shade: #0d0a14;
+        }
+
+        /* Title effect, "gravity well": a wide violet halo is pulled in tight around the letters,
+           as if into a singularity, then lets go. Dark layered shadows keep it legible throughout. */
+        /* Zero Hour is very wide, so the title runs smaller than the template's default. Its "&"
+           looks like an 8, so headings on this page say "and". */
+        .p-name {
+            font-size: clamp(1.6rem, 0.6rem + 4.4vw, 5rem);
+            letter-spacing: 0.02em;
+            animation: well 6s ease-in-out infinite;
+        }
+        @keyframes well {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 60px rgba(181, 124, 255, 0.25); }
+            50% { color: #fff8ec; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(181, 124, 255, 0.9), 0 0 4px rgba(214, 180, 255, 0.9); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: well-line 6s ease-in-out infinite;
+        }
+        @keyframes well-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(198, 240, 74, 0.3); opacity: 0.7; }
+            50% { box-shadow: 0 0 14px rgba(198, 240, 74, 0.9), 0 0 28px rgba(181, 124, 255, 0.6); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 6s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(181, 124, 255, 0.7); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .arsenal td:first-of-type { width: 100%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.82rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/graviton-mayhem_1_title.jpg" alt="A heavy armored hover machine floats above a barren grey plain on a violet gravity field, a glowing violet orb in its launcher, a column of tanks behind it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Graviton Singularity Mecha</span><span class="p-sub">Physics Missile Mayhem</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/black-hole-bolas-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/vortex-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Graviton Singularity Mecha is a top-down arcade defense game where you never shoot a tank to death. You fling orbs of gravity energy that knock tanks around, and the battlefield does the rest: tanks slam into walls, into each other, into the next tank in line, and the crashes cascade.</p>
+            <p>You pilot one experimental mecha against an endless, clumsy robot army on a barren frontier planet. Every stage is a short, deliberate puzzle of angles and momentum, played at your own pace, with slow motion on tap and a trajectory line that shows where each shot will bounce.</p>
+            <p>It grows out of the Momentum Missile Mayhem series and Siege Tank Defence, and keeps the moment those games did best: the shot that sends one tank flying into three others.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love the click of a perfect bank shot: pool, pinball, angle-and-ricochet puzzles, physics toys and slow, thoughtful tower defense.</p>
+                    <p>They want to feel <strong>clever and powerful in short sessions</strong>, without needing twitch reflexes or a free weekend.</p>
+                    <p>The controls are mouse and WASD. Precision comes from thinking, not reaction speed: slow motion, a predicted trajectory, and weapon wheels that stop time while you choose.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and silliness:</strong> cascading crashes so extreme they're outright funny.</p>
+                    <p><strong>Power:</strong> one machine against an army, beating it by turning its own weight against it.</p>
+                    <p><strong>Mastery:</strong> reading angles, chaining knockbacks, and finding the one shot that does the work of ten.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> (a slow pace, and waves arrive sooner only if you clear them sooner) and <strong>clarity</strong> (every enemy shot is telegraphed, every orb's path is shown).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Tower defense usually ramps up its waves until you lose, and keeps its best toys behind upgrades you grind for.</p>
+                    <p>Here <strong>every weapon is yours from the first stage</strong>. A campaign is ten stages with a randomly shaped difficulty curve, and <strong>winning is normal</strong>.</p>
+                    <p>When one region is clear, the planet has another: an endless supply of fresh campaigns, so the fun lives in the shots, not in a progress bar.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/graviton-mayhem_5_story.jpg" alt="A barren frontier planet of grey plains and mesas, a domed lab and a mining rig in front, a landing craft trailing smoke over a column of tanks on the horizon." width="1280" height="720" loading="lazy">
+            <figcaption>"The Masterless Legion is still following its last order, long after the people who gave it are gone."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/planet-core-delapouite.png)"></span>Lore and story</h2>
+            <h3>The Masterless Legion</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/01-legion.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Somewhere far out in the Milky Way, a world at war built a last-resort weapon: a planet-wide, fully automated robot army with a single directive, to wipe out the enemy if everything else failed. Someone switched it on, and nobody was left to switch it off.</p>
+            <p>The army outlived its makers. It left its dead world and drifted from star to star, hunting anything humanoid, until it crawled into the edge of human colonial space. Today it's classified as just another space monster: huge, relentless and completely mindless. (It's a nod to the Death Force of the anime M.D. Geist.)</p>
+
+            <h3>The planet</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/02-planet.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The game takes place on a large, barren planet at the frontier, home to mining facilities and remote labs where exotic weapons can be tested without worrying about collateral damage. That's where the Legion lands, and where the answer to it was already being built.</p>
+
+            <h3>The mecha</h3>
+            <p>The Graviton Singularity Mecha taps the planet's own gravity field. It moves by falling into gravity pockets it creates, and fights by flinging orbs of gravity energy from a slingshot. It's close to useless in the air and in space, but on the ground of a big planet, one of them can take apart an army by letting the army do the work.</p>
+            <p>The Legion is the perfect target: huge, slow, crude and unable to steer around itself. It's high-quality invention against wasteful brute force.</p>
+
+            <h3>The job right now</h3>
+            <p>Clear the planet one region at a time and keep the Legion off it. The Legion's origin is found and ended in a later story. This game is about holding the line, and the stragglers never stop coming.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control one mecha from above. It doesn't walk or fly: it creates a gravity pocket and falls into it, so it slides across the battlefield up to a top speed, with a little drift when it stops.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Slide in any direction</dd></div>
+                        <div><dt>Q</dt><dd>Anchor mode: lock in place, immune to pull and knockback</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fire</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim; distance from the mecha sets launch power</dd></div>
+                        <div><dt>Left click</dt><dd>Launch the readied orb or shot</dd></div>
+                        <div><dt>Right click</dt><dd>Hold to raise the shield</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Wheels (time stops while open)</h3>
+                    <dl>
+                        <div><dt>Z</dt><dd>Weapons: orbs, cannon shots, artillery</dd></div>
+                        <div><dt>X</dt><dd>Powers, cast at the pointer</dd></div>
+                        <div><dt>C</dt><dd>Turrets, deployables and structures</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Time</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Slow motion (0.1x) for up to ten seconds</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>With an orb readied, a <strong>trajectory line</strong> shows its path through up to four bounces, and how fast it'll be going at each one. The wheels show each weapon's stats and when it's the right tool, so a new player can learn the arsenal while time is stopped.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/graviton-mayhem_2_vignette.jpg" alt="Top-down view of a walled arena: a violet orb streaks between tanks, one of them exploding, debris scattered across the floor." width="1280" height="720" loading="lazy">
+            <figcaption>"The orb does little damage on its own. The tank it knocks into a wall does the rest."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/magnet-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One stage, a few waves</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/03-stage.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A wide, walled arena seen from above. Tanks roll in from an open edge in waves of two to ten, never more than about ten at once. You slide out of their firing arcs, read the angles, and launch.</p>
+                        <p>The best shots rarely go straight at a tank. They go into a wall at an angle and come back into a tank's side, sending it into the wall or into its neighbor. A shield raised at the right moment can even catch a shell meant for the base you're guarding.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-conquest-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A region campaign</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/04-region.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign covers one region of the planet: a map of hotspots where the Legion has landed. You choose where to deploy. A campaign runs to <strong>ten stages</strong>, each with one to five waves, and the difficulty of each is random: easy, medium and hard in any order, sometimes the same arena several times in a row.</p>
+                        <p>When every hotspot is clear, a final stage opens, where the Legion's remnants regroup around a boss that appears nowhere else. Every stage is one of four types:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Stage type</th><th scope="col">What the tanks do</th><th scope="col">Your job</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Base defense</th><td data-label="Tanks">Land outside the anti-air fort's range and roll in to shell it</td><td data-label="Your job">Stop them before they're in range</td></tr>
+                                    <tr><th scope="row">Confrontation</th><td data-label="Tanks">Drop into an arena and turn to face you</td><td data-label="Your job">An all-out brawl, a demolition derby</td></tr>
+                                    <tr><th scope="row">Ambush</th><td data-label="Tanks">Flee across the map, or run a convoy through it</td><td data-label="Your job">Play goalkeeper: let as few through as you can</td></tr>
+                                    <tr><th scope="row">Base assault</th><td data-label="Tanks">Pour out of a factory base under artillery cover</td><td data-label="Your job">Slam its own tanks into the base until it breaks</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/orbit-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The planet</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/05-planet-map.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The whole planet is a generator of region campaigns, and each one gets a twist: a different biome (desert, snow, ice, ashen wasteland, barren soil), a shorter or longer run, a hotter or calmer one, a lean toward one stage type, a different set of weapons on hand.</p>
+                        <p>Because the planet sits on the frontier, the Legion keeps coming back, so there's always another region to clear. The <strong>planet map remembers</strong> every region you've cleaned up, and after a hundred campaigns it marks the invasion as broken: from then on, it's only stragglers. That's a record of what you did, not a prize.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A coffee break or an evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/06-session.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Launch straight to the planet map, pick up the region you were working on or start a new one, and choose a hotspot. A stage takes a few minutes.</p>
+                        <p>Stop after any stage and the campaign waits exactly where you left it. Play one stage over coffee or a whole region in an evening; nothing in the game cares which.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span>Game modes</h2>
+            <p>There's one mode, on purpose: <strong>the planet campaign</strong>. It already covers every session length, because it's built in nested pieces you can stop between:</p>
+            <div class="p-nest" aria-label="The campaign, outermost first">
+                <div><span>The planet</span><small>Endless: region after region, as long as you like to play.</small>
+                    <div><span>A region campaign</span><small>Ten stages and a boss: an evening or two.</small>
+                        <div><span>A stage</span><small>One to five waves in one arena: a few minutes.</small>
+                            <div><span>A wave</span><small>Two to ten tanks: a minute or so of lining up shots.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>The pace is slow and strategic throughout. Waves arrive sooner when you clear them sooner, so a confident player speeds the game up and a careful one never gets rushed, and there's always a short break between waves.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/black-hole-bolas-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/ricochet-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Bank shots and the trajectory line</h3>
+                        <p>The mecha's main weapon is a slingshot that makes orbs of gravity energy. Aim with the mouse; how far the pointer is from the mecha decides <strong>how hard the orb is flung</strong>. A new orb takes a moment to form after each launch.</p>
+                        <p>An orb bounces off walls, obstacles and tanks until it runs out of momentum or time, then detonates in a last EMP and plasma blast. While you aim, the <strong>trajectory line</strong> shows its path through up to four bounces and its speed along the way, so you know exactly which hit you're setting up before you take it.</p>
+                        <p>A shot fired straight at a tank scores one hit and flies off. A shot banked off a wall into a tank's side sends it sideways into the wall, or into the tank next to it. Learning to see those angles is the game.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/graviton-mayhem_3_feature.jpg" alt="A walled arena seen from above: a violet orb flies along a bright zigzag path toward two tanks parked by the wall." width="1280" height="720" loading="lazy">
+                            <figcaption>"The trajectory line shows four bounces ahead, so you can see the hit before you take it."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/implosion-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Chain reactions</p>
+                        <h3>Knockback is the damage</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/07-crash.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>An orb hitting a tank does little damage by itself, plus a brief EMP stun. What hurts is the <strong>impact that follows</strong>: the tank thrown into a wall, into another tank, or into a whole line of them. Those collisions cascade, and wrecks and explosions keep pushing their neighbors.</p>
+                        <p>The Legion makes this easy. Its tanks are heavy, slow and can't steer around each other, and the arenas are laid out so they drive in straight lines, which bunches them together. They even crash into each other by accident. The biggest moments are the ones where one well-placed orb sets off a pile-up across half the arena.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/anchor-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Gravity-well propulsion</p>
+                        <h3>Moving by falling</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/08-mecha.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The mecha moves by creating a gravity pocket and falling into it. It slides rather than walks, up to a top speed, which makes keeping your distance and side-stepping a slow shell feel smooth and deliberate.</p>
+                        <p>The <strong>shield</strong> holds about five seconds of protection and recharges slowly, so it's for a well-timed tap just before a hit, not for hiding behind. <strong>Anchor mode</strong> locks the mecha to the ground: nothing can pull or push it, and it fires harder and faster, but it can't dodge, and switching in or out takes two seconds. It's also the answer when your own vortex or shockwave goes off a little too close.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sands-of-time-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Thinking over reflexes</p>
+                        <h3>A slow, honest pace</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/09-slow-motion.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every Legion weapon <strong>telegraphs before it fires</strong>, and its shells are slow and only moderately damaging, so the mecha survives several hits. Nothing kills you without warning.</p>
+                        <p><strong>Slow motion</strong> drops the game to a tenth of its speed for up to ten seconds, recharging slowly, for lining up the shot that matters. The weapon wheels stop time completely while they're open.</p>
+                        <p>The pace stays in your hands: clear a wave quickly and the next one comes sooner, take your time and it waits, with a short break between waves either way.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/missile-pod-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Everything from the start</p>
+                        <h3>The arsenal</h3>
+                        <p>Nothing is locked, bought or earned. <strong>Every weapon is available from the first stage</strong>, and powers draw on a reactor charge that refills over time, which is the only limit on how often you use them. Now and then a campaign's twist leaves a few weapons out, so you get to play with a different kit.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table arsenal">
+                                <thead><tr><th scope="col">Kind</th><th scope="col">What's in it</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Orbs</th><td>Eight kinds, among them a regular orb, one that speeds up with every bounce, a sticky one that lodges inside a tank and tears it apart, a brute-force orb with huge knockback, a split shot that becomes two on its first bounce, and a singularity orb that drags everything with it without colliding itself</td></tr>
+                                    <tr><th scope="row">Cannon</th><td>Direct shots: small, medium, EMP and mini-nuke</td></tr>
+                                    <tr><th scope="row">Powers</th><td>Shockwave, implosion, hack and stun, gravity grip (pick up a tank and throw it), orb grip (catch a flying orb and re-throw it), singularity vortex, drone swarm, airstrike, artillery, antimatter shot, and a nuke that's dangerous up close</td></tr>
+                                    <tr><th scope="row">Deployables</th><td>Magnet trap, shockwave tower, orb accelerator, and mines (regular and nuclear)</td></tr>
+                                    <tr><th scope="row">Turrets</th><td>Blaster, beam and drone</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The colony's supply pods sometimes drop <strong>temporary boosts</strong>: faster orbs, faster energy and repairs, no cooldowns, more ammunition, a stronger shield or quicker movement.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/tank-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Brute force by design</p>
+                        <h3>A clumsy enemy</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/graviton-mayhem/10-tanks.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The Legion fields armored tanks, cars and walkers on treads and wheels, in small, medium and large sizes. Their guns are fixed, turreted (all the way round or only within an arc), or mounted in sets that fire together, like three cannons across the front.</p>
+                        <p>They drive straight at their target, turning slowly to bring you within a narrow arc before they advance. Each type has a role, a strength and a weakness to learn, the way Doom 2's monsters do: some you must never let close, some you should never stand in front of, some are best used as ammunition against the others.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/graviton-mayhem_4_boxart.jpg" alt="Box art: an armored hover machine with a huge violet orb on top floats above a column of tanks on a barren plain." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">The Legion has landed</p>
+                <h2 id="sendoff">Graviton Singularity Mecha: Physics Missile Mayhem</h2>
+                <p>An army with no makers, no plan and no brakes is rolling across the frontier. You have one experimental mecha, a planet's worth of gravity and a slingshot full of orbs.</p>
+                <p>Line up the shot. Bank it off the wall. Send the first tank into the second, and the second into the rest. Region by region, the planet gets quieter.</p>
+                <p><strong>Every tank they send is ammunition.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by the Momentum Missile Mayhem series, Siege Tank Defence and the anime M.D. Geist</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Zero Hour (CC0), Squares Bold, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

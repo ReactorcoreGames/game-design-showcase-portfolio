@@ -73,6 +73,7 @@ h2, h3 { font-family: var(--font-title); }
     font-family: var(--font-title); font-weight: 400;
     font-size: clamp(2.4rem, 1.2rem + 5.4vw, 6rem);
     color: var(--p-3);
+    overflow-wrap: break-word;   /* a long word in a wide display font must never widen the page */
 }
 .p-sub {
     display: inline-block; position: relative;
@@ -166,7 +167,7 @@ h2, h3 { font-family: var(--font-title); }
     box-shadow: 0 14px 34px -16px rgba(0, 0, 0, 0.9);
 }
 .p-body::after { content: ""; display: block; clear: both; }
-.p-prose h2, .p-prose h3 { clear: both; }
+.p-prose h2 { clear: both; }
 @media (max-width: 620px) {
     .p-mini { float: none; width: 100%; max-width: 320px; margin: 0.2rem 0 1rem; }
 }
@@ -288,7 +289,7 @@ kbd {
 }
 .p-sendoff img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid color-mix(in srgb, var(--p-1) 50%, transparent); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.9); }
 .p-sendoff .p-card { padding: clamp(0.8rem, 3vw, 2rem); }
-.p-sendoff h2 { font-size: clamp(1.05rem, 0.7rem + 2vw, 2rem); margin: 0 0 0.8rem; }
+.p-sendoff h2 { font-size: clamp(1.05rem, 0.7rem + 2vw, 2rem); margin: 0 0 0.8rem; overflow-wrap: break-word; }
 .p-sendoff p { font-size: clamp(0.82rem, 0.75rem + 0.45vw, 1.05rem); line-height: 1.5; }
 .p-sendoff .btn { margin-top: 0.4rem; white-space: normal; text-align: center; }
 @media (max-width: 620px) {

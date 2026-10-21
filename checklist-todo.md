@@ -115,7 +115,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 Each one means: plan → approval → page → image spec → nexus entry → manifest updated → design file moved to `designs/done/`.
 
 - [ ] Ukrainian Turbo Minesweeper (released; images from its own promo folder, no generation)
-- [ ] Graviton Singularity Mecha (Momentum Missile Mayhem 2 Redux)
+- [x] Graviton Singularity Mecha (Momentum Missile Mayhem 2 Redux) (pilot 2)
 - [ ] Ragdoll battle royale (PUBG doc)
 - [ ] Planet Warfare
 - [ ] RoomSpace

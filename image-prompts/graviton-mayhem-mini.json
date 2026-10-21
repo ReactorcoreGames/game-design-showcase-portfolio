@@ -1,0 +1,21 @@
+{
+  "slug": "graviton-mayhem-mini",
+  "out": "site/projects/mini/graviton-mayhem",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, barren alien planet, violet glow and ashen sand tones. ",
+  "notes": "Mood-only mini images for graviton-mayhem.html, beside the lore, game layer and feature text. SDXL (free): gen graviton-mayhem-mini --model sdxl --max 999, then finish graviton-mayhem-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "legion", "ratio": "3:2", "prompt": "A planet-wide, fully automated robot army of crude tanks, still following its last order long after its makers are gone."},
+    {"n": 2, "name": "planet", "ratio": "3:2", "prompt": "A large, barren planet at the frontier, home to mining facilities and remote weapons labs."},
+    {"n": 3, "name": "stage", "ratio": "3:2", "prompt": "A wide walled arena seen from above, tanks rolling in from an open edge, a glowing violet orb flying."},
+    {"n": 4, "name": "region", "ratio": "3:2", "prompt": "A map of hotspots where the robot army has landed across one region of a barren planet."},
+    {"n": 5, "name": "planet-map", "ratio": "3:2", "prompt": "A whole barren planet seen from orbit, deserts, snow and ash wastelands, scattered landing sites glowing."},
+    {"n": 6, "name": "session", "ratio": "3:2", "prompt": "A quiet command station at dusk on a barren planet, a giant mecha standing ready outside the window."},
+    {"n": 7, "name": "crash", "ratio": "3:2", "prompt": "Heavy armored tanks thrown into each other, a cascading pile-up of crashes and explosions against a wall."},
+    {"n": 8, "name": "mecha", "ratio": "3:2", "prompt": "A giant mecha gliding across sand on a pocket of violet gravity, dust swirling around its feet."},
+    {"n": 9, "name": "slow-motion", "ratio": "3:2", "prompt": "Time slowed almost to a stop, a glowing violet orb hanging in the air above a battlefield of tanks."},
+    {"n": 10, "name": "tanks", "ratio": "3:2", "prompt": "Crude, slow, boxy armored tanks on treads and wheels driving in a straight line across a desert."}
+  ]
+}
