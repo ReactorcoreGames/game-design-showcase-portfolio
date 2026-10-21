@@ -1,0 +1,14 @@
+{
+  "slug": "Custom Dismount",
+  "prefix": "cathartic",
+  "preset": "01 Main - 3D Low Poly",
+  "style": "Rectangular grey concrete brutalism, bright grey fog. The ragdoll is a faceless segmented mannequin of matte medium grey plastic. Faint crimson blood stains, rare yellow and black hazard stripes. Palette strictly greyscale with rare crimson and hazard-yellow accents.",
+  "notes": "Rewrite (2026-10). Images 1-4 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated (they were made with a different preset). The page had no story image, so only image 5 is new: gen \"Custom Dismount\" --only 5, then finish \"Custom Dismount\" --only 5.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide-angle cinematic shot from a low angle of a segmented, faceless matte grey plastic ragdoll in a mid-fall pose between massive rectangular grey concrete crusher plates and angular mechanical hazards, bright grey fog, faint blood stains on the floor."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Close dynamic shot of a faceless segmented matte grey plastic ragdoll colliding with a sharply angled grey concrete wall at speed, concrete fragments flying, a faint blood splatter, bright grey fog, a single red hazard light."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Medium shot from a slightly elevated angle of a faceless matte grey plastic ragdoll standing on a concrete path between cubes and ramps, translucent white wireframe ghosts of the same figure stretching ahead along glowing prediction lines into bright grey fog."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait cover of a faceless segmented matte grey plastic ragdoll falling in front of looming grey concrete blocks and a dark conveyor, bright grey fog, faint blood stains on the concrete."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "High wide aerial view of a vast flat plain of plain grey concrete fading into bright grey fog, dotted with separate hazard stations built from simple untextured primitive blocks, like an outdoor test range: a long concrete staircase, a train platform with a boxy train on straight rails, a straight road with a boxy truck, a giant fan with dull blades, a tall vertical board studded with rows of short horizontal bars, a hydraulic press over a square pad, and a mine cart track running into a low tunnel. Thin concrete paths connect the stations. A tiny faceless grey mannequin figure stands alone at the top of the staircase."}
+  ]
+}

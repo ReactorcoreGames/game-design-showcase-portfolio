@@ -80,7 +80,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] ChainReactionDemolitionPunch
 - [x] City Buster
 - [x] Collidotron
-- [ ] Custom Dismount ⚑
+- [x] Custom Dismount ⚑
 - [ ] EradicationWars
 - [ ] Halberd_Suit_Wars
 - [ ] HazardMissionTeam (2)

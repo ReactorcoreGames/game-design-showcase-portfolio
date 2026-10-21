@@ -55,6 +55,8 @@ FONTS = [
     ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster
     ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron
     ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron
+    ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount
+    ("ShareTechMono-Regular.ttf", "share-tech-mono.woff2", None, None),     # SIL OFL, Custom Dismount
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 

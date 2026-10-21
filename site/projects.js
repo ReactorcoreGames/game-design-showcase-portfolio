@@ -167,10 +167,10 @@ window.PROJECTS = [
   },
   {
     page: "Custom Dismount.html", prefix: "cathartic",
-    title: "Cathartic Dismount", subtitle: "Ragdoll Destruction Game",
-    icon: "knocked-out-stars-delapouite", tint: "yellow",
-    blurb: "Toribash-style ragdoll destruction with a moral justification system. Preview the carnage with precognition before you commit to it, for guilt-free catharsis.",
-    genres: ["ragdoll", "physics"], tags: ["planning", "catharsis", "stunts"],
+    title: "Cathartic Dismount", subtitle: "Precognition Ragdoll Finisher",
+    icon: "falling-sbed", tint: "red",
+    blurb: "Rehearse a terrible person's fall down stairs, into traffic or a fan in a precognition vision, make one real, then land a single slow-motion finisher.",
+    genres: ["ragdoll", "physics"], tags: ["catharsis", "precognition", "slow motion", "procedural"],
     status: "concept", added: "2025-10-08"
   },
   {

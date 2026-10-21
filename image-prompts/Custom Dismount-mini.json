@@ -1,0 +1,21 @@
+{
+  "slug": "Custom Dismount-mini",
+  "out": "site/projects/mini/cathartic",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic film still, bare grey concrete brutalism in bright fog, faint crimson accents. ",
+  "notes": "Mood-only mini images for Custom Dismount.html, beside the lore, game layer and feature text. SDXL (free): gen \"Custom Dismount-mini\" --model sdxl --max 999, then finish \"Custom Dismount-mini\" --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "range", "ratio": "3:2", "prompt": "A world of grey concrete cubes, cylinders, ramps and slabs arranged into hazards under a bright fog."},
+    {"n": 2, "name": "profile", "ratio": "3:2", "prompt": "A faceless grey mannequin standing alone in a concrete room, lit like a police lineup."},
+    {"n": 3, "name": "fall", "ratio": "3:2", "prompt": "An empty flight of concrete stairs in fog, a plain grey shop mannequin lying crumpled at the bottom."},
+    {"n": 4, "name": "case", "ratio": "3:2", "prompt": "A manila case file lying open on a grey concrete table, a single photograph clipped to it."},
+    {"n": 5, "name": "archive", "ratio": "3:2", "prompt": "Long rows of grey filing cabinets in a quiet concrete archive, one drawer open."},
+    {"n": 6, "name": "evening", "ratio": "3:2", "prompt": "A tired person in an office chair at night, leaning back and exhaling, a monitor glowing grey."},
+    {"n": 7, "name": "train", "ratio": "3:2", "prompt": "A boxy grey train rushing past an empty concrete metro platform in fog."},
+    {"n": 8, "name": "final", "ratio": "3:2", "prompt": "A katana blade frozen mid-swing in slow motion, droplets hanging in the air."},
+    {"n": 9, "name": "dossier", "ratio": "3:2", "prompt": "A wall of surveillance photographs and red string in a grey concrete room."},
+    {"n": 10, "name": "concrete", "ratio": "3:2", "prompt": "Close-up of a cracked grey concrete wall with a dark crimson stain running down it."}
+  ]
+}

@@ -3,728 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cathartic Dismount: Ragdoll Destruction Game</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Cathartic Dismount - A ragdoll physics destruction game featuring precognition planning, dynamic damage systems, and morally justified cathartic gameplay. Experience dramatic ragdoll destruction with strategic planning mechanics.">
-    <meta name="keywords" content="ragdoll physics, destruction game, cathartic gameplay, physics simulation, indie game, game design showcase">
-    <meta name="author" content="ReactorCore Games">
-    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Custom Dismount.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Cathartic Dismount: Ragdoll Destruction Game">
-    <meta property="og:description" content="Experience morally justified ragdoll destruction with precognition planning mechanics. A unique physics-based destruction game with strategic gameplay elements.">
-    <meta property="og:image" content="cathartic_2_vignette.jpg">
-    <meta property="og:image:alt" content="Moment of impact showing ragdoll physics in dramatic lighting">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Custom Dismount.html">
+    <title>Cathartic Dismount: Precognition Ragdoll Finisher</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a minimalist ragdoll dismount game. Each target is a randomly generated person proud of something terrible, each scenario a random hazard. Rehearse the fall in a precognition vision, make one real, then land a single slow-motion finisher.">
+    <meta name="keywords" content="game design concept, ragdoll physics, dismount game, catharsis, precognition, slow motion finisher, procedural scenarios, Stair Dismount inspired, Katana Zero inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Custom%20Dismount.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="ReactorCore Games - Game Design Showcase">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Cathartic Dismount: Precognition Ragdoll Finisher">
+    <meta property="og:description" content="A game design concept: rehearse a ragdoll's fall in a precognition vision, make one real, and finish it once. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Custom%20Dismount.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/cathartic_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a faceless grey mannequin slams into a concrete wall, fragments flying">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cathartic Dismount: Ragdoll Destruction Game">
-    <meta name="twitter:description" content="Experience morally justified ragdoll destruction with precognition planning mechanics and dynamic damage systems.">
-    <meta name="twitter:image" content="cathartic_2_vignette.jpg">
-    <meta name="twitter:image:alt" content="Ragdoll physics destruction gameplay with dramatic lighting">
-    
-    <!-- JSON-LD Structured Data -->
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Cathartic Dismount: Precognition Ragdoll Finisher">
+    <meta name="twitter:description" content="A game design concept: rehearse a ragdoll's fall in a precognition vision, make one real, and finish it once.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/cathartic_2_vignette.jpg">
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Cathartic Dismount",
-      "description": "A ragdoll physics destruction game featuring precognition planning, dynamic damage systems, and morally justified cathartic gameplay.",
-      "genre": ["Physics Simulation", "Destruction", "Strategy"],
-      "gamePlatform": "PC",
-      "author": {
-        "@type": "Organization",
-        "name": "ReactorCore Games"
-      },
-      "image": "cathartic_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Custom Dismount.html"
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Cathartic Dismount: Precognition Ragdoll Finisher",
+        "description": "A game design concept, not a released game: a minimalist ragdoll dismount game with randomly generated hazard scenarios and targets, a precognition vision to rehearse each fall, and one slow-motion finisher per target.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Physics", "Ragdoll", "Casual"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Custom%20Dismount.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/cathartic_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
-    
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#141315">
+
+    <link rel="preload" href="../fonts/spectrashell.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Russo+One&display=optional" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /*
-        Image Files Required:
-        cathartic_1_title.jpg - Dark industrial scene with ragdoll and machinery silhouettes
-        cathartic_2_vignette.jpg - Moment of impact showing ragdoll physics in dramatic lighting
-        cathartic_3_feature.jpg - Precognition planning interface with timeline visualization
-        cathartic_4_boxart.jpg - Dramatic cover art emphasizing moral justification and cathartic release
-        */
+        /* Cathartic Dismount: fogged concrete grey, with blood crimson for the real thing and hazard
+           yellow for the strike. Spectrashell for the title and headings, Share Tech Mono for the
+           subtitle and kickers, like a case file. */
+        @font-face { font-family: "Spectrashell"; src: url("../fonts/spectrashell.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Share Tech Mono"; src: url("../fonts/share-tech-mono.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: #1a1a1a;
-            --container-bg: #2a2a2a;
-            --card-bg: #333333;
-            --border-color: #ff4444;
-            --text-color: #e0e0e0;
-            --accent-color: #ff6666;
-            --secondary-accent: #ffaa44;
-            --title-glow-color: #666633;
-            --heading-glow-color: #666655;
-            --shadow-color: rgba(255, 68, 68, 0.3);
-            --card-shadow: rgba(0, 0, 0, 0.7);
+            --flow-1: #141315;
+            --flow-2: #33302f;
+            --grid-minor: rgba(235, 228, 226, 0.04);
+            --grid-major: rgba(235, 228, 226, 0.09);
+            --p-ground: rgba(21, 20, 21, 0.95);
+            --p-panel: #1f1d1e;
+            --p-1: #e8394a;
+            --p-2: #f0c53a;
+            --p-3: #ede8e4;
+            --p-text: #dcd7d4;
+            --p-dim: #a9a2a0;
+            --p-line: rgba(235, 225, 222, 0.15);
+            --font-title: "Spectrashell", "Segoe UI", sans-serif;
+            --font-sub: "Share Tech Mono", ui-monospace, monospace;
+            --shade: #0c0b0c;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "precognition": a pale ghost of the title drifts in from the right, like the
+           vision of a fall, lands on the letters, and the moment it becomes real flashes crimson.
+           Dark layered shadows keep it legible at every frame. */
+        .p-name {
+            letter-spacing: 0.03em;
+            animation: precog 7s ease-in-out infinite;
         }
-
-
-		body {
-			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-			background: linear-gradient(135deg, var(--background-color) 0%, #2d1b1b 100%);
-			color: var(--text-color);
-			line-height: 1.6;
-			min-height: 100vh;
-		}
-
-        /* Animated Title Effects */
-        @keyframes electricBuzz {
-            0% { text-shadow: 2px 2px 4px var(--title-glow-color), -2px -2px 4px var(--title-glow-color), 0 0 10px var(--title-glow-color); }
-            10% { text-shadow: 1px 1px 2px var(--secondary-accent), -1px -1px 2px var(--secondary-accent), 0 0 8px var(--secondary-accent); }
-            15% { text-shadow: 3px 3px 6px var(--title-glow-color), -3px -3px 6px var(--title-glow-color), 0 0 15px var(--title-glow-color); }
-            20% { text-shadow: 2px 2px 4px var(--title-glow-color), -2px -2px 4px var(--title-glow-color), 0 0 10px var(--title-glow-color); }
-            25% { text-shadow: 4px 4px 8px var(--secondary-accent), -4px -4px 8px var(--secondary-accent), 0 0 20px var(--secondary-accent); }
-            30% { text-shadow: 2px 2px 4px var(--title-glow-color), -2px -2px 4px var(--title-glow-color), 0 0 12px var(--title-glow-color); }
-            100% { text-shadow: 2px 2px 4px var(--title-glow-color), -2px -2px 4px var(--title-glow-color), 0 0 10px var(--title-glow-color); }
+        @keyframes precog {
+            0%, 8% { text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 22px 0 2px rgba(237, 232, 228, 0.28); }
+            55% { text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 2px 0 1px rgba(237, 232, 228, 0.4); }
+            60% { color: #fff; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(232, 57, 74, 0.95), 0 0 4px rgba(255, 140, 150, 0.9); }
+            72%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 40px rgba(232, 57, 74, 0.2); }
         }
-
-        @keyframes breathingGlow {
-            0% { text-shadow: 0 0 5px var(--heading-glow-color), 0 0 10px var(--heading-glow-color); }
-            50% { text-shadow: 0 0 10px var(--heading-glow-color), 0 0 20px var(--heading-glow-color), 0 0 30px var(--heading-glow-color); }
-            100% { text-shadow: 0 0 5px var(--heading-glow-color), 0 0 10px var(--heading-glow-color); }
+        .p-sub { text-transform: uppercase; color: var(--p-2); letter-spacing: 0.12em; text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: repeating-linear-gradient(135deg, var(--p-2) 0 10px, var(--shade) 10px 20px);
+            animation: precog-line 7s ease-in-out infinite;
         }
-
-        /* Header and Branding */
-        .branding {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 1000;
+        @keyframes precog-line {
+            0%, 55% { box-shadow: none; opacity: 0.65; }
+            60% { box-shadow: 0 0 14px rgba(232, 57, 74, 0.9); opacity: 1; }
+            100% { box-shadow: none; opacity: 0.8; }
         }
+        .section-mark::after { animation: h2-line 7s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 55%, 100% { box-shadow: none; } 60% { box-shadow: 0 0 10px rgba(232, 57, 74, 0.7); } }
+        h2, h3 { letter-spacing: 0.04em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.85rem; letter-spacing: 0.08em; }
+        .p-fork b { font-family: var(--font-sub); font-weight: 400; }
 
-        .branding a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-size: 0.9em;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .branding a:hover {
-            opacity: 1;
-        }
-
-        /* Title Section */
-        .title-section {
-            height: 700px;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('./images/cathartic_1_title.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-        }
-
-        .main-title {
-            font-family: 'Russo One', cursive;
-            font-size: 4em;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-color);
-            animation: electricBuzz 3s infinite;
-            margin-bottom: 10px;
-        }
-
-        .sub-title {
-            font-family: 'Russo One', cursive;
-            font-size: 1.8em;
-            color: var(--accent-color);
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* Container and Layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-
-        h2 {
-            font-family: 'Russo One', cursive;
-            font-size: 2.5em;
-            color: var(--text-color);
-            animation: breathingGlow 2s infinite;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        h3 {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-            font-size: 1.8em;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-            text-shadow: 0 0 5px var(--accent-color);
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* Card Layouts */
-        .card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 20px var(--card-shadow), 0 0 20px var(--shadow-color);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .card:hover {
-            border-color: var(--accent-color);
-        }
-
-        .three-card-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .wide-card {
-            width: 100%;
-        }
-
-        /* Image Sections */
-        .vignette-section, .feature-section {
-            position: relative;
-            height: 700px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 40px 0;
-            border: 3px solid var(--border-color);
-        }
-
-        .vignette-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)), url('./images/cathartic_2_vignette.jpg');
-        }
-
-        .feature-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)), url('./images/cathartic_3_feature.jpg');
-        }
-
-        .image-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-left: 4px solid var(--accent-color);
-            border-radius: 5px;
-        }
-
-        .image-quote p {
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--text-color);
-            margin: 0;
-        }
-
-        /* Box Art Section */
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            gap: 40px;
-            align-items: center;
-            margin: 60px 0;
-        }
-
-        .boxart-image {
-            width: 100%;
-            aspect-ratio: 2/3;
-            background: url('./images/cathartic_4_boxart.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            border: 3px solid var(--border-color);
-        }
-
-        .boxart-description {
-            background: var(--card-bg);
-            padding: 40px;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            box-shadow: 0 10px 20px var(--card-shadow);
-        }
-
-        .boxart-description h3 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-        }
-
-        /* Mermaid Diagram */
-        .diagram-section {
-            background: var(--card-bg);
-            padding: 40px;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        /* Game Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        .feature-card {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 30px;
-            align-items: start;
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, var(--accent-color), var(--secondary-accent));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            color: white;
-            box-shadow: 0 5px 15px rgba(255, 68, 68, 0.4);
-        }
-
-        /* Trivia List */
-        .trivia-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .trivia-list li {
-            background: var(--card-bg);
-            margin-bottom: 15px;
-            padding: 20px;
-            border-left: 5px solid var(--accent-color);
-            border-radius: 5px;
-            box-shadow: 0 5px 10px var(--card-shadow);
-        }
-
-        .trivia-list strong {
-            color: var(--accent-color);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--background-color);
-            border-top: 2px solid var(--border-color);
-            padding: 40px 0;
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: var(--secondary-accent);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5em;
-            }
-
-            .sub-title {
-                font-size: 1.2em;
-            }
-
-            h2 {
-                font-size: 2em;
-            }
-
-            .three-card-row {
-                grid-template-columns: 1fr;
-            }
-
-            .boxart-section {
-                grid-template-columns: 1fr;
-            }
-
-            .feature-card {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .container {
-                padding: 20px 15px;
-            }
-        }
-
-        /* Bold Text Styling */
-        strong, b {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-            color: var(--accent-color);
-            text-shadow: 0 0 30px var(--accent-color);
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        /* Paragraph Spacing */
-        p {
-            margin-bottom: 15px;
-        }
-
-        .section p:last-child {
-            margin-bottom: 0;
-        }
+        .finishers td:first-of-type { width: 100%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } }
     </style>
 </head>
 <body>
-    <!-- Branding -->
-    <div class="branding">
-        <a href="https://www.patreon.com/ReactorcoreGames">Reactorcore's Personal Game Design Project</a>
-    </div>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <!-- Title Section -->
-    <div class="title-section">
-        <h1 class="main-title">Cathartic Dismount</h1>
-        <div class="sub-title">Ragdoll Destruction Game</div>
-    </div>
-
-    <div class="container">
-        <!-- Game Overview -->
-        <section class="section">
-            <h2>🎯 Game Overview</h2>
-            <div class="card">
-                <p><strong>Cathartic Dismount</strong> is a physics-based destruction game that provides safe, guilt-free stress relief through controlled virtual violence. Combining the classic appeal of Stair Dismount with advanced Toribash-style ragdoll physics, players experience satisfying cathartic release while maintaining moral clarity.</p>
-                <br>
-                <p>Every target is procedurally generated with an irredeemable backstory, ensuring players feel justified in their actions. The game features a unique <strong>precognition planning system</strong> inspired by Katana Zero, allowing players to preview their destruction before committing to the final, irreversible outcome.</p>
-                <br>
-                <p>This isn't mindless violence—it's <strong>therapeutic interaction</strong> designed to provide healthy emotional outlet in a controlled, consequence-free environment where every action serves the player's psychological well-being.</p>
-            </div>
-        </section>
-
-        <!-- Three Cards Section -->
-        <div class="three-card-row">
-            <div class="card">
-                <h3>🎮 Target Audience</h3>
-                <p><strong>Stress Relief Seekers:</strong> Adults dealing with daily frustrations who need healthy emotional outlets</p>
-                <br>
-                <p><strong>Physics Game Enthusiasts:</strong> Players who enjoy emergent gameplay through realistic physics simulation</p>
-                <br>
-                <p><strong>Cathartic Gaming Advocates:</strong> Those who understand gaming as legitimate stress management and emotional processing</p>
-            </div>
-            <div class="card">
-                <h3>🎯 Game's Purpose</h3>
-                <p><strong>Safe Emotional Release:</strong> Provides controlled environment for expressing and processing frustration without real-world consequences</p>
-                <br>
-                <p><strong>Stress Relief:</strong> Offers immediate, satisfying cathartic experience that helps players decompress from daily pressures</p>
-                <br>
-                <p><strong>Moral Clarity:</strong> Eliminates guilt through justified targeting system that frames destruction as righteous action</p>
-            </div>
-            <div class="card">
-                <h3>⚡ Core Concept</h3>
-                <p><strong>Justified Destruction:</strong> Every target deserves their fate, creating guilt-free cathartic experience through moral framework</p>
-                <br>
-                <p><strong>Meaningful Choice:</strong> Precognition system ensures every action feels deliberate and impactful rather than random chaos</p>
-                <br>
-                <p><strong>Controlled Catharsis:</strong> Physics-based interactions provide satisfying feedback while maintaining player agency over outcomes</p>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/cathartic_1_title.jpg" alt="A faceless grey jointed mannequin falls through the air between grey concrete pillars with yellow and black hazard stripes, blood spattered on the floor below." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Cathartic Dismount</span><span class="p-sub">Precognition Ragdoll Finisher</span></h1>
             </div>
         </div>
+    </header>
 
-        <!-- Controls & Interface -->
-        <section class="section">
-            <h2>🕹️ Controls & Interface</h2>
-            <div class="card">
-                <h3>Precognition Planning System</h3>
-                <p><strong>Preview Mode:</strong> Click and drag to set initial impact vectors, launch angles, and environmental interactions. The system shows ghosted prediction trails of probable outcomes.</p>
-                <br>
-                <p><strong>Finisher Targeting:</strong> During or after initial physics simulation, click on body parts to target finisher attacks. Choose from cutting, smashing, impaling, or explosive finishers with adjustable power levels.</p>
-                <br>
-                <p><strong>Commitment Interface:</strong> Once satisfied with precognition preview, click "Make It Real" to execute the planned destruction. This irreversible action emphasizes the finality and weight of each decision.</p>
-                <br>
-                <p><strong>Environmental Control:</strong> Simple point-and-click interaction with scenario elements like platform angles, obstacle placement, and physics object trajectories. The player controls the setup, not the individual physics calculations.</p>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/falling-sbed.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
             </div>
-        </section>
-
-        <!-- Vignette Image -->
-        <div class="vignette-section">
-            <div class="image-quote">
-                <p>"Watch bodies realistically crumple and bounce as you master the art of perfect timing"</p>
-            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
         </div>
 
-        <!-- Game Layers -->
-        <section class="section">
-            <h2>🏗️ Game Layers</h2>
-            
-            <div class="card wide-card">
-                <h3>⚡ Moment-to-Moment Gameplay</h3>
-                <p><strong>Physics Manipulation:</strong> Direct interaction with ragdoll physics through intuitive click-and-drag controls. Set launch vectors, adjust environmental elements, and trigger interactive objects.</p>
-                <br>
-                <p><strong>Finisher Execution:</strong> Precision timing system for delivering final blows. Choose impact type (cutting, crushing, piercing), target specific body parts, and adjust force levels for desired destruction intensity.</p>
-                <br>
-                <p><strong>Precognition Feedback:</strong> Real-time preview of physics outcomes with ghosted visual trails showing probable trajectories, impact points, and destruction patterns before committing to execution.</p>
-            </div>
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/acrobatic-darkzaitzev.png)"></span>Game overview</h2>
+            <p class="p-lead">Cathartic Dismount is a small physics game about wrecking someone who truly has it coming. Each time, you get a randomly built hazard, a randomly posed ragdoll and a random way to set it off. You choose how the strike goes, watch the fall, and at the moment you pick, deliver one slow-motion finisher.</p>
+            <p>Before anything happens for real, you see it in a <strong>precognition vision</strong>: run the fall as many times as you like through a dreamlike filter, adjust, and only then make it real. The real run happens once, and so does the finisher.</p>
+            <p>It's a remix of the Stair Dismount and Truck Dismount games, with Toribash-style ragdolls that can be cut and broken apart, the precognition of Katana Zero, the slow-motion cuts of Metal Gear Rising: Revengeance, and the target profiles of Watch Dogs, all kept in the bare grey primitives of the originals.</p>
 
-            <div class="card wide-card">
-                <h3>🎯 Low Metagame</h3>
-                <p><strong>Scenario Collections:</strong> Progress through increasingly complex destruction scenarios, each with unique environmental challenges and target positioning. Unlock new finisher types and environmental hazards.</p>
-                <br>
-                <p><strong>Target Database Expansion:</strong> Build comprehensive catalog of dispatched targets with their backstories, crimes, and destruction details. Each completion adds to personal justice portfolio.</p>
-                <br>
-                <p><strong>Mastery Progression:</strong> Develop expertise in different destruction types - environmental kills, precision finishers, creative combinations. Each approach offers distinct satisfaction and skill development paths.</p>
-            </div>
-
-            <div class="card wide-card">
-                <h3>🌐 High Metagame</h3>
-                <p><strong>Justice Archive:</strong> Persistent record of all completed destructions with full context - target profiles, chosen methods, and personal notes. Creates ongoing sense of righteous accomplishment.</p>
-                <br>
-                <p><strong>Cathartic Session History:</strong> Track stress relief sessions over time, noting which scenarios and methods provide most effective emotional release for different mood states and frustration sources.</p>
-                <br>
-                <p><strong>Scenario Randomization Seed Collection:</strong> Save and replay favorite destruction setups, share interesting scenarios, and revisit particularly satisfying moments of cathartic release for future stress management.</p>
-            </div>
-
-            <div class="card wide-card">
-                <h3>🎮 Practical Game Flow</h3>
-                <p><strong>Quick Launch Catharsis:</strong> App opens directly to random scenario selection with pre-profiled target. Two clicks from app start to destruction planning. Perfect for immediate stress relief during busy schedules.</p>
-                <br>
-                <p><strong>Session Structure:</strong> Natural 5-15 minute gameplay sessions with satisfying conclusion points. Each destruction feels complete and final, providing clear emotional closure and stress relief.</p>
-                <br>
-                <p><strong>Graceful Exit Design:</strong> Clean session endings with optional reflection on cathartic release achieved. No cliff-hangers or incomplete loops - just pure stress relief with clean psychological closure.</p>
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Adults who come home angry at the world and want somewhere harmless to put it: people who'd enjoy a punching bag more if it could fall down a flight of stairs.</p>
+                    <p>They want <strong>release without effort</strong>. Physics sandboxes ask them to build a scene first, and fighting-game fatalities ask for memorized inputs under a timer.</p>
+                    <p>The interface is a mouse and a few keys, and nothing depends on reflexes: time slows to a near stop whenever precision matters.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/meditation-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Catharsis:</strong> anger at cruelty and injustice is real, and needs an outlet. Here it goes into a fall that hurts nobody real.</p>
+                    <p><strong>Power and choice:</strong> small but meaningful control over exactly how a terrible person's end goes.</p>
+                    <p><strong>Ease:</strong> the feeling of tossing a ball up and batting it out of the air at exactly the right moment, without needing the skill or speed to pull it off.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> (no setup, no reflex tests) and <strong>safety</strong>: the targets are built from behaviors, never from real people or groups, and there's no score for suffering.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/crystal-ball-lorc.png)"></span>Core concept</h3>
+                    <p>Dismount games repeat one staircase and score the damage, so the fun becomes bug-hunting for bigger numbers.</p>
+                    <p>Here <strong>every scenario is generated</strong> from randomized frames, poses and strikes, and there's no score at all. The point is the one ending you chose.</p>
+                    <p>Precognition removes trial and error from the real thing: you rehearse freely, then commit once, and the finality is what makes it land.</p>
+                </article>
             </div>
         </section>
 
-        <!-- Game Modes -->
-        <section class="section">
-            <h2>🎯 Game Modes</h2>
-            
-            <div class="card">
-                <h3>⚡ Quick Catharsis Mode</h3>
-                <p><strong>Instant Stress Relief:</strong> Random scenario generation with pre-profiled irredeemable target for immediate emotional release. Perfect for busy schedules when you need quick, effective cathartic outlet without setup time.</p>
-                <br>
-                <p><strong>Session Length:</strong> 3-8 minutes per destruction. Designed for office breaks, commute stress, or quick emotional reset during overwhelming days.</p>
-            </div>
+        <figure class="p-shot">
+            <img src="../projects/images/cathartic_5_story.jpg" alt="A foggy grey concrete plain seen from high above, scattered with hazard stations built from plain blocks: staircases, a truck and a van on a road, rails, a large fan, barred boards, an open pit, and lone grey mannequin figures." width="1280" height="720" loading="lazy">
+            <figcaption>"Stairs, rails, roads, fans, presses and pits, all built from plain grey blocks and set up for one fall each."</figcaption>
+        </figure>
 
-            <div class="card">
-                <h3>🎨 Planned Destruction Mode</h3>
-                <p><strong>Creative Catharsis:</strong> Browse scenario library and target database to craft elaborate, personalized destruction experiences. Plan complex environmental interactions and multi-stage finisher sequences.</p>
-                <br>
-                <p><strong>Session Length:</strong> 15-45 minutes per elaborate setup. Perfect for weekend stress relief, creative expression, and therapeutic planning of cathartic release.</p>
-            </div>
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/fog-delapouite.png)"></span>Lore and story</h2>
+            <h3>A bare world</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/cathartic/01-range.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The game takes place in a world of grey concrete primitives under a bright fog: cubes, cylinders, ramps and slabs arranged into hazards. A metro platform, a flight of stairs, a road with traffic, a grinder, a press, a pit lined with bars. No textures, no detail, nothing to look at but the fall. It's the look of the original dismount games, kept on purpose.</p>
 
-            <div class="card">
-                <h3>💥 Finisher Focus Mode</h3>
-                <p><strong>Spectacular Conclusions:</strong> Emphasis on cinematic finishing moves with extended slow-motion sequences, dramatic camera angles, and enhanced impact effects. Maximum visual and emotional satisfaction.</p>
-                <br>
-                <p><strong>Session Length:</strong> 5-12 minutes per finisher sequence. Designed for players who find primary cathartic value in the final moment of justified destruction.</p>
-            </div>
+            <h3>The targets</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/cathartic/02-profile.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Every ragdoll is a unique, randomly generated person, and every one of them is <strong>irredeemable</strong>. Each has a name, a set of colors, a belief they hold, a terrible thing they did in the past and are proud of today, and a terrible thing they intend to do soon.</p>
+            <p>Their wrongs are built from behaviors anyone could fall into, like cruelty, greed, contempt and the joy of hurting others. Never from who someone is: no nationality, faith, group or real person is ever the target.</p>
+
+            <h3>The vision</h3>
+            <p>You never appear. You're the one who sees ahead: every possible version of the fall plays out first as a vision, softened and dreamlike, and you choose which one happens. When the filter drops, it's real, and real only happens once.</p>
         </section>
 
-        <!-- Game Features & Mechanics -->
-        <section class="section">
-            <h2>⚙️ Game Features & Mechanics</h2>
-            
-            <div class="features-grid">
-                <div class="card feature-card">
-                    <div class="feature-icon">👁️</div>
-                    <div>
-                        <h3>Precognition Planning System</h3>
-                        <p>Inspired by <strong>Katana Zero</strong>, this system lets players preview their destruction in ghosted "future sight" mode before committing to execution. The dreamlike visual filter clearly distinguishes planning from reality.</p>
-                        <br>
-                        <p><strong>Technical Implementation:</strong> Physics simulation runs in background while player adjusts parameters. Visual ghosting shows probability cones for impact zones, trajectory paths, and potential finisher opportunities. Once committed, the precognition becomes irreversible reality.</p>
-                        <br>
-                        <p>This system ensures every destruction feels <strong>meaningful and deliberate</strong> rather than accidental, maximizing the cathartic impact of each decision.</p>
-                    </div>
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/mouse-delapouite.png)"></span>Controls and interface</h2>
+            <p>You don't build anything and you don't control the ragdoll. The game hands you a scenario already set up, with the target in place and guaranteed to be hit. You choose how the strike goes, and when and how to finish. A suggested layout:</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>The strike</h3>
+                    <dl>
+                        <div><dt>Drag</dt><dd>Aim the strike: direction and power</dd></div>
+                        <div><dt>Wheel</dt><dd>Impact type: soft, hard or cutting</dd></div>
+                        <div><dt>N</dt><dd>Skip to a new scenario</dd></div>
+                    </dl>
                 </div>
-
-                <div class="card feature-card">
-                    <div class="feature-icon">⚖️</div>
-                    <div>
-                        <h3>Moral Justification Framework</h3>
-                        <p>Drawing inspiration from <strong>Watch Dogs</strong> profiler system, every target receives procedurally generated backstory detailing their irredeemable actions and harmful intentions, eliminating player guilt.</p>
-                        <br>
-                        <p><strong>Target Generation:</strong> Each person has randomized name, appearance colors, belief system, past crimes they're proud of, and future harmful plans. Examples: "Plans to scam elderly out of retirement funds" or "Believes disabled people deserve to suffer."</p>
-                        <br>
-                        <p>This framework transforms destruction from <strong>senseless violence into righteous justice</strong>, providing guilt-free cathartic release.</p>
-                    </div>
+                <div class="p-keygroup">
+                    <h3>Precognition</h3>
+                    <dl>
+                        <div><dt>Space</dt><dd>Play the vision</dd></div>
+                        <div><dt>R</dt><dd>Rewind and adjust</dd></div>
+                        <div><dt>Enter</dt><dd>Make it real</dd></div>
+                    </dl>
                 </div>
-
-                <div class="card feature-card">
-                    <div class="feature-icon">🎭</div>
-                    <div>
-                        <h3>Toribash-Style Ragdoll Physics</h3>
-                        <p>Advanced ragdoll system featuring realistic dismemberment, detailed joint physics, and visceral impact feedback. Bodies react authentically to forces while maintaining primitive geometric aesthetic.</p>
-                        <br>
-                        <p><strong>Physics Details:</strong> Individual limb tracking, realistic bone breaking thresholds, momentum conservation, and environmental interaction. Blood and dismemberment effects provide satisfying visual feedback without excessive gore.</p>
-                        <br>
-                        <p>The physics system emphasizes <strong>weighty, consequential impacts</strong> that make each destruction feel significant and cathartic.</p>
-                    </div>
+                <div class="p-keygroup">
+                    <h3>The finisher</h3>
+                    <dl>
+                        <div><dt>Right click</dt><dd>Enter slow motion, at any moment after the strike</dd></div>
+                        <div><dt>1 – 5</dt><dd>Slice, smash, launch, blast or impale</dd></div>
+                        <div><dt>Drag</dt><dd>Snap to a body part; length sets power</dd></div>
+                        <div><dt>Left click</dt><dd>Deliver, then up to two follow-ups</dd></div>
+                    </dl>
                 </div>
-
-                <div class="card feature-card">
-                    <div class="feature-icon">🎲</div>
-                    <div>
-                        <h3>Dynamic Scenario Generation</h3>
-                        <p>Procedural system creates infinite scenario variations using modular environmental components. Train impacts, stair falls, machinery collisions, and traffic accidents with randomized elements.</p>
-                        <br>
-                        <p><strong>Generation Logic:</strong> Scenario templates (train platform, stairway, industrial machinery) receive randomized components (train shape variations, stair materials, machinery types) and target positioning for guaranteed impact while maintaining variety.</p>
-                        <br>
-                        <p>Ensures <strong>fresh cathartic experiences</strong> without repetitive content consumption, supporting long-term stress relief utility.</p>
-                    </div>
-                </div>
-
-                <div class="card feature-card">
-                    <div class="feature-icon">⚔️</div>
-                    <div>
-                        <h3>Cinematic Finisher System</h3>
-                        <p>Inspired by <strong>Metal Gear Rising: Revengeance</strong>, slow-motion finisher mode allows precise final strikes with camera effects and impact enhancement. Choose cutting angles, smash directions, or explosive timing.</p>
-                        <br>
-                        <p><strong>Finisher Types:</strong> Katana precision cuts, buster sword smashes, kinetic force punches, physics projectile impacts, explosive body part destruction, and impalement attacks. Each with adjustable power levels and targeting options.</p>
-                        <br>
-                        <p>The finisher system provides <strong>ultimate cathartic climax</strong> with permanent consequences, emphasizing the finality of justice served.</p>
-                    </div>
-                </div>
-
-                <div class="card feature-card">
-                    <div class="feature-icon">🔷</div>
-                    <div>
-                        <h3>Minimalist Aesthetic</h3>
-                        <p>Pure primitive shapes and geometric forms create maximum impact through simplicity. No textures or complex models—just effective physics interaction with bold, clean visual design.</p>
-                        <br>
-                        <p><strong>Visual Philosophy:</strong> Following original Stair Dismount principles, geometric primitives allow player imagination to fill details while physics and sound design provide emotional weight. Simple forms ensure focus on interaction rather than visual complexity.</p>
-                        <br>
-                        <p>Minimalist approach <strong>maximizes accessibility</strong> while ensuring smooth performance across all devices and clear visual communication of physics interactions.</p>
-                    </div>
+                <div class="p-keygroup">
+                    <h3>Camera</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Orbit the scene in slow motion</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
                 </div>
             </div>
+            <p>A <strong>dreamlike filter</strong> over the whole screen tells you whether you're watching a vision or the real thing, so there's never any doubt which run counts. In slow motion, the finisher's cut line or impact point is drawn on the body before you commit to it.</p>
         </section>
 
-        <!-- Feature Image -->
-        <div class="feature-section">
-            <div class="image-quote">
-                <p>"Preview your destruction before it happens, then execute the perfect finishing move"</p>
-            </div>
-        </div>
+        <figure class="p-shot">
+            <img src="../projects/images/cathartic_2_vignette.jpg" alt="A faceless grey jointed mannequin slams into an angled concrete wall, concrete fragments flying, a smear of blood on the wall and a red hazard light beside it." width="1280" height="720" loading="lazy">
+            <figcaption>"The hazard's shape, the target's pose and the way the strike comes are rolled fresh for every scenario."</figcaption>
+        </figure>
 
-        <!-- Physics Interaction Flow Diagram -->
-        <div class="diagram-section">
-            <h3>Physics Interaction Flow</h3>
-            <div class="mermaid">
-                flowchart TD
-                    A[Player Input] --> B[Precognition Preview]
-                    B --> C{Satisfied with Plan?}
-                    C -->|No| D[Adjust Parameters]
-                    D --> B
-                    C -->|Yes| E[Execute Physics Simulation]
-                    E --> F[Monitor Impact Events]
-                    F --> G{Finisher Opportunity?}
-                    G -->|No| H[Continue Physics]
-                    H --> I[Natural Conclusion]
-                    G -->|Yes| J[Trigger Slow Motion]
-                    J --> K[Player Selects Finisher]
-                    K --> L[Execute Final Strike]
-                    L --> M[Permanent Result]
-                    I --> N[Session Complete]
-                    M --> N
-                    
-                    style A fill:#ff0000
-                    style E fill:#ff0000
-                    style J fill:#ff0000
-                    style M fill:#ff0000
-                    style N fill:#0022ff
-            </div>
-        </div>
-
-        <!-- Trivia Section -->
-        <section class="section">
-            <h2>🎲 Development Trivia</h2>
-            <div class="card">
-                <ul class="trivia-list">
-                    <li><strong>Finnish Origins:</strong> Direct homage to the legendary Finnish games "Porrasturvat" (Stair Dismount) and "Rekkaturvat" (Truck Dismount) by tAAt, which won Assembly demo competitions and pioneered physics-based destruction gaming in 2002-2003.</li>
-                    
-                    <li><strong>Psychology-First Design:</strong> The moral justification system was implemented specifically to address the psychological discomfort many players feel with virtual violence, transforming potential guilt into righteous satisfaction.</li>
-                    
-                    <li><strong>Precognition Inspiration:</strong> The planning system directly references Katana Zero's time manipulation mechanics, but applies the concept to physics prediction rather than temporal rewind, maintaining causality and consequence weight.</li>
-                    
-                    <li><strong>Cathartic Gaming Research:</strong> Game design based on established psychological research showing that controlled virtual violence can provide healthy stress relief when combined with moral framework and meaningful choice systems.</li>
-                </ul>
-            </div>
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/punch-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>The strike, the fall, the finish</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/cathartic/03-fall.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Set the strike's direction and power, and the ragdoll goes: off the platform, down the stairs, into the fan. Its body reacts to every surface it meets, joint by joint.</p>
+                        <p>At any moment after the strike, time slows almost to a stop. You pick a body part, a finisher and its strength, and land it at the exact point of the fall you wanted.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/id-card-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One case</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/cathartic/04-case.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A case is one target in one scenario. It opens with the target's profile: who they are, what they did, what they're about to do. Then the scene, already set.</p>
+                        <p>You rehearse in precognition until the fall looks right, make it real, deliver the finisher, and it's over. A case has a clear beginning and an ending that can't be undone, usually within a couple of minutes.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/archive-register-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The case archive</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/cathartic/05-archive.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There's always another case: the scenario generator and the target generator never run dry, and no two cases come out alike.</p>
+                        <p>Every closed case goes into an <strong>archive</strong>: the target's profile, the scenario, and how it ended, with a still frame of the finisher. It's a record of what you did, kept for you to look back on, never a score or a collection to complete.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Two minutes, or twenty</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/cathartic/06-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The game opens straight into a case. There are no menus to get through, no level to build and no setup to do.</p>
+                        <p>Play one case after a bad meeting, or ten in a row after a bad week, and stop whenever the anger has somewhere to go. Nothing waits on you and nothing is lost by leaving.</p>
+                    </div>
+                </li>
+            </ol>
         </section>
 
-        <!-- Box Art Section -->
-        <div class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-description">
-                <h3>Cathartic Dismount</h3>
-                <p><strong>Experience guilt-free stress relief through justified destruction.</strong></p>
-                <br>
-                <p>Every target deserves their fate. Every choice matters. Every impact provides cathartic release from daily frustrations in a controlled, consequence-free environment.</p>
-                <br>
-                <p>Featuring advanced ragdoll physics, moral justification system, and cinematic finisher mechanics inspired by legendary action games. Plan your destruction in precognition mode, then make it permanent.</p>
-                <br>
-                <p><strong>Not mindless violence—therapeutic interaction.</strong> Safe space for emotional processing through meaningful choice and righteous action.</p>
-                <br>
-                <p style="font-style: italic; color: var(--accent-color);">"Finally, a game that understands catharsis"</p>
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stairs-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the dismount</strong>, an endless run of cases. What changes from case to case is the scenario, and with it the way the strike comes. The game rolls one of four strike methods for each scenario:</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Strike</th><th scope="col">What happens</th><th scope="col">You choose</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Push</th><td data-label="What happens">The ragdoll is shoved, hit or launched straight at something hazardous: a train, a staircase, traffic, fan blades</td><td data-label="You choose">Direction, power, and whether the hit is soft, hard or cutting</td></tr>
+                        <tr><th scope="row">Ride</th><td data-label="What happens">The ragdoll sits on a moving platform or vehicle that crashes into something stationary</td><td data-label="You choose">The launch speed and angle</td></tr>
+                        <tr><th scope="row">Shot</th><td data-label="What happens">A projectile is fired at the ragdoll somewhere the hit can send it into trouble</td><td data-label="You choose">The aim and force</td></tr>
+                        <tr><th scope="row">Impale</th><td data-label="What happens">A simple spike-shaped projectile embeds in a body part and drags the ragdoll along with it</td><td data-label="You choose">Which body part, and where it's flung</td></tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
-    </div>
+            <p>The scenarios are where the variety lives: pushed off a metro platform, down stairs, into busy traffic, into dull or sharp fan blades, into a giant rotating bat, through a fence, into a grinder, down a pit of bars that bats the body around like a pachinko ball; pancaked by a press from above, from two sides or from four corners; hit on the tracks, on a road by a truck, a bus, a racing car or a tunnel boring machine; riding a mine cart into a bridge too low, or loosely strapped to the front, top, side or back of a vehicle. Any of them can also happen in a tunnel or a closed room.</p>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank">https://linktr.ee/reactorcore</a></p>
-            <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank">https://reactorcore.itch.io/</a></p>
-            <p style="margin-top: 20px;">Reactorcore Games - 2025</p>
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/katana-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/all-seeing-eye-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Precognition</h3>
+                        <p>Every dismount starts as a vision, the way Katana Zero's hero sees each fight before it happens. Set the strike, play the vision, watch the whole fall, rewind and change it, as many times as you want. A <strong>dreamlike filter</strong> covers every vision, so it can never be mistaken for the real thing.</p>
+                        <p>When you're happy, you make it real, and the filter drops. The physics runs from the same start, so what you rehearsed is what you get, and you don't have to hope a lucky bounce repeats.</p>
+                        <p>That removes the frustration of trial and error from the moment that matters, without removing the choice. You still decide everything: the precognition only lets you see your decision before you make it.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/cathartic_3_feature.jpg" alt="A faceless grey mannequin stands on a concrete path between cubes and a ramp, with glowing white wireframe copies of itself stretching ahead along lines of light into the fog." width="1280" height="720" loading="lazy">
+                            <figcaption>"Rehearse the fall in precognition as often as you like. Only the run you choose happens for real."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/truck-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No two alike</p>
+                        <h3>Randomized frames and poses</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/cathartic/07-train.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each scenario is a <strong>frame</strong> with randomized parts rather than a hand-built level. A train always smashes into the ragdoll, but the front of the train can be any shape: one block, a shape made of smaller shapes, several copies of one shape, or a jumble of different ones. Every hazard works the same way.</p>
+                        <p>The ragdoll starts in a <strong>pose</strong> that's sensible for a real body (sitting, standing, kneeling, prone, lying, crouching, even a handstand), with its torso, head, arms and hands rotated at random within their natural limits. It's always placed so the hit is guaranteed.</p>
+                        <p>Frames, poses and strikes multiply each other, so a handful of scenarios becomes thousands of different falls, all without anyone placing anything by hand.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-1)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/katana-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Slow motion</p>
+                        <h3>The finisher</h3>
+                        <p>At any moment after the strike, you can drop into slow motion, as in Revengeance's blade mode, and deliver a finisher. It <strong>snaps to the body part</strong> you point at, and its strength goes anywhere from the minimum lethal hit to complete overkill. A second and a third hit can follow, if you want them.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table finishers">
+                                <thead><tr><th scope="col">Finisher</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Slice</th><td>A single cut, an X-cut, or a double cut 5 to 35 degrees apart, with a katana, a two-handed greatsword or an oversized broad blade</td></tr>
+                                    <tr><th scope="row">Smash</th><td>A kinetic force punch</td></tr>
+                                    <tr><th scope="row">Launch</th><td>Fire a simple physics shape into the body hard enough to break it apart</td></tr>
+                                    <tr><th scope="row">Blast</th><td>Detonate one body part, carrying the fall's momentum</td></tr>
+                                    <tr><th scope="row">Impale</th><td>Embed a spike shape instantly and fling it, the body with it; a smear of motion shows it going in, so it never looks teleported</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/tombstone-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Once, for real</p>
+                        <h3>The finisher can't be rehearsed</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/cathartic/08-final.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The fall can be planned in precognition as often as you like. <strong>The finisher can only be done once</strong>, in the real run, and there's no rewind afterwards.</p>
+                        <p>That's deliberate. The release comes from finality: the target is truly gone, and it can't be taken back. A finisher you could retry forever would turn into practice, and the feeling would drain out of it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/id-card-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Who's at the top of the stairs</p>
+                        <h3>Target profiles</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/cathartic/09-dossier.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Like the passers-by in Watch Dogs, every target is generated with a <strong>profile</strong>: a name, their colors, a belief, a heinous thing they did and are proud of, and a heinous thing they plan to do soon. Reading it takes seconds, and it's what makes the case feel like justice instead of cruelty.</p>
+                        <p>The profiles are assembled from behaviors and deeds, never from real people, nationalities, faiths or other groups. The anger they draw out is the anger at what people do, and that's where it stays.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sound-waves-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Grim, not gleeful</p>
+                        <h3>Sound and gore</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/cathartic/10-concrete.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Meaty impacts, gnarly grunts, and screams that are <strong>suppressed rather than dramatic</strong>: less a movie scream and more the quiet, eerie "oof, that's grim" of something that really hurt. Bodies cut, break and come apart, with blood kept to stains and spatters on the concrete.</p>
+                        <p>The tone keeps it honest. Nothing cheers, no points pop up for damage, and suffering is never the reward. The game shows the end of a terrible person plainly, and lets that be enough.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/stairs-delapouite.png)"></span>Trivia</h2>
+            <p>The original Stair Dismount (2002), a demoscene group's game, had a backstory: a superhero couldn't claim tax deductions for the damage he caused the city on duty unless he could prove he'd been injured too. Pushing him down the stairs was a favor.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/cathartic_4_boxart.jpg" alt="Box art: a faceless grey jointed mannequin falls between huge floating concrete blocks above a dark conveyor, blood spattered on the concrete, grey fog all around." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Case file attached</p>
+                <h2 id="sendoff">Cathartic Dismount: Precognition Ragdoll Finisher</h2>
+                <p>They did something unforgivable, and they're proud of it. They're planning to do it again. Right now they're standing at the top of a very long staircase.</p>
+                <p>You've already seen how this ends. You've seen it a dozen ways. Pick the one you like, and when the fog lifts, make it real.</p>
+                <p><strong>You only get to finish it once.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Stair Dismount and Truck Dismount, Toribash, Katana Zero, Metal Gear Rising: Revengeance and Watch Dogs</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Spectrashell (CC0), Share Tech Mono, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
         </div>
     </footer>
-
-    <script>
-        // Initialize Mermaid
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'dark',
-            flowchart: {
-                useMaxWidth: true,
-                htmlLabels: true,
-                curve: 'basis'
-            }
-        });
-    </script>
 </body>
 </html>
