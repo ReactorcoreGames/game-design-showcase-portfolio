@@ -1,0 +1,21 @@
+{
+  "slug": "AAL-Stealth-Sector-mini",
+  "out": "site/projects/mini/stealth_sector",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, dark violet nebula, neon cyan and rose light. ",
+  "notes": "Mood-only mini images for AAL-Stealth-Sector.html, beside the lore, game layer and feature text. SDXL (free): gen AAL-Stealth-Sector-mini --model sdxl --max 999, then finish AAL-Stealth-Sector-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "brume", "ratio": "3:2", "prompt": "A vast nebula of charged violet dust at the edge of space, a warship running dark inside it, barely visible."},
+    {"n": 2, "name": "hulls", "ratio": "3:2", "prompt": "A row of eight elegant warships of different sizes in a spaceship dock, neon running lights along their hulls."},
+    {"n": 3, "name": "battle", "ratio": "3:2", "prompt": "Two hidden fleets firing salvos of missiles blindly into a misty nebula, faint glows where they hit."},
+    {"n": 4, "name": "chart", "ratio": "3:2", "prompt": "A glowing holographic star chart of a nebula with marked hideouts, on a navigation table in a dark bridge."},
+    {"n": 5, "name": "coffee", "ratio": "3:2", "prompt": "A cup of coffee steaming beside a glowing tactical display in a quiet starship cabin at night."},
+    {"n": 6, "name": "salvo", "ratio": "3:2", "prompt": "A straight line of missiles launching in sequence from a warship, bright exhaust trails in the dark."},
+    {"n": 7, "name": "heat", "ratio": "3:2", "prompt": "A faint red glow of heat in thick violet fog, where an invisible ship has been hit."},
+    {"n": 8, "name": "smoke", "ratio": "3:2", "prompt": "A wide cloud of glowing smoke spreading over a fleet of warships in space, hiding them."},
+    {"n": 9, "name": "warp", "ratio": "3:2", "prompt": "A warship flickering as it jumps to a new position, a trail of light behind it in a nebula."},
+    {"n": 10, "name": "admiral", "ratio": "3:2", "prompt": "An enemy admiral's dark bridge, a cold machine intelligence studying a glowing grid of red markers."}
+  ]
+}

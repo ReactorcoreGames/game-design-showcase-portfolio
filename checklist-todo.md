@@ -74,7 +74,7 @@ From here on, pages are done in hands-free batch sessions of five (the prompt is
 
 The images stay, except the 5 pages marked ⚑, which also need a story image.
 
-- [ ] AAL-Stealth-Sector
+- [x] AAL-Stealth-Sector
 - [x] AALSW (now AAL-Bunkerships, the pilot)
 - [ ] AALSuperweapon
 - [ ] ChainReactionDemolitionPunch

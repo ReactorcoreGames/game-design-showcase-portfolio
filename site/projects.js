@@ -200,9 +200,9 @@ window.PROJECTS = [
   {
     page: "AAL-Stealth-Sector.html", prefix: "stealth_sector",
     title: "AAL Stealth Sector", subtitle: "Covert Battleship Wars",
-    icon: "battleship-cathelineau", tint: "blue",
-    blurb: "Battleships rebuilt for real tactics: command 8 specialized warships with unique firing patterns and stealth systems, where every ship matters and every shot counts.",
-    genres: ["strategy"], tags: ["naval", "turn-based", "stealth"],
+    icon: "battleship-cathelineau", tint: "cyan",
+    blurb: "Battleship as a duel of deduction: eight hidden warships a side, each firing its own salvo shape in turn, with probes, mines and smoke inside a sensor-blind nebula.",
+    genres: ["strategy", "puzzle"], tags: ["battleship", "turn-based", "deduction", "electronic warfare"],
     universe: "aal", status: "concept", added: "2025-10-04"
   },
   {

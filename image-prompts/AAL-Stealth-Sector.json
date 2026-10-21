@@ -1,0 +1,14 @@
+{
+  "slug": "AAL-Stealth-Sector",
+  "prefix": "stealth_sector",
+  "preset": "01 Main - Digital Painting",
+  "style": "Synthwave neon lighting, holographic interfaces, volumetric fog. Palette of deep navy and violet with neon cyan and magenta accents.",
+  "notes": "Rewrite (2026-10). All five images are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated. The preset is the closest match to how they look, not the one they were made with.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Cinematic wide shot, low angle, of a futuristic naval command center. An admiral silhouetted against a towering holographic tactical display of a warship and battle grid, officers at crew stations coordinating, translucent screens, nebula light through reinforced viewports."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Dynamic overhead tactical view of a five-missile salvo striking a glowing battlefield grid, missiles with trails bursting into fireballs along a line of grid cells, glowing grid lines and heat overlays."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Close-up, tilted angle, of a sleek command console under a holographic panel showing a row of eight warship silhouettes from small corvette to huge obliterator class, targeting crosshairs on smaller screens, glowing switches."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Heroic low angle portrait of a space warship formation, a massive angular warship with glowing weapon systems dominating the foreground, smaller escorts in formation, nebula storm and distant explosions behind."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Expansive aerial view of interconnected space colonies and military outposts on a planet, nebula clouds below, patrol routes marked with glowing lines, a ringed planet in the sky."}
+  ]
+}

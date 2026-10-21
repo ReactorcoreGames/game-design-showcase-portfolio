@@ -1,0 +1,286 @@
+CC0 |4|6809 Chargen.otf||https://creativecommons.org/publicdomain/zero/1.0/
+    |8|AIRBORNE GP.ttf|Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)  Font by Gustavo Paz L. is license|http://creativecommons.org/licenses/by-sa/4.0/deed
+    |8|AISSUR.ttf||
+    |8|Accedent_v1.1.ttf|Free|
+    |0|Achron.otf||
+OFL |0|Aldrich-Regular.ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |http://scripts.sil.org/OFL
+    |4|AlfaqixAlgorithm-SemiBold.otf||
+    |4|AlfaqixDiode-SemiBold.otf||
+    |4|AlfaqixEllipsoid-SemiBold.otf||
+    |4|AlfaqixServo-SemiBold.otf||
+    |4|Amboss_display.ttf||
+    |4|Amboss_display_rounded.ttf||
+    |4|Amboss_outline.ttf||
+    |0|AndromedaTV.TTF||
+    |8|Anita semi square.ttf|Anita semi-square  Font by Gustavo Paz L. is licensed under a Creative Commons license Att|http://creativecommons.org/licenses/by-sa/4.0/deed
+CC0 |4|Anklepants.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
+    |8|ApexMk2-BoldExtended.otf||
+    |8|ApexMk2-LightCondensed.otf||
+    |8|ApexMk2-Regular.otf||
+    |0|AstroheadFREE.otf||
+OFL |0|Audiowide-Regular.ttf|This Font Software is licensed under the SIL Open Font License,Version 1.1. This license |http://scripts.sil.org/OFL
+    |8|BROKEREN MIRING.ttf||
+    |8|BROKEREN.ttf||
+    |0|BlackAcute.ttf||
+    |0|CCRobo.ttf||
+    |0|CONTFO__.ttf||
+    |0|CONTFU__.ttf||
+    |0|CONTF___.ttf||
+    |0|Chainbox.otf||https://www.raisproject.com/license
+    |4|Closeness-Bold-Italic.ttf||
+    |4|Closeness-Bold.ttf||
+    |4|Closeness-Outline-Italic.ttf||
+    |4|Closeness-Outline.ttf||
+    |4|Closeness.ttf||
+    |4|Computerist.ttf||
+    |4|Conductive 1.1.ttf||
+CC0 |4|Cranberry Gin.otf||https://creativecommons.org/publicdomain/zero/1.0/
+    |0|DAGGERSQUARE OBLIQUE.otf||
+    |0|DAGGERSQUARE.otf||
+    |0|DANISH_BRICKS.ttf|Freeware|
+    |0|DURALITH.ttf||
+CC0 |4|Dendritic Voltage.otf||https://creativecommons.org/publicdomain/zero/1.0/
+    |8|Diamonds-Regular.ttf||
+    |0|Direction.ttf||
+    |0|ELEKTORA.ttf||
+    |8|ERASBD.TTF||
+    |8|ERASDEMI.TTF||
+    |8|ERASMD.TTF||
+    |0|EVA35Bold.otf||
+    |0|EVA35Regular.otf||
+OFL |0|Electrolize-Regular.ttf|Copyright (c) 2011, Cyreal (www.cyreal.org)with Reserved Font Name "Electrolize".This F|http://scripts.sil.org/OFL
+    |4|Entirely.ttf||
+    |0|Epyval.ttf||
+    |0|EuroStyle Normal.ttf||
+OFL |8|Exo2.0-Black.otf||http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |8|Exo2.0-BlackItalic.otf||http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |8|Exo2.0-Bold.otf||http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |8|Exo2.0-BoldItalic.otf||http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |8|Exo2.0-ExtraBold.otf||http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |8|Exo2.0-ExtraBoldItalic.otf||http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |8|Exo2.0-Medium.otf||http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |8|Exo2.0-MediumItalic.otf||http://scripts.sil.org/cms/scripts/page.php?site_i
+    |4|Exosphere.ttf||
+    |0|Expansiva bold italic.otf||
+    |0|Expansiva bold.otf||
+OFL |0|ExpletusSans-Bold.ttf|SIL Open Font License|http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |0|ExpletusSans-BoldItalic.ttf|SIL Open Font License|http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |0|ExpletusSans-Italic.ttf|SIL Open Font License|http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |0|ExpletusSans-Medium.ttf|SIL Open Font License|http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |0|ExpletusSans-MediumItalic.ttf|SIL Open Font License|http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |0|ExpletusSans-Regular.ttf|SIL Open Font License|http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |0|ExpletusSans-SemiBold.ttf|SIL Open Font License|http://scripts.sil.org/cms/scripts/page.php?site_i
+OFL |0|ExpletusSans-SemiBoldItalic.ttf|SIL Open Font License|http://scripts.sil.org/cms/scripts/page.php?site_i
+    |4|F-ZeroSNES.ttf||
+    |8|FORTE.TTF||http://www.agfamonotype.com/html/type/license.html
+    |4|FS-Ellipsis.ttf|Creative Commons Attribution Share Alike|
+CC0 |4|Fragile Bombers.otf||https://creativecommons.org/publicdomain/zero/1.0/
+    |0|Free Royalty.ttf|contact me at khurasantype@gmail.com|https://khurasanstudio.com/license/
+    |0|Future n0t Found Regular.ttf||
+    |0|GRAYSTROKE ITALIC.otf||
+    |0|GRAYSTROKE REGULAR.otf||
+    |4|Games.ttf||
+    |0|Geet-Regular.ttf||
+    |4|GiantRobotArmy-Medium.ttf||
+    |0|Guantum.otf|Free for Personal & Commercial Use|www.guthrieallen.com/typepua
+    |0|Hall Fetica Italic.ttf||
+    |0|Hall Fetica Wide.ttf||
+    |0|Hall Fetica.ttf||
+    |4|Helios Regular.ttf||
+CC0 |0|Hydrogen Whiskey.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
+    |4|Hyperjump Bold Oblique.ttf||
+    |4|Hyperjump Bold.ttf||
+    |4|Hyperjump ExtraBold Oblique.ttf||
+    |4|Hyperjump ExtraBold.ttf||
+    |4|Hyperjump Regular Oblique.ttf||
+    |4|Hyperjump Regular.ttf||
+OFL |0|Iceland-Regular.ttf|Copyright (c) 2011, Cyreal (www.cyreal.org)with Reserved Font Name "Iceland".This Font |http://scripts.sil.org/OFL
+OFL |0|Jersey10-Regular.ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |https://openfontlicense.org
+    |4|Jet Set Italic.ttf|Free|
+    |4|Jet Set.ttf|Free|
+    |0|KIRANAbold.ttf||
+    |0|KIRANAlight.ttf||
+    |0|KIRANAregular.ttf||
+    |0|LCD14.otf||
+    |0|LCD14Italic.otf||
+    |4|LTAspirerNeue-Bold.otf||
+    |4|LTAspirerNeue-ExtraBlack.otf||
+    |4|LTAspirerNeue-ExtraBold.otf||
+    |4|LTAspirerNeue-Heavy.otf||
+    |4|LTAspirerNeue-Medium.otf||
+    |4|LTAspirerNeue-Regular.otf||
+    |4|LTAspirerNeue-SemiBold.otf||
+    |0|LazenbyCompLiquid.ttf|This font is licenced under Creative Commons Attribution-ShareAlike 4.0 International Lice|http://creativecommons.org/licenses/by-sa/4.0/
+    |0|LazenbyCompSmooth.ttf|This font is licenced under Creative Commons Attribution-ShareAlike 4.0 International Lice|http://creativecommons.org/licenses/by-sa/4.0/
+    |4|Login-Italic.ttf||
+    |4|Login.ttf||
+    |0|M290.ttf| | 
+    |0|MOON30I_.ttf||
+    |0|MOON30__.ttf||
+    |4|Maniac-Italic.ttf||
+    |4|Maniac.ttf||
+    |4|ManiacOutline-Italic.ttf||
+    |4|ManiacOutline.ttf||
+    |4|Marske.ttf||
+CC0 |0|MatrixType-Bold.ttf|Creative Commons Zero v1.0 Universal|https://creativecommons.org/publicdomain/zero/1.0/
+CC0 |0|MatrixType-Regular.ttf|Creative Commons Zero v1.0 Universal|https://creativecommons.org/publicdomain/zero/1.0/
+CC0 |0|MatrixTypeDisplay-Bold.ttf|Creative Commons Zero v1.0 Universal|https://creativecommons.org/publicdomain/zero/1.0/
+CC0 |0|MatrixTypeDisplay-Regular.ttf|Creative Commons Zero v1.0 Universal|https://creativecommons.org/publicdomain/zero/1.0/
+    |4|Mayor-Italic.ttf||
+    |4|Mayor.ttf||
+    |0|Melon Pop.ttf|contact me at khurasantype@gmail.com|https://khurasanstudio.com/license/
+OFL |0|Micro5-Regular.ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |https://openfontlicense.org
+    |0|MindEscape1.ttf||
+    |0|Monitorica-Bd.ttf|Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)  You are fr|http://creativecommons.org/licenses/by-nd/4.0/
+    |0|Monitorica-BdIt.ttf|Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)  You are fr|http://creativecommons.org/licenses/by-nd/4.0/
+    |0|MotionControl-Bold.otf|FontStruct Non-Commercial License|
+OFL |0|MotionControl-BoldItalic.otf|Copyright (c) 2015, JapanYoshi (japanyoshi777@gmail.com), with Reserved Font Name Motion C|http://scripts.sil.org/OFL
+    |4|Motorblock.ttf||
+    |0|Movement-DirectBlack.otf|CC BY-ND 4.0|
+    |0|Movement-DirectThin.otf|CC BY-ND 4.0|
+    |0|Movement-IndirectBlack.otf|CC BY-ND 4.0|
+    |0|MovementV.ttf|CC BY-ND 4.0|
+    |0|NEWACADEMY.ttf|http://creativecommons.org/licenses/by-sa/4.0/deed.en_US Attribution-ShareAlike 4.0 Inter|http://creativecommons.org/licenses/by-sa/4.0/deed
+    |0|Nasa21.ttf||
+    |8|Neostar.ttf||
+    |4|Nulshock Bd.otf||
+    |4|Olga-Italic.ttf||
+    |4|Olga.ttf||
+CC0 |0|OperationNapalm-Italic.ttf|Creative Commons Zero v1.0 Universal|https://creativecommons.org/publicdomain/zero/1.0/
+CC0 |0|OperationNapalm-Regular.ttf|Creative Commons Zero v1.0 Universal|https://creativecommons.org/publicdomain/zero/1.0/
+OFL |0|Orbitron[wght].ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |http://scripts.sil.org/OFL
+OFL |0|Oxanium-Bold.ttf|SIL Open Font License 1.1|http://scripts.sil.org/OFL
+OFL |0|Oxanium-ExtraBold.ttf|SIL Open Font License 1.1|http://scripts.sil.org/OFL
+OFL |0|Oxanium-Medium.ttf|SIL Open Font License 1.1|http://scripts.sil.org/OFL
+OFL |0|Oxanium-SemiBold.ttf|SIL Open Font License 1.1|http://scripts.sil.org/OFL
+    |0|Prototype.ttf||
+    |0|Quicktext.ttf|contact me at khurasantype@gmail.com|https://khurasanstudio.com/license/
+    |8|ROBOTECH GP.ttf|ROBOTECH GP  Font by Gustavo Paz L. is licensed under a Creative Commons license Attributi|http://creativecommons.org/licenses/by-sa/4.0/deed
+CC0 |0|Radio Stars.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
+    |4|Reactor-Sans.ttf|Creative Commons Attribution Share Alike|http://creativecommons.org/licenses/by-sa/3.0/
+    |4|Recharge Bd.otf||
+    |4|Robotica.ttf||
+    |0|RobotikaPixelGreek-nAWJR.otf| | 
+    |0|Rocket Brush.otf||https://onedsgn.com/licenses
+    |0|SAIBA-45-Outline.ttf|Free, Open-Source, Creative Commons License (CC), Free for Commerical Use, Not for Sale|
+    |0|SAIBA-45.ttf|Free, Open-Source, Creative Commons License (CC), Free for Commerical Use, Not for Sale|
+    |0|SG85-CHISON1.ttf|Free font 100%, Copyright belongs to ThaiHieu@FontZin.Com|
+    |0|SGA Rounded.ttf||
+    |0|SGA2.ttf||
+    |0|ST-SimpleSquare.otf|Free font|https://creativemarket.com/alexander.shimanov
+    |0|SafetyMedium.otf||
+    |4|Science Fair.otf|This font is free for personal and commerciial use. Just keep it MINE. Enjoy.|
+OFL |0|ShareTechMono-Regular.ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |http://scripts.sil.org/OFL
+    |8|SimpanseX-Italic.otf||
+    |8|SimpanseX-Regular.otf||
+OFL |0|Skateblade-Regular.ttf|SIL Open Font License Version 1.1|
+OFL |0|Skateblade-RegularItalic.ttf|SIL Open Font License Version 1.1|
+    |0|Smack Laideth Down 2024.otf||
+CC0 |0|Spectrashell.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
+    |4|Squares Bold Free.otf|sil ofl 1.1|
+    |8|Standard Galactic Alphabet 8.ttf||
+    |0|Standard Galactic Alphabet.ttf||
+CC0 |0|Stormfaze.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
+    |4|Suboleya.ttf|Creative Commons Attribution No Derivatives|http://creativecommons.org/licenses/by-nd/3.0/
+    |0|SuperCar-ExpMLDemo.otf||
+    |0|SuperCar-OutlineExpMRDemo.otf||
+    |4|Syndra-SemiBold.otf||
+    |4|TESLA.ttf|Creative Commons Attribution Non-commercial Share Alike|http://creativecommons.org/licenses/by-nc-sa/3.0/
+    |0|Techfont-Italica.ttf||
+    |0|Techfont.ttf||
+    |4|Tough Love.ttf||
+OFL |0|TurretRoad-Bold.ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |http://scripts.sil.org/OFL
+OFL |0|TurretRoad-Medium.ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |http://scripts.sil.org/OFL
+OFL |0|TurretRoad-Regular.ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |http://scripts.sil.org/OFL
+CC0 |0|TypeLightSans.otf|Creative Commons Zero v1.0 Universal.|https://creativecommons.org/publicdomain/zero/1.0/
+    |4|UAV-OSD-Mono.ttf||
+    |4|UAV-OSD-Sans-Mono.ttf||
+OFL |8|Unique.ttf|  This Font Software is licensed under the SIL Open Font License, Version 1.1. This lic|http://scripts.sil.org/cms/scripts/page.php?site_i
+    |4|Uniwars Hv It.otf||
+    |4|Uniwars Hv.otf||
+CC0 |0|Unsteady Oversteer.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
+    |4|Urba.ttf|Urba is 100% free for personal & commercial use!|
+    |0|Vegapunk-FREE.otf|Freebies|
+CC0 |0|World of Water.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
+    |8|XOLO.ttf||
+    |8|Xolo Neo.ttf||
+    |0|YourComplex.ttf||
+    |0|YourComplexI.ttf||
+    |0|YourComplexO.ttf||
+OFL |0|Zector.ttf|This Font Software is licensed under the SIL Open Font License, Version 1.1. This license |https://scripts.sil.org/OFL
+CC0 |0|Zero Hour.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
+CC0 |4|Zeroes One.otf||https://creativecommons.org/publicdomain/zero/1.0/
+CC0 |4|Zeroes Three.otf||https://creativecommons.org/publicdomain/zero/1.0/
+CC0 |4|Zeroes Two.otf||https://creativecommons.org/publicdomain/zero/1.0/
+    |4|agero!.ttf||
+    |0|aileron.regular.otf||
+    |8|airstrip.ttf||
+    |0|andvari.ttf||
+    |4|astro.ttf|FontStruct Non-Commercial License|
+    |4|auto-waves.ttf|FontStruct Non-Commercial License|
+    |4|bigmacca.ttf|Creative Commons Attribution Share Alike|http://creativecommons.org/licenses/by-sa/3.0/
+    |4|bioliquid-Regular.ttf||
+    |4|bold_type.ttf|Creative Commons Attribution Share Alike|http://creativecommons.org/licenses/by-sa/3.0/
+    |4|brigade.ttf|Creative Commons Attribution Share Alike|
+    |0|chintzy.ttf||
+    |0|chintzys.ttf||
+    |4|cuyabra bold oblique.otf||
+    |4|cuyabra bold.otf||
+    |4|cuyabra oblique.otf||
+    |4|cuyabra.otf||
+    |4|disco___.ttf||
+    |8|edo.ttf||
+    |4|emerald_city.ttf|Creative Commons Attribution Share Alike|http://creativecommons.org/licenses/by-sa/3.0/
+    |14|eurostile.TTF||
+OFL |8|exo.regular.otf|Copyright (c) 2011, Natanael Gama (http://www.ndiscovered.com | exo(at)ndiscovered.com), w|http://scripts.sil.org/OFL
+    |8|frau-hex.ttf||
+    |8|frau-unifon.ttf||
+    |8|frau.ttf||
+    |4|future-earth.ttf|Creative Commons Attribution No Derivatives|http://creativecommons.org/licenses/by-nd/3.0/
+    |0|gather.ttf||
+    |0|gathrgap.ttf||
+    |0|genotyph.ttf||
+    |0|genotyps.ttf||
+    |0|genotyrh.ttf||
+    |0|genotyrs.ttf||
+    |8|gomarice_shibuya_zero.ttf||
+    |8|gomarice_shmup_in_the_zone.ttf|Cr:TTE0953180529114951A000671 Mo:TTE0953181110182941A000671|
+    |4|gunplay 3d.otf|http://typodermicfonts.com/pages/license|http://typodermicfonts.com/pages/license
+    |4|gunplay rg.otf|http://typodermicfonts.com/pages/license|http://typodermicfonts.com/pages/license
+    |4|hemigraphy-Regular.otf||
+    |4|hexarounded.otf||
+    |8|hydrogen.ttf||
+    |8|icbmss20.ttf||
+    |8|icbmss25.ttf||
+    |4|inversion.ttf|Creative Commons Attribution Share Alike|http://creativecommons.org/licenses/by-sa/3.0/
+    |4|jd_code.ttf|Creative Commons Attribution No Derivatives|http://creativecommons.org/licenses/by-nd/3.0/
+    |4|lancip-2.ttf|FontStruct Non-Commercial License|
+    |0|loaded.ttf||
+    |4|lsfont.ttf|Creative Commons Attribution Share Alike|http://creativecommons.org/licenses/by-sa/3.0/
+    |0|lucid.ttf||
+    |0|lucid2.ttf||
+    |0|lucid2o.ttf||
+    |0|lucido.ttf||
+    |0|membra.ttf|This font is licenced under Creative Commons Attribution-ShareAlike 4.0 International Lice|http://creativecommons.org/licenses/by-sa/4.0/
+    |0|nanosecw.ttf||
+    |0|nsecthck.ttf||
+    |0|nsecthin.ttf||
+    |0|pdark.ttf||
+    |4|polarized bd it.otf||
+    |4|polarized bd.otf||
+    |0|quandary.ttf||
+    |4|ratio___.ttf||
+    |0|rockprp.ttf||
+    |4|sector_034.ttf|Creative Commons Attribution Share Alike|
+    |4|splints.ttf|FontStruct Non-Commercial License|
+    |0|supragc.ttf||
+    |0|supragl.ttf||
+    |0|techover.ttf||
+    |1|tycho___.ttf||
+    |0|underwhe.ttf||
+    |0|underwho.ttf||
+    |4|viktribe.ttf|Creative Commons Attribution Share Alike|http://creativecommons.org/licenses/by-sa/3.0/
+    |0|wager.ttf||
+    |0|wagerlos.ttf||
+    |0|wagerwon.ttf||
+    |8|xtrchr.ttf||

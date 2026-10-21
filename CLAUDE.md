@@ -49,6 +49,7 @@ workflow/
   batch-session.md     how to run a hands-free session of five pages
   image-brief.md       how to write image prompts + run the image pipeline
   cookbook.md          text-over-image legibility recipes
+  fonts/               rendered samples and a licence table of assets/fonts/, for choosing page fonts
   legacy/              the old Sonnet-era task docs, kept for history only
 image-prompts/         <slug>.json image specs (+ legacy/ old prompt txts)
 tools/images.py        spec -> BAIG -> resized JPEGs + thumbnails in site/
