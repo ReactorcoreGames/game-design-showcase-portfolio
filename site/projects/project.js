@@ -142,8 +142,13 @@
         setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
     }
 
+    var HINT = "Downloads this design as a plain Markdown file. Paste it into an AI chat as context to start " +
+        "building your own version (you bring the assets, style and tech choices), or use it as the first " +
+        "draft of your own design document. Give the project a new name and make it yours.";
+
     document.querySelectorAll("[data-fork-md]").forEach(function (btn) {
         btn.hidden = false;
+        if (!btn.title) btn.title = HINT;
         btn.addEventListener("click", download);
     });
 
