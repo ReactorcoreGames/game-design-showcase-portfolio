@@ -64,6 +64,15 @@ FONTS = [
     ("ExpletusSans-Bold.ttf", "expletus-sans-bold.woff2", None, None),      # SIL OFL, HazardMissionTeam (2)
     ("MatrixTypeDisplay-Bold.ttf", "matrixtype-display-bold.woff2", None, None),  # CC0, Justice Will Glass Them
     ("Micro5-Regular.ttf", "micro5.woff2", None, None),                     # SIL OFL, Justice Will Glass Them
+    ("OperationNapalm-Italic.ttf", "operation-napalm-italic.woff2", None, None),  # CC0, Mafia_Takedown
+    ("TurretRoad-Medium.ttf", "turret-road-medium.woff2", None, None),      # SIL OFL, Mafia_Takedown
+    ("Exo2.0-BoldItalic.otf", "exo2-bold-italic.woff2", None, None),        # SIL OFL, Megalodon
+    ("MatrixType-Bold.ttf", "matrixtype-bold.woff2", None, None),           # CC0, Megalodon
+    ("Skateblade-RegularItalic.ttf", "skateblade-italic.woff2", None, None),  # SIL OFL, Mosh_Pit_Mayhem (with Anklepants)
+    ("Zeroes Two.otf", "zeroes-two.woff2", None, None),                     # CC0, MutantLoveQuest
+    ("ExpletusSans-Medium.ttf", "expletus-sans-medium.woff2", None, None),  # SIL OFL, MutantLoveQuest
+    ("Skateblade-Regular.ttf", "skateblade.woff2", None, None),             # SIL OFL, Planetary Ring Miner
+    ("exo.regular.otf", "exo-regular.woff2", None, None),                   # SIL OFL, Planetary Ring Miner
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 
