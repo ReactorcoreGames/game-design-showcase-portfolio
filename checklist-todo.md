@@ -65,10 +65,12 @@ The full plan, reasons and decisions are in `workflow/site-plan.md`. Read it bef
 Start after B1, so the pilot pages use the new theme. The pilot also updates the page template (fonts, icon badge, blueprint background, "free to fork" line).
 
 - [x] Rewrite one published page and review it closely (AALSW, now AAL-Bunkerships)
-- [ ] Build one new page from standby and review it closely
-- [ ] Adjust `workflow/page-brief.md` with whatever the pilots taught
+- [x] Build one new page from standby and review it closely (Graviton Singularity Mecha)
+- [x] Adjust `workflow/page-brief.md` with whatever the pilots taught (and `workflow/image-brief.md`)
 
 ## 3. Rewrite the published pages (37)
+
+From here on, pages are done in hands-free batch sessions of five (the prompt is in `workflow/batch-session.md`).
 
 The images stay, except the 5 pages marked ⚑, which also need a story image.
 

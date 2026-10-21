@@ -56,7 +56,7 @@ All 37 are `revisit`. Images are kept as they are unless a rewrite changes what 
 
 | Page file | Image prefix | Title | Source design(s) in `designs/done/` | Notes |
 |---|---|---|---|---|
-| `graviton-mayhem.html` | `graviton-mayhem` | Graviton Singularity Mecha: Physics Missile Mayhem | `Momentum Missile Mayhem 2 Redux.md` | **Pilot 2, status `page`** (on `dev` until reviewed). Klein images plus ten SDXL minis in `site/projects/mini/graviton-mayhem/`. AAL in spirit only, so no prefix. The enemy is "the Masterless Legion" (the doc's "Death Force" is M.D. Geist's name). |
+| `graviton-mayhem.html` | `graviton-mayhem` | Graviton Singularity Mecha: Physics Missile Mayhem | `Momentum Missile Mayhem 2 Redux.md` | **Pilot 2, status `page`**, approved; images done, live once `dev` is merged. Klein images plus ten SDXL minis in `site/projects/mini/graviton-mayhem/`. AAL in spirit only, so no prefix. The enemy is "the Masterless Legion" (the doc's "Death Force" is M.D. Geist's name). |
 
 ## Released game: needs a page, no image generation
 

@@ -46,6 +46,7 @@ reference/
 workflow/
   site-plan.md         the second overhaul: site purpose, look, identity rules, session plan
   page-brief.md        how to write a showcase page (new or rewrite)
+  batch-session.md     how to run a hands-free session of five pages
   image-brief.md       how to write image prompts + run the image pipeline
   cookbook.md          text-over-image legibility recipes
   legacy/              the old Sonnet-era task docs, kept for history only
@@ -67,13 +68,13 @@ _work/                 (gitignored) raw BAIG output
 
 ## Doing one project
 
-Read `workflow/page-brief.md` and follow it. In short: find the project in `designs/MANIFEST.md`, read its design file(s) and both bible parts, plan and **wait for approval**, build the page, write the image spec, add the project's entry to `site/projects.js` and run `python tools/sitemap.py`, then update the manifest. One project per session works best.
+Read `workflow/page-brief.md` and follow it. In short: find the project in `designs/MANIFEST.md`, read its design file(s) and both bible parts, plan, build the page on the shared template (`site/projects/project.css` + `project.js`; `AAL-Bunkerships.html` and `graviton-mayhem.html` are the reference pages), generate its images, add its entry to `site/projects.js`, run `python tools/sitemap.py`, and update the manifest and checklist. Pages are done in hands-free batch sessions of five, following `workflow/batch-session.md`; outside such a session, show the plan and wait for approval.
 
 ## Images
 
 Images are generated locally with the Batch AI Image Generator (BAIG) at `C:\ClaudeWorkspace\AI image gen batch program`, which has a CLI. Klein 4B at Standard tier, **max 70 images a day**. Full details in `workflow/image-brief.md`. Pages are written with their final image paths already in place, so the image pass only drops files into those paths.
 
-Only `tools/images.py gen` without `--dry-run` spends anything. Run it only when the user has said to generate. Everything else in the pipeline is free.
+Only `tools/images.py gen` without `--dry-run` spends anything (Klein and Nano Banana; SDXL is free). Run it only when the user has said to generate, which a batch session prompt does within its stated limits. Everything else in the pipeline is free.
 
 ## Publishing
 
@@ -90,7 +91,7 @@ Only `tools/images.py gen` without `--dry-run` spends anything. Run it only when
 - Reactorcore stays anonymous: no real name anywhere in the repo, file names and metadata included. Don't highlight Finland. See the identity rules in `workflow/site-plan.md`.
 - The game-icons in `assets/icons/` are CC BY 3.0, so any page using them needs the credits link.
 - Markdown prose is never hard-wrapped. One line per paragraph.
-- The pages are hand-written static HTML/CSS: no build step, no framework. External scripts (mermaid) are loaded from a CDN at a pinned version.
+- The pages are hand-written static HTML/CSS: no build step, no framework. Diagrams are styled HTML from the template's diagram kit; mermaid is no longer used.
 
 ## Status and next steps
 

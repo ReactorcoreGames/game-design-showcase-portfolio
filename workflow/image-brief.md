@@ -1,6 +1,6 @@
 # Image Brief
 
-How to write the five image prompts for a page, and how they turn into files on the site. The prompts are written when the page is written. Generation happens later, locally, in batches, through the Batch AI Image Generator (BAIG) at `C:\ClaudeWorkspace\AI image gen batch program`.
+How to write the image prompts for a page (the five Klein images and the SDXL minis), and how they turn into files on the site. The prompts are written when the page is written. Generation happens later, locally, in batches, through the Batch AI Image Generator (BAIG) at `C:\ClaudeWorkspace\AI image gen batch program`.
 
 ## Budget and model
 
@@ -61,9 +61,43 @@ python tools/images.py check                          # every spec valid, total 
 python tools/images.py gen <slug> <slug> ... --dry-run
 python tools/images.py gen <slug> <slug> ...          # spends the daily allowance
 python tools/images.py finish <slug> <slug> ...       # resize + JPEG + thumbnail into site/
+python tools/images.py collage <slug> ...             # numbered contact sheet into wip/shots/
+python tools/images.py gen <slug> --only 1,4          # reroll some images (after rewording them)
+python tools/images.py finish <slug> --only 5         # finish only some (a rewrite's new story image)
 ```
 
 Raw BAIG output lands in `_work/<slug>/raw-<model>/` (gitignored). `finish` scales every image to the pixel area of 1280×720 (so 2:3 comes out at 784×1176), saves it as progressive JPEG at quality 82 under the exact name the page expects, and makes the 640×360 nexus thumbnail from the vignette. Look over the results before committing. To redo one bad image, use BAIG's `regenerate` on that prompt file, or edit the prompt and run `gen` again: a changed prompt gets a new file name, and `finish` takes the newest.
+
+## Duds, flagged outputs and retries
+
+Look at every result before committing: `collage` makes a numbered sheet of a spec's finished images in `wip/shots/` (gitignored), so a whole batch can be judged at once. Reroll a dud by rewording its prompt and running `gen --only <n>`. The prompt text is part of the `--only` run's file name, so a reworded retry is a fresh BAIG batch; an unchanged one is the same batch and BAIG won't rerun its finished or failed jobs (use `cli.py retry-failed` for that). `gen` carries on past a failed ratio group and lists what to rerun at the end. Give up on an image after two rerolls and use what's best.
+
+Klein's provider sometimes rejects an image with "Your output has been flagged" (HTTP 400, code 3030). It's a check on the generated picture, not the prompt, so it repeats with similar wording, and it costs nothing. Klein has no filter setting. Change what the picture shows: in the Graviton pilot, a "tall sleek bipedal mecha" was flagged three times and passed as "a huge armored hovering war machine with no legs", and a "heap of wrecked tanks with smoke rising" box art passed once the wreck pile was gone.
+
+Make every alt text describe what was actually generated, not what the prompt asked for.
+
+## Mini images (SDXL)
+
+Project pages also get up to ten small mood images beside their lore, layer and feature text (placement rules are in `workflow/page-brief.md`). They have their own free-form spec, `image-prompts/<slug>-mini.json`:
+
+```json
+{
+  "slug": "<slug>-mini",
+  "out": "site/projects/mini/<prefix>",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, <the page's mood and palette in a few words>. ",
+  "images": [
+    {"n": 1, "name": "golden-age", "ratio": "3:2", "prompt": "<the section's opening line>"}
+  ]
+}
+```
+
+- `lead` goes in front of every prompt, because SDXL only reads about 300 characters and never sees the style suffix. Keep it to the page's mood and two or three palette words. A strong colour word tints the whole set (Graviton's "violet glow" turned all ten magenta), which is fine as long as the set stays coherent.
+- The prompt is the section's opening line, lightly trimmed of names SDXL can't know. Don't chase accuracy; it's flavor, and the thumbnail size hides flaws.
+- `size` and `quality` make `finish` centre-crop to 4:3 and save at exactly 320×240, about 7 to 10 KB each.
+- Run: `gen <slug>-mini --model sdxl --max 999`, then `finish <slug>-mini --model sdxl`, then `collage <slug>-mini`. SDXL is slow (several minutes for ten), so run it in the background while doing other work. Reroll duds (an image whose mood fights the section) at most twice.
 
 ## SDXL fallback
 

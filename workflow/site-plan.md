@@ -198,6 +198,8 @@ Done in D9. Both files were written from scratch from the finished book, and not
 
 These are checklist sections 2–6 as before (pilot, 37 rewrites, new pages, images, publish), with one change: the page template adopts the A1 theme. That covers the fonts, the project's icon badge, the blueprint background and a short "free to fork" line linking to the statement on the nexus. Do the pilot after B1, so the pilot pages use the final look. `workflow/page-brief.md` gets updated in the pilot to describe the new template.
 
+Done in the pilot (2026-10-21): `AAL-Bunkerships.html` (rewrite, renamed from `AALSW.html`) and `graviton-mayhem.html` (new). They set up the shared template (`site/projects/project.css` and `project.js` on top of `theme.css`): the whole 16:9 hero, the ID strip with icon badge, Patreon label, free-to-fork line and a "Download as Markdown" export, the colour flow and blueprint grid per page, a diagram kit replacing mermaid, and up to ten SDXL mini images per page beside the text. `workflow/page-brief.md` and `workflow/image-brief.md` were rewritten from what the pilots taught. The remaining pages are built in hands-free batches of five (`workflow/batch-session.md`).
+
 ## Decisions made
 
 1. **Guest articles:** publish both in full. The authors gave permission and Reactorcore claims no ownership. Each page opens with the author and a link to the original (see C2).
