@@ -57,6 +57,8 @@ FONTS = [
     ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron
     ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount
     ("ShareTechMono-Regular.ttf", "share-tech-mono.woff2", None, None),     # SIL OFL, Custom Dismount
+    ("Hydrogen Whiskey.otf", "hydrogen-whiskey.woff2", None, None),         # CC0, EradicationWars
+    ("Aldrich-Regular.ttf", "aldrich.woff2", None, None),                   # SIL OFL, EradicationWars
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 

@@ -1,0 +1,14 @@
+{
+  "slug": "EradicationWars",
+  "prefix": "EradicationWars",
+  "preset": "01 Main - Digital Art",
+  "style": "Gritty science fiction military aesthetic, harsh lighting contrasts, metallic textures, explosive particle effects, dynamic motion blur. Deep red and electric blue faction colors, toxic green structures, orange nuclear fire highlights.",
+  "notes": "Rewrite (2026-10). Images 1, 3, 4 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated (the preset is the closest match to how they look). Image 2 was regenerated because the old vignette had words painted on the buildings. Klein flagged its output twice, so it was made on Nano Banana 2 Lite: gen EradicationWars --model nano-banana-2-lite --only 2, then finish EradicationWars --only 2. The nexus thumbnail keeps its old name with a space (see projects.js).",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide cinematic low-angle battle scene: red and blue armored mechas fighting over a devastated industrial landscape, massive green structures sheltering civilians, colossal mobile fortresses firing artillery in the middle distance, nuclear fireballs in a dark sky of fire."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Side view of a rocky battlefield laid out like a 2D platformer level, ground, ledges and steel towers in layers. A red armored robot soldier boosts diagonally through the air on bright thrusters, turning to aim a long rifle down at a blue armored robot soldier that slides across the ground below on sparking feet, both caught mid-motion. Behind them a colossal tracked fortress vehicle with many cannon turrets crawls along a ridge. Far away in a dusky sky, two lines of warships trade glowing beams. Dust, debris and bright tracer lines across the scene. Plain unmarked armor and walls. No text, lettering or signatures anywhere.", "model": "nano-banana-2-lite"},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Dynamic side view of a sleek starfighter-like mecha in flying form racing through a burning sky, thrusters trailing energy, large rifles mounted under its wings, nuclear explosions behind it."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Intense close-up portrait of a human pilot in a mecha cockpit wearing a tactical helmet with a reflective visor, determined expression, nuclear fire and battle debris visible through the canopy, red glow across the helmet."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Sweeping orbital view of a colonized star system at war: warship fleets crossing above a city-covered world, stations burning, a cracked planet in the distance, weapon fire and explosions across the scene."}
+  ]
+}

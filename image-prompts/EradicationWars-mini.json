@@ -1,0 +1,21 @@
+{
+  "slug": "EradicationWars-mini",
+  "out": "site/projects/mini/EradicationWars",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi war film still, charred ruins and ember light, fire red and cold blue. ",
+  "notes": "Mood-only mini images for EradicationWars.html, beside the lore, game layer and feature text. SDXL (free): gen EradicationWars-mini --model sdxl --max 999, then finish EradicationWars-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "sector", "ratio": "3:2", "prompt": "A huge ring-shaped jumpgate glowing in space near a colonized planet, freighters lined up to pass through."},
+    {"n": 2, "name": "nations", "ratio": "3:2", "prompt": "Two identical armies of giant robots facing each other across a ruined plain, one painted red, one painted blue."},
+    {"n": 3, "name": "battle", "ratio": "3:2", "prompt": "Armored robots leaping between broken towers of a burning industrial city, tracer fire everywhere."},
+    {"n": 4, "name": "region", "ratio": "3:2", "prompt": "Crowds of civilians running toward a huge concrete shelter entrance as war machines fight on the horizon."},
+    {"n": 5, "name": "sleeper", "ratio": "3:2", "prompt": "A colossal sleeper ship rising from a fortified city into a dark sky, escort ships around it."},
+    {"n": 6, "name": "hangar", "ratio": "3:2", "prompt": "A pilot resting on a bench in a quiet mecha hangar between battles, a giant robot standing behind."},
+    {"n": 7, "name": "entry", "ratio": "3:2", "prompt": "An armored robot dropping from the sky on a detachable booster rocket, plates falling away, flames."},
+    {"n": 8, "name": "fortress", "ratio": "3:2", "prompt": "A gigantic tracked land fortress covered in cannon turrets rolling through smoke, tiny robots around it."},
+    {"n": 9, "name": "sky", "ratio": "3:2", "prompt": "Two fleets of battleships firing at each other in a burning sky above a battlefield, one ship exploding."},
+    {"n": 10, "name": "thrown", "ratio": "3:2", "prompt": "A huge robot rifle spinning through the air across a ruined battlefield, debris and smoke."}
+  ]
+}

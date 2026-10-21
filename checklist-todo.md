@@ -81,7 +81,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] City Buster
 - [x] Collidotron
 - [x] Custom Dismount ⚑
-- [ ] EradicationWars
+- [x] EradicationWars
 - [ ] Halberd_Suit_Wars
 - [ ] HazardMissionTeam (2)
 - [ ] Justice Will Glass Them

@@ -125,6 +125,7 @@ Before committing a page, view it in headless Edge (`C:\Program Files (x86)\Micr
 - desktop at 1440 wide (`--screenshot`, a tall `--window-size`), looking over every section
 - **phone at 390 wide**: headless windows won't go narrower than about 500px, so load the page in a 390px-wide `<iframe>` inside a scratch page in `site/_tmp/` (move it to `C:\trash` afterwards) and read `documentElement.scrollWidth`. It must be 390. If not, look for elements with `scrollWidth > clientWidth`: wide display fonts are the usual cause.
 - the Markdown export, when the page has unusual markup (capture the blob in the same kind of iframe page).
+- that the display fonts actually loaded: in the same kind of iframe page, list `contentDocument.fonts` with each face's `status`. A WOFF2 the browser can't decode shows `error` and the page silently falls back to Segoe UI, which is easy to miss in a screenshot (Motion Control did this).
 
 Then re-read the page as the bible's section 14 asks: does every section serve the purpose, does it show which need is met and how, and does anything quietly promise a reward loop, a grind or a competition?
 

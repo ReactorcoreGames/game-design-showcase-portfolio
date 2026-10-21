@@ -121,8 +121,8 @@ window.PROJECTS = [
     page: "EradicationWars.html", prefix: "EradicationWars", thumb: "EradicationWars 2_vignette_thumb.jpg",
     title: "AAL Eradication Wars", subtitle: "Apocalyptic Mecha Warfare",
     icon: "missile-mech-lorc", tint: "red",
-    blurb: "Fast, Soldat-style mecha combat with dual-form transformation. Command Type-3 Mechas through brutal token-driven warfare with real strategic depth.",
-    genres: ["mecha", "action"], tags: ["transforming", "2d shooter", "apocalyptic"],
+    blurb: "A Soldat-style side-scrolling mecha shooter played solo against human-like bots: momentum movement, transforming mecha, Arms Forts on rails and a year-long war between two identical nations.",
+    genres: ["mecha", "action"], tags: ["2d shooter", "transforming", "token battles", "war campaign"],
     universe: "aal", status: "concept", added: "2025-10-08"
   },
   {
