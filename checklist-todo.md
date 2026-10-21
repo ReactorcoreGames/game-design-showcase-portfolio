@@ -78,7 +78,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] AALSW (now AAL-Bunkerships, the pilot)
 - [x] AALSuperweapon
 - [x] ChainReactionDemolitionPunch
-- [ ] City Buster
+- [x] City Buster
 - [ ] Collidotron
 - [ ] Custom Dismount ⚑
 - [ ] EradicationWars

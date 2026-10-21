@@ -151,10 +151,10 @@ window.PROJECTS = [
   },
   {
     page: "City Buster.html", prefix: "citybuster",
-    title: "Orbital City Buster", subtitle: "Sand Breaker Ball",
-    icon: "meteor-impact-lorc", tint: "orange",
-    blurb: "Breakout from orbit. Steer an experimental paddle warship and bring whole cities down with physics projectiles and falling-sand destruction.",
-    genres: ["arcade", "falling-sand", "physics"], tags: ["breakout", "orbital", "demolition"],
+    title: "City Buster", subtitle: "Orbital Brick Breaker",
+    icon: "meteor-impact-lorc", tint: "green",
+    blurb: "Breakout turned upside down: slap energy orbs from an orbiting paddle ship into a falling-sand world that shatters, burns and melts, and dodge everything it throws back.",
+    genres: ["arcade", "falling-sand", "physics"], tags: ["breakout", "orbital", "demolition", "procedural campaigns"],
     status: "concept", added: "2025-10-08"
   },
   {

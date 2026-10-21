@@ -1,0 +1,14 @@
+{
+  "slug": "City Buster",
+  "prefix": "citybuster",
+  "preset": "03 Style - Pixel Side View",
+  "style": "Palette of deep teal and sea green with signal red and sulfur yellow accents.",
+  "notes": "Rewrite (2026-10). All five images are kept from the 2025 page (pixel art suits a falling-sand game); their prompts are the originals, trimmed, kept as a record and not meant to be regenerated. The preset is the closest match to how they look, not the one they were made with.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide-angle orbital view of a sleek metallic paddle warship hovering above a sprawling futuristic city, angular hull with energy weapon arrays pointed downward, planet curvature visible, city lights below."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Medium shot of the moment energy orbs strike city buildings, concrete structures mid-collapse with chunks of masonry tumbling, glass shattering, fires erupting from the impact zones, secondary explosions."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Close-up of falling sand particles transforming through heat and force: sand grains melting into molten glass droplets, concrete fragments shattering into aggregate, wooden debris igniting into flames and ash."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Dramatic low-angle shot of an imposing paddle warship with a massive angular hull and glowing red energy weapons charging, against a starfield, city lights on the planet far below."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Sweeping panoramic view of frontier planets with industrial settlements, space stations and orbital infrastructure connected by shipping lanes, some colonies peaceful and some burning."}
+  ]
+}

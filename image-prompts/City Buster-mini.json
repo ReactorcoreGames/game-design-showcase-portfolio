@@ -1,0 +1,21 @@
+{
+  "slug": "City Buster-mini",
+  "out": "site/projects/mini/citybuster",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, frontier exoplanet, deep teal and fiery orange light. ",
+  "notes": "Mood-only mini images for City Buster.html, beside the lore, game layer and feature text. SDXL (free): gen \"City Buster-mini\" --model sdxl --max 999, then finish \"City Buster-mini\" --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "helios", "ratio": "3:2", "prompt": "A lawless frontier colony town on an alien planet, mines, factories and power plants run by gangsters."},
+    {"n": 2, "name": "paddle", "ratio": "3:2", "prompt": "A long flat experimental warship hovering in orbit above a planet, a glowing energy orb beside it."},
+    {"n": 3, "name": "orbs", "ratio": "3:2", "prompt": "Glowing energy orbs falling from the sky into a city, craters and fires blooming where they land."},
+    {"n": 4, "name": "gang", "ratio": "3:2", "prompt": "A fortified industrial compound on a dusty alien planet at night, fuel tanks, silos and floodlights, seen from above."},
+    {"n": 5, "name": "starmap", "ratio": "3:2", "prompt": "A rough holographic star map of frontier star systems, three planets marked in warning colors."},
+    {"n": 6, "name": "flow", "ratio": "3:2", "prompt": "A small crew in a dim warship cockpit, looking down at a burning city through the window."},
+    {"n": 7, "name": "slap", "ratio": "3:2", "prompt": "A glowing energy orb struck hard by a metal hull, flying off at speed with a bright trail."},
+    {"n": 8, "name": "charge", "ratio": "3:2", "prompt": "Several glowing orbs over a city all bursting with energy blasts at the same moment."},
+    {"n": 9, "name": "targets", "ratio": "3:2", "prompt": "Fuel tanks and giant batteries buried in rock exploding, fireballs and lightning flying upward."},
+    {"n": 10, "name": "stage", "ratio": "3:2", "prompt": "A cross-section of alien ground, layers of sand, soil, stone and bedrock with caves, tunnels and buildings on top."}
+  ]
+}

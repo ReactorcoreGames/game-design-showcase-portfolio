@@ -3,773 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orbital City Buster: Sand Breaker Ball - Game Design Showcase</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Control an experimental paddle warship from orbit and demolish cities below using physics-based projectiles. City Buster combines the precision gameplay of Breakout with the satisfying destruction mechanics of falling sand simulations.">
-    <meta name="keywords" content="game design, orbital bombardment, physics simulation, falling sand, city destruction, breakout game, paddle warship, environmental destruction">
+    <title>City Buster: Orbital Brick Breaker</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: Breakout turned upside down. Slap energy orbs down from an orbiting paddle ship into a falling-sand world that shatters, burns and melts, dig out a crime gang's machinery, and dodge everything it throws back.">
+    <meta name="keywords" content="game design concept, brick breaker, breakout, falling sand, cellular automata, destruction, paddle, arcade, procedural stages, Just Cause inspired, Reactorcore">
     <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/City%20Buster.html">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Orbital City Buster: Sand Breaker Ball - Game Design Showcase">
-    <meta property="og:description" content="Control an experimental paddle warship from orbit and demolish cities below using physics-based projectiles. City Buster combines the precision gameplay of Breakout with the satisfying destruction mechanics of falling sand simulations.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/citybuster_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/City%20Buster.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Games - Game Design Showcase">
-    
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="City Buster: Orbital Brick Breaker">
+    <meta property="og:description" content="A game design concept: Breakout from orbit, into a falling-sand world that shatters, burns and melts. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/City%20Buster.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/citybuster_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Pixel art: a glowing energy ball streaks into a teal tower block as it bursts apart in an explosion">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Orbital City Buster: Sand Breaker Ball - Game Design Showcase">
-    <meta name="twitter:description" content="Control an experimental paddle warship from orbit and demolish cities below using physics-based projectiles. City Buster combines the precision gameplay of Breakout with the satisfying destruction mechanics of falling sand simulations.">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="City Buster: Orbital Brick Breaker">
+    <meta name="twitter:description" content="A game design concept: Breakout from orbit, into a falling-sand world that shatters, burns and melts.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/citybuster_2_vignette.jpg">
-    <meta name="twitter:creator" content="@ReactorcoreGames">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Orbital City Buster: Sand Breaker Ball",
-      "description": "Control an experimental paddle warship from orbit and demolish cities below using physics-based projectiles. City Buster combines the precision gameplay of Breakout with the satisfying destruction mechanics of falling sand simulations.",
-      "genre": ["Physics Simulation", "Destruction Game", "Orbital Bombardment", "Action"],
-      "gamePlatform": "PC",
-      "author": {
-        "@type": "Organization",
-        "name": "Reactorcore Games",
-        "url": "https://reactorcore.itch.io/"
-      },
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/citybuster_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/City%20Buster.html",
-      "datePublished": "2025",
-      "gameFeature": [
-        "Physics-Based Destruction",
-        "Material Transformation",
-        "Orbital Bombardment",
-        "Chain Reaction Systems",
-        "Procedural Cities",
-        "Environmental Interaction"
-      ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Physics simulation enthusiasts, destruction game fans, and players who enjoy precise targeting combined with cascading environmental effects"
-      }
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "City Buster: Orbital Brick Breaker",
+        "description": "A game design concept, not a released game: a brick breaker played from orbit, where a paddle ship slaps energy orbs into generated falling-sand stages to dig out and destroy a crime gang's machinery, across endlessly generated campaigns on frontier exoplanets.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Arcade", "Action", "Physics"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/City%20Buster.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/citybuster_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#08151a">
+
+    <link rel="preload" href="../fonts/audiowide.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;600;700;900&family=Russo+One&display=optional" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /*
-        Required Images:
-        citybuster_1_title.jpg - Orbital view of paddle ship above a complex city awaiting destruction
-        citybuster_2_vignette.jpg - Mid-destruction scene showing physics interactions, explosions, and debris
-        citybuster_3_feature.jpg - Close-up of falling sand physics with materials transforming through heat and force
-        citybuster_4_boxart.jpg - Dramatic poster-style image of the paddle ship as destructive force
-        citybuster_5_story.jpg - Zoomed out overworld view of the greater setting the game takes place in
-        */
+        /* City Buster: exoplanet teal and sulfur yellow over a deep sea-green night, with pale sand
+           for the highlight. Audiowide for the title and headings (a wide arcade face), Jersey 10
+           for the subtitle and kickers, a pixel font for a pixel world. */
+        @font-face { font-family: "Audiowide"; src: url("../fonts/audiowide.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Jersey 10"; src: url("../fonts/jersey-10.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: #0a2830;
-            --container-bg: #1a3d45;
-            --border-color: #4a7a75;
-            --text-color: #e8f4f2;
-            --title-primary: #ffffff;
-            --title-secondary: #c44444;
-            --red-accent: #cc3333;
-            --red-bright: #ff4444;
-            --green-metal: #556b5a;
-            --green-metal-light: #6ae070;
-            --card-bg: #234149;
-            --shadow-color: rgba(0, 20, 25, 0.8);
-            --glow-red: #ff4444;
-            --glow-red-dim: #cc3333;
+            --flow-1: #08151a;
+            --flow-2: #0f3b3a;
+            --grid-minor: rgba(120, 255, 210, 0.045);
+            --grid-major: rgba(120, 255, 210, 0.10);
+            --p-ground: rgba(9, 21, 25, 0.95);
+            --p-panel: #112328;
+            --p-1: #3ee6b0;
+            --p-2: #ecd44a;
+            --p-3: #f2e4c4;
+            --p-text: #d8e4df;
+            --p-dim: #9fb4ad;
+            --p-line: rgba(150, 255, 220, 0.15);
+            --font-title: "Audiowide", "Segoe UI", sans-serif;
+            --font-sub: "Jersey 10", "Segoe UI", sans-serif;
+            --shade: #04100f;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "impact": every few seconds the name jolts with a hard teal flash and a
+           short yellow afterglow, like an orb slamming into the ground below. Dark layered shadows
+           keep it legible throughout. Audiowide is wide, so the title runs a little smaller. */
+        .p-name {
+            font-size: clamp(2rem, 0.8rem + 5vw, 5.4rem);
+            letter-spacing: 0.02em;
+            animation: impact 4.5s ease-out infinite;
         }
-
-
-        body {
-            font-family: 'Saira Condensed', 'Arial', 'Helvetica', sans-serif;
-            background: linear-gradient(135deg, var(--background-color) 0%, #0f3540 100%);
-            color: var(--text-color);
-            line-height: 1.6;
-            min-height: 100vh;
-			letter-spacing: 1px;
+        @keyframes impact {
+            0%, 70%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade); }
+            74% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 8px rgba(62, 230, 176, 1), 0 0 24px rgba(62, 230, 176, 0.7); }
+            84% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 20px rgba(236, 212, 74, 0.45); }
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        .p-sub { text-transform: uppercase; font-size: clamp(1.3rem, 0.9rem + 2vw, 2.6rem); letter-spacing: 0.08em; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.2rem; height: 3px;
+            background: var(--p-1);
+            animation: impact-line 4.5s ease-out infinite;
         }
-
-        .reactorcore-label {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: var(--green-metal);
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: bold;
-            color: var(--text-color);
-            text-decoration: none;
-            border: 1px solid var(--green-metal-light);
-            transition: all 0.3s ease;
-            z-index: 1000;
+        @keyframes impact-line {
+            0%, 70%, 100% { box-shadow: none; opacity: 0.7; }
+            74% { box-shadow: 0 0 14px rgba(62, 230, 176, 0.95), 0 0 26px rgba(236, 212, 74, 0.5); opacity: 1; }
         }
+        .section-mark::after { animation: h2-line 4.5s ease-out infinite; }
+        @keyframes h2-line { 0%, 70%, 100% { box-shadow: none; } 74% { box-shadow: 0 0 10px rgba(62, 230, 176, 0.7); } }
+        h2 { font-size: clamp(1.1rem, 0.85rem + 1.1vw, 1.7rem); }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.08em; }
 
-        .reactorcore-label:hover {
-            background: var(--green-metal-light);
-            border-color: var(--border-color);
-        }
-
-        .title-section {
-            position: relative;
-            text-align: center;
-            padding: 60px 0 40px 0;
-            margin-bottom: 40px;
-            background: linear-gradient(rgba(26, 61, 69, 0.4), rgba(26, 61, 69, 0.3)), url('./images/citybuster_1_title.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 700px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .title-main {
-            font-family: 'Russo One', sans-serif;
-            font-size: 4rem;
-            font-weight: bold;
-            letter-spacing: 3px;
-            color: var(--title-primary);
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px var(--shadow-color);
-            animation: electricBuzz 3s infinite;
-        }
-
-        .title-subtitle {
-            font-size: 3rem;
-            color: var(--title-secondary);
-            font-weight: 300;
-            text-shadow: 1px 1px 3px var(--shadow-color);
-        }
-
-        @keyframes electricBuzz {
-            0%, 20%, 40%, 60%, 80%, 100% {
-                text-shadow: 
-                    0 0 5px var(--glow-red),
-                    0 0 10px var(--glow-red),
-                    0 0 15px var(--glow-red),
-                    2px 2px 4px var(--shadow-color);
-            }
-            10%, 30%, 50%, 70%, 90% {
-                text-shadow: 
-                    0 0 2px var(--glow-red-dim),
-                    0 0 5px var(--glow-red-dim),
-                    0 0 8px var(--glow-red-dim),
-                    2px 2px 4px var(--shadow-color);
-            }
-            15%, 35%, 55%, 75%, 95% {
-                text-shadow: 
-                    0 0 8px var(--glow-red),
-                    0 0 16px var(--glow-red),
-                    0 0 24px var(--glow-red),
-                    0 0 32px var(--red-bright),
-                    2px 2px 4px var(--shadow-color);
-            }
-        }
-
-        h2 {
-            font-family: 'Russo One', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            color: var(--title-primary);
-            text-align: center;
-            animation: electricBuzz 4s infinite;
-        }
-
-        .overview {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--shadow-color);
-        }
-
-        .overview p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .three-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 6px 24px var(--shadow-color);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--red-accent);
-            box-shadow: 0 8px 32px rgba(204, 51, 51, 0.3);
-        }
-
-        .card h3 {
-            font-family: 'Saira Condensed', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            color: var(--red-bright);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .controls-section {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 2px solid var(--green-metal);
-            box-shadow: 0 8px 32px var(--shadow-color);
-        }
-
-        .controls-table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-            background: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 2px solid var(--green-metal);
-        }
-
-        .controls-table th {
-            background: var(--green-metal);
-            color: var(--text-color);
-            padding: 15px 20px;
-            text-align: left;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .controls-table td {
-            padding: 15px 20px;
-            border-bottom: 1px solid var(--green-metal);
-            vertical-align: top;
-        }
-
-        .controls-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .controls-table tr:hover {
-            background: rgba(106, 128, 112, 0.1);
-        }
-
-        .control-key {
-            font-weight: bold;
-            color: var(--green-metal-light);
-            font-size: 1.1rem;
-        }
-
-        .vignette-section {
-            position: relative;
-            margin: 40px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 600px;
-            background: url('./images/citybuster_2_vignette.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(26, 61, 69, 0.9);
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 400px;
-            border-left: 4px solid var(--red-accent);
-        }
-
-        .vignette-quote p {
-            font-style: italic;
-            font-size: 1.2rem;
-            color: var(--text-color);
-            margin: 0;
-        }
-
-        .story-section {
-            position: relative;
-            margin: 40px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 600px;
-            background: url('./images/citybuster_5_story.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .story-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(26, 61, 69, 0.9);
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 400px;
-            border-left: 4px solid var(--title-secondary);
-        }
-
-        .story-quote p {
-            font-style: italic;
-            font-size: 1.2rem;
-            color: var(--text-color);
-            margin: 0;
-        }
-
-        .lore-section {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 2px solid var(--title-secondary);
-            box-shadow: 0 8px 32px var(--shadow-color);
-        }
-
-        .game-layers {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--shadow-color);
-        }
-
-        .layer-card {
-            background: var(--card-bg);
-            margin-bottom: 25px;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 6px solid var(--red-accent);
-        }
-
-        .layer-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .layer-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: var(--red-bright);
-            margin-bottom: 10px;
-        }
-
-        .features-section {
-            margin-bottom: 40px;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            padding: 35px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 6px 24px var(--shadow-color);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--green-metal-light);
-            box-shadow: 0 8px 32px rgba(106, 128, 112, 0.3);
-        }
-
-        .feature-title {
-            font-size: 1.6rem;
-            color: var(--green-metal-light);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .feature-image-section {
-            position: relative;
-            margin: 40px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 600px;
-            background: url('./images/citybuster_3_feature.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .feature-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(26, 61, 69, 0.9);
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 400px;
-            border-left: 4px solid var(--green-metal-light);
-        }
-
-        .game-modes {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--shadow-color);
-        }
-
-        .mode-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .mode-card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 10px;
-            border: 2px solid var(--green-metal);
-        }
-
-        .mode-title {
-            font-size: 1.4rem;
-            color: var(--red-bright);
-            margin-bottom: 10px;
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 40px;
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--shadow-color);
-        }
-
-        .boxart-image {
-            background: url('./images/citybuster_4_boxart.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 12px;
-            min-height: 400px;
-            border: 3px solid var(--green-metal);
-        }
-
-        .boxart-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .boxart-title {
-            font-size: 2rem;
-            color: var(--title-primary);
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px var(--shadow-color);
-        }
-
-        .boxart-description {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--text-color);
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--shadow-color);
-        }
-
-        .footer a {
-            color: var(--green-metal-light);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: var(--border-color);
-        }
-
-        .emoji {
-            font-size: 1.2em;
-        }
-
-        @media (max-width: 768px) {
-            .title-main {
-                font-size: 2.5rem;
-            }
-            
-            .title-subtitle {
-                font-size: 1.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .three-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-            }
-            
-            .vignette-quote, .feature-quote, .story-quote {
-                position: relative;
-                bottom: auto;
-                left: auto;
-                margin-top: 20px;
-                max-width: none;
-            }
-        }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .ammo td:last-of-type, .materials td:last-of-type { width: 100%; }
+        .powerups td { width: 50%; vertical-align: top; }
+        .powerups ul { margin: 0; padding-left: 1.1em; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } .powerups td { width: auto; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="reactorcore-label">
-        Reactorcore's Personal Game Design Project
-    </a>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <div class="title-section">
-            <h1 class="title-main">Orbital City Buster</h1>
-            <div class="title-subtitle">Sand Breaker Ball</div>
-        </div>
-
-        <section class="overview">
-            <p><strong>Control an experimental paddle warship from orbit and demolish cities below using physics-based projectiles.</strong> City Buster combines the precision gameplay of Breakout with the satisfying destruction mechanics of falling sand simulations, creating a unique orbital bombardment experience where every impact creates cascading destruction through realistic material physics.</p>
-
-            <p>Launch energy orbs downward to shatter terrain, melt materials, and trigger chain reactions that spread fire and force throughout procedurally generated cities. Each collision transforms the environment - wood burns to ash, sand melts to glass, concrete shatters to aggregate - creating emergent destruction patterns that are never the same twice.</p>
-
-            <p>Your goal is to locate and destroy hidden objectives buried within these physics-simulated cities while dodging retaliatory projectiles and collecting power-ups that enhance your destructive capabilities. The faster and more precisely you strike, the more devastating your area-of-effect becomes.</p>
-        </section>
-
-        <div class="three-cards">
-            <div class="card">
-                <h3><span class="emoji">🎯</span> Target Audience</h3>
-                <p><strong>Physics simulation enthusiasts</strong> who enjoy watching complex systems interact and evolve. <strong>Action puzzle players</strong> seeking skill-based challenges with immediate visual feedback. <strong>Destruction sandbox fans</strong> who find satisfaction in environmental manipulation and cascading effects.</p>
-            </div>
-            
-            <div class="card">
-                <h3><span class="emoji">🎮</span> Game's Purpose</h3>
-                <p>Fulfills the human needs for <strong>competence</strong> through precision-based skill development, <strong>autonomy</strong> through creative destruction approaches, and <strong>stimulation</strong> through satisfying visual and kinetic feedback from realistic physics interactions.</p>
-            </div>
-            
-            <div class="card">
-                <h3><span class="emoji">⚡</span> Core Concept</h3>
-                <p><strong>Emergent destruction through physics mastery.</strong> Players develop spatial reasoning and timing skills while experiencing the visceral satisfaction of watching their actions create unpredictable, realistic destruction cascades through simulated materials.</p>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/citybuster_1_title.jpg" alt="Pixel art: a heavily armed teal warship in orbit fires red lightning bolts from its cannons, the curve of a planet and a city skyline glowing below." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">City Buster</span><span class="p-sub">Orbital Brick Breaker</span></h1>
             </div>
         </div>
+    </header>
 
-        <div class="story-section">
-            <div class="story-quote">
-                <p>"Across the lawless Helios Sector, fifty star systems burn under the weight of corruption, while vigilante paddle ships patrol the void seeking justice."</p>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/meteor-impact-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
             </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
         </div>
 
-        <section class="lore-section">
-            <h2>Lore & Story</h2>
-            
-            <p><strong>The Helios Sector</strong> sprawls across fifty star systems in humanity's newest colonial frontier, where the promise of new worlds has given way to lawlessness and corruption. What began as mankind's greatest expansion has devolved into a contested region where <strong>corrupt colonial leaders have transformed into mafia bosses</strong>, seizing control of the means of production across multiple exoplanets.</p>
-            <br>
-            
-            <p>In the sector's early days, legitimate colonial governments established mining operations, manufacturing centers, and agricultural settlements across dozens of worlds. But as Earth's oversight weakened over the vast distances, <strong>local mayors and administrators began forming criminal networks</strong>, exploiting workers, stealing resources, and building private armies to protect their illicit operations.</p>
-            <br>
-            
-            <p>Among those affected was a <strong>local weapon research group</strong> whose experimental technologies were seized by these corrupt forces. Rather than submit to the growing tyranny, the research team formed a vigilante organization, using their most advanced creation: <strong>the Paddle Ship orbital bombardment system</strong>. This experimental weapon platform combines precision targeting with devastating physics-based destruction capabilities.</p>
-            <br>
-            
-            <p>Your mission as a <strong>reckless renegade for hire</strong> is to systematically dismantle these criminal networks by targeting their infrastructure, supply chains, and power bases. Sponsored by an unhinged religious cult that views the mafia leaders as an affront to cosmic order, you operate with complete tactical freedom and minimal concern for collateral damage.</p>
-            <br>
-            
-            <p><strong>The goal is liberation through destruction</strong> - methodically eliminating the corrupt organizations that have poisoned the Helios Sector, one campaign at a time, until legitimate governance can be restored to these fifty star systems. Each successful mission weakens the criminal stranglehold and brings hope to the oppressed populations below.</p>
-        </section>
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/burning-meteor-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">City Buster is Breakout turned upside down. Your paddle is an experimental warship hovering in orbit, your balls are orbs of energy, and the bricks are an entire side view of a city, its bunkers and the ground beneath them, all simulated pixel by pixel as falling sand that shatters, burns and melts.</p>
+            <p>You don't bounce the orbs off the paddle so much as slap them: release an orb into the sky, then swing the ship into it to send it down as hard as you like. Every hit on solid ground is a fiery blast. The aim is to dig down to the gang's machinery buried in the terrain and blow all of it up, while everything you break throws fire, lightning and shrapnel back up at you.</p>
+            <p>It mixes the brick breaker with the destructible scenes of falling-sand sandboxes like Powder Toy, set in a lawless frontier with the reckless spirit of Just Cause 2.</p>
 
-        <section class="controls-section">
-            <h2>Controls & Interface</h2>
-            <p>The paddle ship responds directly to mouse movement within the orbital zone, providing intuitive 1:1 control for precise positioning. Players manage ammunition types, energy blasts, and temporal control to maximize their destructive efficiency.</p>
-            
-            <table class="controls-table">
-                <thead>
-                    <tr>
-                        <th>Control</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><div class="control-key">Mouse Movement</div></td>
-                        <td>Direct paddle ship control within orbital flight zone (top 20% of screen)</td>
-                    </tr>
-                    <tr>
-                        <td><div class="control-key">Mouse 1</div></td>
-                        <td>Release energy orb with minimal velocity for player-controlled trajectory</td>
-                    </tr>
-                    <tr>
-                        <td><div class="control-key">Mouse 2 (Hold & Release)</div></td>
-                        <td>Charge and detonate energy blasts from all active orbs simultaneously</td>
-                    </tr>
-                    <tr>
-                        <td><div class="control-key">Mouse Wheel</div></td>
-                        <td>Cycle through ammunition types (Normal, Triple, Accelerator, Splitter, Charge)</td>
-                    </tr>
-                    <tr>
-                        <td><div class="control-key">Spacebar</div></td>
-                        <td>Toggle slow motion for precise timing and tactical planning</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <div class="vignette-section">
-            <div class="vignette-quote">
-                <p>"Each impact sends shockwaves through the city below, watching buildings crumble into physics-simulated debris while fires spread organically through the destruction."</p>
-            </div>
-        </div>
-
-        <section class="game-layers">
-            <h2>Game Layers</h2>
-            
-            <div class="layer-card">
-                <div class="layer-title">Moment-to-Moment Active Gameplay</div>
-                <p>Players control their orbital paddle ship to launch and redirect energy orbs into procedurally generated cities. Each projectile impact creates physics-based destruction: shattering concrete into falling aggregate, melting sand into molten glass, igniting wooden structures that spread fire to surrounding materials. Players must simultaneously manage multiple projectiles, dodge retaliatory fire from destroyed objectives, and collect power-ups while maintaining orbs within the play area through precise paddle positioning and timing.</p>
-            </div>
-            
-            <div class="layer-card">
-                <div class="layer-title">Low Metagame</div>
-                <p>Nine-stage campaigns target specific criminal organizations across the Helios Sector. Each campaign introduces a mafia gang with unique characteristics, crimes, and difficulty modifiers that affect terrain generation, hazard density, and power-up availability. Players progress through increasingly complex cities, each procedurally generated with embedded objectives to destroy. Campaign completion is tracked with performance metrics, and individual stages can be replayed using their generation seeds for practice or high-score attempts.</p>
-            </div>
-            
-            <div class="layer-card">
-                <div class="layer-title">High Metagame</div>
-                <p>The persistent starmap of the Helios Sector presents three difficulty-tiered campaign options at any time: easy (1 crime), medium (2-3 crimes), or chaotic (4-5 crimes). Completed campaigns are permanently logged as "memory flashbacks" that can be revisited, while unchosen campaigns are handled by other vigilantes, maintaining the sense of an ongoing galactic conflict. Each campaign may feature unique environmental modifiers (different gravity, enhanced explosions, material behavior changes) that create distinct tactical challenges and require players to adapt their destruction strategies.</p>
-            </div>
-            
-            <div class="layer-card">
-                <div class="layer-title">Practical Game Flow</div>
-                <p>Players launch the game, select from available campaigns based on desired time commitment and difficulty preference, then engage in individual destruction stages that typically last 5-15 minutes. Natural stopping points occur between stages and campaigns, with progress automatically saved. The physics simulation provides immediate satisfaction while the campaign structure offers long-term progression goals, allowing players to engage in quick destructive sessions or extended tactical campaigns based on available time and energy.</p>
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Fans of Arkanoid-style brick breakers, falling-sand sandboxes and open-ended chaos like Just Cause, who want those pleasures in one tight arcade game.</p>
+                    <p>They want <strong>loud, juggling, all-hands-busy destruction</strong>, without the brick breaker's old punishment of losing a life for one missed ball.</p>
+                    <p>It's mouse only, plus one key for slow motion.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power and release:</strong> turning a whole fortified stage into molten slag from orbit.</p>
+                    <p><strong>Excitement and play:</strong> juggling a sky full of orbs while dodging what the ground throws back.</p>
+                    <p><strong>Variety:</strong> generated stages, gangs and planets, so every campaign looks and plays different.</p>
+                    <p>It deliberately avoids draining <strong>calm and respect</strong>: a lost orb costs nothing, slow motion is always free, and every stage you've played is kept so you can replay it.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Brick breakers are built on fixed walls of bricks and the fear of the ball slipping past you. One miss, one life.</p>
+                    <p>Here the wall is <strong>a living simulation</strong> where every blast changes the terrain, missing an orb costs nothing because another is ready in two seconds, and the challenge moves to where it's fun: <strong>digging smart and dodging the retaliation</strong>.</p>
+                    <p>Campaigns are generated without end, and each stage is saved for replay.</p>
+                </article>
             </div>
         </section>
 
-        <section class="features-section">
-            <h2>Game Features & Mechanics</h2>
-            
-            <div class="feature-card">
-                <div class="feature-title"><span class="emoji">🧪</span> Falling Sand Destruction Physics</div>
-                <p>Advanced material simulation system where each pixel behaves according to realistic physics properties. Wood burns and spreads fire, sand melts into glass under heat, concrete shatters into aggregate, water becomes steam, and molten materials cool into ash over time. <strong>Materials interact through heat convection, kinetic force, and chemical transformation</strong>, creating emergent destruction patterns where no two impacts produce identical results. The simulation includes 15+ material types, each with unique properties for burning, melting, shattering, and transforming, enabling complex chain reactions that spread destruction organically throughout the environment.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title"><span class="emoji">🎯</span> Dynamic Ammo Types & Upgrade System</div>
-                <p>Five distinct ammunition types offer varied tactical approaches: Normal (reliable medium impact), Triple (widespread light damage), Accelerator (building velocity), Splitter (cascading fragmentation), and Charge (escalating power). <strong>Power-ups collected during gameplay stack to enhance ammunition effects</strong>, including increased blast radius, heat generation, piercing capabilities, and mass for greater kinetic impact. Paddle ship upgrades provide magnetic catchers, gravity fields, extended flight zones, and defensive capabilities, creating a progression system that rewards both skilled play and tactical power-up management.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title"><span class="emoji">🌍</span> Procedural Terrain & Campaign Generation</div>
-                <p>Sophisticated terrain generation creates unique cities using layered material placement (grass/wood/water surface, sand/soil middle, stone/bedrock foundation) with embedded structures, tunnels, and objectives. <strong>Seed-based generation ensures infinite variety while maintaining balanced, playable layouts</strong>. Each campaign features distinct environmental characteristics influenced by the target organization's profile, including material distribution, objective placement, and hazard density. Generated cities include surface buildings, underground facilities, suspended platforms, and hidden chambers that require strategic excavation to access.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title"><span class="emoji">⚔️</span> Risk/Reward Hazard Management</div>
-                <p>Destroyed objectives launch retaliatory projectiles (fireballs, lightning, shrapnel) that threaten the paddle ship while potentially dropping valuable power-ups. <strong>Players must balance aggressive destruction with defensive positioning</strong>, using the slow-motion ability to navigate dense hazard patterns while collecting upgrades. Each hit reduces paddle ship armor, but power-ups can restore health and provide temporary shielding, creating dynamic risk assessment scenarios where players choose between safe, distant bombardment and dangerous close-quarters collection runs.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title"><span class="emoji">🔥</span> Material Interaction Chemistry</div>
-                <p>Complex material interaction system governs how destruction spreads through the environment. Heat-based interactions cause materials to ignite, melt, or transform (sand becomes glass, wood becomes fire and ash, concrete becomes lava then cools to slag). <strong>Kinetic force interactions shatter materials and propel debris</strong>, creating secondary impacts that extend destruction beyond the initial blast zone. Water extinguishes fires but becomes steam under heat, creating dynamic environmental changes that affect both destruction patterns and player visibility during intense bombardment sequences.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-title"><span class="emoji">♾️</span> Infinite Replayability Through Seeded Content</div>
-                <p>Every campaign and individual stage uses procedural generation with recorded seeds, enabling perfect reproduction of any previously played scenario. <strong>The campaign selection system continuously generates fresh challenges</strong> while maintaining a complete log of conquered territories for replay. Environmental modifiers (gravity variations, material behavior changes, explosion multipliers) ensure each campaign feels distinctly different, while the physics simulation guarantees that even replayed stages offer unique destruction experiences based on player choices and timing variations.</p>
-            </div>
+        <figure class="p-shot">
+            <img src="../projects/images/citybuster_5_story.jpg" alt="Pixel art: industrial island compounds linked by red bridges on a teal sea, cargo ships between them and fires burning, ringed planets and a space station in the sky." width="1280" height="720" loading="lazy">
+            <figcaption>"Fifty star systems on the fringe of colonized space, and too many of them run by gangs."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/exploding-planet-delapouite.png)"></span>Lore and story</h2>
+            <h3>The Helios Sector</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/citybuster/01-helios.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The Helios Sector is a region of about fifty star systems that people have only recently settled. Out on its lawless outskirts, some of the colonial leaders went corrupt and greedy and turned themselves into mafia bosses. Gangs, crooked mayors and plain thugs have taken over the mines, the factories and the power plants on planet after planet. There's no single tyrant to topple, only a whole sector of small ones.</p>
+
+            <h3>The Paddle Ship</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/citybuster/02-paddle.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>One of the groups they squeezed was a weapons research team, working on an odd experimental warship: a long, flat hull that launches orbs of energy and steers them by striking them. When the gangs came for their work, the researchers turned into a vigilante crew and took the ship to war.</p>
+            <p>Their backer is the strangest part of the story. An unhinged cult, hit just as hard by the gangs, pays for the whole operation, and it doesn't care about collateral damage as long as the evil gets put down.</p>
+
+            <h3>The job right now</h3>
+            <p>Pick a gang, fly to its planet and bust every site it runs, one stage at a time, from orbit. Then pick the next.</p>
         </section>
 
-        <div class="feature-image-section">
-            <div class="feature-quote">
-                <p>"Watch sand transform into molten glass while concrete shatters into falling aggregate, each material following realistic physics that create unique destruction cascades."</p>
-            </div>
-        </div>
-
-        <section class="game-modes">
-            <h2>Game Modes</h2>
-            
-            <div class="mode-grid">
-                <div class="mode-card">
-                    <div class="mode-title">Campaign Mode</div>
-                    <p><strong>Primary Experience:</strong> Structured progression through procedurally generated nine-stage campaigns targeting criminal organizations. Each campaign provides 1-2 hours of focused destruction with escalating difficulty, unique environmental modifiers, and narrative context. Players choose from three available difficulty tiers, with completed campaigns recorded for future replay. This mode balances immediate destruction satisfaction with long-term progression goals, offering natural stopping points between stages while maintaining campaign momentum.</p>
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>The stage is a side view: sky on top, then the city, its structures and the layered ground beneath. The ship flies only in the top fifth of the screen, the orbital zone, and follows the mouse directly.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Mouse and one key</h3>
+                    <dl>
+                        <div><dt>Move</dt><dd>Fly the paddle ship, tied directly to the pointer within the orbital zone</dd></div>
+                        <div><dt>Left click</dt><dd>Release an orb, floating almost still, ready to be slapped</dd></div>
+                        <div><dt>Right click</dt><dd>Hold to charge, release to set off an energy blast from every orb on the stage</dd></div>
+                        <div><dt>Wheel</dt><dd>Choose the next orb type</dd></div>
+                        <div><dt>Space</dt><dd>Slow motion on or off, with no limit</dd></div>
+                    </dl>
                 </div>
-                
-                <div class="mode-card">
-                    <div class="mode-title">Memory Flashback Mode</div>
-                    <p><strong>Replay & Mastery:</strong> Access to all previously completed stages and campaigns using their original generation seeds. Players can revisit favorite destruction scenarios, practice difficult stages, or attempt high-score runs with knowledge of objective locations and optimal strategies. This mode serves both nostalgia and skill development, allowing players to experiment with different ammunition types and tactical approaches on familiar terrain while experiencing the unique physics variations that make each playthrough distinct despite identical starting conditions.</p>
+            </div>
+            <p>A new orb is ready two seconds after the last one was released. Because the ship is moved with the mouse itself, a slap can be a gentle tap or a full swipe, and that's exactly how hard the orb flies.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/citybuster_2_vignette.jpg" alt="Pixel art: a glowing orb streaks down into a teal tower block, which bursts apart in a big orange explosion, chunks of masonry, sparks and smoke flying." width="1280" height="720" loading="lazy">
+            <figcaption>"An orb keeps the speed you slap it with. It never slows down on impact and isn't pulled by gravity."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/ball-glow-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A sky full of orbs</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/citybuster/03-orbs.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Release a few orbs, let them hang in the sky, then sweep through them one by one or all at once. They plunge into the city, blast out craters, set wood and grass burning, and come bouncing back up for another slap.</p>
+                        <p>Meanwhile, every target you break throws a spray of fireballs, lightning bolts and metal shards up at the ship, and now and then a power-up that floats away into space unless you catch it. Three jobs at once: keep the orbs in play, dodge, and grab what's useful.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bunker-quoting.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One gang, nine stages</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/citybuster/04-gang.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign takes down one gang. It opens with a single briefing page: the gang's name, its leader, its colors, the planet and region it holds, and its list of <strong>one to five crimes</strong>.</p>
+                        <p>Then come <strong>nine stages</strong>, each one of the gang's sites, where its people, wealth or machinery are. More crimes means busier stages: more to blow up, more retaliation to dodge, and more power-ups to catch and stack.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The fringe, and the log</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/citybuster/05-starmap.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Between campaigns there's a rough star map of the fringe with <strong>three new gangs</strong> on it: an easy one with a single crime, a medium one with two or three, and a chaotic one with four or five. Take one on; other vigilante crews deal with the rest. When you finish or abandon a campaign, three new gangs appear. The sector never runs out of them.</p>
+                        <p>Every campaign and every stage you play goes into <strong>the log</strong>, a record of the gangs you've brought down and where.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A stage at a time</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/citybuster/06-flow.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Pick a gang, read its briefing, and the first site is on screen. A stage is a short, intense burst of play, and the campaign waits after any of them.</p>
+                        <p>Fancy just one more explosion at the end of the evening? Open the log and replay a favorite stage.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/archive-register-delapouite.png)"></span>Game modes</h2>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Campaign</th><td data-label="What it's for">The main game: choose a gang from the star map, bust its nine sites, choose the next. Endless.</td></tr>
+                        <tr><th scope="row">Flashback</th><td data-label="What it's for">Replay any stage from the log, exactly as it was generated. Canonically the gang is already gone; you're just reliving a good day.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-nest" aria-label="The campaign, outermost first">
+                <div><span>The fringe</span><small>Gang after gang, three new ones to choose from every time.</small>
+                    <div><span>A campaign</span><small>One gang, its briefing and nine of its sites.</small>
+                        <div><span>A stage</span><small>One generated site, done when every target in it is destroyed.</small></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-content">
-                <h3 class="boxart-title">Orbital City Buster: Sand Breaker Ball</h3>
-                <div class="boxart-description">
-                    <p><strong>Command orbital destruction in this physics-based action puzzle experience.</strong></p>
-                    
-                    <p>Master the art of precise bombardment as you control an experimental paddle warship, launching energy orbs into procedurally generated cities. Watch realistic material physics create cascading destruction as sand melts to glass, concrete shatters to debris, and fires spread organically through the environment.</p>
-                    
-                    <p>Navigate retaliatory hazards while collecting power-ups that enhance your destructive capabilities. Five unique ammunition types and stackable upgrades provide tactical depth, while infinite procedural campaigns ensure no two destructions are ever the same.</p>
-                    
-                    <p><strong>Features:</strong> Advanced falling sand physics simulation • Procedural city generation • Five ammunition types with upgrade system • Orbital paddle ship combat • Campaign progression across the Helios Sector</p>
-                    
-                    <p><em>Experience the satisfaction of physics-based destruction in this unique fusion of Breakout mechanics and environmental simulation.</em></p>
-                </div>
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/concentration-orb-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cracked-glass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Every pixel reacts</h3>
+                        <p>When an orb hits solid pixels, it sets off a fiery blast with an outward force. Pixels near it either <strong>shatter</strong>, breaking loose and falling as debris that knocks into other pixels, or <strong>ignite</strong>, turning molten and passing their heat to their neighbors, which melt in turn until the heat thins out. Molten pixels slowly cool into inert, burnt slag.</p>
+                        <p>Broken and burnt pixels still collide with each other, but <strong>orbs pass straight through them</strong>. So every blast clears a path, and an orb keeps biting deeper into the ground on every return trip.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table materials">
+                                <thead><tr><th scope="col">Material</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Sand</th><td data-label="Does">Light; blown away by force, melts into hot glass that cools to glass</td></tr>
+                                    <tr><th scope="row">Soil</th><td data-label="Does">A little sturdier; shreds away, or melts into lava</td></tr>
+                                    <tr><th scope="row">Stone, concrete</th><td data-label="Does">Hard solids; shatter into heavy loose aggregate, or melt into lava</td></tr>
+                                    <tr><th scope="row">Wood, grass</th><td data-label="Does">Shred to pulp, or catch fire; fire turns to smoke, wood to ash</td></tr>
+                                    <tr><th scope="row">Water</th><td data-label="Does">Thrown around by blasts, boils into steam that rises and fades</td></tr>
+                                    <tr><th scope="row">Glass, cable</th><td data-label="Does">Details of buildings; glass shatters to dust or melts, cable burns like wood</td></tr>
+                                    <tr><th scope="row">Lava, ash</th><td data-label="Does">What's left; lava spreads heat and cools to ash, which glints with embers</td></tr>
+                                    <tr><th scope="row">Bedrock</th><td data-label="Does">The floor of the stage, flat, jagged or rolling, and indestructible</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The game is set on exoplanets, so each stage picks its own colors for natural and artificial materials: the soil can be a dusty cyan and the water purple.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/citybuster_3_feature.jpg" alt="Pixel art close-up: a glowing red molten droplet among flying stone chunks, sand grains and burning splinters of wood, an old computer terminal in the background." width="1280" height="720" loading="lazy">
+                            <figcaption>"Sand melts into glass, stone into lava, wood into fire and ash. Orbs pass straight through whatever's already broken."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/ricochet-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The paddle</p>
+                        <h3>Slap, don't bounce</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/citybuster/07-slap.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>An orb is released with almost no speed and just hangs there. Whatever speed the ship gives it when they collide is the speed it flies at, <strong>constant, until it meets the ship again</strong>. Orbs ignore gravity, lose nothing on impact and pass through each other.</p>
+                        <p>That lets you set up a whole constellation of orbs and fire them off in one sweep, or tap one gently to drop a careful blast exactly where it's needed. An orb that flies past the ship into space is simply gone, <strong>with no life lost</strong>. The next one is ready in two seconds.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/magnet-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Right click</p>
+                        <h3>The charge blast</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/citybuster/08-charge.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Hold the right button to charge, release to set off an energy blast <strong>from every orb on the stage at once</strong>, wherever they are, without destroying them. Every orb also speeds up by 10%.</p>
+                        <p>Timing it well pays: any orb that bounced off the terrain in the last half second blasts with a <strong>50% larger radius</strong>. After a short cooldown it's ready again, for as long as orbs remain on the stage.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/double-ringed-orb-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The mouse wheel</p>
+                        <h3>Five kinds of orb</h3>
+                        <p>The ship can make five types of orb, picked with the wheel before release, a little like choosing a bird in Angry Birds:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table ammo">
+                                <thead><tr><th scope="col">Orb</th><th scope="col">How it plays</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Normal</th><td data-label="Plays">Medium size, medium blast. Reliable and easy to manage.</td></tr>
+                                    <tr><th scope="row">Triple</th><td data-label="Plays">Three small orbs with half-size blasts each. A more even spread of destruction.</td></tr>
+                                    <tr><th scope="row">Accelerator</th><td data-label="Plays">Starts slow and keeps speeding up to a top speed. Huge potential, hard to control.</td></tr>
+                                    <tr><th scope="row">Splitter</th><td data-label="Plays">Starts big; after three terrain hits it splits into three medium orbs, and each of those later into two small ones.</td></tr>
+                                    <tr><th scope="row">Charge</th><td data-label="Plays">Small, with a tiny blast. But a charge blast triples its speed and energizes it, so its next impact is a big blast, after which it keeps half the extra speed. Keep charging it without losing it and it grows absurdly powerful, and absurdly fast.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/fuel-tank-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The goal</p>
+                        <h3>Targets that hit back</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/citybuster/09-targets.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each stage hides the gang's <strong>targets</strong>: fuel tanks, silos, barrels, cargo containers, crates, industrial machines, transformers, capacitor banks, giant batteries. They're solid objects, not pixels, embedded in the terrain on the surface, underground or hanging from balloons. Destroy them all to clear the stage, which usually means digging down to them blast by blast.</p>
+                        <p>Every target that breaks sprays <strong>fireballs, lightning, metal shards and shrapnel</strong> up toward the sky, each taking one point off the ship's armor. The ship starts with ten and can be repaired up to fifty. If the armor runs out, the ship pulls back to orbit for repairs and returns to the same stage, which stays exactly as wrecked as you left it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/energy-shield-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Catch them before they're gone</p>
+                        <h3>Power-ups that stack</h3>
+                        <p>Roughly one target in three releases a power-up, which floats up and off into space unless you catch it. Most last 30 to 60 seconds, depending on rarity, and many stack, so a well-caught streak builds into something ridiculous.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table powerups">
+                                <thead><tr><th scope="col">For the orbs</th><th scope="col">For the ship</th></tr></thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Orbs"><ul><li>Bigger blasts, +20% each</li><li>Triple or quintuple launch</li><li>More mass: debris flies harder</li><li>More heat, and set on fire</li><li>Piercer: burrows in, blasts after a delay</li><li>Superheated: an aura that heats whatever it passes</li></ul></td>
+                                        <td data-label="Ship"><ul><li>Magnetic catcher: hold orbs, relaunch at will</li><li>Gravity field: rising orbs curve back to the ship</li><li>Hypervelocity launcher</li><li>Stronger engines: fly lower, up to 80% of the screen</li><li>Wider paddle, up to double</li><li>Armor repair and a shield generator</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sands-of-time-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Space bar</p>
+                        <h3>Slow motion, whenever you like</h3>
+                        <p>Slow motion is a toggle with <strong>no limit</strong>. When the sky is full of orbs, shrapnel and floating power-ups, slow it all down, line up the slap, thread the ship between two fireballs, catch the power-up, and speed back up.</p>
+                        <p>It's how a game this busy stays fair to the hands playing it, and how a really good chain of blasts gets watched properly.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-core-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Built in layers</p>
+                        <h3>Generated stages</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/citybuster/10-stage.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every stage is built by a generator from a seed, in passes. The ground goes down in layers, wood, grass and water on top, then sand and soil, then stone, then bedrock:</p>
+                        <ol class="p-chain">
+                            <li><b>Terrain</b>Layered sand and solids</li>
+                            <li style="--c: var(--p-2)"><b>Structures</b>Rectangles of concrete on and under the surface</li>
+                            <li style="--c: var(--p-3)"><b>Hollows</b>Some carved into caves, tunnels, shafts and rooms</li>
+                            <li><b>Water</b>Small pools, here and there</li>
+                            <li style="--c: var(--p-2)"><b>Detail</b>Trees, bushes, cables, glass, grass</li>
+                            <li style="--c: var(--p-3)"><b>Crews</b>Little wax figures in the open spaces</li>
+                            <li><b>Targets</b>The gang's machinery, scattered last</li>
+                        </ol>
+                        <p>The gang's crews are tiny wax figures, a couple of pixels wide, standing, sitting or lying about. They melt and burn like everything else. Each campaign can also bring a quirk to its stages, like different gravity or stronger explosions, so a gang's nine sites share a feel of their own.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/archive-register-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A living history</p>
+                        <h3>The log of flashbacks</h3>
+                        <p>Every stage is generated from a seed and given a name drawn from it, and both are saved in the log along with the campaign it belonged to. The log is the record of your war on the fringe: every gang, every planet, every site.</p>
+                        <p>Any entry can be replayed as a <strong>flashback</strong>, the exact same stage regenerated from its seed. The gang is still gone; you're only reliving a stage you liked, as many times as you like.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/citybuster_4_boxart.jpg" alt="Box art in pixel art: a long teal warship hovers above a neon city at night, firing red beams down into a burning street, a planet looming behind it." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Target briefing</p>
+                <h2 id="sendoff">City Buster: Orbital Brick Breaker</h2>
+                <p>Gang: three crimes, nine sites, one planet's worth of stolen mines and power plants. Their tanks, silos and batteries are buried deep, and they'll throw everything they have back at you.</p>
+                <p>You have a paddle in orbit and an endless supply of orbs. Slap them down. Dig them out. Melt the rest.</p>
+                <p><strong>Bust the city. Then pick the next one.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Breakout and Arkanoid, falling-sand games like The Powder Toy, Angry Birds and Just Cause 2</p>
+                <p>Icons by Lorc, Delapouite, Quoting, Caro Asercion and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Audiowide, Jersey 10, Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
         </div>
-
-        <footer class="footer">
-            <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-            <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-            <p><strong>Reactorcore Games - 2025</strong></p>
-        </footer>
-    </div>
+    </footer>
 </body>
 </html>
