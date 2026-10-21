@@ -177,7 +177,7 @@ OFL |0|Skateblade-Regular.ttf|SIL Open Font License Version 1.1|
 OFL |0|Skateblade-RegularItalic.ttf|SIL Open Font License Version 1.1|
     |0|Smack Laideth Down 2024.otf||
 CC0 |0|Spectrashell.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/
-    |4|Squares Bold Free.otf|sil ofl 1.1|
+OFL |4|Squares Bold Free.otf|sil ofl 1.1|
     |8|Standard Galactic Alphabet 8.ttf||
     |0|Standard Galactic Alphabet.ttf||
 CC0 |0|Stormfaze.otf|This font has been released under a no rights reserved Creative Commons Zero license.  Ple|https://creativecommons.org/publicdomain/zero/1.0/

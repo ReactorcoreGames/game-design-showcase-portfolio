@@ -1,0 +1,21 @@
+{
+  "slug": "Collidotron-mini",
+  "out": "site/projects/mini/collidotron",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, clean bright laboratory, ice blue and mint light. ",
+  "notes": "Mood-only mini images for Collidotron.html, beside the lore, game layer and feature text. SDXL (free): gen Collidotron-mini --model sdxl --max 999, then finish Collidotron-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "landfill", "ratio": "3:2", "prompt": "A vast old landfill hardened into glittering crystalline stone, being cut into blocks by machines."},
+    {"n": 2, "name": "machine", "ratio": "3:2", "prompt": "A sleek white reactor machine holding a glowing slab of colored crystal tiles in a titanium frame."},
+    {"n": 3, "name": "cascade", "ratio": "3:2", "prompt": "Hundreds of tiny glowing orbs bouncing through a shattering lattice of colored glass tiles."},
+    {"n": 4, "name": "loaf", "ratio": "3:2", "prompt": "A large block of crystalline stone sliced into thin glowing slabs, lined up on a conveyor."},
+    {"n": 5, "name": "archive", "ratio": "3:2", "prompt": "A quiet gallery wall of framed kaleidoscope tile patterns, softly lit, like an art collection."},
+    {"n": 6, "name": "calm", "ratio": "3:2", "prompt": "A technician relaxing at a clean control desk, watching a glowing machine at work, evening light."},
+    {"n": 7, "name": "nudge", "ratio": "3:2", "prompt": "Time slowed almost to a stop, glowing orbs hanging in the air among floating fragments of glass."},
+    {"n": 8, "name": "kaleidoscope", "ratio": "3:2", "prompt": "A symmetrical kaleidoscope pattern of beveled colored glass tiles, vivid magenta, gold and emerald."},
+    {"n": 9, "name": "pebbles", "ratio": "3:2", "prompt": "A stream of small polished pebbles of many materials pouring into sorting pipes, metal, ceramic, glass."},
+    {"n": 10, "name": "gallery", "ratio": "3:2", "prompt": "A grid of nine framed colorful tile patterns arranged three by three on a white wall."}
+  ]
+}

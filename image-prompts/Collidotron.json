@@ -1,0 +1,14 @@
+{
+  "slug": "Collidotron",
+  "prefix": "collidotron",
+  "preset": "03 Style - Pixel Front View",
+  "style": "Clean precise pixel art. Palette of ice blue, cyan and titanium white, with vivid jewel-colored tiles.",
+  "notes": "Rewrite (2026-10). Images 1, 2 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record and not meant to be regenerated. Image 3 was regenerated because the old one was a HUD full of gibberish text that didn't show the cascade, and image 4 because the old box art had the game's name painted into it: gen Collidotron --only 3,4, then finish Collidotron --only 3,4.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide view of a clean high-tech processing chamber with hexagonal glass walls and white panels, a glowing blue crystal floating above a platform holding a slab of multicolored square tiles, machinery and a robotic arm at the side."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Close dynamic view of a crystalline lattice shattering, glowing blue orbs bursting out of breaking tiles, electric arcs, and a cascade of crystal fragments pouring downward like a waterfall."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Straight top-down view of a rectangular slab of square tiles held in a polished titanium white frame, the tiles arranged in a symmetrical kaleidoscope pattern in vivid magenta, gold and emerald with beveled edges and thin dark outlines, over a softly glowing gradient background. A chain reaction is spreading from the center: dozens of small glowing white orbs ricochet in straight lines between the tiles, each orb trailing a thin line of light, tiles cracking and bursting into sparkling fragments where the orbs hit, a widening hole of broken tiles at the center and untouched tiles at the edges."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait cover composition. A tall sleek industrial machine of polished titanium white and pale blue glass, its open central chamber holding a glowing slab of colorful square crystal tiles arranged in a kaleidoscope pattern, a shower of glowing orbs and sparkling fragments bursting out of the slab. Below, a stream of small colorful pebbles pours down into sorting pipes. Clean light background with soft blue glow, empty space at the top of the frame."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Aerial view of a clean futuristic city beside a vast terraced landfill pit being mined, glowing power lines running from the pit into gleaming processing plants, green parks around."}
+  ]
+}

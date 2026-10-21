@@ -320,9 +320,9 @@ window.PROJECTS = [
   {
     page: "Collidotron.html", prefix: "collidotron",
     title: "Collidotron", subtitle: "Cascade Physics Processor",
-    icon: "crystal-cluster-lorc", tint: "cyan",
-    blurb: "23rd-century precision demolition of crystalline waste slabs: pick the right tiles and let cascading physics reactions restore the environment.",
-    genres: ["puzzle", "physics"], tags: ["cascades", "sci-fi", "environment"],
+    icon: "crystal-cluster-lorc", tint: "blue",
+    blurb: "A calm one-button chain reaction: crack one tile of a kaleidoscope slab and every tile its orb breaks releases another orb, until the whole slab is orbs.",
+    genres: ["puzzle", "physics", "arcade"], tags: ["chain reaction", "relaxing", "kaleidoscope", "recycling"],
     status: "concept", added: "2025-10-08"
   },
   {

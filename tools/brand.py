@@ -49,6 +49,12 @@ FONTS = [
     ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector
     ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon
     ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon
+    ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch
+    ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch
+    ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster
+    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster
+    ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron
+    ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 

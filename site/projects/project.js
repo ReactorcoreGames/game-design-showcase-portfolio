@@ -32,6 +32,7 @@
             else if (tag === "a") out += "[" + inner.trim() + "](" + n.href + ")";
             else if (tag === "cite") out += " (" + inner.trim() + ")";
             else if (tag === "br") out += " ";
+            else if (tag === "li") out += (out.trim() ? "; " : "") + inner.trim();   // a list inside a table cell
             else out += inner;
         });
         return out;

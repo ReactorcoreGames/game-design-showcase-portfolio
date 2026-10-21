@@ -4,758 +4,421 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collidotron: Cascade Physics Processor</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Experience the mesmerizing beauty of controlled demolition in the 23rd century. Spark precision chain reactions to break down crystalline slabs of lithified landfill, watching as physics transforms environmental waste into valuable materials through cascading collisions.">
-    <meta name="keywords" content="game design, physics processor, cascade reactions, environmental restoration, crystalline slabs, precision targeting, 23rd century, demolition">
+
+    <meta name="description" content="A game design concept by Reactorcore: a relaxing chain-reaction game. Crack one tile of a kaleidoscope slab, and every tile its orb breaks releases another orb, until the whole slab has turned to orbs. One button, no way to fail, and a gallery that keeps every slab you process.">
+    <meta name="keywords" content="game design concept, chain reaction, zen game, relaxing, brick breaker, cascade, kaleidoscope, procedural generation, recycling, one button, Reactorcore">
     <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Collidotron.html">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Collidotron: Cascade Physics Processor">
-    <meta property="og:description" content="Experience the mesmerizing beauty of controlled demolition in the 23rd century. Spark precision chain reactions to break down crystalline slabs of lithified landfill, watching as physics transforms environmental waste into valuable materials through cascading collisions.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/collidotron_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Collidotron.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Games - Game Design Showcase">
-    
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Collidotron: Cascade Physics Processor">
+    <meta property="og:description" content="A game design concept: crack one tile and watch the whole kaleidoscope slab cascade into orbs. A calm, one-button chain-reaction game. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Collidotron.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/collidotron_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Pixel art: a crystal lattice shattering, glowing blue orbs bursting free as fragments pour down like a waterfall">
+
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
     <meta name="twitter:title" content="Collidotron: Cascade Physics Processor">
-    <meta name="twitter:description" content="Experience the mesmerizing beauty of controlled demolition in the 23rd century. Spark precision chain reactions to break down crystalline slabs of lithified landfill, watching as physics transforms environmental waste into valuable materials through cascading collisions.">
+    <meta name="twitter:description" content="A game design concept: crack one tile and watch the whole slab cascade into orbs.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/collidotron_2_vignette.jpg">
-    <meta name="twitter:creator" content="@ReactorcoreGames">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Collidotron: Cascade Physics Processor",
-      "description": "Experience the mesmerizing beauty of controlled demolition in the 23rd century. Spark precision chain reactions to break down crystalline slabs of lithified landfill, watching as physics transforms environmental waste into valuable materials through cascading collisions.",
-      "genre": ["Physics Puzzle", "Environmental Restoration", "Precision Targeting", "Zen Gaming"],
-      "gamePlatform": "PC",
-      "author": {
-        "@type": "Organization",
-        "name": "Reactorcore Games",
-        "url": "https://reactorcore.itch.io/"
-      },
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/collidotron_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Collidotron.html",
-      "datePublished": "2025",
-      "gameFeature": [
-        "Cascade Chain Reactions",
-        "Crystalline Slab Processing",
-        "Precision Physics",
-        "Environmental Restoration",
-        "Kaleidoscopic Patterns",
-        "Zen-like Gameplay"
-      ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Physics puzzle enthusiasts, environmental restoration fans, and players who enjoy meditative precision gaming with beautiful visual effects"
-      }
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Collidotron: Cascade Physics Processor",
+        "description": "A game design concept, not a released game: a relaxing one-button chain-reaction game where one cracked tile releases an orb, every tile an orb breaks releases another, and a generated kaleidoscope slab cascades until it's entirely orbs, with campaigns of nine slabs archived in a gallery.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Casual", "Puzzle", "Arcade"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Collidotron.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/collidotron_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { primaryColor: '#4a90e2', primaryTextColor: '#fcfef0', primaryBorderColor: '#3498db' } });
-    </script>
-</head>
 
-<!--
-AI Image Requirements:
-collidotron_1_title.jpg (16:9): Crystalline processing chamber with geometric patterns and subtle energy effects
-collidotron_2_vignette.jpg (16:9): Mid-cascade scene showing orbs ricocheting through breaking crystalline lattice  
-collidotron_3_feature.jpg (16:9): Slow-motion intervention visualization with trajectory lines and strategic overlay
-collidotron_4_boxart.jpg (2:3): The Collidotron machine as precision industrial equipment with kaleidoscopic slab loading
-collidotron_5_story.jpg (16:9): Zoomed out overworld view of the greater setting the game takes place in
--->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0d1322">
 
-<body>
+    <link rel="preload" href="../fonts/exo2-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
+        /* Collidotron: a clean precision machine. Ice blue and mint over deep slate, with titanium
+           white for the frame and highlights. Exo 2 Black for the title and headings, Electrolize
+           for the subtitle and kickers. */
+        @font-face { font-family: "Exo 2"; src: url("../fonts/exo2-black.woff2") format("woff2"); font-weight: 900; font-display: swap; }
+        @font-face { font-family: "Electrolize"; src: url("../fonts/electrolize.woff2") format("woff2"); font-display: swap; }
+
         :root {
-            --background-color: #4f6ab7;
-            --container-bg: #e2f8f9;
-            --border-color: #4a90e2;
-            --text-color: #345;
-            --title-primary: #4a367d;
-            --title-secondary: #4a90e2;
-            --accent-color: #8498db;
-            --card-shadow: rgba(74, 144, 226, 0.15);
-            --hover-glow: #4ae275;
-            --subtle-bg: #b3d8fe;
-            --energy-blue: #00d4ff;
-            --crystal-teal: #47ffe6;
+            --flow-1: #0d1322;
+            --flow-2: #1d3150;
+            --grid-minor: rgba(170, 210, 255, 0.045);
+            --grid-major: rgba(170, 210, 255, 0.10);
+            --p-ground: rgba(13, 19, 34, 0.95);
+            --p-panel: #162036;
+            --p-1: #6cc4ff;
+            --p-2: #7ef0b8;
+            --p-3: #f3f6fb;
+            --p-text: #d9e1ee;
+            --p-dim: #a2b0c6;
+            --p-line: rgba(180, 210, 255, 0.15);
+            --font-title: "Exo 2", "Segoe UI", sans-serif;
+            --font-sub: "Electrolize", "Segoe UI", sans-serif;
+            --shade: #070b16;
         }
+        h2, h3, .p-name { font-weight: 900; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "slow breath": a long, calm glow that drifts from ice blue to mint and back,
+           as unhurried as the game. Dark layered shadows keep it legible at every point. */
+        .p-name {
+            letter-spacing: 0.01em;
+            animation: breathe 9s ease-in-out infinite;
         }
+        @keyframes breathe {
+            0%, 100% { text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(108, 196, 255, 0.35); }
+            50% { text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 30px rgba(126, 240, 184, 0.7); }
+        }
+        /* The hero art is pale, so the subtitle gets a light color and a heavy dark halo. */
+        .p-sub { text-transform: uppercase; letter-spacing: 0.1em; color: #cdeaff; text-shadow: 0 0 2px var(--shade), 0 0 4px var(--shade), 0 0 8px var(--shade), 0 0 16px var(--shade), 2px 2px 0 var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 2px;
+            background: linear-gradient(90deg, var(--p-1), var(--p-2));
+            animation: breathe-line 9s ease-in-out infinite;
+        }
+        @keyframes breathe-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(108, 196, 255, 0.4); opacity: 0.7; }
+            50% { box-shadow: 0 0 14px rgba(126, 240, 184, 0.8); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 9s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(126, 240, 184, 0.6); } }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.85rem; letter-spacing: 0.14em; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, var(--background-color) 0%, #17396588 100%);
-            color: var(--text-color);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        .branding-link {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 0.9rem;
-            color: var(--accent-color);
-            text-decoration: none;
-            background: var(--container-bg);
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 8px var(--card-shadow);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .branding-link:hover {
-            box-shadow: 0 0 15px var(--hover-glow);
-            border-color: var(--hover-glow);
-        }
-
-        .title-section {
-            position: relative;
-            height: 600px;
-            background: linear-gradient(rgba(26, 54, 93, 0.6), rgba(52, 152, 219, 0.5)), url('images/collidotron_1_title.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .title-content h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            color: white;
-            text-shadow: 0 0 20px var(--energy-blue);
-            animation: pingPongGlow 3s ease-in-out infinite;
-        }
-
-        .title-content .subtitle {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            font-weight: 300;
-            color: var(--crystal-teal);
-            text-shadow: 0 0 15px rgba(0, 162, 160, 0.8);
-            letter-spacing: 0.1em;
-        }
-
-        @keyframes pingPongGlow {
-            0%, 100% { 
-                text-shadow: 0 0 20px var(--energy-blue), 0 0 40px var(--energy-blue); 
-            }
-            50% { 
-                text-shadow: 0 0 30px var(--crystal-teal), 0 0 60px var(--crystal-teal), 0 0 80px var(--crystal-teal); 
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .section {
-            margin-bottom: 4rem;
-        }
-
-        .section h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1.5rem;
-            color: var(--title-primary);
-            text-shadow: 0 0 15px var(--accent-color);
-            animation: pingPongGlow 4s ease-in-out infinite;
-        }
-
-        .overview {
-            background: var(--container-bg);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            text-align: center;
-            font-size: 1.2rem;
-        }
-
-        .three-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .card {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 6px 24px var(--card-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px var(--hover-glow);
-            border-color: var(--hover-glow);
-        }
-
-        .card h3 {
-            color: var(--title-primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-
-        .card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .controls-section {
-            background: var(--subtle-bg);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            margin: 2rem 0;
-        }
-
-        .controls-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--container-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 2px solid var(--accent-color);
-        }
-
-        .controls-table th {
-            background: var(--accent-color);
-            color: white;
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .controls-table td {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            vertical-align: top;
-        }
-
-        .controls-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .controls-table tr:nth-child(even) {
-            background: var(--subtle-bg);
-        }
-
-        .controls-table .control-name {
-            color: var(--title-primary);
-            font-weight: 600;
-            min-width: 200px;
-        }
-
-        .vignette-section {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px var(--card-shadow);
-        }
-
-        .vignette-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/collidotron_2_vignette.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(246, 249, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            max-width: 400px;
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--text-color);
-            box-shadow: 0 4px 16px var(--card-shadow);
-        }
-
-        .game-layers {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .layer-card {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 6px solid var(--border-color);
-            box-shadow: 0 4px 16px var(--card-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .layer-card:hover {
-            border-left-color: var(--hover-glow);
-            box-shadow: 0 0 20px var(--hover-glow);
-        }
-
-        .layer-card h4 {
-            color: var(--title-primary);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .layer-number {
-            background: var(--border-color);
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-            font-weight: bold;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .feature-card {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 6px 24px var(--card-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px var(--hover-glow);
-            border-color: var(--hover-glow);
-        }
-
-        .feature-card h4 {
-            color: var(--title-primary);
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-
-        .diagram-section {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .feature-image-section {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px var(--card-shadow);
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/collidotron_3_feature.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .story-image-section {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px var(--card-shadow);
-        }
-
-        .story-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/collidotron_5_story.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 1.1fr 1.8fr;
-            gap: 2rem;
-            background: var(--container-bg);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            margin: 3rem 0;
-        }
-
-        .boxart-image {
-            aspect-ratio: 2/3;
-            background: url('images/collidotron_4_boxart.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
-            border: 2px solid var(--border-color);
-        }
-
-        .boxart-content h3 {
-            color: var(--title-primary);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .boxart-content .description {
-            font-size: 1.045rem;
-            line-height: 1.65;
-            background: var(--subtle-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        .boxart-content .description h3 {
-            color: var(--title-primary);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            margin-top: 0;
-        }
-
-        .footer {
-            background: var(--title-primary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer a {
-            color: var(--crystal-teal);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .three-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .vignette-quote, .feature-quote {
-                position: static;
-                margin-top: 1rem;
-                max-width: none;
-            }
-        }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .sizes td:last-of-type, .quirks td:last-of-type { width: 100%; }
+        .p-body .elements { columns: 4 8rem; column-gap: 1.2rem; margin: 0.6rem 0 1rem; padding: 0; list-style: none; font-family: var(--font-mono); font-size: 0.88rem; color: var(--p-dim); }
+        .p-body .elements li { margin: 0.1rem 0; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.95rem; } }
     </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <a href="https://www.patreon.com/ReactorcoreGames" class="branding-link">Reactorcore's Personal Game Design Project</a>
-
-    <div class="title-section">
-        <div class="title-content">
-            <h1>Collidotron</h1>
-            <div class="subtitle">Cascade Physics Processor</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <section class="section">
-            <div class="overview">
-                <p>Experience the mesmerizing beauty of controlled demolition in the 23rd century. Spark precision chain reactions to break down crystalline slabs of lithified landfill, watching as physics transforms environmental waste into valuable materials through cascading collisions.</p><br>
-                
-                <p>Combine strategic thinking with zen-like observation as reaction orbs ricochet through geometric lattices, creating unique kaleidoscopic patterns with every cascade. Master the art of timing and trajectory to achieve perfect slab collapse efficiency.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="three-cards">
-                <div class="card">
-                    <div class="icon">🎯</div>
-                    <h3>Target Audience</h3>
-                    <p><strong>Physics puzzle enthusiasts</strong> who enjoy strategic thinking combined with satisfying visual feedback. <strong>Relaxation seekers</strong> drawn to meditative gameplay experiences. <strong>Strategic thinkers</strong> who appreciate optimizing efficiency through careful planning and precise intervention.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">🧘</div>
-                    <h3>Game's Purpose</h3>
-                    <p><strong>Stress relief</strong> through mesmerizing cascade observation and <strong>competence building</strong> via strategic optimization. Fulfills needs for <strong>beauty and wonder</strong> through kaleidoscopic physics patterns, <strong>autonomy</strong> through meaningful choice, and <strong>purpose</strong> through environmental restoration context.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">⚡</div>
-                    <h3>Core Concept</h3>
-                    <p><strong>Spark controlled demolition</strong> with precise tile selection → <strong>Watch physics unfold</strong> in beautiful cascade patterns → <strong>Experience zen satisfaction</strong> as strategic interventions optimize the chain reaction flow for maximum efficiency and environmental benefit.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="story-image-section">
-            <div class="story-image"></div>
-            <div class="vignette-quote">
-                "In the sprawling industrial complexes of Neo-Geneva, where humanity's greatest challenge became its most beautiful solution - transforming the buried mistakes of centuries into the foundation of tomorrow."
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/collidotron_1_title.jpg" alt="Pixel art: a bright, clean processing chamber with hexagon-paned glass walls, a blue crystal floating above a platform that holds a slab of multicolored tiles, machinery at the side." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Collidotron</span><span class="p-sub">Cascade Physics Processor</span></h1>
             </div>
         </div>
+    </header>
 
-        <section class="section">
-            <h2>📖 Lore & Story</h2>
-            <div class="overview">
-                <p><strong>The Year 2347 - The Great Reclamation Era</strong></p><br>
-                
-                <p>Humanity has inherited a planet layered with the compressed remnants of industrial civilization. Beneath sprawling cities like Neo-Geneva and New Singapore lie vast geological strata of "lithified landfill" - ancient waste deposits transformed by catalytic processes into valuable crystalline materials.</p><br>
-                
-                <p><strong>You are a Licensed Cascade Technician</strong>, operating humanity's most sophisticated material reclamation technology. The Collidotron processing chambers represent the pinnacle of 23rd-century physics engineering - precision machines capable of transforming environmental burdens into construction materials for humanity's expansion to the stars.</p><br>
-                
-                <p><strong>The Mission:</strong> Each crystalline slab contains compressed layers of plastic polymers, metallic composites, and organic compounds - the buried mistakes of previous centuries now serving as the raw materials for sustainable futures. Your expertise in cascade physics directly contributes to humanity's greatest environmental restoration project, turning the planet's industrial scars into the foundation of interstellar civilization.</p><br>
-                
-                <p><em>Master the ancient art of controlled demolition to heal a world and build the next chapter of human expansion.</em></p>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/crystal-cluster-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/kaleidoscope-pearls-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Collidotron is a calm chain-reaction game. You crack one tile of a glowing slab, and it releases an orb. The orb ricochets through the slab, and every tile it breaks releases an orb of its own. Two become four, four become dozens, until the whole slab has turned into hundreds of orbs bouncing inside the machine.</p>
+            <p>Then the last tile breaks, and everything is flushed away, sorted and gone. A new slab slides in.</p>
+            <p>It's loosely inspired by brick breakers, but turned into something to watch and unwind with: one mouse button, no lives, no timer, and a reaction that always finishes. The player is a technician who starts it, and now and then nudges it along.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>People who unwind by watching something satisfying happen: domino runs, marble machines, a Peggle ball clearing the board, kinetic sculptures, screensavers.</p>
+                    <p>They want <strong>to switch off without switching off completely</strong>, with a little to do and a lot to look at.</p>
+                    <p>The whole game is one mouse button, with the other for speeding up.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Rest and peace:</strong> a slow, self-running process that asks almost nothing and always resolves.</p>
+                    <p><strong>Beauty:</strong> kaleidoscope slabs, multiplying orbs, a gallery that becomes an art collection.</p>
+                    <p><strong>Play and wonder:</strong> one touch starting something much bigger than itself.</p>
+                    <p>It deliberately avoids draining <strong>calm</strong>: there's nothing to lose, no fail state, no score to beat, and the only intervention is optional.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>A brick breaker keeps you tense: one ball, reflexes, and a life lost every time it gets past.</p>
+                    <p>Here <strong>the bricks break each other</strong>. Every broken tile adds an orb, orbs can't be lost, and the reaction carries itself to the end.</p>
+                    <p>Your part is <strong>one spark and the odd nudge</strong>, and the generated slabs and quirks keep every cascade different.</p>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <h2>⚙️ Controls & Interface</h2>
-            <div class="controls-section">
-                <table class="controls-table">
-                    <thead>
-                        <tr>
-                            <th>Control</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
+        <figure class="p-shot">
+            <img src="../projects/images/collidotron_5_story.jpg" alt="Pixel art: a clean, green futuristic city beside a huge terraced pit being mined, glowing lines running from the pit to white processing plants." width="1280" height="720" loading="lazy">
+            <figcaption>"The old landfills were turned to stone, and the stone turned out to be a mine."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/trash-can-delapouite.png)"></span>Lore and story</h2>
+            <h3>Landfills turned to stone</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/collidotron/01-landfill.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>By the 23rd century, centuries of waste had filled the landfills far beyond capacity. Instead of burying or burning it, scientists seeded the landfills with synthetic microbial and chemical catalysts. The agents bonded with the plastics, metals and organics and sped up geology itself, until the whole mass hardened into crystalline blocks of hybrid matter.</p>
+            <p>That material is called <strong>strata-mass</strong>. It isn't mined as ore but cut out in <strong>loaves</strong>: solid blocks of turned-to-stone landfill, each sliced into thin <strong>slabs</strong>.</p>
+
+            <h3>The Collidotron</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/collidotron/02-machine.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The Collidotron is a material disassembly reactor. A slab is locked into its titanium frame, and one precise pulse fractures a single tile, freeing a reaction orb: a tiny packet of stored kinetic energy that the machine keeps moving at a constant speed. The orb shatters the tiles it hits, each freeing its own orb, and the cascade runs until the slab has fully collapsed.</p>
+            <p>The released energy is siphoned into batteries. The fragments are flushed into sorting conduits below, separated into metals, ceramics, polymers and silicates, and pressed into standard <strong>material pebbles</strong> that feed universal assemblers, the 3D printers that make everything from cutlery to circuit boards.</p>
+
+            <h3>The job right now</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/collidotron/08-kaleidoscope.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You're the technician at the machine. What used to be a smelly landfill is now a shiny mine, and every slab you process cleans up a little more of the old world and turns it into the new one. Load a slab, start the reaction, and keep it running smoothly.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/click-skoll.png)"></span>Controls and interface</h2>
+            <p>The view looks straight down into the machine: a slab of square tiles held in a titanium-white frame, over a faint grid. There's almost no HUD at all. The whole game is played with the mouse.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Start the reaction</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Spark any tile; it breaks and sends its orb off at a random angle</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>During the cascade</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Slow time to a tenth of normal speed</dd></div>
+                        <div><dt>Click an orb</dt><dd>Select it, then click a direction to send it that way</dd></div>
+                        <div><dt>Click away</dt><dd>Cancel the selection and return to normal speed</dd></div>
+                        <div><dt>Right click</dt><dd>Toggle 1.5× speed, overriding the slow motion while it's on</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>A redirected orb keeps the standard speed; only its direction changes. Nothing else in the game needs input, so the controls can be learned in the first ten seconds and then mostly forgotten.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/collidotron_2_vignette.jpg" alt="Pixel art: dark crystal tiles cracking apart, glowing blue orbs bursting from them amid electric arcs, a stream of bright fragments pouring down like a waterfall." width="1280" height="720" loading="lazy">
+            <figcaption>"When the last tile breaks, every orb in the machine is flushed down into the sorting conduits below."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/pulse-sbed.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One slab, one cascade</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/collidotron/03-cascade.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Pick a tile and spark it. Watch the first orb find its way, the second follow, then a flood. Most of the time you just watch. When a lone orb is stuck circling an empty pocket while a corner of the slab sits untouched, slow time down and send it where it's needed.</p>
+                        <p>The last tile breaks, the orbs drain away, and the slab is done.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sliced-bread-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A loaf of nine slabs</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/collidotron/04-loaf.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is one <strong>loaf</strong> of strata-mass, cut into <strong>nine slabs</strong> of mixed sizes. Each loaf comes from somewhere, an urban landfill, industrial slag, electronic scrap, a seam of biowaste, and carries two or three <strong>quirks</strong> from its origin that change how all nine of its slabs behave.</p>
+                        <p>When the ninth slab is done, the loaf is assembled into a <strong>3×3 collage</strong> of its slabs, and archived.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/archive-research-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The archive</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/collidotron/05-archive.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every loaf you've processed stays in the archive, a gallery that keeps growing. There's no end to the landfills, so there's always another loaf.</p>
+                        <p>Over time the archive becomes a <strong>logbook of reclaimed matter</strong>, half industrial record and half accidental art collection: hundreds of kaleidoscope slabs, each one something you processed.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/meditation-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A slab at a time</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/collidotron/06-calm.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Open the game and the next slab of the current loaf is waiting in the frame. A slab is a few quiet minutes. Process one between tasks, or a whole loaf with an evening's music on.</p>
+                        <p>Stop after any slab, and the loaf waits where you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stick-frame-delapouite.png)"></span>Game modes</h2>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What it's for</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td class="control-name">Mouse Button 1 (Primary)</td>
-                            <td>Initial tile spark to start cascade, or enter slow-motion mode for precise trajectory adjustment and ball redirection.</td>
-                        </tr>
-                        <tr>
-                            <td class="control-name">Mouse Button 2 (Secondary)</td>
-                            <td>Toggle 1.5x time acceleration for faster cascade observation, overriding any slow-motion effects.</td>
-                        </tr>
-                        <tr>
-                            <td class="control-name">Strategic Intervention</td>
-                            <td>Pause time, select any active ball, then click to redirect it along new trajectory for optimal cascade optimization.</td>
-                        </tr>
-                        <tr>
-                            <td class="control-name">Precision Machine Interface</td>
-                            <td>Clean 32×19 grid with titanium frame, minimal HUD design emphasizing the beautiful physics rather than complex menus.</td>
-                        </tr>
+                        <tr><th scope="row">Processing</th><td data-label="What it's for">The main game: loaf after loaf, nine slabs each, every finished loaf archived as a collage.</td></tr>
+                        <tr><th scope="row">Replay</th><td data-label="What it's for">Open any slab from the archive and run it again, exactly as it was generated, sparking the same tile or a different one.</td></tr>
                     </tbody>
                 </table>
             </div>
+            <div class="p-nest" aria-label="The structure, outermost first">
+                <div><span>The archive</span><small>Every loaf you've processed, kept for good.</small>
+                    <div><span>A loaf</span><small>Nine slabs and two or three quirks from where it was mined.</small>
+                        <div><span>A slab</span><small>One spark, one cascade, one flush.</small></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <div class="vignette-section">
-            <div class="vignette-image"></div>
-            <div class="vignette-quote">
-                "Watch as a single spark becomes a symphony of cascading energy, each collision a note in the beautiful music of physics unfolding."
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/crystal-growth-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crystalize-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>A cascade that carries itself</h3>
+                        <p>Every orb moves at <strong>one constant speed</strong>, kept up by the machine. It never slows down and never falls. It bounces off tiles and the frame, and passes straight through other orbs. Every tile it breaks <strong>releases another orb</strong>, so the reaction grows on its own, faster and denser, until there's nothing left to break.</p>
+                        <p>That's what makes it relaxing. There's no way to lose an orb and no way for the reaction to fail; it only ever gets busier and closer to done. A full slab can end with hundreds of orbs in flight at once, so the game is built to handle up to 600, with light trails and up to a thousand particles of breaking tiles.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/collidotron_3_feature.jpg" alt="Pixel art seen from above: a slab of magenta, teal and gold tiles in a kaleidoscope pattern, held in a white frame, with a ring of shattering tiles and sparks opening up at its center." width="1280" height="720" loading="lazy">
+                            <figcaption>"One spark is enough. Every tile an orb breaks releases another orb, until the whole slab is orbs."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/slow-blob-sbed.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The technician's touch</p>
+                        <h3>One spark and the odd nudge</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/collidotron/07-nudge.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The player does two things. The first is the <strong>spark</strong>: choosing which tile cracks first. A tile in the middle of a dense cluster sets off a quick bloom; one at the edge of a void sends its orb on a long lonely trip first.</p>
+                        <p>The second is the <strong>nudge</strong>, and it's optional. Slow time to a tenth, pick out any orb, and point it somewhere better, usually at the last stubborn corner of the slab. And when you'd rather just get on with it, right click runs everything at one and a half times the speed.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/kaleidoscope-pearls-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Grown, not drawn</p>
+                        <h3>Kaleidoscope slabs</h3>
+                        <p>Every slab is generated: a collection of square tiles in a <strong>kaleidoscope or fractal pattern</strong>, centered or set off to one side, with pockets of empty space making up anywhere from 1% to half of it. Tiles get two to four vivid colors, beveled edges and a thin dark outline so they pop, over an animated gradient background in one to three softer colors, linear, rectangular, curved or round.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table sizes">
+                                <thead><tr><th scope="col">Slab</th><th scope="col">Grid</th><th scope="col">Tiles</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Small</th><td data-label="Grid">16 × 9</td><td data-label="Tiles">144</td></tr>
+                                    <tr><th scope="row">Medium</th><td data-label="Grid">24 × 13</td><td data-label="Tiles">312</td></tr>
+                                    <tr><th scope="row">Large</th><td data-label="Grid">32 × 18</td><td data-label="Tiles">576</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The frame adjusts to each size, and the voids shape the cascade as much as the tiles do.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mineral-pearls-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">What the slab is made of</p>
+                        <h3>Materials</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/collidotron/09-pebbles.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each color on a slab is a material, so every slab holds two to four of them. Materials change how a tile breaks and what kind of orb it releases, each with its benefits and drawbacks. A <strong>steel</strong> tile might take six hits from an orb of compound but only two from a steel orb, and a steel orb might plow straight through soft compound tiles instead of bouncing, until it meets one that takes more than a hit.</p>
+                        <p>The list draws on real and familiar substances, in the simple spirit of Astroneer's resources:</p>
+                        <ul class="elements">
+                            <li>Compound</li><li>Resin</li><li>Organic</li><li>Graphite</li><li>Ammonia</li><li>Acid</li><li>Ceramic</li><li>Carbon</li><li>Quartz</li><li>Silicon</li><li>Copper</li><li>Aluminum</li><li>Iron</li><li>Gold</li><li>Titanium</li><li>Lithium</li><li>Zinc</li><li>Tungsten</li><li>Plastic</li><li>Alloy</li><li>Steel</li><li>Glass</li><li>Hydrogen</li><li>Methane</li><li>Nitrogen</li><li>Sulfur</li><li>Helium</li><li>Argon</li>
+                        </ul>
+                        <p>The game can start with one generic material and grow from there. Every new material mixes with all the others, as do new machine frame skins and shader filters.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/minerals-faithtoken.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Where the loaf came from</p>
+                        <h3>Quirks</h3>
+                        <p>Each loaf brings two or three quirks from its origin, so a whole campaign has a character of its own:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table quirks">
+                                <thead><tr><th scope="col">Quirk</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Volatile compounds</th><td data-label="Does">Some tiles burst over a larger radius when they break</td></tr>
+                                    <tr><th scope="row">Heavy elements</th><td data-label="Does">Orbs move slower but break through several tiles</td></tr>
+                                    <tr><th scope="row">Magnetic fields</th><td data-label="Does">Orbs fly on curved paths</td></tr>
+                                    <tr><th scope="row">Quantum instability</th><td data-label="Does">Tiles now and then phase out of existence and back</td></tr>
+                                    <tr><th scope="row">Growth patterns</th><td data-label="Does">Porous voids, dense crystalline clusters or reinforced ridges in the slabs</td></tr>
+                                    <tr><th scope="row">Looks</th><td data-label="Does">Line or micro-explosion trails, fracture glow colors, a different flush</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Rarely, a loaf turns out to be <strong>anomalous</strong>: a test batch with stranger quirks, extreme symmetry, unusually porous layouts or unpredictable cascade speeds.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/archive-research-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A living catalog</p>
+                        <h3>The gallery</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/collidotron/10-gallery.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every slab is saved as a picture and a seed, and every finished loaf as its 3×3 collage, with its generated name, its quirks and a few facts about how it went: how long the reaction ran, how many collisions it took, how efficiently it collapsed. Those numbers are a record, not a grade; nothing is ranked and nothing is earned.</p>
+                        <p>Any slab can be <strong>replayed</strong> from its seed, the same tiles in the same pattern, from the same first spark or a new one. The gallery is the game's memory, and over time it becomes yours: an exhibition of every kaleidoscope you ever took apart.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/collidotron_4_boxart.jpg" alt="Box art in pixel art: a tall white and pale blue machine holds a glowing slab of colorful tiles, sparks bursting from it, and a stream of colorful pebbles pours out below." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Shift log</p>
+                <h2 id="sendoff">Collidotron: Cascade Physics Processor</h2>
+                <p>Loaf in. Nine slabs, sliced and framed. Origin: urban landfill, three hundred years deep. Quirks: magnetic fields, porous voids.</p>
+                <p>One pulse, one tile. Then let it run. The machine keeps the orbs moving; you keep an eye on the corners. The pebbles go down the conduits, the batteries fill, the slab goes to the gallery.</p>
+                <p><strong>Spark one. Watch them all.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Loosely inspired by brick breaker games, with a nod to Astroneer's resources</p>
+                <p>Icons by Lorc, Delapouite, Sbed, Skoll, Faithtoken and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Exo 2, Electrolize, Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
         </div>
-
-        <section class="section">
-            <h2>🏗️ Game Layers</h2>
-            <div class="game-layers">
-                <div class="layer-card">
-                    <h4><span class="layer-number">1</span>Moment-to-Moment Gameplay</h4>
-                    <p>Strategic tile selection to initiate cascades, precision trajectory planning for optimal efficiency, and tactical slow-motion interventions to guide reaction orbs through complex crystalline lattices. Players experience immediate satisfaction from beautiful physics while building mastery of cascade optimization techniques.</p>
-                </div>
-                <div class="layer-card">
-                    <h4><span class="layer-number">2</span>Low Metagame - Loaf Processing</h4>
-                    <p>Each campaign processes one complete loaf of lithified material, sliced into 9 distinct slabs with varying sizes (16×9, 24×13, 32×18) and unique material properties. Progress through diverse cascade challenges with different quirks like magnetic fields, quantum instability, or volatile compounds, culminating in beautiful 3×3 gallery completion.</p>
-                </div>
-                <div class="layer-card">
-                    <h4><span class="layer-number">3</span>High Metagame - Processing Archive</h4>
-                    <p>Persistent archive of all processed loaves with procedurally generated names, complete cascade statistics, and seed-based replay capability. Discover increasingly anomalous materials with exotic physics behaviors as your expertise grows, building a personal catalog of industrial beauty and environmental restoration achievements.</p>
-                </div>
-                <div class="layer-card">
-                    <h4><span class="layer-number">4</span>Practical Game Flow</h4>
-                    <p>Quick session setup with immediate slab loading → Single-click cascade initiation → Meditative observation with optional strategic interventions → Efficiency analysis and pattern appreciation → Seamless archive integration with natural stopping points that respect player time and attention.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>🎮 Game Modes</h2>
-            <div class="three-cards">
-                <div class="card">
-                    <h3>⚗️ Standard Processing</h3>
-                    <p>Core campaign experience processing regular lithified slabs with efficiency tracking and cascade optimization. Perfect for both quick 5-minute sessions and longer strategic deep-dives into complex material configurations.</p>
-                </div>
-                <div class="card">
-                    <h3>🔬 Anomalous Materials</h3>
-                    <p>Rare slabs with exotic physics behaviors - quantum phase tiles, magnetic field distortions, and unstable compound reactions. Offers unique challenges for experienced players seeking novel cascade experiences.</p>
-                </div>
-                <div class="card">
-                    <h3>📊 Replay Analysis</h3>
-                    <p>Study previous cascades with full seed reproduction, experiment with alternative intervention strategies, and discover optimization opportunities in your processing archive. Perfect for mastery-focused players.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>🔧 Game Features & Mechanics</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h4>Physics-Based Chain Reactions</h4>
-                    <p>Authentic cascade physics with consistent velocity maintenance and realistic collision dynamics. Reaction orbs maintain fixed speeds while exhibiting natural bounce behaviors, creating predictable yet beautiful emergent patterns that reward strategic thinking and physics intuition.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⏱️</div>
-                    <h4>Strategic Intervention System</h4>
-                    <p>Unique slow-motion mechanics allowing precise trajectory adjustment of active cascade orbs. Players can pause time, select any moving ball, and redirect its path to optimize efficiency or access difficult areas - bridging strategic planning with zen observation.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🧱</div>
-                    <h4>Modular Material Properties</h4>
-                    <p>Different tile materials exhibit unique breaking behaviors and orb interactions. Steel tiles require multiple hits but produce penetrating balls, while compound tiles shatter easily but create standard orbs. Material variety creates strategic depth and visual diversity.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h4>Procedural Slab Generation</h4>
-                    <p>Kaleidoscopic and fractal patterns generated through sophisticated algorithms, ensuring every slab offers unique visual beauty and cascade challenges. Pockets of empty space create strategic routing opportunities while maintaining aesthetic coherence.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h4>Campaign Progression System</h4>
-                    <p>Structured progression through loaves containing 9 slabs each, with material quirks and size variations creating natural difficulty curves. Complete loaves are archived as 3×3 galleries, providing long-term collection goals and visual achievement records.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💾</div>
-                    <h4>Archive & Replay System</h4>
-                    <p>Seed-based cascade reproduction allows exact replay of any previous processing session. Study your techniques, share interesting configurations, and experiment with alternative approaches to previously completed slabs for continuous learning and mastery development.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="diagram-section">
-            <h3>🔄 Cascade Reaction Process</h3>
-            <div class="mermaid">
-                flowchart TD
-                    A[Initial Spark] --> B[Orb Release]
-                    B --> C[Physics Propagation]
-                    C --> D{Strategic Intervention?}
-                    D -->|Yes| E[Slow-Motion Targeting]
-                    D -->|No| F[Natural Cascade]
-                    E --> G[Trajectory Adjustment]
-                    G --> C
-                    F --> H[Tile Breaking]
-                    H --> I[New Orb Release]
-                    I --> C
-                    C --> J{All Tiles Broken?}
-                    J -->|No| C
-                    J -->|Yes| K[Material Collection]
-                    K --> L[Efficiency Analysis]
-                    L --> M[Archive Storage]
-            </div>
-        </div>
-
-        <div class="feature-image-section">
-            <div class="feature-image"></div>
-            <div class="vignette-quote">
-                "Master the art of temporal intervention - where split-second decisions in slow motion create cascading consequences in real time."
-            </div>
-        </div>
-
-        <section class="section">
-            <h2>🛠️ Technical Excellence</h2>
-            <div class="card">
-                <p><strong>High-Performance Physics:</strong> Optimized to support up to 600 simultaneous reaction orbs with consistent collision detection and realistic bounce dynamics, ensuring smooth cascade experiences even in complex scenarios.</p><br>
-                
-                <p><strong>Efficient Visual Design:</strong> Elegant sprite-based graphics with color tinting systems for material variety, complemented by tasteful particle effects for tile breaking and orb trails. Minimal yet impactful visual feedback that emphasizes the beauty of physics over flashy distractions.</p><br>
-                
-                <p><strong>Modular Content System:</strong> Systematic asset reuse through procedural generation and color variation, allowing infinite visual variety from efficient development resources while maintaining consistent aesthetic quality and performance standards.</p>
-            </div>
-        </section>
-
-        <div class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-content">
-                <div class="description">
-                    <h3>Collidotron</h3>
-                    <p><strong>Transform chaos into order through the beautiful science of controlled demolition.</strong></p><br>
-                    
-                    <p>In the precision laboratories of the 23rd century, you are the master operator of humanity's most advanced material processing technology. Each crystalline slab holds the compressed history of human civilization - plastics, metals, and organics transformed through catalytic lithification into valuable building blocks for the future.</p><br>
-                    
-                    <p>Experience the zen of physics mastery as single sparks become cascading symphonies of energy. Guide reaction orbs through kaleidoscopic lattices with strategic precision, optimizing efficiency while witnessing the mesmerizing beauty of scientific progress.</p><br>
-                    
-                    <p><em>Environmental restoration meets meditative gameplay in this unique physics-based experience that celebrates both human ingenuity and the elegant simplicity of natural law.</em></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
     </footer>
-
-    <script>
-        // Add some interactive hover effects
-        document.querySelectorAll('.card, .feature-card, .layer-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-    </script>
 </body>
 </html>

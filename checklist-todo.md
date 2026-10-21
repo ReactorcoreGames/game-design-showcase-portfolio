@@ -79,7 +79,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] AALSuperweapon
 - [x] ChainReactionDemolitionPunch
 - [x] City Buster
-- [ ] Collidotron
+- [x] Collidotron
 - [ ] Custom Dismount ⚑
 - [ ] EradicationWars
 - [ ] Halberd_Suit_Wars

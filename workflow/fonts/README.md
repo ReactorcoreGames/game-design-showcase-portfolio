@@ -7,3 +7,5 @@ A ready-made look at the display fonts in `assets/fonts/` that are safe to self-
 - `samples-0-in-use.png`: fonts already taken by a page. Which page uses which is in the `FONTS` list in `tools/brand.py`; check it before choosing, so no two pages share a pair.
 
 If fonts are added to `assets/fonts/`, rerender the samples and the table and replace these files.
+
+Gotchas found so far: Zero Hour's `&` looks like an 8; the Zeroes family draws capital C like a lowercase one, so "City" reads "city"; Zector is a hairline face that vanishes over a busy or pale image, so keep it out of subtitles; the pixel fonts (6809 Chargen, Jersey 10, Micro5) need about 1–1.25rem to read as kickers.
