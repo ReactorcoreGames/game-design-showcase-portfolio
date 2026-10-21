@@ -263,10 +263,10 @@ window.PROJECTS = [
   },
   {
     page: "Planetary Ring Miner.html", prefix: "ringminer",
-    title: "Planetary Ring Miner", subtitle: "Breakout X Falling Sand",
-    icon: "ringed-planet-lorc", tint: "yellow",
-    blurb: "Mine exotic asteroid rings with Arkanoid precision and falling-sand physics, and turn the haul into interstellar infrastructure.",
-    genres: ["arcade", "falling-sand"], tags: ["breakout", "mining", "space"],
+    title: "Planetary Ring Miner", subtitle: "Falling Sand Mining",
+    icon: "ringed-planet-lorc", tint: "cyan",
+    blurb: "A brick breaker with the ball taken out: blast falling-sand asteroids from below, catch what falls, and grow a star sector's network of stations and trade lanes from your hauls.",
+    genres: ["arcade", "falling-sand"], tags: ["brick breaker", "mining", "space", "living map"],
     status: "concept", added: "2025-10-08"
   },
   {

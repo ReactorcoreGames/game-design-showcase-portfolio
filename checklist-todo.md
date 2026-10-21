@@ -89,7 +89,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Megalodon
 - [x] Mosh_Pit_Mayhem ⚑
 - [x] MutantLoveQuest ⚑
-- [ ] Planetary Ring Miner
+- [x] Planetary Ring Miner
 - [ ] Poo Storm Janitor Powersuit
 - [ ] RussiBiomonster ⚑
 - [ ] Skullhead

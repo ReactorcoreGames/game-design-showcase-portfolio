@@ -1,0 +1,14 @@
+{
+  "slug": "Planetary Ring Miner",
+  "prefix": "ringminer",
+  "preset": "01 Main - 3D Low Poly",
+  "style": "Low-poly vector illustration with flat shading. Deep violet and purple space, bright teal-green glows, pale lilac rock and silver metal.",
+  "notes": "Rewrite (2026-10). Images 1, 2, 3 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 4 is new because the old box art's planet showed Earth's continents (the first reroll came out as wireframe with the ship above the rocks, so the preset changed to 3D Low Poly, closer to the kept images): gen \"Planetary Ring Miner\" --only 4, then finish \"Planetary Ring Miner\" --only 4.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Low-angle wide shot of an industrial mining vessel with upward-facing guns hovering in a ring of crystalline asteroids around a huge violet planet."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Close action shot of an asteroid bursting apart under an energy blast, crystal shards, sand-like grains and vapor clouds spraying outward."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Overhead view of a network of space stations and outposts joined by glowing teal trade routes around a central hub."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait cover, solid flat-shaded low-poly 3D render. At the bottom of the frame, a wide flat rectangular grey mining ship shaped like a long hovering slab, seen from below and slightly in front, with a blaster cannon at each end pointing straight up and two big glowing thrusters on its underside. Teal laser bolts fly upward from its cannons into a glittering band of violet crystalline asteroids filling the middle of the frame, crumbling into streams of sand-like grains that fall back toward the ship. Above it all, a huge alien gas giant with swirling violet and lilac storm bands and a ring arcing across the starry sky."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide view of a planetary ring threaded with industrial stations and glowing gateways around a bright swirling disk, ringed planets in the starry sky."}
+  ]
+}

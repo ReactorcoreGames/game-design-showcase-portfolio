@@ -74,6 +74,8 @@ Look at every result before committing: `collage` makes a numbered sheet of a sp
 
 Klein's provider sometimes rejects an image with "Your output has been flagged" (HTTP 400, code 3030). It's a check on the generated picture, not the prompt, so it repeats with similar wording, and it costs nothing. Klein has no filter setting. Change what the picture shows: in the Graviton pilot, a "tall sleek bipedal mecha" was flagged three times and passed as "a huge armored hovering war machine with no legs", and a "heap of wrecked tanks with smoke rising" box art passed once the wreck pile was gone. In batch 1, a hero punching an apartment block was flagged, and a reworded punch into an empty warehouse was flagged again; Nano Banana drew it first time.
 
+Cartoon gore gets flagged too. In batch 3, a comic mosh pit with blood spurts and a flying severed arm was flagged on three of five images; two passed once the blood and loose limbs were taken out of the prompt (the page text can still describe them), and the third went to Nano Banana. Don't put gore in Klein prompts at all.
+
 Klein ignores small anatomical details it finds unusual. A "cyclops with one single large eye" came out with two eyes in the title shot while the box art, a close portrait, got it right. Check faces closely, and when a detail defines the character, frame it close or move that image to Nano Banana.
 
 Make every alt text describe what was actually generated, not what the prompt asked for.
@@ -99,7 +101,7 @@ Project pages also get up to ten small mood images beside their lore, layer and 
 - `lead` goes in front of every prompt, because SDXL only reads about 300 characters and never sees the style suffix. Keep it to the page's mood and two or three palette words. A strong colour word tints the whole set (Graviton's "violet glow" turned all ten magenta), which is fine as long as the set stays coherent.
 - The prompt is the section's opening line, lightly trimmed of names SDXL can't know. Don't chase accuracy; it's flavor, and the thumbnail size hides flaws.
 - `size` and `quality` make `finish` centre-crop to 4:3 and save at exactly 320×240, about 7 to 10 KB each.
-- Run: `gen <slug>-mini --model sdxl --max 999`, then `finish <slug>-mini --model sdxl`, then `collage <slug>-mini`. SDXL is slow (several minutes for ten), so run it in the background while doing other work. Reroll duds (an image whose mood fights the section) at most twice.
+- Run: `gen <slug>-mini --model sdxl --max 999`, then `finish <slug>-mini --model sdxl`, then `collage <slug>-mini`. SDXL is slow (several minutes for ten), so run it in the background while doing other work. Reroll duds (an image whose mood fights the section) at most twice. SDXL sometimes blocks one image of a set (`blocked=1` in the batch line), and `finish` then stops at that image without saving the ones after it: reword the blocked prompt, run `gen ... --only <n>` (a plain rerun reuses the old batch and changes nothing), and run `finish` again.
 
 ## SDXL fallback
 

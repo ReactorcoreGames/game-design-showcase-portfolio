@@ -1,0 +1,21 @@
+{
+  "slug": "Planetary Ring Miner-mini",
+  "out": "site/projects/mini/ringminer",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still in space, deep violet sky, teal glow, pale lilac rock. ",
+  "notes": "Mood-only mini images for Planetary Ring Miner.html, beside the lore, game layer and feature text. SDXL (free): gen \"Planetary Ring Miner-mini\" --model sdxl --max 999, then finish \"Planetary Ring Miner-mini\" --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "ring", "ratio": "3:2", "prompt": "A ring of glittering rocks circling a huge violet alien planet."},
+    {"n": 2, "name": "gleaner", "ratio": "3:2", "prompt": "A long flat rectangular robot mining ship with two big thrusters underneath, floating in space."},
+    {"n": 3, "name": "net", "ratio": "3:2", "prompt": "A glowing teal forcefield grid boxing in a cluster of asteroids in orbit."},
+    {"n": 4, "name": "site", "ratio": "3:2", "prompt": "An asteroid crumbling into streams of glittering sand under teal laser fire."},
+    {"n": 5, "name": "cluster", "ratio": "3:2", "prompt": "A cluster of strange crystal-covered asteroids drifting above a planet's atmosphere."},
+    {"n": 6, "name": "base", "ratio": "3:2", "prompt": "A busy orbital home base with docking bays and cargo containers, a planet below."},
+    {"n": 7, "name": "break", "ratio": "3:2", "prompt": "A remote operator's desk with a glowing screen of space, a mug of tea beside the keyboard."},
+    {"n": 8, "name": "crumble", "ratio": "3:2", "prompt": "Close-up of a rock breaking apart into fine glowing grains and wisps of gas in zero gravity."},
+    {"n": 9, "name": "workshop", "ratio": "3:2", "prompt": "A space station workshop with robotic arms assembling a laser cannon from scrap."},
+    {"n": 10, "name": "loadout", "ratio": "3:2", "prompt": "Rows of glowing canisters and crystals on storage racks inside a spaceship cargo bay."}
+  ]
+}

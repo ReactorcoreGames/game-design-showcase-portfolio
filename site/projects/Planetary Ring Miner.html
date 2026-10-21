@@ -3,710 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planetary Ring Miner: Breakout X Falling Sand - Game Design Showcase</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Command a specialized mining vessel in exotic asteroid rings where physics-based destruction meets strategic resource collection. Blast through alien materials with falling sand physics while building galactic infrastructure.">
-    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Planetary Ring Miner.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Planetary Ring Miner: Breakout X Falling Sand">
-    <meta property="og:description" content="Command a specialized mining vessel in exotic asteroid rings where physics-based destruction meets strategic resource collection. Blast through alien materials with falling sand physics while building galactic infrastructure.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/ringminer_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Planetary Ring Miner.html">
+    <title>Planetary Ring Miner: Falling Sand Mining</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a brick breaker turned upside down. Blast falling-sand asteroids in an alien planet's ring from a wide mining ship below, catch what falls, and grow a whole star sector's network of stations and trade lanes from your hauls.">
+    <meta name="keywords" content="game design concept, falling sand, brick breaker, Arkanoid inspired, asteroid mining, pixel physics, space infrastructure, Master of Orion inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Planetary%20Ring%20Miner.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Game Design Showcase">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Planetary Ring Miner: Falling Sand Mining">
+    <meta property="og:description" content="A game design concept: blast falling-sand asteroids from below, catch what falls, and grow a star sector from your hauls. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Planetary%20Ring%20Miner.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/ringminer_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Low-poly art: an asteroid bursts apart into teal crystal shards and grains under an energy blast">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Planetary Ring Miner: Breakout X Falling Sand">
-    <meta name="twitter:description" content="Command a specialized mining vessel in exotic asteroid rings where physics-based destruction meets strategic resource collection. Blast through alien materials with falling sand physics while building galactic infrastructure.">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Planetary Ring Miner: Falling Sand Mining">
+    <meta name="twitter:description" content="A game design concept: blast falling-sand asteroids from below, catch what falls, and grow a star sector from your hauls.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/ringminer_2_vignette.jpg">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Planetary Ring Miner: Breakout X Falling Sand",
-      "description": "Command a specialized mining vessel in exotic asteroid rings where physics-based destruction meets strategic resource collection. Blast through alien materials with falling sand physics while building galactic infrastructure.",
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/ringminer_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Planetary Ring Miner.html",
-      "author": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "creator": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "genre": "Space Mining Game",
-      "keywords": "space mining, asteroid mining, breakout, falling sand physics, strategic resource collection, interstellar civilization",
-      "dateCreated": "2025",
-      "inLanguage": "en-US"
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Planetary Ring Miner: Falling Sand Mining",
+        "description": "A game design concept, not a released game: a brick-breaker-style falling-sand shooter in which a wide mining ship blasts exotic asteroids from below and catches what falls, in generated campaigns whose hauls grow a persistent, shareable map of a star sector's infrastructure.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Arcade", "Shooter", "Simulation"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Planetary%20Ring%20Miner.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/ringminer_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#110d1c">
+
+    <link rel="preload" href="../fonts/skateblade.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /*
-        Required Images:
-        - ringminer_1_title.jpg: Industrial mining ship in exotic asteroid ring around alien planet
-        - ringminer_2_vignette.jpg: Dynamic asteroid destruction with exotic particle effects
-        - ringminer_3_feature.jpg: Sector development map showing infrastructure growth
-        - ringminer_4_boxart.jpg: Dramatic mining ship silhouette against colorful exoplanet
-        - ringminer_5_story.jpg: Zoomed out overworld view of the greater setting the game takes place in
-        */
+        /* Planetary Ring Miner: deep violet space, the teal of the mining blasters, a soft lilac for
+           the ring's rock, and a pale lilac white for highlights. Skateblade for the title and
+           headings, Exo for the subtitle and kickers. */
+        @font-face { font-family: "Skateblade"; src: url("../fonts/skateblade.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Exo"; src: url("../fonts/exo-regular.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --bg-primary: #1a0d2e;
-            --bg-secondary: #2d1b4e;
-            --bg-card: #3d2a5c;
-            --accent-exotic: #c44dc4;
-            --accent-bright: #7c4dff;
-            --accent-energy: #00e676;
-            --text-primary: #e8e3f3;
-            --text-secondary: #b39ddb;
-            --border-glow: #9c27b0;
-            --shadow-purple: rgba(156, 39, 176, 0.4);
-            --shadow-deep: rgba(26, 13, 46, 0.8);
-            --gradient-exotic: linear-gradient(135deg, #c44dc4, #7c4dff, #00e676);
+            --flow-1: #110d1c;
+            --flow-2: #2e1d52;
+            --grid-minor: rgba(200, 180, 255, 0.045);
+            --grid-major: rgba(200, 180, 255, 0.10);
+            --p-ground: rgba(18, 14, 30, 0.95);
+            --p-panel: #1d1830;
+            --p-1: #3fe2c2;
+            --p-2: #b48cff;
+            --p-3: #f0e8ff;
+            --p-text: #dcd6ea;
+            --p-dim: #a59dbb;
+            --p-line: rgba(200, 180, 255, 0.16);
+            --font-title: "Skateblade", "Segoe UI", sans-serif;
+            --font-sub: "Exo", "Segoe UI", sans-serif;
+            --shade: #09070f;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "blaster volley": two quick teal bursts of light, like the twin blasters
+           firing, then a slow violet afterglow as the rock above crumbles. Dark layered shadows keep
+           the title legible between volleys. */
+        .p-name {
+            font-size: clamp(1.7rem, 0.7rem + 4.2vw, 4.8rem);
+            letter-spacing: 0.02em;
+            animation: volley 4.5s ease-out infinite;
         }
+        @keyframes volley {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(180, 140, 255, 0.3); }
+            4% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 -6px 18px rgba(63, 226, 194, 0.95); }
+            9% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 10px rgba(63, 226, 194, 0.3); }
+            13% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 -6px 22px rgba(63, 226, 194, 1); }
+            30% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 4px 30px rgba(180, 140, 255, 0.7); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-1); letter-spacing: 0.06em; text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: volley-line 4.5s ease-out infinite;
+        }
+        @keyframes volley-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(63, 226, 194, 0.3); opacity: 0.7; }
+            4%, 13% { box-shadow: 0 0 16px rgba(63, 226, 194, 1); opacity: 1; }
+            30% { box-shadow: 0 0 12px rgba(180, 140, 255, 0.7); opacity: 0.85; }
+        }
+        .section-mark::after { animation: h2-line 4.5s ease-out infinite; }
+        @keyframes h2-line { 0%, 40%, 100% { box-shadow: none; } 4%, 13% { box-shadow: 0 0 12px rgba(63, 226, 194, 0.8); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.08em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 400; }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .project-label {
-            position: absolute;
-            top: 15px;
-            left: 20px;
-            z-index: 1000;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-
-        .project-label:hover {
-            opacity: 1;
-            color: var(--accent-exotic);
-        }
-
-        .title-section {
-            position: relative;
-            height: 700px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: linear-gradient(rgba(26, 13, 46, 0.2), rgba(45, 27, 78, 0.3)), url('images/ringminer_1_title.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .title-content {
-            text-align: center;
-            z-index: 2;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            animation: exoticGlow 3s ease-in-out infinite;
-            text-shadow: 0 0 20px var(--accent-exotic), 0 0 40px var(--accent-bright);
-        }
-
-        .subtitle {
-            font-size: clamp(1.2rem, 4vw, 2rem);
-            color: var(--text-primary);
-            font-weight: 300;
-            text-shadow: 0 0 15px var(--accent-bright);
-        }
-
-        @keyframes exoticGlow {
-            0%, 100% { 
-                text-shadow: 0 0 20px var(--accent-exotic), 0 0 40px var(--accent-bright), 0 0 60px rgba(196, 77, 196, 0.5);
-            }
-            25% { 
-                text-shadow: 0 0 25px var(--accent-bright), 0 0 50px var(--accent-energy), 0 0 75px rgba(124, 77, 255, 0.6);
-            }
-            50% { 
-                text-shadow: 0 0 30px var(--accent-energy), 0 0 60px var(--accent-exotic), 0 0 90px rgba(0, 230, 118, 0.4);
-            }
-            75% { 
-                text-shadow: 0 0 20px var(--accent-exotic), 0 0 45px var(--accent-bright), 0 0 70px rgba(196, 77, 196, 0.5);
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            padding: 2rem 0;
-        }
-
-        h2 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            margin-bottom: 2rem;
-            text-align: center;
-            animation: exoticGlow 3s ease-in-out infinite;
-            text-shadow: 0 0 15px var(--accent-exotic);
-        }
-
-        .overview {
-            background: var(--bg-secondary);
-            text-align: center;
-            font-size: 1.1rem;
-            margin: 0 auto;
-            padding: 4rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-glow);
-            box-shadow: 0 10px 30px var(--shadow-purple);
-        }
-
-        .three-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-glow);
-            box-shadow: 0 8px 25px var(--shadow-purple);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px var(--shadow-purple);
-            border-color: var(--accent-bright);
-        }
-
-        .card h3 {
-            color: var(--accent-exotic);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            text-shadow: 0 0 10px var(--accent-exotic);
-        }
-
-        .controls-section {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-glow);
-            margin: 2rem 0;
-        }
-
-        .controls-table {
-            width: 100%;
-            margin-top: 1.5rem;
-            border-collapse: collapse;
-            background: var(--bg-card);
-            border-radius: 10px;
-            overflow: hidden;
-            border: 2px solid var(--border-glow);
-        }
-
-        .controls-table th {
-            background: var(--accent-exotic);
-            color: white;
-            padding: 1rem;
-            text-align: left;
-            font-weight: bold;
-            border-bottom: 2px solid var(--border-glow);
-        }
-
-        .controls-table td {
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-glow);
-        }
-
-        .controls-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .controls-table tr:hover {
-            background: rgba(196, 77, 196, 0.1);
-        }
-
-        .control-key {
-            font-weight: bold;
-            color: var(--accent-bright);
-        }
-
-        .vignette-section {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 15px;
-            overflow: hidden;
-            min-height: 600px;
-            background: linear-gradient(rgba(26, 13, 46, 0.1), rgba(45, 27, 78, 0.1)), url('images/ringminer_2_vignette.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        .vignette-quote {
-            background: rgba(61, 42, 92, 0.9);
-            padding: 1.5rem;
-            margin: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--accent-exotic);
-            backdrop-filter: blur(10px);
-        }
-
-        .vignette-quote p {
-            font-style: italic;
-            font-size: 1.2rem;
-            color: var(--text-primary);
-            text-shadow: 0 0 10px var(--accent-bright);
-        }
-
-        .game-layers {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .layer-card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-glow);
-            position: relative;
-        }
-
-        .layer-card::before {
-            content: '';
-            position: absolute;
-            left: -2px;
-            top: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: var(--gradient-exotic);
-            border-radius: 15px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .layer-card:hover::before {
-            opacity: 0.3;
-        }
-
-        .layer-number {
-            display: inline-block;
-            background: var(--accent-exotic);
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
-            margin-right: 1rem;
-            font-weight: bold;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .feature-card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-glow);
-            box-shadow: 0 8px 25px var(--shadow-purple);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .feature-image-section {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 15px;
-            overflow: hidden;
-            min-height: 600px;
-            background: linear-gradient(rgba(26, 13, 46, 0.1), rgba(45, 27, 78, 0.1)), url('images/ringminer_3_feature.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        .story-section {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 15px;
-            overflow: hidden;
-            min-height: 600px;
-            background: linear-gradient(rgba(26, 13, 46, 0.1), rgba(45, 27, 78, 0.1)), url('images/ringminer_5_story.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            gap: 3rem;
-            align-items: center;
-            margin: 3rem 0;
-        }
-
-        .boxart-image {
-            width: 100%;
-            aspect-ratio: 2/3;
-            background: linear-gradient(rgba(26, 13, 46, 0.1), rgba(45, 27, 78, 0.1)), url('images/ringminer_4_boxart.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 15px;
-            border: 3px solid var(--border-glow);
-            box-shadow: 0 15px 40px var(--shadow-purple);
-        }
-
-        .boxart-description {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-glow);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .boxart-content {
-            flex-grow: 1;
-        }
-
-        .boxart-quote {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 2px solid var(--border-glow);
-            font-style: italic;
-            color: var(--text-primary);
-            text-align: center;
-        }
-
-        .diagram-container {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--border-glow);
-            margin: 2rem 0;
-        }
-
-        .footer {
-            background: var(--bg-secondary);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-            border-top: 2px solid var(--border-glow);
-        }
-
-        .footer a {
-            color: var(--accent-bright);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: var(--accent-exotic);
-        }
-
-        .bold-text {
-            font-weight: bold;
-            color: var(--accent-bright);
-        }
-
-        @media (max-width: 768px) {
-            .boxart-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .three-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .grid3 td, .grid3 thead th:not(:first-child) { text-align: center; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="project-label">
-        Reactorcore's Personal Game Design Project
-    </a>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <section class="title-section">
-        <div class="title-content">
-            <h1>Planetary Ring Miner</h1>
-            <div class="subtitle">Breakout X Falling Sand</div>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/ringminer_1_title.jpg" alt="Low-poly art: a boxy grey industrial ship with teal-glowing guns pointing up hangs among lilac rocks and teal crystals, a huge ringed violet planet behind it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Planetary Ring Miner</span><span class="p-sub">Falling Sand Mining</span></h1>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <div class="container">
-        <section class="section">
-            <div class="overview">
-                <p>Command a specialized mining vessel in the exotic asteroid rings of distant exoplanets, where <span class="bold-text">physics-based destruction</span> meets <span class="bold-text">strategic resource collection</span>. Blast through alien materials that behave like falling sand, gathering rare elements to fuel interstellar civilization.</p><br>
-                
-                <p>This unique fusion of <span class="bold-text">Arkanoid-style precision control</span> and <span class="bold-text">dynamic particle physics</span> creates an experience where every shot reshapes the environment, every collected resource builds toward something greater, and every mission contributes to the expansion of humanity across the stars.</p><br>
-                
-                <p>Balance moment-to-moment tactical decisions with long-term strategic planning as you <span class="bold-text">develop entire star sectors</span> from scattered rocks into thriving interstellar networks.</p>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/mining-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Planetary Ring Miner is a brick breaker with the ball taken out. You fly a wide mining ship along the bottom of the screen, like the paddle in Arkanoid, and blast upward with its guns into exotic asteroids made of falling-sand pixels. The rock crumbles into grains, liquid and gas that rain down toward you.</p>
+            <p>Some of what falls is worth catching on the ship's flat deck: <strong>energy crystals</strong> that power up your guns, <strong>ores</strong> to bring home. Some of it is dangerous and better shot down. Whatever slips past the ship falls into the planet's atmosphere and burns up.</p>
+            <p>Back home, your hauls go into new equipment and into the <strong>development of a whole star sector</strong>, a map of stations, trade lanes and outposts that grows a little with every campaign, and that you can name, flag and share.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Fans of brick breakers and falling-sand toys, and people who love watching something they built slowly grow, the way a bonsai or a city builder does.</p>
+                    <p>Brick breakers run out of levels; falling-sand toys never had a goal. These players want <strong>a satisfying, crumbly session that adds up to something</strong>.</p>
+                    <p>The mouse flies the ship and fires; three keys handle the tractor beam and consumables.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/crystal-growth-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Enjoyment:</strong> the tactile pleasure of solid rock crumbling into streams of pixels.</p>
+                    <p><strong>Creation and growth:</strong> a backwater sector turned, run by run, into a thriving network of your own design.</p>
+                    <p><strong>Choice:</strong> every campaign is picked from a grid of how intense and how long you want it to be.</p>
+                    <p>It avoids draining <strong>rest</strong> (a relaxing, short campaign is always on offer) and <strong>autonomy</strong> (you choose where the sector grows, or let the game place it).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/mesh-network-delapouite.png)"></span>Core concept</h3>
+                    <p>A brick breaker is a list of levels that ends. Here, campaigns are <strong>generated without end</strong>, and each one leaves something permanent behind: a new lane or station on the sector map.</p>
+                    <p>The map is an artwork the player paints just by playing, and it's theirs to export and show.</p>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <div class="three-cards">
-                <div class="card">
-                    <h3>🎯 Target Audience</h3>
-                    <p>Physics puzzle enthusiasts who appreciate <span class="bold-text">precision mechanics</span> combined with <span class="bold-text">meaningful progression</span>. Players who enjoy games like Breakout, falling sand simulations, and incremental building experiences that reward both skill and strategic thinking.</p>
-                </div>
-                <div class="card">
-                    <h3>🌟 Game's Purpose</h3>
-                    <p>Fulfills the human needs for <span class="bold-text">mastery and competence</span> through precise control and skill development, <span class="bold-text">progress and growth</span> through meaningful advancement systems, and <span class="bold-text">creativity and contribution</span> through building galactic infrastructure.</p>
-                </div>
-                <div class="card">
-                    <h3>⚡ Core Concept</h3>
-                    <p>Strategic destruction creates the foundation for creative construction. Every asteroid blasted provides resources that fuel both immediate tactical advantages and long-term civilization building, creating a <span class="bold-text">satisfying cycle of skill → reward → growth</span>.</p>
-                </div>
-            </div>
+        <figure class="p-shot">
+            <img src="../projects/images/ringminer_5_story.jpg" alt="Low-poly art: a planetary ring curving around a bright swirling violet disk, threaded with grey industrial structures and teal-lit gateways, ringed planets in the starry sky." width="1280" height="720" loading="lazy">
+            <figcaption>"Every campaign's haul adds something to the sector: a trade lane, a station, a relay, a shipyard."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span>Lore and story</h2>
+            <h3>The ring</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/ringminer/01-ring.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>An exoplanet on the edge of a young colonial sector is circled by a ring of exotic rock in low orbit. The rocks hold materials the colonies' industry needs, and nobody can get at them safely by hand: up close, the ring is too dangerous.</p>
+
+            <h3>The gleaner</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/ringminer/02-gleaner.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>So the work is done by remote-operated robot ships called gleaners: a long, flat rectangular hull with a blaster at each end, a wide deck on top that catches whatever falls onto it, and two big thrusters underneath that hold it in orbit. You're one of the operators, flying a gleaner from far away.</p>
+
+            <h3>The net</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/ringminer/03-net.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Each mining site is boxed in by a forcefield net, open only at the bottom. It keeps stray shots and exploding debris from flying off into space, and makes everything else fall downward, past the gleaner, toward the planet. The gleaner is programmed to stay a few meters below the lowest rock, for its own safety.</p>
+
+            <h3>The job right now</h3>
+            <p>Clear this cluster of mining sites, catch as much as you can, and bring it home, where it becomes equipment for you and infrastructure for the whole sector.</p>
         </section>
 
-        <section class="story-section">
-            <div class="vignette-quote">
-                <p>"Across the spiral arm, where ancient worlds drift in rings of shattered glory"</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Lore & Story</h2>
-            <div class="overview">
-                <p>In the year 2387, humanity has spread across the outer spiral arm through a network of <span class="bold-text">jump gates and trade corridors</span>. The discovery of exotic materials in planetary ring systems has sparked a new era of expansion, as these rare elements are essential for maintaining the quantum infrastructure that binds our scattered civilization together.</p><br>
-                
-                <p>You pilot a specialized <span class="bold-text">Orbital Extraction Vessel</span> for the Mining Guild, tasked with harvesting these precious resources from the debris fields of ancient worlds. These ring systems are the remnants of planets shattered by unknown forces millennia ago, their exotic matter properties unlike anything found in conventional asteroid belts.</p><br>
-                
-                <p>Each successful mining operation brings valuable materials back to the <span class="bold-text">Frontier Development Authority</span>, enabling the construction of new stations, research facilities, and defensive outposts. Your mission: transform empty space into thriving trade lanes that will secure humanity's foothold in this distant region of the galaxy, one asteroid field at a time.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Controls & Interface</h2>
-            <div class="controls-section">
-                <p>The mining vessel responds directly to your commands, with <span class="bold-text">intuitive mouse control</span> for positioning and <span class="bold-text">dual weapon systems</span> for tactical flexibility. Safety protocols prevent the ship from venturing too close to dangerous asteroid formations.</p>
-                
-                <table class="controls-table">
-                    <thead>
-                        <tr>
-                            <th>Control</th>
-                            <th>Function</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="control-key">Mouse Movement</span></td>
-                            <td>Direct paddle control within safe operational zone</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">Left/Right Click</span></td>
-                            <td>Primary/Secondary weapon firing modes</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">Mouse Wheel</span></td>
-                            <td>Cycle between equipped weapons (3 slots)</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">D (Hold)</span></td>
-                            <td>Activate tractor beam for resource collection</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">S</span></td>
-                            <td>Use selected consumable powerup</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">A</span></td>
-                            <td>Cycle through available consumables</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <p style="margin-top: 1.5rem;">Your mining ship features <span class="bold-text">upward-facing weapons</span> that require tactical positioning to hit targets effectively. The ship's wide collection surface automatically gathers materials that fall within range, while <span class="bold-text">safety thrusters</span> maintain optimal distance from hazardous asteroid formations.</p>
-            </div>
-        </section>
-
-        <section class="vignette-section">
-            <div class="vignette-quote">
-                <p>"Every blast reshapes the void into opportunity"</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Game Layers</h2>
-            <div class="game-layers">
-                <div class="layer-card">
-                    <h3><span class="layer-number">1</span>Moment-to-Moment Gameplay</h3>
-                    <p>Precise aiming and positioning as you <span class="bold-text">blast exotic asteroid materials</span> that transform into dynamic falling sand particles. Each material type reacts differently - some become gas clouds, others liquid streams, or loose debris with realistic physics. <span class="bold-text">Dodge falling hazards</span> while collecting valuable resources and powerups before they disappear or fall into the planet's atmosphere below.</p>
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/mouse-delapouite.png)"></span>Controls and interface</h2>
+            <p>The mouse moves the gleaner directly, anywhere in a box from the bottom of the site up to the safety line below the lowest rock. Its guns always point straight up, so aiming means getting underneath what you want to hit.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Fly</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Move the gleaner within the safe zone</dd></div>
+                    </dl>
                 </div>
-                
-                <div class="layer-card">
-                    <h3><span class="layer-number">2</span>Campaign Progression</h3>
-                    <p>Each mining operation consists of <span class="bold-text">5-15 locations</span> within a planetary ring system, with procedurally generated asteroid formations of varying complexity and material composition. Progress through increasingly challenging sites while managing <span class="bold-text">weapon durability</span> and building your equipment arsenal. Success depends on maximizing resource yield while minimizing ship damage.</p>
+                <div class="p-keygroup">
+                    <h3>Fire</h3>
+                    <dl>
+                        <div><dt>Mouse 1</dt><dd>The weapon's main fire</dd></div>
+                        <div><dt>Mouse 2</dt><dd>Its alternative fire</dd></div>
+                        <div><dt>Wheel</dt><dd>Switch between the three equipped weapons</dd></div>
+                    </dl>
                 </div>
-                
-                <div class="layer-card">
-                    <h3><span class="layer-number">3</span>Sector Development</h3>
-                    <p>Resources gathered from mining campaigns fuel the <span class="bold-text">expansion of interstellar civilization</span>. Build trade lanes between star systems, establish mining stations, research facilities, and defensive outposts. Watch as your contributions transform empty space into a thriving network of interconnected worlds, with each structure you build unlocking new possibilities for future expansion.</p>
+                <div class="p-keygroup">
+                    <h3>Tractor beam</h3>
+                    <dl>
+                        <div><dt>Hold D</dt><dd>Pull nearby crystals and ore toward the ship</dd></div>
+                    </dl>
                 </div>
-                
-                <div class="layer-card">
-                    <h3><span class="layer-number">4</span>Practical Game Flow</h3>
-                    <p>Launch the game → Select mining site intensity and duration from 3x3 matrix (quick/medium/long × easy/medium/hard) → Equip loadout from persistent inventory → Complete mining operation → Allocate resources between personal equipment and sector development → Review infrastructure growth → Repeat with enhanced capabilities and expanded strategic options.</p>
+                <div class="p-keygroup">
+                    <h3>Consumables</h3>
+                    <dl>
+                        <div><dt>A</dt><dd>Select the next consumable</dd></div>
+                        <div><dt>S</dt><dd>Use the selected one</dd></div>
+                    </dl>
                 </div>
             </div>
+            <p>A standard blaster's shot can be <strong>detonated mid-flight</strong> with a second click, to catch the loose pixels that are hard to hit directly. Other weapons have their own main and alternative modes, but every weapon has one for big chunks and one for stragglers.</p>
         </section>
 
-        <section class="section">
-            <h2>Core Features & Mechanics</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">🧪</span>
-                    <h3>Physics-Based Material Transformation</h3>
-                    <p>Asteroid materials follow <span class="bold-text">realistic falling sand physics</span> when destroyed. Different exotic materials transform into gas (disperses quickly), liquid (flows and pools), or loose solids (bounces and scatters) based on their composition. Environmental forces like space winds add unpredictable dynamics to particle behavior.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">⚔️</span>
-                    <h3>Adaptive Weapon Systems</h3>
-                    <p>Weapons feature <span class="bold-text">dual firing modes</span> - primary direct shots and secondary detonation capabilities for hard-to-reach particles. Equipment has durability that decreases over campaigns, requiring strategic research investment to maintain a diverse arsenal. Mix area-effect and precision tools to handle different tactical situations.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">🌪️</span>
-                    <h3>Dynamic Environmental Hazards</h3>
-                    <p>Planetary ring systems feature <span class="bold-text">ambient space weather</span> that affects particle trajectories and hazard behavior. Space winds, gravitational anomalies, and electromagnetic storms create unpredictable challenges that require adaptive tactics and split-second decision making.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">⚗️</span>
-                    <h3>Multi-Tier Resource Economy</h3>
-                    <p>Collected materials serve multiple purposes: <span class="bold-text">immediate tactical powerups</span>, persistent equipment upgrades, research project funding, and infrastructure development points. Balance personal advancement with collective civilization growth through strategic resource allocation decisions.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">🗺️</span>
-                    <h3>Visual Sector Building</h3>
-                    <p>Watch your contributions manifest as a <span class="bold-text">Master of Orion-style star map</span> that grows more complex with each successful mission. Build trade routes, stations, and megastructures that transform barren space into a thriving interstellar civilization. Export your unique sector as shareable artwork.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">🔬</span>
-                    <h3>Research-Driven Progression</h3>
-                    <p>Fund research projects using collected exotic materials to unlock <span class="bold-text">new weapons, ship upgrades, and consumable powerups</span>. Manage a persistent inventory system where you select optimal loadouts for each mission type, balancing immediate tactical needs with long-term strategic goals.</p>
-                </div>
-            </div>
-        </section>
+        <figure class="p-shot">
+            <img src="../projects/images/ringminer_2_vignette.jpg" alt="Low-poly art: a grey asteroid bursts apart in a star of teal crystal shards and sparks under a beam of teal energy, smoke and grains scattering against a violet sky." width="1280" height="720" loading="lazy">
+            <figcaption>"Blasted rock doesn't vanish: it breaks into gas, liquid or loose grains that drift and fall for a few seconds."</figcaption>
+        </figure>
 
-        <section class="feature-image-section">
-            <div class="vignette-quote">
-                <p>"From scattered rocks to thriving civilization"</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="diagram-container">
-                <h3 style="text-align: center; margin-bottom: 2rem; color: var(--accent-exotic);">🌌 Game Flow Visualization</h3>
-                <div class="mermaid">
-                    graph TD
-                        A[Select Mining Site<br/>Intensity x Duration] --> B[Equip Loadout<br/>Weapons + Consumables]
-                        B --> C[Mining Operation<br/>Blast + Collect + Dodge]
-                        C --> D[Resource Collection<br/>Ores + Powerups + Materials]
-                        D --> E{Resource Allocation}
-                        E --> F[Personal Equipment<br/>Weapons + Upgrades]
-                        E --> G[Research Projects<br/>New Technologies]
-                        E --> H[Infrastructure<br/>Sector Development]
-                        F --> I[Enhanced Loadout<br/>Options]
-                        G --> J[Unlocked Capabilities<br/>New Weapons/Tools]
-                        H --> K[Expanded Star Map<br/>Civilization Growth]
-                        I --> A
-                        J --> A
-                        K --> A
-                        
-                        style A fill:#c44dc4,stroke:#7c4dff,color:#fff
-                        style C fill:#00e676,stroke:#c44dc4,color:#000
-                        style H fill:#7c4dff,stroke:#00e676,color:#fff
-                        style K fill:#3d2a5c,stroke:#c44dc4,color:#fff
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="boxart-section">
-                <div class="boxart-image"></div>
-                <div class="boxart-description">
-                    <div class="boxart-content">
-                        <h2 style="text-align: left; margin-bottom: 1.5rem;">Planetary Ring Miner</h2>
-                        <p><span class="bold-text">Master the art of orbital extraction</span> in this unique fusion of precision breakout gameplay and realistic particle physics. Command a specialized mining vessel through exotic asteroid fields, where every blast creates cascading transformations of alien materials.</p><br>
-                        
-                        <p>Build your mining empire from humble beginnings to a sprawling interstellar civilization. <span class="bold-text">Strategic resource management</span> meets <span class="bold-text">tactical precision</span> as you balance immediate survival needs with long-term infrastructure development.</p><br>
-                        
-                        <p>Experience the satisfaction of turning destructive force into creative construction, where <span class="bold-text">skilled gameplay directly translates to meaningful progress</span> across the galaxy. Every asteroid cleared brings you closer to transforming the void into a thriving network of connected worlds.</p>
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/laser-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One mining site</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ringminer/04-site.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A generated asteroid of several exotic materials hangs at the top of the net. You slide under it and fire, carving it away pixel by pixel, while the debris rains down: catch the crystals and ore, dodge or shoot the hazards.</p>
+                        <p>The site is done when no solid rock is left and you've caught what's still falling. As the rock gets cleared, the safety line rises, and you can follow it up.</p>
                     </div>
-                    <div class="boxart-quote">
-                        "Transform the void into civilization, one asteroid at a time"
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/asteroid-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A campaign: one cluster of sites</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ringminer/05-cluster.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is a cluster of <strong>5 to 15 mining sites</strong>, each a fresh, randomly generated asteroid. You launch with the loadout you chose at home, three weapons and up to six kinds of consumable, and bring the haul back at the end.</p>
+                        <p>If the gleaner is wrecked by a hazard, a replacement is sent out and the campaign carries on, but whatever was in the wrecked ship's hold at that site is lost.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Home base and the sector</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ringminer/06-base.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Home is a menu of four tabs: the <strong>ring map</strong>, where nine new campaigns are always waiting; the <strong>inventory</strong> of your base and your ship's loadout; the <strong>workshop and shop</strong>, where what you brought home turns into equipment, consumables and contributions; and the <strong>sector map</strong>, which grows with every campaign.</p>
+                        <p>The ring never runs out of rock, and the sector never runs out of room to grow.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>As long or short as you like</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ringminer/07-break.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>You choose the session before it starts: a short, medium or long campaign, at a low, medium or high intensity. A site takes a few minutes. The game saves between sites, so a long campaign can be spread over several evenings.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/orbit-skoll.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>working the ring</strong>, campaign after campaign, with the sector growing behind you. It nests like this:</p>
+            <div class="p-nest" aria-label="The ring, outermost first">
+                <div><span>The sector</span><small>Endless: a map that grows a little with every campaign.</small>
+                    <div><span>A campaign</span><small>A cluster of 5 to 15 sites, at the length and intensity you chose.</small>
+                        <div><span>A mining site</span><small>One generated asteroid: a few minutes.</small>
+                            <div><span>A chunk</span><small>Blast it, watch it crumble, catch what falls.</small></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
 
-    <footer class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mesh-network-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>A sector you grow like a bonsai</h3>
+                        <p>The sector map is a simple, flat, scrollable and zoomable 2D map in the style of Master of Orion: bright circles for stars, smaller muted ones for planets, gas giants and moons, and some space terrain like nebulae and gravitational rivers, so it isn't just black.</p>
+                        <p>What you bring home from each campaign decides how much the sector can grow. You pick a spot and build: a <strong>line</strong> for a trade lane between stars or planets, or a <strong>node</strong> (a diamond, square or triangle) for a station, shipyard, outpost, gas-mining fleet, relay, jump gate, megastructure or a planet-wide development. Each is color-coded by sector of the economy: civilian, research, logistics, mining, farming, industry, military. Or press one button and let the game place it for you.</p>
+                        <p>Over many campaigns, a backwater turns into a dense, vibrant network. You can <strong>name the star system</strong>, design its flag, read a log of everything built and what it's called, and <strong>export the map</strong> as an image or SVG to share.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/ringminer_3_feature.jpg" alt="Low-poly art: an overhead view of grey stations on violet platforms around a central hub, joined by glowing teal lanes, with mining sites and towers in between." width="1280" height="720" loading="lazy">
+                            <figcaption>"What each campaign brings home decides how much the sector map grows: new lanes, stations and outposts."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crystalize-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Falling sand, upside down</p>
+                        <h3>Rock that crumbles</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ringminer/08-crumble.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The asteroids are static and solid until they're hit. Then, depending on their material and their randomly assigned color, the hit pixels turn into <strong>gas, liquid or loose grains</strong>, pushed by whatever force the weapon imparts, and fade away after two to six seconds, depending on the material.</p>
+                        <p>So a big blast doesn't just remove rock: it throws a shower of pixels around the site, and what breaks loose can knock other things loose too. Clearing an asteroid is as much about where you hit it as how hard.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/minerals-faithtoken.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">One pixel in twenty</p>
+                        <h3>What falls out</h3>
+                        <p>Every destroyed pixel has a <strong>5% chance</strong> to release something:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Drop</th><th scope="col">What it is</th><th scope="col">What to do</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Energy crystal</th><td data-label="What">Volatile crystals the gleaner converts into abilities, as temporary boosts or consumables</td><td data-label="Do">Catch it on the deck</td></tr>
+                                    <tr><th scope="row">Valuable ore</th><td data-label="What">Material for equipment and the sector's growth</td><td data-label="Do">Catch it, or pull it in with the tractor beam</td></tr>
+                                    <tr><th scope="row">Hazard</th><td data-label="What">Dangerous debris or an anomaly that damages the ship</td><td data-label="Do">Dodge it, or shoot it down</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Some sites have space weather: a solar wind of random strength and direction that pushes falling debris left or right as it comes down.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Pick your evening</p>
+                        <h3>Nine campaigns on the ring map</h3>
+                        <p>The ring map always offers <strong>nine fresh clusters</strong>, laid out as a three-by-three grid of intensity against length, so you can pick exactly the session you're in the mood for:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table grid3">
+                                <thead><tr><th scope="col">Intensity</th><th scope="col">Short</th><th scope="col">Medium</th><th scope="col">Long</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Low</th><td data-label="Short">A quick, calm haul</td><td data-label="Medium">An easy evening</td><td data-label="Long">A long, relaxing shift</td></tr>
+                                    <tr><th scope="row">Medium</th><td data-label="Short">A brisk run</td><td data-label="Medium">The standard job</td><td data-label="Long">A proper expedition</td></tr>
+                                    <tr><th scope="row">High</th><td data-label="Short">A sharp burst</td><td data-label="Medium">A hard shift</td><td data-label="Long">The deep end</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Nothing is locked: the long, intense ones are there from the start for those who want them.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/auto-repair-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Nothing lasts forever</p>
+                        <h3>Gear that wears out</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ringminer/09-workshop.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>You'll usually have six to nine weapons and upgrades in the base inventory, and take three on each campaign. Each one you take loses a point of durability; after a set number of campaigns it fails and goes to scrap, which feeds the sector's industry. Only the <strong>default blaster never breaks</strong>, so you're never left without a gun.</p>
+                        <p>The workshop builds replacements from the materials you deliver, so the kit keeps turning over naturally and you keep trying different weapons rather than settling on one forever. The limit is material, not a timer or a lock.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/backpack-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Big base, small ship</p>
+                        <h3>Loadout and consumables</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ringminer/10-loadout.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Like an extraction game, there's a big inventory at home and a small one on the ship. Before each campaign you choose what goes up: the three weapons and up to <strong>six kinds of consumable, nine of each</strong>, which you can trigger whenever you like, unlike the crystals caught in the field, which take effect at once.</p>
+                        <p>Part of each haul is yours to spend at the base shop on consumables and boosts for the next campaign. The rest goes to the sector's projects, and you can donate spare consumables to them too.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/ringminer_4_boxart.jpg" alt="Box art in low-poly 3D: a flat grey mining ship with two glowing thrusters fires twin teal beams up into a band of lilac asteroids, grains raining down, a ringed violet gas giant above." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Now hiring: remote gleaner operators</p>
+                <h2 id="sendoff">Planetary Ring Miner: Falling Sand Mining</h2>
+                <p>The ring is full of what the colonies need, and it's too dangerous to touch. That's what the gleaners are for. You fly one from a safe chair, blast the rock from below, and catch what falls on the deck.</p>
+                <p>Every load you bring home builds something out there: a lane between two stars, a shipyard, a relay at the edge of the map. In a year, the sector won't look like the same place. Name it something good.</p>
+                <p><strong>Every grain counts. Every lane lasts.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Arkanoid, falling-sand games and Master of Orion</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Skateblade, Exo, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
     </footer>
-
-    <script>
-        mermaid.initialize({ 
-            theme: 'dark',
-            themeVariables: {
-                primaryColor: '#c44dc4',
-                primaryTextColor: '#e8e3f3',
-                primaryBorderColor: '#7c4dff',
-                lineColor: '#00e676',
-                secondaryColor: '#3d2a5c',
-                tertiaryColor: '#2d1b4e'
-            }
-        });
-    </script>
 </body>
 </html>
