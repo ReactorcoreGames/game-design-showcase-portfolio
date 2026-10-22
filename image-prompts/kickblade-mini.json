@@ -1,0 +1,21 @@
+{
+  "slug": "kickblade-mini",
+  "out": "site/projects/mini/kickblade",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - L - Dreamy-Surreal",
+  "lead": "Dreamy film still, drab grey corporate city, soft ethereal pink light. ",
+  "notes": "Mood-only mini images for kickblade.html, beside the lore, game layer and feature text. SDXL (free): gen kickblade-mini --model sdxl --max 999, then finish kickblade-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "city", "ratio": "3:2", "prompt": "Glass office towers over worn concrete, a cargo elevator climbing the side of one."},
+    {"n": 2, "name": "heroine", "ratio": "3:2", "prompt": "A young woman with soft pink hair in a pink and white frilly outfit, seen from behind on a grey street."},
+    {"n": 3, "name": "executive", "ratio": "3:2", "prompt": "An empty luxury penthouse office with a huge window over a smoggy city, a leather chair facing away."},
+    {"n": 4, "name": "room", "ratio": "3:2", "prompt": "The inside of a large industrial cargo elevator, metal walls and a flickering light."},
+    {"n": 5, "name": "gauntlet", "ratio": "3:2", "prompt": "An elevated train crossing between grey towers at dusk."},
+    {"n": 6, "name": "gallery", "ratio": "3:2", "prompt": "A wall of framed portraits of businessmen in suits in a dim corridor."},
+    {"n": 7, "name": "break", "ratio": "3:2", "prompt": "A pink coffee cup steaming on a rooftop ledge above a grey city."},
+    {"n": 8, "name": "keys", "ratio": "3:2", "prompt": "A hand resting on the left side of a keyboard lit with soft pink light."},
+    {"n": 9, "name": "goons", "ratio": "3:2", "prompt": "Security guards with batons standing in a grey corridor, seen from a distance."},
+    {"n": 10, "name": "health", "ratio": "3:2", "prompt": "Small pink hearts floating in soft light over a concrete floor."}
+  ]
+}

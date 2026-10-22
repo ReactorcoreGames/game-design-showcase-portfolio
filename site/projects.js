@@ -63,10 +63,10 @@ window.PROJECTS = [
   },
   {
     page: "kickblade.html", prefix: "kickblade",
-    title: "Kick Blade", subtitle: "Vigilante Action Game",
+    title: "Kick Blade", subtitle: "One-Handed Arcade Brawler",
     icon: "high-kick-delapouite", tint: "magenta",
-    blurb: "Ultra-accessible arcade action: a cutecore heroine takes on corrupt CEOs with kicks and a utility knife. Physics-driven combat, playable with one hand.",
-    genres: ["action", "physics"], tags: ["vigilante", "accessibility", "one-handed", "melee"],
+    blurb: "A small, cathartic brawler played with one hand: a cutecore heroine kicks one-hit corporate goons out of elevators, trains and penthouses, eight rooms at a time, up to a generated greedy executive.",
+    genres: ["action", "arcade", "physics"], tags: ["one-handed", "single screen", "kicks", "procedural villains"],
     status: "concept", added: "2025-10-08"
   },
   {

@@ -104,7 +104,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] colossal_devastators
 - [x] cyberdungeon
 - [x] greensteelcommander
-- [ ] kickblade
+- [x] kickblade
 - [ ] spacelancer
 - [ ] starforge-legion ⚑
 - [ ] thunderstrike-justice
