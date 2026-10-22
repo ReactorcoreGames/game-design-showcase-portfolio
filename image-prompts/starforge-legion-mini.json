@@ -1,0 +1,21 @@
+{
+  "slug": "starforge-legion-mini",
+  "out": "site/projects/mini/starforge",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - H - Gritty-Dirty",
+  "lead": "Gritty sci-fi film still, worn rusty gunmetal, glowing orange embers. ",
+  "notes": "Mood-only mini images for starforge-legion.html, beside the lore, game layer and feature text. SDXL (free): gen starforge-legion-mini --model sdxl --max 999, then finish starforge-legion-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "legion", "ratio": "3:2", "prompt": "A small crew of pilots in worn flight suits walking across a dim hangar toward their machines."},
+    {"n": 2, "name": "system", "ratio": "3:2", "prompt": "A ringed gas giant over a cratered moon, a lone ship crossing in front of it."},
+    {"n": 3, "name": "target", "ratio": "3:2", "prompt": "The dark silhouette of a man in a long coat standing behind a window in a fortress tower."},
+    {"n": 4, "name": "battle", "ratio": "3:2", "prompt": "Tracer fire and explosions over a wide cratered plain, a fighter jet streaking low."},
+    {"n": 5, "name": "campaign", "ratio": "3:2", "prompt": "A row of ten small lights on a worn metal console, the first few glowing orange."},
+    {"n": 6, "name": "win-log", "ratio": "3:2", "prompt": "A battered logbook lying open on a metal table under a single lamp."},
+    {"n": 7, "name": "break", "ratio": "3:2", "prompt": "A pilot's helmet resting on a seat in a quiet cockpit, embers of light outside."},
+    {"n": 8, "name": "drift", "ratio": "3:2", "prompt": "A machine tumbling through empty space with its engines off, stars wheeling behind it."},
+    {"n": 9, "name": "weapons", "ratio": "3:2", "prompt": "An oversized robot rifle lying in the dust of a battlefield, still smoking."},
+    {"n": 10, "name": "worlds", "ratio": "3:2", "prompt": "A thin glowing layer of atmosphere over a planet, seen from low orbit, clouds and sea below."}
+  ]
+}

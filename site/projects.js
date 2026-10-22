@@ -272,9 +272,9 @@ window.PROJECTS = [
   {
     page: "starforge-legion.html", prefix: "starforge",
     title: "Starforge Legion", subtitle: "Mecha Space Combat",
-    icon: "robot-helmet-delapouite", tint: "blue",
-    blurb: "Elite contractor pilots fly transformable mecha through 22nd-century space, in tactical combat across very different environments.",
-    genres: ["mecha", "action", "vehicles"], tags: ["space combat", "transforming", "contractors"],
+    icon: "robot-helmet-delapouite", tint: "orange",
+    blurb: "Troubleshooters for hire fly jets that become mecha at will, across planets, moons, orbits and nebulae: ten generated stages per contract, one villain at the end.",
+    genres: ["mecha", "action", "vehicles"], tags: ["space combat", "transforming", "troubleshooters", "procedural campaigns"],
     status: "concept", added: "2025-10-08"
   },
   {

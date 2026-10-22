@@ -1,0 +1,14 @@
+{
+  "slug": "starforge-legion",
+  "prefix": "starforge",
+  "preset": "01 Main - 3D High Poly",
+  "style": "Palette of deep void black, worn steel-grey armor with rust weathering, industrial orange thruster and warning-light glow, and a violet nebula.",
+  "notes": "Rewrite (2026-10). Images 1 to 4 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 5 is the missing story image. gen starforge-legion --only 5, then finish starforge-legion --only 5.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide shot of a massive industrial transformable mecha hovering in space against a swirling nebula, with wear patterns, exposed mechanical joints and battle-scarred armor. Glowing orange thruster exhausts and a blue plasma weapon, asteroid debris drifting nearby."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Medium tracking shot of a sleek fighter-mecha hybrid banking through a dense asteroid field firing energy bursts, transforming mid-flight from streamlined fighter to humanoid mecha. Orange muzzle flashes light the asteroid surfaces, debris cascades from impacts."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Close dramatic angle on a transformation sequence as fighter wings retract into mecha shoulder armor: hydraulic pistons, exposed cabling, articulated joints, orange warning lights, a helmet visor reflecting holographic targeting, distant planetary rings."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait of a pilot in a full armored environmental suit seated in an industrial mecha cockpit, visor reflecting holographic displays, gloved hands on weathered controls, exposed machinery around the seat, orange status lights and blue readouts."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide establishing shot of a frontier star system. In the foreground, a cratered grey moon with a sprawling armored fortress base built into its surface, lit by orange floodlights. Above it a huge banded gas giant with rings fills half the sky. Along the lower edge curves the glowing horizon of a blue ocean planet. A violet nebula and drifting asteroid debris in the black void. A boxy grey supply mothership with a flat landing deck hangs in orbit, and a small grey fighter jet with orange thruster flames streaks down toward the fortress."}
+  ]
+}
