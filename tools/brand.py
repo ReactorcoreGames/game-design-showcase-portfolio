@@ -41,22 +41,22 @@ FONTS = [
     ("Orbitron[wght].ttf", "rc-display-black.woff2", {"wght": 900}, "RC Display"),
     # Project pages' own display fonts (see workflow/page-brief.md). Check each font's
     # embedded licence first; prefer CC0 and SIL OFL ones.
-    ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships
+    ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships, greensteelcommander
     ("OperationNapalm-Regular.ttf", "operation-napalm.woff2", None, None),  # CC0, AAL-Bunkerships
     ("Zero Hour.otf", "zero-hour.woff2", None, None),                       # CC0, graviton-mayhem
     ("Squares Bold Free.otf", "squares-bold.woff2", None, None),            # SIL OFL, graviton-mayhem
-    ("Radio Stars.otf", "radio-stars.woff2", None, None),                   # CC0, AAL-Stealth-Sector
+    ("Radio Stars.otf", "radio-stars.woff2", None, None),                   # CC0, AAL-Stealth-Sector, cyberdungeon
     ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector
-    ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon
+    ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon, colossal_devastators
     ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon
-    ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch
+    ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch
     ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster
-    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster
+    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators
     ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron
-    ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron
+    ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron, bunkership
     ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount, Underground Brawl
-    ("ShareTechMono-Regular.ttf", "share-tech-mono.woff2", None, None),     # SIL OFL, Custom Dismount
+    ("ShareTechMono-Regular.ttf", "share-tech-mono.woff2", None, None),     # SIL OFL, Custom Dismount, greensteelcommander
     ("Hydrogen Whiskey.otf", "hydrogen-whiskey.woff2", None, None),         # CC0, EradicationWars, RussiBiomonster
     ("Aldrich-Regular.ttf", "aldrich.woff2", None, None),                   # SIL OFL, EradicationWars
     ("Fragile Bombers.otf", "fragile-bombers.woff2", None, None),           # CC0, Halberd_Suit_Wars, Skullhead
@@ -71,7 +71,7 @@ FONTS = [
     ("Skateblade-RegularItalic.ttf", "skateblade-italic.woff2", None, None),  # SIL OFL, Mosh_Pit_Mayhem (with Anklepants)
     ("Zeroes Two.otf", "zeroes-two.woff2", None, None),                     # CC0, MutantLoveQuest
     ("ExpletusSans-Medium.ttf", "expletus-sans-medium.woff2", None, None),  # SIL OFL, MutantLoveQuest
-    ("Skateblade-Regular.ttf", "skateblade.woff2", None, None),             # SIL OFL, Planetary Ring Miner
+    ("Skateblade-Regular.ttf", "skateblade.woff2", None, None),             # SIL OFL, Planetary Ring Miner, kickblade
     ("exo.regular.otf", "exo-regular.woff2", None, None),                   # SIL OFL, Planetary Ring Miner
     ("World of Water.otf", "world-of-water.woff2", None, None),             # CC0, Poo Storm Janitor Powersuit
     ("Exo2.0-ExtraBoldItalic.otf", "exo2-extrabold-italic.woff2", None, None),  # SIL OFL, Poo Storm Janitor Powersuit
@@ -86,6 +86,8 @@ FONTS = [
     ("MatrixType-Regular.ttf", "matrixtype.woff2", None, None),             # CC0, antigrav_deconstruction
     ("Exo2.0-ExtraBold.otf", "exo2-extrabold.woff2", None, None),           # SIL OFL, astro_industry
     ("ExpletusSans-SemiBold.ttf", "expletus-sans-semibold.woff2", None, None),  # SIL OFL, astro_industry
+    ("Exo2.0-MediumItalic.otf", "exo2-medium-italic.woff2", None, None),     # SIL OFL, cyberdungeon
+    ("ExpletusSans-BoldItalic.ttf", "expletus-sans-bold-italic.woff2", None, None),  # SIL OFL, kickblade
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 
