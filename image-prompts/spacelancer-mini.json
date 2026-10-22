@@ -1,0 +1,21 @@
+{
+  "slug": "spacelancer-mini",
+  "out": "site/projects/mini/spacelancer",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - P - Long Exposure",
+  "lead": "Long exposure sci-fi film still, deep navy space, cyan light trails, violet nebula glow. ",
+  "notes": "Mood-only mini images for spacelancer.html, beside the lore, game layer and feature text. SDXL (free): gen spacelancer-mini --model sdxl --max 999, then finish spacelancer-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "sector", "ratio": "3:2", "prompt": "A sector of space full of stations, planets, nebula clouds and asteroid fields, linked by lanes of light."},
+    {"n": 2, "name": "freelancer", "ratio": "3:2", "prompt": "A lone pilot in a flight suit looking out of a cockpit window at a distant space station."},
+    {"n": 3, "name": "tether", "ratio": "3:2", "prompt": "A glowing beam of light pulling an escape pod away from an exploding starship."},
+    {"n": 4, "name": "dogfight", "ratio": "3:2", "prompt": "Small starfighters weaving between tumbling asteroids, laser bolts streaking past."},
+    {"n": 5, "name": "career", "ratio": "3:2", "prompt": "A small cargo starship docking at a busy trading station with bright docking lights."},
+    {"n": 6, "name": "hall", "ratio": "3:2", "prompt": "A quiet hall of tall statues of pilots under a glass dome full of stars."},
+    {"n": 7, "name": "rest", "ratio": "3:2", "prompt": "A starship parked in a calm hangar, the cockpit lights dimmed, stars through the open bay doors."},
+    {"n": 8, "name": "flight", "ratio": "3:2", "prompt": "A starship boosting in a sharp curve, its engine trail bending in a bright arc."},
+    {"n": 9, "name": "shields", "ratio": "3:2", "prompt": "A rippling energy shield bubble around a starship, sparks where shots hit it."},
+    {"n": 10, "name": "heat", "ratio": "3:2", "prompt": "Glowing red-hot gun barrels on a starship turret, heat haze rising from them."}
+  ]
+}

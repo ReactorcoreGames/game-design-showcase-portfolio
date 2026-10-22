@@ -4,671 +4,481 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spacelancer: Open World Explorer</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore the Andromeda frontier as a freelance spacelancer in this open-world space exploration game. Master ship transformations, modular weapon systems, and faction politics in your quest for freedom and fortune.">
+
+    <meta name="description" content="A game design concept by Reactorcore: a space flight game about one freelancer's career in a living sector of space. Plug-in ship loadouts, ships that transform for dogfights, shifting factions, six ways to retire, and a universe that remembers every freelancer.">
+    <meta name="keywords" content="game design concept, space flight, open world, freelancer, space combat, ship customization, transforming starfighter, factions, Freelancer inspired, Starsector inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/spacelancer.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Spacelancer: Open World Explorer">
-    <meta property="og:description" content="Explore the Andromeda frontier as a freelance spacelancer in this open-world space exploration game. Master ship transformations, modular weapon systems, and faction politics in your quest for freedom and fortune.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/spacelancer_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/spacelancer.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Game Design Showcase">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Spacelancer: Open World Explorer">
+    <meta property="og:description" content="A game design concept: one freelancer's career in a sector of space that never sits still, from a random start to a retirement of your choosing. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/spacelancer.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/spacelancer_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Pixel art concept: a navy-blue starfighter with glowing cyan engines over a planet">
+
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
     <meta name="twitter:title" content="Spacelancer: Open World Explorer">
-    <meta name="twitter:description" content="Explore the Andromeda frontier as a freelance spacelancer in this open-world space exploration game. Master ship transformations, modular weapon systems, and faction politics in your quest for freedom and fortune.">
+    <meta name="twitter:description" content="A game design concept: one freelancer's career in a sector of space that never sits still.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/spacelancer_2_vignette.jpg">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Spacelancer: Open World Explorer",
-      "description": "Explore the Andromeda frontier as a freelance spacelancer in this open-world space exploration game. Master ship transformations, modular weapon systems, and faction politics in your quest for freedom and fortune.",
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/spacelancer_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/spacelancer.html",
-      "author": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "creator": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "genre": "Open World Space Exploration",
-      "keywords": "open world, space exploration, freelancer, ship transformation, modular weapons, faction politics, Andromeda frontier",
-      "dateCreated": "2025",
-      "inLanguage": "en-US"
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Spacelancer: Open World Explorer",
+        "description": "A game design concept, not a released game: a space flight game about one freelancer's career in a living sector of space, with plug-in ship loadouts, transforming ships, shifting factions, several ways to retire, and a persistent universe that remembers every freelancer.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Space flight", "Open world", "Action"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/spacelancer.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/spacelancer_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0b0d22">
+
+    <link rel="preload" href="../fonts/audiowide.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Audiowide&family=Exo:wght@300;400;600;700&family=Rajdhani:wght@300;400;600;700&display=optional" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'dark',
-            themeVariables: {
-                primaryColor: '#00d4ff',
-                primaryTextColor: '#ffffff',
-                primaryBorderColor: '#7a8591',
-                lineColor: '#7a8591',
-                sectionBkgColor: '#1a1f3a',
-                altSectionBkgColor: '#2a2f4a',
-                gridColor: '#7a8591',
-                tertiaryColor: '#8b5cf6',
-                background: '#1a1f3a',
-                secondaryColor: '#8b5cf6'
-            }
-        });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /*
-        Image Names:
-        spacelancer_1_title.jpg - Epic space battle with multiple ship types engaged in combat around asteroid field
-        spacelancer_2_vignette.jpg - Close-up of a sleek fighter transforming from flight mode to shipmech mode
-        spacelancer_3_feature.jpg - Detailed view of modular ship hardpoints and weapon customization interface
-        spacelancer_4_boxart.jpg - Heroic freelancer ship silhouetted against nebula with distant space station
-        spacelancer_5_story.jpg - Wide panoramic view of the Andromeda frontier showing multiple star systems, trade routes, and faction territories
-        */
+        /* Spacelancer: deep navy space with cyan engine trails and violet nebula glow, the colours of
+           its pixel-art images. Audiowide, wide and rounded like a cockpit decal, for the title and
+           headings; Zector, a thin all-caps HUD face, for the subtitle and kickers. */
+        @font-face { font-family: "Audiowide"; src: url("../fonts/audiowide.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Zector"; src: url("../fonts/zector.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: #0f1419;
-            --container-bg: #1a1f3a;
-            --secondary-bg: #2a2f4a;
-            --border-color: #7a8591;
-            --text-color: #ffffff;
-            --primary-cyan: #00d4ff;
-            --accent-purple: #8b5cf6;
-            --steel-gray: #7a8591;
-            --title-shadow: #00d4ff;
-            --card-shadow: rgba(0, 212, 255, 0.3);
-            --purple-shadow: rgba(139, 92, 246, 0.4);
+            --flow-1: #0b0d22;
+            --flow-2: #241a52;
+            --grid-minor: rgba(150, 200, 255, 0.045);
+            --grid-major: rgba(150, 200, 255, 0.10);
+            --p-ground: rgba(11, 13, 34, 0.95);
+            --p-panel: #15183a;
+            --p-1: #3ee6ff;
+            --p-2: #b48cff;
+            --p-3: #eef3ff;
+            --p-text: #dde2f2;
+            --p-dim: #a3a9c6;
+            --p-line: rgba(150, 200, 255, 0.16);
+            --font-title: "Audiowide", "Segoe UI", sans-serif;
+            --font-sub: "Zector", "Segoe UI", sans-serif;
+            --shade: #070818;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "transit lane": a cyan streak runs along the line under the subtitle like a
+           ship riding a lane, and the title catches its light as it passes. Dark layered shadows keep
+           the title legible at the dimmest frame. */
+        .p-name {
+            font-size: clamp(2.2rem, 1rem + 5.4vw, 6rem);
+            letter-spacing: 0.01em;
+            animation: lane-glow 5s ease-in-out infinite;
         }
-
-        body {
-            background: linear-gradient(135deg, var(--background-color) 0%, var(--container-bg) 100%);
-            color: var(--text-color);
-            font-family: 'Rajdhani', sans-serif;
-            line-height: 1.6;
-			letter-spacing: 1px;
-            min-height: 100vh;
+        @keyframes lane-glow {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 40px rgba(180, 140, 255, 0.3); }
+            55% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 16px rgba(62, 230, 255, 0.85), 0 0 36px rgba(62, 230, 255, 0.4); }
         }
-
-        .patreon-link {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(26, 31, 58, 0.9);
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            color: var(--steel-gray);
-            text-decoration: none;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-            z-index: 1000;
+        .p-sub { font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 0 0 18px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.45rem; height: 3px;
+            background: linear-gradient(90deg, transparent 0 40%, var(--p-1) 48%, #ffffff 50%, var(--p-1) 52%, transparent 60% 100%) no-repeat, rgba(180, 140, 255, 0.45);
+            background-size: 250% 100%, 100% 100%;
+            box-shadow: 0 0 8px rgba(62, 230, 255, 0.35);
+            animation: lane 5s linear infinite;
         }
-
-        .patreon-link:hover {
-            color: var(--primary-cyan);
-            border-color: var(--primary-cyan);
-            box-shadow: 0 0 10px var(--card-shadow);
+        @keyframes lane {
+            0% { background-position: 100% 0, 0 0; }
+            100% { background-position: 0% 0, 0 0; }
         }
-
-        .hero-section {
-            height: 750px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: url('images/spacelancer_1_title.jpg') center/cover;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(15, 20, 25, 0.4) 0%,
-                rgba(26, 31, 58, 0.2) 50%,
-                rgba(42, 47, 74, 0.4) 100%
-            );
-        }
-
-        .hero-content {
-            position: relative;
-            text-align: center;
-            z-index: 2;
-        }
-
-        h1 {
-            font-family: 'Orbitron', monospace;
-            font-size: 6rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-            text-shadow: 
-                0 0 20px var(--title-shadow),
-                0 0 40px var(--title-shadow),
-                0 0 80px rgba(0, 212, 255, 0.8),
-                2px 2px 4px rgba(0, 0, 0, 0.9);
-            animation: electricGlow 3s ease-in-out infinite alternate;
-			background: rgba(30, 20, 60, 0.8);
-            padding: 25px;
-            border-radius: 6px;
-        }
-
-        @keyframes electricGlow {
-            0% {
-                text-shadow: 
-                    0 0 20px var(--title-shadow),
-                    0 0 40px var(--title-shadow),
-                    0 0 80px rgba(0, 212, 255, 0.5),
-                    2px 2px 4px rgba(0, 0, 0, 0.8);
-            }
-            100% {
-                text-shadow: 
-                    0 0 30px var(--title-shadow),
-                    0 0 60px var(--title-shadow),
-                    0 0 120px rgba(0, 212, 255, 0.8),
-                    2px 2px 4px rgba(0, 0, 0, 0.8);
-            }
-        }
-
-        .subtitle {
-            font-family: 'Audiowide', cursive;
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            color: var(--primary-cyan);
-            font-weight: 600;
-			text-shadow: 
-                0 0 3px #000,
-                0 0 6px #000,
-                0 0 9px #000,
-                2px 2px 0px #000;
-			background: rgba(30, 20, 60, 0.8);
-            padding: 25px;
-            border-radius: 4px;
-            display: inline-block;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            margin: 4rem 0;
-        }
-
-        .section-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: var(--text-color);
-            text-shadow: 
-                0 0 15px var(--primary-cyan),
-                0 0 30px rgba(0, 212, 255, 0.6),
-                1px 1px 3px rgba(0, 0, 0, 0.8);
-            animation: electricGlow 3s ease-in-out infinite alternate;
-        }
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .card {
-            background: linear-gradient(135deg, var(--container-bg) 0%, var(--secondary-bg) 100%);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px var(--card-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--primary-cyan);
-            box-shadow: 0 12px 48px var(--card-shadow);
-            transform: translateY(-4px);
-        }
-
-        .card h3 {
-            font-family: 'Exo', sans-serif;
-            color: var(--primary-cyan);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .card p {
-            color: var(--text-color);
-            line-height: 1.7;
-        }
-
-        .controls-section {
-            background: var(--container-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin: 3rem 0;
-            box-shadow: 0 8px 32px var(--card-shadow);
-        }
-
-        .controls-section h3 {
-            font-family: 'Audiowide', cursive;
-            color: var(--primary-cyan);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .image-section {
-            position: relative;
-            margin: 4rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
-        }
-
-        .image-section img {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .image-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, rgba(26, 31, 58, 0.95) 0%, rgba(42, 47, 74, 0.9) 100%);
-            padding: 1.5rem 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            backdrop-filter: blur(10px);
-        }
-
-        .image-quote p {
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--text-color);
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-            margin: 0;
-        }
-
-        .layers-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .layer-card {
-            background: linear-gradient(135deg, var(--container-bg) 0%, var(--secondary-bg) 100%);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px var(--card-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .layer-card:hover {
-            border-color: var(--accent-purple);
-            box-shadow: 0 12px 48px var(--purple-shadow);
-        }
-
-        .layer-card h4 {
-            font-family: 'Exo', sans-serif;
-            color: var(--accent-purple);
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .features-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, var(--container-bg) 0%, var(--secondary-bg) 100%);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 8px 32px var(--card-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--primary-cyan);
-            box-shadow: 0 12px 48px var(--card-shadow);
-        }
-
-        .feature-card h4 {
-            font-family: 'Exo', sans-serif;
-            color: var(--primary-cyan);
-            font-size: 1.6rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .mermaid-section {
-            background: var(--container-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 4rem 0;
-            box-shadow: 0 8px 32px var(--card-shadow);
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            gap: 3rem;
-            align-items: center;
-            margin: 4rem 0;
-            background: var(--container-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            padding: 3rem;
-            box-shadow: 0 8px 32px var(--card-shadow);
-        }
-
-        .boxart-image {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 2/3;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-        }
-
-        .boxart-content h3 {
-            color: var(--primary-cyan);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .footer {
-            background: var(--container-bg);
-            border-top: 2px solid var(--border-color);
-            padding: 2rem 0;
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-        .footer p {
-            color: var(--steel-gray);
-            margin: 0.5rem 0;
-        }
-
-        .footer a {
-            color: var(--primary-cyan);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-shadow: 0 0 5px var(--primary-cyan);
-        }
-
-        strong {
-            color: var(--primary-cyan);
-            font-weight: 700;
-        }
-
-        em {
-            color: var(--accent-purple);
-        }
-
-        @media (max-width: 768px) {
-            .overview-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-            
-            .patreon-link {
-                position: relative;
-                top: 0;
-                left: 0;
-                display: block;
-                text-align: center;
-                margin: 1rem;
-            }
-            
-            .hero-section {
-                height: 400px;
-            }
-        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 55% { box-shadow: 0 0 10px rgba(62, 230, 255, 0.7); } }
+        h2, h3 { letter-spacing: 0.01em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.9rem; letter-spacing: 0.14em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 400; font-size: 0.95rem; letter-spacing: 0.14em; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1.05rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
-    
-    <section class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Spacelancer</h1>
-            <div class="subtitle">Open World Explorer</div>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/spacelancer_1_title.jpg" alt="Pixel art of a space battle among asteroids: a boxy silver gunship fires past a burst of exploding rock while capital ships and fighters trade cyan and orange fire in front of a violet nebula." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Spacelancer</span><span class="p-sub">Open World Explorer</span></h1>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <div class="container">
-        <section class="section">
-            <p style="font-size: 1.2rem; text-align: center; color: var(--text-color); max-width: 800px; margin: 0 auto; line-height: 1.8;">
-                Experience the ultimate freelancer fantasy in a living universe where every choice matters. Combine the open exploration of classic space sims with modern tactical depth in bite-sized campaign sessions. Whether you pursue wealth through trade, glory through combat, or legends through exploration, your path to retirement is yours to forge.
-            </p>
-        </section>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/spaceship-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
 
-        <section class="section">
-            <div class="overview-grid">
-                <div class="card">
-                    <h3>🎯 Target Audience</h3>
-                    <p>Space simulation enthusiasts seeking meaningful depth combined with newcomers wanting an accessible entry point. Perfect for players who enjoy strategic decision-making, character progression, and emergent storytelling in open-world environments.</p>
-                </div>
-                <div class="card">
-                    <h3>🎮 Game's Purpose</h3>
-                    <p>Fulfills fundamental human needs for <strong>autonomy</strong> through meaningful choice, <strong>mastery</strong> through skill development, and <strong>adventure</strong> through exploration and discovery. Creates genuine agency in a responsive, living universe.</p>
-                </div>
-                <div class="card">
-                    <h3>⚡ Core Concept</h3>
-                    <p>A modular campaign system where each freelancer career offers multiple victory paths. Deep tactical combat meets intuitive exploration, supported by emergent narratives and persistent universe evolution across playthroughs.</p>
-                </div>
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Spacelancer is a space flight game about one freelancer's career in a living sector of space. You fly a ship built from plug-in parts, take whatever work you like, side with a faction or with nobody, and retire in a way of your own choosing: rich, crowned, celebrated or legendary.</p>
+            <p>It takes the open sector of Freelancer, the fittings and firing arcs of Starsector, the ship classes of Homeworld and the transforming starfighters of Diable Avionics, a Starsector mod, and folds them into one streamlined game: easy to fly from the first minute, with plenty to think about while you fly.</p>
+            <p>Every freelancer is a new character with a randomized start, in the same universe, a few years after the last one retired or fell. The universe keeps what they did.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who loved the freedom of Freelancer, Escape Velocity or Starsector: a ship of their own, a big map, and nobody telling them what to do next.</p>
+                    <p>They're hungry for <strong>a career that's theirs to steer</strong>, and frustrated by space games that end when the story does, or that bury the flying under spreadsheets.</p>
+                    <p>The controls are mouse and keyboard, flight-sim simple: the ship goes where the mouse points. The depth sits in loadouts and decisions, not in the controls.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Freedom and choice:</strong> work for anyone, fight anyone, retire however you like.</p>
+                    <p><strong>Variety and discovery:</strong> a reshuffled sector for every freelancer, and ships and gear that keep changing hands.</p>
+                    <p><strong>Excitement and power:</strong> dogfights in a ship that folds into a fighting frame.</p>
+                    <p>It deliberately avoids draining <strong>rest and respect</strong> (save and stop anywhere; losing a ship is a setback, never a wall) and <strong>autonomy</strong> (no main quest pulling you along).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/compass-lorc.png)"></span>Core concept</h3>
+                    <p>Open-world space games usually offer a fixed story with a sandbox left over after the credits, or an endless sandbox with no reason to keep going.</p>
+                    <p>Spacelancer gives each freelancer <strong>a finite career with a goal they choose</strong>, retirement, inside <strong>an infinite universe</strong>: when one freelancer retires, the next one starts a few years later in the same sector, reshuffled.</p>
+                    <p>Ships and gear are easy to get and easy to lose, so the game is about using them, not hoarding them.</p>
+                </article>
             </div>
         </section>
 
-        <section class="image-section">
-            <img src="../projects/images/spacelancer_5_story.jpg" alt="Andromeda Frontier Overview">
-            <div class="image-quote">
-                <p>"Five centuries of settlement have forged a hundred star systems into a thriving frontier where every faction writes its own destiny."</p>
-            </div>
+        <figure class="p-shot">
+            <img src="../projects/images/spacelancer_5_story.jpg" alt="Pixel art of a sector of space: suns with small planets linked by straight cyan lanes, ships travelling along them, an asteroid belt across the middle, a violet nebula on the left and a huge glowing ring gate on the right." width="1280" height="720" loading="lazy">
+            <figcaption>"The lanes and gates stay. The planets drift, and every few years the sector is a different place."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span>Lore and story</h2>
+            <h3>A sector that keeps moving</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/01-sector.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Spacelancer takes place in one large sector of space: star systems full of planets, stations, nebula clouds, asteroid and debris fields, minefields and stranger anomalies, linked by transit lanes for fast travel and by jump gates and jump holes to the far regions.</p>
+            <p>Every place you can dock belongs to someone. Corporations, navies, civilian worlds, raiders, pirates, criminal families and a secretive order that hoards old technology all hold territory, and all have their own opinions of each other.</p>
+            <p>The sector moves. Between one freelancer's story and the next, a few years pass and the celestial bodies shift: routes open and close, fields drift, borders and fortunes change. It's the same universe with its history intact, but it never stands still long enough to be solved.</p>
+
+            <h3>Freelancers</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/02-freelancer.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You're a freelancer: a pilot with your own ship and equipment, beholden to nobody. Take jobs, join a faction and climb its ranks, or stay independent and get rich.</p>
+            <p>Each freelancer starts somewhere different, as a corporate contractor, a raider, a navy pilot, a civilian, a member of the order, a pirate or a family soldier, with their own traits and talents. Most of those talents are about flying and fighting, trading, followers and favors, and how much the ship can carry.</p>
+
+            <h3>Nobody dies out here</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/03-tether.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Almost no one dies in a space fight. Every pilot carries a <strong>teleport tether</strong> that yanks them to safety when their ship breaks apart. It keeps the fights light: everyone lives to talk trash after winning or losing, and the pilot you beat today can come back next week with a grudge and a better ship.</p>
+
+            <h3>The job right now</h3>
+            <p>Make a name, make a fortune or make a difference, then retire somewhere cozy and safe. How you get there is entirely up to you.</p>
         </section>
 
-        <section class="section">
-            <h2 class="section-title">Lore & Story</h2>
-            <div class="controls-section">
-                <h3>🌌 The Andromeda Frontier</h3>
-                <p>Five hundred years ago, the <strong>Great Migration</strong> began when humanity's first functional FTL drives opened the path to Andromeda. Massive sleeper ships carried the brave and desperate across the void, seeking new lives in an untamed galaxy. What they found was a region of approximately <em>one hundred star systems</em> rich with resources, opportunities, and challenges that would forge a new chapter in human civilization.</p>
-                <br>
-                <p><strong>The Founding Era (2525-2580):</strong> Early colonists established the first settlements around stable stars, building infrastructure from salvaged sleeper ship components. The <em>Astro-Navigation Consortium</em> mapped the initial trade routes, while <em>Colonial Defense Forces</em> protected growing populations from radiation storms, asteroid collisions, and the occasional alien probe.</p>
-                <br>
-                <p><strong>The Faction Wars (2580-2650):</strong> As resources grew scarce and ideologies clashed, the original unified colony fragmented into six major factions. The <em>Corporate Syndicate</em> prioritized efficiency and profit, the <em>Free Traders Union</em> championed independent commerce, the <em>Stellar Navy</em> maintained military order, the <em>Research Collective</em> pursued technological advancement, the <em>Frontier Militia</em> defended outer settlements, and the <em>Neo-Terran Alliance</em> preserved Earth traditions. Today, these factions maintain complex relationships - sometimes allied, sometimes rival, always competing for influence.</p>
-                <br>
-                <p><strong>The Modern Frontier (2650-Present):</strong> The Andromeda region has evolved into a <strong>vibrant, multi-cultural civilization</strong> where legal and illegal enterprises coexist much like in Earth's ancient frontier days. Freelancers of all kinds - merchants, mercenaries, explorers, smugglers, researchers, and peacekeepers - navigate this complex web of opportunity and danger. <em>Your story is just one of millions</em> being written across these hundred stars, where every choice shapes both personal destiny and the greater tapestry of human expansion.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="controls-section">
-                <h3>🕹️ Controls & Interface</h3>
-                <p>Spacelancer features a <strong>hybrid flight control system</strong> designed for both accessibility and precision. Traditional <em>throttle-based flight</em> provides intuitive movement for exploration and travel, while the advanced <em>shipmech transformation mode</em> offers omni-directional control for tactical combat situations.</p>
-                <br>
-                <p>The interface supports multiple play styles through <strong>adaptive assistance systems</strong>: auto-pilot for navigation, VATS-style targeting for precision without micromanagement, and intelligent tractor beams that prioritize fresh loot. Players control their level of engagement - from hands-off strategic oversight to twitch-perfect dogfighting execution.</p>
-                <br>
-                <p><strong>Key Control Features:</strong> Seamless mode switching, context-sensitive targeting, energy management through weapon groups, and streamlined inventory with hotkey support for consumables and emergency equipment.</p>
-            </div>
-        </section>
-
-        <section class="image-section">
-            <img src="../projects/images/spacelancer_2_vignette.jpg" alt="Ship transformation sequence">
-            <div class="image-quote">
-                <p>"Transform your ship's configuration in real-time - switch from high-speed pursuit mode to precision tactical stance when the situation demands it."</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Game Layers</h2>
-            <div class="layers-grid">
-                <div class="layer-card">
-                    <h4>🎯 Moment-to-Moment Gameplay</h4>
-                    <p>Dynamic space combat featuring <strong>multi-layer defense systems</strong> (shields, armor, hull) where weapon choice matters. Players manage energy distribution, optimal positioning for weapon firing arcs, and real-time transformation between flight and shipmech modes. Combat rewards tactical thinking over reflexes, with intelligent assistance available for accessibility.</p>
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You fly one ship at a time, the Freelancer way: the ship turns toward the mouse, the throttle sets your speed, and the guns fire where you point. Ships that can transform switch to <strong>frame mode</strong>, where they fly in any direction like a mecha and turn on the spot. The layout below is a suggestion; the design fixes what the controls do, not which keys do it.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Flight</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Steer and aim</dd></div>
+                        <div><dt>W / S</dt><dd>Throttle up and down</dd></div>
+                        <div><dt>A / D</dt><dd>Strafe</dd></div>
+                        <div><dt>Z</dt><dd>Engine cut: drift on your momentum</dd></div>
+                        <div><dt>C</dt><dd>Cruise engine for long distances</dd></div>
+                        <div><dt>G</dt><dd>Autopilot to the selected dock, lane or target</dd></div>
+                    </dl>
                 </div>
-                <div class="layer-card">
-                    <h4>🚀 Campaign Layer</h4>
-                    <p>Each freelancer career spans <strong>5-20 hours of focused progression</strong> with multiple victory conditions. Players can retire as wealthy traders, faction leaders, legendary heroes, or master explorers. Campaigns feature branching opportunities, meaningful consequences, and natural story arcs that conclude satisfyingly rather than artificially extending playtime.</p>
+                <div class="p-keygroup">
+                    <h3>Frame mode and boosts</h3>
+                    <dl>
+                        <div><dt>F</dt><dd>Transform between flight and frame mode</dd></div>
+                        <div><dt>W A S D</dt><dd>In frame mode: move in any direction</dd></div>
+                        <div><dt>Space / Ctrl</dt><dd>In frame mode: rise and sink</dd></div>
+                        <div><dt>Shift</dt><dd>Boost in the direction you're moving</dd></div>
+                        <div><dt>Double-tap</dt><dd>Quick boost: a short, sharp dodge</dd></div>
+                        <div><dt>X</dt><dd>Hold to charge an overboost</dd></div>
+                    </dl>
                 </div>
-                <div class="layer-card">
-                    <h4>🌌 Persistent Universe</h4>
-                    <p>The universe evolves between campaigns through <strong>celestial movements and faction dynamics</strong>. Previous characters leave lasting impacts: retired freelancers become statues in the Hall of Fame, while fallen heroes may return as enhanced nemeses. Each new campaign inherits a world shaped by all previous adventures, creating genuine continuity and meaning.</p>
+                <div class="p-keygroup">
+                    <h3>Weapons</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Forward guns</dd></div>
+                        <div><dt>Right click</dt><dd>Turrets, free-aimed at the pointer</dd></div>
+                        <div><dt>R</dt><dd>Launch the selected missile, mine or torpedo</dd></div>
+                        <div><dt>Tab</dt><dd>Next target</dd></div>
+                        <div><dt>T</dt><dd>Tractor beam</dd></div>
+                    </dl>
                 </div>
-                <div class="layer-card">
-                    <h4>⚙️ Session Flow</h4>
-                    <p>Designed for <strong>flexible engagement</strong> supporting both quick 30-minute missions and extended 3-hour exploration sessions. Robust save system preserves all progress with optional permadeath rewards. Players can seamlessly transition between active combat, peaceful trading, exploration, and strategic planning based on available time and energy levels.</p>
+                <div class="p-keygroup">
+                    <h3>Ship and systems</h3>
+                    <dl>
+                        <div><dt>1 to 9</dt><dd>Hotbar: repair nanobots, shield batteries, stims, gear</dd></div>
+                        <div><dt>I</dt><dd>The ship's hold</dd></div>
+                        <div><dt>V</dt><dd>Assisted targeting</dd></div>
+                        <div><dt>B</dt><dd>Bullet time</dd></div>
+                        <div><dt>Esc</dt><dd>Pause, save and quit</dd></div>
+                    </dl>
                 </div>
             </div>
+            <p>Two ways to aim sit side by side: guns fixed forward fire where the ship points, and turrets follow the mouse freely within their firing arcs. The shield is always on and recharges, the hull slowly repairs itself, and the hotbar holds a limited stock of <strong>repair nanobots</strong> and <strong>shield batteries</strong> for when that isn't enough. Fuel and life support never run out.</p>
         </section>
 
-        <section class="section">
-            <h2 class="section-title">Game Features & Mechanics</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h4>🔧 Modular Ship Customization</h4>
-                    <p>The <strong>hardpoint system</strong> combines tactical depth with intuitive "plug-and-play" simplicity. Ships feature energy, ballistic, missile, and utility hardpoints with size categories (small, medium, large, naval). Advanced hardpoint splitters allow creative configurations - convert large mounts to multiple smaller weapons or combine small mounts for heavier firepower. Every ship remains omni-capable while specialized loadouts excel in specific scenarios.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🚁 Dual Flight Modes</h4>
-                    <p><strong>Flight mode</strong> provides intuitive throttle-based movement perfect for exploration and travel, while <strong>shipmech mode</strong> transforms your vessel into a precision tactical platform with omni-directional control. Each mode has distinct advantages: flight mode for speed and efficiency, shipmech mode for combat maneuverability and precise positioning. Mode switching is instant and strategic, not cumbersome.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>💼 Dynamic Economy & Factions</h4>
-                    <p>A <strong>living economic system</strong> where supply and demand shift based on conflicts, discoveries, and player actions. Six major factions maintain complex relationships that evolve over time. Players can align with factions for unique benefits, remain independent for maximum flexibility, or even work multiple angles simultaneously. Reputation systems track relationships across the entire universe, opening and closing opportunities dynamically.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🛡️ Tactical Defense Layers</h4>
-                    <p>Combat features <strong>shields, armor, and hull</strong> as distinct defensive layers, each with different properties and optimal counters. Energy weapons excel against shields, ballistic weapons strip armor effectively, and specialized weapons target hull directly. This creates meaningful loadout decisions - do you prioritize shield-stripping for quick kills, armor-piercing for sustained damage, or balanced approaches for versatility?</p>
-                </div>
-                <div class="feature-card">
-                    <h4>👥 Nemesis & Legacy Systems</h4>
-                    <p>Since <strong>nobody dies in space combat</strong> (emergency teleport systems save all pilots), defeated enemies remember encounters and develop personal rivalries. Recurring nemeses adapt their tactics and equipment based on previous fights. Meanwhile, your retired characters become permanent fixtures in the universe - their achievements immortalized, their hidden stashes discoverable by future freelancers.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🏆 Multiple Victory Paths</h4>
-                    <p>Achieve retirement through <strong>diverse victory conditions</strong> inspired by classic strategy games. Accumulate vast wealth through trading, rise to faction leadership through military service or political maneuvering, become a legendary hero by eliminating alien menaces, complete cultural pilgrimages, lead major technological projects, or discover ancient treasures. Each path requires different skills and offers unique narrative satisfaction.</p>
-                </div>
+        <figure class="p-shot">
+            <img src="../projects/images/spacelancer_2_vignette.jpg" alt="Pixel art close-up of a navy-blue starfighter with violet and cyan lights, its stubby gun barrels pointing forward and twin engines trailing cyan lightning, a blue planet below." width="1280" height="720" loading="lazy">
+            <figcaption>"Flight mode is fastest in a straight line. Frame mode turns on the spot and strafes in any direction, which wins dogfights."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/laser-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A fight in an asteroid field</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/04-dogfight.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Most fights are dogfights and skirmishes among asteroids, wrecks and stations: flight mode and the throttle for the approach, a transform to frame mode when the enemy is close, boosts to dodge, and a loadout built to break the three layers of whatever you're fighting.</p>
+                        <p>Between fights there's flying itself: cruising, riding the lanes, pulling in salvage with the tractor beam, docking to trade and refit. Every ship can handle small targets, big ones and swarms, take a beating and go fast; some are just better at one of those than the rest.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rocket-flight-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One freelancer's career</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/05-career.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A playthrough is one freelancer: a career of many hours from a randomized start to retirement, with total freedom in how you get there. There are six ways to retire, inspired by the different victories in Civilization and Master of Orion, and you can switch your aim whenever you like:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Retire by</th><th scope="col">How</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Fortune</th><td>Trade and deal until you're rich enough to stop</td></tr>
+                                    <tr><th scope="row">Rule</th><td>Become a faction's ruler, by conquest or by climbing its ranks</td></tr>
+                                    <tr><th scope="row">Pilgrimage</th><td>Complete a grand tour of the sector's great cultural sites</td></tr>
+                                    <tr><th scope="row">Science</th><td>See one faction's great technology project through, job by job</td></tr>
+                                    <tr><th scope="row">Legend</th><td>Track down a set of legendary treasures</td></tr>
+                                    <tr><th scope="row">Heroism</th><td>Wipe out the alien menace troubling the sector</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Or die trying. That's a story too.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/colombian-statue-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The universe and its hall of fame</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/06-hall.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The universe outlasts every freelancer. When one retires, the next starts a few years later in the same universe, reshuffled by the celestial movements, among the factions, wrecks and rivals the last one left behind.</p>
+                        <p>From the main menu you can walk through the <strong>hall of fame</strong>, where every retired freelancer stands as a statue: inspect one to see their name, how they retired, and the ship and loadout they finished with. The <strong>graveyard</strong> holds the careers that ended in a death you chose to keep instead of reloading. Together they're your history in the sector, not a scoreboard.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>An evening at a time</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/07-rest.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A career is long, so it's built to be played in pieces. Save anywhere, stop anywhere, and come back to the ship exactly where you left it. A session might be a few jobs, a trade run between two systems, or a long hunt for one legendary wreck.</p>
+                        <p>There's no clock, no expiring offer and nothing in the sector that punishes you for being away.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/colombian-statue-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode, <strong>a freelancer's career</strong>, and one choice that changes how it plays:</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Way to play</th><th scope="col">What a death means</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Standard</th><td>Save and load whenever you like. A death is a setback: reload, or accept it and send the freelancer to the graveyard.</td></tr>
+                        <tr><th scope="row">Honor mode</th><td>Opt-in, for players who want every death to stick. A death is final and the freelancer's save is deleted. The sector keeps their wreck and their hidden stashes for later freelancers to find, the next freelancer inherits some of their gear, and now and then the fallen pilot returns as a rebuilt cyborg rival, flying everything they had and more.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Either way, nothing about the universe resets. Each new freelancer arrives in the sector their predecessors shaped.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/gears-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/transform-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Two ships in one</p>
+                        <h3>Flight mode and frame mode</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/08-flight.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Ships that can transform switch between two ways of flying, an idea taken from the Diable Avionics mod, where fighters and frigates fold out into mecha. <strong>Flight mode</strong> handles like Freelancer: throttle-based, fastest in a straight line, with strafing and an engine cut that lets you drift and swing around on your momentum. <strong>Frame mode</strong> flies like Nova Drift or Strike Suit Zero: omnidirectional, turning on the spot, slower at top speed but far better in a close fight.</p>
+                        <p>Instead of a single afterburner, both modes have three directional boosts in the style of Armored Core 4. The <strong>boost</strong> is steady and efficient. The <strong>quick boost</strong> is a short, sharp dodge. The <strong>overboost</strong> charges up, then throws you a long way in one continuous burn, with a cooldown afterwards. For crossing a system, the cruise engine is still the way to go.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/carrier-cathelineau.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Wasps, dragonflies and crows</p>
+                        <h3>Hull classes and the mothership</h3>
+                        <p>Ships come in three classes, after Homeworld's, and the sector decides where each one can go:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Class</th><th scope="col">Good at</th><th scope="col">Where it goes</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Fighter (a wasp)</th><td data-label="Good at">Agility; small enough to slip in anywhere</td><td data-label="Where it goes">Dense asteroid fields, tight wrecks, cramped stations</td></tr>
+                                    <tr><th scope="row">Corvette or frigate (a dragonfly)</th><td data-label="Good at">Fighting several targets at once with heavier power, free of a capital ship's burdens</td><td data-label="Where it goes">Most of the sector</td></tr>
+                                    <tr><th scope="row">Destroyer to dreadnought, carrier (a crow)</th><td data-label="Good at">Sieges; ice-breaking through small debris at reduced speed</td><td data-label="Where it goes">Radiation and heat zones that would cook a small ship; stopped by big obstacles</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>You can fly any of them, which is why a freelancer can own a <strong>mobile base</strong>: a large ship that carries a medium or small one inside, the way the Cyclops submarine carries the Prawn suit in Subnautica. Park the crow at the edge of the asteroid field and go in with the wasp.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/switch-weapon-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Square peg, square hole</p>
+                        <h3>Hardpoints and loadouts</h3>
+                        <p>Building a ship is deliberately simple. A ship is a hull with <strong>hardpoints</strong>, and gear plugs into a socket of the matching size and type. Sizes run small, medium, large and capital. Types are energy, ballistic and missile, plus mixed hardpoints that take either of two types and omni hardpoints that take anything. Fixed mounts fire straight ahead; turrets swivel, each within its firing arc, so a ship has strong angles and blind spots.</p>
+                        <p><strong>Splitters</strong>, from Space Pirates and Zombies, make big hardpoints flexible: one large mount can carry two mediums or three smalls, or give up its rotation to hold one extra-large fixed gun. Utility hardpoints carry boosters and equipment. Ships come ready to fly with preset weapons, as in Homeworld, and you change only what you want to.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/spacelancer_3_feature.jpg" alt="Pixel art of a hangar: a chunky navy-blue starship rests on a pad while a crane arm swings over a rack of modular cannons, a twin-barrel gun and boxy equipment units, the violet glow of space through the open bay doors." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every weapon plugs into a socket of its size and type. If it fits, it works."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bolt-shield-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Shield, armor, hull</p>
+                        <h3>Three layers to break</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/09-shields.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every ship has three layers of protection, as in Mass Effect 2 and 3: a regenerating shield, armor under it, and the hull last. Weapons are better against some layers than others, so a loadout is a plan: something to knock the shield down, something to strip the armor, something to finish the hull.</p>
+                        <p>The arsenal covers lasers, cannons, particle guns and mass bombs, plus missiles, mines, torpedoes and <strong>cruise disruptors</strong> that knock a fleeing ship out of cruise. Energy weapons never run out of ammunition; they draw on the reactor instead.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/heat-haze-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Makers, heat and wear</p>
+                        <h3>Gear with a personality</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/spacelancer/10-heat.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Weapons and equipment come from <strong>manufacturers with their own design philosophies</strong>, and each item is assembled from its maker's parts with some randomness. The idea is Borderlands 2's, with the variety coming from parts that genuinely behave differently rather than from endless renamed copies. Upgrade mods slot into weapons the way they do in Mass Effect 3, and a ship can be specialized along a path, as in Nova Drift.</p>
+                        <p>Besides reactor output, weapons build up <strong>heat</strong>. Overheating doesn't shut the ship down; it wears the weapon out faster, like the Homeworld line about firing "until our gun barrels melted". Weapons and equipment degrade with use, parts can be crippled in a fight and repaired afterwards, and everything has weight.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cargo-crate-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The ship's hold</p>
+                        <h3>Inventory, stims and salvage</h3>
+                        <p>The hold works like Fallout 3's inventory: tabs, and drop, use, equip, repair, combine and craft, with a hotbar on keys 1 to 9. <strong>Stims</strong> are for the ship, not the pilot: a reactor surge, a hull sealant, a targeting booster, a radiation scrubber.</p>
+                        <p>The <strong>tractor beam</strong> pulls in salvage from a distance and is smart about it, grabbing fresh drops before things you dumped yourself. After a big battle, drop a <strong>tug beacon</strong>: a tug comes in and hauls everything in the area to your stash or your mothership, like a Fulton balloon in reverse. It only goes into a cleared area, and a risky one needs you to escort it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Two kinds of focus</p>
+                        <h3>Assisted targeting and bullet time</h3>
+                        <p>Two time tools for two different moods. <strong>Assisted targeting</strong>, after Fallout 3's targeting system, picks the shots for you at the cost of some control, for when you'd rather not aim. <strong>Bullet time</strong> slows the fight down while you keep full control, for finesse shots and for sizing up a fight that's getting out of hand.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/shadow-follower-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Rivals</p>
+                        <h3>The pilot you beat comes back</h3>
+                        <p>Because tethers pull beaten pilots to safety, every fight leaves someone alive to remember it. Pilots talk trash when they win and when they lose, and the ones who keep running into you become <strong>recurring rivals</strong>, each with a history with you: a nemesis system, in space.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/parachute-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Losing a ship</p>
+                        <h3>A setback, never a wall</h3>
+                        <p>Ships and equipment are easier to get and replace than in Freelancer, and easier to lose. When your ship goes, you choose how to get back in the air:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Route back</th><th scope="col">What it costs</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Bank account</th><td>The credits you put away</td></tr>
+                                    <tr><th scope="row">Home hangar</th><td>A ship you stored for exactly this</td></tr>
+                                    <tr><th scope="row">Sign up</th><td>A team, a corporation, the police or a navy gives you a ship and starter gear, and expects work in return</td></tr>
+                                    <tr><th scope="row">A loan</th><td>A ship now, with strings attached</td></tr>
+                                    <tr><th scope="row">The scrapyard</th><td>Time, and some luck finding something that still flies</td></tr>
+                                    <tr><th scope="row">A favor</th><td>One of the few favors owed by someone you helped</td></tr>
+                                    <tr><th scope="row">Nothing at all</th><td>Start from scratch, and see how far you get</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Losing a ship hurts, but it never ends a career, and every route back is a story of its own.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/spacelancer_4_boxart.jpg" alt="Box art in pixel art: a pilot stands on the nose of a dark starship silhouetted against a huge swirling violet and cyan galaxy, a space station above and a white harbor station below." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Help wanted: one freelancer</p>
+                <h2 id="sendoff">Spacelancer: Open World Explorer</h2>
+                <p>A ship of your own, a sector that never sits still, and a dozen factions who all want something done. Nobody's handing out a main quest.</p>
+                <p>Haul cargo, hunt bounties, join a navy or raid one. Leave the carrier at the edge of the field and fly in with the fighter. Lose a ship, find another, make a rival, make a fortune. Then pick your ending: a faction's throne, a cozy moon with a view, or a statue in the hall of fame.</p>
+                <p><strong>The sector is open. Bring your own ship.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
             </div>
         </section>
+    </main>
 
-        <section class="image-section">
-            <img src="../projects/images/spacelancer_3_feature.jpg" alt="Modular hardpoint customization interface">
-            <div class="image-quote">
-                <p>"Every hardpoint tells a story - energy for shields, ballistics for armor, missiles for decisive strikes. Your loadout is your strategy."</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="mermaid-section">
-                <h2 class="section-title">Freelancer Career Progression</h2>
-                <div class="mermaid">
-                    flowchart TD
-                        A[New Freelancer] --> B{Choose Starting Path}
-                        B --> C[Corporate Contractor]
-                        B --> D[Independent Trader]  
-                        B --> E[Military Veteran]
-                        B --> F[Salvage Operator]
-                        
-                        C --> G{Early Success?}
-                        D --> G
-                        E --> G  
-                        F --> G
-                        
-                        G -->|Yes| H[Expand Operations]
-                        G -->|No| I[Adapt Strategy]
-                        
-                        H --> J{Victory Condition}
-                        I --> J
-                        
-                        J --> K[Wealth Accumulation]
-                        J --> L[Faction Leadership]
-                        J --> M[Legendary Hero]
-                        J --> N[Master Explorer]
-                        J --> O[Tech Pioneer]
-                        
-                        K --> P[Retirement Success]
-                        L --> P
-                        M --> P
-                        N --> P
-                        O --> P
-                        
-                        P --> Q[Hall of Fame]
-                        
-                        style A fill:#00d4ff,stroke:#ffffff,color:#000000
-                        style P fill:#8b5cf6,stroke:#ffffff,color:#ffffff
-                        style Q fill:#8b5cf6,stroke:#ffffff,color:#ffffff
-                </div>
+            <div>
+                <p>Inspired by Freelancer, Starsector and its Diable Avionics mod, Homeworld, Nova Drift, Space Pirates and Zombies, Armored Core 4, Fallout 3, Borderlands 2 and Mass Effect</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Audiowide, Zector, Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
-        </section>
-
-        <section class="boxart-section">
-            <img src="../projects/images/spacelancer_4_boxart.jpg" alt="Spacelancer box art" class="boxart-image">
-            <div class="boxart-content">
-                <h3>Spacelancer: Open World Explorer</h3>
-                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-color);">
-                    <strong>Command your destiny in the vast frontier of space.</strong> Pilot customizable spacecraft through a living universe where every decision shapes your legacy. Master tactical combat, build economic empires, forge political alliances, or pursue legendary discoveries.
-                </p>
-                <br>
-                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-color);">
-                    <em>Transform between flight and shipmech modes</em> for tactical superiority. Navigate complex faction relationships in a persistent universe that remembers every action. Choose your path to retirement: wealth, power, glory, or wisdom.
-                </p>
-                <br>
-                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-color);">
-                    Experience <strong>campaign-based progression</strong> with permadeath rewards, nemesis systems, and multiple victory conditions. Each freelancer's story becomes part of universal history, inspiring and challenging future spacelancers.
-                </p>
-            </div>
-        </section>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-            <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-            <p>Reactorcore Games - 2025</p>
         </div>
     </footer>
 </body>

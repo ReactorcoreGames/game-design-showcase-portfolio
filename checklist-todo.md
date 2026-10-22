@@ -105,7 +105,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] cyberdungeon
 - [x] greensteelcommander
 - [x] kickblade
-- [ ] spacelancer
+- [x] spacelancer
 - [ ] starforge-legion ⚑
 - [ ] thunderstrike-justice
 - [ ] tile-mechs

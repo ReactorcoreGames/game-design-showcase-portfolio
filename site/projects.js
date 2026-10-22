@@ -161,8 +161,8 @@ window.PROJECTS = [
     page: "spacelancer.html", prefix: "spacelancer",
     title: "Spacelancer", subtitle: "Open World Explorer",
     icon: "spaceship-delapouite", tint: "cyan",
-    blurb: "A freelancer career in a living universe: modular ships, shifting factions, several paths to victory, and a ship that switches between flight and shipmech modes.",
-    genres: ["sandbox", "vehicles", "action"], tags: ["open world", "space", "ship customization", "factions"],
+    blurb: "One freelancer's career in a sector of space that never sits still: plug-in ship loadouts, ships that fold into a fighting frame, shifting factions, and six ways to retire.",
+    genres: ["sandbox", "vehicles", "action"], tags: ["open world", "space", "ship customization", "factions", "transforming"],
     status: "concept", added: "2025-10-08"
   },
   {

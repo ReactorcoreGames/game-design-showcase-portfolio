@@ -1,0 +1,14 @@
+{
+  "slug": "spacelancer",
+  "prefix": "spacelancer",
+  "preset": "03 Style - Pixel Front View",
+  "style": "Palette of deep navy space, bright cyan energy beams and engine trails, violet nebula clouds and metallic silver hulls.",
+  "notes": "Rewrite (2026-10). Images 1, 2 and 4 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 3 is new: the old one was a schematic with legible pseudo-labels (Hardi, Smin, Large). Image 5 is new: the old one showed a map of Earth with Europe on it, wrong for a game set in a sector of space. gen spacelancer --only 3,5, then finish spacelancer --only 3,5.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide-angle shot of a space battle around a massive asteroid field. A sleek freelancer vessel in the foreground fires energy beams, surrounded by explosions and debris; fighters, corvettes and capital ships trade fire behind it. A nebula with distant stars and floating asteroids in the background."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Close dynamic three-quarter shot of a sleek combat spacecraft mid-transformation from streamlined flight mode to a mech configuration: extending wing segments, rotating weapon hardpoints, reconfiguring thruster arrays, energy trails, distant stars."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Three-quarter view inside a spacious docking bay: a chunky navy-blue freelancer starship rests on a landing pad with its side armor panels swung open, showing empty square weapon sockets of three sizes along its hull. On a rack beside it hang chunky modular weapons, a twin laser cannon, a stubby missile pod, a long particle gun and a boxy shield generator, each with a matching square plug on its back. A robotic crane arm lifts one cannon toward a socket. Cyan work lights, violet glow of space through the open hangar door. Plain bare metal panels, no screens, no labels, no writing."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Heroic low-angle portrait of a lone freelancer spacecraft silhouetted against a massive colorful nebula, angled upward and to the right, with a distant orbital space station below. The nebula fills the upper part with swirling cosmic clouds."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Sweeping high view over a sector of deep space: five or six star systems scattered across a deep navy void, each a bright sun with a few small planets around it, linked to each other by thin glowing cyan lanes of light. A huge violet nebula cloud fills the left side, a wide asteroid belt crosses the middle, and a giant glowing ring-shaped gate floats at the far right edge. Small space stations glitter along the lanes. The planets of one system glow warm amber, those of another cool violet. No grid, no borders, no labels, no writing."}
+  ]
+}
