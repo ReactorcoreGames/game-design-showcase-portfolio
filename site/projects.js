@@ -137,8 +137,8 @@ window.PROJECTS = [
     page: "greensteelcommander.html", prefix: "greensteelcommander",
     title: "Green Steel Commander", subtitle: "Turn-Based RTS Hybrid",
     icon: "battle-tank-lorc", tint: "green",
-    blurb: "Command & Conquer meets Advance Wars: RTS-style controls and base building with turn-based execution, set in a terraformed industrial 2060.",
-    genres: ["strategy"], tags: ["rts", "turn-based", "military"],
+    blurb: "Red Alert 2's look and command tools, Advance Wars' turns and guaranteed attacks: physical units roll freely across a gridless battlefield, bases are painted and build themselves, and nothing moves while you think.",
+    genres: ["strategy", "physics"], tags: ["rts", "turn-based", "base building", "persistent universe"],
     status: "concept", added: "2025-10-08"
   },
   {

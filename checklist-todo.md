@@ -103,7 +103,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] bunkership
 - [x] colossal_devastators
 - [x] cyberdungeon
-- [ ] greensteelcommander
+- [x] greensteelcommander
 - [ ] kickblade
 - [ ] spacelancer
 - [ ] starforge-legion ⚑

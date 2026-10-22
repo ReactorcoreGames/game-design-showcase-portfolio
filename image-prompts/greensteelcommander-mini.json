@@ -1,0 +1,21 @@
+{
+  "slug": "greensteelcommander-mini",
+  "out": "site/projects/mini/greensteelcommander",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - S - Tilt Shift",
+  "lead": "Tilt-shift photo of a toy army diorama, olive drab and khaki, soft green light. ",
+  "notes": "Mood-only mini images for greensteelcommander.html, beside the lore, game layer and feature text. SDXL (free): gen greensteelcommander-mini --model sdxl --max 999, then finish greensteelcommander-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "ground", "ratio": "3:2", "prompt": "A military base on green hills, with a rocket launch tower far in the distance."},
+    {"n": 2, "name": "commander", "ratio": "3:2", "prompt": "A commander figure standing over a sand table map covered in small tank models."},
+    {"n": 3, "name": "rivals", "ratio": "3:2", "prompt": "Two opposing toy tank columns facing each other across a river valley."},
+    {"n": 4, "name": "turn", "ratio": "3:2", "prompt": "A column of small tanks rolling along a dirt road through a forest."},
+    {"n": 5, "name": "mission", "ratio": "3:2", "prompt": "A small flag planted on a hilltop bunker, tanks gathered around it."},
+    {"n": 6, "name": "universe", "ratio": "3:2", "prompt": "A wide valley with several small bases connected by roads, seen from high above."},
+    {"n": 7, "name": "evening", "ratio": "3:2", "prompt": "A quiet military base at dusk, lights coming on, tanks parked in neat rows."},
+    {"n": 8, "name": "column", "ratio": "3:2", "prompt": "Tanks and trucks moving in a neat wedge formation across an open field."},
+    {"n": 9, "name": "build", "ratio": "3:2", "prompt": "Construction vehicles and cranes building a concrete wall around a base."},
+    {"n": 10, "name": "fuel", "ratio": "3:2", "prompt": "A convoy of fuel trucks driving along a winding mountain road."}
+  ]
+}
