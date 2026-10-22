@@ -1,0 +1,24 @@
+{
+  "slug": "bunkership-mini",
+  "out": "site/projects/mini/bunkership",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, brutalist warships carved from grey moon rock, violet glow and teal lights. ",
+  "notes": "Mood-only mini images for bunkership.html, beside the lore, game layer and feature text. SDXL (free): gen bunkership-mini --model sdxl --max 999, then finish bunkership-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "helios", "ratio": "3:2", "prompt": "A huge gas giant surrounded by asteroids, moons and distant stars."},
+    {"n": 2, "name": "bunkership", "ratio": "3:2", "prompt": "A colossal warship carved from a hollowed asteroid, gun turrets and antennas poking out of the rock."},
+    {"n": 3, "name": "task-force", "ratio": "3:2", "prompt": "A row of small sleek drone ships waiting in a clean hangar bay."},
+    {"n": 4, "name": "stage", "ratio": "3:2", "prompt": "A rock-armored battleship hanging against a colorful nebula, explosions inside its hull."},
+    {"n": 5, "name": "clan", "ratio": "3:2", "prompt": "Three crude rocky warships with garish painted stripes flying through an asteroid field toward the viewer."},
+    {"n": 6, "name": "war", "ratio": "3:2", "prompt": "Wrecked rocky warships drifting in an asteroid field after a battle, debris and glowing embers."},
+    {"n": 7, "name": "session", "ratio": "3:2", "prompt": "A small drone ship gliding into the open hangar of a huge carrier above a gas giant at dusk."},
+    {"n": 8, "name": "orb", "ratio": "3:2", "prompt": "A glowing violet energy orb crackling with lightning, floating above a sleek metal launcher."},
+    {"n": 9, "name": "turret", "ratio": "3:2", "prompt": "An armored gun turret bolted onto a rock surface, firing a bright bolt into space."},
+    {"n": 10, "name": "weather", "ratio": "3:2", "prompt": "Strange glowing anomalies drifting through a colorful space nebula like jellyfish."}
+  ]
+}

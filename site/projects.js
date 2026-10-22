@@ -247,10 +247,10 @@ window.PROJECTS = [
   },
   {
     page: "bunkership.html", prefix: "bunkership",
-    title: "Bunkership Exhaust Port Breaker", subtitle: "Tactical Demolition Action",
-    icon: "brick-wall-delapouite", tint: "orange",
-    blurb: "Brick breaking made meaningful: a spec-ops vessel exploits the one weakness of colossal armored warships, their exhaust ports. Every procedural bunkership is a new tactical puzzle.",
-    genres: ["arcade", "physics"], tags: ["brick breaker", "procedural", "space"],
+    title: "Bunkership Exhaust Port Breaker", subtitle: "Warship Brick Breaker",
+    icon: "brick-wall-delapouite", tint: "magenta",
+    blurb: "A brick breaker where every wall of bricks is a generated warship of moon rock and machinery. Bounce an energy orb through the exhaust port and let the ship's own fuel tanks finish the job, clan fleet after clan fleet.",
+    genres: ["arcade", "physics", "action"], tags: ["brick breaker", "procedural ships", "no lives", "space"],
     status: "concept", added: "2025-10-08"
   },
   {

@@ -100,7 +100,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] admiralwars
 - [x] antigrav_deconstruction
 - [x] astro_industry
-- [ ] bunkership
+- [x] bunkership
 - [ ] colossal_devastators
 - [ ] cyberdungeon
 - [ ] greensteelcommander
