@@ -169,6 +169,8 @@ h2, h3 { font-family: var(--font-title); }
 .p-body::after { content: ""; display: block; clear: both; }
 /* A subsection shorter than its mini must not let the next mini float in beside it. */
 .p-prose h2, .p-prose h3 { clear: both; }
+/* ...and the section's last mini must not hang down into the next section. */
+.p-prose::after { content: ""; display: block; clear: both; }
 @media (max-width: 620px) {
     .p-mini { float: none; width: 100%; max-width: 320px; margin: 0.2rem 0 1rem; }
 }

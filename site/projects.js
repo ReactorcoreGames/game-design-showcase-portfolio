@@ -111,10 +111,10 @@ window.PROJECTS = [
   },
   {
     page: "Zero Space Robo Derby.html", prefix: "zerobotderby",
-    title: "Zero Space Robo Derby", subtitle: "Cellular Automata Celebrations",
-    icon: "firework-rocket-lorc", tint: "green",
-    blurb: "Combat as celebration: customized robot ships duel in zero gravity, and every destroyed ship bursts into a cellular-automata fireworks show. Not about domination, about making beautiful moments together.",
-    genres: ["action", "falling-sand", "vehicles"], tags: ["arena", "zero gravity", "fireworks", "cooperative"],
+    title: "Zero Space Robo Derby", subtitle: "Firework Arena Shooter",
+    icon: "firework-rocket-lorc", tint: "magenta",
+    blurb: "A laid-back zero-gravity blaster derby flown with the mouse alone. Drift, charge your shot, hide behind splitting asteroids, and every knockout bursts into a falling-sand firework.",
+    genres: ["arcade", "falling-sand", "action"], tags: ["arena", "zero gravity", "fireworks", "one-handed"],
     status: "concept", added: "2025-10-08"
   },
   {

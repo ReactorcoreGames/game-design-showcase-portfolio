@@ -1,0 +1,14 @@
+{
+  "slug": "Zero Space Robo Derby",
+  "prefix": "zerobotderby",
+  "preset": "03 Style - Pixel Front View",
+  "style": "Deep purple space background, neon magenta and cyan glows, warm gold sparks.",
+  "notes": "Rewrite (2026-10). Images 1, 4 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Images 2 and 3 are new: the old vignette had a floating handgun and a rainbow and didn't show the arena, and the old feature image was a humanoid robot beside floating pistols instead of a ship bursting into pixels. gen \"Zero Space Robo Derby\" --only 2,3, then finish \"Zero Space Robo Derby\" --only 2,3.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide shot of a rectangular zero-gravity arena in deep space, two sleek custom robot ships drifting in opposing positions, one charging a glowing weapon while the other maneuvers around floating asteroid chunks, translucent energy barriers around the arena, glowing particle trails from earlier explosions."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Top-down view straight down onto a rectangular arena in deep space bordered by thin glowing walls. Five small chunky robot spaceships, each painted in its own two-color scheme, drift at different angles across the arena. One ship has a swelling ball of magenta energy glowing at its nose, another fires a bright bolt across the arena. Grey asteroids of several sizes float between the ships as cover, one asteroid cracking into two halves with a spray of tiny colored pixels. Short trails of tiny glowing pixels behind each ship's thruster."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Close view of a small chunky robot spaceship painted orange and teal bursting apart in deep space into thousands of tiny square pixels. The pixel cloud streams off to the right, carried by the force of the hit. Near the center the pixels burn hot white, magenta, cyan and yellow; toward the edges they cool and fade into dark muted maroon, deep teal and grey. A bright energy bolt that struck the ship flashes on its left side. A few grey asteroids float in the dark nearby."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait of a customized robot ship angled toward the viewer with decorative paint and glowing weapon systems, a spectacular fireworks display of particles behind it, other ships silhouetted against the bursts."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide shot of an orbital space station community floating among asteroid fields, docking bays with spacecraft, an arena platform extending from the main structure, a lived-in frontier settlement with community spaces, distant robot ships moving between docks."}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "Zero Space Robo Derby-mini",
+  "out": "site/projects/mini/zerobotderby",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still in deep space, neon magenta and cyan fireworks glow, violet dark. ",
+  "notes": "Mood-only mini images for Zero Space Robo Derby.html, beside the lore, game layer and feature text. SDXL (free): gen \"Zero Space Robo Derby-mini\" --model sdxl --max 999, then finish \"Zero Space Robo Derby-mini\" --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "meet", "ratio": "3:2", "prompt": "Space colonists gathered at a big window of a station, watching small ships race outside."},
+    {"n": 2, "name": "ships", "ratio": "3:2", "prompt": "A small robot spaceship being painted in a cozy hobby workshop on a space station."},
+    {"n": 3, "name": "bonfire", "ratio": "3:2", "prompt": "An enormous firework bursting in deep space, seen from a station window."},
+    {"n": 4, "name": "stage", "ratio": "3:2", "prompt": "Small spaceships drifting between floating grey asteroids, bright bolts crossing between them."},
+    {"n": 5, "name": "meet-day", "ratio": "3:2", "prompt": "A scoreboard of glowing colored lights in a space station hall full of people."},
+    {"n": 6, "name": "album", "ratio": "3:2", "prompt": "A wall of glowing photographs of fireworks in a dim space station corridor."},
+    {"n": 7, "name": "evening", "ratio": "3:2", "prompt": "A pilot relaxing with a drink beside a window full of stars after a long day."},
+    {"n": 8, "name": "asteroids", "ratio": "3:2", "prompt": "A grey asteroid cracking in two, a spray of colorful dust between the halves."},
+    {"n": 9, "name": "drift", "ratio": "3:2", "prompt": "A small spaceship drifting sideways through space, its thruster glowing softly."},
+    {"n": 10, "name": "replay", "ratio": "3:2", "prompt": "A glowing screen showing a firework burst, in a dark room on a space station."}
+  ]
+}

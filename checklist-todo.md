@@ -95,7 +95,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Skullhead
 - [x] StardustAssault
 - [x] Underground Brawl
-- [ ] Zero Space Robo Derby
+- [x] Zero Space Robo Derby
 - [ ] abyssal_caretaker (no design doc: the page is the design)
 - [ ] admiralwars
 - [ ] antigrav_deconstruction
