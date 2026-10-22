@@ -43,11 +43,13 @@ reference/
                        plus game-design-technology-original.html, the book's unfinished original
   lore/                AAL universe lore, for AAL-set projects only
   outreach/            article links, contact links, revshare/hire-me post texts
+  supercores.md        what "supercores" means (a mechanic many designs mention without explaining)
 workflow/
   site-plan.md         the second overhaul: site purpose, look, identity rules, session plan
   page-brief.md        how to write a showcase page (new or rewrite)
   batch-session.md     how to run a hands-free session of five pages
   image-brief.md       how to write image prompts + run the image pipeline
+  scan-digest.md       how to turn a project's scanned notebook pages into markdown, read once
   cookbook.md          text-over-image legibility recipes
   fonts/               rendered samples and a licence table of assets/fonts/, for choosing page fonts
   legacy/              the old Sonnet-era task docs, kept for history only

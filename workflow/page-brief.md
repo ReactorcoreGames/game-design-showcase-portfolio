@@ -16,6 +16,7 @@ The tone is professional yet blunt, layperson-friendly but with real technical d
 2. **The design bible**, `reference/bible/2a-bible.md` and `2b-bible.md`, the short form of Reactorcore's book (`book/chapters/`, which wins any disagreement). Read both in full before designing anything, especially section 14 of `2b` (applying it to these pages) and section 15 (misreadings to avoid). The book's walkthroughs (`c31`) show the reasoning on real projects. Every page must visibly carry it: what need the game meets, how its structure meets it, and why that structure is better than the genre default.
 3. **Lore**, `reference/lore/` and the AAL page (`site/aal/index.html`, the polished summary), only for projects set in the AAL universe. Use only what's relevant. The game's own design overrides the lore wherever they conflict.
 4. **Reactorcore's articles**, `reference/outreach/article-links.md`: what Reactorcore cares about. Don't link them from project pages.
+5. **Recurring mechanics** that designs name without explaining: `reference/supercores.md`.
 
 A design file can hold several games. The manifest says which part feeds which page. If you find a split the manifest doesn't cover, decide it the way the manifest's notes suggest, and record the decision there.
 
