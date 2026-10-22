@@ -1,0 +1,21 @@
+{
+  "slug": "astro_industry-mini",
+  "out": "site/projects/mini/astro_industry",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Bright cinematic sci-fi film still, friendly construction site in space, safety yellow and red machines. ",
+  "notes": "Mood-only mini images for astro_industry.html, beside the lore, game layer and feature text. SDXL (free): gen astro_industry-mini --model sdxl --max 999, then finish astro_industry-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "mind", "ratio": "3:2", "prompt": "A friendly white robot waking up on a workbench in a bright workshop."},
+    {"n": 2, "name": "universe", "ratio": "3:2", "prompt": "A busy space station dock with cargo ships coming and going."},
+    {"n": 3, "name": "clients", "ratio": "3:2", "prompt": "A colorful crowd of colonists waving at a landing shuttle."},
+    {"n": 4, "name": "site", "ratio": "3:2", "prompt": "A small yellow bulldozer pushing rocks on a red alien desert."},
+    {"n": 5, "name": "campaign", "ratio": "3:2", "prompt": "A small colony of domes growing on a barren moon, cranes working."},
+    {"n": 6, "name": "home", "ratio": "3:2", "prompt": "A huge cozy mothership hangar full of vehicles and tools."},
+    {"n": 7, "name": "break", "ratio": "3:2", "prompt": "A small robot resting on a cargo crate at dusk, a quiet alien plain and two setting suns."},
+    {"n": 8, "name": "digging", "ratio": "3:2", "prompt": "A drill vehicle deep in a glowing underground cave full of crystals."},
+    {"n": 9, "name": "bodies", "ratio": "3:2", "prompt": "Several robot bodies of different shapes hanging on racks in a workshop."},
+    {"n": 10, "name": "space", "ratio": "3:2", "prompt": "A small cargo ship flying through a colorful nebula toward a jump gate."}
+  ]
+}

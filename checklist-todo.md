@@ -99,7 +99,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] abyssal_caretaker (design: the Kerala chat, adopted in batch 5)
 - [x] admiralwars
 - [x] antigrav_deconstruction
-- [ ] astro_industry
+- [x] astro_industry
 - [ ] bunkership
 - [ ] colossal_devastators
 - [ ] cyberdungeon

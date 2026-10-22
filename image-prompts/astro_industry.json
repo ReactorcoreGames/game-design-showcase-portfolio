@@ -1,0 +1,14 @@
+{
+  "slug": "astro_industry",
+  "prefix": "astro_industry",
+  "preset": "03 Style - Retro",
+  "style": "Clean industrial science fiction, deep space blue backgrounds with bright cyan and warm orange industrial lighting and metallic silver details.",
+  "notes": "Rewrite (2026-10). Images 1, 2, 4 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 3 is new: the old one was a network diagram of floating hexagon pads with screens of gibberish lettering; the new one shows a job being done for a client. gen astro_industry --only 3, then finish astro_industry --only 3.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide shot of an industrial spaceport on an alien planet, mining excavators and construction machines working the landscape in front, modular stations and orbital platforms joined by transport tubes behind, a starry sky with nebulae, sparks from active construction."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Low-angle shot of a giant articulated excavator with several drill arms reshaping a rocky alien mountainside into terraces, glowing power cores on the vehicle, glowing ore deposits in the rock, dust clouds, small flying helper machines around it."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Wide shot of a small frontier colony on a rocky alien plain under a starry sky. A big yellow and white heavy-lift crane truck with chunky wheels has just set down a large cylindrical water tank module beside a cluster of domed habitat huts. Standing on the truck's platform, a slim white humanoid robot engineer with a glowing cyan visor and an orange tool belt waves back at a group of colonists in colorful jumpsuits cheering and waving from beside the domes. Work lights, a small landing pad and a parked boxy shuttle nearby."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Three-quarter portrait of a modular humanoid robot engineer with interchangeable tool arms, a welder in one hand and a heavy tool in the other, a glowing cyan visor, a tool belt, a half-built space habitat frame behind."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide view of a peaceful spacefaring civilization: cities on terraformed worlds with orbital elevators, ring habitats and stations in the sky, ships traveling along lanes between distant stars."}
+  ]
+}

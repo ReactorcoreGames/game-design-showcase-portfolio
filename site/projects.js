@@ -95,10 +95,10 @@ window.PROJECTS = [
   },
   {
     page: "astro_industry.html", prefix: "astro_industry",
-    title: "Astro Industry Freelancer", subtitle: "Engineering Sandbox Simulation",
+    title: "Astro Industry Freelancer", subtitle: "Interstellar Construction Jobs",
     icon: "bucket-wheel-excavator-caro-asercion", tint: "yellow",
-    blurb: "The industrial engineering fantasy in a peaceful universe: pilot heavy vehicles, reshape terrain, build factories and solve problems for beings across endless star systems, without pressure.",
-    genres: ["sandbox", "vehicles"], tags: ["engineering", "automation", "exploration", "space"],
+    blurb: "A Bob the Builder simulator in space: a robot engineer takes jobs across an endless peaceful universe, driving heavy machines as simple as toys, with everything available from the start and no end game.",
+    genres: ["sandbox", "vehicles"], tags: ["engineering", "automation", "procedural jobs", "space"],
     status: "concept", added: "2025-10-04"
   },
   {
