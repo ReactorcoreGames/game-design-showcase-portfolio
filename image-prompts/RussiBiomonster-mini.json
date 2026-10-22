@@ -1,0 +1,21 @@
+{
+  "slug": "RussiBiomonster-mini",
+  "out": "site/projects/mini/russibio",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic horror film still at night, grey concrete, crimson flesh, sodium amber light. ",
+  "notes": "Mood-only mini images for RussiBiomonster.html, beside the lore, game layer and feature text. SDXL (free): gen RussiBiomonster-mini --model sdxl --max 999, then finish RussiBiomonster-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "blocks", "ratio": "3:2", "prompt": "Rows of identical grey concrete apartment blocks and factory smokestacks in an industrial city."},
+    {"n": 2, "name": "lake", "ratio": "3:2", "prompt": "A murky toxic green lake outside a smoggy city, rusted barrels on the shore."},
+    {"n": 3, "name": "army", "ratio": "3:2", "prompt": "Soldiers with flamethrowers standing beside an army van outside an apartment block at night."},
+    {"n": 4, "name": "room", "ratio": "3:2", "prompt": "A shabby apartment living room with a sofa, a wardrobe and a television, lit by a single lamp."},
+    {"n": 5, "name": "building", "ratio": "3:2", "prompt": "A grey concrete apartment block at night, one window after another going dark."},
+    {"n": 6, "name": "bulletin", "ratio": "3:2", "prompt": "A cheerful government bulletin board in a bleak concrete courtyard."},
+    {"n": 7, "name": "stairwell", "ratio": "3:2", "prompt": "A dim concrete stairwell in an old apartment block, peeling paint and a bare bulb."},
+    {"n": 8, "name": "growth", "ratio": "3:2", "prompt": "A huge glossy crimson flesh blob filling a narrow apartment hallway."},
+    {"n": 9, "name": "stash", "ratio": "3:2", "prompt": "An old rifle hidden under the cushions of a worn sofa."},
+    {"n": 10, "name": "wreck", "ratio": "3:2", "prompt": "A wrecked apartment kitchen, a toppled fridge and smashed chairs across the floor."}
+  ]
+}

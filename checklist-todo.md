@@ -91,7 +91,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] MutantLoveQuest ⚑
 - [x] Planetary Ring Miner
 - [x] Poo Storm Janitor Powersuit
-- [ ] RussiBiomonster ⚑
+- [x] RussiBiomonster ⚑
 - [ ] Skullhead
 - [ ] StardustAssault
 - [ ] Underground Brawl

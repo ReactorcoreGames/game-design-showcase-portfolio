@@ -3,784 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Russki Biomonster Neighbourhood: Apartment Ragdoll Rumble</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Take control of an amorphous flesh monster as it devours residents of a Russian apartment building. Use tentacles, bone spikes, and a grinding maw in this dark tactical horror experience with government conspiracy themes.">
+    <title>Biomonster Neighbourhood: Apartment Ragdoll Rumble</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: play an amorphous flesh blob loosed into a concrete apartment block, swinging on tentacles and skewering furniture, while tough tenants pull hidden weapons out of their sofas and fight back. A dark satire whose propaganda bulletins reveal who the real monster is.">
+    <meta name="keywords" content="game design concept, ragdoll physics, monster game, reverse horror, tentacles, grappling hook, dark satire, apartment block, Floppy Heroes inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/RussiBiomonster.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Russki Biomonster Neighbourhood: Apartment Ragdoll Rumble">
-    <meta property="og:description" content="Take control of an amorphous flesh monster as it devours residents of a Russian apartment building. Use tentacles, bone spikes, and a grinding maw in this dark tactical horror experience with government conspiracy themes.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/russibio_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/RussiBiomonster.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Game Design Showcase">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Biomonster Neighbourhood: Apartment Ragdoll Rumble">
+    <meta property="og:description" content="A game design concept: you're the tentacled blob a regime sends to clear stubborn tenants out of their homes. They have rifles in the couch. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/RussiBiomonster.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/russibio_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="A spiked crimson flesh blob with tentacles fills a dim apartment living room while a screaming tenant on the sofa grabs a rifle hidden behind a cushion">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Russki Biomonster Neighbourhood: Apartment Ragdoll Rumble">
-    <meta name="twitter:description" content="Take control of an amorphous flesh monster as it devours residents of a Russian apartment building. Use tentacles, bone spikes, and a grinding maw in this dark tactical horror experience with government conspiracy themes.">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Biomonster Neighbourhood: Apartment Ragdoll Rumble">
+    <meta name="twitter:description" content="A game design concept: play the tentacled blob loose in an apartment block, against tenants who keep weapons in their furniture.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/russibio_2_vignette.jpg">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Russki Biomonster Neighbourhood: Apartment Ragdoll Rumble",
-      "description": "Take control of an amorphous flesh monster as it devours residents of a Russian apartment building. Use tentacles, bone spikes, and a grinding maw in this dark tactical horror experience with government conspiracy themes.",
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/russibio_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/RussiBiomonster.html",
-      "author": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "creator": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "genre": "Tactical Horror Game",
-      "keywords": "horror game, tactical combat, monster gameplay, apartment building, tentacle mechanics, Russian setting, government conspiracy",
-      "dateCreated": "2025",
-      "inLanguage": "en-US"
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Biomonster Neighbourhood: Apartment Ragdoll Rumble",
+        "description": "A game design concept, not a released game: a side-view ragdoll physics game in which the player controls a tentacled flesh blob moving room by room through a generated apartment block, against tenants who fight back with weapons hidden in their furniture, framed by a regime's cheerful propaganda bulletins.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Horror", "Comedy"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/RussiBiomonster.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/russibio_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#101312">
+
+    <link rel="preload" href="../fonts/hydrogen-whiskey.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Metal+Mania&family=Butcherman&display=optional" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /*
-        AI Generated Images Required:
-        russibio_1_title.jpg - Crimson-tinted Russian apartment building exterior with ominous atmosphere
-        russibio_2_vignette.jpg - Flesh monster tentacle grappling through a cramped apartment room
-        russibio_3_feature.jpg - Close-up of tentacle mechanics pulling objects and people in apartment setting
-        russibio_4_boxart.jpg - Horror cover art showing flesh monster silhouette against apartment building backdrop
-        */
+        /* Biomonster Neighbourhood: cold grey-green concrete for the ground, glossy flesh pink-crimson
+           for the blob, sodium amber from the streetlamps, and bone white for highlights.
+           Hydrogen Whiskey, tall and condensed like a ministry poster, for every display line. */
+        @font-face { font-family: "Hydrogen Whiskey"; src: url("../fonts/hydrogen-whiskey.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: linear-gradient(135deg, #2c0505 0%, #1a0000 50%, #0a0000 100%);
-            --container-bg: rgba(40, 15, 15, 0.9);
-            --card-bg: rgba(60, 20, 20, 0.8);
-            --border-color: #8b2635;
-            --text-color: #e8ddd4;
-            --title-color: #ff4757;
-            --subtitle-color: #c44569;
-            --accent-color: #ff6b7d;
-            --shadow-color: rgba(139, 38, 53, 0.4);
-            --glow-color: #ff4757;
-            --bone-white: #f1f2f6;
-            --decay-yellow: #feca57;
-            --flesh-pink: #ff9ff3;
+            --flow-1: #101312;
+            --flow-2: #3a1426;
+            --grid-minor: rgba(200, 225, 215, 0.04);
+            --grid-major: rgba(200, 225, 215, 0.09);
+            --p-ground: rgba(16, 19, 18, 0.95);
+            --p-panel: #1b201e;
+            --p-1: #e8467a;
+            --p-2: #e2a64a;
+            --p-3: #efe6d6;
+            --p-text: #dfe3dc;
+            --p-dim: #a3aba3;
+            --p-line: rgba(200, 220, 210, 0.14);
+            --font-title: "Hydrogen Whiskey", "Segoe UI", sans-serif;
+            --font-sub: "Hydrogen Whiskey", "Segoe UI", sans-serif;
+            --shade: #070908;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "heartbeat": a fleshy crimson glow that throbs twice and rests, like
+           something alive in the walls, over dark layered shadows so the title always reads. */
+        .p-name {
+            font-size: clamp(2.2rem, 0.9rem + 5.2vw, 6rem);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            line-height: 1.05;
+            animation: heartbeat 2.6s ease-in-out infinite;
         }
+        @keyframes heartbeat {
+            0%, 40%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 16px rgba(232, 70, 122, 0.35); }
+            10% { color: #ffe9ee; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(232, 70, 122, 0.95), 0 0 46px rgba(232, 70, 122, 0.45); }
+            20% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(232, 70, 122, 0.5); }
+            28% { color: #ffe9ee; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 20px rgba(232, 70, 122, 0.85), 0 0 38px rgba(232, 70, 122, 0.35); }
+        }
+        .p-sub { text-transform: uppercase; letter-spacing: 0.1em; color: var(--p-2); text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 2px 0 var(--shade), 0 0 8px var(--shade), 0 0 16px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: heartbeat-line 2.6s ease-in-out infinite;
+        }
+        @keyframes heartbeat-line {
+            0%, 40%, 100% { opacity: 0.5; box-shadow: none; }
+            10%, 28% { opacity: 1; box-shadow: 0 0 14px rgba(232, 70, 122, 0.9); }
+        }
+        .section-mark::after { animation: h2-line 2.6s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 40%, 100% { box-shadow: none; } 10%, 28% { box-shadow: 0 0 10px rgba(232, 70, 122, 0.6); } }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 1.05rem; letter-spacing: 0.12em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 400; font-size: 1.05rem; }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-			letter-spacing: 1px;
-            min-height: 100vh;
-        }
-
-        .patreon-link {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 0.9rem;
-            color: var(--text-color);
-            text-decoration: none;
-            opacity: 0.7;
-            z-index: 100;
-            transition: opacity 0.3s ease;
-        }
-
-        .patreon-link:hover {
-            opacity: 1;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .title-section {
-            position: relative;
-            text-align: center;
-            padding: 260px 20px 260px;
-            margin-bottom: 40px;
-            background-image: url('images/russibio_1_title.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
-
-        .title-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(20, 5, 5, 0.4);
-            z-index: 1;
-        }
-
-        .title-section * {
-            position: relative;
-            z-index: 2;
-        }
-
-        .main-title {
-            font-family: 'Arial', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: bold;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            text-shadow: 
-                0 0 10px var(--glow-color),
-                0 0 20px var(--glow-color),
-                0 0 30px var(--glow-color),
-                2px 2px 0px rgba(0,0,0,0.8);
-            animation: emberGlow 3s ease-in-out infinite alternate;
-        }
-
-        .subtitle {
-            font-family: 'Metal Mania', cursive;
-            font-size: 4rem;
-            color: var(--subtitle-color);
-            font-weight: 300;
-            padding: 15px;
-            border-radius: 4px;
-            display: inline-block;
-            text-shadow: 
-                0 0 5px rgba(0,0,0,0.8),
-                1px 1px 0px rgba(0,0,0,0.8);
-            animation: emberGlow 3s ease-in-out infinite alternate 0.5s;
-        }
-
-        @keyframes emberGlow {
-            0% {
-                text-shadow: 
-                    0 0 10px var(--shadow-color),
-                    0 0 20px var--shadow-color),
-                    0 0 30px var(--shadow-color),
-                    2px 2px 0px rgba(0,0,0,0.8);
-            }
-            100% {
-                text-shadow: 
-                    0 0 15px var(--shadow-color),
-                    0 0 25px var(--glow-color),
-                    0 0 40px var(--shadow-color),
-                    2px 2px 0px rgba(0,0,0,0.8);
-            }
-        }
-
-        .overview {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px var(--shadow-color);
-            margin-bottom: 40px;
-        }
-
-        .overview p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .three-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 6px 20px var(--shadow-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px var(--shadow-color);
-            border-color: var(--accent-color);
-        }
-
-        .card h3 {
-            font-family: 'Metal Mania', cursive;
-            color: var(--title-color);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            text-shadow: 0 0 10px var(--glow-color);
-            animation: emberGlow 4s ease-in-out infinite alternate;
-        }
-
-        .controls-section {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px var(--shadow-color);
-            margin-bottom: 40px;
-        }
-
-        .controls-section h2 {
-            color: var(--title-color);
-            font-size: 2rem;
-            margin-bottom: 25px;
-            text-align: center;
-            text-shadow: 0 0 15px var(--glow-color);
-            animation: emberGlow 4s ease-in-out infinite alternate;
-        }
-
-        .controls-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .control-item {
-            background: rgba(80, 25, 25, 0.6);
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .control-key {
-            color: var(--bone-white);
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .vignette-section {
-            position: relative;
-            margin: 50px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px var(--shadow-color);
-        }
-
-        .vignette-image {
-            width: 100%;
-            height: 600px;
-            background-image: url('images/russibio_2_vignette.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            color: var(--bone-white);
-            font-style: italic;
-            font-size: 1.2rem;
-            max-width: 400px;
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .game-layers {
-            margin: 50px 0;
-        }
-
-        .section-title {
-            font-family: 'Creepster', cursive;
-            color: var(--title-color);
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-            text-shadow: 0 0 20px var(--glow-color);
-            animation: emberGlow 5s ease-in-out infinite alternate;
-        }
-
-        .layer-card {
-            background: var(--card-bg);
-            padding: 35px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px var(--shadow-color);
-        }
-
-        .layer-card h3 {
-            color: var(--accent-color);
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            text-shadow: 0 0 10px var(--accent-color);
-        }
-
-        .layer-card .layer-number {
-            display: inline-block;
-            background: var(--glow-color);
-            color: black;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .game-modes {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px var(--shadow-color);
-            margin: 50px 0;
-        }
-
-        .features-section {
-            margin: 50px 0;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px var(--shadow-color);
-        }
-
-        .feature-card h3 {
-            color: var(--title-color);
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px var(--glow-color);
-            animation: emberGlow 6s ease-in-out infinite alternate;
-        }
-
-        .feature-highlight {
-            background: var(--glow-color);
-            color: black;
-            padding: 3px 8px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .feature-image-section {
-            position: relative;
-            margin: 50px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px var(--shadow-color);
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 600px;
-            background-image: url('images/russibio_3_feature.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .trivia-section {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px var(--shadow-color);
-            margin: 50px 0;
-        }
-
-        .trivia-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .trivia-item {
-            background: rgba(80, 25, 25, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid var(--decay-yellow);
-        }
-
-        .trivia-item .trivia-icon {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 50px 0;
-            align-items: center;
-        }
-
-        .boxart-image {
-            width: 100%;
-            aspect-ratio: 2/3;
-            background-image: url('images/russibio_4_boxart.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px var(--shadow-color);
-        }
-
-        .boxart-description {
-            background: var(--card-bg);
-            padding: 35px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px var(--shadow-color);
-        }
-
-        .boxart-title {
-            color: var(--title-color);
-            font-size: 2rem;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px var(--glow-color);
-        }
-
-        .footer {
-            background: rgba(20, 5, 5, 0.9);
-            padding: 40px;
-            text-align: center;
-            border-top: 2px solid var(--border-color);
-            margin-top: 60px;
-        }
-
-        .footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: var(--glow-color);
-            text-shadow: 0 0 10px var(--glow-color);
-        }
-
-        .ability-diagram {
-            margin: 30px 0;
-            text-align: center;
-        }
-
-        .svg-container {
-            background: rgba(40, 15, 15, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        @media (max-width: 768px) {
-            .boxart-section {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .three-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .controls-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .trivia-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 15px;
-            }
-            
-            .title-section {
-                padding: 80px 15px 60px;
-            }
-        }
+        .p-nest > div { --c: var(--p-2); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <div class="title-section">
-        <h1 class="main-title">Russki Biomonster Neighbourhood</h1>
-        <p class="subtitle">Apartment Ragdoll Rumble</p>
-    </div>
-
-    <div class="container">
-        <section class="overview">
-            <p>Take control of an amorphous flesh monster as it systematically devours the residents of a Russian apartment building. Use tentacles, bone spikes, and a grinding maw to eliminate tough-as-nails tenants who fight back with hidden weapons stashed throughout their homes.</p>
-            <br>
-            <p>Navigate cramped apartment rooms, adapt to desperate resistance, and consume your victims to grow stronger in this dark tactical horror experience that puts you in the role of the nightmare itself.</p>
-            <br>
-            <p>Uncover the disturbing truth behind your rampage as government propaganda reveals the sinister purpose driving your monstrous mission through the concrete corridors of urban Russia.</p>
-        </section>
-
-        <div class="three-cards">
-            <div class="card">
-                <h3>🎯 Target Audience</h3>
-                <p>Horror game enthusiasts who appreciate tactical combat mechanics, mature players seeking dark narrative themes, and gamers who enjoy role-reversal experiences where they embody the monster rather than fight it.</p>
-            </div>
-            <div class="card">
-                <h3>🧠 Game's Purpose</h3>
-                <p>Provides cathartic power fantasy through monstrous agency, develops strategic thinking via tactical dismemberment combat, and delivers thought-provoking commentary on government corruption and displacement.</p>
-            </div>
-            <div class="card">
-                <h3>💀 Core Concept</h3>
-                <p>Fulfill the need for agency and control by playing as the predator in a confined environment, while satisfying strategic thinking through physics-based combat and resource management in tight apartment spaces.</p>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/russibio_1_title.jpg" alt="A cracked concrete apartment block at dusk under a blood-red sky, laundry and satellite dishes on its balconies, silhouettes in its lit windows, security cameras on poles, and dark figures on the wet street." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Biomonster Neighbourhood</span><span class="p-sub">Apartment Ragdoll Rumble</span></h1>
             </div>
         </div>
+    </header>
 
-        <section class="controls-section">
-            <h2>🕹️ Controls & Interface</h2>
-            <div class="controls-grid">
-                <div class="control-item">
-                    <div class="control-key">Mouse Aim</div>
-                    <div>Direction for all blob abilities</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Mouse 1</div>
-                    <div>Tentacle Grappling (click/release)</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Mouse 2</div>
-                    <div>Harden (defensive mode)</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">D</div>
-                    <div>Launch Heavy Bone Harpoon</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">S</div>
-                    <div>Fire Light Bone Dart</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">A</div>
-                    <div>Deploy Retractable Spikes</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">W</div>
-                    <div>Open Grinding Maw</div>
-                </div>
-                <div class="control-item">
-                    <div class="control-key">Q/E</div>
-                    <div>Roll Counter/Clockwise</div>
-                </div>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/spiked-tentacle-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
             </div>
-            <p><strong>Player Control:</strong> You embody a 1-meter diameter amorphous flesh monster that can only move via tentacle grappling or rolling. Every surface becomes a potential anchor point for strategic positioning and prey manipulation in the claustrophobic apartment environment.</p>
-        </section>
-
-        <div class="vignette-section">
-            <div class="vignette-image">
-                <div class="vignette-quote">
-                    "The thrill of being the nightmare that haunts the night"
-                </div>
-            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
         </div>
 
-        <section class="game-layers">
-            <h2 class="section-title">🏗️ Game Layers</h2>
-            
-            <div class="layer-card">
-                <span class="layer-number">1</span>
-                <h3>Moment-to-Moment Gameplay</h3>
-                <p>Tactical physics-based combat in cramped apartment rooms. Use tentacle grappling to position yourself and manipulate enemies while they scramble to arm themselves from furniture stashes. Deploy bone spikes to impale multiple targets, launch harpoons to pin enemies to walls, or activate your grinding maw to consume nearby victims. Each ability has tactical considerations - hardening provides defense but limits mobility, while the maw and spikes are mutually exclusive, forcing strategic choice in the heat of battle.</p>
-            </div>
-            
-            <div class="layer-card">
-                <span class="layer-number">2</span>
-                <h3>Low Metagame - Apartment Assault</h3>
-                <p>Progress room-by-room through a single apartment building, facing 3-12 rooms of escalating resistance. Tenants become more prepared and better armed as you advance, pulling AK-47s from couches and RPGs from cabinets. Each consumed victim makes you larger and stronger, providing damage reduction and increased attack power. Victory requires clearing the entire building before accumulating too much damage from the increasingly desperate residents.</p>
-            </div>
-            
-            <div class="layer-card">
-                <span class="layer-number">3</span>
-                <h3>High Metagame - Propaganda Campaign</h3>
-                <p>An eerie achievements log presented as government propaganda bulletins tracks each building you've cleared. Each success is reported as making way for industrial development - coal mines, war factories, industrial plants. The cheerful bureaucratic tone creates unsettling cognitive dissonance as you realize you're not a rogue monster, but a government bioweapon used to displace stubborn residents for corporate interests.</p>
-            </div>
-            
-            <div class="layer-card">
-                <span class="layer-number">4</span>
-                <h3>Practical Game Flow</h3>
-                <p>Quick 15-30 minute sessions of intense monster rampage with satisfying completion. Start the app, select from randomly generated apartment buildings with different layouts and tenant types. Battle through rooms with growing power and size, culminate in victory or defeat. End with propaganda bulletin entry that reveals the industrial facility planned for that location, creating a disturbing moment of reflection before closing the game.</p>
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/brain-tentacle-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">You are the monster: an amorphous, pulsating blob of flesh about a metre across, slipped into a grey concrete apartment block in a rough industrial city. You can't walk. You <strong>fling tentacles at the walls and pull yourself</strong> through each apartment, then skewer, harpoon, smash and devour your way through the building, room by room.</p>
+            <p>The tenants are not helpless. They're tough, proud people in a rough neighbourhood, and every one of them has something stashed in the furniture for exactly this kind of day: an old rifle in the sofa, a rocket launcher in the cupboard, a <strong>frying pan behind the toilet</strong>. One of them is no match for you. A whole building of them might be.</p>
+            <p>Underneath the slapstick is a dark satire. The blob is a weapon, and the page that appears after every building, a cheerful propaganda bulletin, makes it slowly clear who's pointing it. It's a spinoff of Reactorcore's Floppy Heroes remix, a ragdoll physics combat game, turned inside out: this time you're what everyone is fighting.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/angry-eyes-delapouite.png)"></span>Target audience</h3>
+                    <p>People who like playing the monster (Carrion) and physics chaos with a grappling hook, and who enjoy dark comedy with something to say.</p>
+                    <p>They want <strong>to be the overwhelming force for once</strong>, and they're tired of games where the monster only exists to be defeated.</p>
+                    <p>The mouse aims everything; a handful of keys switch abilities on and off.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/acid-blob-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power and freedom:</strong> a body that swings, slams and skewers, and a room full of physics to throw around.</p>
+                    <p><strong>Excitement and silliness:</strong> fast, brutal momentum, and tenants pulling absurd weapons out of their furniture.</p>
+                    <p><strong>Meaning:</strong> the slow, chilling understanding of who sent you.</p>
+                    <p>It avoids making <strong>cruelty the reward</strong>: there are no points for suffering, the tenants fight back, and when they win, the game records it as their victory.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/megaphone-delapouite.png)"></span>Core concept</h3>
+                    <p>Monster games usually pick one side: a mindless power fantasy, or a monster that's only there to be beaten.</p>
+                    <p>This one gives you the full power of the monster, and then <strong>turns the camera on whoever released it</strong>. The horror you control pales next to the one that signs the paperwork.</p>
+                    <p>And it doesn't end: there is always another building, generated fresh.</p>
+                </article>
             </div>
         </section>
 
-        <section class="game-modes">
-            <h2 class="section-title">🎮 Game Modes</h2>
-            <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 20px;">🏢 Apartment Assault</h3>
-            <p>The core and only game mode - a fast-paced, brutal gauntlet through procedurally varied Russian apartment buildings. Each run features different building layouts, tenant distributions, weapon placements, and resistance levels. Buildings range from 3-room quick raids to 12-room extended campaigns.</p>
-            <br>
-            <p><strong>Intensity Options:</strong> Choose your preferred challenge level from desperate survival (scarce victims, well-armed tenants) to power fantasy (abundant prey, minimal resistance). The procedural system adapts room layouts, enemy equipment, and victory conditions to match your selected intensity.</p>
-            <br>
-            <p><strong>Replayability:</strong> Random apartment addresses, tenant personalities, weapon stashes, and architectural layouts ensure each assault feels unique while maintaining the core tactical monster gameplay.</p>
+        <figure class="p-shot">
+            <img src="../projects/images/russibio_5_story.jpg" alt="A bleak, smoggy industrial city at dusk seen from above: rows of grey concrete apartment blocks, smokestacks and cooling towers behind them, a murky lake at the edge, and in the foreground a fenced lot of yellow bulldozers and excavators beside one old block with a few lit windows." width="1280" height="720" loading="lazy">
+            <figcaption>"Every building the blob clears is already promised to someone: the bulldozers are waiting before it gets there."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/factory-delapouite.png)"></span>Lore and story</h2>
+            <h3>The neighbourhood</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/russibio/01-blocks.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>An unnamed industrial city of identical concrete apartment blocks, factories and smoke, ruled by a regime that calls everything it does progress. The low-income blocks are full of people who've learned to look after themselves: workers, war veterans, pensioners, homemakers, skinny lads and hard men, all in their slippers and house clothes, all with something valuable, or something dangerous, hidden in the furniture.</p>
+
+            <h3>The weapon</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/russibio/02-lake.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Outside the city lies a lake of radioactive waste, and in it something mutated. The regime's laboratories grew it into a <strong>bioweapon</strong>. The regime wants land: a new plant, a war factory, a coal mine. Some tenants won't leave. So instead of paying them or arguing with them, it lets the blob into their building, through a door, a window, a ventilation shaft, a sewer grate or the toilet plumbing.</p>
+
+            <h3>The heroes</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/russibio/03-army.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>When the blob has emptied a building, the army arrives, oh so conveniently, to "stop the monster" with flamethrowers, and everyone sees them as heroes. The scorched, dormant blob is loaded into a van and taken back to base, where it slowly regrows until it's ready for the next address. Then the bulldozers move in.</p>
+
+            <h3>Right now</h3>
+            <p>A new address. A building full of people who don't know yet. Get through it before they put enough holes in you.</p>
         </section>
 
-        <section class="features-section">
-            <h2 class="section-title">⚙️ Game Features & Mechanics</h2>
-            
-            <div class="feature-card">
-                <h3>🐙 Tentacle Grappling System</h3>
-                <p>The core movement and tactical system. Launch retractable tentacles at any surface - walls, furniture, enemies - to pull yourself toward them or pull objects toward you. <span class="feature-highlight">Physics-based momentum</span> means strategic positioning and timing matter. Use furniture as shields by pulling them between you and armed tenants, or drag screaming victims directly into your maw.</p>
-                <br>
-                <p>Grappling creates dynamic combat scenarios where every surface becomes a tactical option. Swing from ceiling lights, yank rugs out from under enemies, or use tentacles to collapse furniture onto fleeing residents.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>🦴 Modular Monster Arsenal</h3>
-                <p>Six distinct abilities that can be combined tactically: <span class="feature-highlight">Retractable bone spikes</span> for impaling multiple enemies, <span class="feature-highlight">heavy harpoons</span> for pinning targets to walls, <span class="feature-highlight">light darts</span> for rapid harassment, <span class="feature-highlight">hardening</span> for defense, and the <span class="feature-highlight">grinding maw</span> for close-range consumption.</p>
-                <br>
-                <p>Strategic exclusions force meaningful choices - you can't use spikes and maw simultaneously, hardening limits mobility, harpoons must be retrieved to reuse. Each ability serves different tactical situations in the cramped apartment environment.</p>
-            </div>
-
-            <div class="svg-container">
-                <svg width="100%" height="200" viewBox="0 0 800 200">
-                    <defs>
-                        <radialGradient id="blobGradient" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" style="stop-color:#ff4757;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#2c0505;stop-opacity:1" />
-                        </radialGradient>
-                    </defs>
-                    
-                    <!-- Central blob -->
-                    <circle cx="400" cy="100" r="40" fill="url(#blobGradient)" stroke="#8b2635" stroke-width="2"/>
-                    
-                    <!-- Tentacles -->
-                    <path d="M 400 100 Q 350 80 300 60" stroke="#ff6b7d" stroke-width="4" fill="none"/>
-                    <path d="M 400 100 Q 450 80 500 60" stroke="#ff6b7d" stroke-width="4" fill="none"/>
-                    <path d="M 400 100 Q 380 140 360 180" stroke="#ff6b7d" stroke-width="4" fill="none"/>
-                    <path d="M 400 100 Q 420 140 440 180" stroke="#ff6b7d" stroke-width="4" fill="none"/>
-                    
-                    <!-- Ability labels -->
-                    <text x="280" y="50" fill="#e8ddd4" font-size="14" text-anchor="middle">Grapple</text>
-                    <text x="520" y="50" fill="#e8ddd4" font-size="14" text-anchor="middle">Harpoon</text>
-                    <text x="340" y="195" fill="#e8ddd4" font-size="14" text-anchor="middle">Spikes</text>
-                    <text x="460" y="195" fill="#e8ddd4" font-size="14" text-anchor="middle">Maw</text>
-                    
-                    <text x="400" y="30" fill="#ff4757" font-size="16" text-anchor="middle" font-weight="bold">Monster Ability System</text>
-                </svg>
-            </div>
-            
-            <div class="feature-card">
-                <h3>🏠 Dynamic Tenant AI & Apartment Systems</h3>
-                <p>Tenants react intelligently to your presence - fleeing when unarmed, seeking weapons from randomized furniture stashes, then returning to fight with <span class="feature-highlight">authentic Russian weaponry</span> from Soviet-era firearms to improvised kitchen weapons.</p>
-                <br>
-                <p>Each apartment room contains procedurally placed furniture with hidden weapon caches. Tenants might pull a Kalashnikov from a sofa, an RPG from a wardrobe, or a frying pan from behind a toilet. This creates emergent tactical scenarios where you must predict and counter their arming attempts.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>📈 Growth Through Consumption</h3>
-                <p>Each devoured victim increases your mass, size, and power. <span class="feature-highlight">Damage reduction scaling</span> means larger monsters shrug off small arms fire, while <span class="feature-highlight">increased attack force</span> allows you to smash through furniture and pin stronger enemies.</p>
-                <br>
-                <p>Visual and mechanical progression as you grow from 1-meter diameter to 2+ meters, filling rooms and requiring different tactical approaches. Early game emphasizes stealth and precision; late game becomes unstoppable rampage.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>🏗️ Apartment Building Randomization</h3>
-                <p>Procedural room layouts, furniture placement, and architectural features create unique tactical challenges each playthrough. <span class="feature-highlight">Narrow hallways</span> favor tentacle navigation, while <span class="feature-highlight">open living rooms</span> become chaotic battlefields with multiple cover options.</p>
-                <br>
-                <p>Environmental storytelling through apartment details - family photos, personal belongings, architectural decay - creates emotional context that contrasts with your monstrous mission.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>📰 Propaganda Meta-Narrative System</h3>
-                <p>Victory achievements are recorded in <span class="feature-highlight">disturbing government bulletins</span> that reveal the true purpose behind your rampages. Each cleared building becomes a cheerful announcement about new industrial development, creating profound cognitive dissonance.</p>
-                <br>
-                <p>The propaganda system transforms individual tactical victories into a larger horror narrative about government displacement of citizens for corporate interests, adding psychological depth to the monster gameplay.</p>
-            </div>
-        </section>
-
-        <div class="feature-image-section">
-            <div class="feature-image">
-                <div class="vignette-quote">
-                    "Every surface becomes a weapon when you can pull the world toward you"
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/mouse-delapouite.png)"></span>Controls and interface</h2>
+            <p>The apartments are seen from the side, as cutaway rooms. The mouse pointer sets the direction for every ability at once.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim every ability</dd></div>
+                        <div><dt>Mouse 1</dt><dd>Launch a tentacle; click again to let go</dd></div>
+                        <div><dt>Q / E</dt><dd>Roll anticlockwise / clockwise</dd></div>
+                    </dl>
                 </div>
+                <div class="p-keygroup">
+                    <h3>Attack</h3>
+                    <dl>
+                        <div><dt>Mouse 2</dt><dd>Hold to harden the front of the blob</dd></div>
+                        <div><dt>A</dt><dd>Bone spikes out or in</dd></div>
+                        <div><dt>W</dt><dd>Blender maw open or shut</dd></div>
+                        <div><dt>S / D</dt><dd>Fire a bone dart / a bone harpoon</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Hardening works with everything else, so you can be a spiked wrecking ball, or an armored mouth. Spikes and maw switch each other off: the blob can bristle or swallow, not both.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/russibio_2_vignette.jpg" alt="A spiked crimson flesh blob with sucker-covered tentacles fills a dim apartment living room, family photos scattered on the floor, while a screaming tenant on the sofa pulls a rifle out from behind a cushion and an armed figure waits in the doorway." width="1280" height="720" loading="lazy">
+            <figcaption>"Every home hides a weapon somewhere in its furniture, and the tenants know exactly where."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/wooden-chair-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One apartment</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/russibio/04-room.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each room is an enclosed arena of furniture and tenants. You swing in on a tentacle, slam into the sofa, pin someone to the wall with a harpoon, reel in another with a tentacle and open the maw.</p>
+                        <p>Meanwhile the tenants scatter, and the smart ones run for the furniture to dig out whatever they hid there. In the first rooms, they're caught by surprise. Further in, they've heard the noise.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/block-house-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>The building</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/russibio/05-building.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A building is a <strong>gauntlet of apartments</strong>, cleared one after another until the whole block is empty, or until the tenants have done enough damage to bring the blob down.</p>
+                        <p>The blob doesn't heal between rooms. It grows instead, so every building is a race between how big you're getting and how many holes they've put in you.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/newspaper-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Address after address</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/russibio/06-bulletin.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There's always another building the regime wants, each one generated: its address, its layout, its tenants and what they've hidden.</p>
+                        <p>Every one ends up in a permanent <strong>propaganda bulletin</strong>, a page per address announcing what will be built there, in the bright, upbeat voice of a ministry press office. Reading it back, knowing what really happened, is the most unsettling part of the game.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A room or a whole block</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/russibio/07-stairwell.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A room takes a minute or two of fast, brutal action; a whole building somewhere around half an hour. The game saves at every room's door, so you can stop between apartments and the building waits, with its damage and its survivors, exactly as you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/house-keys-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: building after building, each one a complete story with its own bulletin at the end.</p>
+            <div class="p-nest" aria-label="The structure, outermost first">
+                <div><span>The bulletin</span><small>Endless: every address the blob was sent to, and what the regime said about it.</small>
+                    <div><span>A building</span><small>A generated apartment block, room by room: around half an hour.</small>
+                        <div><span>An apartment</span><small>An arena of furniture and tenants: a minute or two.</small>
+                            <div><span>A swing</span><small>Throw a tentacle, pull, slam, skewer.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/kraken-tentacle-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/grapple-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Moving by tentacle</h3>
+                        <p>The blob can't walk. It moves the way a grappling hook gun does: launch a <strong>tentacle</strong> at a wall and it sticks, pulling the blob toward that spot, faster and faster, until you let go. Let go at the right moment and you fly across the room with all that speed. Apart from that, the blob can only roll.</p>
+                        <p>Launch it at a piece of furniture or a person instead, and it's them who get pulled toward you. That's how you drag the sofa out of the way, or the tenant out from behind it.</p>
+                        <p>Everything else follows from speed: a hardened blob arriving fast is a <strong>wrecking ball</strong> that smashes furniture to bits, and a blob arriving slowly is a target.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/russibio_3_feature.jpg" alt="A pink sucker-covered tentacle stretches toward the camera and grips the leg of a wooden table in a wrecked apartment, a rifle dropped on the floor, while an armed figure in silhouette aims from across the room." width="1280" height="720" loading="lazy">
+                            <figcaption>"A tentacle stuck to a wall pulls the blob toward it; one stuck to a person pulls them in."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/harpoon-chain-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">What the blob can do</p>
+                        <h3>A body made of weapons</h3>
+                        <p>All of it is aimed with the mouse, and most of it combines:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Ability</th><th scope="col">How it works</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Bone spikes</th><td data-label="How">Five metre-long spikes fan out from the blob. Anything they impale, furniture or people, stays stuck on them until they're pulled back in.</td></tr>
+                                    <tr><th scope="row">Bone harpoon</th><td data-label="How">A heavy shot that skewers and drags whatever it hits with its momentum, nailing it to the wall. Three on board; go and fetch them to reuse them.</td></tr>
+                                    <tr><th scope="row">Bone dart</th><td data-label="How">A light shot that sticks in surfaces and people for small damage. Twelve on board, regrowing one every three seconds.</td></tr>
+                                    <tr><th scope="row">Harden</th><td data-label="How">The front third of the blob (a 120° arc) turns hard: a shield against incoming fire, and a battering ram at speed. The rest stays soft.</td></tr>
+                                    <tr><th scope="row">Blender maw</th><td data-label="How">A mouth opens in the blob's side, pulls in anyone close enough, and grinds them up.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/slow-blob-sbed.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Bigger, not better</p>
+                        <h3>Growth instead of healing</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/russibio/08-growth.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There's no healing, regenerating or armor. What the blob gets from devouring people is <strong>mass</strong>: it grows from a metre across to as much as two, takes less damage from every hit, and puts more force into every slam, pull and shot.</p>
+                        <p>Its wounds stay, though. A big blob that has been shot to pieces on the way up is still close to the end, so every building asks how greedy you can afford to be.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/winchester-rifle-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">They saw this coming</p>
+                        <h3>Tenants who fight back</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/russibio/09-stash.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>An unarmed tenant runs away from the blob and toward the nearest piece of furniture, where something is always stashed. Out comes an old surplus rifle, a hunting shotgun, a rocket launcher, a homemade weapon or a kitchen knife, and they turn and start shooting, stabbing or swinging.</p>
+                        <p>The game is balanced in the blob's favor, so any single tenant is weak. But the damage they do adds up across the whole building, and if enough of them get their stash in time, <strong>the tenants win</strong>.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/armchair-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Ragdoll physics</p>
+                        <h3>Rooms as arenas</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/russibio/10-wreck.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Built on the same ragdoll engine as Reactorcore's Floppy Heroes remix, every tenant is a floppy physics body and every armchair, wardrobe and fridge a physics object. Harpooned things hang on the wall where they were nailed, impaled things swing on the spikes, and a fast enough slam breaks the furniture apart.</p>
+                        <p>So the room itself is a weapon and a shield: a wardrobe pulled in front of you stops bullets, and a fridge flung across the room stops a tenant.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/acoustic-megaphone-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The living history</p>
+                        <h3>The propaganda bulletin</h3>
+                        <p>After each building, a new page is added to the bulletin: the generated address you just emptied, and the regime's cheerful announcement of the modern facility that will soon stand there, a new plant, a factory, a mine, with thanks to the residents for their cooperation.</p>
+                        <p>It never says a word about the blob. Page after page, the bright tone over what you know happened turns into <strong>dread</strong>, and the monster you've been playing starts to look like the least evil thing in the city.</p>
+                        <p>When the tenants win, the bulletin records that too: the army still collects what's left of the blob, but the page announces that the development at that address has been "postponed". It's the one page you can be glad of.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/russibio_4_boxart.jpg" alt="Box art: a weathered grey concrete apartment block at night seen from the wet street below, a crimson flesh creature with spiky tentacles squeezing out of a lit window on a middle floor and gripping the balconies, a single streetlamp glowing amber." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Bulletin of the Ministry of Development</p>
+                <h2 id="sendoff">Biomonster Neighbourhood: Apartment Ragdoll Rumble</h2>
+                <p>Good news for your neighbourhood! A modern, productive future is coming to your block, and the Ministry thanks every resident for their cooperation in making room for it.</p>
+                <p>Residents are reminded that there is nothing in the walls, nothing in the plumbing, and no need for anything hidden in the sofa. Should anything unusual occur, our brave soldiers will arrive promptly. They always do.</p>
+                <p><strong>The monster is in the walls. The real monster signs the paperwork.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Floppy Heroes and every creature feature where the blob gets out</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Hydrogen Whiskey (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
         </div>
-
-        <section class="trivia-section">
-            <h2 class="section-title">📚 Development Trivia</h2>
-            <div class="trivia-grid">
-                <div class="trivia-item">
-                    <div class="trivia-icon">🏭</div>
-                    <h4 style="color: var(--decay-yellow); margin-bottom: 10px;">Real Location Inspiration</h4>
-                    <p>Set in Chelyabinsk, Russia - a real city known for severe industrial pollution and the infamous 1957 Kyshtym nuclear disaster, adding authentic environmental horror context.</p>
-                </div>
-                <div class="trivia-item">
-                    <div class="trivia-icon">☢️</div>
-                    <h4 style="color: var(--decay-yellow); margin-bottom: 10px;">Lake Karachay Origins</h4>
-                    <p>The monster originates from Lake Karachay, Earth's most polluted body of water. Standing on its shore for one hour would deliver a lethal dose of radiation - perfect bioweapon origin story.</p>
-                </div>
-                <div class="trivia-item">
-                    <div class="trivia-icon">🎭</div>
-                    <h4 style="color: var(--decay-yellow); margin-bottom: 10px;">Government Conspiracy Theme</h4>
-                    <p>The game explores themes of forced displacement, corporate land grabs, and government abuse of power - drawing from real-world urban development controversies.</p>
-                </div>
-                <div class="trivia-item">
-                    <div class="trivia-icon">🎨</div>
-                    <h4 style="color: var(--decay-yellow); margin-bottom: 10px;">Horror-Comedy Balance</h4>
-                    <p>Tenants pulling RPGs from kitchen cabinets and AK-47s from sofas creates dark comedy moments that offset the horror atmosphere with absurdist Russian stereotypes.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-description">
-                <h2 class="boxart-title">Russki Biomonster Neighbourhood</h2>
-                <p style="margin-bottom: 20px;"><strong>Apartment Ragdoll Rumble</strong></p>
-                <p>Become the nightmare lurking in urban Russia's concrete corridors. Master tentacle-based combat as you systematically devour apartment building residents who fight back with improvised arsenals.</p>
-                <br>
-                <p>• <strong>Physics-based monster combat</strong> with tentacle grappling and bone weaponry</p>
-                <p>• <strong>Procedural apartment buildings</strong> with dynamic enemy AI and weapon placement</p>
-                <p>• <strong>Growth through consumption</strong> - become larger and deadlier with each victim</p>
-                <p>• <strong>Dark narrative</strong> revealing government conspiracy through propaganda bulletins</p>
-                <br>
-                <p style="font-style: italic; color: var(--subtitle-color);">Experience the disturbing thrill of being the monster in this tactical horror experience that challenges players to confront themes of power, displacement, and moral complicity.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
     </footer>
-
-    <script>
-        // Add subtle parallax effect to title background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const titleSection = document.querySelector('.title-section');
-            if (titleSection) {
-                titleSection.style.backgroundPosition = `center ${scrolled * 0.5}px`;
-            }
-        });
-
-        // Add interaction feedback for cards
-        document.querySelectorAll('.card, .feature-card, .layer-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-5px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-    </script>
 </body>
 </html>

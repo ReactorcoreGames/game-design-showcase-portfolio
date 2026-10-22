@@ -1,0 +1,14 @@
+{
+  "slug": "RussiBiomonster",
+  "prefix": "russibio",
+  "preset": "02 Photo - J - Dystopian-Bleak",
+  "style": "Dark cinematic horror atmosphere at night. Palette of cold grey-green concrete, glossy crimson-pink flesh, bone white and sodium amber lamplight.",
+  "notes": "Rewrite (2026-10). Images 1, 2 and 3 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 4 is new: the old box art had POLIZIE painted on a policeman, posters with a real national flag and star, and a monster face that read as a famous comic character. Image 5 is the missing story image. gen RussiBiomonster --only 4,5, then finish RussiBiomonster --only 4,5.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Low-angle wide shot of a brutalist concrete apartment block at dusk, cracked and stained facade, dim orange windows, wet asphalt reflecting the building, balconies with laundry lines and satellite dishes, storm clouds overhead, a few silhouettes in the windows."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Medium shot from a doorway into a cramped apartment living room: a pulsating crimson flesh blob with writhing tentacles and bone-white spikes grapples the furniture and a terrified resident on the sofa, who has pulled an assault rifle from behind a cushion. Overturned table, family photos on the floor."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Close dynamic shot of flesh tentacles in motion, the main tentacle stretching toward the camera and gripping a table leg, suction cups on its underside, an armed tenant in the blurred apartment behind, household items and a dropped rifle on the floor."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait cover, low angle from the street at night. A tall grey concrete panel apartment block of identical windows and rusty balconies hung with laundry lines. From a lit window on a middle floor, a round glossy crimson-pink flesh blob monster with white bone spikes squeezes halfway out, its long sucker-covered tentacles gripping the balconies above and below. A single sodium streetlamp glows amber on the wet pavement in front. Plain bare concrete walls with no posters, signs, flags or symbols anywhere."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide high view over a bleak industrial city at dusk: rows of identical grey concrete panel apartment blocks, factory smokestacks and cooling towers in the smog behind them, a dull toxic green lake at the edge of the city. In the foreground, a fenced empty lot holds idle yellow bulldozers and excavators parked beside one old apartment block whose windows are still lit. No signs, flags or symbols anywhere."}
+  ]
+}

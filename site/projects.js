@@ -335,10 +335,10 @@ window.PROJECTS = [
   },
   {
     page: "RussiBiomonster.html", prefix: "russibio",
-    title: "Russki Biomonster Neighbourhood", subtitle: "Apartment Ragdoll Rumble",
-    icon: "spiked-tentacle-lorc", tint: "green",
-    blurb: "Play the amorphous flesh monster loose in a Soviet-era apartment block, using tentacles and bone spikes against tenants who fight back with hidden weapons.",
-    genres: ["ragdoll", "action"], tags: ["monster", "horror comedy"],
+    title: "Biomonster Neighbourhood", subtitle: "Apartment Ragdoll Rumble",
+    icon: "spiked-tentacle-lorc", tint: "magenta",
+    blurb: "Play the tentacled flesh blob a regime sends to clear stubborn tenants from their concrete block. They keep rifles in the sofa, and the cheerful propaganda bulletins show who the real monster is.",
+    genres: ["ragdoll", "action", "physics"], tags: ["monster", "dark satire", "grappling", "tentacles"],
     status: "concept", added: "2025-10-08"
   }
 ];
