@@ -97,7 +97,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Underground Brawl
 - [x] Zero Space Robo Derby
 - [x] abyssal_caretaker (design: the Kerala chat, adopted in batch 5)
-- [ ] admiralwars
+- [x] admiralwars
 - [ ] antigrav_deconstruction
 - [ ] astro_industry
 - [ ] bunkership

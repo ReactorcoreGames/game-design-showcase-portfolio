@@ -1,0 +1,21 @@
+{
+  "slug": "admiralwars-mini",
+  "out": "site/projects/mini/admiralwars",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic military science fiction film still, deep navy and teal, cyan hologram glow. ",
+  "notes": "Mood-only mini images for admiralwars.html, beside the lore, game layer and feature text. SDXL (free): gen admiralwars-mini --model sdxl --max 999, then finish admiralwars-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "cache", "ratio": "3:2", "prompt": "Soldiers approaching a huge glowing alien artifact half buried in a desert at dusk."},
+    {"n": 2, "name": "universe", "ratio": "3:2", "prompt": "A fleet of starships leaving a blue planet toward a distant galaxy."},
+    {"n": 3, "name": "admiral", "ratio": "3:2", "prompt": "A naval officer looking at a holographic star map in a dim command room."},
+    {"n": 4, "name": "battle", "ratio": "3:2", "prompt": "Tanks advancing across a green valley while jets fly low overhead."},
+    {"n": 5, "name": "mission", "ratio": "3:2", "prompt": "A glowing tactical map of a planet's continent on a command table."},
+    {"n": 6, "name": "overworld", "ratio": "3:2", "prompt": "Colonies glowing on the night side of a planet seen from orbit."},
+    {"n": 7, "name": "garage", "ratio": "3:2", "prompt": "Rows of armored vehicles and aircraft in a huge clean hangar, mechanics working."},
+    {"n": 8, "name": "crossing", "ratio": "3:2", "prompt": "A fighter jet landing on a runway at dawn, another taking off behind it."},
+    {"n": 9, "name": "terrain", "ratio": "3:2", "prompt": "A huge ocean wave crashing over a coastal military base in a storm."},
+    {"n": 10, "name": "rescue", "ratio": "3:2", "prompt": "A rescue convoy and medical helicopter at a flooded town, civilians being helped."}
+  ]
+}

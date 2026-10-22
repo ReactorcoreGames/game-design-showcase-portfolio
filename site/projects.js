@@ -47,9 +47,9 @@ window.PROJECTS = [
   },
   {
     page: "admiralwars.html", prefix: "admiralwars",
-    title: "Admiral Wars Beyond", subtitle: "Strategic Warfare Evolution",
-    icon: "chess-knight-skoll", tint: "blue",
-    blurb: "Advance Wars–style tactics fought across four simultaneous battlefield layers: orbit, air, surface and underground. Every decision ripples through a persistent, procedurally generated universe.",
+    title: "Admiral Wars Beyond", subtitle: "Four-Layer Grid Tactics",
+    icon: "captain-hat-profile-delapouite", tint: "blue",
+    blurb: "Advance Wars-style turn-based tactics on up to four stacked map layers at once: orbit, air, surface and underground. Every mission is generated from a persistent universe that remembers every battle.",
     genres: ["strategy"], tags: ["turn-based", "multi-layer", "procedural campaigns", "space"],
     status: "concept", added: "2025-10-04"
   },

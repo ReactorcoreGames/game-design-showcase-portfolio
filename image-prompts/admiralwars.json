@@ -1,0 +1,14 @@
+{
+  "slug": "admiralwars",
+  "prefix": "admiralwars",
+  "preset": "02 Photo - E - Cinematic",
+  "style": "Military science fiction, sleek futuristic design, holographic displays, dramatic lighting. Deep navy and teal palette with bright cyan holographic accents and white interface elements.",
+  "notes": "Rewrite (2026-10). All five images are kept from the 2025 page (2 and 3 already show the four stacked battle layers); these prompts are the originals, trimmed, kept as a record. Nothing to generate.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide shot of a command center briefing room, holographic tactical displays floating above a central planning table, commanders in naval-style uniforms studying projections of orbital, aerial, surface and underground battle zones, curved walls of control panels, large screens of star maps and fleets."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Over-the-shoulder shot of two officers leaning over a round holographic table showing a battlefield as four transparent layers stacked vertically: satellites at the top, aircraft in the air layer, ground vehicles on the surface, submarines in caverns below. Officers at monitoring stations behind them."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Cross-section cutaway of one battlefield on four stacked layers: space fighters and orbital platforms trading fire at the top, aerial dogfights below them, tanks, mechs and infantry on the surface, submarines and tunnels underground and underwater at the bottom, units rising and descending between layers."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Low-angle portrait of a naval admiral in a futuristic dress uniform on a starship bridge, looking out through tall viewports at a space battle above a planet, orbital platforms firing down at fighters in the atmosphere, explosions on the surface below."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide shot of a busy spaceport on a colony world, landing pads with many kinds of spacecraft, civilians and military personnel, naval officers in dress uniforms talking beside a command shuttle, cargo haulers and patrol craft, other worlds visible in the sky."}
+  ]
+}

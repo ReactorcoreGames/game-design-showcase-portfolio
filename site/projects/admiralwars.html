@@ -3,869 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admiral Wars Beyond: Strategic Warfare Evolution</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Command advanced fleets in Admiral Wars Beyond, featuring evolved strategic warfare mechanics, tactical fleet management, and next-generation naval combat systems.">
-    <meta name="keywords" content="admiral wars, strategic warfare, fleet management, naval strategy, tactical combat, military strategy, fleet command, Admiral Wars Beyond">
+    <title>Admiral Wars Beyond: Four-Layer Grid Tactics</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: Advance Wars-style turn-based tactics fought on four stacked map layers at once (orbit, air, surface and underground), inside a persistent generated universe where every battle changes what happens next. Easy to pick up, deep to study, singleplayer.">
+    <meta name="keywords" content="game design concept, turn-based tactics, Advance Wars inspired, grid strategy, multi-layer battlefield, procedural campaign, persistent universe, singleplayer, Reactorcore">
     <meta name="author" content="Reactorcore Games">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/admiralwars.html">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Admiral Wars Beyond: Strategic Warfare Evolution">
-    <meta property="og:description" content="Command advanced fleets in Admiral Wars Beyond, featuring evolved strategic warfare mechanics, tactical fleet management, and next-generation naval combat systems.">
+
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Admiral Wars Beyond: Four-Layer Grid Tactics">
+    <meta property="og:description" content="A game design concept: Advance Wars-style tactics on four stacked battlefield layers, in a persistent universe that remembers every battle. Free for anyone to build.">
     <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/admiralwars.html">
     <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/admiralwars_2_vignette.jpg">
-    <meta property="og:image:alt" content="Admiral Wars Beyond game showcase featuring strategic fleet warfare">
-    <meta property="og:site_name" content="Reactorcore Game Design Showcase">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: two officers lean over a holographic table showing a battle as stacked layers of satellites, aircraft, ground vehicles and submarines">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Admiral Wars Beyond: Strategic Warfare Evolution">
-    <meta name="twitter:description" content="Command advanced fleets in Admiral Wars Beyond, featuring evolved strategic warfare mechanics, tactical fleet management, and next-generation naval combat.">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Admiral Wars Beyond: Four-Layer Grid Tactics">
+    <meta name="twitter:description" content="A game design concept: Advance Wars-style tactics on four stacked battlefield layers, in a persistent universe that remembers every battle.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/admiralwars_2_vignette.jpg">
-    <meta name="twitter:image:alt" content="Admiral Wars Beyond game showcase featuring strategic fleet warfare">
-    <meta name="twitter:site" content="@ReactorcoreGames">
-    <meta name="twitter:creator" content="@ReactorcoreGames">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Admiral Wars Beyond: Strategic Warfare Evolution",
-      "description": "Command advanced fleets in Admiral Wars Beyond, featuring evolved strategic warfare mechanics, tactical fleet management, and next-generation naval combat systems.",
-      "genre": ["Strategy", "Naval Combat", "Military Simulation", "Tactical"],
-      "gameLocation": "Digital",
-      "gamePlatform": "PC",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/admiralwars.html",
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/admiralwars_2_vignette.jpg",
-      "author": {
-        "@type": "Organization",
-        "name": "Reactorcore Games",
-        "url": "https://linktr.ee/reactorcore"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Reactorcore Games",
-        "url": "https://linktr.ee/reactorcore"
-      },
-      "inLanguage": "en-US",
-      "dateCreated": "2025",
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Strategy game enthusiasts, Naval warfare fans, Military simulation players"
-      },
-      "gameItem": [
-        {
-          "@type": "Thing",
-          "name": "Advanced Fleet Management"
-        },
-        {
-          "@type": "Thing", 
-          "name": "Strategic Warfare Mechanics"
-        },
-        {
-          "@type": "Thing",
-          "name": "Tactical Naval Combat"
-        },
-        {
-          "@type": "Thing",
-          "name": "Next-Generation Fleet Command"
-        }
-      ]
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Admiral Wars Beyond: Four-Layer Grid Tactics",
+        "description": "A game design concept, not a released game: a singleplayer turn-based tactics game in the style of Advance Wars, where battles run on up to four stacked map layers (orbit, air, surface, underground or underwater) and missions are generated from a persistent, passively simulated universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Strategy", "Turn-based tactics"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/admiralwars.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/admiralwars_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
-    
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0a1220">
+
+    <link rel="preload" href="../fonts/exo2-black-italic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&family=Roboto+Condensed:wght@300;400;700&display=optional" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /*
-        Image filenames needed:
-        admiralwars_1_title.jpg - Command center briefing room with holographic tactical displays showing multi-layer battlefields
-        admiralwars_2_vignette.jpg - Commanders analyzing a 4-layer battlefield hologram with orbit, air, surface, and underground combat zones visible
-        admiralwars_3_feature.jpg - Cross-section cutaway view showing simultaneous combat across all four battlefield layers with units engaging
-        admiralwars_4_boxart.jpg - Epic scene of a strategic commander overlooking space-to-surface warfare with multiple combat layers visible
-		admiralwars_5_story.jpg - View of a spaceport with a military space fleet preparing for launch
-        */
+        /* Admiral Wars Beyond: the navy of a darkened command room, the cyan of a holographic
+           map, a marker red for objectives and the ivory of dress-uniform braid. Exo 2 Black
+           Italic, fast and naval, for the title and headings; Turret Road, a thin instrument
+           face, for the subtitle and kickers. */
+        @font-face { font-family: "Exo 2 Black Italic"; src: url("../fonts/exo2-black-italic.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Turret Road"; src: url("../fonts/turret-road.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: #0a1420;
-            --container-bg: #1a2d40;
-            --border-color: #3498db;
-            --text-color: #ecf0f1;
-            --accent-primary: #2980b9;
-            --accent-secondary: #27ae60;
-            --warning-color: #f39c12;
-            --title-gradient-1: #3498db;
-            --title-gradient-2: #2c3e50;
-            --glow-color: #3469ff;
-            --shadow-color: rgba(52, 152, 219, 0.3);
-            --card-shadow: rgba(0, 0, 0, 0.4);
+            --flow-1: #0a1220;
+            --flow-2: #12304a;
+            --grid-minor: rgba(130, 210, 240, 0.045);
+            --grid-major: rgba(130, 210, 240, 0.11);
+            --p-ground: rgba(10, 18, 32, 0.95);
+            --p-panel: #111c2e;
+            --p-1: #47d6e6;
+            --p-2: #ff6b86;
+            --p-3: #f1ead8;
+            --p-text: #dde4ec;
+            --p-dim: #9caabc;
+            --p-line: rgba(130, 210, 240, 0.15);
+            --font-title: "Exo 2 Black Italic", "Segoe UI", sans-serif;
+            --font-sub: "Turret Road", "Segoe UI", sans-serif;
+            --shade: #050a12;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "layer scan": four thin cyan echoes stacked under the letters, like the
+           battle's four map layers, light up one after another from the top down, over a dark
+           outline that holds every frame. */
+        .p-name {
+            font-size: clamp(2.3rem, 1rem + 5.6vw, 6.4rem);
+            letter-spacing: 0.01em;
+            animation: layers 6s linear infinite;
         }
-
-        body {
-            font-family: 'Roboto Condensed', 'Arial', 'Helvetica', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: linear-gradient(135deg, var(--background-color) 0%, #0f1b2a 100%);
-            min-height: 100vh;
+        @keyframes layers {
+            0%, 100% { text-shadow: 2px 2px 0 var(--shade), -1px -1px 0 var(--shade), 0 0 8px var(--shade), 0 4px 0 rgba(71, 214, 230, 0.6), 0 8px 0 rgba(71, 214, 230, 0.12), 0 12px 0 rgba(71, 214, 230, 0.12), 0 16px 0 rgba(71, 214, 230, 0.12); }
+            25% { text-shadow: 2px 2px 0 var(--shade), -1px -1px 0 var(--shade), 0 0 8px var(--shade), 0 4px 0 rgba(71, 214, 230, 0.12), 0 8px 0 rgba(71, 214, 230, 0.6), 0 12px 0 rgba(71, 214, 230, 0.12), 0 16px 0 rgba(71, 214, 230, 0.12); }
+            50% { text-shadow: 2px 2px 0 var(--shade), -1px -1px 0 var(--shade), 0 0 8px var(--shade), 0 4px 0 rgba(71, 214, 230, 0.12), 0 8px 0 rgba(71, 214, 230, 0.12), 0 12px 0 rgba(71, 214, 230, 0.6), 0 16px 0 rgba(71, 214, 230, 0.12); }
+            75% { text-shadow: 2px 2px 0 var(--shade), -1px -1px 0 var(--shade), 0 0 8px var(--shade), 0 4px 0 rgba(71, 214, 230, 0.12), 0 8px 0 rgba(71, 214, 230, 0.12), 0 12px 0 rgba(71, 214, 230, 0.12), 0 16px 0 rgba(255, 107, 134, 0.6); }
         }
-
-        .branding {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            font-size: 0.9rem;
-            color: var(--text-color);
-            text-decoration: none;
-            background: rgba(26, 45, 64, 0.8);
-            padding: 8px 12px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
+        .p-sub { color: var(--p-3); text-transform: uppercase; letter-spacing: 0.14em; font-weight: 400; text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 12px var(--shade), 0 0 20px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 2px;
+            background: var(--p-1);
+            animation: sweep 6s linear infinite;
         }
-
-        .branding:hover {
-            background: rgba(52, 152, 219, 0.2);
-            border-color: var(--glow-color);
+        @keyframes sweep {
+            0%, 100% { box-shadow: -40px 0 14px -6px rgba(71, 214, 230, 0); }
+            50% { box-shadow: 0 0 14px rgba(71, 214, 230, 0.9); }
         }
-
-        .hero-section {
-            position: relative;
-            height: 700px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('./images/admiralwars_1_title.jpg') center center/cover;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(10, 20, 32, 0.3) 0%, rgba(26, 45, 64, 0.2) 100%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .main-title {
-            font-family: 'Titillium Web', 'Roboto Condensed', sans-serif;
-            font-size: 5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            color: var(--title-gradient-1);
-            text-shadow: 
-                0 0 10px var(--glow-color),
-                0 0 20px var(--glow-color),
-                0 0 30px var(--glow-color),
-                2px 2px 4px rgba(0, 0, 0, 0.8);
-            animation: neonFlicker 11s infinite;
-        }
-
-        .subtitle {
-            font-size: 3rem;
-            color: var(--accent-secondary);
-            text-shadow: 0 0 8px var(--accent-secondary), 2px 2px 4px rgba(0, 0, 0, 0.6);
-            font-weight: 300;
-        }
-
-        @keyframes neonFlicker {
-            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-                text-shadow: 
-                    0 0 10px var(--glow-color),
-                    0 0 20px var(--glow-color),
-                    0 0 30px var(--glow-color),
-                    2px 2px 4px rgba(0, 0, 0, 0.8);
-            }
-            20%, 24%, 55% {
-                text-shadow: 
-                    0 0 5px var(--glow-color),
-                    0 0 10px var(--glow-color),
-                    2px 2px 4px rgba(0, 0, 0, 0.8);
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            margin: 3rem 0;
-        }
-
-        .section h2 {
-            font-family: 'Titillium Web', 'Roboto Condensed', sans-serif;
-            font-size: 2.2rem;
-            color: var(--title-gradient-1);
-            text-shadow: 0 0 8px var(--glow-color), 2px 2px 4px rgba(0, 0, 0, 0.6);
-            margin-bottom: 1.5rem;
-            animation: neonFlicker 11s infinite;
-        }
-
-        .overview {
-            background: linear-gradient(135deg, var(--container-bg) 0%, #243447 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            margin: 2rem 0;
-        }
-
-        .overview p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        .cards-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .card {
-            background: linear-gradient(135deg, var(--container-bg) 0%, #243447 100%);
-            padding: 1.8rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--glow-color);
-            box-shadow: 0 12px 48px var(--shadow-color);
-        }
-
-        .card h3 {
-            font-family: 'Titillium Web', 'Roboto Condensed', sans-serif;
-            font-size: 1.4rem;
-            color: var(--accent-primary);
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-
-        .card-wide {
-            background: linear-gradient(135deg, var(--container-bg) 0%, #243447 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            margin: 1.5rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .card-wide:hover {
-            border-color: var(--glow-color);
-            box-shadow: 0 12px 48px var(--shadow-color);
-        }
-
-        .card-wide h3 {
-            font-size: 1.5rem;
-            color: var(--accent-primary);
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-
-        .controls-section {
-            background: linear-gradient(135deg, var(--container-bg) 0%, #243447 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            margin: 2rem 0;
-        }
-
-        .vignette-section {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 600px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-        }
-
-        .vignette-bg {
-            width: 100%;
-            height: 100%;
-            background: url('./images/admiralwars_2_vignette.jpg') center center/cover;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            padding: 2rem;
-            color: var(--text-color);
-        }
-
-        .quote-overlay {
-            background: rgba(26, 45, 64, 0.7);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-secondary);
-        }
-
-        .quote-text {
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--accent-secondary);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .feature-section {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 700px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-        }
-
-        .feature-bg {
-            width: 100%;
-            height: 100%;
-            background: url('./images/admiralwars_3_feature.jpg') center center/cover;
-        }
-
-        .feature-quote {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            padding: 2rem;
-            color: var(--text-color);
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            margin: 3rem 0;
-            align-items: stretch;
-        }
-
-        .boxart-image {
-            background: url('./images/admiralwars_4_boxart.jpg') center center/cover;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            aspect-ratio: 2/3;
-        }
-
-        .boxart-description {
-            background: linear-gradient(135deg, var(--container-bg) 0%, #243447 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .boxart-title {
-            font-size: 2rem;
-            color: var(--title-gradient-1);
-            margin-bottom: 1.5rem;
-            text-shadow: 0 0 8px var(--glow-color);
-        }
-
-        .svg-container {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 32px var(--card-shadow);
-            margin: 2rem 0;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #0f1b2a 0%, var(--background-color) 100%);
-            margin-top: 4rem;
-            border-top: 2px solid var(--border-color);
-        }
-
-        .footer a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: var(--glow-color);
-        }
-
-        .emoji {
-            margin-right: 0.5rem;
-        }
-
-        .highlight {
-            color: var(--accent-secondary);
-            font-weight: bold;
-        }
-
-        .tech-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, #1e3a5f 100%);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin: 0.2rem;
-            border: 1px solid var(--border-color);
-        }
-
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5rem;
-            }
-
-            .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .cards-row {
-                grid-template-columns: 1fr;
-            }
-
-            .boxart-section {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .boxart-image {
-                aspect-ratio: 16/9;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .hero-content {
-                padding: 1rem;
-            }
-        }
+        .section-mark::after { animation: h2-line 6s linear infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(71, 214, 230, 0.6); } }
+        h2, h3 { letter-spacing: 0.01em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.92rem; letter-spacing: 0.14em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 400; font-size: 0.9rem; }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .tiers td:last-of-type { width: 62%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1.15rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="branding">Reactorcore's Personal Game Design Project</a>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <div class="hero-section">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="main-title">Admiral Wars Beyond</h1>
-            <p class="subtitle">Strategic Warfare Evolution</p>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="overview">
-            <p><strong>Admiral Wars Beyond</strong> represents the ultimate evolution of turn-based tactical warfare, combining the beloved core mechanics of Advance Wars with the strategic depth of Command & Conquer, the precision of Into The Breach, and the scope of 4X games.</p>
-
-            <p>Experience combat across <span class="highlight">four simultaneous battlefield layers</span> - orbit, air, surface, and underground - where every tactical decision ripples through a persistent, procedurally-generated universe. This isn't just another strategy game; it's a living world where your victories and defeats shape the very fabric of an ever-evolving galactic conflict.</p>
-
-            <p>From quick 20-minute tactical skirmishes to epic universe-spanning campaigns, Admiral Wars Beyond offers depth without complexity, strategy without overwhelming micromanagement, and endless replayability through its intelligent campaign generation system.</p>
-        </div>
-
-
-        <div class="cards-row">
-            <div class="card">
-                <h3><span class="emoji">🎯</span>Target Audience</h3>
-                <p><strong>Strategy Enthusiasts</strong> who love tactical depth</p>
-                <p><strong>Advance Wars Veterans</strong> seeking evolution</p>
-                <p><strong>Puzzle Solvers</strong> who enjoy systematic thinking</p>
-                <p><strong>World Builders</strong> attracted to persistent consequences</p>
-                <p>Designed for both casual 30-minute sessions and deep strategic analysis</p>
-            </div>
-            <div class="card">
-                <h3><span class="emoji">💡</span>Game's Purpose</h3>
-                <p><strong>Strategic Mastery:</strong> Fulfill the need for intellectual challenge and tactical achievement</p>
-                <p><strong>Creative Expression:</strong> Build and shape a persistent universe through strategic choices</p>
-                <p><strong>Relaxed Focus:</strong> Turn-based gameplay allows thoughtful decision-making at your own pace</p>
-                <p><strong>Adventure & Discovery:</strong> Explore an ever-expanding procedural galaxy</p>
-            </div>
-            <div class="card">
-                <h3><span class="emoji">⚙️</span>Core Concept</h3>
-                <p><strong>Multi-Dimensional Tactics:</strong> Command across four battlefield layers simultaneously</p>
-                <p><strong>Consequence-Driven:</strong> Every battle outcome reshapes the universe and generates new challenges</p>
-                <p><strong>Procedural Depth:</strong> AI-generated campaigns that feel hand-crafted yet endlessly surprising</p>
-                <p><strong>Accessible Complexity:</strong> Deep systems presented through intuitive, context-sensitive interfaces</p>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/admiralwars_1_title.jpg" alt="Concept art: officers in navy uniforms sit around a long map table in a curved command room, holographic aircraft and stations floating above it and wide screens showing a planet, star routes and warships." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Admiral Wars Beyond</span><span class="p-sub">Four-Layer Grid Tactics</span></h1>
             </div>
         </div>
+    </header>
 
-        <div class="section">
-            <h2><span class="emoji">📖</span>Story & Lore</h2>
-            
-            <div class="vignette-section">
-                <div class="vignette-bg" style="background: url('./images/admiralwars_5_story.jpg') center center/cover;"></div>
-                <div class="vignette-quote">
-                    <div class="quote-overlay">
-                        <div class="quote-text">"In a galaxy where humanity has made the stars routine, every conflict tells a story"</div>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/captain-hat-profile-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/empty-chessboard-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Admiral Wars Beyond takes the turn-based tactics of Advance Wars, almost one to one in how it looks and plays, and lifts it off its single flat map. A battle runs on up to four stacked layers of the same place, orbit, air, surface and underground or underwater, with units on each layer able to strike the ones above and below, and to travel between them.</p>
+            <p>Around the battles is a persistent universe that nobody scripted. A context-aware generator reads a passively simulated universe and offers you a handful of missions; what happens in each battle changes the places, factions and people you meet next. You play an admiral who chooses the next fight and the loadout to take, never a bureaucrat managing an empire.</p>
+            <p>It grows out of binge-playing Advance Wars 2 and Dual Strike, and borrows from a long shelf of others: Command &amp; Conquer's base building and superweapons, Into the Breach's tile tactics, XCOM's living campaign, Fire Emblem's characters and Shadow of Mordor's rivals.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love Advance Wars' battles but found its campaigns a game of "Simon says", and its versus maps a reset to zero after every match.</p>
+                    <p>They want to <strong>think every move through at their own pace</strong>, in a world where each battle counts for something.</p>
+                    <p>The interface stays small: context menus that only show what's possible right now, a capped number of units, and layers that hide when they're not in use.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Understanding and mastery:</strong> chess-like puzzles that change shape every time, on the easy side of hard.</p>
+                    <p><strong>Meaning and continuity:</strong> a universe you conquer, cultivate and keep safe like a garden, where nothing resets.</p>
+                    <p><strong>Connection:</strong> officers, rivals and allies you get to know over many battles.</p>
+                    <p>It avoids draining <strong>rest</strong> and <strong>safety</strong>: it's turn-based all the way through, and every battle gives you a realistic chance to win or to pull out safely.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Tactics games usually offer a handmade campaign that's played once, or skirmishes that leave nothing behind.</p>
+                    <p>Here <strong>every mission is generated from the state of a living universe</strong>, with the variety of versus-mode settings and the meaning of a campaign at once.</p>
+                    <p>Battles stay short and readable; the depth lives in the layers, the arsenal and the garage, there whenever you want to dig in.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/admiralwars_5_story.jpg" alt="Concept art: three officers in dress uniforms talk on a busy spaceport apron, sleek shuttles and cargo trucks around them, a tall tower and orbital rings above a planet's curve in the sky." width="1280" height="720" loading="lazy">
+            <figcaption>"Every battle's outcome stays in the universe, and the next missions grow out of what happened."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span>Lore and story</h2>
+            <h3>The cache</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/01-cache.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>It starts on one planet, on the ground. Your side fights its way across a single world toward a cache of alien technology, the only thing that could carry anyone off it. That first campaign is all surface, all familiar, the way tactics games usually play.</p>
+            <p>Then time skips forward. The cache gave your federation real space travel, and by now it has spread across solar systems, with orbital stations, colonies on strange worlds and fleets that need someone to command them.</p>
+
+            <h3>The universe</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/02-universe.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The universe is shaped like a bowl: a settled center of galaxies that stay put, and edges that run on into wilderness. It isn't empty. Rival human powers with cultures and armies of their own, not palette swaps, share it with aliens, monsters and beasts, lost robots decaying in old wars, and hostile machine intelligences.</p>
+            <p>Gas giants, moons, asteroid belts, stars, starbases and megastructures are all places where battles happen, each with its own layers and terrain.</p>
+
+            <h3>You</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/03-admiral.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You're a battle admiral. The federation's politics, economy and borders run on their own, and you see them only as a read-only overview of how your battles have shifted things. Your decisions are the ones an admiral makes: which mission to take next, what to bring, and every move on the field.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>It plays like Advance Wars: move a cursor over a square grid, pick a unit, pick where it goes, pick what it does. The menus are context-sensitive, so a unit only ever shows the actions it can actually take from where it's standing. The layout below is a suggestion; mouse and gamepad work the same way.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Orders</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Move the cursor (or the arrow keys)</dd></div>
+                        <div><dt>LMB, Z</dt><dd>Select, move, confirm an order</dd></div>
+                        <div><dt>RMB, X</dt><dd>Cancel or step back</dd></div>
+                        <div><dt>Enter</dt><dd>End turn</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Layers and info</h3>
+                    <dl>
+                        <div><dt>Wheel, Q E</dt><dd>Step up or down through the active layers</dd></div>
+                        <div><dt>Tab</dt><dd>Show all layers stacked</dd></div>
+                        <div><dt>Shift</dt><dd>Hold over a unit: range, vision and terrain bonus</dd></div>
+                        <div><dt>Space</dt><dd>Your admiral's power, when charged</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Layers that have no units in a battle simply aren't shown. Most battles use one or two; the stacked view shows how the active ones line up, tile above tile, so you can see which submarine sits under which destroyer.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/admiralwars_2_vignette.jpg" alt="Concept art: two officers in olive uniforms lean over a round holographic table where a battle hangs in stacked transparent layers, a satellite at the top, aircraft, then armored vehicles, then submarines on a seabed at the bottom." width="1280" height="720" loading="lazy">
+            <figcaption>"Satellites, jets, tanks and submarines share one battle, each on its own layer of the map."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/battle-tank-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A turn on the grid</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/04-battle.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Deploy, move, attack, capture, build: the Advance Wars rhythm. Terrain decides how far a unit moves, how far it sees and how well it holds, and every unit is good on some ground and bad on other.</p>
+                        <p>On top of that, the layers: a bomber over the forest is on a different layer from the tank in it, so neither blocks the other, and the fighter above both can see what's coming from orbit.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/flag-objective-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A mission</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/05-mission.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>From the overworld map you choose among a few generated missions: take a region, hold one you took before, rescue someone, escort a convoy, clean out a nest of hostile robots, or a peaceful job with no fighting at all.</p>
+                        <p>A mission is one battle of twenty to fifty minutes, with its own map, conditions and goal. Some arrive with a twist: a timer, reinforcements on the way, a base about to be destroyed.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>A universe that keeps going</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/06-overworld.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The universe runs a passive simulation, and the mission generator reads from it, so <strong>no mission is prewritten</strong> and none is random either. Win a region and its neighbors react; lose one and you may be called back to it later. Old places come back as new situations.</p>
+                        <p>You never manage the empire, only watch it, through an overview that's feedback on what your battles changed. The universe has no final mission and no reset: it's an endless adventure with automatic structure, pacing and surprise, there whenever you boot it up.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One battle, or an afternoon in the garage</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/07-garage.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Boot the game, look at the map, pick a mission and play one battle of twenty to fifty minutes. The battle is the whole time commitment.</p>
+                        <p>Between battles, spend as long as you like tuning loadouts and the mothership, or none at all. It's turn-based, so it saves after every turn and you can stop mid-battle without losing a thing.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/planet-conquest-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the universe</strong>, after the opening campaign on the first planet. Every battle sits somewhere inside it:</p>
+            <div class="p-nest" aria-label="The universe, outermost first">
+                <div><span>The universe</span><small>A bowl of galaxies and superclusters with wilderness at the edges.</small>
+                    <div><span>A solar system</span><small>Stars, planets, moons, belts, gas clouds and stations.</small>
+                        <div><span>A celestial body</span><small>A planet or moon, split into continents and regions.</small>
+                            <div><span>A combat area</span><small>One mission's battlefield, on its one to four layers.</small></div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <p>It's a singleplayer game at its core, and competitive play against other people is deliberately left out. If more players ever join in, it would be cooperative: players against the universe together, or visiting each other's universes and sending gifts.</p>
+        </section>
 
-            <div class="card-wide">
-                <h3>The Universal Republic</h3>
-                <p>Humanity has spread across the galaxy in a steady, unhurried expansion that spans multiple star systems. What began as Earth's first tentative steps beyond the home solar system has evolved into a vast network of colonies, trading posts, and settlements scattered throughout local space. This isn't the desperate exodus of a dying world, but rather the natural growth of a curious species that simply kept moving outward, one system at a time.</p>
-            </div>
-
-            <div class="card-wide">
-                <h3>A Galaxy of Routine Conflicts</h3>
-                <p>Life among the stars has settled into a peculiar rhythm. Interstellar commerce flows along established routes, colonial governments manage their territories with varying degrees of competence, and conflicts arise with the same mundane regularity as traffic disputes or neighborhood disagreements back on Earth. These aren't apocalyptic wars for survival, but rather the everyday friction that emerges when different groups compete for resources, territory, or simple recognition across dozens of worlds.</p>
-            </div>
-
-            <div class="card-wide">
-                <h3>The Admiral's Role</h3>
-                <p>In this sprawling civilization, you serve as one of the Republic's admirals - not a grand military dictator, but more akin to a traveling magistrate with a fleet. Your role is to respond to the various disputes, skirmishes, and tensions that bubble up across human space. One week you might mediate a mining rights conflict in the Centauri colonies, the next you could be managing a trade route dispute between rival corporate factions, and the week after that you might find yourself defusing tensions between planetary governments over orbital traffic regulations.</p>
-            </div>
-
-            <div class="card-wide">
-                <h3>The Weight of Choice</h3>
-                <p>What makes each conflict meaningful isn't its epic scope, but its personal consequences. Every decision ripples through the interconnected web of human civilization. The mining colony you help today might become tomorrow's strategic ally, while the corporate dispute you resolve could reshape trade patterns for years. In this galaxy where humans have simply gotten used to living among the stars, your choices as an admiral help determine whether that expansion continues peacefully or fractures into something more dangerous.</p>
-            </div>
-        </div>
-
-        <div class="controls-section">
-            <h2>Controls & Interface</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                <div>
-                    <h3><span class="emoji">🎮</span>Core Controls</h3>
-                    <p><strong>Grid Navigation:</strong> Click/tap to select units and destinations</p>
-                    <p><strong>Layer Switching:</strong> Tab or swipe to switch between orbit, air, surface, underground</p>
-                    <p><strong>Context Menus:</strong> Right-click or long-press for unit actions</p>
-                    <p><strong>Quick Commands:</strong> Hotkeys for experienced players, touch-friendly for mobile</p>
-                </div>
-                <div>
-                    <h3><span class="emoji">🏛️</span>Interface Design</h3>
-                    <p>You command as a <span class="highlight">Battle-Admiral</span>, managing tactical units through elegant context-sensitive menus that show only relevant actions.</p>
-                    <br>
-                    <p>The interface adapts to your current focus - whether commanding individual mechs on the surface or coordinating orbital bombardments - ensuring every control feels natural and purposeful.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="vignette-section">
-            <div class="vignette-bg"></div>
-            <div class="vignette-quote">
-                <div class="quote-overlay">
-                    <div class="quote-text">"Every decision echoes across four dimensions of warfare"</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="emoji">🏗️</span>Game Layers</h2>
-            
-            <div class="card-wide">
-                <h3>1. Moment-to-Moment Gameplay</h3>
-                <p>Pure <span class="highlight">Advance Wars-style tactical combat</span> elevated to new heights. Deploy, move, and command units across four simultaneous battlefield layers - orbital satellites providing reconnaissance, fighter jets dominating the skies, tanks rolling across the surface, and submarines lurking in underwater caverns.</p>
-                <br>
-                <p>Each unit can interact with and transition between appropriate layers. Aircraft can land for repairs, ground units can call in orbital strikes, and underground forces can emerge to surprise surface enemies. Every turn becomes a three-dimensional chess match.</p>
-            </div>
-
-            <div class="card-wide">
-                <h3>2. Low Metagame - Campaign Chains</h3>
-                <p>Individual battles link together into <span class="highlight">dynamically generated campaigns</span> where victory conditions and map parameters emerge from your previous actions. Liberate a mining colony, and you'll gain access to advanced unit types. Lose a key battle, and enemy forces will press their advantage in subsequent encounters.</p>
-                <br>
-                <p>Unlike traditional campaigns with predetermined missions, AWB creates scenarios that feel personal and consequential. Each campaign arc spans 3-8 battles with escalating stakes and evolving objectives.</p>
-            </div>
-
-            <div class="card-wide">
-                <h3>3. High Metagame - Universe Evolution</h3>
-                <p>Your tactical victories and defeats shape a <span class="highlight">persistent galactic civilization</span>. Regions you've secured become safe havens generating resources and new mission opportunities. Areas you've lost become staging grounds for enemy counterattacks.</p>
-                <br>
-                <p>The universe simulation runs continuously, creating a living world where returning to previously conquered systems might reveal new threats, ally requests, or opportunities for expansion. Your strategic legacy grows with every campaign completed.</p>
-            </div>
-
-            <div class="card-wide">
-                <h3>4. Practical Game Flow</h3>
-                <p>Boot up the game, review the current galactic situation, select from 3-5 generated mission options based on your current capabilities and the universe state. Engage in 20-50 minutes of tactical combat across beautifully designed multi-layer battlefields.</p>
-                <br>
-                <p>Complete missions earn you reputation, resources, and new unit access. The universe evolves based on your choices, generating fresh challenges for your next session. Perfect for both quick strategic fixes and extended campaign binges.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="emoji">🎮</span>Game Modes</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem;">
-                <div class="card">
-                    <h3>Campaign Mode</h3>
-                    <p><strong>Story-Driven Adventures:</strong> Experience hand-crafted introductory campaigns that teach core mechanics while establishing the universe's lore and your character's background.</p>
-                    <br>
-                    <p>Perfect for <span class="highlight">30-60 minute sessions</span> with clear objectives and dramatic narrative beats.</p>
-                </div>
-                <div class="card">
-                    <h3>Conquest Mode</h3>
-                    <p><strong>Open-World Exploration:</strong> The main game experience where procedural generation creates endless tactical scenarios across an expanding universe.</p>
-                    <br>
-                    <p>Ideal for <span class="highlight">marathon sessions</span> or quick tactical challenges depending on your mood.</p>
-                </div>
-                <div class="card">
-                    <h3>Tactical Puzzles</h3>
-                    <p><strong>Pure Strategy Challenges:</strong> Focused scenarios that isolate specific tactical concepts - perfect for mastering advanced techniques or quick mental workouts.</p>
-                    <br>
-                    <p>Great for <span class="highlight">15-20 minute sessions</span> when you want strategic depth without campaign commitment.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="emoji">⚡</span>Game Features & Mechanics</h2>
-            <div class="features-grid">
-                <div class="card-wide">
-                    <h3>🌌 Multi-Layer Battlefields</h3>
-                    <p>The revolutionary <span class="highlight">four-layer combat system</span> transforms traditional tactical warfare. Orbital platforms provide long-range support and surveillance, aircraft dominate rapid response and reconnaissance, surface forces control territory and resources, while underground/underwater units enable stealth operations and surprise attacks.</p>
-                    <br>
-                    <p>Units can transition between appropriate layers - aircraft landing for repairs, submarines surfacing to engage, ground forces calling orbital strikes. This creates unprecedented tactical depth while maintaining the quick, decisive gameplay of classic Advance Wars.</p>
-                    
-                    <div class="svg-container">
-                        <svg viewBox="0 0 800 400" style="width: 100%; height: auto;">
-                            <defs>
-                                <linearGradient id="layerGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#74b9ff;stop-opacity:0.3" />
-                                    <stop offset="100%" style="stop-color:#3498db;stop-opacity:0.6" />
-                                </linearGradient>
-                                <linearGradient id="layerGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#a29bfe;stop-opacity:0.3" />
-                                    <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:0.6" />
-                                </linearGradient>
-                                <linearGradient id="layerGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#00b894;stop-opacity:0.3" />
-                                    <stop offset="100%" style="stop-color:#27ae60;stop-opacity:0.6" />
-                                </linearGradient>
-                                <linearGradient id="layerGradient4" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#e17055;stop-opacity:0.3" />
-                                    <stop offset="100%" style="stop-color:#d63031;stop-opacity:0.6" />
-                                </linearGradient>
-                            </defs>
-                            
-                            <!-- Orbit Layer -->
-                            <rect x="50" y="20" width="700" height="70" fill="url(#layerGradient1)" stroke="#74b9ff" stroke-width="2" rx="5"/>
-                            <circle cx="380" cy="35" r="8" fill="#74b9ff"/>
-                            <circle cx="450" cy="45" r="6" fill="#74b9ff"/>
-                            <circle cx="530" cy="60" r="10" fill="#74b9ff"/>
-							<text x="70" y="45" fill="#ecf0f1" font-size="16" font-weight="bold">ORBIT LAYER</text>
-                            <text x="70" y="65" fill="#ecf0f1" font-size="12">Satellites • Orbital Platforms • Space Fighters</text>
-                            
-                            <!-- Air Layer -->
-                            <rect x="50" y="110" width="700" height="70" fill="url(#layerGradient2)" stroke="#a29bfe" stroke-width="2" rx="5"/>
-                            <polygon points="420,145 440,135 440,155" fill="#a29bfe"/>
-                            <polygon points="350,140 370,130 370,150" fill="#a29bfe"/>
-                            <polygon points="500,150 520,140 520,160" fill="#a29bfe"/>
-							<text x="70" y="135" fill="#ecf0f1" font-size="16" font-weight="bold">AIR LAYER</text>
-                            <text x="70" y="155" fill="#ecf0f1" font-size="12">Fighters • Bombers • Air Transports • Helicopters</text>
-                            
-                            <!-- Surface Layer -->
-                            <rect x="50" y="200" width="700" height="70" fill="url(#layerGradient3)" stroke="#00b894" stroke-width="2" rx="5"/>
-                            <rect x="420" y="245" width="20" height="15" fill="#00b894" rx="2"/>
-                            <rect x="380" y="230" width="15" height="10" fill="#00b894" rx="1"/>
-                            <rect x="520" y="228" width="18" height="12" fill="#00b894" rx="2"/>
-							<text x="70" y="225" fill="#ecf0f1" font-size="16" font-weight="bold">SURFACE LAYER</text>
-                            <text x="70" y="245" fill="#ecf0f1" font-size="12">Tanks • Infantry • Artillery • Mobile Bases</text>
-                            
-                            <!-- Underground Layer -->
-                            <rect x="50" y="290" width="700" height="70" fill="url(#layerGradient4)" stroke="#e17055" stroke-width="2" rx="5"/>
-                            <ellipse cx="410" cy="345" rx="12" ry="8" fill="#e17055"/>
-                            <ellipse cx="460" cy="320" rx="10" ry="6" fill="#e17055"/>
-                            <ellipse cx="550" cy="330" rx="14" ry="9" fill="#e17055"/>
-                            <text x="70" y="315" fill="#ecf0f1" font-size="16" font-weight="bold">UNDERGROUND/UNDERWATER</text>
-                            <text x="70" y="335" fill="#ecf0f1" font-size="12">Submarines • Tunnel Boring Units • Underground Facilities</text>
-                            
-                            <!-- Interaction arrows -->
-                            <line x1="300" y1="90" x2="300" y2="110" stroke="#ffeaa7" stroke-width="3" marker-end="url(#arrowhead)"/>
-                            <line x1="400" y1="180" x2="400" y2="200" stroke="#ffeaa7" stroke-width="3" marker-end="url(#arrowhead)"/>
-                            <line x1="500" y1="270" x2="500" y2="290" stroke="#ffeaa7" stroke-width="3" marker-end="url(#arrowhead)"/>
-                            
-                            <defs>
-                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                    <polygon points="0 0, 10 3.5, 0 7" fill="#ffeaa7" />
-                                </marker>
-                            </defs>
-                            
-                            <text x="580" y="35" fill="#ffeaa7" font-size="11">Units can transition</text>
-                            <text x="580" y="47" fill="#ffeaa7" font-size="11">between compatible layers</text>
-                        </svg>
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/nested-hexagons-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Battles in layers</h3>
+                        <p>Advance Wars puts submarines, jets and tanks on one map, so a bomber can't fly past a tile with a parked transport on it. Here the battle map is <strong>a vertical slice of the world</strong>, split into stacked layers that each have their own terrain, weather and fog of war. Units interact directly with the layers above and below them.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Battlefield</th><th scope="col">Layers</th><th scope="col">How they work</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Celestial</th><td data-label="Layers">Orbit, air, surface, underground or underwater</td><td data-label="How">Planets, moons, gas giants, stars and big megastructures. Most units live on one or two layers and can't go where their machine can't</td></tr>
+                                    <tr><th scope="row">Space</th><td data-label="Layers">Local space and the outskirts</td><td data-label="How">Belts, gas clouds, debris fields and stations. Any unit can hop between the two, at the cost of a full move</td></tr>
+                                    <tr><th scope="row">Deep underground</th><td data-label="Layers">One, running vertically</td><td data-label="How">Crust, mantle, outer and inner core, fought downward</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Usually only one or two layers are in use, so a typical battle keeps the fast pace of a normal Advance Wars match. The layers multiply the possibilities without multiplying the work.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/admiralwars_3_feature.jpg" alt="Concept art: a cutaway of one battle in four stacked bands, fighters and a station trading fire in space, jets over grassland below, tanks, walkers and infantry in a city, and a submarine in a flooded cavern at the bottom." width="1280" height="720" loading="lazy">
+                            <figcaption>"Units above and below each other can strike across layers, and aircraft can land and take off."</figcaption>
+                        </figure>
                     </div>
-                </div>
+                </li>
 
-                <div class="card-wide">
-                    <h3>🎲 Procedural Universe Generation</h3>
-                    <p>Advanced AI systems create <span class="highlight">contextually aware campaigns</span> that respond to your strategic choices. The universe simulation tracks faction relationships, resource flows, technological development, and territorial control to generate missions that feel organically connected to your ongoing story.</p>
-                    <br>
-                    <p>No two players will experience the same galactic conflict. Your tactical successes and failures create unique narrative branches, ensuring that every campaign feels personally meaningful rather than following predetermined scripts.</p>
-                </div>
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jet-fighter-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Up and down</p>
+                        <h3>Crossing between layers</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/08-crossing.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Units deploy on the surface and move to the layer they belong on: aircraft climb into the sky, satellites rise into orbit on mass drivers or heavy rockets and can come back down through re-entry. Amphibious units cross between sea and land, diggers tunnel down, submarines dive, and transforming machines hop between air and ground.</p>
+                        <p>Landing follows the ground underneath. A plane sets down safely on an airfield, takes some damage landing on plains, and is lost if it tries a mountain or a forest. Engineers can lay temporary airfields and ports near the front, so aircraft and ships can repair without a long trip home.</p>
+                    </div>
+                </li>
 
-                <div class="card-wide">
-                    <h3>🔧 Advanced Unit Systems</h3>
-                    <p>Inspired by <span class="tech-badge">BattleTech</span> <span class="tech-badge">Armored Core</span> <span class="tech-badge">Warzone 2100</span></p>
-                    <br>
-                    <p>Deep customization meets streamlined battlefield deployment. Units feature <span class="highlight">modular weapon systems</span>, terrain-specific adaptations, and technological upgrades that unlock through campaign progression.</p>
-                    <br>
-                    <p>Between battles, spend as much or as little time as desired in the garage, customizing loadouts, upgrading systems, and experimenting with unit combinations. In battle, these choices manifest as tactical options without overwhelming complexity.</p>
-                </div>
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/big-wave-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Not a static board</p>
+                        <h3>Maps that change</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/09-terrain.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Terrain changes during a battle, through weather, events, destruction and construction, which makes the game part Command &amp; Conquer and part Into the Breach. Bridges fall, forests burn, new structures go up, and capturable tech buildings and superweapons sit on some maps.</p>
+                        <p>The environment acts on weapons too: a huge wave washing over the field can stop beam weapons working for a turn. Hazards like toxic gas can be answered with protective gear, at a cost: gas masks keep a squad going but cut its vision.</p>
+                    </div>
+                </li>
 
-                <div class="card-wide">
-                    <h3>🌍 Dynamic Terrain Systems</h3>
-                    <p>Battlefields evolve during combat through <span class="highlight">destruction and construction</span>. Artillery bombardments crater the landscape, engineers build bridges and fortifications, weather systems alter visibility and movement, and some weapons permanently reshape the battlefield.</p>
-                    <br>
-                    <p>Inspired by Into The Breach's environmental puzzle elements, terrain becomes a tactical resource to manipulate rather than static obstacles to navigate around.</p>
-                </div>
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/gears-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Foundations first</p>
+                        <h3>Damage from standards, not a chart</h3>
+                        <p>Advance Wars balances every unit against every other unit with a giant damage table, and every new unit means filling in a new row and column. That makes adding content harder the more of it there is.</p>
+                        <p>Here weapons, hulls and armor, sizes and advanced technologies are <strong>standard types</strong>, and each unit works out the damage it takes from those types alone, without knowing who's shooting it. A new unit only has to be built from the standards, and it already fights correctly against everything else in the game, including content that doesn't exist yet. That's what lets the arsenal grow without end.</p>
+                    </div>
+                </li>
 
-                <div class="card-wide">
-                    <h3>👥 Character Relationship Systems</h3>
-                    <p>Meet rival admirals, form alliances with fellow commanders, and develop relationships with your crew through a sophisticated <span class="highlight">dynamic character system</span> combining Shadow of Mordor's Nemesis mechanics with Fire Emblem's relationship building.</p>
-                    <br>
-                    <p>Enemy commanders remember your tactics and adapt their strategies. Allied officers grow more effective through shared campaigns. These relationships influence available missions, unit capabilities, and story developments.</p>
-                </div>
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/missile-launcher-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">An all-stars arsenal</p>
+                        <h3>Tiers of technology</h3>
+                        <p>The units come in tiers, and which ones you can field depends on the situation: what you own, what you've captured, what tech is on hand and what the mission's resources allow. It's the circumstances of each battle, not an unlock tree.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table tiers">
+                                <thead><tr><th scope="col">Tier</th><th scope="col">What it looks like</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Standard</th><td>The familiar army of infantry, tanks, artillery, jets, ships and submarines</td></tr>
+                                    <tr><th scope="row">Scavenger</th><td>Low-tech raider gear, improvised and cheap</td></tr>
+                                    <tr><th scope="row">High tech</th><td>Future weapons, drones, satellites, orbital strikes</td></tr>
+                                    <tr><th scope="row">Ultra tech</th><td>Mechs, combinable and transforming units, carrier megabases bristling with guns</td></tr>
+                                    <tr><th scope="row">God tech</th><td>Hyperweapons and superweapons, with nukes and the defenses against them</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Weapons can fill several tiles at once (beams, barrages, rings, lingering clouds), mounts can be swapped between units the way Super Robot Wars swaps weapons, and there are mobile cities, aerial fortresses, underwater bases and giant land crawlers.</p>
+                    </div>
+                </li>
 
-                <div class="card-wide">
-                    <h3>🕊️ Beyond Combat Operations</h3>
-                    <p>Not every mission involves military conquest. Deploy <span class="highlight">civilian and scientific units</span> in rescue operations, disaster relief, exploration missions, and diplomatic escorts. These scenarios utilize the same tactical framework while exploring themes of cooperation, discovery, and humanitarian aid.</p>
-                    <br>
-                    <p>Such missions provide narrative variety and demonstrate the versatility of your strategic capabilities beyond pure warfare scenarios.</p>
-                </div>
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/star-medal-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">People on the field</p>
+                        <h3>Admirals, heroes and rivals</h3>
+                        <p>Admirals are the commanding officers. As in Advance Wars: Days of Ruin, an admiral can board a unit to make it a veteran and project a radius of their own bonuses; fighting inside that radius charges their power, which spreads the bonus over the whole map for a turn. Rare artifacts called super cores can rewrite an admiral's stats or powers.</p>
+                        <p>Officers and heroes fight as units with their own abilities. Admirals and heroes on every side are generated, with faces built from parts and personalities of their own, and they can <strong>fall for good</strong>. Rival admirals remember you, the way Shadow of Mordor's captains do, and between battles visual-novel scenes build friendships, rivalries, alliances and romances, Fire Emblem-style.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/radar-sweep-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Nothing prewritten</p>
+                        <h3>A generator that reads the universe</h3>
+                        <p>Missions come from a heuristics-driven generator, not a dice roll. It looks at the region's state, who holds it, who's nearby, what happened there last time, what it's made of, and builds a battle that fits: the map's layers and terrain, the opponent, the resources, the goal, any twists.</p>
+                        <p>Maps are assembled from small pieces of terrain and checked to be playable. Resources follow the mission too: steady income every turn as in Advance Wars, harvesting as in Command &amp; Conquer, or only what you deployed with. So two battles in the same region a hundred missions apart can play nothing alike, and both make sense.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/healing-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Not every mission is a war</p>
+                        <h3>Civilian, science and rescue units</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/admiralwars/10-rescue.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The same grid tactics work for jobs with no fighting at all. Civilian, industrial, science and rescue units have their own moves and their own terrain strengths, for peacetime missions that build up your headquarters and the federation's cities, and for missions about people: escorting, rescuing, finding or supporting someone you've met.</p>
+                        <p>They give the universe room to breathe between wars, and give you a reason to care about what the wars are protecting.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cargo-crate-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Deep, but never in the way</p>
+                        <h3>The garage and the easy battlefield</h3>
+                        <p>Between battles there's a huge library: units, equipment and items to organize in a browser with categories, search and favorites, loadouts to build for your mothership and mobile headquarters, items to carry like Super Mario Bros. 3's inventory. Spend hours there, Armored Core or BattleTech style, or skip it.</p>
+                        <p>On the battlefield everything stays small: a cap on units in the field, a limited inventory, one resource, inactive layers hidden, and automation for chores Advance Wars made you do by hand, like keeping long supply lines topped up. Most of the extra features can be ignored and the game still plays as plain, fast Advance Wars.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/admiralwars_4_boxart.jpg" alt="Box art: an admiral in a navy dress uniform with gold braid stands at a starship's console, looking out through a wide window at a space battle above a planet, stations and ships firing and an explosion blooming." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Orders of commission</p>
+                <h2 id="sendoff">Admiral Wars Beyond: Four-Layer Grid Tactics</h2>
+                <p>You are hereby given command. Your fleet operates on every layer of every world: in orbit, in the sky, on the ground and beneath it. Your missions will be chosen by you, from the situations the universe presents.</p>
+                <p>Take your time with every turn. Bring who you trust. Remember who you've lost, and who's waiting for you on the other side.</p>
+                <p><strong>Report to the bridge, Admiral. The universe is moving.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Advance Wars, Command &amp; Conquer, Into the Breach, XCOM, Fire Emblem, Super Robot Wars and Shadow of Mordor</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Exo 2, Turret Road, Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
         </div>
-
-        <div class="feature-section">
-            <div class="feature-bg"></div>
-            <div class="feature-quote">
-                <div class="quote-overlay">
-                    <div class="quote-text">"Command across dimensions - every layer tells a different story"</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="emoji">🎯</span>Strategic Depth</h2>
-            <div class="card-wide">
-                <p>Admiral Wars Beyond represents the <span class="highlight">ultimate evolution of turn-based tactics</span>, combining proven mechanics from the greatest strategy games ever created into a cohesive, accessible experience.</p>
-                <br>
-                <p>The game respects your time with quick setup and immediate tactical engagement, while providing virtually unlimited strategic depth for those who seek to master its systems. Whether you have 20 minutes or 4 hours, AWB adapts to your available time while maintaining meaningful progression.</p>
-                
-                <div class="svg-container">
-                    <svg viewBox="0 0 800 300" style="width: 100%; height: auto;">
-                        <!-- Battle Outcome Flow -->
-                        <rect x="50" y="100" width="120" height="60" fill="var(--container-bg)" stroke="#3498db" stroke-width="2" rx="8"/>
-                        <text x="110" y="125" fill="#ecf0f1" font-size="12" text-anchor="middle">Tactical Battle</text>
-                        <text x="110" y="140" fill="#ecf0f1" font-size="12" text-anchor="middle">Outcome</text>
-                        
-                        <path d="M 170 130 Q 220 90 230 130" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#greenArrow)"/>
-                        <path d="M 170 130 Q 220 140 230 180" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#redArrow)"/>
-                        
-                        <rect x="245" y="110" width="130" height="40" fill="var(--container-bg)" stroke="#27ae60" stroke-width="2" rx="6"/>
-                        <text x="310" y="135" fill="#27ae60" font-size="11" text-anchor="middle">Victory: Territory Secured</text>
-                        
-                        <rect x="245" y="160" width="130" height="40" fill="var(--container-bg)" stroke="#e74c3c" stroke-width="2" rx="6"/>
-                        <text x="310" y="185" fill="#e74c3c" font-size="11" text-anchor="middle">Defeat: Enemy Advances</text>
-                        
-                        <path d="M 380 130 L 450 130" stroke="#27ae60" stroke-width="3" marker-end="url(#greenArrow)"/>
-                        <path d="M 380 180 L 450 180" stroke="#e74c3c" stroke-width="3" marker-end="url(#redArrow)"/>
-                        
-                        <rect x="450" y="110" width="140" height="40" fill="var(--container-bg)" stroke="#74b9ff" stroke-width="2" rx="6"/>
-                        <text x="520" y="125" fill="#74b9ff" font-size="10" text-anchor="middle">New Missions Generated:</text>
-                        <text x="520" y="138" fill="#74b9ff" font-size="10" text-anchor="middle">Defense, Expansion, Allies</text>
-                        
-                        <rect x="450" y="160" width="140" height="40" fill="var(--container-bg)" stroke="#f39c12" stroke-width="2" rx="6"/>
-                        <text x="520" y="175" fill="#f39c12" font-size="10" text-anchor="middle">New Missions Generated:</text>
-                        <text x="520" y="188" fill="#f39c12" font-size="10" text-anchor="middle">Counterattack, Recovery</text>
-                        
-                        <path d="M 590 130 Q 640 130 640 155 Q 640 180 590 180" stroke="#a29bfe" stroke-width="3" fill="none" marker-end="url(#purpleArrow)"/>
-                        
-                        <rect x="620" y="140" width="100" height="30" fill="var(--container-bg)" stroke="#a29bfe" stroke-width="2" rx="6"/>
-                        <text x="670" y="160" fill="#a29bfe" font-size="11" text-anchor="middle">Persistent Universe</text>
-                        
-                        <text x="110" y="260" fill="#ecf0f1" font-size="14" text-anchor="middle" font-weight="bold">Every Battle Matters</text>
-                        <text x="400" y="260" fill="#ecf0f1" font-size="12" text-anchor="middle">Your tactical decisions create lasting consequences across the galaxy</text>
-                        
-                        <defs>
-                            <marker id="greenArrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                                <polygon points="0 0, 8 3, 0 6" fill="#27ae60" />
-                            </marker>
-                            <marker id="redArrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                                <polygon points="0 0, 8 3, 0 6" fill="#e74c3c" />
-                            </marker>
-                            <marker id="purpleArrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                                <polygon points="0 0, 8 3, 0 6" fill="#a29bfe" />
-                            </marker>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <div class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-description">
-                <div class="boxart-title">Admiral Wars Beyond</div>
-                <p><strong>The Ultimate Turn-Based Tactical Experience</strong></p>
-                <br>
-                <p>Command across four dimensions of warfare in battles that reshape the galaxy. Every tactical decision creates lasting consequences in a universe that remembers your victories and defeats.</p>
-                <br>
-                <p><span class="highlight">• Revolutionary multi-layer battlefields</span></p>
-                <p><span class="highlight">• AI-driven procedural campaigns</span></p>
-                <p><span class="highlight">• Deep customization systems</span></p>
-                <p><span class="highlight">• Persistent universe simulation</span></p>
-                <p><span class="highlight">• Endless strategic possibilities</span></p>
-                <br>
-                <p><em>Where every battle is a chess match, every victory reshapes the stars, and every commander writes their own legend.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
-    </div>
+    </footer>
 </body>
 </html>
