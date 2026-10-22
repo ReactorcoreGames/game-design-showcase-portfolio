@@ -1,0 +1,21 @@
+{
+  "slug": "abyssal_caretaker-mini",
+  "out": "site/projects/mini/abyssal",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic underwater film still, deep ocean, teal darkness, soft cyan bioluminescence. ",
+  "notes": "Mood-only mini images for abyssal_caretaker.html, beside the lore, game layer and feature text. SDXL (free): gen abyssal_caretaker-mini --model sdxl --max 999, then finish abyssal_caretaker-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "caretakers", "ratio": "3:2", "prompt": "Ancient carved stone pillars on the dark sea floor, glowing faintly in the deep."},
+    {"n": 2, "name": "containers", "ratio": "3:2", "prompt": "Shipping containers lying broken open on the deep sea floor, cloudy water around them."},
+    {"n": 3, "name": "waking", "ratio": "3:2", "prompt": "A glowing hydrothermal vent in the dark deep ocean, shimmering water rising."},
+    {"n": 4, "name": "site", "ratio": "3:2", "prompt": "A shipwreck on the dark sea floor, a cloud of drifting debris lit by a single beam of light."},
+    {"n": 5, "name": "job", "ratio": "3:2", "prompt": "A coral reef slowly coming back to life, small fish returning to it."},
+    {"n": 6, "name": "column", "ratio": "3:2", "prompt": "Sunlight beams falling from the surface into the deep blue ocean."},
+    {"n": 7, "name": "rest", "ratio": "3:2", "prompt": "A quiet underwater cave with a warm glow, still water and floating particles."},
+    {"n": 8, "name": "healing", "ratio": "3:2", "prompt": "A sea turtle swimming over a seagrass meadow in clear water."},
+    {"n": 9, "name": "vehicles", "ratio": "3:2", "prompt": "A sleek manta-shaped submersible gliding through the dark deep ocean."},
+    {"n": 10, "name": "gentle", "ratio": "3:2", "prompt": "A large octopus calmly resting among rocks in the deep, tentacles curled."}
+  ]
+}

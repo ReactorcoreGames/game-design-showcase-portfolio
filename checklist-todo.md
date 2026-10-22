@@ -96,7 +96,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] StardustAssault
 - [x] Underground Brawl
 - [x] Zero Space Robo Derby
-- [ ] abyssal_caretaker (no design doc: the page is the design)
+- [x] abyssal_caretaker (design: the Kerala chat, adopted in batch 5)
 - [ ] admiralwars
 - [ ] antigrav_deconstruction
 - [ ] astro_industry

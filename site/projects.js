@@ -55,10 +55,10 @@ window.PROJECTS = [
   },
   {
     page: "abyssal_caretaker.html", prefix: "abyssal",
-    title: "Abyssal Caretaker", subtitle: "Environmental Survival Action",
-    icon: "diving-helmet-delapouite", tint: "cyan",
-    blurb: "A reverse Subnautica: rise from the deepest trench as an ancient ocean guardian, upgrading your suit zone by zone while you clean up pollution and restore the ecosystems above.",
-    genres: ["action", "sandbox"], tags: ["underwater", "exploration", "ecology", "survival"],
+    title: "Abyssal Caretaker", subtitle: "Ocean Cleanup Ascent",
+    icon: "frog-lorc", tint: "cyan",
+    blurb: "A reverse Subnautica: an ancient frogman wakes in the abyss and climbs toward a port, adapting his suit to each depth from salvaged containers and cleaning up what the ships dropped.",
+    genres: ["sandbox", "action"], tags: ["underwater", "survival crafting", "cleanup", "side view"],
     status: "concept", added: "2025-10-08"
   },
   {

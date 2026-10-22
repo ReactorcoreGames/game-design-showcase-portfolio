@@ -1,0 +1,14 @@
+{
+  "slug": "abyssal_caretaker",
+  "prefix": "abyssal",
+  "preset": "01 Main - Digital Painting",
+  "style": "Dark atmospheric deep-sea mood, bioluminescent details. Deep abyss teal and blue palette with glowing cyan and soft lime-green accents, dark stone greys.",
+  "notes": "Rewrite (2026-10). Images 1, 2, 4 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 3 is new: the old one was a split panel with a frogman on one side and glass pods of humanoids with lettered screens on the other. gen abyssal_caretaker --only 3, then finish abyssal_caretaker --only 3.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Low-angle wide shot of an ancient amphibious frogman caretaker suspended in midnight-blue abyssal depths, bioluminescent creatures around crumbling stone architecture, the caretaker's shell-like suit glowing with cyan veins, jellyfish and ghostly fish, light beams cutting through the dark."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Low-angle action shot of the amphibious caretaker using a cutting beam on a polluted shipping container, orange chemical spill dispersing into the water, plastic debris floating, small cleanup machines around him, wreckage against the glow of the spill."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Medium shot inside an ancient underwater stone crypt lit by the warm glow of a hydrothermal vent and cyan bioluminescent carvings. A humanoid frog guardian with a large green frog head and golden eyes, wearing a dark olive diving suit with glowing cyan seams, stands at a carved stone workbench fitting a curved panel of rusty corrugated steel, cut from a shipping container, onto the shoulder of his suit. On the workbench lie a bundle of kelp, a lump of black volcanic rock, a coil of plastic tubing and a glass jar of glowing green gel. Bubbles rise toward the dark water above."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait of the amphibious caretaker in his suit rising through a dark ocean shaft between ancient carved pillars, a light beam from far above, jellyfish and small fish around him, octopus tentacles in the shadows below."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Aerial view of ancient abyssal ruins around glowing thermal vents, caretakers asleep in chambers carved into volcanic rock, one figure awakening in cyan light, dark clouds of pollution in the distance."}
+  ]
+}

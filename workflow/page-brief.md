@@ -141,4 +141,3 @@ The old pages were made by Sonnet 3 through a rigid prompt chain, often without 
 - **Keep the page's file name and image prefix.** The URL has been shared. The one exception so far was `AALSW.html` → `AAL-Bunkerships.html`, on Reactorcore's word, with the old file kept as a redirect stub. Don't rename on your own.
 - Keep the existing images unless one no longer fits what the page says. A regenerated image is fine when it clearly improves the page (record why in the manifest). The pages marked ⚑ in the checklist have no story image yet: write a full five-image spec, generate only image 5 (`--only 5`, then `finish --only 5`), and keep the old prompts of the other four as a record.
 - Add the SDXL minis like on a new page.
-- `abyssal_caretaker.html` has no design file. The old page itself is the design, so read it as the source and rebuild it on the template.
