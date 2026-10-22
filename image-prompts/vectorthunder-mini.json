@@ -1,0 +1,21 @@
+{
+  "slug": "vectorthunder-mini",
+  "out": "site/projects/mini/vectorthunder",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - M - Noir-Gothic",
+  "lead": "1980s action film still, rain at night, black and white with glowing red lights. ",
+  "notes": "Mood-only mini images for vectorthunder.html, beside the lore, game layer and feature text. SDXL (free): gen vectorthunder-mini --model sdxl --max 999, then finish vectorthunder-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "vector", "ratio": "3:2", "prompt": "A sleek white sports car with a red light bar on its nose parked under a streetlight."},
+    {"n": 2, "name": "pilot", "ratio": "3:2", "prompt": "A driver in a leather jacket leaning on a car door, face in shadow, city lights behind."},
+    {"n": 3, "name": "hq", "ratio": "3:2", "prompt": "A big black semi truck with its trailer ramp lowered on an empty highway at night."},
+    {"n": 4, "name": "chase", "ratio": "3:2", "prompt": "Headlights and tail lights streaking down a wet city street in a high-speed chase."},
+    {"n": 5, "name": "catalog", "ratio": "3:2", "prompt": "A wall of photos and newspaper clippings of different cities pinned up in a dark office."},
+    {"n": 6, "name": "episode", "ratio": "3:2", "prompt": "An old television glowing in a dark living room, rain on the window."},
+    {"n": 7, "name": "turbo", "ratio": "3:2", "prompt": "A car leaping over a roadblock in a burst of exhaust flame."},
+    {"n": 8, "name": "fuel", "ratio": "3:2", "prompt": "A lonely gas station at night, a white sports car at the pump."},
+    {"n": 9, "name": "senses", "ratio": "3:2", "prompt": "A glowing red scanner light sweeping across a dark garage wall."},
+    {"n": 10, "name": "waves", "ratio": "3:2", "prompt": "A line of black vans and motorcycles roaring down a highway at night."}
+  ]
+}

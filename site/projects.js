@@ -224,9 +224,9 @@ window.PROJECTS = [
   {
     page: "vectorthunder.html", prefix: "vectorthunder",
     title: "Vector Thunder", subtitle: "Transformable Pursuit Combat",
-    icon: "full-motorcycle-helmet-delapouite", tint: "orange",
-    blurb: "80s-flavored vehicle combat with car, motorcycle and helicopter transformations, dynamic enemy waves, and Supercores that let you steal enemy abilities.",
-    genres: ["vehicles", "action"], tags: ["pursuit", "80s", "transforming"],
+    icon: "full-motorcycle-helmet-delapouite", tint: "red",
+    blurb: "The 80s action show you wanted to be in: a disguised super vehicle that becomes a car, a motorcycle or a helicopter, top-down pursuits through randomized gang waves, and a new city to clean up whenever you like.",
+    genres: ["vehicles", "action"], tags: ["pursuit", "80s", "transforming", "top-down shooter"],
     status: "concept", added: "2025-10-08"
   },
   {

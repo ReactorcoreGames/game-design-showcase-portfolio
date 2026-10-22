@@ -4,748 +4,432 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vector Thunder: Transformable Pursuit Combat</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Vector Thunder - High-octane 80s-inspired vehicle combat with transformable vehicles. Switch between car, motorcycle, and helicopter modes in dynamic pursuit combat scenarios.">
+
+    <meta name="description" content="A game design concept by Reactorcore: an 80s TV-show vigilante game. A civilian-disguised super vehicle that becomes a car, a motorcycle or a helicopter, top-down pursuit combat against randomized waves, and an endless series of cities to clean up.">
+    <meta name="keywords" content="game design concept, vehicle combat, top-down shooter, transforming vehicle, pursuit, 80s action, Knight Rider inspired, Airwolf inspired, Nova Drift style waves, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/vectorthunder.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Vector Thunder: Transformable Pursuit Combat">
-    <meta property="og:description" content="Vector Thunder - High-octane 80s-inspired vehicle combat with transformable vehicles. Switch between car, motorcycle, and helicopter modes in dynamic pursuit combat scenarios.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/vectorthunder_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/vectorthunder.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Games Design Showcase">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Vector Thunder: Transformable Pursuit Combat">
+    <meta property="og:description" content="A game design concept: one disguised super vehicle, three forms, and a city that needs cleaning up. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/vectorthunder.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/vectorthunder_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art in black, white and red: a white sports car and a rider on a bike chase targeted cars down a rainy street under a helicopter">
+
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
     <meta name="twitter:title" content="Vector Thunder: Transformable Pursuit Combat">
-    <meta name="twitter:description" content="Vector Thunder - High-octane 80s-inspired vehicle combat with transformable vehicles. Switch between car, motorcycle, and helicopter modes in dynamic pursuit combat scenarios.">
+    <meta name="twitter:description" content="A game design concept: one disguised super vehicle, three forms, and a city that needs cleaning up.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/vectorthunder_2_vignette.jpg">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Vector Thunder: Transformable Pursuit Combat",
-      "description": "A high-octane 80s-inspired vehicle combat game featuring advanced transformable vehicles capable of switching between car, motorcycle, and helicopter modes. Navigate through procedurally generated enemy encounters as you pursue justice across corrupt cities.",
-      "genre": ["Action", "Vehicle Combat", "80s Retro"],
-      "gamePlatform": "PC",
-      "operatingSystem": "Windows",
-      "applicationCategory": "Game",
-      "creator": {
-        "@type": "Organization",
-        "name": "Reactorcore Games"
-      },
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/vectorthunder_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/vectorthunder.html"
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Vector Thunder: Transformable Pursuit Combat",
+        "description": "A game design concept, not a released game: a top-down vehicle combat game in the style of 80s action TV, where a disguised super vehicle switches between car, motorcycle and helicopter, and the player clears crime from generated cities one campaign at a time.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Vehicle combat", "Shooter"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/vectorthunder.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/vectorthunder_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#140b0c">
+
+    <link rel="preload" href="../fonts/exo2-black-italic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Syncopate:wght@400;700&display=optional" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /*
-        Image Requirements:
-        vectorthunder_1_title.jpg - Dark highway at night with red scanner light effects and vehicle transformation silhouettes
-        vectorthunder_2_vignette.jpg - High-speed pursuit scene showing transformation between vehicle modes mid-chase
-        vectorthunder_3_feature.jpg - Technical diagram showing vehicle's three modes with tactical advantages highlighted
-        vectorthunder_4_boxart.jpg - Classic 80s action poster with pilot and VECTOR in multiple forms against city backdrop
-        vectorthunder_5_story.jpg - Zoomed out overworld view of the greater setting showing corrupt cities and the scope of the vigilante campaign
-        */
+        /* Vector Thunder: scanner red and chrome over a wet black night with a red cast, like the
+           ink-and-red artwork. Exo 2 Black Italic for the title and headings, Expletus Sans Medium
+           Italic for the subtitle and kickers: speed italics. */
+        @font-face { font-family: "Exo 2 Black Italic"; src: url("../fonts/exo2-black-italic.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Expletus Sans Medium Italic"; src: url("../fonts/expletus-sans-medium-italic.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: #0a0a0a;
-            --container-bg: #1a1a1a;
-            --border-color: #ff0000;
-            --text-color: #e0e0e0;
-            --accent-primary: #ff0000;
-            --accent-secondary: #b300ff;
-            --title-gradient-1: #ff0000;
-            --title-gradient-2: #aa0000;
-            --shadow-color: rgba(255, 0, 0, 0.4);
-            --card-bg: #222222;
-            --highlight-color: #ff3333;
+            --flow-1: #140b0c;
+            --flow-2: #3a1216;
+            --grid-minor: rgba(255, 170, 170, 0.04);
+            --grid-major: rgba(255, 170, 170, 0.09);
+            --p-ground: rgba(20, 11, 12, 0.95);
+            --p-panel: #1e1214;
+            --p-1: #ff3b3b;
+            --p-2: #cfc8cc;
+            --p-3: #f6f1f1;
+            --p-text: #e4dbdc;
+            --p-dim: #b3a5a7;
+            --p-line: rgba(255, 170, 170, 0.15);
+            --font-title: "Exo 2 Black Italic", "Segoe UI", sans-serif;
+            --font-sub: "Expletus Sans Medium Italic", "Segoe UI", sans-serif;
+            --shade: #0b0506;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "scanner": the red light bar on the front of an 80s super car. A spot of red
+           light sweeps back and forth under the subtitle, and the title's glow follows it from side to
+           side. Dark layered shadows keep the title legible throughout. */
+        .p-name {
+            letter-spacing: 0.01em;
+            animation: scanner-glow 2.4s ease-in-out infinite alternate;
         }
-
-        body {
-            font-family: 'Quantico', sans-serif;
-            background: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-			letter-spacing: 1px;
-            overflow-x: hidden;
-        }
-
-        .patreon-link {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 8px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-size: 0.8em;
-            border: 1px solid var(--border-color);
-            z-index: 1000;
-        }
-
-        .patreon-link:hover {
-            background: rgba(255, 0, 0, 0.1);
-        }
-
-        .title-section {
-            height: 750px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('images/vectorthunder_1_title.jpg');
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
-        }
-
-        .title-content {
-            text-align: center;
-            z-index: 2;
-        }
-
-        .main-title {
-            font-family: 'Bungee', sans-serif;
-            font-size: 4.2em;
-            font-weight: 400;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 0.2em;
-            color: var(--accent-primary);
-            text-shadow: 0 0 20px var(--shadow-color);
-            animation: scanner-glow 2s ease-in-out infinite alternate;
-        }
-
-        .subtitle {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.8em;
-            color: var(--accent-secondary);
-            font-weight: 400;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(255, 170, 0, 0.5);
-        }
-
         @keyframes scanner-glow {
-            0% {
-                text-shadow: 0 0 20px var(--shadow-color), 0 0 30px var(--shadow-color);
-            }
-            100% {
-                text-shadow: 0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color);
-            }
+            0%   { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), -0.25em 0 24px rgba(255, 59, 59, 0.55); }
+            50%  { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(255, 59, 59, 0.4); }
+            100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0.25em 0 24px rgba(255, 59, 59, 0.55); }
         }
+        .p-sub { color: #ffffff; letter-spacing: 0.03em; text-shadow: 0 0 2px var(--shade), 0 0 4px var(--shade), 0 0 8px var(--shade), 2px 2px 0 var(--shade), 0 0 18px var(--shade); }
+        /* The scanner: a dim red bar the width of the subtitle, with a bright spot that runs along it.
+           The spot is a box-shadow cast from a zero-width point, so it never widens the page. */
+        .p-sub::before {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.4rem; height: 4px;
+            background: rgba(255, 59, 59, 0.45); box-shadow: 0 0 0 1px var(--shade);
+        }
+        .p-sub::after {
+            content: ""; position: absolute; left: 1.2em; bottom: calc(-0.4rem + 2px); width: 0; height: 1px;
+            animation: scanner 2.4s ease-in-out infinite alternate;
+        }
+        @keyframes scanner {
+            0%   { box-shadow: 0 0 4px 5px rgba(255, 90, 90, 1), 0 0 22px 12px rgba(255, 59, 59, 0.6); }
+            100% { box-shadow: var(--scan) 0 4px 5px rgba(255, 90, 90, 1), var(--scan) 0 22px 12px rgba(255, 59, 59, 0.6); }
+        }
+        .p-sub { --scan: 12.3em; }   /* the subtitle is 14.75em wide; the spot runs from 1.2em to about 13.5em */
+        .section-mark::after { animation: h2-line 2.4s ease-in-out infinite alternate; }
+        @keyframes h2-line { 0% { box-shadow: -6px 0 10px rgba(255, 59, 59, 0.6); } 100% { box-shadow: 6px 0 10px rgba(255, 59, 59, 0.6); } }
+        h2, h3 { letter-spacing: 0.01em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; text-transform: none; letter-spacing: 0.04em; font-size: 0.95rem; }
 
-        .scanner-line {
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.8), transparent);
-            animation: scanner-sweep 3s linear infinite;
-        }
-
-        @keyframes scanner-sweep {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-
-        h2 {
-            font-family: 'Bungee', sans-serif;
-            font-size: 2.7em;
-            color: var(--accent-primary);
-            margin-bottom: 30px;
-            text-align: center;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 15px var(--shadow-color);
-            animation: pulse-glow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes pulse-glow {
-            0% { text-shadow: 0 0 15px var(--shadow-color); }
-            100% { text-shadow: 0 0 25px var(--shadow-color), 0 0 35px var(--shadow-color); }
-        }
-
-        .overview {
-            font-size: 1.2em;
-            text-align: center;
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
-
-        .overview p {
-            margin-bottom: 20px;
-        }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--highlight-color);
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
-        }
-
-        .card h3 {
-            font-family: 'Syncopate', sans-serif;
-            color: var(--accent-primary);
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 10px var(--shadow-color);
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .controls-section {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 40px;
-        }
-
-        .controls-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        .controls-table th,
-        .controls-table td {
-            border: 1px solid var(--border-color);
-            padding: 12px 15px;
-            text-align: left;
-        }
-
-        .controls-table th {
-            background: var(--card-bg);
-            color: var(--accent-primary);
-            font-weight: bold;
-            text-shadow: 0 0 10px var(--shadow-color);
-        }
-
-        .controls-table td {
-            background: rgba(34, 34, 34, 0.5);
-        }
-
-        .controls-table tr:hover td {
-            background: rgba(255, 0, 0, 0.1);
-        }
-
-        .mission-cards-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .mission-cards-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .vignette-section {
-            position: relative;
-            margin: 60px 0;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .vignette-image {
-            width: 100%;
-            height: 650px;
-            background: url('images/vectorthunder_2_vignette.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-left: 4px solid var(--accent-primary);
-            border-radius: 5px;
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--accent-secondary);
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-        }
-
-        .layers-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .layer-card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            padding: 30px;
-            border-left: 5px solid var(--accent-primary);
-        }
-
-        .layer-card h4 {
-            font-family: 'Syncopate', sans-serif;
-            color: var(--accent-primary);
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .features-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--highlight-color);
-            transform: translateY(-5px);
-        }
-
-        .feature-card h4 {
-            font-family: 'Syncopate', sans-serif;
-            color: var(--accent-primary);
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 10px var(--shadow-color);
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .feature-image-section {
-            position: relative;
-            margin: 60px 0;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 650px;
-            background: url('images/vectorthunder_3_feature.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .feature-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-left: 4px solid var(--accent-primary);
-            border-radius: 5px;
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--accent-secondary);
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-        }
-
-        .story-section {
-            position: relative;
-            margin: 60px 0;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .story-image {
-            width: 100%;
-            height: 650px;
-            background: url('images/vectorthunder_5_story.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .story-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-left: 4px solid var(--accent-primary);
-            border-radius: 5px;
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--accent-secondary);
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin: 60px 0;
-        }
-
-        .boxart-image {
-            width: 100%;
-            aspect-ratio: 2/3;
-            background: url('images/vectorthunder_4_boxart.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-        }
-
-        .boxart-description {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-        }
-
-        .boxart-description h3 {
-            font-family: 'Bungee', sans-serif;
-            color: var(--accent-primary);
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px var(--shadow-color);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--container-bg);
-            border-top: 2px solid var(--border-color);
-            margin-top: 60px;
-        }
-
-        .footer p {
-            margin-bottom: 10px;
-        }
-
-        .footer a {
-            color: var(--accent-primary);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: var(--highlight-color);
-        }
-
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5em;
-            }
-            
-            .subtitle {
-                font-size: 1.3em;
-            }
-            
-            .cards-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .container {
-                padding: 20px 15px;
-            }
-        }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        @media (max-width: 760px) { .p-sub::before, .p-sub::after { bottom: -0.3rem; } }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.95rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <div class="title-section">
-        <div class="scanner-line"></div>
-        <div class="title-content">
-            <h1 class="main-title">Vector Thunder</h1>
-            <p class="subtitle">Transformable Pursuit Combat</p>
-        </div>
-    </div>
-
-    <div class="container">
-        <section class="section">
-            <div class="overview">
-                <p>A high-octane 80s-inspired vehicle combat game where you pilot an advanced transformable vehicle capable of switching between car, motorcycle, and helicopter modes. Navigate through procedurally generated enemy encounters as you pursue justice across corrupt cities.</p>
-                <br>
-                <p>Each transformation offers unique tactical advantages: cars for speed and tunnels, motorcycles for agility and tight spaces, helicopters for aerial superiority and obstacle clearance. Master all three modes to adapt to any pursuit scenario.</p>
-                <br>
-                <p>Featuring dynamic enemy wave generation with intelligent formation patterns, resource management mechanics, and a persistent "Supercores" system that allows you to steal enemy abilities and carry them between campaigns.</p>
-            </div>
-
-            <div class="cards-container">
-                <div class="card">
-                    <h3>🎯 Target Audience</h3>
-                    <p><strong>Primary:</strong> Action game enthusiasts who appreciate tactical vehicle combat and 80s aesthetics</p>
-                    <p><strong>Secondary:</strong> Fans of classic TV shows like Knight Rider, Street Hawk, and Airwolf</p>
-                    <p><strong>Complexity:</strong> Medium - accessible controls with deep strategic transformation mechanics</p>
-                </div>
-
-                <div class="card">
-                    <h3>🎮 Game's Purpose</h3>
-                    <p><strong>Power Fantasy:</strong> Experience the thrill of being an unstoppable vigilante with advanced technology</p>
-                    <p><strong>Justice Satisfaction:</strong> Fulfill the need to fight corruption and make a meaningful difference</p>
-                    <p><strong>Mastery Achievement:</strong> Develop expertise in tactical vehicle transformation and resource management</p>
-                </div>
-
-                <div class="card">
-                    <h3>⚡ Core Concept</h3>
-                    <p><strong>Adaptation Strategy:</strong> Transform your vehicle to match any terrain or tactical situation</p>
-                    <p><strong>Pursuit Mastery:</strong> Perfect the art of high-speed combat while managing fuel, ammunition, and power</p>
-                    <p><strong>Progressive Justice:</strong> Clear corruption city by city through varied mission objectives</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="story-section">
-            <div class="story-image">
-                <div class="story-quote">
-                    "The corruption runs deeper than any single city - a network of criminal enterprises that has poisoned entire regions, waiting for a force with the power to cleanse them all"
-                </div>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/vectorthunder_1_title.jpg" alt="Black, white and red comic art: a white wedge sports car with a glowing red light bar across its nose speeds along a rainy elevated highway at night, spray flying, a dark car chasing behind and red laser beams crossing the sky over the skyline." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Vector Thunder</span><span class="p-sub">Transformable Pursuit Combat</span></h1>
             </div>
         </div>
+    </header>
 
-        <section class="section">
-            <h2>📖 Lore & Story</h2>
-            <div class="overview">
-                <p>In a near-future where corporate corruption has spread like a dark plague across the continent, entire metropolitan areas have fallen under the control of criminal syndicates. These organizations operate with impunity, having systematically compromised local law enforcement and government officials through a combination of bribes, blackmail, and intimidation.</p>
-                <br>
-                <p>You are part of an underground vigilante network equipped with experimental military technology - the VECTOR (Vehicular Enhanced Combat Tactical Operations Response) series vehicles. These advanced machines represent humanity's cutting-edge response to organized crime: transformable vehicles capable of adapting to any pursuit scenario while maintaining devastating firepower.</p>
-                <br>
-                <p>Your current mission is systematic urban liberation. Each corrupted city represents an evil that must be destroyed before the criminal network can expand further. Intelligence suggests these criminal organizations are coordinating across regional boundaries, making speed essential - every day of delay allows them to strengthen their defenses and corrupt more officials.</p>
-                <br>
-                <p>The enemy knows you're coming. They've fortified their operations, deployed advanced military hardware, and established kill-zones throughout their territories. But they haven't faced anything like VECTOR's transformational capabilities. Your mission: infiltrate their strongholds, eliminate their leadership, and reclaim these cities for the people - one pursuit at a time.</p>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/full-motorcycle-helmet-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
             </div>
-        </section>
-
-        <section class="section">
-            <h2>🕹️ Controls & Interface</h2>
-            <div class="controls-section">
-                <table class="controls-table">
-                    <thead>
-                        <tr>
-                            <th>Control Type</th>
-                            <th>Keys/Input</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Movement</strong></td>
-                            <td>WASD</td>
-                            <td>Directional control across all three vehicle modes</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Combat</strong></td>
-                            <td>Mouse</td>
-                            <td>Rotating turret system with realistic rotation speed limitations</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Transformation</strong></td>
-                            <td>Q/E/R</td>
-                            <td>Quick-keys for instant mode switching (Car/Bike/Helicopter)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Weapons</strong></td>
-                            <td>1/2/3</td>
-                            <td>Cycle between Laser, Missile, and Machine Gun systems</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Special Abilities</strong></td>
-                            <td>F1-F8</td>
-                            <td>Activate EMP pulse, countermeasures, vision modes, and other tactical systems</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p><strong>Player Role:</strong> You control a skilled vigilante pilot commanding VECTOR, an advanced AI-assisted vehicle. The semi-auto scrolling pursuit system keeps you in constant forward motion while you manage positioning, transformation timing, and resource conservation under pressure.</p>
-            </div>
-        </section>
-
-        <div class="vignette-section">
-            <div class="vignette-image">
-                <div class="vignette-quote">
-                    "Three modes working as one - transform mid-pursuit to slip through narrow alleys, vault over obstacles, or gain aerial advantage over enemy formations"
-                </div>
-            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
         </div>
 
-        <section class="section">
-            <h2>🏗️ Game Layers</h2>
-            <div class="layers-container">
-                <div class="layer-card">
-                    <h4>1. Moment-to-Moment Gameplay</h4>
-                    <p>Real-time transformation decisions during high-speed pursuits. Balance aggressive forward movement with tactical positioning, manage rotating turret aim while dodging enemy fire, and time mode switches to exploit terrain advantages. Quick resource management decisions determine mission success.</p>
-                </div>
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/speedometer-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Vector Thunder is the 80s action show you wanted to be in. A futuristic super vehicle, disguised as an ordinary car, launches from a mobile headquarters and becomes whatever the chase needs: a car, a motorcycle or a turbo helicopter.</p>
+            <p>It plays as a top-down, semi-auto-scrolling pursuit shooter. You steer with WASD while a turret follows your mouse, and you fight through randomized waves of gang cars, bikes and trucks, built fresh each mission in the manner of Nova Drift.</p>
+            <p>The goal is old-fashioned street justice: clear the crime out of a city, then move on to the next one. It grows straight out of Knight Rider's talking car, Street Hawk's super bike, Blue Thunder and Airwolf's helicopters, and the hangar launches of SWAT Kats.</p>
 
-                <div class="layer-card">
-                    <h4>2. Low Metagame - City Campaigns</h4>
-                    <p>Each city presents 8 varied missions plus a final boss confrontation. Choose your approach: Rush (time-critical escapes), Prey (evade persistent hunters), Pursuit (eliminate mobile targets), or Explore (infiltration objectives). Mission order affects available resources and enemy awareness levels.</p>
-                </div>
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Anyone who grew up on, or later fell for, 80s action TV: the gadget-packed car, the bike that does the impossible, the helicopter nobody can catch. Players who love top-down vehicle shooters and want a clear-cut <strong>justice fantasy</strong>, without moral fog or a hundred-hour commitment.</p>
+                    <p>WASD and the mouse. The turret turns a little slower than the pointer, so aiming has weight.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power and freedom:</strong> one machine that can be anything the moment needs.</p>
+                    <p><strong>Meaning:</strong> making a city safe again, and seeing the list of saved cities grow.</p>
+                    <p><strong>Excitement and mastery:</strong> high-speed pursuits, and knowing exactly when to switch form.</p>
+                    <p>It avoids draining <strong>autonomy</strong> (missions in any order, the boss can fall whenever you catch them) and <strong>time</strong> (a city is a short campaign that keeps your place).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>The shows promised a role: <em>be</em> the vigilante with the super car. Games built on that fantasy usually hand you one vehicle and one scripted story, finished in a weekend.</p>
+                    <p>Here <strong>every mission asks which form fits</strong>, every city is a generated campaign of eight missions and a finale, and <strong>there's always another city</strong>. The role never runs out.</p>
+                </article>
+            </div>
+        </section>
 
-                <div class="layer-card">
-                    <h4>3. High Metagame - Justice Catalog</h4>
-                    <p>Your persistent record of liberated cities grows with each completed campaign. Unlocked Supercores from defeated enemies become available for future campaigns. The procedural city generator ensures infinite variety while maintaining the core corruption-fighting narrative framework.</p>
-                </div>
+        <figure class="p-shot">
+            <img src="../projects/images/vectorthunder_5_story.jpg" alt="Black, white and red comic art: a high view over a rainy city at night, skyscrapers and freeways streaming with red tail lights, semi trucks on the road, a bridge, a harbor with cranes and ships, a white helicopter flying low over the water." width="1280" height="720" loading="lazy">
+            <figcaption>"Every city has its own rot: a gang, a crooked police chief, a mayor who rules like a dictator. The Vector cleans them out one city at a time."</figcaption>
+        </figure>
 
-                <div class="layer-card">
-                    <h4>4. Practical Game Flow</h4>
-                    <p>Launch game → Select campaign difficulty and carried Supercores → Receive mission briefing → Transform and pursue through generated enemy waves → Complete objectives while minimizing damage → Evaluate performance and extract new Supercores → Return to base for next mission or city selection.</p>
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/modern-city-delapouite.png)"></span>Lore and story</h2>
+            <h3>The Vector</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/01-vector.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>It looks like a sleek civilian sports car. It isn't. The Vector is a transformable machine with three forms: a <strong>helicopter</strong>, a <strong>car</strong>, and a <strong>motorcycle</strong> that is actually the cockpit, ejected from the car or the helicopter to go where they can't.</p>
+            <p>All three can land or drive on water, floating like a boat or, at speed, skimming like a hydrofoil. None of them can dive. All three carry a laser, missiles and a machine gun, and a turbo rocket for jumps and dodges.</p>
+
+            <h3>The pilot</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/02-pilot.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A handsome vigilante, as the genre demands, who works outside the law because, in the cities they visit, the law is usually part of the problem. Somewhere out there is an <strong>anonymous supporter</strong>: someone the pilot once helped, who now quietly helps back.</p>
+
+            <h3>Headquarters</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/03-hq.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The Vector launches from a mobile headquarters, a big rig on the highway or a boat in the harbor, which carries it from city to city and refuels, rearms and repairs it between missions.</p>
+
+            <h3>The job right now</h3>
+            <p>Eradicate crime, city by city. Each city has its own mix of the corrupt and the wicked: drug gangs, crooked corporations, police gone bad, shadow organizations, mastermind villains, mayors who rule like dictators, rogue private armies. They're generated for each city and defined by what they do, never by who they are.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You drive or fly the Vector from above while the camera scrolls along the route. The body goes where WASD sends it; the turret goes where the mouse points, at its own slower pace.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Drive and fly</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Steer, accelerate, brake</dd></div>
+                        <div><dt>Shift</dt><dd>Pursuit mode: extra high speed</dd></div>
+                        <div><dt>Space</dt><dd>Turbo rocket: jump, dodge or dash</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Weapons</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim the turret</dd></div>
+                        <div><dt>Left click</dt><dd>Fire the selected weapon</dd></div>
+                        <div><dt>1 2 3</dt><dd>Laser, missiles, machine gun</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Forms</h3>
+                    <dl>
+                        <div><dt>Q</dt><dd>Car</dd></div>
+                        <div><dt>E</dt><dd>Helicopter</dd></div>
+                        <div><dt>R</dt><dd>Eject the cockpit as the motorcycle; again to call the body back</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Gadgets and senses</h3>
+                    <dl>
+                        <div><dt>Right click</dt><dd>Use the selected gadget</dd></div>
+                        <div><dt>Wheel</dt><dd>Choose a gadget</dd></div>
+                        <div><dt>V</dt><dd>Cycle vision modes</dd></div>
+                        <div><dt>F</dt><dd>Analyze what's under the pointer</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The design lists the functions but no keys, so the layout above is a suggestion. The HUD shows the three bars that matter: <strong>fuel</strong>, <strong>generator time</strong> and <strong>ammunition</strong>.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/vectorthunder_2_vignette.jpg" alt="Black, white and red comic art: a white wedge sports car and a white-suited rider on a bike race down a rain-slick street, red target reticles locked on two cars ahead, a white helicopter overhead." width="1280" height="720" loading="lazy">
+            <figcaption>"The turret turns slower than the mouse, so every shot is aimed a moment ahead."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/siren-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>The chase</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/04-chase.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The road scrolls on, waves of gang vehicles pour in, and you weave, boost and fire. A tunnel ahead means the car; an alley too narrow for it means the bike; a blocked bridge means the helicopter. The pleasure is in reading the road and switching at the right moment, then getting there in one piece.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/radar-sweep-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A city</h3>
+                        <p>Each city is a campaign laid out as a map of <strong>eight missions</strong> you take on in any order, and when they're done, a final mission against what's left of the city's crime. The boss doesn't always wait for the finale: you can take them down in any mission they turn up in, even an early one.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Mission</th><th scope="col">The job</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Rush</th><td>Beat the clock, or outrun a spreading blast wave</td></tr>
+                                    <tr><th scope="row">Prey</th><td>Fight off a chaser on your tail</td></tr>
+                                    <tr><th scope="row">Pursuit</th><td>Chase a target down and stop it</td></tr>
+                                    <tr><th scope="row">Explore</th><td>Get from A to B through whatever is in the way</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Every mission comes with the same small print: do it without blowing up.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/justice-star-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The catalog of cities</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/05-catalog.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The overarching story never ends: street justice, wherever it's needed. Every city you clean up goes into a <strong>catalog of cities saved</strong>, recording who held it and how you freed it: the gang you broke, the chief you exposed, the mayor you ran out of town.</p>
+                        <p>New cities are generated, each with its own mix of villains, so there's always another one down the highway. The catalog is the record of the pilot's career, and the people in it remember.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>An episode a night</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/06-episode.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Pick a city, pick a mission off its map, and launch. A mission plays like an episode's big chase, a few minutes long; a whole city fits an evening or two.</p>
+                        <p>The game saves after every mission. If the Vector is wrecked, the pilot ejects on the bike and limps back to headquarters; the target got away, but the mission stays on the map to try again, and nothing else is undone.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/truck-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>street justice</strong>, an endless series of city campaigns, each one generated and finite.</p>
+            <div class="p-nest" aria-label="The structure, outermost first">
+                <div><span>Street justice</span><small>Endless: city after city, all in the catalog.</small>
+                    <div><span>A city</span><small>Eight missions in any order, then the finale: an evening or two.</small>
+                        <div><span>A mission</span><small>Rush, prey, pursuit or explore: a few minutes.</small>
+                            <div><span>A wave</span><small>A formation of gang vehicles: a fight of seconds.</small></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h2>🎯 Mission Types</h2>
-            <div class="mission-cards-container">
-                <div class="card">
-                    <h3>⚡ Rush Missions</h3>
-                    <p><strong>Objective:</strong> Escape a time-critical situation or outrun an expanding blast wave</p>
-                    <p><strong>Mechanics:</strong> Constant forward momentum with countdown pressure, terrain obstacles requiring quick transformation decisions</p>
-                    <p><strong>Strategy:</strong> Helicopter mode for obstacle clearance, car mode for maximum speed, bike mode for narrow escape routes</p>
-                </div>
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/helicopter-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/helicopter-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Three machines in one</h3>
+                        <p>Each form trades size for freedom, and each mission is a puzzle of when to be which:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Form</th><th scope="col">Good at</th><th scope="col">The catch</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Helicopter</th><td data-label="Good at">Flies, takes off and lands vertically, goes far, clears tall obstacles</td><td data-label="Catch">Takes up the most space, so it can't go into much</td></tr>
+                                    <tr><th scope="row">Car</th><td data-label="Good at">The fastest; fits tunnels and large building interiors</td><td data-label="Catch">Bound to the ground and the open road</td></tr>
+                                    <tr><th scope="row">Motorcycle</th><td data-label="Good at">Squeezes through narrow spaces; trials-style parkour over obstacles no car could drive on</td><td data-label="Catch">The smallest and lightest of the three</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The bike isn't a separate vehicle: it's <strong>the cockpit ejecting</strong> from the car or the helicopter. While you ride it, the empty body follows on autopilot, the way a certain talking car used to, and docks back on when you call it.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/vectorthunder_3_feature.jpg" alt="Black, white and red comic art: on a rainy rooftop helipad, a white wedge sports car, a rider in a black helmet on a white motorcycle with a red headlight, and a white helicopter with red lights hovering above." width="1280" height="720" loading="lazy">
+                            <figcaption>"The motorcycle is the cockpit itself, ejected from the car or the helicopter to go where they can't."</figcaption>
+                        </figure>
+                    </div>
+                </li>
 
-                <div class="card">
-                    <h3>🔫 Prey Missions</h3>
-                    <p><strong>Objective:</strong> Survive persistent enemy pursuit while reaching a safe destination</p>
-                    <p><strong>Mechanics:</strong> Enemies spawn behind you with superior firepower, requiring evasive transformation tactics</p>
-                    <p><strong>Strategy:</strong> Use environment to break line of sight, transform to exploit terrain that pursuers can't follow</p>
-                </div>
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/laser-turret-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Road combat</p>
+                        <h3>Pursuit mode, turbo and the turret</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/07-turbo.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p><strong>Pursuit mode</strong> (hyperthrust, cruise) gives every form an extra burst of top speed, and turns the boat into a hydrofoil. The <strong>turbo rocket</strong> is the trick move: a jump over a roadblock, a sideways dodge, a dash through a closing gap.</p>
+                        <p>The weapons sit in a turret that <strong>turns slower than your mouse</strong>. Your pointer can be anywhere in an instant; the gun has to swing round to it. That small lag is the whole feel of the combat: you lead your targets, plan your sweeps, and position the vehicle so the turret is already facing the next threat.</p>
+                    </div>
+                </li>
 
-                <div class="card">
-                    <h3>🎯 Pursuit Missions</h3>
-                    <p><strong>Objective:</strong> Chase and eliminate mobile targets before they escape or reach reinforcements</p>
-                    <p><strong>Mechanics:</strong> Target has head start and uses terrain to their advantage, requiring optimal route planning</p>
-                    <p><strong>Strategy:</strong> Cut off escape routes using helicopter overwatch, force targets into disadvantageous terrain</p>
-                </div>
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jerrycan-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Natural limits</p>
+                        <h3>Fuel, power and ammunition</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/08-fuel.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every form needs <strong>fuel</strong> to move or fly, and its systems run on a <strong>generator</strong> with a limited operating time. Ammunition is limited too, with one exception: when the laser's main battery runs dry, it keeps firing in a weak emergency mode, so you're never left helpless.</p>
+                        <p>None of this is busywork. Headquarters refills everything between missions; the limits only exist inside a mission, where they make you think about which form to use, how long to stay in pursuit mode, and when to spend the missiles. And nothing sinks: on water, the Vector can float for as long as it likes.</p>
+                    </div>
+                </li>
 
-                <div class="card">
-                    <h3>🗺️ Explore Missions</h3>
-                    <p><strong>Objective:</strong> Navigate from point A to point B while gathering intelligence or avoiding detection</p>
-                    <p><strong>Mechanics:</strong> Stealth elements, hidden paths, optional exploration rewards</p>
-                    <p><strong>Strategy:</strong> Bike mode for stealth infiltration, helicopter for reconnaissance, car for quick extraction</p>
-                </div>
-            </div>
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/all-seeing-eye-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The detective half</p>
+                        <h3>Gadgets and senses</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/09-senses.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The Vector carries special abilities for situations guns don't solve: a directed <strong>EMP pulse</strong>, a directed <strong>microwave</strong> beam that incapacitates people and animals, an <strong>oil spray</strong>, magnesium <strong>countermeasures</strong> against missiles, a <strong>smoke</strong> exhaust and a <strong>sonic emitter</strong>.</p>
+                        <p>It also sees more than you do: optical, thermal, infrared, x-ray, "smell", acoustic and biosign vision. Its analysis modes take material samples (chemical makeup, type of energy, which weapon from the police and military databases) and run a lie and stress detector. Out on a mission, they show who's hiding behind a wall and what a gang is really carrying.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/missile-swarm-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Never the same chase twice</p>
+                        <h3>Waves built on the fly</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vectorthunder/10-waves.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Like Nova Drift, every mission rolls its enemy waves fresh: which vehicles, how many, in what formation and from which side. The goons drive <strong>cars, bikes, vans and trucks</strong>; the bosses bring heavier things, a <strong>killdozer</strong>, a <strong>monster truck</strong>, a <strong>gunship</strong>, a <strong>tank</strong> or other military hardware.</p>
+                        <p>Because the city's villains shape the pool, a city run by a rogue private army fights differently from one run by a drug gang, and the same mission type plays out differently every time.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/atom-core-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Taken from them, kept by you</p>
+                        <h3>Supercores and favors</h3>
+                        <p>Each city's crime outfit has an edge of its own, a <strong>supercore</strong>: stolen military armor, a hacked traffic network, a fleet of jammers. Take it from them and they lose it for the rest of the campaign, and you keep it, ready from the first mission of the next city. You can carry <strong>up to five</strong>; stealing a sixth means letting one go.</p>
+                        <p>The cities in your catalog remember, too. The anonymous supporter, and sometimes the people of a city you saved, send a friendly event into a mission now and then: a tip-off about a route, a roadblock that moves aside, a fuel drop on a rooftop. It's the world returning a favor, not a reward for playing a certain way.</p>
+                    </div>
+                </li>
+            </ol>
         </section>
 
-        <section class="section">
-            <h2>⚙️ Game Features & Mechanics</h2>
-            <div class="features-container">
-                <div class="feature-card">
-                    <h4>🔄 Triple Transformation System</h4>
-                    <p>Seamlessly switch between three distinct vehicle modes, each with unique capabilities and limitations. Car mode provides balanced speed and durability, motorcycle mode offers maximum agility and stealth, while helicopter mode grants aerial superiority and obstacle clearance. Each transformation takes 0.5 seconds, requiring tactical timing during combat.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>🌊 Dynamic Enemy Wave Generation</h4>
-                    <p>Enemy encounters are procedurally generated using intelligent formation algorithms. The system selects enemy types based on preferred partnerships and tactical roles, then arranges them in formations like pincer attacks, spiral approaches, or protective escorts. Each enemy has defined spawn behaviors and follower capabilities, creating varied but logical encounter patterns.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>💎 Supercores Theft System</h4>
-                    <p>Defeat enemy leaders to steal their tactical advantages as persistent "Supercores" - special abilities that carry between campaigns. Examples include enhanced armor plating, improved weapon cooling, or advanced detection systems. Manage a collection of up to 5 Supercores, strategically choosing which abilities to carry into each new city campaign.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>⛽ Resource Management Strategy</h4>
-                    <p>Balance fuel consumption, ammunition reserves, and power generation across all three vehicle modes. Different modes consume resources at different rates - helicopters burn more fuel but provide tactical advantages, while efficient car mode extends operational range. Emergency power modes keep weapons functional when primary systems fail.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>🎛️ Tactical Weapon Systems</h4>
-                    <p>Three weapon types with distinct tactical roles: Lasers for precision strikes with unlimited emergency backup power, Missiles for heavy damage against armored targets with limited ammunition, and Machine Guns for sustained fire with moderate damage. Each mode's positioning affects weapon effectiveness and targeting angles.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>🌆 Procedural Campaign Structure</h4>
-                    <p>Each city campaign generates 8 randomized missions plus a unique boss encounter. Mission types, difficulty curves, and objective locations vary between campaigns while maintaining narrative coherence. Environmental storytelling through resource distribution and enemy placement creates emergent corruption-fighting narratives unique to each playthrough.</p>
-                </div>
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/vectorthunder_4_boxart.jpg" alt="Box art in black, white and red: a figure in a black armored suit and helmet stands in front of a white wedge sports car in the rain, red laser beams cutting across a night skyline." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Tonight, on Vector Thunder</p>
+                <h2 id="sendoff">Vector Thunder: Transformable Pursuit Combat</h2>
+                <p>A city where the gangs own the streets, the police own the gangs, and the mayor owns everyone. One vigilante. One machine that looks like a car until it doesn't.</p>
+                <p>When the road ends, it flies. When the alley narrows, it rides. When the chase is over, it rolls back into the truck, and the truck rolls on to the next city.</p>
+                <p><strong>Car. Bike. Helicopter. Justice.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
             </div>
         </section>
+    </main>
 
-        <div class="feature-image-section">
-            <div class="feature-image">
-                <div class="feature-quote">
-                    "Master the transformation - each mode's tactical advantages become apparent when enemies force you to adapt your approach mid-mission"
-                </div>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Knight Rider, Street Hawk, Blue Thunder, Airwolf, SWAT Kats and Nova Drift</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Exo 2 Black Italic, Expletus Sans Medium Italic, Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
         </div>
-
-        <div class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-description">
-                <h3>Vector Thunder</h3>
-                <p>Experience the ultimate 80s power fantasy as you command an advanced transformable vehicle in your quest to eliminate corruption from every city. With three distinct vehicle modes, dynamic enemy encounters, and persistent progression through the innovative Supercores system, no two campaigns play the same.</p>
-                <br>
-                <p>Master tactical transformation timing, resource management, and pursuit combat as you adapt to procedurally generated challenges. From high-speed highway chases to tight alley infiltrations and aerial reconnaissance missions, VECTOR responds to every tactical situation.</p>
-                <br>
-                <p><strong>Channel your inner vigilante. Transform your approach. Deliver justice.</strong></p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
     </footer>
 </body>
 </html>
