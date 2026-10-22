@@ -1,0 +1,74 @@
+{
+  "slug": "Poo Storm Janitor Powersuit-mini",
+  "out": "site/projects/mini/poostorm",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Comedic cinematic film still, bright white office, brown mud, mustard yellow hazmat suit, green plants. ",
+  "notes": "Mood-only mini images for Poo Storm Janitor Powersuit.html, beside the lore, game layer and feature text. SDXL (free): gen \"Poo Storm Janitor Powersuit-mini\" --model sdxl --max 999, then finish \"Poo Storm Janitor Powersuit-mini\" --model sdxl. Each prompt is the section's opening line, with the muck called mud; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {
+      "n": 1,
+      "name": "storm",
+      "ratio": "3:2",
+      "prompt": "An office covered in brown mud from floor to ceiling, mud splattered on the desks and dripping from a standing fan."
+    },
+    {
+      "n": 2,
+      "name": "company",
+      "ratio": "3:2",
+      "prompt": "A small yellow cleaning company van parked in front of a gleaming corporate glass office tower."
+    },
+    {
+      "n": 3,
+      "name": "monster",
+      "ratio": "3:2",
+      "prompt": "A lumpy brown mud monster running through an office, flinging mud at a standing fan."
+    },
+    {
+      "n": 4,
+      "name": "office",
+      "ratio": "3:2",
+      "prompt": "A worker in a yellow hazmat suit vacuuming brown mud off an office floor."
+    },
+    {
+      "n": 5,
+      "name": "campaign",
+      "ratio": "3:2",
+      "prompt": "A row of office buildings on a city street, a cleaning crew's van driving between them."
+    },
+    {
+      "n": 6,
+      "name": "log",
+      "ratio": "3:2",
+      "prompt": "A clipboard of work orders on a desk, each sheet stamped with a red rubber stamp."
+    },
+    {
+      "n": 7,
+      "name": "break",
+      "ratio": "3:2",
+      "prompt": "A worker in a yellow hazmat suit resting on an office chair beside a tall green potted plant."
+    },
+    {
+      "n": 8,
+      "name": "muck",
+      "ratio": "3:2",
+      "prompt": "Empty office with no people: thick brown mud dripping off the edge of a white desk onto white floor tiles."
+    },
+    {
+      "n": 9,
+      "name": "cooler",
+      "ratio": "3:2",
+      "prompt": "A blue water cooler tank lying on its side on a muddy white office floor."
+    },
+    {
+      "n": 10,
+      "name": "fight",
+      "ratio": "3:2",
+      "prompt": "A worker in a yellow hazmat suit spraying a water hose at a lumpy brown mud creature in an office."
+    }
+  ]
+}

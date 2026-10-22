@@ -127,10 +127,10 @@ window.PROJECTS = [
   },
   {
     page: "Poo Storm Janitor Powersuit.html", prefix: "poostorm",
-    title: "Poo Storm Janitor Powersuit", subtitle: "Cleanup Action Game",
-    icon: "broom-delapouite", tint: "green",
-    blurb: "A power-suited janitor tackles corporate workplace disasters with industrial equipment and falling-sand physics, turning office catastrophes into garden paradises.",
-    genres: ["falling-sand", "action"], tags: ["cleanup", "comedy", "powersuit"],
+    title: "Poo Storm Janitor Powersuit", subtitle: "Office Cleanup Platformer",
+    icon: "vacuum-cleaner-delapouite", tint: "green",
+    blurb: "An office after a literal shitstorm, and a janitor in a sealed powersuit. Vacuum, mop and punch the falling-sand muck loose, put it all in the flower pots, and water the office back to green.",
+    genres: ["falling-sand", "action", "arcade"], tags: ["cleanup", "comedy", "platformer", "relaxing"],
     status: "concept", added: "2025-10-08"
   },
   {

@@ -3,873 +3,406 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poo Storm Janitor Powersuit - Game Design Showcase</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Step into the hazmat boots of a power-suited janitor cleaning up absurd workplace disasters with industrial equipment and falling sand physics. Transform office catastrophes into gardens in this comedic 2D platformer.">
-    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Poo Storm Janitor Powersuit.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Poo Storm Janitor Powersuit - Cleanup Action Game">
-    <meta property="og:description" content="Step into the hazmat boots of a power-suited janitor cleaning up absurd workplace disasters with industrial equipment and falling sand physics. Transform office catastrophes into gardens in this comedic 2D platformer.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/poostorm_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Poo Storm Janitor Powersuit.html">
+    <title>Poo Storm Janitor Powersuit: Office Cleanup Platformer</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a tongue-in-cheek falling sand platformer. An office building has suffered a literal shitstorm, and a janitor in a sealed powersuit vacuums, mops and punches the muck loose, puts it in flower pots and waters it until the office is greener than before.">
+    <meta name="keywords" content="game design concept, falling sand, cellular automata, platformer, cleanup game, comedy, office, power armor, Powder Toy inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Poo%20Storm%20Janitor%20Powersuit.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Game Design Showcase">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Poo Storm Janitor Powersuit: Office Cleanup Platformer">
+    <meta property="og:description" content="A game design concept: suit up, clean up an office after a literal shitstorm, and turn every last pixel of muck into potted plants. Falling sand physics, three campaign moods, and a company log of absurd corporate clients. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Poo%20Storm%20Janitor%20Powersuit.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/poostorm_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Cartoon 3D render: a three-floor office building cut open like a dollhouse, brown muck dripping from the ceilings, a janitor in yellow power armor leaping between floors with a vacuum">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Poo Storm Janitor Powersuit - Cleanup Action Game">
-    <meta name="twitter:description" content="Step into the hazmat boots of a power-suited janitor cleaning up absurd workplace disasters with industrial equipment and falling sand physics. Transform office catastrophes into gardens in this comedic 2D platformer.">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Poo Storm Janitor Powersuit: Office Cleanup Platformer">
+    <meta name="twitter:description" content="A game design concept: a falling sand platformer about cleaning up an office after a literal shitstorm, and making it bloom.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/poostorm_2_vignette.jpg">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Poo Storm Janitor Powersuit",
-      "description": "Step into the hazmat boots of a power-suited janitor cleaning up absurd workplace disasters with industrial equipment and falling sand physics. Transform office catastrophes into gardens in this comedic 2D platformer.",
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/poostorm_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Poo Storm Janitor Powersuit.html",
-      "author": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "creator": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "genre": "Comedy Cleanup Game",
-      "keywords": "cleanup game, workplace satire, falling sand physics, 2D platformer, stress relief, industrial equipment, poo storm",
-      "dateCreated": "2025",
-      "inLanguage": "en-US"
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Poo Storm Janitor Powersuit: Office Cleanup Platformer",
+        "description": "A game design concept, not a released game: a single-screen falling sand platformer in which a janitor in sealed power armor cleans up an office after a literal shitstorm, deposits the muck in flower pots and waters them into plants, across generated nine-stage campaigns.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Platformer", "Simulation", "Comedy"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/Poo%20Storm%20Janitor%20Powersuit.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/poostorm_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#15110b">
+
+    <link rel="preload" href="../fonts/world-of-water.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Russo+One&family=Exo+2:wght@300;400;600;700&display=optional" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /*
-        Required Images:
-        - poostorm_1_title.jpg - Industrial office disaster scene with brown chaos and hazmat equipment
-        - poostorm_2_vignette.jpg - Janitor in powersuit cleaning up an office with falling sand effects
-        - poostorm_3_feature.jpg - Close-up of falling sand physics with various poo types interacting
-        - poostorm_4_boxart.jpg - Corporate satire poster style with janitor hero pose and company logo
-        - poostorm_5_story.jpg - Zoomed out cityscape view showing corporate district with office buildings in crisis
-        */
+        /* Poo Storm Janitor Powersuit: a dark umber ground (the muck), fresh sprout green for what
+           the muck becomes, hazmat mustard for the suit, and porcelain white for the clean office.
+           World of Water for the title and headings, Exo 2 ExtraBold Italic for the subtitle and kickers. */
+        @font-face { font-family: "World of Water"; src: url("../fonts/world-of-water.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Exo 2 XBI"; src: url("../fonts/exo2-extrabold-italic.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: #b88358;
-            --container-bg: #5e4220;
-            --border-color: #442e09;
-            --accent-color: #22db3d;
-            --text-color: #f4f1ea;
-            --title-primary: #bba513;
-            --title-secondary: #e67e22;
-            --card-shadow: rgba(139, 69, 19, 0.3);
-            --green-accent: #2ecc71;
-            --hazmat-yellow: #ffd700;
-            --industrial-orange: #e74c3c;
-            --clean-white: #FFFFFF;
-            --bright-lime: #39ff14;
+            --flow-1: #15110b;
+            --flow-2: #3b2d14;
+            --grid-minor: rgba(220, 230, 140, 0.045);
+            --grid-major: rgba(220, 230, 140, 0.10);
+            --p-ground: rgba(22, 18, 11, 0.95);
+            --p-panel: #221c12;
+            --p-1: #8fdc5a;
+            --p-2: #e8c93a;
+            --p-3: #f6f2e4;
+            --p-text: #e8e2d2;
+            --p-dim: #b3aa92;
+            --p-line: rgba(230, 220, 160, 0.15);
+            --font-title: "World of Water", "Segoe UI", sans-serif;
+            --font-sub: "Exo 2 XBI", "Segoe UI", sans-serif;
+            --shade: #0d0a05;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Title effect, "freshly cleaned": a murky brown haze that clears into a green bloom and
+           a porcelain shine, then settles back, over dark layered shadows so it always reads. */
+        .p-name {
+            font-size: clamp(1.8rem, 0.7rem + 4vw, 4.6rem);
+            text-transform: uppercase;  /* World of Water's lowercase a reads as an o */
+            line-height: 1.05;
+            animation: bloom 5s ease-in-out infinite;
         }
+        @keyframes bloom {
+            0%, 100% { color: #efe6cf; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 30px rgba(120, 80, 30, 0.9); }
+            45% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(143, 220, 90, 0.85), 0 0 44px rgba(143, 220, 90, 0.35); }
+            60% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 30px rgba(143, 220, 90, 0.5); }
+        }
+        .p-sub { color: var(--p-2); letter-spacing: 0.04em; text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 2px 0 var(--shade), 0 0 8px var(--shade), 0 0 16px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: bloom-line 5s ease-in-out infinite;
+        }
+        @keyframes bloom-line {
+            0%, 100% { opacity: 0.4; box-shadow: none; }
+            50% { opacity: 1; box-shadow: 0 0 14px rgba(143, 220, 90, 0.9); }
+        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(143, 220, 90, 0.6); } }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.85rem; letter-spacing: 0.1em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 400; font-size: 0.9rem; }
 
-        body {
-            font-family: 'Exo 2', 'Arial', sans-serif;
-            background: linear-gradient(135deg, var(--background-color) 0%, #596f6f 100%);
-            color: var(--text-color);
-            line-height: 1.6;
-			letter-spacing: 1px;
-            min-height: 100vh;
-        }
-
-        .patreon-link {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 8px 12px;
-            border-radius: 5px;
-            border: 2px solid var(--hazmat-yellow);
-            text-decoration: none;
-            color: var(--hazmat-yellow);
-            font-size: 0.9em;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .patreon-link:hover {
-            background: rgba(0, 0, 0, 0.9);
-            color: var(--clean-white);
-            border-color: var(--clean-white);
-        }
-
-        .hero-section {
-            position: relative;
-            height: 750px;
-            background: url('images/poostorm_1_title.jpg') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(205, 205, 205, 0.2);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-
-        .main-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 3.5em;
-            font-weight: 900;
-            margin-bottom: 10px;
-            color: var(--title-primary);
-            background: rgba(50, 60, 20, 0.9);
-            padding: 30px;
-            border-radius: 4px;
-			text-shadow: 
-				4px 4px 0 #000,
-				-4px -4px 0 #000,
-				4px -4px 0 #000,
-				-4px 4px 0 #000;
-            animation: electricBuzz 3s ease-in-out infinite;
-        }
-
-        .subtitle {
-            font-family: 'Russo One', sans-serif;
-            font-size: 1.8em;
-            color: var(--clean-white);
-            background: rgba(50, 60, 20, 0.9);
-            padding: 20px;
-            border-radius: 4px;
-            display: inline-block;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px var(--hazmat-yellow);
-        }
-
-        @keyframes electricBuzz {
-            0%, 100% { 
-                text-shadow: 0 0 20px var(--hazmat-yellow), 0 0 40px var(--industrial-orange), 0 0 60px var(--accent-color);
-            }
-            25% { 
-                text-shadow: 0 0 25px var(--hazmat-yellow), 0 0 50px var(--industrial-orange), 0 0 70px var(--accent-color);
-            }
-            50% { 
-                text-shadow: 0 0 15px var(--hazmat-yellow), 0 0 35px var(--industrial-orange), 0 0 55px var(--accent-color);
-            }
-            75% { 
-                text-shadow: 0 0 30px var(--hazmat-yellow), 0 0 55px var(--industrial-orange), 0 0 75px var(--accent-color);
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .section {
-            margin: 60px 0;
-        }
-
-        .section-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 2.5em;
-            font-weight: 700;
-            color: var(--title-primary);
-            text-align: center;
-            margin-bottom: 40px;
-            text-shadow: 0 0 15px var(--hazmat-yellow);
-            animation: electricBuzz 3s ease-in-out infinite;
-        }
-
-        .overview {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 20px var(--card-shadow);
-            text-align: center;
-            font-size: 1.2em;
-        }
-
-        .info-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .info-card {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--hazmat-yellow);
-            box-shadow: 0 8px 20px var(--card-shadow);
-            transition: border-color 0.3s ease;
-        }
-
-        .info-card:hover {
-            border-color: var(--industrial-orange);
-        }
-
-        .card-title {
-            font-family: 'Russo One', sans-serif;
-            font-size: 1.5em;
-            color: var(--hazmat-yellow);
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .card-icon {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        .controls-section {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 20px var(--card-shadow);
-        }
-
-        .controls-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: var(--container-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px var(--card-shadow);
-        }
-
-        .controls-table th {
-            background: var(--title-secondary);
-            color: var(--hazmat-yellow);
-            padding: 15px 20px;
-            text-align: left;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        .controls-table td {
-            padding: 15px 20px;
-            border-bottom: 1px solid rgba(0, 106, 255, 0.2);
-        }
-
-        .controls-table tbody tr:hover {
-            background: rgba(255, 255, 0, 0.1);
-        }
-
-        .controls-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .control-key {
-            background: var(--title-secondary);
-            color: var(--hazmat-yellow);
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-            display: inline-block;
-            min-width: 70px;
-        }
-
-        .vignette-section {
-            position: relative;
-            height: 600px;
-            background: url('images/poostorm_2_vignette.jpg') center/cover;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 60px 0;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--title-secondary);
-            max-width: 400px;
-        }
-
-        .quote-text {
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--title-secondary);
-        }
-
-        .game-layers {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .layer-card {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 20px var(--card-shadow);
-            transition: border-color 0.3s ease;
-        }
-
-        .layer-card:hover {
-            border-color: var(--accent-color);
-        }
-
-        .layer-title {
-            font-size: 1.8em;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .layer-number {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--background-color);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-weight: bold;
-            margin-right: 15px;
-        }
-
-        .modes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .mode-card {
-            background: var(--container-bg);
-            padding: 25px;
-            border-radius: 10px;
-            border: 2px solid var(--green-accent);
-            box-shadow: 0 8px 20px var(--card-shadow);
-            text-align: center;
-            transition: border-color 0.3s ease;
-        }
-
-        .mode-card:hover {
-            border-color: var(--hazmat-yellow);
-        }
-
-        .mode-title {
-            font-size: 1.5em;
-            color: var(--green-accent);
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .features-section {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .feature-card {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--industrial-orange);
-            box-shadow: 0 8px 20px var(--card-shadow);
-            transition: border-color 0.3s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--hazmat-yellow);
-        }
-
-        .feature-title {
-            font-size: 1.8em;
-            color: var(--industrial-orange);
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .feature-image-section {
-            position: relative;
-            height: 600px;
-            background: url('images/poostorm_3_feature.jpg') center/cover;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 60px 0;
-        }
-
-        .feature-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--industrial-orange);
-            max-width: 450px;
-        }
-
-        .feature-quote-text {
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--industrial-orange);
-        }
-
-        .mermaid-section {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 20px var(--card-shadow);
-            text-align: center;
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            gap: 40px;
-            align-items: center;
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 20px var(--card-shadow);
-        }
-
-        .boxart-image {
-            width: 100%;
-            aspect-ratio: 2/3;
-            background: url('images/poostorm_4_boxart.jpg') center/cover;
-            border-radius: 10px;
-            border: 3px solid var(--hazmat-yellow);
-        }
-
-        .boxart-content {
-            padding: 20px;
-        }
-
-        .boxart-title {
-            font-size: 2em;
-            color: var(--title-secondary);
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .boxart-description {
-            font-size: 1.1em;
-            line-height: 1.8;
-            background: rgba(255, 255, 0, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--hazmat-yellow);
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: var(--container-bg);
-            border-top: 2px solid var(--border-color);
-            margin-top: 80px;
-        }
-
-        .footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: var(--hazmat-yellow);
-        }
-
-        .highlight {
-            color: var(--hazmat-yellow);
-            font-weight: bold;
-        }
-
-        .emoji {
-            font-size: 1.2em;
-            margin: 0 5px;
-        }
-
-        .story-section {
-            position: relative;
-            height: 600px;
-            background: url('images/poostorm_5_story.jpg') center/cover;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 60px 0;
-        }
-
-        .story-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--title-secondary);
-            max-width: 450px;
-        }
-
-        .story-quote-text {
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--title-secondary);
-        }
-
-        .lore-content {
-            background: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 20px var(--card-shadow);
-            font-size: 1.1em;
-            line-height: 1.8;
-        }
-
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5em;
-            }
-            
-            .subtitle {
-                font-size: 1.4em;
-            }
-            
-            .section-title {
-                font-size: 2em;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .info-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .controls-table th,
-            .controls-table td {
-                padding: 12px 15px;
-            }
-        }
+        .p-nest > div { --c: var(--p-2); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-chain li:nth-child(2) { --c: var(--p-2); }
+        .p-chain li:nth-child(3) { --c: var(--p-3); }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <div class="hero-section">
-        <div class="hero-content">
-            <h1 class="main-title">Poo Storm Janitor Powersuit</h1>
-            <h2 class="subtitle">Cleanup Action Game</h2>
-        </div>
-    </div>
-
-    <div class="container">
-        <section class="section">
-            <div class="overview">
-                <p><strong>When corporate chaos reaches legendary proportions, only one hero can save the day!</strong></p><br>
-                
-                <p>Step into the hazmat boots of a power-suited janitor tasked with cleaning up the most absurd workplace disasters imaginable. Using industrial-grade equipment and falling sand physics, transform office catastrophes into verdant gardens while battling malevolent poo monsters in this tongue-in-cheek 2D platformer.</p><br>
-                
-                <p>Fast-paced, satisfying, and delightfully ridiculous <span class="emoji">💩⚡</span> - because sometimes the best stress relief comes from cleaning up someone else's mess with unlimited power tools!</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="info-cards">
-                <div class="info-card">
-                    <div class="card-icon">🎯</div>
-                    <h3 class="card-title">Target Audience</h3>
-                    <p><strong>Casual gamers</strong> who appreciate absurd humor and satisfying cleanup mechanics. Perfect for players seeking <strong>stress relief</strong> through low-stakes problem-solving and those who enjoy <strong>workplace satire</strong> with a physical comedy twist.</p>
-                </div>
-                
-                <div class="info-card">
-                    <div class="card-icon">🌟</div>
-                    <h3 class="card-title">Game's Purpose</h3>
-                    <p>Provides <strong>stress relief</strong> and <strong>cathartic satisfaction</strong> through empowering cleanup gameplay. Fulfills needs for <strong>competence</strong> (mastery of tools), <strong>humor</strong> (absurd scenarios), and <strong>accomplishment</strong> (transforming chaos into order).</p>
-                </div>
-                
-                <div class="info-card">
-                    <div class="card-icon">⚡</div>
-                    <h3 class="card-title">Core Concept</h3>
-                    <p>Turn workplace disasters into <strong>comedic empowerment fantasies</strong>. Players wield industrial equipment to restore order from chaos, creating a sense of control and mastery over overwhelming situations through satisfying <strong>physics-based cleanup mechanics</strong>.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="story-section">
-            <div class="story-quote">
-                <p class="story-quote-text">"In a world where corporate chaos has reached biblical proportions, one specialized industry stands between civilization and total workplace collapse."</p>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/poostorm_1_title.jpg" alt="Cartoon 3D render: a bright white open-plan office knee-deep in brown muck, puddles and heaps on the floor, and on the right a stocky janitor in bulky yellow power armor with a dark dome helmet, holding a vacuum hose, a green garden hose over one shoulder." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Poo Storm Janitor Powersuit</span><span class="p-sub">Office Cleanup Platformer</span></h1>
             </div>
         </div>
+    </header>
 
-        <section class="section">
-            <h2 class="section-title">Lore & Story</h2>
-            <div class="lore-content">
-                <p><strong>The Corporate Crisis of 2025</strong> began when workplace stress reached a critical tipping point across the globe. Metaphorical "shitstorms" in office environments became so intense that they manifested as <span class="highlight">literal, physical poo storms</span> that contaminated entire corporate districts.</p><br>
-                
-                <p>Traditional cleaning services proved utterly inadequate against these supernatural workplace disasters. The contamination was too severe, the chaos too overwhelming, and the health hazards too extreme for ordinary humans to handle. <strong>Entire city blocks</strong> of office buildings became uninhabitable toxic zones.</p><br>
-                
-                <p>From this crisis emerged a new industry: <span class="highlight">Hazmat Cleanup Specialists</span> equipped with military-grade power armor and industrial-strength cleaning equipment. You are part of this elite force, operating out of a specialized facility that receives emergency contracts from corporations whose metaphorical problems have become <strong>very, very literal</strong>.</p><br>
-                
-                <p><strong>Your Current Mission:</strong> The Corporate Emergency Response Network has detected fresh shitstorm outbreaks across the metropolitan business district. Your company, <em>"Absolute Cleanup Solutions"</em>, has been contracted to restore these contaminated office environments to habitability. Each successful cleanup not only saves a workplace but proves that even the most overwhelming chaos can be transformed into something beautiful <span class="emoji">🌱</span> with the right tools and determination.</p><br>
-                
-                <p>The fate of corporate civilization rests in your power-suited hands. <strong>Time to suit up and save the world, one office building at a time.</strong></p>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/vacuum-cleaner-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/turd-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">An office building has suffered a shitstorm. Literally. Muck is on the floors, on the walls, dripping from the ceilings and caked into the fans, and to make it worse there isn't a single plant in the place. No unprotected person can go in, so a janitor puts on a hermetically sealed powersuit and goes in with a vacuum, a mop, a power fist and a watering hose.</p>
+            <p>Each stage is a <strong>cutaway of a multi-floor office</strong> that fits on one screen and plays like a vertical platformer: jump up through the floors, drop down to the lower ones, and clean everything. The muck is <strong>falling sand</strong>, simulated pixel by pixel, and it comes in three states that each need a different tool. Then the clever bit: everything you collect goes into the office's empty flower pots, and a spray of water turns each one into a <strong>lush green plant</strong>. The mess becomes the garden the office never had.</p>
+            <p>It's tongue-in-cheek on purpose, and it never rushes you. It belongs to Reactorcore's series of small falling sand games, each a short, complete game built on a pixel simulation like The Powder Toy, so this page presents it at its honest size.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/broom-delapouite.png)"></span>Target audience</h3>
+                    <p>People who love the quiet satisfaction of a mess becoming clean (PowerWash Simulator, Viscera Cleanup Detail), falling sand fans who wish their sandbox had a goal, and anyone who likes humor that's silly rather than mean.</p>
+                    <p>They want <strong>a tidy finish without pressure</strong>, and most cleaning games are either long simulations or timed arcade rushes.</p>
+                    <p>Platformer keys and a mouse with two buttons.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/sprout-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Order and harmony:</strong> watching chaos turn back into a clean, working room, pixel by pixel.</p>
+                    <p><strong>Beauty and creation:</strong> every finished office is greener and nicer than before the storm.</p>
+                    <p><strong>Silliness:</strong> a ridiculous premise played completely straight.</p>
+                    <p>It avoids draining <strong>rest and autonomy</strong>: no timer, no score to chase, and a campaign mood that leaves out the fighting entirely if you'd rather just clean.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/flower-pot-lorc.png)"></span>Core concept</h3>
+                    <p>In most cleanup games the mess is just something to remove, and the reward is an empty room.</p>
+                    <p>Here the mess is <strong>material</strong>: every pixel of muck you collect goes into a pot and comes back as a plant, so cleaning and decorating are the same act.</p>
+                    <p>And the offices never run out: you work for a company whose clients have <strong>endless shitstorms</strong>, and each building is generated fresh.</p>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <h2 class="section-title">Controls & Interface</h2>
-            <div class="controls-section">
-                <p><strong>You control a power-suited janitor</strong> equipped with industrial cleaning tools, navigating multi-floor office buildings through platformer movement while interacting with falling sand physics and various cleaning equipment.</p>
-                
-                <table class="controls-table">
-                    <thead>
-                        <tr>
-                            <th>Control</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+        <figure class="p-shot">
+            <img src="../projects/images/poostorm_5_story.jpg" alt="Cartoon 3D render from high above a sunny business district: a dark brown cloud sits on top of one glass office tower and streaks brown muck down its windows, while a small yellow cleaning van waits at its entrance and the towers around it stay spotless." width="1280" height="720" loading="lazy">
+            <figcaption>"After a poo storm, no unprotected person can enter the building. Only a janitor in a sealed powersuit goes in."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/sandstorm-delapouite.png)"></span>Lore and story</h2>
+            <h3>The storm</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/poostorm/01-storm.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Somewhere in an office, someone caused a shitstorm, the metaphorical kind, and it got so bad it became the real kind. Muck in every state, from runny to crusty, covers the floors, walls and furniture. Somebody threw it in the fans. The water cooler tanks are knocked over. And the place has no greenery at all, which, frankly, is unbearable.</p>
+
+            <h3>The company</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/poostorm/02-company.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You work for an office washing company that specializes in <strong>absolute shitstorms</strong>. Your clients are corporations with magnificently self-important names, and each of their buildings is a branch with an even grander one: think "Synergetic Paradigm Holdings, Thought Leadership Hub (Basement Annex)". There's never a shortage of work.</p>
+
+            <h3>The monster</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/poostorm/03-monster.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Some storms are so bad they take on a life of their own: a malevolent <strong>poo monster</strong> that runs around the office spraying muck and, above all, throwing it into the fans, so everyone knows that the shit has, in fact, hit the fan.</p>
+
+            <h3>The job</h3>
+            <p>Clean the building top to bottom, fix what's broken, make it bloom, and get the "Cleaned!" stamp on the work order. Then on to the next one.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You move the janitor like a platformer hero and point the current tool with the mouse.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>A / D</dt><dd>Walk left and right</dd></div>
+                        <div><dt>W</dt><dd>Jump, and jump again in mid-air</dd></div>
+                        <div><dt>S</dt><dd>Drop down through a one-way platform</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Work</h3>
+                    <dl>
+                        <div><dt>Mouse 1</dt><dd>Use the current tool</dd></div>
+                        <div><dt>Mouse 2</dt><dd>Next tool: power fist, vacuum, mop, hose</dd></div>
+                        <div><dt>E</dt><dd>Interact: water tanks, coolers, fans, pots, the exit</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The offices are white and light grey, so the brown muck and every object to fix stand out at a glance. A <strong>checklist</strong> shows what's done and what's left. Fans, coolers, pots and the muck itself don't block you: you walk in front of them, so the only things in your way are walls and floors.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/poostorm_2_vignette.jpg" alt="Cartoon 3D render: a three-floor office cut open like a dollhouse, brown muck dripping from every ceiling and pooled on the floors, and a janitor in yellow power armor with a dark dome helmet leaping between floors, vacuuming up a stream of brown grains." width="1280" height="720" loading="lazy">
+            <figcaption>"Grainy muck gets vacuumed, runny muck gets mopped, and crusted muck has to be punched loose first."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/office-chair-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One office, top to bottom</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/poostorm/04-office.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Climb, drop, vacuum, mop, punch. Put the fallen water tanks back on their coolers and refill them, wash the fans and switch them back on, fill every pot, water it, and watch it grow. When the checklist is all ticked, the exit opens.</p>
+                        <p>On an action stage, there's a poo monster to deal with first, and its explosive end adds to the mess you then clean up.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/truck-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A campaign of nine buildings</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/poostorm/05-campaign.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is <strong>nine buildings for one client company</strong>, each generated fresh: how dirty it is (barely to completely), the mix of grainy, runny and crusted muck, and how many fans, pots and coolers it has (anywhere from none to nine of each).</p>
+                        <p>Before it starts, you pick the campaign's mood: relaxing, action or mixed.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stamper-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The company and its log</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/poostorm/06-log.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>You run the company's shitstorm division, and the clients keep calling. Every finished campaign goes into the <strong>company log</strong>: each client company with its nine branches listed under it, every one stamped "Cleaned!", with the job's invoice and how long it took.</p>
+                        <p>The log is a record of the work, never a scoreboard: the invoice only shows how big each mess was, and there's nothing to spend it on.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One building at a time</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/poostorm/07-break.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A building takes a few minutes, or as long as you like: the game is fast if you play it fast, but nothing makes you. After each one, a celebration picture appears with a random piece of wisdom about patience, the kind that helps you keep the shit from hitting the fan in real life.</p>
+                        <p>That's the natural place to stop. The game saves between buildings, and the campaign waits where you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/checklist-delapouite.png)"></span>Game modes</h2>
+            <p>There's one game, the campaign of nine buildings, with three moods to choose from:</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mood</th><th scope="col">Every stage</th><th scope="col">For when you want</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td><span class="control-key">A/D</span></td>
-                            <td>Move left/right through office floors</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">W</span></td>
-                            <td>Jump and double jump between platforms</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">S</span></td>
-                            <td>Drop down through one-way platforms</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">E</span></td>
-                            <td>Interact with equipment and level objectives</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">Mouse 1</span></td>
-                            <td>Use currently selected cleaning tool</td>
-                        </tr>
-                        <tr>
-                            <td><span class="control-key">Mouse 2</span></td>
-                            <td>Cycle tools: Powerfist, Vacuum, Mop, Water Hose</td>
-                        </tr>
+                        <tr><th scope="row">Relaxing</th><td data-label="Every stage">Just the mess, no monster</td><td data-label="For">To unwind and clean in peace</td></tr>
+                        <tr><th scope="row">Action</th><td data-label="Every stage">A poo monster first, then the mess</td><td data-label="For">A punch-up before the tidy-up</td></tr>
+                        <tr><th scope="row">Mixed</th><td data-label="Every stage">A monster, or not, at random</td><td data-label="For">A bit of both, unannounced</td></tr>
                     </tbody>
                 </table>
             </div>
+            <p>Any building in the log can also be visited again exactly as it was, as a <strong>flashback</strong> (see Features).</p>
         </section>
 
-        <div class="vignette-section">
-            <div class="vignette-quote">
-                <p class="quote-text">"There's nothing quite like the satisfaction of transforming absolute chaos into perfect order with unlimited power tools!"</p>
-            </div>
-        </div>
-
-        <section class="section">
-            <h2 class="section-title">Game Layers</h2>
-            <div class="game-layers">
-                <div class="layer-card">
-                    <h3 class="layer-title"><span class="layer-number">1</span>Moment-to-Moment Gameplay</h3>
-                    <p>Fast-paced 2D platformer action where you vacuum <span class="highlight">sand poo</span>, mop <span class="highlight">liquid poo</span>, punch <span class="highlight">solid poo</span> into manageable pieces, and engage in epic powerfist battles with malevolent poo monsters. Every tool interaction feels satisfying through immediate visual and physics feedback as you restore order to chaotic office environments.</p>
-                </div>
-                
-                <div class="layer-card">
-                    <h3 class="layer-title"><span class="layer-number">2</span>Low Metagame</h3>
-                    <p>9-stage campaigns with three distinct modes: <strong>Relaxing</strong> (pure cleanup), <strong>Action</strong> (poo monster fights + cleanup), and <strong>Mixed</strong> (random encounters). Each campaign features procedurally varied office layouts, poo distribution patterns, and equipment placement, ensuring fresh challenges while maintaining familiar core mechanics.</p>
-                </div>
-                
-                <div class="layer-card">
-                    <h3 class="layer-title"><span class="layer-number">3</span>High Metagame</h3>
-                    <p>You run a specialized <strong>corporate cleaning company</strong> with a portfolio of completed contracts. Each campaign represents a different client company (with satirical corporate names), and your growing reputation unlocks access to increasingly absurd workplace disasters. Earnings and completion records create a persistent sense of business growth and professional accomplishment.</p>
-                </div>
-                
-                <div class="layer-card">
-                    <h3 class="layer-title"><span class="layer-number">4</span>Practical Game Flow</h3>
-                    <p>Sessions range from <strong>5-30 minutes</strong> per campaign, perfect for quick stress relief breaks. Launch game → Select campaign type → Choose difficulty preference → Clean 9 procedurally varied offices → View completion statistics and corporate portfolio → Either quit satisfied or start another campaign. Natural stopping points prevent addictive play patterns.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Game Modes</h2>
-            <div class="modes-grid">
-                <div class="mode-card">
-                    <div class="card-icon">🧘</div>
-                    <h3 class="mode-title">Relaxing Campaign</h3>
-                    <p>Pure <strong>meditative cleanup</strong> experience. 9 stages of varying mess levels with no combat pressure. Focus entirely on the satisfying physics of restoration and organization. Perfect for unwinding after stressful days.</p>
-                </div>
-                
-                <div class="mode-card">
-                    <div class="card-icon">⚔️</div>
-                    <h3 class="mode-title">Action Campaign</h3>
-                    <p>Every stage begins with an <strong>epic poo monster battle</strong> using powerfist combat and water hose tactics. After victory, clean up the explosive aftermath. High-energy gameplay for players seeking empowering action.</p>
-                </div>
-                
-                <div class="mode-card">
-                    <div class="card-icon">🎲</div>
-                    <h3 class="mode-title">Mixed Campaign</h3>
-                    <p><strong>Unpredictable variety</strong> where each stage randomly features poo monsters or peaceful cleanup scenarios. Keeps players alert and engaged while providing balanced pacing between action and relaxation.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Game Features & Mechanics</h2>
-            <div class="features-section">
-                <div class="feature-card">
-                    <h3 class="feature-title">🌊 Falling Sand Physics Engine</h3>
-                    <p>Advanced <strong>cellular automata system</strong> simulates realistic physics for three distinct poo types: <span class="highlight">sand poo</span> (granular flow), <span class="highlight">liquid poo</span> (fluid dynamics), and <span class="highlight">solid poo</span> (static chunks that shatter). Each type responds uniquely to your tools and environmental forces, creating emergent cleanup challenges and satisfying cause-and-effect interactions.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3 class="feature-title">🛠️ Multi-Tool Interaction System</h3>
-                    <p>Four specialized tools each solve specific problems: <strong>Industrial Vacuum</strong> (sand collection), <strong>Heavy-Duty Mop</strong> (liquid absorption), <strong>Powerfist Gauntlets</strong> (solid demolition + combat), and <strong>Water Hose</strong> (equipment cleaning + monster fighting). Tool switching is instant and intuitive, encouraging experimental problem-solving approaches.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3 class="feature-title">🏢 Dynamic Level Generation</h3>
-                    <p>Every office building features <strong>procedurally arranged layouts</strong> with random distributions of mess types, equipment placement, and environmental hazards. No two cleanup jobs feel identical, yet familiar office elements (fans, water coolers, plant pots) provide consistent interactive anchors for player strategy development.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3 class="feature-title">👹 Poo Monster Combat System</h3>
-                    <p>Malevolent creatures spawn with <strong>100-200 HP</strong> and chaotic AI behavior that prioritizes mess-making over player targeting. Combat requires timing and positioning: close-range powerfist attacks (25 damage) or sustained water hose tactics (1 damage per shot). Monsters telegraph attacks with 2-second delays, creating tactical dodge-and-strike gameplay.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3 class="feature-title">🏢 Corporate Satire Meta-Narrative</h3>
-                    <p>Each completed campaign adds <strong>satirical company records</strong> to your portfolio with absurd corporate names designed to amuse r/linkedinlunatics users. Earnings calculated by cleaned pixels (10 dollars each) and restored equipment (100 dollars each) provide comedic "success metrics" while maintaining the workplace disaster theme.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3 class="feature-title">🎮 Replay System with Seeds</h3>
-                    <p>Every campaign generates with a <strong>unique seed</strong> preserved in your completion log. Replay any previous job with a sepia "flashback" filter to improve completion times or revisit particularly satisfying cleanup challenges. Perfect for speedrunning or demonstrating solutions to friends.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="feature-image-section">
-            <div class="feature-quote">
-                <p class="feature-quote-text">"Watch three distinct poo types interact through realistic physics - because even chaos follows natural laws!"</p>
-            </div>
-        </div>
-
-        <section class="section">
-            <h2 class="section-title">Corporate Cleaning Workflow</h2>
-            <div class="mermaid-section">
-                <div class="mermaid">
-                graph TD
-                    A[Corporate Shitstorm Detected] --> B{Select Campaign Type}
-                    B --> C[Relaxing: Pure Cleanup]
-                    B --> D[Action: Combat + Cleanup] 
-                    B --> E[Mixed: Random Encounters]
-                    
-                    C --> F[Enter Office Building]
-                    D --> G[Poo Monster Battle Phase]
-                    E --> F
-                    
-                    G --> H[Victory + Explosive Mess]
-                    H --> F
-                    
-                    F --> I[Assess Contamination]
-                    I --> J[Deploy Specialized Tools]
-                    J --> K[Vacuum Sand Poo]
-                    J --> L[Mop Liquid Poo]
-                    J --> M[Powerfist Solid Poo]
-                    
-                    K --> N[Deposit in Plant Pots]
-                    L --> N
-                    M --> N
-                    
-                    N --> O[Water Plants to Bloom]
-                    O --> P[Restore Office Equipment]
-                    P --> Q[Building Certified Clean]
-                    
-                    Q --> R[Add to Corporate Portfolio]
-                    R --> S[Calculate Satirical Profits]
-                    S --> T[Ready for Next Contract]
-                    
-                    style A fill:#8B4513
-                    style Q fill:#32CD32
-                    style R fill:#FFD700
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="boxart-section">
-                <div class="boxart-image"></div>
-                <div class="boxart-content">
-                    <h3 class="boxart-title">Poo Storm Janitor Powersuit</h3>
-                    <div class="boxart-description">
-                        <p><strong>When corporate disasters reach epic proportions, heroes don hazmat suits!</strong></p><br>
-                        
-                        <p>Transform the worst workplace catastrophes into garden paradises using industrial-grade cleaning equipment and satisfying physics-based gameplay. Battle malevolent poo monsters, master specialized tools, and build your reputation as the ultimate corporate cleanup specialist.</p><br>
-                        
-                        <p>• <strong>Three campaign modes</strong> for every mood<br>
-                        • <strong>Falling sand physics</strong> with realistic interactions<br>
-                        • <strong>Corporate satire</strong> that hits close to home<br>
-                        • <strong>5-30 minute sessions</strong> perfect for stress relief</p><br>
-                        
-                        <p><em>"Because sometimes the only way to deal with workplace chaos is with unlimited power tools and a sense of humor!"</em></p>
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/gauntlet-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dust-cloud-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Falling sand</p>
+                        <h3>Three states of muck, four tools</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/poostorm/08-muck.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>All the muck is simulated pixel by pixel. <strong>Grainy</strong> muck falls and piles up like sand, <strong>runny</strong> muck flows, pools and drips down through gaps to the floor below, and <strong>crusted</strong> muck sticks where it is. Walls and floors are solid; everything else in the office is a picture you pass in front of.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Tool</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Vacuum</th><td>Sucks up grainy muck into the suit's tank</td></tr>
+                                    <tr><th scope="row">Mop</th><td>Soaks up runny muck</td></tr>
+                                    <tr><th scope="row">Power fist</th><td>A punch that blasts a circle of pixels at once, breaking crusted muck into grains</td></tr>
+                                    <tr><th scope="row">Hose</th><td>Refills coolers, washes fans, waters pots</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>So the order matters: punch the crust loose before you vacuum it, and clean upstairs before downstairs, because runny muck drips.</p>
                     </div>
-                </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/plant-watering-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>From muck to greenery</h3>
+                        <p>Everything you collect stays in the suit's tank. Walk up to a flower pot and press <kbd>E</kbd>, and the tank shares its contents out between the office's pots, the right amount for each, automatically. There's no fiddly measuring: collect it all, visit every pot.</p>
+                        <p>Then spray each filled pot with water, and a <strong>verdant green plant</strong> grows out of it. The more thoroughly you cleaned, the more there is to put in the pots, and by the end the office that had no greenery at all is full of it. Does it make sense? No. Is it satisfying? Yes.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/poostorm_3_feature.jpg" alt="Cartoon 3D render: a janitor in yellow power armor with a dark dome helmet sprays water from a hose over three terracotta pots in a white office, the first two full of brown muck with a few sprouts, the third grown into a leafy plant with pink and orange flowers." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every pot filled with muck and watered grows into a green plant."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/water-gallon-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Put it all back</p>
+                        <h3>Fix the office, then tick the list</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/poostorm/09-cooler.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The storm knocks things over and fouls them up. Fallen <strong>water tanks</strong> get picked up with <kbd>E</kbd>, put back on their coolers and refilled with the hose. The <strong>fans</strong> get washed and switched back on.</p>
+                        <p>The checklist keeps track of every pixel of muck, every tank, fan and pot, so you always know what's left, and when it's all done, the exit opens.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/burst-blob-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Action stages</p>
+                        <h3>The poo monster</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/poostorm/10-fight.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>On an action stage, a poo monster roams the office with <strong>100 to 200 hit points</strong>, spraying all three kinds of muck as it goes. It isn't interested in you: it wants to make a mess. It only turns on you if you've hit it in the last five seconds or come within a couple of metres.</p>
+                        <p>Fight it close with the power fist, 25 damage a punch, four to eight punches in all, or from a distance with the hose, 1 damage a shot, about half a minute to a minute of steady spraying. Or mix the two. The janitor has 20 hit points; the monster punches for 3 and throws muck for 1, and every attack has a <strong>two-second wind-up</strong>, so you can always see it coming and get out of the way. At zero, it bursts gloriously into a huge splash of grainy and runny muck, and the cleaning begins.</p>
+                        <p>If the janitor's suit runs out of hit points, the suit pulls them back out to the van for a patch-up and they head straight back in. Nothing is undone: the monster keeps its damage, and the mess stays exactly where it was.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dice-six-faces-five-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Never the same office twice</p>
+                        <h3>Generated buildings</h3>
+                        <p>Every building is rolled from a few dials: how dirty it is, what share of the muck is grainy, runny or crusted, how many fans, pots and coolers it has, and, in mixed campaigns, whether a monster lives there. A nearly clean floor with nine pots to fill plays nothing like a building drowned in crust with a single cooler.</p>
+                        <p>Every campaign is made from a <strong>seed</strong>, so any of its buildings can be rebuilt exactly as it was.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/notebook-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A record of the work</p>
+                        <h3>The company log and flashbacks</h3>
+                        <p>The log lists every client and every branch you've cleaned, each with its generated corporate name, the kind that sounds like a motivational post, its "Cleaned!" stamp, and an <strong>invoice</strong>: 10 dollars for every pixel of muck and 100 for every object fixed. The money is only a measure of how dirty the place was, and how much you did about it.</p>
+                        <p>Pick any building in the log to visit it again as a <strong>flashback</strong>, exactly as it was, under a subtle sepia filter. Clean it faster, and the log's record time for that job and its company improves. The original visit stays the one that counts in the story.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/poostorm_4_boxart.jpg" alt="Box art, cartoon 3D render: a stocky janitor in yellow power armor with a moustached face behind a dark dome visor raises a fist in a white office, a vacuum hose over one shoulder and a tall leafy plant beside them, under a storm of falling brown muck." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Work order: absolute shitstorm</p>
+                <h2 id="sendoff">Poo Storm Janitor Powersuit: Office Cleanup Platformer</h2>
+                <p>Site: one office building, all floors. Condition: muck on every surface, in the fans, and in states from runny to crusty. Greenery on site: none.</p>
+                <p>Equipment provided: one hermetically sealed powersuit, one industrial vacuum, one mop, one power fist, one hose. Monster removal included on request.</p>
+                <p><strong>The shit hit the fan. Clean it up. Make it bloom.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
             </div>
         </section>
-    </div>
+    </main>
 
-    <footer class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by falling sand games like The Powder Toy</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: World of Water (CC0), Exo 2, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
     </footer>
-
-    <script>
-        mermaid.initialize({ 
-            startOnLoad: true,
-            theme: 'dark',
-            themeVariables: {
-                primaryColor: '#8B4513',
-                primaryTextColor: '#f4f1ea',
-                primaryBorderColor: '#FFA500',
-                lineColor: '#FFA500',
-                sectionBkgColor: '#2d2419',
-                altSectionBkgColor: '#1a1611',
-                gridColor: '#8B4513',
-                secondaryColor: '#FFD700',
-                tertiaryColor: '#32CD32'
-            }
-        });
-    </script>
 </body>
 </html>

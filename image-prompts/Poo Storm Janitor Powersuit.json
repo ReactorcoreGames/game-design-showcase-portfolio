@@ -1,0 +1,39 @@
+{
+  "slug": "Poo Storm Janitor Powersuit",
+  "prefix": "poostorm",
+  "preset": "08 Games - Slime Rancher (Adventure/3D)",
+  "style": "Indoor scene in a bright white office. Palette of porcelain white walls, chocolate brown muck, mustard yellow armor and fresh leaf green plants. Comedic tone.",
+  "notes": "Rewrite (2026-10). All five images are new: the 2025 set showed a caped superhero with an S chest emblem (a famous comic hero) and, in three images, an unsuited man in an orange jumpsuit, while the design's janitor wears a hermetically sealed power armor suit because no unprotected person can enter. The old prompts are in legacy/.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide shot at eye level of a bright white open-plan office floor buried in brown muck: soupy brown puddles, heaps of brown sand-like grains and crusty dark brown lumps splattered over desks, chairs and walls. On the right, a stocky janitor in a bulky sealed mustard-yellow power armor suit with a round dark glass dome helmet and an air tank backpack stands ready, an industrial vacuum hose in one gauntlet and a coiled green garden hose over the shoulder. Splattered standing office fans, a toppled water cooler jug and empty terracotta flower pots around. Open space on the left side of the frame."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side view cross-section of a three-floor office building cut open like a dollhouse, laid out like a platform game level, bright white rooms joined by short ledges and stairs. Brown muck everywhere: streams of brown sand-like grains pouring down from the top floor, soupy brown puddles and crusty dark brown lumps on the floors. On the middle floor, a stocky janitor in a bulky sealed mustard-yellow power armor suit with a round dark glass dome helmet and an air tank backpack leaps between ledges, sucking a stream of brown grains into an industrial vacuum nozzle. Office chairs, standing fans, water coolers and empty flower pots on every floor."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Medium close shot inside a bright white office. A stocky janitor in a bulky sealed mustard-yellow power armor suit with a round dark glass dome helmet and an air tank backpack sprays a jet of clear water from a hose onto a row of three terracotta flower pots heaped with brown muck. The first pot is still a plain brown heap, the second sprouts small green shoots, and the third has burst into a lush leafy green plant with bright flowers. Water droplets sparkle in the air."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Portrait cover, low angle. A stocky janitor in a bulky sealed mustard-yellow power armor suit with a round dark glass dome helmet and an air tank backpack strikes a heroic pose in a bright white office, one armored fist raised, an industrial vacuum hose slung over the shoulder. Beside the janitor stands a tall lush leafy green office plant in a terracotta pot. Across the top of the frame swirls a storm of brown muck splatters and brown grains, falling toward the floor."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "One single continuous wide aerial shot, no panels or split frames. A sunny downtown street of glass office towers seen from high above. Around the upper floors of the tallest tower swirls a small dark brown storm cloud raining brown muck down its glass windows, while all the neighbouring towers stay spotless. Far below at the foot of that tower, a small yellow cleaning van with a ladder on its roof is parked on the empty street."
+    }
+  ]
+}
