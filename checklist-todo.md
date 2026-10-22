@@ -109,7 +109,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] starforge-legion ⚑
 - [x] thunderstrike-justice
 - [x] tile-mechs
-- [ ] unhinged_lander_heist_scifi
+- [x] unhinged_lander_heist_scifi
 - [ ] vectorthunder
 
 ## 4. New pages

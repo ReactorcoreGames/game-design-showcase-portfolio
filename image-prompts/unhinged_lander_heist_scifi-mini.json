@@ -1,0 +1,74 @@
+{
+  "slug": "unhinged_lander_heist_scifi-mini",
+  "out": "site/projects/mini/unhinged_heist",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - L - Dreamy-Surreal",
+  "lead": "Strange lunar sci-fi film still, grey moon dust, eerie toxic green glow. ",
+  "notes": "Mood-only mini images for unhinged_lander_heist_scifi.html, beside the lore, game layer and feature text. SDXL (free): gen unhinged_lander_heist_scifi-mini --model sdxl --max 999, then finish unhinged_lander_heist_scifi-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {
+      "n": 1,
+      "name": "site",
+      "ratio": "3:2",
+      "prompt": "A concrete bunker entrance half buried in grey moon dust, a row of sealed metal doors, floodlights."
+    },
+    {
+      "n": 2,
+      "name": "troublemaker",
+      "ratio": "3:2",
+      "prompt": "A small figure in a bulky armored spacesuit with a jetpack, standing on the moon beside a boxy old lander."
+    },
+    {
+      "n": 3,
+      "name": "materials",
+      "ratio": "3:2",
+      "prompt": "A row of sealed glowing canisters on a shelf in a dark storage vault."
+    },
+    {
+      "n": 4,
+      "name": "heist",
+      "ratio": "3:2",
+      "prompt": "A jetpack flame lighting up a narrow vertical shaft inside a bunker."
+    },
+    {
+      "n": 5,
+      "name": "run",
+      "ratio": "3:2",
+      "prompt": "A boxy lunar lander touching down in a crater, dust blowing out from under it."
+    },
+    {
+      "n": 6,
+      "name": "log",
+      "ratio": "3:2",
+      "prompt": "A wall of small framed pictures of colorful abstract explosions in a dim room."
+    },
+    {
+      "n": 7,
+      "name": "break",
+      "ratio": "3:2",
+      "prompt": "A boxy lunar lander flying up and away from the moon's surface into the black sky."
+    },
+    {
+      "n": 8,
+      "name": "artillery",
+      "ratio": "3:2",
+      "prompt": "A long-barreled artillery gun on a crater rim on the moon, firing a shell into the dark sky."
+    },
+    {
+      "n": 9,
+      "name": "taxi",
+      "ratio": "3:2",
+      "prompt": "A battered boxy space taxi lander with four legs parked on grey moon rock."
+    },
+    {
+      "n": 10,
+      "name": "seed",
+      "ratio": "3:2",
+      "prompt": "A single glowing seed in a glass jar on a dark table, colorful light swirling inside."
+    }
+  ]
+}

@@ -328,9 +328,9 @@ window.PROJECTS = [
   {
     page: "unhinged_lander_heist_scifi.html", prefix: "unhinged_heist",
     title: "Unhinged Lander Heist", subtitle: "Anomalous Materials Hooligan",
-    icon: "rocket-lorc", tint: "green",
-    blurb: "Two-stage chaos: a precision lander heist, then free-form cellular-automata destruction with what you stole. Stress relief at a comfortable pixel-art distance.",
-    genres: ["falling-sand", "action", "vehicles"], tags: ["heist", "lander", "chaos", "stress relief"],
+    icon: "lunar-module-delapouite", tint: "green",
+    blurb: "Fly an unlicensed lander taxi into a guarded lunar bunker, steal canisters of living pixels under artillery fire, then drop them into a little scene you set up and watch random cellular automata eat it.",
+    genres: ["falling-sand", "action", "vehicles"], tags: ["heist", "lander", "cellular automata", "jetpack"],
     status: "concept", added: "2025-10-08"
   },
   {

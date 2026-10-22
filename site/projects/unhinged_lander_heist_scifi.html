@@ -4,781 +4,420 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unhinged Lander Heist: Anomalous Materials Hooligan</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Unhinged Lander Heist - A two-stage tactical chaos experience combining precision space heist with creative cellular automata destruction. Perfect for 15-minute stress relief sessions.">
+
+    <meta name="description" content="A game design concept by Reactorcore: a two-stage falling-sand game. Land an unlicensed space taxi at a lunar containment site, steal canisters of anomalous material under artillery fire, then drop them into a pixel diorama you set up and watch random cellular automata eat it.">
+    <meta name="keywords" content="game design concept, falling sand, cellular automata, lunar lander, heist, jetpack shooter, Powder Toy, Game of Life, pixel art, short session game, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/unhinged_lander_heist_scifi.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Unhinged Lander Heist: Anomalous Materials Hooligan">
-    <meta property="og:description" content="Unhinged Lander Heist - A two-stage tactical chaos experience combining precision space heist with creative cellular automata destruction. Perfect for 15-minute stress relief sessions.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/unhinged_heist_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/unhinged_lander_heist_scifi.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Games Design Showcase">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Unhinged Lander Heist: Anomalous Materials Hooligan">
+    <meta property="og:description" content="A game design concept: steal canisters of living pixels from a lunar containment site, then find out what they do. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/unhinged_lander_heist_scifi.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/unhinged_heist_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a small jetpack thief shoots it out with a guard robot in a lunar bunker shaft">
+
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
     <meta name="twitter:title" content="Unhinged Lander Heist: Anomalous Materials Hooligan">
-    <meta name="twitter:description" content="Unhinged Lander Heist - A two-stage tactical chaos experience combining precision space heist with creative cellular automata destruction. Perfect for 15-minute stress relief sessions.">
+    <meta name="twitter:description" content="A game design concept: steal canisters of living pixels from a lunar containment site, then find out what they do.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/unhinged_heist_2_vignette.jpg">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Unhinged Lander Heist: Anomalous Materials Hooligan",
-      "description": "A two-stage tactical chaos experience that transforms from precision space heist to creative destruction playground. Features physics-based lander controls and cellular automata mayhem.",
-      "genre": ["Action", "Tactical", "Simulation"],
-      "gamePlatform": "PC",
-      "operatingSystem": "Windows",
-      "applicationCategory": "Game",
-      "creator": {
-        "@type": "Organization",
-        "name": "Reactorcore Games"
-      },
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/unhinged_heist_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/unhinged_lander_heist_scifi.html"
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Unhinged Lander Heist: Anomalous Materials Hooligan",
+        "description": "A game design concept, not a released game: a short two-stage falling-sand game. A lander-and-jetpack heist at a lunar containment site, then a pixel diorama the player sets up and destroys with the stolen cellular-automata materials.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Arcade", "Action", "Sandbox"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/unhinged_lander_heist_scifi.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/unhinged_heist_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0c120d">
+
+    <link rel="preload" href="../fonts/hydrogen-whiskey.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Electrolize&display=optional" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
     <style>
-        /* 
-        Required Images:
-        unhinged_heist_1_title.jpg - Space lander approaching a mysterious fortified lunar facility with ominous structures
-        unhinged_heist_2_vignette.jpg - Pixel art character with jetpack navigating through industrial corridors filled with guard drones
-        unhinged_heist_3_feature.jpg - Spectacular cellular automata destruction consuming buildings with chaotic colorful patterns spreading
-        unhinged_heist_4_boxart.jpg - Stylized character holding anomalous canisters against backdrop of systematic destruction
-        unhinged_heist_5_story.jpg - Zoomed out overworld view of the greater setting the game takes place in (16:9 aspect ratio)
-        */
+        /* Unhinged Lander Heist: containment green over a near-black moon night, hazard yellow for
+           the warnings, and lunar dust white for highlights. Hydrogen Whiskey for the title and
+           headings, Zeroes Two for the subtitle and kickers. */
+        @font-face { font-family: "Hydrogen Whiskey"; src: url("../fonts/hydrogen-whiskey.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Zeroes Two"; src: url("../fonts/zeroes-two.woff2") format("woff2"); font-display: swap; }
 
         :root {
-            --background-color: #0c1320;
-            --container-bg: #1a2332;
-            --border-color: #2d3748;
-            --text-color: #e2e8f0;
-            --accent-primary: #00ff88;
-            --accent-secondary: #6644cc;
-            --title-glow: #00ff88;
-            --card-shadow: rgba(0, 255, 136, 0.15);
-            --gradient-start: #00ff88;
-            --gradient-end: #6644cc;
-            --warning-orange: #ff8c00;
-            --plasma-green: #00ff44;
+            --flow-1: #0c120d;
+            --flow-2: #1f3a22;
+            --grid-minor: rgba(170, 255, 150, 0.04);
+            --grid-major: rgba(170, 255, 150, 0.09);
+            --p-ground: rgba(12, 17, 13, 0.95);
+            --p-panel: #151f17;
+            --p-1: #7dff6a;
+            --p-2: #ffd23f;
+            --p-3: #eef3e4;
+            --p-text: #dbe4d6;
+            --p-dim: #a4b19f;
+            --p-line: rgba(170, 255, 150, 0.15);
+            --font-title: "Hydrogen Whiskey", "Segoe UI", sans-serif;
+            --font-sub: "Zeroes Two", "Segoe UI", sans-serif;
+            --shade: #070b07;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Rajdhani', sans-serif;
-            background: linear-gradient(135deg, var(--background-color) 0%, #0a0f1a 100%);
-            color: var(--text-color);
-            line-height: 1.6;
-			letter-spacing: 1px;
-            min-height: 100vh;
-        }
-
-        .patreon-link {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 0.8rem;
-            color: var(--text-color);
-            text-decoration: none;
-            opacity: 0.7;
-            z-index: 1000;
-            transition: opacity 0.3s ease;
-        }
-
-        .patreon-link:hover {
-            opacity: 1;
-            color: var(--accent-primary);
-        }
-
-        .hero-section {
-            position: relative;
-            height: 750px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: url('images/unhinged_heist_1_title.jpg') center/cover;
-        }
-
-        .title-container {
-            text-align: center;
-            z-index: 2;
-            background: rgba(12, 19, 32, 0.75);
-            padding: 2rem 3rem;
-            border-radius: 15px;
-            border: 2px solid var(--accent-primary);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
-            backdrop-filter: blur(5px);
-        }
-
-        .main-title {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 3.8rem;
-            font-weight: 400;
-            letter-spacing: 3px;
+        /* Title effect, "unstable": the glow behaves like a canister about to give: it idles, then
+           jitters out of register in green and yellow for a moment, and settles. Dark layered shadows
+           stay underneath throughout. */
+        .p-name {
             text-transform: uppercase;
-            margin-bottom: 0.5rem;
-            color: var(--accent-primary);
-            text-shadow: 0 0 20px var(--title-glow);
-            animation: electricBuzz 3s ease-in-out infinite;
+            letter-spacing: 0.02em;
+            animation: unstable 5s linear infinite;
         }
+        @keyframes unstable {
+            0%, 58%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(125, 255, 106, 0.35); }
+            62% { color: #f6ffe8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), -3px 0 0 rgba(125, 255, 106, 0.9), 3px 0 0 rgba(255, 210, 63, 0.8), 0 0 18px rgba(125, 255, 106, 0.7); }
+            65% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 2px 1px 0 rgba(125, 255, 106, 0.9), -2px -1px 0 rgba(255, 210, 63, 0.8), 0 0 26px rgba(125, 255, 106, 0.9); }
+            68% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), -1px 0 0 rgba(255, 210, 63, 0.9), 1px 0 0 rgba(125, 255, 106, 0.9), 0 0 30px rgba(125, 255, 106, 1); }
+            72% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(125, 255, 106, 0.5); }
+        }
+        .p-sub { text-transform: lowercase; color: var(--p-2); letter-spacing: 0.04em; text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: unstable-line 5s linear infinite;
+        }
+        @keyframes unstable-line {
+            0%, 58%, 100% { opacity: 0.7; box-shadow: 0 0 4px rgba(255, 210, 63, 0.3); }
+            62%, 68% { opacity: 1; box-shadow: 0 0 14px rgba(125, 255, 106, 0.9), 0 0 24px rgba(255, 210, 63, 0.6); }
+            65% { opacity: 0.4; box-shadow: none; }
+        }
+        .section-mark::after { animation: h2-line 5s linear infinite; }
+        @keyframes h2-line { 0%, 58%, 75%, 100% { box-shadow: none; } 65% { box-shadow: 0 0 10px rgba(125, 255, 106, 0.8); } }
+        h2, h3 { letter-spacing: 0.03em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; text-transform: lowercase; letter-spacing: 0.06em; font-size: 0.95rem; }
 
-        .subtitle {
-            font-family: 'Electrolize', sans-serif;
-            font-size: 1.8rem;
-            color: var(--accent-secondary);
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px var(--accent-secondary);
-        }
-
-        @keyframes electricBuzz {
-            0%, 100% { text-shadow: 0 0 20px var(--title-glow), 0 0 30px var(--title-glow); }
-            10% { text-shadow: 0 0 25px var(--title-glow), 0 0 35px var(--title-glow), 0 0 40px var(--title-glow); }
-            15% { text-shadow: 0 0 15px var(--title-glow), 0 0 25px var(--title-glow); }
-            25% { text-shadow: 0 0 30px var(--title-glow), 0 0 40px var(--title-glow), 0 0 50px var(--title-glow); }
-            30% { text-shadow: 0 0 20px var(--title-glow), 0 0 30px var(--title-glow); }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            margin: 3rem 0;
-        }
-
-        .section-title {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.3rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent-primary);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 15px var(--title-glow);
-            animation: electricBuzz 3s ease-in-out infinite;
-        }
-
-        .overview {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 5px 15px var(--card-shadow);
-            margin-bottom: 2rem;
-        }
-
-        .cards-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .card {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 5px 15px var(--card-shadow);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-primary);
-        }
-
-        .card-title {
-            font-family: 'Electrolize', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--accent-primary);
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .controls-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .vignette-container {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px var(--card-shadow);
-        }
-
-        .vignette-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/unhinged_heist_2_vignette.jpg') center/cover;
-            position: relative;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(12, 19, 32, 0.9);
-            padding: 1rem 1.5rem;
-            border-radius: 5px;
-            border-left: 4px solid var(--accent-primary);
-            max-width: 60%;
-            font-style: italic;
-            color: var(--text-color);
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-        }
-
-        .story-container {
-            position: relative;
-            margin: 3rem 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px var(--card-shadow);
-        }
-
-        .story-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/unhinged_heist_5_story.jpg') center/cover;
-            position: relative;
-        }
-
-        .story-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(12, 19, 32, 0.9);
-            padding: 1rem 1.5rem;
-            border-radius: 5px;
-            border-left: 4px solid var(--accent-primary);
-            max-width: 70%;
-            font-style: italic;
-            color: var(--text-color);
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-        }
-
-        .layers-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .layer-card {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 5px solid var(--accent-primary);
-            box-shadow: 0 5px 15px var(--card-shadow);
-        }
-
-        .layer-number {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--accent-primary);
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .feature-card {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 5px 15px var(--card-shadow);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-primary);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 600px;
-            background: url('images/unhinged_heist_3_feature.jpg') center/cover;
-            border-radius: 10px;
-            margin: 2rem 0;
-            position: relative;
-            box-shadow: 0 10px 30px var(--card-shadow);
-        }
-
-        .feature-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(12, 19, 32, 0.9);
-            padding: 1rem 1.5rem;
-            border-radius: 5px;
-            border-left: 4px solid var(--accent-primary);
-            max-width: 70%;
-            font-style: italic;
-            color: var(--text-color);
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-        }
-
-        .boxart-section {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            gap: 2rem;
-            margin: 3rem 0;
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 5px 15px var(--card-shadow);
-        }
-
-        .boxart-image {
-            width: 100%;
-            aspect-ratio: 2/3;
-            background: url('images/unhinged_heist_4_boxart.jpg') center/cover;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px var(--card-shadow);
-        }
-
-        .boxart-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 1rem 0;
-        }
-
-        .boxart-title {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: var(--accent-primary);
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .boxart-subtitle {
-            font-family: 'Electrolize', sans-serif;
-            font-size: 1.1rem;
-            color: var(--accent-secondary);
-            font-style: normal;
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .boxart-divider {
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            margin: 1.5rem 0;
-            border-radius: 1px;
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-        }
-
-        .boxart-quote {
-            background: rgba(12, 19, 32, 0.6);
-            padding: 1rem 1.2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-primary);
-            font-style: italic;
-            color: var(--text-color);
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
-            margin: 1.5rem 0;
-        }
-
-        .boxart-specs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .spec-item {
-            background: rgba(45, 55, 72, 0.3);
-            padding: 0.8rem;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-        }
-
-        .spec-label {
-            font-size: 0.9rem;
-            color: var(--accent-secondary);
-            margin-bottom: 0.3rem;
-        }
-
-        .spec-value {
-            font-weight: bold;
-            color: var(--accent-primary);
-        }
-
-        .footer {
-            background: var(--container-bg);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            border-top: 2px solid var(--border-color);
-        }
-
-        .footer a {
-            color: var(--accent-primary);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .mermaid {
-            background: var(--container-bg) !important;
-            border-radius: 10px;
-            padding: 1rem;
-            margin: 2rem 0;
-        }
-
-        .control-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .control-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .control-key {
-            font-weight: bold;
-            color: var(--accent-primary);
-            display: inline-block;
-            min-width: 100px;
-        }
-
-        .highlight {
-            color: var(--accent-primary);
-            font-weight: bold;
-        }
-
-        .emoji {
-            font-size: 1.2rem;
-            margin-right: 0.5rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .boxart-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .controls-section {
-                grid-template-columns: 1fr;
-            }
-            
-            .cards-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        .p-chain li:nth-child(n+4) { --c: var(--p-2); }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.95rem; } }
     </style>
 </head>
 <body>
-    <a href="https://www.patreon.com/ReactorcoreGames" class="patreon-link">Reactorcore's Personal Game Design Project</a>
-    
-    <div class="hero-section">
-        <div class="title-container">
-            <h1 class="main-title">Unhinged Lander Heist</h1>
-            <div class="subtitle">Anomalous Materials Hooligan</div>
-        </div>
-    </div>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <section class="section">
-            <div class="overview">
-                <p>A two-stage tactical chaos experience that transforms from precision space heist to creative destruction playground. Begin as a rogue operative infiltrating a lunar facility to steal dangerous anomalous materials, then unleash spectacular cellular automata mayhem as you decide where and how to deploy your stolen chaos.</p><br>
-
-                <p>This is your safe space to temporarily embrace your inner hooligan - you'll be playing the bad guy in this one. Experience the cathartic release of being thoroughly destructive without real-world consequences. The game's distant 2D pixel art perspective creates comfortable emotional distance while you engage in therapeutic mayhem.</p><br>
-
-                <p>Perfect for quick 15-minute stress relief sessions combining skill-based infiltration with creative destruction experimentation.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="cards-row">
-                <div class="card">
-                    <div class="card-title"><span class="emoji">🎯</span>Target Audience</div>
-                    <p><strong>Stressed adults seeking safe aggression outlet</strong> - Desktop gamers who need quick, cathartic experiences to blow off steam.</p><br>
-                    <p><strong>Technical players</strong> who appreciate both precision controls and creative sandbox elements.</p><br>
-                    <p><strong>Pixel art enthusiasts</strong> who enjoy stylized 2D experiences with comfortable emotional distance.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="card-title"><span class="emoji">🧠</span>Game's Purpose</div>
-                    <p><strong>Stress Relief & Anger Release</strong> - Provides healthy outlet for aggressive impulses through consequence-free virtual destruction.</p><br>
-                    <p><strong>Creative Expression</strong> - Stage 2 allows artistic experimentation with chaos patterns and destruction scenarios.</p><br>
-                    <p><strong>Competence Building</strong> - Master complex controls and tactical movement for personal satisfaction.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="card-title"><span class="emoji">⚡</span>Core Concept</div>
-                    <p><strong>Dual-Phase Catharsis</strong> - First, channel focus and precision to "earn" your chaos tools. Then, unleash creative destruction in a customizable sandbox.</p><br>
-                    <p><strong>Emotional Safety</strong> - Pixel art distance and sci-fi context make violence feel like abstract problem-solving rather than realistic aggression.</p><br>
-                    <p><strong>Instant Gratification</strong> - Quick sessions provide immediate stress relief without time commitment.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Lore & Story</h2>
-            <div class="overview">
-                <p><strong>The Setting:</strong> In the year 2387, humanity has established mining colonies across the outer system's moons and asteroids. Luna Base Delta-7 serves as a classified research facility where corporate scientists experiment with anomalous materials - strange substances that defy conventional physics and exhibit cellular automata-like behavior when destabilized.</p><br>
-
-                <p><strong>The Past:</strong> These materials were originally discovered in deep space derelicts, remnants of an unknown civilization that vanished eons ago. Corporate greed has led to unethical experimentation, turning what should be carefully studied artifacts into potential weapons of mass destruction. The facility's security protocols and automated defenses exist not just to keep intruders out, but to contain the dangerous experiments within.</p><br>
-
-                <p><strong>Your Mission:</strong> You are an unhinged rogue operative that shouldn't even be free, let alone have access to a plasma shotgun for that matter. You were formerly employed by the corporation until you witnessed the true destructive potential of their research and were forced to resign for unrelated mental health reasons.</p><br>
-
-                <p>Now, driven by sheer insanity, you've returned to steal these materials for your own crazy reasons only you can understand. Your goal is simple: infiltrate the facility, collect the anomalous canisters, and then decide how to use them. Will you destroy a random outhouse for shits and giggles, teach the corporation a lesson about playing with forces beyond their control, take vengeance upon some assholes that wronged you, blow up your insufferable neighbour, or perhaps just commit atrocities for the heck of it?</p><br>
-
-                <p><strong>Current Situation:</strong> The facility's AI has detected your approach. Artillery systems are coming online, guard drones are mobilizing, and you have limited time before overwhelming force is deployed against you. Every second counts as you navigate the industrial maze in your stolen lander, knowing that once you have the materials, you'll have the power to obliterate entire landscapes with spectacular cellular automata chaos.</p>
-            </div>
-        </section>
-
-        <div class="story-container">
-            <div class="story-image">
-                <div class="story-quote">
-                    "The lunar research facility sprawls across the crater floor, its forbidden experiments hidden beneath layers of corporate security and automated defenses - but today, someone is coming to reclaim what should never be taken."
-                </div>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/unhinged_heist_1_title.jpg" alt="A battered lander with glowing green thrusters skims the moon's surface past a fortified lunar facility with gun turrets, its vault wall glowing with a swirling rainbow pattern, a huge moon in the sky over the crater walls behind." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Unhinged Lander Heist</span><span class="p-sub">Anomalous Materials Hooligan</span></h1>
             </div>
         </div>
+    </header>
 
-        <section class="section">
-            <h2 class="section-title">Controls & Interface</h2>
-            <div class="controls-section">
-                <div class="card">
-                    <div class="card-title"><span class="emoji">🚀</span>Lander Taxi Controls</div>
-                    <ul class="control-list">
-                        <li><span class="control-key">W</span> Upward thrust (100% power)</li>
-                        <li><span class="control-key">A/D</span> Left/right thrust (70% power)</li>
-                        <li><span class="control-key">S</span> Downward thrust (60% power)</li>
-                        <li><span class="control-key">E</span> Exit vehicle (spawn character on top)</li>
-                    </ul>
-                    <p><em>The lander maintains upright orientation and has 20 hit points. Artillery does 3 damage per hit. Speed-based collision damage scales with velocity.</em></p>
-                </div>
-                
-                <div class="card">
-                    <div class="card-title"><span class="emoji">🔫</span>Character Controls</div>
-                    <ul class="control-list">
-                        <li><span class="control-key">Mouse</span> 360-degree aiming</li>
-                        <li><span class="control-key">Mouse 1</span> Fire blaster shotgun</li>
-                        <li><span class="control-key">Mouse 2</span> Launch grenade</li>
-                        <li><span class="control-key">A/D</span> Rotate character left/right</li>
-                        <li><span class="control-key">W</span> Jetpack thrust in facing direction</li>
-                        <li><span class="control-key">S</span> Air brakes (hover in place)</li>
-                        <li><span class="control-key">E</span> Enter lander taxi</li>
-                    </ul>
-                    <p><em>Character has 10 hit points with armored battlesuit. Physics-based movement with realistic momentum and gravity.</em></p>
-                </div>
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/lunar-module-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
             </div>
-        </section>
-
-        <div class="vignette-container">
-            <div class="vignette-image">
-                <div class="vignette-quote">
-                    "Navigate through industrial corridors while evading plasma fire, using jetpack precision and tactical positioning to outmaneuver automated security systems."
-                </div>
-            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
         </div>
 
-        <section class="section">
-            <h2 class="section-title">Game Layers</h2>
-            <div class="layers-container">
-                <div class="layer-card">
-                    <div class="layer-number">1. Moment-to-Moment Gameplay</div>
-                    <p><strong>Stage 1:</strong> Precise lander piloting through maze-like lunar facility, tactical jetpack combat against guard drones, real-time threat assessment as artillery tracking escalates.</p><br>
-                    <p><strong>Stage 2:</strong> Creative placement of anomalous canisters, thoughtful consideration of destruction patterns, satisfying detonation sequences watching cellular automata chaos unfold.</p>
-                </div>
-                
-                <div class="layer-card">
-                    <div class="layer-number">2. Low Metagame</div>
-                    <p>Individual heist campaigns with procedurally generated facility layouts, escalating artillery threat patterns, and randomized canister types. Each run offers 15-20 minutes of complete tactical-to-creative gameplay loop. Success unlocks new canister combinations and destruction scenario options.</p>
-                </div>
-                
-                <div class="layer-card">
-                    <div class="layer-number">3. High Metagame</div>
-                    <p>Persistent collection of memorable destruction scenarios saved with unique seeds for replay. Build personal gallery of favorite chaos patterns, experiment with different facility types and population densities. Share particularly spectacular destruction seeds with others or recreate perfect stress-relief scenarios whenever needed.</p>
-                </div>
-                
-                <div class="layer-card">
-                    <div class="layer-number">4. Practical Game Flow</div>
-                    <p>Launch game → Quick facility generation → 10 minutes of tactical heist → 5 minutes of creative destruction setup → Watch spectacular results → Save memorable seeds → Exit satisfied. Perfect for lunch break stress relief or end-of-workday decompression sessions.</p>
-                </div>
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/chemical-tank-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Unhinged Lander Heist is a short game in two halves. First you steal canisters of something nobody understands from a guarded lunar bunker. Then you drop them into a little pixel scene you set up yourself, and watch what comes out.</p>
+            <p>The heist is a side-view physics game: an unlicensed space taxi that flies like Lunar Lander, and a small, sketchy troublemaker in a jetpack with a blaster shotgun and grenades. The bang is a falling-sand simulation in the spirit of The Powder Toy, where each canister releases a different, random kind of living pixel that grows, converts and fights everything around it, Game of Life style.</p>
+            <p>It's one of Reactorcore's falling-sand games: small, complete and satisfying, about the size of a good Newgrounds or Kongregate game. You're openly the bad guy in this one, and the game is cheerfully honest about it.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who want a <strong>short, sharp blast</strong> after a long day: a tense run with a clock on it, then a toy to play with. Lunar Lander fans who like thrust and momentum, and Powder Toy fans who wish the sandbox came with a reason to open it.</p>
+                    <p>The whole game fits in one sitting. Mouse and WASD, with the taxi on four keys.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and silliness:</strong> being a troublemaker somewhere that very clearly asked you to leave.</p>
+                    <p><strong>Excitement:</strong> an escape with artillery closing in and a fragile getaway vehicle.</p>
+                    <p><strong>Beauty and whim:</strong> every detonation is a one-off storm of colour that nobody, including you, can predict.</p>
+                    <p>It avoids draining <strong>your time</strong> (a whole run is minutes long) and <strong>honesty</strong>: it never pretends the thief is a hero.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Falling-sand games are usually sandboxes with no reason to do anything; arcade games usually ramp up until you lose. Here <strong>the heist is the fuse and the sandbox is the bang</strong>.</p>
+                    <p>Each half gives the other meaning: what you carry out is exactly what you get to set off, and every scene you set off is kept, so it can be watched again.</p>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <h2 class="section-title">Game Features & Mechanics</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎭</div>
-                    <div class="card-title">Dual-Stage Structure</div>
-                    <p>Unique gameplay progression from skill-based infiltration to creative destruction. Stage 1 rewards precision and tactical thinking. Stage 2 provides open-ended experimentation with chaos systems. This structure creates narrative satisfaction - you "earn" your destruction tools through skillful theft.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🚁</div>
-                    <div class="card-title">Physics Lander System</div>
-                    <p>Realistic lunar lander physics with momentum, thrust vectoring, and collision damage. Requires mastery of momentum management and spatial awareness. Creates satisfying skill progression as players learn to efficiently navigate complex facility layouts under pressure.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">💥</div>
-                    <div class="card-title">Escalating Artillery Threat</div>
-                    <p>Dynamic threat system that increases pressure over time. Artillery tracking starts at 8-second delays, accelerating to 4-second precision strikes. Creates natural time pressure encouraging efficient movement while maintaining tactical decision-making opportunities.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <div class="card-title">Customizable Destruction</div>
-                    <p>Pre-stage setup allows personalization of destruction scenarios. Choose building types, population density, terrain features, and environmental conditions. This customization transforms destruction from random chaos into purposeful creative expression tailored to individual stress relief needs.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🧪</div>
-                    <div class="card-title">Cellular Automata Engine</div>
-                    <p>Advanced physics simulation creates unique, unrepeatable destruction patterns. Each canister releases different automata types that interact, compete, and transform the environment in organic ways. No two destruction scenarios are identical, maintaining freshness and wonder.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">💾</div>
-                    <div class="card-title">Seed Replay System</div>
-                    <p>Save and share memorable destruction scenarios using seed values. Build personal collection of favorite stress-relief patterns. Replay perfect destruction sequences whenever needed for consistent therapeutic effect. Share spectacular results with friends or community.</p>
-                </div>
-            </div>
+        <figure class="p-shot">
+            <img src="../projects/images/unhinged_heist_5_story.jpg" alt="A wide view over a grey cratered moon: a sprawl of white bunkers linked by long pipes, green glowing material pooled in the craters with flower-like patterns, a satellite overhead and Earth in the black sky." width="1280" height="720" loading="lazy">
+            <figcaption>"The containment site keeps canisters of anomalous material in a maze of shafts and tunnels under the moon's surface, guarded by robots and a long-range artillery drone."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/moon-lorc.png)"></span>Lore and story</h2>
+            <h3>The containment site</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/01-site.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>On the moon, an anomalous materials containment site keeps canisters of things too dangerous and too unpredictable to use. It's a bunker maze of shafts, tunnels and spacious rooms, guarded by fifteen to thirty robots with plasma rifles and watched from far above by a surveillance artillery drone.</p>
+            <p>The site isn't evil. Its whole job is to keep troublemakers away from the canisters, and it's polite about it at first: "This area is restricted. Turn back and leave."</p>
+
+            <h3>The troublemaker</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/02-troublemaker.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You. A small figure in an armored battlesuit rated for space infantry, which raises questions that are best not asked. You arrive in an unlicensed space taxi: a boxy lunar lander that never runs out of fuel and shrugs off bumps, though not gunfire.</p>
+
+            <h3>The materials</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/03-materials.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Each canister holds a material that behaves like living pixels. Released, it grows, turns whatever it touches into more of itself, pushes things around, and reacts violently with other materials. No two canisters hold the same thing, and nobody knows what a given one does until it's open. That's the whole reason they're locked up.</p>
+
+            <h3>The job right now</h3>
+            <p>Land, get in, collect every canister in the maze, get back to the taxi and fly out of the top of the map before the artillery finds you. Then strap a charge to each canister, and find out.</p>
         </section>
 
-        <div class="feature-image">
-            <div class="feature-quote">
-                "Watch as cellular automata chaos consumes carefully constructed scenarios, creating unique patterns of spectacular destruction that serve as both art and stress relief."
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control two things in the heist, the troublemaker and the taxi, and switch between them with E. Both fly; neither is easy to stop.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>On foot: moving</h3>
+                    <dl>
+                        <div><dt>A D</dt><dd>Rotate left and right</dd></div>
+                        <div><dt>W</dt><dd>Jetpack thrust, toward wherever your head points</dd></div>
+                        <div><dt>S</dt><dd>Air brakes; hold to hover in place</dd></div>
+                        <div><dt>E</dt><dd>Climb into the taxi</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>On foot: weapons</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim freely, all the way round</dd></div>
+                        <div><dt>Left click</dt><dd>Fire the blaster shotgun</dd></div>
+                        <div><dt>Right click</dt><dd>Launch a grenade</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>The taxi</h3>
+                    <dl>
+                        <div><dt>W</dt><dd>Main thrust upward (full power)</dd></div>
+                        <div><dt>A D</dt><dd>Side thrusters (70%)</dd></div>
+                        <div><dt>S</dt><dd>Downward thrust (60%)</dd></div>
+                        <div><dt>E</dt><dd>Climb out on top</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>The scene</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Drop a canister into open space</dd></div>
+                        <div><dt>Right click</dt><dd>Detonate</dd></div>
+                        <div><dt>Esc</dt><dd>Pause: resume, new game, the scene log, main menu</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The troublemaker flies like a lander too: rotate, then thrust. They have <strong>10 hitpoints</strong>. The taxi always stays upright and has <strong>20</strong>; an artillery shell takes about 3, and a crash hurts more the faster you hit, from nothing at a gentle bump to instant destruction at full speed.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/unhinged_heist_2_vignette.jpg" alt="Side-view pixel art: a small figure in a grey armored spacesuit with a green visor and jetpack leaps across a concrete bunker shaft, firing a shotgun at a thin silver guard robot on a ledge, sparks bursting between them." width="1280" height="720" loading="lazy">
+            <figcaption>"Guard robots stand their ground and fire whenever they can see you. Hit one and it gets knocked around like the physics object it is."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jetpack-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Thrust, shoot, grab, run</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/04-heist.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>In the heist it's momentum and nerve: feathering a jetpack through a shaft, bouncing a grenade round a corner onto a guard, grabbing a canister and moving before the shell arrives. In the scene it's the opposite: you take your time placing canisters, then sit back and watch.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/lunar-module-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One run</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/05-run.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A run is a freshly generated containment site with <strong>three to five canisters</strong> in it, followed by one scene of your making. It has a clear start (the landing), a climax (the getaway under fire) and an ending you design yourself.</p>
+                        <p>If the troublemaker or the taxi is destroyed, that heist is over and the next taxi ride goes to a new site. A run is only minutes long, so trying again is never a big loss.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/film-strip-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The scene log</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/06-log.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every scene you set up and set off is kept in a log, with the name you gave the place and its seed. Load one and it plays out <strong>exactly as it did the first time</strong>, without doing the heist again. Over time the log becomes a gallery of your strangest storms.</p>
+                        <p>That's as deep as the structure goes, on purpose. This is a small game: there are no levels to work through, nothing held back, and the site is always a new maze.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A lunch break</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/07-break.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Start a run and you're landing within seconds. The heist takes about ten minutes, the scene a few more, and Esc stops the show whenever you've seen enough.</p>
+                        <p>Quit in the middle of a heist and it's saved where you left it. Play one run, or open the log and watch an old favorite again.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/rocket-flight-lorc.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the run</strong>, two stages back to back, plus the log for watching finished scenes again.</p>
+            <ol class="p-chain">
+                <li><b>Land</b>Set the taxi down somewhere in the maze.</li>
+                <li><b>Steal</b>Find every canister, past the guards.</li>
+                <li><b>Escape</b>Back to the taxi and out of the top, under fire.</li>
+                <li><b>Set the scene</b>Choose the place, the building, the time of day.</li>
+                <li><b>Detonate</b>Drop the canisters and set them off.</li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/conway-life-glider-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/conway-life-glider-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Living-pixel payloads</h3>
+                        <p>When a canister detonates, it spawns a burst of <strong>one random type of cellular automaton</strong>, a different one per canister. Each grows by its own rules, the way Conway's Game of Life patterns do, applies physical force, converts the scene's own pixels into more of itself, and reacts violently when it meets another canister's material.</p>
+                        <p>Every material spreads in one random colour and flashes a second random colour wherever it touches something that isn't itself or empty space, so the clashes between materials draw their own borders. The usual result is that dirt, concrete, glass and wax are eaten, assimilated or thrown out of the sides and top of the scene in a storm nobody can predict.</p>
+                        <p>Drop them all and detonate together, or set them off one by one and watch each one meet the last.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/unhinged_heist_3_feature.jpg" alt="Side-view pixel art of a small scene at dusk: a grey building with blue windows on a strip of dirt and dark bedrock, with a magenta coral-like growth, a green vine-like lattice and a cyan cloud of squares bursting out of three canisters around it." width="1280" height="720" loading="lazy">
+                            <figcaption>"Each canister releases a different random automaton, and where two of them meet they react violently."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/artillery-shell-quoting.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The clock</p>
+                        <h3>Artillery that follows you</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/08-artillery.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The surveillance drone warns you first. Pick up a canister and it gives a last warning to put it down and leave. Pick up the second, and it's authorized to fire.</p>
+                        <p>From then on it tracks your coordinates and sends an explosive shell to <strong>wherever you were</strong>, landing <strong>8 seconds</strong> later. Each shot after that arrives 0.2 seconds sooner, down to 4, and the drone fires more often, from every 6 seconds down to every 3. The shells don't care whether you're in the taxi, or whether the taxi is parked where you left it.</p>
+                        <p>It's a timer you can read: the shell always lands where you were, so the answer is always to keep moving.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rocket-thruster-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Thrust and momentum</p>
+                        <h3>A taxi and a jetpack</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/09-taxi.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The taxi looks and flies like a lunar lander in low gravity: a strong main thruster, weaker side and down thrusters, and no way to turn over. Its fuel never runs out and it shrugs off gentle bumps, so the difficulty is purely in your hands: crash damage grows with speed, and gunfire or shells will wreck it.</p>
+                        <p>On foot, the troublemaker rotates and thrusts the same way, with air brakes that can hold them hovering in place to line up a shot. Getting in and out takes one key, so you can park the taxi under a shaft, fly up on the jetpack, and drop back in with a canister.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/grenade-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Found in the maze</p>
+                        <h3>A shotgun, grenades and guards</h3>
+                        <p>The <strong>blaster shotgun</strong> starts with one slug and 99 shots, each flying straight at a constant speed. The <strong>grenades</strong> start at 10: they fly, slow with friction and gravity, bounce off walls and explode after 3 seconds for triple a slug's damage, so you can bank one round a corner without showing yourself.</p>
+                        <p>The maze has pickups lying about: an extra slug per shot (with a little more spread, for the same ammo), faster fire, more damage, faster projectiles, ammo in packs of 20 and grenades in packs of 5. They last for the run, like anything you'd find on a real job.</p>
+                        <p>The <strong>guard robots</strong> stand their ground with rifles much like your shotgun and fire whenever they can see you. They don't chase, they take a few hits, and when struck they get knocked around like the physics objects they are. Dodge, take cover, or lob a grenade.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/house-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Your diorama</p>
+                        <h3>Set the scene</h3>
+                        <p>Before the second stage the game asks: <em>"You got some nasty things there, where do you want to use them?"</em> and gives you a short form. A button randomizes the lot, and the place name has its own roll button.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Setting</th><th scope="col">Choices</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Name</th><td>Anything you type, or a rolled one, shown above the scene</td></tr>
+                                    <tr><th scope="row">Building</th><td>An outhouse, a small house, a tall five-floor building, a wide two-floor one, or a big wide four-floor one</td></tr>
+                                    <tr><th scope="row">Position</th><td>Standing on the ground, or buried underground</td></tr>
+                                    <tr><th scope="row">Figures</th><td>One to fifty tiny wax figures dotted around the surface</td></tr>
+                                    <tr><th scope="row">Time</th><td>Day, night, dusk or dawn: the sky's colour gradient</td></tr>
+                                    <tr><th scope="row">Terrain</th><td>Flat, crater, hill, cliff, gently wavy, or a bridge</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The game builds it in a moment, deliberately simple: muted dirt filling the bottom 15 to 35% of the scene, a jagged strip of indestructible bedrock under it, a grey concrete block with light blue windows, and the wax figures, each one pixel wide and five tall, standing wherever they landed, rooftops included. Then you click open space to drop each canister, and it falls and settles where physics puts it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/save-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Every storm kept</p>
+                        <h3>Seeds and the scene log</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/unhinged_heist/10-seed.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A scene is fully described by its settings and a <strong>seed number</strong>, so the game saves only those, not a recording. Reloading one rebuilds the scene and lets the same canisters play out exactly as before.</p>
+                        <p>The log lists each scene by its place name and seed. It costs almost no storage, it never expires, and it means the best thing you ever stole is never really gone.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/unhinged_heist_4_boxart.jpg" alt="Box art: a grinning troublemaker in green-tinted goggles and battered armor holds up two glowing green canisters, with swirls of green energy and a city skyline behind." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">unlicensed taxi, no questions asked</p>
+                <h2 id="sendoff">Unhinged Lander Heist: Anomalous Materials Hooligan</h2>
+                <p>Pickup: one lunar containment site, heavily guarded. Cargo: three to five canisters of something nobody has a name for. Fuel: unlimited. Armor: sketchy. Drop-off: anywhere you like.</p>
+                <p>They will ask you to leave. They will ask again. Then the shells start falling where you were standing a moment ago, so don't be standing there.</p>
+                <p><strong>Steal the weird stuff. Find out what it does.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Lunar Lander, The Powder Toy and Conway's Game of Life</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Hydrogen Whiskey and Zeroes Two (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
             </div>
         </div>
-
-        <section class="section">
-            <h2 class="section-title">Technical Implementation</h2>
-            <div class="mermaid">
-                graph TD
-                    A[Game Start] --> B[Stage 1: Facility Generation]
-                    B --> C[Lander Navigation]
-                    C --> D[Tactical Combat]
-                    D --> E[Canister Collection]
-                    E --> F{All Canisters?}
-                    F -->|No| G[Artillery Escalation]
-                    G --> D
-                    F -->|Yes| H[Stage 2: Scenario Setup]
-                    H --> I[Customizable Parameters]
-                    I --> J[Scene Generation]
-                    J --> K[Canister Placement]
-                    K --> L[Cellular Automata Detonation]
-                    L --> M[Destruction Spectacle]
-                    M --> N[Seed Saving]
-                    N --> O[Replay Options]
-                    O --> P[Session Complete]
-                    
-                    style A fill:#00ff88,stroke:#fff,stroke-width:2px,color:#000
-                    style H fill:#00ff88,stroke:#fff,stroke-width:2px,color:#000
-                    style P fill:#00ff88,stroke:#fff,stroke-width:2px,color:#000
-            </div>
-        </section>
-
-        <div class="boxart-section">
-            <div class="boxart-image"></div>
-            <div class="boxart-content">
-                <div class="boxart-title">Unhinged Lander Heist</div>
-                <div class="boxart-subtitle">Anomalous Materials Hooligan</div>
-                
-                <p><strong>The Ultimate Stress Relief Simulator</strong> - Sometimes you need to be the bad guy. This tactical chaos experience provides a safe space for destructive impulses through consequence-free virtual mayhem that transforms frustration into satisfaction.</p>
-                <br>
-                <p>Begin as a rogue operative with questionable mental health, infiltrating corporate lunar facilities to steal dangerous anomalous materials. Master precision lander physics while evading escalating artillery fire, then transition into the role of creative destroyer as you customize your choice of who to blow up and unleash spectacular cellular automata chaos upon them.</p>
-                
-                <div class="boxart-divider"></div>
-                
-                <div class="boxart-quote">
-                    "Today's agenda: steal impossible materials, then fuck this place in particular."
-                    <br><em>- Anonymous Rogue Operative</em>
-                </div>
-                
-                <p style="margin-top: 1.5rem;"><span class="highlight">Embrace your inner hooligan.</span> Let loose and watch illegal crazy pixels go absolutely wild!</p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-        <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-        <p>Reactorcore Games - 2025</p>
     </footer>
-
-    <script>
-        mermaid.initialize({ 
-            startOnLoad: true,
-            theme: 'dark',
-            themeVariables: {
-                primaryColor: '#00ff88',
-                primaryTextColor: '#e2e8f0',
-                primaryBorderColor: '#00ff88',
-                lineColor: '#00ff88',
-                secondaryColor: '#1a2332',
-                tertiaryColor: '#2d3748'
-            }
-        });
-    </script>
 </body>
 </html>
