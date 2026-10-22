@@ -311,10 +311,10 @@ window.PROJECTS = [
   },
   {
     page: "Underground Brawl.html", prefix: "underground",
-    title: "Underground Brawl", subtitle: "Ragdoll Combat",
-    icon: "boxing-glove-lorc", tint: "red",
-    blurb: "Hand-to-hand ragdoll fights in dim underground venues, where positioning and real collisions decide every knockout.",
-    genres: ["ragdoll", "action"], tags: ["brawler", "melee"],
+    title: "Underground Brawl", subtitle: "Floppy Ragdoll Fight Night",
+    icon: "boxing-glove-lorc", tint: "yellow",
+    blurb: "Floppy ragdoll fist fights in basements and parking lots after dark. Scrap armor on every limb, pipes and sandwiches thrown in by the crowd, and each club's night ends with its giant champion.",
+    genres: ["ragdoll", "action", "physics"], tags: ["brawler", "collision combat", "armor", "gauntlet"],
     status: "concept", added: "2025-10-08"
   },
   {

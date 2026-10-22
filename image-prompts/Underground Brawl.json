@@ -1,0 +1,14 @@
+{
+  "slug": "Underground Brawl",
+  "prefix": "underground",
+  "preset": "02 Photo - E - Cinematic",
+  "style": "Dim underground venue, chiaroscuro lighting, red and teal neon accents.",
+  "notes": "Rewrite (2026-10). All five images are kept from the 2025 page (chunky jointed figures in a basement ring suit the floppy ragdoll fighters); their prompts are the originals, trimmed, kept as a record. Nothing to generate.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide shot of a dim basement venue with a low concrete ceiling and exposed pipes, two chunky jointed ragdoll fighters facing off in a ring, one with spiky hair and one with long hair, overhead bulbs, a silhouetted crowd at the edges."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Medium close action shot of two jointed ragdoll fighters mid-fight, one throwing a hook while the other's battered arm hangs limp, motion blur on the punch, concrete basement walls behind."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Tight close shot of the moment a jointed ragdoll fighter's fist hits another's torso, impact ripples across the body, segmented joints, the room barely visible."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Low-angle portrait of a single jointed ragdoll fighter with spiky hair in a boxer's stance, segmented limbs, a moody concrete underground venue behind."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Aerial view of a city at dusk with glowing underground venue entrances below street level scattered among high-rises, residential blocks, parking garages and warehouses."}
+  ]
+}

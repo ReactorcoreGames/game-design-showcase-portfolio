@@ -1,0 +1,21 @@
+{
+  "slug": "Underground Brawl-mini",
+  "out": "site/projects/mini/underground",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Gritty cinematic film still at night, concrete basement, bare yellow bulb, teal fluorescent light. ",
+  "notes": "Mood-only mini images for Underground Brawl.html, beside the lore, game layer and feature text. SDXL (free): gen \"Underground Brawl-mini\" --model sdxl --max 999, then finish \"Underground Brawl-mini\" --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "clubs", "ratio": "3:2", "prompt": "A crowd gathered in a circle in an underground parking garage at night."},
+    {"n": 2, "name": "fighters", "ratio": "3:2", "prompt": "A tired office worker taping up his hands in a dim boiler room."},
+    {"n": 3, "name": "you", "ratio": "3:2", "prompt": "A lone fighter in a hoodie standing at the top of basement stairs, light below."},
+    {"n": 4, "name": "bout", "ratio": "3:2", "prompt": "Two wooden jointed mannequins posed mid-fight on a concrete floor."},
+    {"n": 5, "name": "night", "ratio": "3:2", "prompt": "A makeshift rope ring in an empty warehouse, a bare bulb hanging over it."},
+    {"n": 6, "name": "flyers", "ratio": "3:2", "prompt": "Photocopied fight-night flyers stapled over each other on a wooden telephone pole."},
+    {"n": 7, "name": "tape", "ratio": "3:2", "prompt": "A roll of white tape and a first aid kit on a bench in a basement."},
+    {"n": 8, "name": "pads", "ratio": "3:2", "prompt": "A pile of hockey pads, a motorcycle helmet and shin guards on a concrete floor."},
+    {"n": 9, "name": "pile", "ratio": "3:2", "prompt": "A heap of lead pipes, planks, a baseball bat and a trash can lid in a corner."},
+    {"n": 10, "name": "food", "ratio": "3:2", "prompt": "A half-eaten sandwich lying on a dusty concrete floor under a bare bulb."}
+  ]
+}
