@@ -1,0 +1,24 @@
+{
+  "slug": "cyberdungeon-mini",
+  "out": "site/projects/mini/cyberdungeon",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic cyberpunk film still at night, industrial megastructure, electric violet and chrome. ",
+  "notes": "Mood-only mini images for cyberdungeon.html, beside the lore, game layer and feature text. SDXL (free): gen cyberdungeon-mini --model sdxl --max 999, then finish cyberdungeon-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "cyberdungeon", "ratio": "3:2", "prompt": "A vast industrial complex of steel pipes, walkways and tall towers fading into violet fog."},
+    {"n": 2, "name": "rider", "ratio": "3:2", "prompt": "A chrome android rider standing beside a sleek motorbike under a violet streetlight."},
+    {"n": 3, "name": "ghost", "ratio": "3:2", "prompt": "A flickering translucent ghostly rider on a motorbike, made of glitching violet light."},
+    {"n": 4, "name": "course", "ratio": "3:2", "prompt": "A motorbike jumping over a rocky hill crest at night, factory lights in the distance."},
+    {"n": 5, "name": "region", "ratio": "3:2", "prompt": "A sprawling industrial installation across dark hills, a glowing reactor dome in its center."},
+    {"n": 6, "name": "map", "ratio": "3:2", "prompt": "A night city seen from above, whole districts going dark one after another."},
+    {"n": 7, "name": "break", "ratio": "3:2", "prompt": "A motorbike parked on a quiet rooftop at dawn, a distant plume of smoke on the horizon."},
+    {"n": 8, "name": "lean", "ratio": "3:2", "prompt": "A dirt bike rider leaning back in a wheelie on a muddy slope, sparks and dust."},
+    {"n": 9, "name": "ceiling", "ratio": "3:2", "prompt": "A chrome robot running upside down along the ceiling of a concrete corridor."},
+    {"n": 10, "name": "drones", "ratio": "3:2", "prompt": "Small quadcopter drones with mines hanging under them, hovering in a dark tunnel."}
+  ]
+}

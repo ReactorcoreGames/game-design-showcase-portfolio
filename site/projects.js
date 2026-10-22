@@ -105,8 +105,8 @@ window.PROJECTS = [
     page: "cyberdungeon.html", prefix: "cyberdungeon",
     title: "Cyberdungeon Rider", subtitle: "Megacorp Agent Motocross",
     icon: "aero-bike-delapouite", tint: "magenta",
-    blurb: "Elastomania-style bike physics meets corporate sabotage. A transforming android agent rides, flips and fights through procedural facilities to destroy their reactors.",
-    genres: ["vehicles", "physics", "action"], tags: ["motocross", "transforming", "cyberpunk"],
+    blurb: "Elastomania bike physics with a health bar instead of instant failure. An android agent switches between motorbike and gravity-flipping combat robot to ride generated corporate courses to the reactor at the finish line.",
+    genres: ["vehicles", "physics", "action"], tags: ["motocross", "transforming", "gravity flip", "procedural courses"],
     status: "concept", added: "2025-10-08"
   },
   {
