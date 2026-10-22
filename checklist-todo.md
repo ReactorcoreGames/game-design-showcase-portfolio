@@ -92,7 +92,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Planetary Ring Miner
 - [x] Poo Storm Janitor Powersuit
 - [x] RussiBiomonster ⚑
-- [ ] Skullhead
+- [x] Skullhead
 - [ ] StardustAssault
 - [ ] Underground Brawl
 - [ ] Zero Space Robo Derby

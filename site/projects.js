@@ -193,8 +193,8 @@ window.PROJECTS = [
     page: "Skullhead.html", prefix: "skullhead",
     title: "Skullhead", subtitle: "Death Journal Vengeance",
     icon: "burning-skull-skoll", tint: "red",
-    blurb: "A cathartic 2D physics action game. A devil-contracted vigilante works through a journal of society's worst people with chainsaws, blades and firearms, healed by dark powers.",
-    genres: ["action", "physics"], tags: ["vigilante", "supernatural", "catharsis"],
+    blurb: "An uncensored ragdoll revenge game in the spirit of the old violent Flash games. A man who sold his soul works through a fictional early-1990s town place by place, marking each one off in his Death Journal.",
+    genres: ["action", "ragdoll"], tags: ["side-scroller", "catharsis", "dismemberment", "flash games"],
     status: "concept", added: "2025-10-08"
   },
   {

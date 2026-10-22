@@ -1,0 +1,74 @@
+{
+  "slug": "Skullhead-mini",
+  "out": "site/projects/mini/skullhead",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Gritty cinematic film still, early 1990s America, muted khaki and grey, deep crimson accents. ",
+  "notes": "Mood-only mini images for Skullhead.html, beside the lore, game layer and feature text. SDXL (free): gen Skullhead-mini --model sdxl --max 999, then finish Skullhead-mini --model sdxl. Each prompt is the section's opening line, kept free of gore; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {
+      "n": 1,
+      "name": "man",
+      "ratio": "3:2",
+      "prompt": "A lonely young man sitting on the curb of an empty parking lot at night, head in his hands."
+    },
+    {
+      "n": 2,
+      "name": "contract",
+      "ratio": "3:2",
+      "prompt": "An old parchment contract on a dark table beside a candle, a red signature at the bottom."
+    },
+    {
+      "n": 3,
+      "name": "town",
+      "ratio": "3:2",
+      "prompt": "A small American town main street at dusk with a diner, a mall sign and a water tower."
+    },
+    {
+      "n": 4,
+      "name": "stage",
+      "ratio": "3:2",
+      "prompt": "A long empty 1990s office corridor lined with cubicles under flickering fluorescent lights."
+    },
+    {
+      "n": 5,
+      "name": "place",
+      "ratio": "3:2",
+      "prompt": "An empty mid-sized shopping mall at night, escalators and closed storefronts."
+    },
+    {
+      "n": 6,
+      "name": "journal",
+      "ratio": "3:2",
+      "prompt": "An old leather journal lying open on a desk beside a red pen and a desk lamp."
+    },
+    {
+      "n": 7,
+      "name": "flow",
+      "ratio": "3:2",
+      "prompt": "A worn armchair in a dark motel room, a chainsaw leaning against the wall beside it."
+    },
+    {
+      "n": 8,
+      "name": "ragdoll",
+      "ratio": "3:2",
+      "prompt": "A small jointed wooden artist's mannequin on an office desk, one of its arms snapped off and lying beside it."
+    },
+    {
+      "n": 9,
+      "name": "devil",
+      "ratio": "3:2",
+      "prompt": "A red-lit silhouette with horns standing at the end of a dark hallway."
+    },
+    {
+      "n": 10,
+      "name": "props",
+      "ratio": "3:2",
+      "prompt": "Smashed office desks, a toppled copy machine and scattered paper in a wrecked office."
+    }
+  ]
+}

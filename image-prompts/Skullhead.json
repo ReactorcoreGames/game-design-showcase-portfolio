@@ -1,0 +1,39 @@
+{
+  "slug": "Skullhead",
+  "prefix": "skullhead",
+  "preset": "01 Main - Digital Comic",
+  "style": "Edgy dark comic art with heavy ink lines and hard shadows. Muted early-1990s urban colors, khaki, olive grey and dusty beige, every grey slightly tinted, with deep crimson accents. No neon and no glows.",
+  "notes": "Rewrite (2026-10). Images 1 and 4 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 2 is new because the old vignette was set in a school hallway (the page leaves schools out), image 3 because it showed the victims as skeletons in suits and didn't show a mechanic, and image 5 because it had SCHOOL painted on a building. Klein flags cartoon gore, so the new prompts have none; the page text describes it. gen Skullhead --only 2,3,5, then finish Skullhead --only 2,3,5.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Low-angle shot of a skull-headed man in khaki cargo pants and a grey t-shirt wielding a chainsaw in a wrecked mall food court, angry skull on a column of spine bones, broken tables and red splatter on the white tiles, flickering fluorescent lights."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side view of an early-1990s cubicle office laid out like a level of a side-scrolling game, plain bare walls and partitions with no signs, posters, notes or writing. A lean young man in khaki cargo pants, a light grey short-sleeved t-shirt and black-and-white sneakers, with light tan skin on his bare arms, whose head is a clean white angry human skull on a column of bare spine bones instead of a neck, charges from left to right revving a red chainsaw through a cubicle wall. Desks, beige computers and a copy machine burst into flying splinters and plastic shards. Adult office workers in shirts and ties tumble and run ahead of him. Fluorescent ceiling lights, grey-brown carpet."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Top-down close view of an old leather-bound journal lying open on a dark wooden desk. Its two pages hold a hand-drawn ink map of a small town, with streets and little sketched buildings: a shopping mall, a roadside diner, an office block, a barn and a trailer park. Several of the buildings are covered by dark red ink splatters, and a small white skull-shaped pin stands on one clean building. A red pen lies beside the journal in the warm light of a desk lamp. No writing, letters or numbers anywhere."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Upward-angle portrait of the skull-headed antihero in khaki cargo pants, grey t-shirt and black-and-white sneakers, standing over defeated enemies in a shopping mall with a weapon in each hand, storefronts and escalators behind in emergency lighting."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide high view from a hill over an early-1990s American town at dusk: a flat shopping mall with a huge parking lot, a roadside fast-food diner, a few office blocks, a water tower, a trailer park and a cow farm at the edge of town, streetlights flickering on under a dark red sky. Plain buildings with no signs, writing or logos anywhere."
+    }
+  ]
+}
