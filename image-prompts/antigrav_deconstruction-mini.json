@@ -1,0 +1,21 @@
+{
+  "slug": "antigrav_deconstruction-mini",
+  "out": "site/projects/mini/antigrav",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Calm cinematic sci-fi film still, dusky plum space, warm sand gold and rose glow. ",
+  "notes": "Mood-only mini images for antigrav_deconstruction.html, beside the lore, game layer and feature text. SDXL (free): gen antigrav_deconstruction-mini --model sdxl --max 999, then finish antigrav_deconstruction-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "derelicts", "ratio": "3:2", "prompt": "An old abandoned space station drifting silently above a planet."},
+    {"n": 2, "name": "chamber", "ratio": "3:2", "prompt": "A huge glass chamber in orbit with a broken station floating inside it."},
+    {"n": 3, "name": "shipyard", "ratio": "3:2", "prompt": "A brand new small spaceship leaving a glowing orbital shipyard."},
+    {"n": 4, "name": "smash", "ratio": "3:2", "prompt": "Colorful dust and droplets drifting slowly through space after a gentle impact."},
+    {"n": 5, "name": "station", "ratio": "3:2", "prompt": "Layers of colored sand settling at the bottom of a glass container, lit softly."},
+    {"n": 6, "name": "fleet", "ratio": "3:2", "prompt": "A dozen small spaceships of different shapes cruising together through a dusky sky."},
+    {"n": 7, "name": "pause", "ratio": "3:2", "prompt": "A cozy cockpit with a cup of tea, a calm view of stars through the window."},
+    {"n": 8, "name": "trays", "ratio": "3:2", "prompt": "Soft pink clouds drifting upward inside a tall glass column, lit warmly."},
+    {"n": 9, "name": "toy", "ratio": "3:2", "prompt": "A hand-sized swirl of glowing sand spinning in the air like a tiny galaxy."},
+    {"n": 10, "name": "generator", "ratio": "3:2", "prompt": "Blocky space station modules of many colors floating in a neat cluster."}
+  ]
+}

@@ -80,9 +80,9 @@ window.PROJECTS = [
   {
     page: "antigrav_deconstruction.html", prefix: "antigrav",
     title: "Antigrav Deconstruction", subtitle: "Therapeutic Brick Breaker",
-    icon: "cubes-lorc", tint: "green",
-    blurb: "Brick breaking as meditation. Derelict space stations dissolve into cascades of colorful particles, with no timers, no fail states and no stress.",
-    genres: ["arcade", "falling-sand"], tags: ["brick breaker", "relaxing", "zero gravity", "space"],
+    icon: "wrecking-ball-lorc", tint: "orange",
+    blurb: "A calm brick breaker with a ball you can't lose. Derelict stations crumble into falling-sand dust, liquids and gases that mix and react, and each one becomes a new generated starship.",
+    genres: ["arcade", "falling-sand"], tags: ["brick breaker", "relaxing", "chemistry", "space"],
     status: "concept", added: "2025-10-08"
   },
   {

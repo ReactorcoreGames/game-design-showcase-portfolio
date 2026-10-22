@@ -1,0 +1,14 @@
+{
+  "slug": "antigrav_deconstruction",
+  "prefix": "antigrav",
+  "preset": "03 Style - Pixel Side View",
+  "style": "Deep purple and magenta space background, glowing particle trails, colorful falling sand pixels.",
+  "notes": "Rewrite (2026-10). Images 1, 2, 4 and 5 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 3 is new: the old one framed a chained fireball inside a monitor bezel, which matched neither the tether nor the demolition chamber. gen antigrav_deconstruction --only 3, then finish antigrav_deconstruction --only 3.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Low-angle wide shot of a huge derelict space station suspended inside a demolition chamber, industrial lights, twisted metal and broken hull plating, floating debris and particle streams, a small demolition ship in the lower corner with a glowing tether."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Close dynamic shot of a station module breaking apart, hundreds of colorful particles bursting outward, solid chunks, glowing gas and liquid droplets separating, a glowing ball at the point of impact."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Side view of a tall rectangular demolition chamber in space, like a glass terrarium. In the middle floats a blocky space station built from colorful bricks in red, teal, yellow and violet, with chunks already broken off. Below it, a wide glowing tray at the bottom of the chamber is filling with layers of colored sand and pooled liquids, red dust heaped beside a green puddle. At the top of the chamber an upside-down tray collects rising clouds of pink and white gas. Between them streams of tiny colored pixels fall down and rise up. A small flat paddle-shaped spaceship hovers below the station, a glowing orange ball on a thin shimmering energy tether flying from it into the bricks."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait of a sleek demolition spacecraft in three-quarter view with a tethered ball glowing with elemental energy, station debris scattered behind it, particle streams around the ship, dramatic upward lighting."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide view of derelict stations floating in demolition sectors, new starships built from reclaimed materials traveling between them, a nebula in the background, glowing demolition chambers and a construction yard where particle streams become sleek ships."}
+  ]
+}
