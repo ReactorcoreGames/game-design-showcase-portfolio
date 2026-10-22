@@ -1,0 +1,14 @@
+{
+  "slug": "StardustAssault",
+  "prefix": "stardust",
+  "preset": "01 Main - Digital Art",
+  "style": "Neon sci-fi illustration on a dark background. Palette of electric cyan, violet and fiery orange-yellow particle glows.",
+  "notes": "Rewrite (2026-10). Images 1 to 4 are kept from the 2025 page; their prompts are the originals, trimmed, kept as a record. Image 5 is new: the old story image was a galaxy map of colonies and trade routes, while the design's setting is an alien hive inside a planetoid with a core at its heart. gen StardustAssault --only 5, then finish StardustAssault --only 5.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Extreme wide low-angle shot of a battlefield with angular mecha silhouettes advancing through swirling dust, alien geometric formations in the dark behind, brilliant particle explosions falling like stars, starfighters weaving between enemy formations."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Medium shot of a sleek angular white war mecha firing twin guns at swarming alien enemies, particle trails arcing across the frame, destroyed foes dissolving into colorful sand-like grains, an energy shield deflecting shots."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Close cinematic shot of an alien ship dissolving mid-explosion into streams of brilliant sand-like particles in orange and violet, glowing fragments, a mecha's heavy gun in the foreground."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Heroic low-angle portrait of a lone pilot before a towering angular mecha silhouetted against a spectacular particle explosion, an alien horde approaching through swirling debris."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Wide view inside a vast hollow planetoid: a cavern hive of glowing alien honeycomb walls and twisted organic spires, swarms of small colorful geometric alien ships shaped like triangles, cubes, diamonds and rings drifting in formations, and at the far center a huge glowing orb core pulsing with light. Small at the left of the frame, a white humanoid robot with a large gun flies in on blue thrusters."}
+  ]
+}

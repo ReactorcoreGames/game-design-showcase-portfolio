@@ -93,7 +93,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] Poo Storm Janitor Powersuit
 - [x] RussiBiomonster ⚑
 - [x] Skullhead
-- [ ] StardustAssault
+- [x] StardustAssault
 - [ ] Underground Brawl
 - [ ] Zero Space Robo Derby
 - [ ] abyssal_caretaker (no design doc: the page is the design)

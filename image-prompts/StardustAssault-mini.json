@@ -1,0 +1,21 @@
+{
+  "slug": "StardustAssault-mini",
+  "out": "site/projects/mini/stardust",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still in deep space, electric cyan, violet, fiery yellow glow. ",
+  "notes": "Mood-only mini images for StardustAssault.html, beside the lore, game layer and feature text. SDXL (free): gen StardustAssault-mini --model sdxl --max 999, then finish StardustAssault-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "invaders", "ratio": "3:2", "prompt": "A formation of glowing geometric alien ships, triangles, cubes and rings, flying through space."},
+    {"n": 2, "name": "hive", "ratio": "3:2", "prompt": "Glowing alien honeycomb tunnels deep inside a hollow planetoid."},
+    {"n": 3, "name": "assault", "ratio": "3:2", "prompt": "A lone white robot spacecraft diving toward a dark cratered planetoid."},
+    {"n": 4, "name": "wave", "ratio": "3:2", "prompt": "A swarm of small colorful glowing shapes scattering across a dark starfield."},
+    {"n": 5, "name": "core", "ratio": "3:2", "prompt": "A huge glowing orb pulsing with light at the heart of an alien cavern."},
+    {"n": 6, "name": "gallery", "ratio": "3:2", "prompt": "Framed paintings of colorful space nebulas hanging on a dark gallery wall."},
+    {"n": 7, "name": "break", "ratio": "3:2", "prompt": "A pilot's cockpit at rest, glowing screens and a mug of coffee on the console."},
+    {"n": 8, "name": "blast", "ratio": "3:2", "prompt": "A slowly expanding ring of fire blooming in the darkness of space."},
+    {"n": 9, "name": "shield", "ratio": "3:2", "prompt": "A glowing cyan energy shield bubble deflecting bright shots in space."},
+    {"n": 10, "name": "swarm", "ratio": "3:2", "prompt": "Countless tiny glowing alien ships swarming around one bright white spacecraft."}
+  ]
+}

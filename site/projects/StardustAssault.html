@@ -4,1071 +4,409 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stardust Assault: Twin-Stick Mecha Shooter</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Experience spectacular particle physics combat in Stardust Assault. Pilot a powerful starmecha through waves of alien invaders with weapons that transform destruction into breathtaking art with falling sand particle effects.">
+
+    <meta name="description" content="A game design concept by Reactorcore: a side-view twin-stick shoot 'em up that mixes R-Type, Missile Command and Space Invaders. Fly a starmecha into an alien hive, aim in any direction, and watch every invader burst into falling sand dust that paints the run into a shareable artwork.">
+    <meta name="keywords" content="game design concept, shoot em up, shmup, twin-stick, falling sand, particles, mecha, Missile Command, Space Invaders, R-Type, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/StardustAssault.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Stardust Assault: Twin-Stick Mecha Shooter">
-    <meta property="og:description" content="Experience spectacular particle physics combat in Stardust Assault. Pilot a powerful starmecha through waves of alien invaders with weapons that transform destruction into breathtaking art with falling sand particle effects.">
-    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/stardust_2_vignette.jpg">
-    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/StardustAssault.html">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Reactorcore Game Design Showcase">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Stardust Assault: Twin-Stick Mecha Shooter">
+    <meta property="og:description" content="A game design concept: a starmecha against swarms of geometric invaders, with Missile Command blasts, a piercing mass driver and a run length of your choice. Every explosion becomes falling dust, and every run becomes a painting. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/StardustAssault.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/stardust_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Neon digital art: a white war mecha fires twin guns into a swarm of aliens, destroyed foes bursting into glittering coloured fragments">
+
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
     <meta name="twitter:title" content="Stardust Assault: Twin-Stick Mecha Shooter">
-    <meta name="twitter:description" content="Experience spectacular particle physics combat in Stardust Assault. Pilot a powerful starmecha through waves of alien invaders with weapons that transform destruction into breathtaking art with falling sand particle effects.">
+    <meta name="twitter:description" content="A game design concept: a twin-stick shmup where every explosion turns to falling dust and every run leaves an artwork.">
     <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/stardust_2_vignette.jpg">
-    
-    <!-- JSON-LD Structured Data -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Stardust Assault: Twin-Stick Mecha Shooter",
-      "description": "Experience spectacular particle physics combat in Stardust Assault. Pilot a powerful starmecha through waves of alien invaders with weapons that transform destruction into breathtaking art with falling sand particle effects.",
-      "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/stardust_2_vignette.jpg",
-      "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/StardustAssault.html",
-      "author": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "creator": {
-        "@type": "Person",
-        "name": "Reactorcore Games"
-      },
-      "genre": "Twin-Stick Shooter",
-      "keywords": "twin-stick shooter, mecha combat, particle physics, falling sand effects, shmup, space combat, alien invasion",
-      "dateCreated": "2025",
-      "inLanguage": "en-US"
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Stardust Assault: Twin-Stick Mecha Shooter",
+        "description": "A game design concept, not a released game: a side-view, auto-scrolling twin-stick shoot 'em up in which a starmecha with Missile Command-style missiles fights randomized waves of geometric invaders inside a planetoid hive, with falling sand particle effects that accumulate into a saved artwork.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Shooter", "Arcade"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/StardustAssault.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/stardust_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
     }
     </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0b0a16">
+
+    <link rel="preload" href="../fonts/zeroes-one.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&family=Rajdhani:wght@400;500;600;700&display=optional" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-</head>
-<body>
-    <!-- 
-    Image Files Needed:
-    stardust_1_title.jpg - Deep space battlefield with mecha silhouettes and particle explosions
-    stardust_2_vignette.jpg - Intense mecha combat scene with colorful particle trails and enemy formations
-    stardust_3_feature.jpg - Close-up of particle destruction system showing enemy ships dissolving into colorful sand
-    stardust_4_boxart.jpg - Epic poster-style art of lone mecha against alien horde with spectacular particle effects
-    stardust_5_story.jpg - Vast overworld view showing multiple star systems with alien-infested planetoids threatening human colonies
-    -->
-
-    <a href="https://www.patreon.com/ReactorcoreGames" class="reactorcore-link">Reactorcore's Personal Game Design Project</a>
-
-    <main class="container">
-        <!-- Title Section -->
-        <section class="title-section">
-            <div class="title-background">
-                <img src="../projects/images/stardust_1_title.jpg" alt="Stardust Assault Title Background" class="title-image">
-                <div class="title-overlay"></div>
-            </div>
-            <div class="title-content">
-                <h1 class="main-title">Stardust Assault</h1>
-                <h2 class="subtitle">Twin-Stick Mecha Shooter</h2>
-            </div>
-        </section>
-
-        <!-- Game Overview -->
-        <section class="overview-section">
-            <h2>🚀 Game Overview</h2>
-            <div class="overview-content">
-                <p>Experience the spectacular fusion of classic shmup action and cutting-edge particle physics in <strong>Stardust Assault</strong>. Pilot a powerful starmecha through waves of alien invaders, wielding an arsenal of devastating weapons that transform destruction into breathtaking art.</p>
-                
-                <p>Combining the strategic missile targeting of Missile Command with the intense action of R-Type, every explosion becomes a canvas of colorful falling sand particles that paint the battlefield in brilliant hues. As enemies dissolve into cascading particle effects, you're not just fighting—you're creating a unique masterpiece with every playthrough.</p>
-                
-                <p>From quick 15-minute skirmishes to epic 2-hour campaigns, <strong>Stardust Assault</strong> delivers pure twin-stick shooting bliss with a visual spectacle unlike anything else in the genre.</p>
-            </div>
-        </section>
-
-        <!-- Three Cards Section -->
-        <section class="cards-section">
-            <div class="card-container">
-                <div class="info-card audience-card">
-                    <h3>🎯 Target Audience</h3>
-                    <div class="card-content">
-                        <p><strong>Action Game Enthusiasts</strong> who love fast-paced combat</p>
-                        <p><strong>Retro Shmup Fans</strong> seeking modern innovation</p>
-                        <p><strong>Visual Effects Lovers</strong> who appreciate spectacular particle systems</p>
-                        <p><strong>Art Creation Enthusiasts</strong> interested in gameplay-generated art</p>
-                    </div>
-                </div>
-                
-                <div class="info-card purpose-card">
-                    <h3>💫 Game's Purpose</h3>
-                    <div class="card-content">
-                        <p><strong>Mastery & Achievement</strong> - Progressive skill development</p>
-                        <p><strong>Spectacle & Beauty</strong> - Visual feast of particle effects</p>
-                        <p><strong>Creative Expression</strong> - Art generation through gameplay</p>
-                        <p><strong>Stress Relief</strong> - Cathartic destruction mechanics</p>
-                    </div>
-                </div>
-                
-                <div class="info-card concept-card">
-                    <h3>⭐ Core Concept</h3>
-                    <div class="card-content">
-                        <p><strong>Transform Destruction into Art</strong></p>
-                        <p>Every enemy defeated becomes a burst of colorful particles that paint the battlefield. Combat isn't just about winning—it's about creating something beautiful through skilled play.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Story Image -->
-        <section class="story-image-section">
-            <div class="story-container">
-                <img src="../projects/images/stardust_5_story.jpg" alt="Galactic Overworld" class="story-image">
-                <div class="story-quote">
-                    <div class="quote-overlay"></div>
-                    <blockquote>"Across the void, alien hives spread like cancer—only the brave stand between worlds and extinction."</blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- Lore & Story -->
-        <section class="lore-section">
-            <h2>🌌 Lore & Story</h2>
-            <div class="lore-content">
-                <div class="lore-background">
-                    <h3>The Void War Begins</h3>
-                    <p>In the year 2387, humanity had spread across dozens of star systems, establishing prosperous colonies and trade routes throughout the galaxy. For three centuries, space belonged to humanity—until the day the <strong>Void Swarm</strong> emerged from the dark spaces between stars.</p>
-                    
-                    <p>These alien invaders didn't conquer worlds—they <strong>consumed</strong> them. Entire planetoids were hollowed out and transformed into massive hive complexes, spawning endless waves of geometric war-forms that spread like a plague across human space. Traditional fleet warfare proved useless against enemies that could multiply faster than they could be destroyed.</p>
-                </div>
-                
-                <div class="lore-present">
-                    <h3>The Starmecha Initiative</h3>
-                    <p>When conventional forces failed, humanity turned to a desperate solution: the <strong>Starmecha Program</strong>. These highly advanced, one-pilot combat units could penetrate deep into alien hive-worlds where capital ships couldn't follow. Armed with experimental particle-disruption weapons, they could turn the enemy's own quantum-matter composition against them—literally dissolving invader ships into harmless cosmic dust.</p>
-                    
-                    <p>Each mission is a calculated strike at the heart of an alien stronghold. The goal is simple yet perilous: <strong>penetrate the hive defenses, fight through waves of defenders, and destroy the planetary core</strong> that powers each alien installation. Success means liberation of that sector. Failure means another world falls to the Void Swarm's endless hunger.</p>
-                </div>
-                
-                <div class="lore-mission">
-                    <h3>Your Mission</h3>
-                    <p>As an elite Starmecha pilot, you've been deployed to assault a critical alien hive-world threatening the outer colonies. Intelligence suggests this installation serves as a staging ground for the next wave of expansion into human space. The core must be destroyed before reinforcements arrive.</p>
-                    
-                    <p>The particle-disruption technology turns each enemy you defeat into a cascade of brilliant energy—a visual reminder that you're not just fighting for survival, but <strong>transforming destruction into something beautiful</strong>. Each battle becomes a work of art painted across the cosmos, proving that even in humanity's darkest hour, beauty can emerge from chaos.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Controls & Interface -->
-        <section class="controls-section">
-            <h2>🎮 Controls & Interface</h2>
-            <div class="controls-content">
-                <div class="controls-description">
-                    <p>The player pilots a highly maneuverable starmecha in a 2D sideview battlefield. Unlike traditional shmups with fixed firing directions, the mecha freely rotates and aims with 360-degree precision using mouse control, creating a true twin-stick experience that emphasizes tactical positioning and weapon selection.</p>
-                </div>
-                
-                <div class="controls-grid">
-                    <div class="control-group movement">
-                        <h4>🏃 Movement</h4>
-                        <div class="control-item"><span class="key">W A S D</span> - Free movement in all directions</div>
-                        <div class="control-item"><span class="key">X</span> - Teleport to mirrored position</div>
-                    </div>
-                    
-                    <div class="control-group weapons">
-                        <h4>⚔️ Combat</h4>
-                        <div class="control-item"><span class="key">Mouse Aim</span> - Rotate mecha and weapons</div>
-                        <div class="control-item"><span class="key">Mouse 1</span> - Mass Driver burst fire</div>
-                        <div class="control-item"><span class="key">Mouse 2</span> - Frag shotgun spread</div>
-                        <div class="control-item"><span class="key">Q</span> - Guided missile launch</div>
-                    </div>
-                    
-                    <div class="control-group defense">
-                        <h4>🛡️ Defense</h4>
-                        <div class="control-item"><span class="key">E</span> - Energy shield (3 sec duration, 9 sec recharge)</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Vignette Image -->
-        <section class="vignette-section">
-            <div class="vignette-container">
-                <img src="../projects/images/stardust_2_vignette.jpg" alt="Stardust Assault Combat Vignette" class="vignette-image">
-                <div class="vignette-quote">
-                    <div class="quote-overlay"></div>
-                    <blockquote>"Every explosion paints the cosmos in brilliant color—combat becomes art."</blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- Game Layers -->
-        <section class="layers-section">
-            <h2>🔄 Game Layers</h2>
-            <div class="layers-container">
-                <div class="layer-card moment">
-                    <h3>1. Moment-to-Moment Gameplay</h3>
-                    <p>Intense twin-stick combat where players dodge enemy formations while strategically deploying three distinct weapon systems. Each weapon type—mass driver, missiles, and shotgun—requires different tactical approaches. The 360-degree aiming system means positioning and rotation are as important as reflexes, creating dynamic combat encounters where every second counts.</p>
-                </div>
-                
-                <div class="layer-card low-meta">
-                    <h3>2. Low Metagame - Campaign Progression</h3>
-                    <p>Players choose campaign length (20/80/200 stages) and progress through randomized enemy waves, collecting powerups that stack throughout the entire run. Each campaign builds toward the dramatic finale where players assault the alien planetary core. Progression is measured not just in stages cleared, but in the evolving artwork created by accumulated particle effects.</p>
-                </div>
-                
-                <div class="layer-card high-meta">
-                    <h3>3. High Metagame - Art Collection</h3>
-                    <p>Every completed campaign generates a unique screenshot artwork—a visual record of the player's journey through the particle-painted battlefield. These screenshots serve as trophies, showcasing different campaign lengths, ship colors, and play styles. Players build a gallery of their combat artistry, each piece telling the story of a different battle.</p>
-                </div>
-                
-                <div class="layer-card practical">
-                    <h3>4. Practical Game Flow</h3>
-                    <p>Launch game → Select campaign length and ship color → Immediate action with waves of enemies → Gradual powerup accumulation → Spectacular core destruction finale → Screenshot capture for sharing. Sessions range from quick 15-minute bursts to epic 2+ hour endurance runs, all ending with a shareable piece of procedural art.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Game Modes -->
-        <section class="modes-section">
-            <h2>🎯 Game Modes</h2>
-            <div class="modes-container">
-                <div class="mode-card quick">
-                    <h3>⚡ Quick Strike</h3>
-                    <p><strong>20 Stages | 10-15 Minutes</strong></p>
-                    <p>Perfect for short gaming sessions. Rapid-fire action with immediate powerup gratification. Creates elegant, minimalist particle artwork. Ideal for lunch breaks or quick adrenaline rushes.</p>
-                </div>
-                
-                <div class="mode-card standard">
-                    <h3>🎯 Standard Assault</h3>
-                    <p><strong>80 Stages | 45-60 Minutes</strong></p>
-                    <p>The classic campaign experience. Balanced progression that allows full powerup development while maintaining intense pacing. Generates rich, detailed particle paintings with diverse color palettes.</p>
-                </div>
-                
-                <div class="mode-card endurance">
-                    <h3>🔥 Endurance War</h3>
-                    <p><strong>200 Stages | 2+ Hours</strong></p>
-                    <p>Epic battles for dedicated pilots. Maximum powerup stacking creates god-like combat abilities. Produces incredibly dense, complex artwork with layered particle effects creating nebula-like masterpieces.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features & Mechanics -->
-        <section class="features-section">
-            <h2>⚙️ Game Features & Mechanics</h2>
-            
-            <div class="feature-card">
-                <h3>🔫 Tri-Weapon Arsenal System</h3>
-                <p>Three distinct weapon types each serve different tactical roles: <strong>Mass Driver</strong> delivers precision burst-fire that penetrates multiple enemies in a line, perfect for formation breaking. <strong>Guided Missiles</strong> create expanding explosion zones at cursor position, ideal for area denial and grouped enemy elimination. <strong>Frag Shotgun</strong> spreads super-heated projectiles in a wide cone, devastating at close range but blocked by front-line enemies.</p>
-                
-                <div class="mermaid">
-                flowchart TD
-                    A[Mouse Input] --> B{Weapon Selection}
-                    B -->|Mouse 1| C[Mass Driver]
-                    B -->|Q Key| D[Guided Missile]
-                    B -->|Mouse 2| E[Frag Shotgun]
-                    C --> F[Penetrating Line Attack]
-                    D --> G[Explosive Area Effect]
-                    E --> H[Wide Spread Cone]
-                    F --> I[Formation Breaking]
-                    G --> J[Area Denial]
-                    H --> K[Close Range Clearing]
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <h3>✨ Particle Destruction Engine</h3>
-                <p>The game's signature feature transforms every destroyed object into a cascade of colorful falling sand particles. When enemies are hit, they burst into particles matching their original color, which then shift through fiery neon hues before fading to black. This creates a persistent visual history of combat across the battlefield, with secondary dark particles accumulating to form nebula-like background effects.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>👾 Dynamic Enemy Formation System</h3>
-                <p>Enemy waves spawn in randomized geometric formations and exhibit emergent behavior—sometimes maintaining group cohesion, other times scattering chaotically across the battlefield. Orange warning indicators preview spawn locations, allowing players to avoid accidental collisions. Formation patterns vary from tight clusters requiring area weapons to scattered lines perfect for mass driver penetration.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>📈 Progressive Powerup System</h3>
-                <p>Each wave's final enemy drops an artifact that permanently enhances player capabilities. Powerups include health restoration, weapon enhancement (+5% blast radius, firing duration, or velocity), and defensive orbs that absorb incoming damage. Effects stack throughout the entire campaign, creating a satisfying power curve from vulnerable early stages to god-like late-game capabilities.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>🛡️ Tactical Defense Abilities</h3>
-                <p>The energy shield provides 3 seconds of invulnerability with a 9-second recharge cycle, requiring strategic timing for maximum effectiveness. The teleport ability instantly moves the player to the opposite mirrored position on the battlefield, enabling dramatic escapes and repositioning strategies. Both abilities encourage active defense rather than passive avoidance.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>🎨 Art Generation Through Gameplay</h3>
-                <p>Every playthrough creates a unique piece of procedural artwork through accumulated particle effects. The final screenshot captures the player's journey—longer campaigns produce denser, more complex compositions while different play styles create distinct visual signatures. Ship color choice influences the artwork's palette, making each player's gallery uniquely personal.</p>
-            </div>
-        </section>
-
-        <!-- Feature Image -->
-        <section class="feature-image-section">
-            <div class="feature-container">
-                <img src="../projects/images/stardust_3_feature.jpg" alt="Particle Destruction System" class="feature-image">
-                <div class="feature-quote">
-                    <div class="quote-overlay"></div>
-                    <blockquote>"Watch enemies dissolve into rivers of light—destruction has never been so beautiful."</blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- Box Art Section -->
-        <section class="boxart-section">
-            <div class="boxart-container">
-                <div class="boxart-image-container">
-                    <img src="../projects/images/stardust_4_boxart.jpg" alt="Stardust Assault Box Art" class="boxart-image">
-                </div>
-                <div class="boxart-description">
-                    <h3>Stardust Assault</h3>
-                    <p>When alien invaders threaten the galaxy, only one pilot stands between chaos and extinction. Pilot your advanced starmecha through waves of enemies in this spectacular fusion of classic shmup action and revolutionary particle physics.</p>
-                    
-                    <p>Master three devastating weapon systems. Paint the cosmos with explosive artistry. Transform destruction into beauty as every enemy becomes a cascade of brilliant particles across the battlefield.</p>
-                    
-                    <p>From quick 15-minute skirmishes to epic 2-hour campaigns, create your own unique artwork through skillful combat. Every playthrough ends with a shareable masterpiece—proof of your tactical prowess and artistic vision.</p>
-                    
-                    <p><strong>Experience the evolution of the shooter genre. Turn warfare into art.</strong></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>All my links: <a href="https://linktr.ee/reactorcore">https://linktr.ee/reactorcore</a></p>
-            <p>All my releases: <a href="https://reactorcore.itch.io/">https://reactorcore.itch.io/</a></p>
-            <p>Reactorcore Games - 2025</p>
-        </footer>
-    </main>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
 
     <style>
+        /* Stardust Assault: a deep violet-black void, electric cyan for the starmecha, violet for the
+           hive, and fiery yellow for the burning dust. Zeroes One for the title and headings,
+           MatrixType Display (a dot-matrix arcade face) for the subtitle and kickers. */
+        @font-face { font-family: "Zeroes One"; src: url("../fonts/zeroes-one.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "MatrixType Display"; src: url("../fonts/matrixtype-display.woff2") format("woff2"); font-display: swap; }
+
         :root {
-            --background-color: #0a0e1a;
-            --container-bg: #1a1f2e;
-            --card-bg: #242938;
-            --border-color: #4a5568;
-            --text-color: #e2e8f0;
-            --accent-primary: #ff6b35;
-            --accent-secondary: #4fc3f7;
-            --accent-tertiary: #ab47bc;
-            --title-glow: #ff6b35;
-            --title-shadow: #4fc3f7;
-            --particle-orange: #ff6b35;
-            --particle-cyan: #00bcd4;
-            --particle-pink: #e91e63;
-            --success-green: #4caf50;
-            --warning-orange: #ff9800;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: linear-gradient(135deg, var(--background-color) 0%, #0f172a 50%, var(--background-color) 100%);
-            background-attachment: fixed;
-            color: var(--text-color);
-            font-family: 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-			letter-spacing: 1px;
-            overflow-x: hidden;
-			font-size: 1.2em;
-        }
-
-        .reactorcore-link {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: var(--accent-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            opacity: 0.8;
-            z-index: 1000;
-            transition: opacity 0.3s ease;
-        }
-
-        .reactorcore-link:hover {
-            opacity: 1;
-            color: var(--accent-primary);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Title Section */
-        .title-section {
-            position: relative;
-            height: 750px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 60px;
-            overflow: hidden;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-        }
-
-        .title-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .title-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .title-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(10, 14, 26, 0.4) 0%, rgba(26, 31, 46, 0.2) 50%, rgba(10, 14, 26, 0.4) 100%);
-        }
-
-        .title-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-
-        .main-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 5rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            color: var(--text-color);
-            text-shadow: 
-                0 0 10px var(--title-glow),
-                0 0 20px var(--title-glow),
-                0 0 30px var(--title-shadow),
-                0 0 40px var(--title-shadow),
-                3px 3px 6px rgba(0, 0, 0, 0.9);
-            animation: titlePulse 3s ease-in-out infinite;
-            background: rgba(30, 30, 30, 0.6);
-            padding: 40px 60px;
-            border-radius: 8px;
-            border: 2px solid rgba(255, 107, 53, 0.3);
-            letter-spacing: 2px;
-        }
-
-        .subtitle {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 600;
-            color: var(--accent-secondary);
-            text-shadow: 
-                0 0 8px var(--accent-secondary),
-                0 0 16px var(--accent-secondary),
-                2px 2px 4px rgba(0, 0, 0, 0.8);
-            animation: subtitleGlow 4s ease-in-out infinite;
-            background: rgba(30, 30, 30, 0.5);
-            padding: 15px 30px;
-            border-radius: 6px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        @keyframes titlePulse {
-            0%, 100% { 
-                text-shadow: 
-                    0 0 10px var(--title-glow),
-                    0 0 20px var(--title-glow),
-                    0 0 30px var(--title-shadow),
-                    0 0 40px var(--title-shadow);
-            }
-            50% { 
-                text-shadow: 
-                    0 0 15px var(--title-glow),
-                    0 0 30px var(--title-glow),
-                    0 0 45px var(--title-shadow),
-                    0 0 60px var(--title-shadow);
-            }
-        }
-
-        @keyframes subtitleGlow {
-            0%, 100% { 
-                text-shadow: 
-                    0 0 5px var(--accent-secondary),
-                    0 0 10px var(--accent-secondary);
-            }
-            50% { 
-                text-shadow: 
-                    0 0 8px var(--accent-secondary),
-                    0 0 16px var(--accent-secondary);
-            }
-        }
-
-        /* Section Styling */
-        section {
-            margin-bottom: 60px;
-        }
-
-        h2 {
-            font-family: 'Orbitron', monospace;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: var(--text-color);
-            text-shadow: 
-                0 0 8px var(--accent-primary),
-                0 0 16px var(--accent-primary),
-                2px 2px 4px rgba(0, 0, 0, 0.8);
-            animation: headerGlow 5s ease-in-out infinite;
-            letter-spacing: 1px;
-        }
-
-        @keyframes headerGlow {
-            0%, 100% { 
-                text-shadow: 
-                    0 0 8px var(--accent-primary),
-                    0 0 16px var(--accent-primary);
-            }
-            50% { 
-                text-shadow: 
-                    0 0 12px var(--accent-primary),
-                    0 0 24px var(--accent-primary);
-            }
-        }
-
-        /* Overview Section */
-        .overview-section {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .overview-content p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .overview-content strong {
-            color: var(--accent-primary);
-            font-weight: 600;
-        }
-
-        /* Cards Section */
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .info-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .info-card:hover {
-            border-color: var(--accent-primary);
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.2);
-        }
-
-        .info-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--accent-secondary);
-            text-shadow: 0 0 5px var(--accent-secondary);
-        }
-
-        .info-card p {
-            margin-bottom: 15px;
-        }
-
-        .info-card strong {
-            color: var(--accent-primary);
-        }
-
-        /* Story Image Section */
-        .story-image-section {
-            margin: 60px 0;
-        }
-
-        .story-container {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .story-image {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .story-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            max-width: 600px;
-        }
-
-        .story-quote blockquote {
-            position: relative;
-            z-index: 2;
-            padding: 20px;
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--accent-tertiary);
-            text-shadow: 0 0 8px var(--accent-tertiary);
-        }
-
-        /* Lore Section */
-        .lore-section {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            margin-bottom: 60px;
-        }
-
-        .lore-content {
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-        }
-
-        .lore-background,
-        .lore-present,
-        .lore-mission {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-primary);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .lore-present {
-            border-left-color: var(--accent-secondary);
-        }
-
-        .lore-mission {
-            border-left-color: var(--accent-tertiary);
-        }
-
-        .lore-content h3 {
-            color: var(--accent-primary);
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            text-shadow: 0 0 5px var(--accent-primary);
-        }
-
-        .lore-present h3 {
-            color: var(--accent-secondary);
-            text-shadow: 0 0 5px var(--accent-secondary);
-        }
-
-        .lore-mission h3 {
-            color: var(--accent-tertiary);
-            text-shadow: 0 0 5px var(--accent-tertiary);
-        }
-
-        .lore-content p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        .lore-content strong {
-            color: var(--accent-primary);
-            font-weight: 600;
-        }
-
-        .lore-present strong {
-            color: var(--accent-secondary);
-        }
-
-        .lore-mission strong {
-            color: var(--accent-tertiary);
-        }
-
-        /* Controls Section */
-        .controls-section {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .controls-description {
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
-        .controls-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .control-group {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-        }
-
-        .control-group h4 {
-            color: var(--accent-secondary);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .control-item {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .key {
-            background: var(--accent-primary);
-            color: white;
-            padding: 4px 8px;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-right: 10px;
-            min-width: 80px;
-            text-align: center;
-        }
-
-        /* Vignette Section */
-        .vignette-section {
-            margin: 60px 0;
-        }
-
-        .vignette-container {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .vignette-image {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .vignette-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            max-width: 500px;
-        }
-
-        .quote-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-        }
-
-        .vignette-quote blockquote {
-            position: relative;
-            z-index: 2;
-            padding: 20px;
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--accent-secondary);
-            text-shadow: 0 0 8px var(--accent-secondary);
-        }
-
-        /* Layers Section */
-        .layers-container {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .layer-card {
-            background: var(--card-bg);
-            padding: 35px;
-            border-radius: 15px;
-            border-left: 5px solid var(--accent-primary);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .layer-card:hover {
-            border-left-color: var(--accent-secondary);
-            box-shadow: 0 12px 35px rgba(79, 195, 247, 0.2);
-        }
-
-        .layer-card h3 {
-            color: var(--accent-secondary);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            text-shadow: 0 0 5px var(--accent-secondary);
-        }
-
-        /* Modes Section */
-        .modes-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .mode-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .mode-card.quick:hover {
-            border-color: var(--success-green);
-            box-shadow: 0 12px 35px rgba(76, 175, 80, 0.2);
-        }
-
-        .mode-card.standard:hover {
-            border-color: var(--accent-primary);
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.2);
-        }
-
-        .mode-card.endurance:hover {
-            border-color: var(--accent-tertiary);
-            box-shadow: 0 12px 35px rgba(171, 71, 188, 0.2);
-        }
-
-        .mode-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .quick h3 { color: var(--success-green); }
-        .standard h3 { color: var(--accent-primary); }
-        .endurance h3 { color: var(--accent-tertiary); }
-
-        /* Features Section */
-        .feature-card {
-            background: var(--card-bg);
-            padding: 35px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--accent-secondary);
-            box-shadow: 0 12px 35px rgba(79, 195, 247, 0.2);
-        }
-
-        .feature-card h3 {
-            color: var(--accent-primary);
-            margin-bottom: 20px;
-            font-size: 1.6rem;
-            text-shadow: 0 0 5px var(--accent-primary);
-        }
-
-        .feature-card strong {
-            color: var(--accent-secondary);
-        }
-
-        /* Mermaid Diagram Styling */
-        .mermaid {
-            margin: 25px 0;
-            text-align: center;
-            background: var(--background-color);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-        }
-
-        /* Feature Image Section */
-        .feature-image-section {
-            margin: 60px 0;
-        }
-
-        .feature-container {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .feature-image {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .feature-quote {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            max-width: 600px;
-        }
-
-        .feature-quote blockquote {
-            position: relative;
-            z-index: 2;
-            padding: 20px;
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--accent-primary);
-            text-shadow: 0 0 8px var(--accent-primary);
-        }
-
-        /* Box Art Section */
-        .boxart-section {
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .boxart-container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .boxart-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .boxart-description h3 {
-            color: var(--accent-primary);
-            font-size: 2rem;
-            margin-bottom: 20px;
-            text-shadow: 0 0 8px var(--accent-primary);
-        }
-
-        .boxart-description p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .boxart-description strong {
-            color: var(--accent-secondary);
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 40px;
-            margin-top: 80px;
-            border-top: 2px solid var(--border-color);
-            background: var(--container-bg);
-        }
-
-        .footer a {
-            color: var(--accent-secondary);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: var(--accent-primary);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.3rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .card-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .modes-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .controls-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .lore-content {
-                gap: 25px;
-            }
-            
-            .lore-background,
-            .lore-present,
-            .lore-mission {
-                padding: 20px;
-            }
-            
-            .story-quote,
-            .vignette-quote,
-            .feature-quote {
-                left: 10px;
-                right: 10px;
-                max-width: none;
-            }
-            
-            .boxart-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .container {
-                padding: 0 15px;
-            }
-            
-            .title-section {
-                height: 400px;
-            }
-        }
+            --flow-1: #0b0a16;
+            --flow-2: #2a1250;
+            --grid-minor: rgba(180, 170, 255, 0.045);
+            --grid-major: rgba(180, 170, 255, 0.10);
+            --p-ground: rgba(12, 11, 24, 0.95);
+            --p-panel: #17152b;
+            --p-1: #36e6ff;
+            --p-2: #b46bff;
+            --p-3: #ffd23f;
+            --p-text: #e1e0f0;
+            --p-dim: #a5a3c0;
+            --p-line: rgba(180, 170, 255, 0.15);
+            --font-title: "Zeroes One", "Segoe UI", sans-serif;
+            --font-sub: "MatrixType Display", "Segoe UI", monospace;
+            --shade: #05040c;
+        }
+
+        /* Title effect, "burn-out": the glow runs the colour path of the game's dust, from the
+           starmecha's cyan through fiery yellow and violet to a dark ember, then lights again. */
+        .p-name {
+            font-size: clamp(2.2rem, 1rem + 5vw, 5.6rem);
+            color: #f2f4ff;
+            animation: burnout 4s linear infinite;
+        }
+        @keyframes burnout {
+            0%, 100% { text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(54, 230, 255, 0.9), 0 0 40px rgba(54, 230, 255, 0.35); }
+            30% { text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(255, 210, 63, 0.95), 0 0 40px rgba(255, 120, 40, 0.45); }
+            60% { text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(180, 107, 255, 0.85), 0 0 34px rgba(180, 107, 255, 0.3); }
+            85% { text-shadow: 0 2px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 8px rgba(60, 40, 90, 0.6); }
+        }
+        .p-sub { text-transform: uppercase; letter-spacing: 0.08em; font-size: clamp(1rem, 0.7rem + 1.4vw, 1.9rem); color: var(--p-1); text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 2px 0 var(--shade), 0 0 10px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.4rem; height: 3px;
+            background: var(--p-1);
+            animation: burnout-line 4s linear infinite;
+        }
+        @keyframes burnout-line {
+            0%, 100% { background: var(--p-1); box-shadow: 0 0 14px rgba(54, 230, 255, 0.9); }
+            30% { background: var(--p-3); box-shadow: 0 0 14px rgba(255, 210, 63, 0.9); }
+            60% { background: var(--p-2); box-shadow: 0 0 12px rgba(180, 107, 255, 0.8); }
+            85% { background: #3c2a5a; box-shadow: none; }
+        }
+        .section-mark::after { animation: h2-line 4s linear infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: 0 0 10px rgba(54, 230, 255, 0.6); } 30% { box-shadow: 0 0 10px rgba(255, 210, 63, 0.6); } 60% { box-shadow: 0 0 10px rgba(180, 107, 255, 0.5); } 85% { box-shadow: none; } }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 1.05rem; letter-spacing: 0.1em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 400; font-size: 1.05rem; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1rem; } }
     </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
 
-    <script>
-        mermaid.initialize({ 
-            startOnLoad: true,
-            theme: 'dark',
-            themeVariables: {
-                primaryColor: '#ff6b35',
-                primaryTextColor: '#e2e8f0',
-                primaryBorderColor: '#4fc3f7',
-                lineColor: '#4fc3f7',
-                secondaryColor: '#4fc3f7',
-                tertiaryColor: '#ab47bc',
-                background: '#1a1f2e',
-                secondaryTextColor: '#e2e8f0',
-                tertiaryTextColor: '#e2e8f0'
-            }
-        });
-    </script>
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/stardust_1_title.jpg" alt="Neon digital art: dark mecha silhouettes advance through swirling orange dust under a starry sky, a huge crystalline alien structure behind them, starfighters streaking past and explosions bursting like falling stars." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Stardust Assault</span><span class="p-sub">Twin-Stick Mecha Shooter</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/interceptor-ship-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/missile-swarm-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Stardust Assault is a side-view, auto-scrolling shoot 'em up that mixes <strong>R-Type</strong>, <strong>Missile Command</strong> and <strong>Space Invaders</strong>. You fly a starmecha, a starfighter-sized robot, into the alien hive inside a planetoid, aiming freely in every direction, against swarm after swarm of colourful geometric invaders.</p>
+            <p>Every invader you destroy bursts into <strong>falling sand dust</strong>, simulated grain by grain, that starts in its own colour and burns through fiery neon to black before it's gone. The rarest, darkest embers stay behind and drift, and over the length of a run they build up into a nebula behind the battle. When you finally blow up the hive's core, the whole canvas is saved as an artwork, with you posing in the middle of it.</p>
+            <p>It's one of Reactorcore's series of small falling sand games, each a short, complete game built on a pixel simulation, and this page presents it at that honest size.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/crosshair-delapouite.png)"></span>Target audience</h3>
+                    <p>Shoot 'em up fans who wish they could aim anywhere, and anyone who loves the particle spectacle of Geometry Wars.</p>
+                    <p>They want <strong>flow and spectacle</strong>, and they're put off by shmups that demand memorizing bullet patterns and get harder until you lose.</p>
+                    <p>WASD to fly, the mouse to aim, three keys for missile, shield and teleport.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/falling-star-delapouite.png)"></span>Game's purpose</h3>
+                    <p><strong>Excitement and play:</strong> the fast combat dance of dodging, aiming and clearing a swarm.</p>
+                    <p><strong>Power:</strong> one well-armed starmecha against countless invaders, getting stronger with every wave.</p>
+                    <p><strong>Beauty and creation:</strong> every run paints a picture nobody else will ever have.</p>
+                    <p>It respects <strong>the player's time</strong>: you choose how long the run is before it starts, and it never ramps up until you lose.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/palette-delapouite.png)"></span>Core concept</h3>
+                    <p>Shmups usually escalate stage by stage until you fail, and leave nothing behind but a score.</p>
+                    <p>Here the waves are <strong>random but never stronger</strong>, while your power keeps stacking, so finishing is normal. The length is yours to choose.</p>
+                    <p>And the run leaves something behind: a <strong>painting made of every explosion</strong> in it.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/stardust_5_story.jpg" alt="Neon illustration inside a hollow planetoid: a tunnel of glowing cyan honeycomb walls and twisted organic roots opening onto a blazing white-gold core, small colourful crystal-shaped alien ships drifting about, and a white humanoid robot with a big gun flying in from the left on blue thrusters." width="1280" height="720" loading="lazy">
+            <figcaption>"Inside the planetoid, the invaders' hive grows around a single core. Destroy the core and the hive is finished."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/artificial-hive-lorc.png)"></span>Lore and story</h2>
+            <h3>The invaders</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/stardust/01-invaders.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>They come in every shape and colour, triangles, cubes, rings and stars, small and large, always in formations and always in numbers. Individually they're fragile. Together they're endless.</p>
+
+            <h3>The hive</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/stardust/02-hive.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>They pour out of a hive grown inside a planetoid, layer upon layer of alien tunnels around a single glowing <strong>core</strong> that makes them, one after another, for as long as it exists.</p>
+
+            <h3>The assault</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/stardust/03-assault.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>So instead of waiting for the next wave, someone takes the fight to them: one starmecha, flying into the planetoid itself, through every swarm between the surface and the core.</p>
+
+            <h3>The goal</h3>
+            <p>Reach the heart of the hive and blow it up, and be there, striking a pose, when it goes.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/mouse-delapouite.png)"></span>Controls and interface</h2>
+            <p>The starmecha flies anywhere on the screen, and it always turns to face the mouse, weapons and all, so you can fire in any direction, even behind you.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Fly</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Move freely around the stage</dd></div>
+                        <div><dt>Mouse</dt><dd>Turn the mecha and aim</dd></div>
+                        <div><dt>E</dt><dd>Hold to raise the shield</dd></div>
+                        <div><dt>X</dt><dd>Teleport to the mirrored spot</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fire</h3>
+                    <dl>
+                        <div><dt>Mouse 1</dt><dd>Mass driver burst</dd></div>
+                        <div><dt>Mouse 2</dt><dd>Frag shotgun</dd></div>
+                        <div><dt>Q</dt><dd>Launch a missile at the pointer</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Before a wave arrives, an orange <strong>!</strong> appears at the right edge of the screen where it will enter, so you never crash into a formation by accident at the start.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/stardust_2_vignette.jpg" alt="Neon digital art: a white angular war mecha fires two guns across a sandy battlefield at a swarm of insect-like aliens, a hexagonal energy shield glowing beside it and an alien bursting into colourful fragments in front." width="1280" height="720" loading="lazy">
+            <figcaption>"The starmecha aims in any direction, so you're never stuck firing to the right."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bright-explosion-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One wave</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/stardust/04-wave.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A stage is one wave of <strong>10 to 40 invaders</strong>, mixed shapes and sizes in a random formation. They fly in together, then decide whether to keep their formation or scatter, and bounce around the stage firing the odd shot.</p>
+                        <p>You weave between them, carve lines through them with the mass driver and drop missiles where they bunch up. The last one drops an artifact, and about two seconds later the next wave arrives.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-core-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>An assault on the hive</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/stardust/05-core.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>An assault is a run of rapid stages, <strong>20, 80 or 200</strong>, chosen before you start, with your powers stacking all the way through. After the last wave, the <strong>core</strong> appears: a huge orb that spawns an invader every second, up to ten at a time, and that explodes, on any hit at all, in a burst four times bigger than any ship's.</p>
+                        <p>Pick your mecha's colour before you launch: it's the colour you'll paint the hive with if you're hit.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/portrait-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>A gallery of hives</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/stardust/06-gallery.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every destroyed hive leaves its <strong>canvas</strong>: the saved picture of the final blast, layered with every explosion of the run and your mecha posing in the middle. The canvases are kept together as a gallery, each one unique, sparse and minimal after a short assault, dense and rich after a long one, and easy to share as an image.</p>
+                        <p>There's always another hive to fly into, and another picture to paint.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A coffee break or an evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/stardust/07-break.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A wave lasts well under a minute, so a short assault fits a coffee break, a medium one an evening, and the endurance run several sittings. The game saves between stages, so even a 200-stage assault can be left and picked up again, its nebula intact.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span>Game modes</h2>
+            <p>There's one mode, the assault on the hive, in the length you choose:</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Length</th><th scope="col">Stages</th><th scope="col">The canvas it leaves</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Short</th><td data-label="Stages">20</td><td data-label="Canvas">Sparse and minimal</td></tr>
+                        <tr><th scope="row">Medium</th><td data-label="Stages">80</td><td data-label="Canvas">A full nebula behind the final blast</td></tr>
+                        <tr><th scope="row">Endurance</th><td data-label="Stages">200</td><td data-label="Canvas">Dense, rich and layered</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/mecha-head-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/missile-pod-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">From Missile Command</p>
+                        <h3>Missiles that bloom where you point</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/stardust/08-blast.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Press <kbd>Q</kbd> and a missile leaves the starmecha and flies to the exact spot under the mouse pointer. There it detonates into a <strong>blast circle</strong> that slowly grows, reaches its full size, slowly shrinks and disappears, as in the classic Missile Command. Every invader that touches it while it lasts is obliterated.</p>
+                        <p>That makes it a tool for space, not just a weapon: you place a lingering wall of fire where the swarm is about to bounce, and let them fly into it. You're immune to all your own weapons, so you can sit right in the middle of the blast; the invaders, likewise, are immune to theirs.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/machine-gun-magazine-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Three tools, three shapes</p>
+                        <h3>The arsenal</h3>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Weapon</th><th scope="col">How it works</th><th scope="col">Best for</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Mass driver</th><td data-label="How">A rapid burst of high-velocity rounds, like an A-10's cannon, that tears right through everything in its path</td><td data-label="Best for">A whole line of invaders at once</td></tr>
+                                    <tr><th scope="row">Frag shotgun</th><td data-label="How">Slow-firing; a wide spread of superheated pellets that stop at the first thing they hit</td><td data-label="Best for">A cluster in front of you (the ones hiding behind it survive)</td></tr>
+                                    <tr><th scope="row">Missile</th><td data-label="How">Flies to the pointer and leaves a growing, lingering blast circle</td><td data-label="Best for">Where the swarm is going to be</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Because the formations bounce around the stage, a long mass driver burst is also a trap: hold the line of rounds in place and let the bouncing invaders run into it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/teleport-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Ways out</p>
+                        <h3>Shield and mirror teleport</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/stardust/09-shield.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Holding <kbd>E</kbd> raises a <strong>shield</strong> that blocks everything while it lasts: about three seconds in total, draining as you use it, and recharging from empty to full in nine seconds when you let go.</p>
+                        <p><kbd>X</kbd> <strong>teleports</strong> the starmecha to the mirror image of where it is, flipped through the centre of the stage: from the top left corner straight to the bottom right. Cornered by a formation? You're on the other side of the screen.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/convergence-target-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Quantity against quality</p>
+                        <h3>Invaders that never ramp up</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/stardust/10-swarm.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every invader dies to a single hit. The starmecha takes <strong>five</strong> hits or collisions before it's destroyed. They have the numbers; you have the quality.</p>
+                        <p>And the waves <strong>don't get stronger or weaker</strong> as the assault goes on: any wave can hold any kinds of invader, in any formation, at stage 3 or stage 193. Your power grows and theirs doesn't, so a long run turns into a spectacle of mastery rather than a grind toward an inevitable death.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/glowing-artifact-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Power that stacks</p>
+                        <h3>Artifacts</h3>
+                        <p>The last invader of every wave drops an <strong>artifact</strong>, and its effects stack for the rest of the assault:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Artifact</th><th scope="col">Effect</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Repair</th><td>Restores one hit point, if you're missing any</td></tr>
+                                    <tr><th scope="row">Missile</th><td>Blast radius and duration +5%</td></tr>
+                                    <tr><th scope="row">Mass driver</th><td>Burst duration +5%: a longer line of rounds</td></tr>
+                                    <tr><th scope="row">Shotgun</th><td>Pellet velocity +5%, so more range</td></tr>
+                                    <tr><th scope="row">Defence orb</th><td>An orb circles the mecha and absorbs up to three shots or collisions; up to six at once</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Over 200 stages that adds up to a starmecha whose missiles fill half the screen and whose bursts stretch across it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/large-paint-brush-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Falling stardust, and the canvas</h3>
+                        <p>The game runs in three layers. The ships, invaders and shots live in the <strong>game layer</strong>. In front of it, a <strong>falling sand layer</strong> carries every weapon trail, explosion and burst of debris as simulated grains: when anything blows up, it shatters into dust in its own colour, the invader's or your mecha's, which shifts to a fiery neon, then to black, then disappears.</p>
+                        <p>Behind them all, a third layer catches the rarer, dark and muted embers thrown out by ship explosions. Those don't disappear. They float and gather through the whole assault, building a <strong>painterly nebula</strong> behind the battle. Three seconds after the core blows, with you striking whatever pose you like in the blast, the canvas is saved: a picture of that one run.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/stardust_3_feature.jpg" alt="Neon digital art: an alien ship blowing apart above a desert into streams of orange, violet and cyan particles and tumbling fragments, the barrel of a heavy mecha gun in the foreground." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every explosion shatters into dust in the ship's own colour, which burns through fiery neon to black."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/stardust_4_boxart.jpg" alt="Box art in neon digital art: a lone armoured pilot stands silhouetted before a towering angular mecha against a huge orange explosion, crackling violet and cyan lightning and a horde of alien silhouettes around them." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Mission brief</p>
+                <h2 id="sendoff">Stardust Assault: Twin-Stick Mecha Shooter</h2>
+                <p>Target: the invader hive, deep inside the planetoid. Assets: one starmecha, in the colour of your choosing. Opposition: uncountable.</p>
+                <p>Route length: your call. Twenty stages, eighty, or two hundred. Objective: reach the core and destroy it. Recommended: strike a pose when it goes.</p>
+                <p><strong>Fly in. Light it up. Leave a masterpiece.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by R-Type, Missile Command, Space Invaders and falling sand games</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Zeroes One and MatrixType Display (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

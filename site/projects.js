@@ -208,9 +208,9 @@ window.PROJECTS = [
   {
     page: "StardustAssault.html", prefix: "stardust",
     title: "Stardust Assault", subtitle: "Twin-Stick Mecha Shooter",
-    icon: "interceptor-ship-delapouite", tint: "magenta",
-    blurb: "Classic shmup action meets particle physics. Every explosion from your starmecha's arsenal becomes a canvas of colorful falling sand.",
-    genres: ["action", "falling-sand", "mecha"], tags: ["twin-stick", "shmup", "space"],
+    icon: "interceptor-ship-delapouite", tint: "cyan",
+    blurb: "R-Type meets Missile Command and Space Invaders. A starmecha aims anywhere against swarms that never ramp up, every invader bursts into falling dust, and each run leaves a painting of its explosions.",
+    genres: ["arcade", "falling-sand", "mecha", "action"], tags: ["twin-stick", "shmup", "particles", "artwork"],
     status: "concept", added: "2025-10-08"
   },
   {
