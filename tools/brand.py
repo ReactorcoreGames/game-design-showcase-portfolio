@@ -77,6 +77,15 @@ FONTS = [
     ("Exo2.0-ExtraBoldItalic.otf", "exo2-extrabold-italic.woff2", None, None),  # SIL OFL, Poo Storm Janitor Powersuit
     ("Zeroes One.otf", "zeroes-one.woff2", None, None),                     # CC0, StardustAssault
     ("MatrixTypeDisplay-Regular.ttf", "matrixtype-display.woff2", None, None),  # CC0, StardustAssault
+    ("Unsteady Oversteer.otf", "unsteady-oversteer.woff2", None, None),     # CC0, Zero Space Robo Derby
+    ("Zeroes Three.otf", "zeroes-three.woff2", None, None),                 # CC0, Zero Space Robo Derby
+    ("Cranberry Gin.otf", "cranberry-gin.woff2", None, None),               # CC0, abyssal_caretaker
+    ("ExpletusSans-SemiBoldItalic.ttf", "expletus-sans-semibold-italic.woff2", None, None),  # SIL OFL, abyssal_caretaker
+    ("Exo2.0-BlackItalic.otf", "exo2-black-italic.woff2", None, None),      # SIL OFL, admiralwars
+    ("TurretRoad-Regular.ttf", "turret-road.woff2", None, None),            # SIL OFL, admiralwars
+    ("MatrixType-Regular.ttf", "matrixtype.woff2", None, None),             # CC0, antigrav_deconstruction
+    ("Exo2.0-ExtraBold.otf", "exo2-extrabold.woff2", None, None),           # SIL OFL, astro_industry
+    ("ExpletusSans-SemiBold.ttf", "expletus-sans-semibold.woff2", None, None),  # SIL OFL, astro_industry
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 
