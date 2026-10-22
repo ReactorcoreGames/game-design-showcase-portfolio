@@ -87,10 +87,10 @@ window.PROJECTS = [
   },
   {
     page: "colossal_devastators.html", prefix: "colossal",
-    title: "Colossal Devastators", subtitle: "Rampage Fighting Combat",
+    title: "Colossal Devastators", subtitle: "Kaiju Rampage Brawler",
     icon: "battle-mech-delapouite", tint: "red",
-    blurb: "One-on-one duels between 20-meter titans for dominion over worlds. Build your own fighter with an auto-balancing character system and switch between mech and beast forms mid-fight.",
-    genres: ["action", "mecha"], tags: ["fighting game", "kaiju", "customization", "transforming"],
+    blurb: "Be the alien monster of the week: a 2D Rampage-meets-Smash brawler where you wreck cities and fight their prototype super robots, with a builder that balances any 20-meter titan you can dream up.",
+    genres: ["action", "mecha", "physics"], tags: ["kaiju", "platform fighter", "character builder", "transforming"],
     status: "concept", added: "2025-10-08"
   },
   {

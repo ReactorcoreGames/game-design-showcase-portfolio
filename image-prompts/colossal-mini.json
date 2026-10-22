@@ -1,0 +1,24 @@
+{
+  "slug": "colossal-mini",
+  "out": "site/projects/mini/colossal",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Retro tokusatsu monster movie still, giant monsters and robots, miniature city at dusk, red and yellow glow. ",
+  "notes": "Mood-only mini images for colossal_devastators.html, beside the lore, game layer and feature text. SDXL (free): gen colossal-mini --model sdxl --max 999, then finish colossal-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "show", "ratio": "3:2", "prompt": "An alien mothership hovering over a city as a giant monster descends from it."},
+    {"n": 2, "name": "locals", "ratio": "3:2", "prompt": "A column of army tanks and helicopters rolling toward a giant shadow in the smoke."},
+    {"n": 3, "name": "stomp", "ratio": "3:2", "prompt": "A giant robot foot stepping down onto a city street between tall buildings."},
+    {"n": 4, "name": "city", "ratio": "3:2", "prompt": "A city skyline at dusk with a huge superweapon tower glowing in its center."},
+    {"n": 5, "name": "invasion", "ratio": "3:2", "prompt": "A planet seen from orbit with fires burning across its continents."},
+    {"n": 6, "name": "hangar", "ratio": "3:2", "prompt": "A vast alien hangar where giant monsters and robots stand in rows, waiting."},
+    {"n": 7, "name": "forms", "ratio": "3:2", "prompt": "A giant robot transforming into a dragon, metal plates shifting, sparks flying."},
+    {"n": 8, "name": "beam", "ratio": "3:2", "prompt": "A giant monster charging a glowing beam in its mouth behind a skyscraper."},
+    {"n": 9, "name": "hangar-parts", "ratio": "3:2", "prompt": "Giant mechanical arms, cannons and armor plates hanging from chains in a dark alien hangar, no signs."},
+    {"n": 10, "name": "rampage", "ratio": "3:2", "prompt": "A collapsing bridge and falling skyscraper as a giant beast roars through the city."}
+  ]
+}
