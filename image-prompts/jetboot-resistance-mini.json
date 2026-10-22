@@ -1,0 +1,74 @@
+{
+  "slug": "jetboot-resistance-mini",
+  "out": "site/projects/mini/jetboot-resistance",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - H - Gritty-Dirty",
+  "lead": "Cinematic film still, warm dusty countryside light, olive and sand tones. ",
+  "notes": "Mood-only mini images for jetboot-resistance.html, beside the lore, game layer and feature text. SDXL (free): gen jetboot-resistance-mini --model sdxl --max 999, then finish jetboot-resistance-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {
+      "n": 1,
+      "name": "country",
+      "ratio": "3:2",
+      "prompt": "A wide ordinary land of farms, rivers, forests, mountains and small towns with red roofs."
+    },
+    {
+      "n": 2,
+      "name": "occupiers",
+      "ratio": "3:2",
+      "prompt": "A grey concrete checkpoint on a country road, a propaganda billboard and a guard tower, overcast."
+    },
+    {
+      "n": 3,
+      "name": "resistance",
+      "ratio": "3:2",
+      "prompt": "A tidy hidden camp on a green grassy hillside under olive camouflage nets, a radio mast, wooden crates, morning light."
+    },
+    {
+      "n": 4,
+      "name": "wobble",
+      "ratio": "3:2",
+      "prompt": "A clumsy figure in a red scarf mid-tumble off a wooden guard tower roof, dust and splinters flying."
+    },
+    {
+      "n": 5,
+      "name": "region",
+      "ratio": "3:2",
+      "prompt": "A paper map of a countryside region on a camp table, pins and pencil marks on scattered sites, lamp light."
+    },
+    {
+      "n": 6,
+      "name": "hideout",
+      "ratio": "3:2",
+      "prompt": "A cozy hillside hideout at dusk, a radio room glowing, people around a campfire, racks of gear."
+    },
+    {
+      "n": 7,
+      "name": "jetboots",
+      "ratio": "3:2",
+      "prompt": "Heavy metal boots with small glowing jet nozzles lifting off a dry dirt road, a cloud of pale dust below, blue sky."
+    },
+    {
+      "n": 8,
+      "name": "tapes",
+      "ratio": "3:2",
+      "prompt": "Old cassette tapes and a portable tape recorder on a wooden shelf in a sunlit barracks, blue-grey and beige tones."
+    },
+    {
+      "n": 9,
+      "name": "squad",
+      "ratio": "3:2",
+      "prompt": "Five figures in red scarves and goggles walking toward a hill at sunset, seen from behind."
+    },
+    {
+      "n": 10,
+      "name": "civilians",
+      "ratio": "3:2",
+      "prompt": "Villagers waving from a red-roofed village street as dust settles, a broken checkpoint barrier."
+    }
+  ]
+}

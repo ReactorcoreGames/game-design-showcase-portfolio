@@ -34,13 +34,13 @@ V2 - refocus to just cause 2 / fallout 3 style location cleanup. Go destroy a ma
 - Holotapes in general communicate various things: coordinates for special loot, weak points of location ("bruh, we stored way too many fuel barrels here"), classified information ("there an experimental ion tank in this base yo"), feelings of crew (fear level against player), thoughts of crew (despicable stuff usually, sometimes mixed with humanities, to show the mindset of the people and also challenge player to see that they will still have human qualities but not necessarily redeemable in some cases), interesting quotes ("when you're pushed, killing is as easy as breathing"), propaganda/lies (help player learn what propaganda actually looks like).
 
 Actual gameplay:
-Teleglitch style inventory + hotkeys (scroll to item, press hotkey button + other button to register it, then use hotkey to trigger it or reserve some slots to hotkey and simply hold down Ctrl+scroll to move over item to the hotkey slot spot.)?
-Halo/soldat esque controls?
-PUBG inventory, Minecraft hotbar inventory?
-Physics driven wobbly parkour?
-Slomo?
-Vats, but freeform aim with 100% accuracy, total time freeze, no limit? Tactical highlight (red - enemy, blue - ally/neutral, purple - corpse, green - companion, orange - shootable)?
-VR game?
+Teleglitch style inventory + hotkeys (scroll to item, press hotkey button + other button to register it, then use hotkey to trigger it or reserve some slots to hotkey and simply hold down Ctrl+scroll to move over item to the hotkey slot spot.)? (yes)
+Halo 2 mixed with Soldat esque controls? (yes)
+PUBG inventory, Minecraft style hotbar inventory? (no)
+Physics driven wobbly ragdoll character parkour? (yes)
+Slow motion on demand? (bullet time - yes.)
+V.A.T.S. from fallout, but freeform aim with 100% accuracy, total time freeze, no limit? Tactical highlight (red - enemy, blue - ally/neutral, purple - corpse, green - companion, orange - shootable)? (yes)
+VR game? (no.)
 Floor slide, dropkick, roll, prone, superman, cannonball, ledge grab, halo, soldat, apex, smw, Fortnite, etc.?
 
 Thoughts:

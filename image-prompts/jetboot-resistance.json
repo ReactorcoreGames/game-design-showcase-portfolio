@@ -1,0 +1,38 @@
+{
+  "slug": "jetboot-resistance",
+  "preset": "08 Games - Team Fortress 2 (Action/3D)",
+  "style": "Palette of resistance signal red, dusty sand and olive, with sickly murk green haze; warm late-afternoon light. Cartoony floppy rubbery characters with soft round limbs.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide low-angle action shot. A cartoony floppy resistance fighter with soft rubbery limbs, wearing a red scarf, goggles and chunky metal jet boots, launches into the air on two bright jets of flame from the boots, arms flailing, a stubby rifle in one hand. Below and behind, a dusty hilltop military compound of concrete walls, fuel tanks and a tall radio tower erupts in a big cartoony explosion. Open countryside of fields and low hills stretches to the horizon under a warm late-afternoon sky."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Third-person view from behind a cartoony floppy adult resistance fighter with soft rubbery limbs, red scarf, goggles and chunky metal jet boots, sliding on their knees across a dusty concrete yard, kicking up a long trail of dust, arms out for balance. Ahead, three clumsy cartoony guards in drab grey overalls and round helmets slip and stumble in comic surprise, one with his helmet popping off. Sandbags, a wooden watchtower, oil drums and a parked truck around the yard, warm afternoon light."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide shot of a valley half swallowed by a thick wall of sickly green glowing fog. Three tall antenna-like machines on metal tripods stand at the edge of the fog, pumping it out in slow swirling clouds; one of them is toppling over with sparks and smoke, and the fog behind it is thinning and drawing back. A cartoony floppy adult resistance fighter with soft rubbery limbs, red scarf, goggles and chunky metal jet boots hovers in the foreground on two jets of flame from the boots, watching. Inside the fog, faint glowing crates shine green."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Portrait cover composition, low angle looking up at a bright warm sky. A cartoony floppy adult resistance fighter with soft rubbery limbs, red scarf, goggles and chunky metal jet boots soars upward with two jets of flame under the boots, one fist raised, scarf streaming, big confident grin. Far below, a grey concrete compound with a tall radio tower sits on a dusty hill under a cloud of dust. Open sky fills the top of the frame. No text, lettering or signatures anywhere.",
+      "model": "nano-banana-2-lite"
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Establishing wide shot of open countryside seen from a hill: patchwork fields, a winding river, small villages with red roofs, forests and low mountains. Scattered across the land are grey concrete military bases, radio towers, fuel silos and a propaganda billboard with a blank face on it. In the far distance a dome of sickly green glowing fog covers one valley. In the foreground, a hidden resistance camp under camouflage nets with a radio mast, crates and a few floppy fighters in red scarves."
+    }
+  ]
+}

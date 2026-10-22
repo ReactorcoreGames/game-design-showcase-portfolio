@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "jetboot-resistance.html", prefix: "jetboot-resistance",
+    title: "Jetboot Resistance", subtitle: "Ragdoll Liberation Raids",
+    icon: "boots-lorc", tint: "red",
+    blurb: "Floppy ragdoll freedom fighters in jet boots take back generated regions from occupiers: break bases in any order, shrink the weaponized murk, and answer the next call for help. A squad of five per region, and nothing you destroy ever un-happens.",
+    genres: ["action", "ragdoll", "physics", "sandbox"], tags: ["jet boots", "open world", "liberation", "procedural campaigns"],
+    status: "concept", added: "2026-10-22"
+  },
+  {
     page: "turbo-minesweeper.html", prefix: "turbo-minesweeper",
     title: "Ukrainian Turbo Minesweeper", subtitle: "Seeded Minesweeper Campaign",
     icon: "land-mine-lorc", tint: "yellow",

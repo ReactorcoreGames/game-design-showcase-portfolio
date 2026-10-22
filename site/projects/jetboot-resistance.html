@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetboot Resistance: Ragdoll Liberation Raids</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: floppy ragdoll resistance fighters in jet boots liberate generated regions from occupiers, blowing up bases in any order and delving into weaponized fog, in a world that never runs out of calls for help.">
+    <meta name="keywords" content="game design concept, ragdoll physics, open world sandbox, jet boots, third-person shooter, procedural campaigns, liberation, Totally Accurate Battlegrounds inspired, Just Cause inspired, Soldat inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/jetboot-resistance.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Jetboot Resistance: Ragdoll Liberation Raids">
+    <meta property="og:description" content="A game design concept: floppy ragdoll fighters in jet boots liberate generated regions from occupiers, one raid at a time. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/jetboot-resistance.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/jetboot-resistance_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a floppy cartoon resistance fighter in jet boots slides across a military yard as clumsy soldiers tumble through the air">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Jetboot Resistance: Ragdoll Liberation Raids">
+    <meta name="twitter:description" content="A game design concept: floppy ragdoll fighters in jet boots liberate generated regions from occupiers, one raid at a time.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/jetboot-resistance_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Jetboot Resistance: Ragdoll Liberation Raids",
+        "description": "A game design concept, not a released game: a third-person ragdoll physics action game where floppy resistance fighters in jet boots liberate generated regions from occupiers, blowing up bases in any order and delving into weaponized fog, in an endless series of region campaigns.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Sandbox", "Shooter"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/jetboot-resistance.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/jetboot-resistance_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#16120d">
+
+    <link rel="preload" href="../fonts/spectrashell.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Jetboot Resistance: resistance-scarf red over scorched earth brown, with dusty sand as the
+           second accent and cream for highlights. The murk's sickly green is kept for the murk's own
+           card and the images. Spectrashell for the title and headings (a punchy condensed poster
+           face, like a resistance leaflet), Fragile Bombers for the subtitle and kickers. */
+        @font-face { font-family: "Spectrashell"; src: url("../fonts/spectrashell.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Fragile Bombers"; src: url("../fonts/fragile-bombers.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #16120d;
+            --flow-2: #3b2418;
+            --grid-minor: rgba(255, 210, 170, 0.04);
+            --grid-major: rgba(255, 210, 170, 0.09);
+            --p-ground: rgba(20, 16, 12, 0.95);
+            --p-panel: #221b14;
+            --p-1: #ff5d4a;
+            --p-2: #e9c27c;
+            --p-3: #f6e8cf;
+            --p-text: #e3dbcf;
+            --p-dim: #b0a493;
+            --p-line: rgba(255, 210, 170, 0.15);
+            --murk: #a6d36e;
+            --font-title: "Spectrashell", "Segoe UI", sans-serif;
+            --font-sub: "Fragile Bombers", "Segoe UI", sans-serif;
+            --shade: #0e0a07;
+        }
+
+        /* Title effect, "jet burn": a hot red-orange halo flares under the letters like a jet boot
+           firing, then cuts out, over layered dark shadows so the title stays legible throughout. */
+        .p-name { letter-spacing: 0.02em; animation: burn 5s ease-in-out infinite; }
+        @keyframes burn {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 8px 40px rgba(255, 93, 74, 0.2); }
+            45% { color: #fff6e6; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 6px 16px rgba(255, 93, 74, 0.85), 0 12px 30px rgba(255, 170, 80, 0.55); }
+            55% { color: #fff6e6; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 4px 10px rgba(255, 93, 74, 0.9), 0 14px 36px rgba(255, 170, 80, 0.6); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: burn-line 5s ease-in-out infinite;
+        }
+        @keyframes burn-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(255, 93, 74, 0.3); opacity: 0.7; }
+            50% { box-shadow: 0 0 14px rgba(255, 93, 74, 0.9), 0 0 28px rgba(255, 170, 80, 0.5); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(255, 93, 74, 0.65); } }
+        h2, h3 { letter-spacing: 0.03em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.08em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .modes td:nth-of-type(1) { width: 60%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/jetboot-resistance_1_title.jpg" alt="A grinning cartoon resistance fighter in a red scarf, goggles and chunky jet boots flies through the air on two jets of flame, a stubby rifle in hand, above a concrete compound with radio masts going up in a huge explosion." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Jetboot Resistance</span><span class="p-sub">Ragdoll Liberation Raids</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/boots-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/fist-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Jetboot Resistance is a ragdoll action game about floppy, wobbly freedom fighters in jet boots taking a country back from its occupiers, one raid at a time. Drop into a region, blow up what holds it down in any order and any way you like, and get out when you're done.</p>
+            <p>The bodies come from Totally Accurate Battlegrounds: soft, rubbery, physics-driven characters who flail, tumble and climb. The pace sits between Just Cause 2's sandbox demolition and Soldat's jet-boot acrobatics, slowed down whenever you want by bullet time and a full tactical freeze. The structure is the opposite of the battle royale that inspired it: no shrinking circle, no ninety-nine other players who must lose, just a world of occupied regions and a resistance that answers their calls.</p>
+            <p>Also inspired by Red Faction Guerrilla, Fallout 3, Human Fall Flat, Warning Forever, Duality, Eastward, Gundam Seed, Star Fox 2, Rogue Legacy and Streets of Rogue.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who laugh out loud at physics slapstick and love <strong>taking a place apart their own way</strong>: Just Cause and Red Faction demolition fans, TABG fans who wanted more than one match, Soldat players who miss jet boots.</p>
+                    <p>It's keyboard and mouse, Halo-and-Soldat style. Precision is never a gate: bullet time and the tactical freeze stop the world whenever you need to think or aim.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and silliness:</strong> wobbly bodies, flying soldiers, chain-reaction explosions.</p>
+                    <p><strong>Freedom and power:</strong> any target, any order, any route, any tool, and the sky is yours in jet boots.</p>
+                    <p><strong>Meaning:</strong> regions that stay free, people who write back, and a resistance whose fallen are remembered.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> (time stops on demand, and you choose when to extract) and <strong>respect for your effort</strong> (nothing you destroy ever un-happens).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>A battle royale makes everyone but one player lose and throws the match away. Open-world liberation games end when the map is cleared.</p>
+                    <p>Here <strong>the world is the opponent</strong>, and it gets weaker as you win: every boss you remove leaves his goons clumsier and more desperate. A region is a finite campaign with its own shape, and <strong>there's always another region calling for help</strong>.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/jetboot-resistance_5_story.jpg" alt="Open countryside of fields, a river and red-roofed villages dotted with grey concrete bases and radio masts, a glowing green fog over a far valley, a propaganda billboard with a face on it, and resistance fighters in red scarves resting among crates under camouflage nets in the foreground." width="1280" height="720" loading="lazy">
+            <figcaption>"Every region below belongs to an occupier, with its own bases, bosses and murk. The resistance watches from the hills."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/radio-tower-delapouite.png)"></span>Lore and story</h2>
+            <h3>The country</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/01-country.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A wide, ordinary land of farms, rivers, forests, mountains and small towns, carved into regions a few kilometres across. Some are green and wet, some dry and dusty, some poisoned by industry. Each one is somebody's home.</p>
+            <h3>The occupiers</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/02-occupiers.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Region by region, the land has been taken over by occupiers: crime syndicates, private armies and juntas, each one generated with its own name, bosses and habits, and each defined by what it does, from greed to cruelty to plain laziness. They squeeze their regions through bases, depots, propaganda and checkpoints, and they have a weapon nobody else has.</p>
+            <p>That weapon is <strong>the murk</strong>: a sickly green fog pumped out by machines, which wipes an area clean of life and keeps the rest of the region afraid. It drifts with the wind and the weather. Some occupiers use <strong>the hush</strong> instead, a radiation emitter that the weather can't move, with weaknesses of its own. The secret is what the murk does to objects left inside it: it enhances them. Wiping out a valley is how the occupiers farm it.</p>
+            <h3>The resistance, and the job right now</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/03-resistance.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You lead the resistance from a hideout in the hills. It isn't one hero: it's a group of volunteers in red scarves and jet boots, and whoever is up next takes the gun. Occupied towns radio for help, and you answer: send a squad, break the occupier's grip on the region, and bring people home. When a region is free, its people send word, sometimes new volunteers, and the next call has already come in.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control one ragdoll fighter, in a third-person camera that follows like Just Cause 2's or a first-person view, switched at any time as in Fallout 3. The controls mix Halo 2 and Soldat. The layout below is a suggestion.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Run, with real momentum</dd></div>
+                        <div><dt>Space</dt><dd>Jump; hold to fire the jet boots</dd></div>
+                        <div><dt>Ctrl</dt><dd>Crouch, prone, or a knee slide at speed</dd></div>
+                        <div><dt>Mouse 3</dt><dd>Grapple</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Use what's in your hands: fire, swing, throw</dd></div>
+                        <div><dt>Right click</dt><dd>Aim down sights</dd></div>
+                        <div><dt>F</dt><dd>Melee: dropkick, shove, body slam</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Hands and inventory</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Pick up, or swap with what you're holding; grab and climb</dd></div>
+                        <div><dt>Shift + E</dt><dd>Drop or throw the held item, or one from the inventory</dd></div>
+                        <div><dt>1 to 0</dt><dd>Hotkey slots</dd></div>
+                        <div><dt>Ctrl + wheel</dt><dd>Move the selected item into a hotkey slot</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Time and view</h3>
+                    <dl>
+                        <div><dt>Q</dt><dd>Bullet time</dd></div>
+                        <div><dt>Tab</dt><dd>Tactical freeze: time stops completely</dd></div>
+                        <div><dt>V</dt><dd>Switch between first and third person</dd></div>
+                        <div><dt>M</dt><dd>Region map</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The inventory works like Teleglitch's: scroll through what you carry and register anything to a hotkey, so the few things you use most are always one key away. Weight is shown on every item, because every kilogram you carry changes how you move.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/jetboot-resistance_2_vignette.jpg" alt="Seen from behind, a rubbery cartoon resistance fighter in a red hood and goggles charges across a dusty yard in metal jet boots, kicking up dust, toward two startled guards in grey overalls and helmets, with sandbags, a watchtower and a truck around them." width="1280" height="720" loading="lazy">
+            <figcaption>"Jet boots are standard kit: higher jumps, short flights, superman dives, backflips and a knee slide that carries you across a whole yard."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/acrobatic-darkzaitzev.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Wobble, fly, break things</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/04-wobble.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A floppy body that can grab anything, climb anything and wear anything, jet boots under it, and a world full of things that explode. You vault a wall, ride a jet up to a guard tower's roof, drop through it, and knock the guard out of his own window.</p>
+                        <p>The pace is deliberately slower than a twitch shooter, closer to Just Cause 2, and you can slow it further at any moment. Physics does the comedy: soldiers flail, props topple into each other, a fuel barrel turns one mistake into a chain reaction.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/demolish-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A region campaign, raid by raid</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/05-region.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is one occupier's hold on one region. Its map shows undiscovered sites, as in Fallout 3, and you choose what to do next: a <strong>Base Breaker</strong> raid on a part of the region, or a <strong>Murk Delve</strong> into a fogged-in zone. Each raid is a session in itself, with a drop-in, a list of targets and an extraction.</p>
+                        <p>You deploy a random squad of <strong>five resistance fighters</strong> for the whole campaign, and they are its lives. The campaign ends when the occupier's last boss falls and his grip is broken. Its map fills with colour as sites fall, and when it's done you <strong>name the freed region and write one line about it</strong>, saved as an image with the map.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/campfire-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The resistance answers calls</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/06-hideout.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The overarching goal is a service that never runs out: occupied towns radio for help, and the resistance goes. Freed regions write back, with thanks, news and new volunteers, and new occupiers keep moving in from the edges of the world map, so there's always another call. They never arrive stronger than the last ones: each is just another regime with its own habits.</p>
+                        <p>The <strong>hideout</strong> is the persistent home: the armory where everything brought back is kept, the radio room, workshops and people sent by freed towns, and the <strong>memorial wall</strong>. The <strong>world map</strong> remembers every region you've freed, with its name and line. All of it records what happened, and none of it is a score.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One raid, or a whole region</h3>
+                        <p>Start in the hideout, answer a call or continue a region, pick a site on the region map, and drop in. A raid takes roughly half an hour to an hour, and you choose where and when to extract. A region campaign is a handful of raids or a long string of them, depending on its rolled length.</p>
+                        <p>The game saves between raids and on quit. Stop after any raid and the region waits exactly as you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/flag-objective-delapouite.png)"></span>Game modes</h2>
+            <p>A region campaign is made of two kinds of raid, chosen freely from its map, plus a way to look back at regions already freed:</p>
+            <div class="p-table-wrap">
+                <table class="p-table modes">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What happens</th><th scope="col">It ends when</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Base Breaker</th><td data-label="What happens">Drop into a map the size of a battle royale's with a list of targets: bases, depots, towers, silos. Hit them in any order, any way you like. No closing circle, no clock.</td><td data-label="Ends when">Every target is down and you've reached an extraction point of your choice.</td></tr>
+                        <tr><th scope="row">Murk Delve</th><td data-label="What happens">Enter a zone sealed by the murk. Destroy the machines that hold the fog, shrink it, and bring out the artifacts it has enhanced. Sometimes something big is guarding them.</td><td data-label="Ends when">The murk is gone and the zone is free, and you've extracted with what you found.</td></tr>
+                        <tr><th scope="row">Flashback</th><td data-label="What happens">Replay a freed region from its seed as a hazy memory: muffled, deeper sound, a grainy filter, and explosions three times bigger.</td><td data-label="Ends when">Whenever you like. It never changes history.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-nest" aria-label="The structure, outermost first">
+                <div><span>The resistance</span><small>Endless: call after call, region after region.</small>
+                    <div><span>A region campaign</span><small>One occupier, one squad of five: a few evenings, by its rolled length.</small>
+                        <div><span>A raid</span><small>Base Breaker or Murk Delve: half an hour to an hour.</small>
+                            <div><span>A site</span><small>One base, one node, one boss: a few minutes of chaos.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/jetpack-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/boots-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Floppy bodies in jet boots</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/07-jetboots.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every character is a <strong>physics-driven ragdoll</strong> that stands, runs and balances by itself, wobbling the whole time, like TABG's fighters. As in Human Fall Flat, a fighter can grab and climb ledges, pull levers, and pilot any machine or vehicle they can get into.</p>
+                        <p><strong>Jet boots are standard equipment</strong>: higher jumps, short flights, superman dives, backflips, rolls, dropkicks and a long knee slide across level ground. Movement has real momentum, as in classic Doom II, so a slope speeds you up and a jet-boost carries you on. All of it is played for the slapstick: enemies are just as floppy as you are, and a dropkick from a jet-boosted jump sends a guard cartwheeling.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/time-trap-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Thinking over reflexes</p>
+                        <h3>Bullet time and the tactical freeze</h3>
+                        <p><strong>Bullet time</strong> slows everything on demand. The <strong>tactical freeze</strong> stops time completely: you aim freely while it's stopped, every shot lands where you aimed, and there's no limit on using it. It's Fallout's targeting mode without the dice.</p>
+                        <p>While frozen, the scene is colour-coded: <strong>red</strong> for enemies, <strong>blue</strong> for allies and neutrals, <strong>green</strong> for your squad, <strong>purple</strong> for the fallen, and <strong>orange</strong> for anything worth shooting, like a fuel tank or a crane's cable. It turns a chaotic yard into a plan.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/backpack-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Carry anything, feel everything</p>
+                        <h3>Weight, kits and the body you have</h3>
+                        <p>Fighters start as a body with jet boots: what they become depends on what they pick up. Suits, exoskeletons, backpacks and armor sets turn a fighter into a class while worn, as in Planetside or Earth Defense Force, and drop off again when removed. Each fighter also has four rolled stats (health, speed, melee and ranged) and a few perks, in the manner of Streets of Rogue.</p>
+                        <p>Every item has a <strong>weight</strong>, and a load changes the body, not just a number:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Carrying heavy</th><th scope="col">What changes</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Worse</th><td>Shorter jumps and jet-boot flights, slower grapple pulls, turns, walking, running, rolls and ledge pulls, shorter slides (especially uphill), backflips nearly useless, faster falls</td></tr>
+                                    <tr><th scope="row">Better</th><td>Faster slides downhill, less recoil, harder to knock over, and a much bigger body slam</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>So the load is a choice: travel light and fly, or go heavy and become a battering ram.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/explosive-materials-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Content that multiplies</p>
+                        <h3>Sites built from a budget</h3>
+                        <p>Every site is assembled when its raid begins. A heuristic tree decides what kind of place it is (a fuel depot, a factory, a barracks, a comm hub), gives it a budget, spends the budget on fitting props and places them first-come-first-served, then puts guards in the spaces left over. Each new prop added to the pool turns up in every kind of site that fits it.</p>
+                        <p>The props are Just Cause and Cryptark material: statues, comm towers, fuel silos and barrels, ammunition depots, propaganda billboards and trucks, generators, transformers and servers, SAM sites, artillery, turrets, jammers, shield generators, assemblers and refineries, alarm systems, and the controllers for buzzsaws, crushers and fire jets. A <strong>hotter-colder detector</strong> points out the targets you still have to wipe out at each site, so a messy fight never ends in a search for the last satellite dish.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/skull-crack-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The enemy weakens as you win</p>
+                        <h3>Bosses and their edge</h3>
+                        <p>Each occupier has a handful of <strong>bosses</strong> scattered through the region, and you don't know where until you find a clue or stumble into one. Every boss gives the occupier an edge: a bonus that bolsters its grip on the region and powers its goons, like faster patrols, better gear or sharper aim. It's a version of the <strong>supercore</strong>, a mechanic that runs through Reactorcore's designs.</p>
+                        <p>Take a boss out and his edge doesn't just vanish: it turns into a <strong>chaos trait</strong> for everyone who relied on it. The goons become reckless, fearful, panicked, confused, slow or apathetic, and some simply desert. The less of the region an occupier controls, the more desperate and clumsier its people get. That's the opposite of a scaling enemy: <strong>winning makes the world easier, as it would in real life</strong>.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--murk)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/fog-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The second kind of raid</p>
+                        <h3>The murk</h3>
+                        <p>A Murk Delve zone is sealed by fog pumped out by <strong>murk machines</strong> dotted around its edge. The machines define the fog's boundary: destroy the ones on one side and the fog <strong>shrinks to the combined reach of the ones still running</strong>. It's the battle royale's closing circle turned around: you're the one closing it, on whichever side you choose.</p>
+                        <p>The murk drifts with the wind and the weather, so its edge moves. The occupiers can also fire it in short area-denial blasts or leave lingering hotspots that make a whole stretch impassable unless you're willing to pay something to cross. Inside it, gear and artifacts left in the fog have been <strong>enhanced</strong>, and those finds come home to the armory, where they're used until they wear out. Sometimes the zone's heart is guarded by a <strong>giant machine</strong> assembled from a random tree of modules, each with a vulnerable core, as in Warning Forever.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/jetboot-resistance_3_feature.jpg" alt="A valley swallowed by thick glowing green fog: two tall tripod machines pump it out while a third lies toppled in sparks, glowing crates are scattered in the haze, and a grinning fighter in goggles, a red scarf and jet boots flies past." width="1280" height="720" loading="lazy">
+                            <figcaption>"Destroy the murk machines on one side, and the fog shrinks back to the reach of the ones still running."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/audio-cassette-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The enemy, in their own words</p>
+                        <h3>Tapes</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/08-tapes.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Guards record things, and the tapes lie around their bases. They can point to a boss's whereabouts or to a cache of special gear, give away a site's weak point ("we stored way too many fuel barrels here"), leak classified news (an experimental tank at the next base), or just let you hear the crew: how afraid of you they are, what they think, the propaganda they repeat.</p>
+                        <p>Their thoughts are usually ugly, sometimes mixed with something human. The tapes don't excuse anyone; they show that the people holding the region are people, which makes the world feel lived in. Every tape you find goes into the hideout's archive.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/radar-sweep-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Forces, not handmade maps</p>
+                        <h3>Generated regions with their own shape</h3>
+                        <p>A region is a square of 6×6 to 12×12 kilometres, generated by a tree of if/else rules from a few parameters (height, temperature, humidity, pollution), so forests, plains, lakes, mountains and deserts appear where they'd naturally be, with a small chance of the unexpected. Neighbouring regions shape each other's borders, as the map in Star Fox 2 does. Now and then a call comes from orbit, and the region is a zero-gravity debris field of rock, ice, gas and scrap, with radiation where a sun is close.</p>
+                        <p>Each campaign also rolls its own parameters: how long it is, its difficulty shape (it might open hard, ease off and end hard, or stay calm throughout), the weather, how well supplied the occupier is, and whether a giant guardian waits in its murk. Every region comes from a <strong>seed</strong>, so a good one can be shared.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dark-squad-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Someone always takes up the gun</p>
+                        <h3>A squad of five, and the memorial wall</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/09-squad.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There's no single protagonist. Each region campaign deploys a <strong>random squad of five</strong> from the resistance, each fighter with a name, colours, stats and perks of their own, and they are that campaign's lives. When one goes down, the next <strong>launches in from any point on the zone's edge</strong>, freely chosen: straight back to where the last one fell, or somewhere else first.</p>
+                        <p>Nothing un-happens. Every target destroyed stays destroyed, every boss stays gone, and the gear a fallen fighter carried lies where they fell for the next one to recover. If all five fall, the campaign stops there, and the region waits as it was left until a new squad answers its call.</p>
+                        <p>The fallen go on the <strong>memorial wall</strong> in the hideout, with their portrait, colours, how they fell and what they did. Their names are never used again, as in Rogue Legacy's line of heirs.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="people">
+            <h2 class="section-mark" id="people"><span class="icon" style="--icon: url(../icons/distress-signal-delapouite.png)"></span>The people in the way</h2>
+            <figure class="p-mini" data-md="skip"><img src="mini/jetboot-resistance/10-civilians.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Occupied regions still have people living in them, and some are held by the occupiers. You can free them, and freed towns are the ones who write back. In a physics sandbox, keeping them out of the blast is part of the craft. The game never pays out for hurting them, and what happens to them is part of the region's record either way.</p>
+            <p>The occupiers are never a real nation, party or group. They're generated regimes built from behaviour that anyone could fall into, which keeps the comedy on the physics and the villains on their deeds.</p>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/parachute-lorc.png)"></span>Trivia</h2>
+            <p>The design began as a singleplayer battle royale ("be the last weirdo standing") and turned into its opposite. The Base Breaker raid kept the battle royale's big drop-in map and lost everything else, and the Murk Delve kept the closing circle but handed you the controls.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/jetboot-resistance_4_boxart.jpg" alt="Box art: a cartoon resistance fighter in goggles and a red scarf soars upward on two jets of flame from their boots, fist raised, high above a concrete compound with a radio tower wrapped in dust." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Radio call from an occupied valley</p>
+                <h2 id="sendoff">Jetboot Resistance: Ragdoll Liberation Raids</h2>
+                <p>To whoever is listening in the hills: they've put up a tower on the ridge, a depot by the river, and a fog in the north valley that nobody walks out of. We count six bosses. We don't know where they sleep.</p>
+                <p>Bring boots. Bring something that goes bang. Bring friends: if one of you falls, the next one comes in from wherever you like. We'll keep the kettle on.</p>
+                <p><strong>Lace up. Light up. Take the valley back.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Totally Accurate Battlegrounds, Soldat, Just Cause 2, Red Faction Guerrilla, Fallout 3, Human Fall Flat, Warning Forever, Duality, Eastward, Gundam Seed, Star Fox 2, Rogue Legacy and Streets of Rogue</p>
+                <p>Icons by Lorc, Delapouite, Darkzaitzev and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Spectrashell and Fragile Bombers (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

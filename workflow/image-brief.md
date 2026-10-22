@@ -76,6 +76,8 @@ Klein's provider sometimes rejects an image with "Your output has been flagged" 
 
 Cartoon gore gets flagged too. In batch 3, a comic mosh pit with blood spurts and a flying severed arm was flagged on three of five images; two passed once the blood and loose limbs were taken out of the prompt (the page text can still describe them), and the third went to Nano Banana. Don't put gore in Klein prompts at all.
 
+Cartoon people being hurt get flagged even without blood. On Jetboot Resistance (TF2 preset), guards blasted or knocked through the air were flagged twice and passed only as two startled guards stumbling, and a fighter with a rifle flying over an exploding base passed once as the title but was flagged three times as the 2:3 box art, even with the rifle and explosion taken out (it went to Nano Banana). Keep people and blasts apart: a hero beside an explosion can pass, people inside one don't.
+
 Klein ignores small anatomical details it finds unusual. A "cyclops with one single large eye" came out with two eyes in the title shot while the box art, a close portrait, got it right. Check faces closely, and when a detail defines the character, frame it close or move that image to Nano Banana.
 
 Make every alt text describe what was actually generated, not what the prompt asked for.

@@ -118,7 +118,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 
 - [x] Ukrainian Turbo Minesweeper (released; images from its own promo folder, no generation)
 - [x] Graviton Singularity Mecha (Momentum Missile Mayhem 2 Redux) (pilot 2)
-- [ ] Ragdoll battle royale (PUBG doc)
+- [x] Ragdoll battle royale (PUBG doc), now Jetboot Resistance
 - [-] Planet Warfare (Skip until further notice - I need to prepare for this)
 - [ ] RoomSpace
 - [ ] Shape Smasher
