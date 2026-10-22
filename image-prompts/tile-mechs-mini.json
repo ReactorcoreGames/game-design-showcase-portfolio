@@ -1,0 +1,21 @@
+{
+  "slug": "tile-mechs-mini",
+  "out": "site/projects/mini/tilemechs",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - I - Grunge-Rough",
+  "lead": "Gritty military sci-fi film still, mud, smoke and olive drab, teal light. ",
+  "notes": "Mood-only mini images for tile-mechs.html, beside the lore, game layer and feature text. SDXL (free): gen tile-mechs-mini --model sdxl --max 999, then finish tile-mechs-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "type-3", "ratio": "3:2", "prompt": "A giant humanoid war robot's armored hand with thumb and fingers, gripping a rifle, in a hangar."},
+    {"n": 2, "name": "base", "ratio": "3:2", "prompt": "A huge armed flying warship carrier hovering over the sea, a hangar door open in its side."},
+    {"n": 3, "name": "job", "ratio": "3:2", "prompt": "A grim concrete military fortress on a hill, tanks parked below, searchlights in the dusk."},
+    {"n": 4, "name": "battlezone", "ratio": "3:2", "prompt": "A battlefield of grass, roads and fuel tanks, tanks rolling in, smoke rising."},
+    {"n": 5, "name": "territory", "ratio": "3:2", "prompt": "A military map table with a territory divided into regions, under a lamp."},
+    {"n": 6, "name": "press", "ratio": "3:2", "prompt": "A stack of newspapers fresh off the press, a photo of a giant robot in smoke on the front page."},
+    {"n": 7, "name": "flow", "ratio": "3:2", "prompt": "A giant robot kneeling in a repair bay at night, mechanics working on its legs."},
+    {"n": 8, "name": "props", "ratio": "3:2", "prompt": "A row of round fuel tanks at a military depot exploding one after another."},
+    {"n": 9, "name": "floor", "ratio": "3:2", "prompt": "A heavy weapon lying in the mud beside a burning tank wreck."},
+    {"n": 10, "name": "sprites", "ratio": "3:2", "prompt": "Rows of small toy soldiers, tanks and robots lined up on a tabletop grid."}
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "tile-mechs",
+  "prefix": "tilemechs",
+  "preset": "00 None - Blank",
+  "style": "Crisp 16-bit pixel art, like a top-down tactics game on a handheld console, chunky readable sprites, clean pixel clusters, limited palette of olive drab, field green, sand and ash grey, with orange fire and bright cyan energy accents. No text, letters, numbers or interface anywhere.",
+  "notes": "Rewrite (2026-10). Image 1 is kept from the 2025 page; its prompt is the original, trimmed, kept as a record (it was made on another preset). Images 2 to 5 are new: the old vignette and box art had legible 'Type-3' lettering, the old feature image sat inside a monitor bezel, and the old story image was a map that read as Europe with a fake news banner. The blank preset is used because the stock pixel presets force a front or side view. gen tile-mechs --only 2,3,4,5, then finish tile-mechs --only 2,3,4,5.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide establishing shot, low angle, of a massive humanoid battle mech standing in the center of a tiled battlefield, angular armor plating, articulated hands holding modular weapons, a glowing blue reactor core in its chest. The tiles around it show burn scars, glass formations and lava craters; smoke and haze drift across, wrecked smaller mechs in the background."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Top-down view straight down onto a battlefield made of square tiles: grass, sand, a dirt road and a pond, each tile a clear square. Near the middle stands a chunky olive-green humanoid battle mech with a glowing blue chest core and orange trim, seen from above, firing a bright cyan bolt along one straight row of tiles toward three small olive enemy tanks. A fuel tank beside the tanks bursts in a cross-shaped explosion of orange fire that runs exactly along the grid lines in four directions. A patch of grass tiles burns, leaving grey ash tiles behind it, and a strip of sand tiles has turned to shiny glass."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Top-down view straight down onto a battlefield made of square grass and road tiles, each tile a clear square. At the bottom stands a chunky olive-green humanoid battle mech with a glowing blue chest core and orange trim, seen from above. Five small olive enemy tanks are spread across the field, and under each tank a wide glowing yellow triangle painted on the floor points the way the tank faces. On the tile in front of each tank, a square marker glows: dim yellow on some, bright white-yellow on others. A dashed line of faint red tiles runs ahead of one tank's gun. Calm, clear, readable, like a board game."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Heroic low-angle portrait of a chunky olive-green humanoid battle mech with a glowing blue chest core and orange trim, standing tall and calm on a battlefield of square tiles, a long cannon resting on its shoulder in one hand. Around its feet, tiles of grass, sand turned to shiny glass, and grey ash, with thin wisps of smoke. High in the cloudy sky above it, a large armored flying warship with a hangar deck. Strong central figure, empty sky at the top."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Sweeping high aerial view of a fictional island territory held by a military regime: a jagged coastline, a grey concrete fortress on a central hill, an airfield, fuel depots with round tanks, a network of roads with small columns of tanks on them, a green forest, a yellow sand desert in the south and a frozen white lake in the north, a few columns of smoke rising. In the foreground, a large armored flying warship with a hangar deck descends through the clouds toward the island. No borders, no grid lines, no labels."
+    }
+  ]
+}

@@ -176,9 +176,9 @@ window.PROJECTS = [
   {
     page: "tile-mechs.html", prefix: "tilemechs",
     title: "AAL Tile Mechs", subtitle: "Tactical Grid Combat",
-    icon: "empty-chessboard-delapouite", tint: "cyan",
-    blurb: "Real-time combat on a grid with Type-3 Mechas: turn-based precision at real-time speed, with destructible environments and moral consequences.",
-    genres: ["strategy", "mecha"], tags: ["grid tactics", "real-time", "destructible terrain"],
+    icon: "battle-mech-delapouite", tint: "cyan",
+    blurb: "Looks like Advance Wars, plays in real time: one prototype mech steps tile by tile through a regime's army, every enemy move is telegraphed on the floor, and grass burns, sand turns to glass and fuel depots go up in chains.",
+    genres: ["strategy", "mecha", "action"], tags: ["grid tactics", "real-time", "destructible terrain", "pixel art"],
     universe: "aal", status: "concept", added: "2025-10-08"
   },
   {
