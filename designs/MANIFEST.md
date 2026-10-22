@@ -8,7 +8,7 @@ The definitive list of showcase projects: which design files feed which page, wh
 
 ## Published pages (37)
 
-All 37 are `revisit`. Images are kept as they are unless a rewrite changes what a picture needs to show.
+All 37 began as `revisit` and have all been rewritten (`revisited`, batches 1 to 8). Images were kept unless a rewrite changed what a picture needed to show.
 
 | Page file | Image prefix | Title | Source design(s) in `designs/done/` | Notes |
 |---|---|---|---|---|
