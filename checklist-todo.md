@@ -107,7 +107,7 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 - [x] kickblade
 - [x] spacelancer
 - [x] starforge-legion ⚑
-- [ ] thunderstrike-justice
+- [x] thunderstrike-justice
 - [ ] tile-mechs
 - [ ] unhinged_lander_heist_scifi
 - [ ] vectorthunder

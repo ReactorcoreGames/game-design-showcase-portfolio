@@ -295,10 +295,10 @@ window.PROJECTS = [
   },
   {
     page: "thunderstrike-justice.html", prefix: "thunderstrike",
-    title: "Thunderstrike Justice", subtitle: "Fighter Jet Mech Combat",
+    title: "Thunderstrike Justice", subtitle: "Arcade Air Combat",
     icon: "jet-fighter-delapouite", tint: "yellow",
-    blurb: "A transformable fighter jet and mech hybrid strikes at corrupt regimes, switching instantly between jet and mech modes mid-mission.",
-    genres: ["mecha", "vehicles", "action"], tags: ["jet fighter", "transforming", "anti-corruption"],
+    blurb: "A secret squadron's fighter jets tear down the machinery of tyrants: ten generated strikes per campaign, then the target's name is erased letter by letter.",
+    genres: ["arcade", "vehicles", "action"], tags: ["jet fighter", "air combat", "catharsis", "procedural campaigns"],
     status: "concept", added: "2025-10-08"
   },
   {

@@ -1,0 +1,14 @@
+{
+  "slug": "thunderstrike-justice",
+  "prefix": "thunderstrike",
+  "preset": "01 Main - 3D Low Poly",
+  "style": "Palette of storm slate grey, bright sky blue, white faceted clouds and electric thunder-yellow accents on the aircraft.",
+  "notes": "Rewrite (2026-10). The page is the design doc's V1, a pure fighter jet game with no transformation (V2 is Starforge Legion), so the old title, feature and box art images, which showed humanoid mechs and a jet turning into one, are replaced. The old story image is replaced too: it was a real world map with smoke and targets on real countries. Image 2 (a chunky jet over an enemy base) is kept; its prompt is the original, trimmed. gen thunderstrike-justice --only 1,3,4,5, then finish thunderstrike-justice --only 1,3,4,5.",
+  "images": [
+    {"n": 1, "role": "title", "ratio": "16:9", "prompt": "Wide low-angle shot of a sleek grey delta-wing fighter jet with thunder-yellow stripes on its wings and tail, banking hard through a gap in towering storm clouds above a dark sea, its afterburner glowing. A jagged bolt of lightning splits the sky behind it. Far below, a rocky island holds a walled concrete military compound with radar dishes and missile launchers, small explosions blooming along its wall."},
+    {"n": 2, "role": "vignette", "ratio": "16:9", "prompt": "Dynamic aerial combat scene: a grey and yellow fighter jet fires on a ground compound, explosions blooming below, anti-aircraft fire streaking upward, smoke trails, enemy aircraft trying to intercept in the background."},
+    {"n": 3, "role": "feature", "ratio": "16:9", "prompt": "Wide shot frozen in slow motion: a sleek grey delta-wing fighter jet with thunder-yellow stripes on its wings and tail climbs steeply away from a huge glowing white-yellow spherical explosion that swallows a walled palace compound on a cliff above the sea. Chunks of concrete, roof tiles and smoke hang motionless in the air around the blast. Faceted clouds in a stormy sky."},
+    {"n": 4, "role": "boxart", "ratio": "2:3", "prompt": "Portrait cover, low angle looking up: a sleek grey delta-wing fighter jet with thunder-yellow stripes on its wings and tail climbs straight up through a towering column of storm clouds, a forked lightning bolt beside it and a glowing afterburner trail below it. At the very bottom, a dark walled compound on a rocky coast burns with small fires. Open stormy sky at the top of the frame."},
+    {"n": 5, "role": "story", "ratio": "16:9", "prompt": "Sweeping high-altitude view of a sunny coastline and island chain: green hills, tan desert plateaus and bright blue sea. Scattered across the land are grim grey walled compounds, a smoking oil refinery by the shore, a fenced camp of long grey huts, a walled palace on a hill and tall radar towers. Two tiny grey fighter jets with thunder-yellow stripes cross the sky high above with white contrails. White faceted clouds drift over the land."}
+  ]
+}

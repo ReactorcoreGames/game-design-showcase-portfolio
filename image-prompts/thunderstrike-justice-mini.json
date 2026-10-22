@@ -1,0 +1,21 @@
+{
+  "slug": "thunderstrike-justice-mini",
+  "out": "site/projects/mini/thunderstrike",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - D - Hard Feel",
+  "lead": "Hard-edged aviation film still, stormy slate sky, flashes of yellow light. ",
+  "notes": "Mood-only mini images for thunderstrike-justice.html, beside the lore, game layer and feature text. SDXL (free): gen thunderstrike-justice-mini --model sdxl --max 999, then finish thunderstrike-justice-mini --model sdxl. Each prompt is the section's opening line; the images add flavor and never try to show a mechanic accurately.",
+  "images": [
+    {"n": 1, "name": "squadron", "ratio": "3:2", "prompt": "A hidden airstrip in a mountain valley at dawn, a few fighter jets under camouflage nets."},
+    {"n": 2, "name": "regime", "ratio": "3:2", "prompt": "A grim walled compound behind barbed wire, searchlights sweeping across it at night."},
+    {"n": 3, "name": "target", "ratio": "3:2", "prompt": "An empty ornate office with a heavy desk and tall dark windows, a cold portrait light."},
+    {"n": 4, "name": "battle", "ratio": "3:2", "prompt": "A fighter jet flying low over the sea toward a rocky island with smoke rising from it."},
+    {"n": 5, "name": "campaign", "ratio": "3:2", "prompt": "A long line of runway lights stretching into the distance at dusk."},
+    {"n": 6, "name": "win-log", "ratio": "3:2", "prompt": "A pilot's flight log open on a desk beside a helmet, a storm outside the window."},
+    {"n": 7, "name": "break", "ratio": "3:2", "prompt": "A fighter jet parked in a hangar after rain, its canopy open."},
+    {"n": 8, "name": "flight", "ratio": "3:2", "prompt": "A fighter jet in a wide banking turn, vapor trails streaming from its wingtips."},
+    {"n": 9, "name": "lock-on", "ratio": "3:2", "prompt": "A cockpit view through the canopy at a distant enemy jet in the clouds."},
+    {"n": 10, "name": "fallers", "ratio": "3:2", "prompt": "A burning aircraft trailing black smoke as it falls toward the sea."}
+  ]
+}
