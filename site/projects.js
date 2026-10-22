@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "turbo-minesweeper.html", prefix: "turbo-minesweeper",
+    title: "Ukrainian Turbo Minesweeper", subtitle: "Seeded Minesweeper Campaign",
+    icon: "land-mine-lorc", tint: "yellow",
+    blurb: "A released, free browser game: Minesweeper with four abilities instead of coin flips, a procedurally drawn dictator who harasses you mid-level, and a randomized explosive ending. Ten levels, five to ten minutes.",
+    genres: ["puzzle", "arcade"], tags: ["minesweeper", "released", "browser game", "seeded campaigns"],
+    status: "released", play: "https://reactorcore.itch.io/ukrainian-turbo-minesweeper", added: "2026-10-22"
+  },
+  {
     page: "graviton-mayhem.html", prefix: "graviton-mayhem",
     title: "Graviton Singularity Mecha", subtitle: "Physics Missile Mayhem",
     icon: "black-hole-bolas-lorc", tint: "magenta",

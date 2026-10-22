@@ -58,11 +58,11 @@ All 37 began as `revisit` and have all been rewritten (`revisited`, batches 1 to
 |---|---|---|---|---|
 | `graviton-mayhem.html` | `graviton-mayhem` | Graviton Singularity Mecha: Physics Missile Mayhem | `Momentum Missile Mayhem 2 Redux.md` | **Pilot 2, status `page`**, approved; images done, live once `dev` is merged. Klein images plus ten SDXL minis in `site/projects/mini/graviton-mayhem/`. AAL in spirit only, so no prefix. The enemy is "the Masterless Legion" (the doc's "Death Force" is M.D. Geist's name). |
 
-## Released game: needs a page, no image generation
+## Released game
 
-| Slug | Title | Sources | Notes |
-|---|---|---|---|
-| `turbo-minesweeper` | Ukrainian Turbo Minesweeper | The game's own repo `C:\14 Repos\Ukrainian Turbo Minesweeper` (`readme.md`, `guide.md`, `CLAUDE.md`, `promo.md`). `designs/done/Minesender Maximum.txt` is the original, now obsolete, spec. | Already released: https://reactorcore.itch.io/ukrainian-turbo-minesweeper. The page presents its design like any other showcase page, adds a prominent "Play it" link, and calls itself a released game, not a concept. Images come from that repo's `promo/` folder (cover, gameplay shots, cutscenes, trophy room): copy and crop them to the five slots, no BAIG. That repo is outside this one, so read its files from a local session. |
+| Page file | Image prefix | Title | Sources | Notes |
+|---|---|---|---|---|
+| `turbo-minesweeper.html` | `turbo-minesweeper` | Ukrainian Turbo Minesweeper: Seeded Minesweeper Campaign | The game's own repo `C:\14 Repos\Ukrainian Turbo Minesweeper` (`readme.md`, `guide.md`, `CLAUDE.md`, `promo.md`). `designs/done/Minesender Maximum.txt` is the original, now obsolete, spec. | **Status `page`** (`released` in the catalog, with the itch.io play link): live once `dev` is merged. Already released: https://reactorcore.itch.io/ukrainian-turbo-minesweeper. All five images come from the repo's `promo/` folder, no BAIG, no SDXL minis: 1 the cover (the page's own title sits under it, since the cover has the name baked in), 2 `gameplay 4.jpg` (the dictator taunting), 3 `cutscene (1)_img.jpg` (the finale's cast), 4 a 2:3 centre crop of `icon og (1).jpg`, 5 `s10_gameplay_img.jpg` (a cleared level); thumbnail from image 2. **Decisions:** the game has no subtitle, so "Seeded Minesweeper Campaign" was chosen for the page format. On Reactorcore's word the tyrants are fictional (generated) and Ukraine is simply Ukraine; the page never names a real leader or country as the invader. The dossier and Trophy Room screenshots were left out, because their generated names and crimes are crude. The old Minesender-era "reward" language became feedback and a memento; the Trophy Room is a living history, not a ranking. The page is honest that the game is small and has no world map; the infinite frame is the endless supply of seeds and dictators. Losing all three armor restarts the campaign from level one, which the page says plainly (the design keeps it as a short retry). The two Doom-derived cheat codes appear in Controls and Trivia. Palette: the game's flag blue and yellow over night blue; Exo 2 Black and Share Tech Mono (both already on the site). |
 
 ## Standby projects
 
@@ -74,8 +74,8 @@ Proposed slugs. They are open to change until the page is built, then frozen. Fi
 |---|---|---|---|---|
 | 2 | `wobble-royale` | (ragdoll battle royale, singleplayer) | `PUBG battle royale better singleplayer.md` | Title TBD |
 | 3 | `planet-warfare` | Planet Warfare | `Planet Warfare.txt` | Biggest doc (50 KB). `designs/done/ALREADY DONE Pixel Sprites ala ReactorCore.txt` is its art-system companion. |
-| 4 | `roomspace` | RoomSpace | `RoomSpace.txt` | |
-| 5 | `shape-smasher` | Shape Smasher | `Shape Smasher.txt` | |
+| 4 | `roomspace` | RoomSpace | `roomspace/` (start at `index.md`; the original `RoomSpace.txt` is in there too) | Design was mostly in 108 scanned notebook pages, now digested to markdown (see `workflow/scan-digest.md`). Huge scope (ragdoll combat up to a whole universe with mobile bases); the topic files end with Claude's proposals for gaps Reactorcore left open, kept separate from the design. The planning step picks which slice the page shows. |
+| 5 | `shape-smasher` | Shape Smasher | `shapesmasher/` (start at `index.md`; the original `Shape Smasher.txt` is in there too) | Design was mostly in scanned notebook pages, now digested to markdown (see `workflow/scan-digest.md`). The notes hold two versions, the social art platform and a simplified, more game-like one; the planning step picks which the page shows. |
 | 6 | `net-terminal` | "Do you have the Net Terminal Gene?" | `Small BLAME game with marching squares dest terrain.md` | Strongly inspired by BLAME!, but set in its own universe. The page credits the inspiration, and the protagonist, weapon (the doc's "GBE") and catchphrase all get original names. |
 | 7 | `smash-droids` | AAL Smash Droids: Vibranium Knockout Arena | `Smash Bros Arena with Jager Guns.md` | |
 | 8 | `smash-room` | (closed-room stress-relief smasher) | `rosebud gdev smash bros idea.md` | Separate game from #7. Title TBD. |

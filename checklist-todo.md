@@ -116,10 +116,10 @@ The images stay, except the 5 pages marked ⚑, which also need a story image.
 
 Each one means: plan → approval → page → image spec → nexus entry → manifest updated → design file moved to `designs/done/`.
 
-- [ ] Ukrainian Turbo Minesweeper (released; images from its own promo folder, no generation)
+- [x] Ukrainian Turbo Minesweeper (released; images from its own promo folder, no generation)
 - [x] Graviton Singularity Mecha (Momentum Missile Mayhem 2 Redux) (pilot 2)
 - [ ] Ragdoll battle royale (PUBG doc)
-- [ ] Planet Warfare
+- [-] Planet Warfare (Skip until further notice - I need to prepare for this)
 - [ ] RoomSpace
 - [ ] Shape Smasher
 - [ ] Net Terminal (BLAME!-inspired)
@@ -133,7 +133,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [ ] AAL Exterminator
 - [ ] AAL Voyager
 - [ ] AAL Inspector (decide after the trio: its own page, or folded into the trio)
-- [ ] TopVerse
+- [-] TopVerse (Skip until further notice - I need to prepare for this)
 - [ ] AAL Trash Miner
 - [ ] Temporal Shift RTS
 - [ ] Type 1-X Mecha RTS
@@ -141,7 +141,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [ ] Metsanelaimet
 - [ ] Auto chess (or fold it into another page)
 - [ ] Bazooka Bomber
-- [ ] Party Hard–style (its own page, or part of the Kenney anthology)
+- [-] Party Hard–style (its own page, or part of the Kenney anthology (Author note: its own page.)) (Skip, needs some manual preps by me.)
 - [ ] Telekinetic Eradicator
 - [ ] UNO-inspired family (decide the split: 1–3 pages)
 - [ ] ETCC family (about 3 pages: v1 casual, v2 full, KMF)

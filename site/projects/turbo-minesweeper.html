@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukrainian Turbo Minesweeper: Seeded Minesweeper Campaign</title>
+
+    <meta name="description" content="A released browser game by Reactorcore: classic Minesweeper on turbo, with four abilities so you never have to guess, a procedurally drawn dictator who harasses you mid-level, and a randomized explosive ending. Free to play, and its design is free to fork.">
+    <meta name="keywords" content="Ukrainian Turbo Minesweeper, minesweeper, browser game, puzzle game, casual game, procedural generation, seeded campaigns, free browser game, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/turbo-minesweeper.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Ukrainian Turbo Minesweeper: Seeded Minesweeper Campaign">
+    <meta property="og:description" content="A released, free browser game: Minesweeper on turbo, with abilities instead of coin flips and a randomized explosive ending for the dictator.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/turbo-minesweeper.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/turbo-minesweeper_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Screenshot: a Minesweeper board mid-level, with a cartoon dictator in a peaked cap standing on it, saying I am your liberator">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Ukrainian Turbo Minesweeper: Seeded Minesweeper Campaign">
+    <meta name="twitter:description" content="A released, free browser game: Minesweeper on turbo, with abilities instead of coin flips and a randomized explosive ending for the dictator.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/turbo-minesweeper_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Ukrainian Turbo Minesweeper",
+        "description": "A released, free browser game: a ten-level Minesweeper campaign with four abilities, armor instead of sudden death, a procedurally drawn dictator who harasses the player mid-level, and a randomized explosive ending cutscene.",
+        "creativeWorkStatus": "Published",
+        "genre": ["Puzzle", "Casual"],
+        "gamePlatform": "Web browser",
+        "playMode": "SinglePlayer",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/turbo-minesweeper.html",
+        "sameAs": "https://reactorcore.itch.io/ukrainian-turbo-minesweeper",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/turbo-minesweeper_2_vignette.jpg",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://reactorcore.itch.io/ukrainian-turbo-minesweeper" },
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0d1220">
+
+    <link rel="preload" href="../fonts/exo2-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Ukrainian Turbo Minesweeper: the game's own flag colours, a deep night-blue ground with a
+           flag-yellow accent and a sky-blue second accent, and dossier-paper cream for highlights.
+           Exo 2 Black for the title (the game's cover is set in a heavy poster face), Share Tech
+           Mono for the subtitle and labels, like the typewritten dossier you open each campaign
+           with. */
+        @font-face { font-family: "Exo 2 Black"; src: url("../fonts/exo2-black.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Share Tech Mono"; src: url("../fonts/share-tech-mono.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0d1220;
+            --flow-2: #1d2b4d;
+            --grid-minor: rgba(255, 210, 63, 0.04);
+            --grid-major: rgba(255, 210, 63, 0.09);
+            --p-ground: rgba(11, 15, 27, 0.95);
+            --p-panel: #151c30;
+            --p-1: #ffd23f;
+            --p-2: #6bb4ff;
+            --p-3: #f3ead0;
+            --p-text: #dadfea;
+            --p-dim: #a2abbf;
+            --p-line: rgba(255, 210, 63, 0.16);
+            --font-title: "Exo 2 Black", "Segoe UI", sans-serif;
+            --font-sub: "Share Tech Mono", "Consolas", monospace;
+            --shade: #090c16;
+        }
+
+        /* The cover art already carries the game's name, so the page's own title sits under the
+           image at every width instead of over it. */
+        .p-hero-title { position: static; padding: 1.4rem clamp(1rem, 4vw, 3.5rem) 1.6rem; }
+        .p-name { font-size: clamp(1.9rem, 1rem + 4.4vw, 4.6rem); text-transform: uppercase; letter-spacing: 0.01em; animation: stamp 6s ease-in-out infinite; }
+        /* Title effect, "stamp": the yellow letters thump down and a warm halo flares, then fades,
+           over layered dark shadows so the title stays legible at the dimmest frame. */
+        @keyframes stamp {
+            0%, 100% { color: var(--p-1); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 40px rgba(255, 210, 63, 0.18); }
+            50% { color: #ffe27a; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 16px rgba(255, 210, 63, 0.75), 0 0 4px rgba(255, 240, 180, 0.9); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 8px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: stamp-line 6s ease-in-out infinite;
+        }
+        @keyframes stamp-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(107, 180, 255, 0.3); opacity: 0.7; }
+            50% { box-shadow: 0 0 14px rgba(107, 180, 255, 0.9), 0 0 28px rgba(255, 210, 63, 0.45); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 6s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(255, 210, 63, 0.6); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; }
+
+        .p-nest > div { --c: var(--p-1); }
+        .p-nest > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .p-play { display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; align-items: center; margin: 1.4rem 0 0; }
+        .p-play span { color: var(--p-dim); font-size: 0.95rem; }
+        .abilities td:nth-of-type(2) { width: 100%; }
+        .abilities td:nth-of-type(1), .abilities td:nth-of-type(3) { white-space: nowrap; }
+        @media (max-width: 620px) { .abilities td { white-space: normal !important; } }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.82rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/turbo-minesweeper_1_title.jpg" alt="Key art: a Ukrainian soldier in a camouflage helmet with a rifle and a German shepherd stands in front of a blue and yellow flag and a rocket launcher, beside the title and a small screenshot of the game with a cartoon dictator being blown up." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Ukrainian Turbo Minesweeper</span><span class="p-sub">Seeded Minesweeper Campaign</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/land-mine-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Released Game</a>
+                <p class="p-fork"><b>Free to fork</b>The game is public domain (CC0), and its design is free to lift from. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <a class="btn btn-sm" href="https://reactorcore.itch.io/ukrainian-turbo-minesweeper" target="_blank" rel="noopener" style="--c: var(--p-1)">Play it free</a>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/flying-flag-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Ukrainian Turbo Minesweeper is classic Minesweeper with the cruelty taken out and the fun turned up. A tyrant has invaded Ukraine and scattered mines through its towns and villages. You flag them, wrap them up as a present, and send them back to the sender.</p>
+            <p>A campaign is ten levels on a twelve-by-ten board and takes five to ten minutes. Four military abilities mean you never have to guess blindly, a mistake costs a point of armor instead of the whole run, and every campaign has its own freshly drawn dictator who wanders onto your board to gloat. Beat level ten and he and his henchmen are bombed to pieces in a cutscene that is different every time.</p>
+            <p>This is a released game, not a concept: <a href="https://reactorcore.itch.io/ukrainian-turbo-minesweeper" target="_blank" rel="noopener">play it free in your browser on itch.io</a>. The dictators are fictional, generated from word and part pools: no real leader is ever named or drawn. The setting is Ukraine, and the humor is aimed upward, at tyranny.</p>
+            <p class="p-play" data-md="skip"><a class="btn" href="https://reactorcore.itch.io/ukrainian-turbo-minesweeper" target="_blank" rel="noopener" style="--c: var(--p-1)">Play Ukrainian Turbo Minesweeper</a><span>Free, in your browser, no install. It's also a Windows, Mac and Linux download.</span></p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>People who want a <strong>short, calm, satisfying puzzle</strong>: a break between tasks, or an evening wind-down. Minesweeper players who love the logic but hate the forced coin flip. People who enjoy seeing tyrants made ridiculous.</p>
+                    <p>It's played with a mouse. The hotkeys are optional, nothing is timed against you, and the campaign clock isn't even shown.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and relief:</strong> every click, flag and reveal answers back with sound and motion, so clearing a board feels good in the hand.</p>
+                    <p><strong>Celebration:</strong> a finale worth reaching, and a Trophy Room that keeps it.</p>
+                    <p><strong>Safety:</strong> the board is solvable by reasoning, with abilities for the rest. It deliberately avoids draining <strong>rest</strong> (no pressure, no punishing reset for a miss) and <strong>respect for your time</strong> (no padding, no stat clutter).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Classic Minesweeper often ends on a guess: the board gives you no safe move, and half a minute of careful work dies on a coin flip.</p>
+                    <p>Here <strong>the first click is always safe</strong>, abilities cover the hard spots, and you have three armor for the whole campaign. A campaign isn't one board but ten, so <strong>one mistake never ends the evening</strong>.</p>
+                    <p>And the next campaign is a seed away, with a new dictator.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/turbo-minesweeper_5_story.jpg" alt="A cleared Minesweeper level with a card reading Level 1 cleared, the name of a Ukrainian village and its population liberated, under a shower of blue and yellow confetti." width="1280" height="720" loading="lazy">
+            <figcaption>"Every level is a Ukrainian town or village. Clear its board and it's counted as liberated."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/minefield-skoll.png)"></span>Lore and story</h2>
+            <h3>Where</h3>
+            <p>Ukraine, one settlement at a time. Levels one to nine are small towns and villages, and level ten is a larger town. Each campaign changes the scenery every three levels, from 48 zone looks, and the light moves one step through the day with every level, with weather rolling over the board.</p>
+            <h3>Why</h3>
+            <p>Yet another smoothbrain dictator has invaded and mined the places where ordinary people live. Every campaign has a different one, made fresh from a pool of parts: his own name, face, hat, outfit and voice. Before you start you read his classified dossier, with his crimes listed in a typewriter font, and a file photo of the man himself.</p>
+            <p>He is a doodle, deliberately: a stick-figure tyrant with a sash and a scepter, because the game's whole attitude to tyranny is that it's small and absurd up close.</p>
+            <h3>The job right now</h3>
+            <p>Clear ten settlements. Send every mine back. When the last board is done, he gets what's coming, and then there's another dictator and another campaign whenever you want one.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>The mouse does the minesweeping, and the keyboard does the clever parts. The left side of the screen holds your mugshot (it reacts to what happens), the mine, flag and armor counters, and the four ability cards, each showing its key and its uses left.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>The board</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Open a tile, or fire the artillery when it's armed. The first click of a level is always safe.</dd></div>
+                        <div><dt>Right click</dt><dd>Place or remove a flag, or cancel an armed artillery</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Abilities</h3>
+                    <dl>
+                        <div><dt>A</dt><dd>Sniffer</dd></div>
+                        <div><dt>S</dt><dd>Pioneer</dd></div>
+                        <div><dt>D</dt><dd>Drone</dd></div>
+                        <div><dt>F</dt><dd>Artillery: arm it, then click</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Menus</h3>
+                    <dl>
+                        <div><dt>Esc</dt><dd>Options (pauses the level)</dd></div>
+                        <div><dt>Enter / Space</dt><dd>Begin the operation on the dossier screen</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Cheat codes (type during a level)</h3>
+                    <dl>
+                        <div><dt>iddqd</dt><dd>Skip to the campaign's ending cutscene, with no trophy</dd></div>
+                        <div><dt>iddt</dt><dd>Summon the dictator right now, to blow him up again</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Revealed numbers <strong>glow until you've placed enough flags around them</strong>, then dim, so the board tells you what's still unsolved. The interface carries no scores and no clutter: it shows what you need to read the board and nothing else.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/turbo-minesweeper_2_vignette.jpg" alt="A Minesweeper board mid-level in a dark grey-green palette with green rain. A cartoon dictator in a peaked cap stands on the board with a scepter, saying I am your liberator, his name above him." width="1280" height="720" loading="lazy">
+            <figcaption>"Click the dictator when he wanders onto the board: a mine flies in, he's blasted off screen, and you gain one to three extra uses of a random ability."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mine-explosion-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One board</h3>
+                        <p>A twelve-by-ten grid with ten to thirty mines. You open tiles, read the numbers, flag what you're sure of, and use abilities where the logic runs out. Zeros cascade outward ring by ring with a rising click, a mine hit freezes the screen for an instant before the blast, and a cleared level gets a camera flash and a snapshot.</p>
+                        <p>Mines are placed on your first click, so the opening is never a gamble. Levels one to nine are easy to medium. Level ten is always the hard one.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/minefield-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A ten-level campaign</h3>
+                        <p>A campaign is one dictator's invasion: ten levels, three armor for the whole run, and abilities whose uses refill on every level. Level one has ten mines, levels two to nine have between ten and twenty-four, and level ten has thirty.</p>
+                        <p>Hit a mine and you lose one armor and carry on, with the level still in play. Lose all three and the campaign ends. You can restart the same campaign immediately, from level one, with the same dictator. Since a campaign is five to ten minutes and nine of its ten levels are gentle, that's a short retry, not a lost evening.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/medal-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>An endless supply of dictators</h3>
+                        <p>The overarching goal is simply that there's always another tyrant to send his mines back to, and a new one is a new seed away. Nothing runs out, nothing is locked, and nothing grows harder over the long run: every campaign has the same shape.</p>
+                        <p>The living history is the <strong>Trophy Room</strong>: every dictator you've defeated, kept with his portrait, his seed and your best campaign time. It's a memento, not a ranking. You can export it to a file and import it elsewhere. The game is honest about its size: it has no world map and no persistent base, because a five-to-ten-minute game doesn't need them.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A coffee break</h3>
+                        <p>Open the page, pick a seed or take the random one, read the dossier, and begin. Esc opens the options and pauses the level, so a ringing phone never costs you anything, and the campaign clock only runs during active play.</p>
+                        <p>Ten levels later comes the finale, and then back to the start screen, ready for another dictator.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span>Game modes</h2>
+            <p>There's one way to play, the campaign, plus one way to look back at it:</p>
+            <div class="p-nest" aria-label="The game, outermost first">
+                <div><span>Campaign</span><small>One dictator, ten levels, three armor: five to ten minutes, then the finale.</small>
+                    <div><span>Level</span><small>One twelve-by-ten board, abilities refilled: usually between half a minute and a minute.</small></div>
+                </div>
+            </div>
+            <p><strong>Flashback</strong> is the second mode: from the Trophy Room, replay a defeated dictator's campaign from its seed as a muffled, grainy memory in which every explosion is three times bigger. A flashback win only improves a listed best time. It never adds a trophy.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/mine-explosion-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/king-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>A villain you actually meet</h3>
+                        <p>Minesweeper's enemy is normally a rule. Here it's a <strong>person</strong>. Each campaign's dictator is assembled from append-only pools of parts (face, hat, outfit and accessories), plus a name, a voice pitch and a list of crimes for the dossier. The same seed always draws the same man.</p>
+                        <p>He shows up at the start (the dossier), during the levels (the harassment) and at the end (the finale), so the whole campaign is aimed at one face. Since the pools only ever grow, new parts can be added without changing any existing seed's dictator.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/turbo-minesweeper_3_feature.jpg" alt="The ending cutscene: a cartoon dictator in a helmet with a name tag stands among his henchmen, a statue and a golden toilet, in front of a red and green gradient, while a skeletal reaper runs in from the corner." width="1280" height="720" loading="lazy">
+                            <figcaption>"The dictator stands with one to six henchmen for the finale. Their number, the attacker and the weapon all come from the seed."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/owl-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No blind guessing</p>
+                        <h3>Four abilities and armor</h3>
+                        <p>The first click is always safe, with a three-by-three clear zone around it. After it, four abilities become ready, and their uses refill every level. Because they pick random targets, they're a way out of a stuck board, not a replacement for reading it.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table abilities">
+                                <thead><tr><th scope="col">Ability</th><th scope="col">Key</th><th scope="col">What it does</th><th scope="col">Uses per level</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Sniffer</th><td data-label="Key">A</td><td data-label="Effect">Flags one random mine for you</td><td data-label="Uses">1 plus one per six mines</td></tr>
+                                    <tr><th scope="row">Pioneer</th><td data-label="Key">S</td><td data-label="Effect">Opens three random safe numbered tiles</td><td data-label="Uses">3</td></tr>
+                                    <tr><th scope="row">Drone</th><td data-label="Key">D</td><td data-label="Effect">Reveals a random empty area, which cascades</td><td data-label="Uses">3</td></tr>
+                                    <tr><th scope="row">Artillery</th><td data-label="Key">F</td><td data-label="Effect">Arm it, then click: flags the mines and opens the safe tiles in a three-by-three area</td><td data-label="Uses">1 plus one per fifteen mines</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The safety net is <strong>three armor for the whole campaign</strong>: a mine costs one, and the level continues. Numbers dim once they have enough flags, so you always see what's left to solve.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bright-explosion-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Optional mischief</p>
+                        <h3>He harasses you, and you can hit back</h3>
+                        <p>On some levels the dictator slides in from a random screen edge and wanders drunkenly over the whole screen, name floating above him, taunting you in speech bubbles with a voice pitched to his seed. He appears on level ten every time, and elsewhere there's a one-in-three chance per level, with a cooldown of 45 to 120 seconds between visits.</p>
+                        <p>Click him and the game answers at once: a mine flies in from the far edge of the screen, he's blasted off screaming, and you gain one to three extra uses of a random ability. The bigger the bonus, the deeper his scream. <strong>He never changes the board</strong>, and the extra uses expire with the level, so ignoring him is just as valid.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bombing-run-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Content that multiplies</p>
+                        <h3>An ending that is never the same</h3>
+                        <p>The finale is built, not filmed. The seed picks the attacker, the weapon (from a stream of shells to a single nuke), the firing pattern, the dictator's last words, how many henchmen stand with him and the death animation they all share. Shells work through the henchmen front to back and end on him, and in the last hit he blows apart into separate pieces that fly off the screen.</p>
+                        <p>There are 13 scene presets and millions of combinations, so the thirtieth cutscene still surprises. That's multiplicative content in miniature: every new attacker or weapon added to the pool combines with all the old ones. A Cutscene Lab in the downloadable version previews any seed.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dice-twenty-faces-twenty-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Share a campaign</p>
+                        <h3>Seeds</h3>
+                        <p>Everything you can see about a campaign comes from its seed: the dictator, the operation name, the ten locations, the zone looks, the weather, the mine counts and the ending. Type any text into the start screen, not only numbers, and you get the same campaign every time.</p>
+                        <p>So "try the seed <em>kyiv</em>" is a complete way to hand someone a campaign. Mine placement is deliberately not seeded, so a replay is never a memorized board.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/medal-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A living history</p>
+                        <h3>The Trophy Room and flashbacks</h3>
+                        <p>Beating level ten records the dictator, his seed and your campaign time, with one entry per seed. Beating the same seed again only improves its time. Each entry shows his portrait turned on its side under a black ribbon, and a FLASHBACK button replays his downfall with exaggerated, muffled sound and three-times-bigger explosions.</p>
+                        <p>Trophies live in the browser and can be exported to a file and imported again, so a collection moves between devices. There are no points anywhere in it: it records what you did.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/dice-twenty-faces-twenty-delapouite.png)"></span>Trivia</h2>
+            <p>The two cheat codes are borrowed from Doom: <strong>iddqd</strong> is Doom's invincibility code and <strong>iddt</strong> its map cheat. Here they skip to the ending and summon the dictator.</p>
+            <p>The downloadable version ships four small developer tools for anyone who wants to see inside: a Cutscene Lab, a Doll Lab for the dictator generator, a Weather Lab and a Theme Lab. The game is public domain, so lifting any of its systems, a screen weather effect for example, is welcome.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/turbo-minesweeper_4_boxart.jpg" alt="Box art: a Ukrainian soldier in a camouflage helmet with a rifle, a blue and yellow flag behind him, a rocket launcher truck in the background and a German shepherd at his side." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Operation: return to sender</p>
+                <h2 id="sendoff">Ukrainian Turbo Minesweeper: Seeded Minesweeper Campaign</h2>
+                <p>Briefing: another dictator has mined another set of villages. Your file on him is attached. Ten settlements, three armor, four abilities, and a sky full of things that will be glad to help.</p>
+                <p>Open the first tile, read the numbers, flag the mines and send each one back where it came from. He'll turn up to gloat, so you may as well enjoy that too.</p>
+                <p><strong>Free, short, and the ending is different every time.</strong></p>
+                <p class="p-play" data-md="skip"><a class="btn" href="https://reactorcore.itch.io/ukrainian-turbo-minesweeper" target="_blank" rel="noopener" style="--c: var(--p-1)">Play it free</a></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-2)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by classic Minesweeper</p>
+                <p>Released under CC0 (public domain). Seeded randomness by David Bau's seedrandom (MIT)</p>
+                <p>Icons by Lorc, Delapouite, Skoll and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Exo 2, Share Tech Mono, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
