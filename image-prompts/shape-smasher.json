@@ -1,0 +1,37 @@
+{
+  "slug": "shape-smasher",
+  "preset": "02 Photo - G - Glossy-Shiny",
+  "style": "Bright toy-like palette of bubblegum pink, lemon yellow and cream over a soft plum backdrop, with painted wood, clear glass, grey stone, brushed metal and pale ice as the materials.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Side view of a whimsical sculpture built from colourful geometric blocks: painted wooden squares, clear glass triangles, grey stone hexagons, metal stars and pale ice diamonds, stacked into a tall arch-shaped little temple on a plain floor in front of a smooth pink-to-yellow gradient backdrop. A big polished chrome ball smashes into the right side of the arch, and squares, triangles and glass shards burst outward and spin through the air. The lower left of the picture is calm, empty floor and backdrop."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Close side view, frozen in mid-air: a single pink painted wooden block flung at speed slams into a tall tower of stacked clear glass triangles and yellow squares, the glass shattering into glittering fragments where it hits while the rest of the tower starts to tip. A faint motion trail behind the flying block shows its arc. Smooth plum gradient backdrop, clean floor."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Side view of a wide flat sunburst emblem built from many separate geometric blocks, yellow triangles as rays around a disc of orange hexagons and cream squares, standing upright on a plain floor in front of a soft plum gradient backdrop. A clean vertical split runs down the middle: the left half of the emblem stands perfectly intact and glossy, while the right half has collapsed into a heap of broken triangles, hexagons and splinters on the floor directly below where it stood."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover: a tall colourful tower sculpture of stacked geometric blocks, painted wooden squares, glass triangles, stone hexagons and metal stars, rises from the bottom of the frame. Just above its top, a giant polished chrome ball hangs in the air, about to drop onto it, a few loose shapes already floating around. Smooth pink-to-yellow gradient backdrop with empty space at the top."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide view of a bright modern art gallery hall with a polished floor, where colourful geometric sculptures made of painted blocks, glass triangles and stars stand on white plinths in a long row. Some sculptures are perfect and gleaming; others have been knocked over into piles of broken coloured shapes on the floor around their plinths. Soft pink and yellow light from tall windows."
+    }
+  ]
+}

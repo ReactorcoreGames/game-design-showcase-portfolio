@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "shape-smasher.html", prefix: "shape-smasher",
+    title: "Shape Smasher", subtitle: "Pocket Sculpture Demolition",
+    icon: "wrecking-ball-lorc", tint: "magenta",
+    blurb: "Make art, then smash it: build sculptures from geometric shapes in wood, glass, stone and metal, share them in packs, and wreck other people's with a flick of the finger. Clear out the minidudes with a needle or a sledgehammer, and the author sees what you did.",
+    genres: ["physics", "arcade", "sandbox"], tags: ["mobile", "level editor", "user-made levels", "stress relief"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "roomspace.html", prefix: "roomspace",
     title: "RoomSpace", subtitle: "Terrarium Ragdoll Universe",
     icon: "aquarium-delapouite", tint: "green",

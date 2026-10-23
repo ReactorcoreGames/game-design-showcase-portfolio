@@ -121,7 +121,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Ragdoll battle royale (PUBG doc), now Jetboot Resistance
 - [-] Planet Warfare (Skip until further notice - I need to prepare for this)
 - [x] RoomSpace
-- [ ] Shape Smasher
+- [x] Shape Smasher
 - [ ] Net Terminal (BLAME!-inspired)
 - [ ] AAL Smash Droids
 - [ ] Closed-room smasher (rosebud doc)

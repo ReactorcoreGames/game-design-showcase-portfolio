@@ -1,0 +1,20 @@
+{
+  "slug": "shape-smasher-mini",
+  "out": "site/projects/mini/shape-smasher",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - R - Macro Closeup",
+  "lead": "Macro photograph of glossy toy geometric blocks, bubblegum pink and lemon yellow, soft plum backdrop. ",
+  "images": [
+    {"n": 1, "name": "chef", "ratio": "3:2", "prompt": "A beautiful dish arranged like a sculpture on a plate, about to be eaten"},
+    {"n": 2, "name": "origin", "ratio": "3:2", "prompt": "Shapes arranged into a pattern with meaning, a little silhouette made of triangles and squares"},
+    {"n": 3, "name": "sculpture", "ratio": "3:2", "prompt": "A small sculpture of stacked blocks with tiny round-headed figures sitting on its ledges"},
+    {"n": 4, "name": "pack", "ratio": "3:2", "prompt": "A row of small themed sculptures lined up side by side"},
+    {"n": 5, "name": "gallery", "ratio": "3:2", "prompt": "Many small photographs of wrecked block sculptures pinned in a grid"},
+    {"n": 6, "name": "pocket", "ratio": "3:2", "prompt": "A phone in a hand on a bus, colourful blocks bursting on its screen"},
+    {"n": 7, "name": "fling", "ratio": "3:2", "prompt": "A fingertip flicking a small block through the air toward a stack of shapes"},
+    {"n": 8, "name": "wrecking", "ratio": "3:2", "prompt": "A shiny chrome ball rolling through a pile of scattered coloured shapes"},
+    {"n": 9, "name": "canvas", "ratio": "3:2", "prompt": "A blank white floor with a single die and a few loose shapes waiting to be arranged"},
+    {"n": 10, "name": "aftermath", "ratio": "3:2", "prompt": "The aftermath of a smashed sculpture, a few blocks still standing among rubble"}
+  ]
+}

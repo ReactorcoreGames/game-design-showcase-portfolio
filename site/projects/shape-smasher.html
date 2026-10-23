@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Smasher: Pocket Sculpture Demolition</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a 2D physics game for phones and PC with two halves, make art, then smash it. Build sculptures from geometric shapes in wood, glass, stone and metal, share them in level packs, and wreck other people's with a fling of the finger, choosing how much of the art to spare.">
+    <meta name="keywords" content="game design concept, physics destruction, mobile game, level editor, user-made levels, stress relief, one-handed, Angry Birds inspired, Crush the Castle inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/shape-smasher.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Shape Smasher: Pocket Sculpture Demolition">
+    <meta property="og:description" content="A game design concept: build sculptures out of shapes, share them, and smash other people's with a flick of the finger. A pocket stress toy with no timers, coins or stars. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/shape-smasher.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/shape-smasher_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a flung wooden block shatters a tower of glass triangles">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Shape Smasher: Pocket Sculpture Demolition">
+    <meta name="twitter:description" content="A game design concept: build sculptures out of shapes, share them, and smash other people's with a flick of the finger.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/shape-smasher_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Shape Smasher: Pocket Sculpture Demolition",
+        "description": "A game design concept, not a released game: a 2D physics destruction game for phones and PC where players build sculptures from geometric shapes in a level editor, share them as level packs, and wreck each other's with touch controls and a reshapeable wrecking shape.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Physics", "Arcade", "Casual"],
+        "gamePlatform": ["Android", "iOS", "PC"],
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/shape-smasher.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/shape-smasher_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#1a1220">
+
+    <link rel="preload" href="../fonts/unsteady-oversteer.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Shape Smasher: bubblegum pink and lemon yellow over a soft plum backdrop, cream for
+           highlights, like painted toy blocks on a gradient. Unsteady Oversteer (built from square
+           blocks) for the title only, since it's hard to read small; Zeroes One for the headings,
+           subtitle and kickers. */
+        @font-face { font-family: "Unsteady Oversteer"; src: url("../fonts/unsteady-oversteer.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Zeroes One"; src: url("../fonts/zeroes-one.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #1a1220;
+            --flow-2: #3d1f3d;
+            --grid-minor: rgba(255, 200, 230, 0.045);
+            --grid-major: rgba(255, 200, 230, 0.10);
+            --p-ground: rgba(26, 18, 32, 0.95);
+            --p-panel: #251a2c;
+            --p-1: #ff62a5;
+            --p-2: #ffd447;
+            --p-3: #fff2e2;
+            --p-text: #e9dfe8;
+            --p-dim: #b8a6b8;
+            --p-line: rgba(255, 200, 230, 0.16);
+            --font-title: "Zeroes One", "Segoe UI", sans-serif;
+            --font-sub: "Zeroes One", "Segoe UI", sans-serif;
+            --shade: #10091a;
+        }
+
+        /* Title effect, "impact": the letters sit still, then a short pink-and-yellow jolt hits
+           them, offset like a block knocked sideways, and settles back. Layered dark shadows keep
+           the title legible at every frame. */
+        .p-name {
+            font-family: "Unsteady Oversteer", "Segoe UI", sans-serif;
+            font-size: clamp(2.4rem, 1rem + 5vw, 5.4rem);
+            letter-spacing: 0.02em;
+            animation: impact 5s ease-out infinite;
+        }
+        @keyframes impact {
+            0%, 70%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade); }
+            74% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), -6px 0 0 rgba(255, 98, 165, 0.9), 6px 0 0 rgba(255, 212, 71, 0.9), 0 0 30px rgba(255, 98, 165, 0.6); }
+            80% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), -2px 0 0 rgba(255, 98, 165, 0.6), 2px 0 0 rgba(255, 212, 71, 0.6), 0 0 16px rgba(255, 98, 165, 0.3); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: impact-line 5s ease-out infinite;
+        }
+        @keyframes impact-line {
+            0%, 70%, 100% { box-shadow: 0 0 4px rgba(255, 98, 165, 0.3); opacity: 0.75; }
+            74% { box-shadow: 0 0 16px rgba(255, 98, 165, 0.95), 0 0 30px rgba(255, 212, 71, 0.6); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 5s ease-out infinite; }
+        @keyframes h2-line { 0%, 70%, 100% { box-shadow: none; } 74% { box-shadow: 0 0 12px rgba(255, 98, 165, 0.75); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.08em; }
+        .modes td:nth-of-type(1) { width: 62%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.95rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/shape-smasher_1_title.jpg" alt="A little arch-shaped sculpture of pastel pink, yellow, cream and grey blocks with metal diamond studs stands on a reflective floor before a pink-to-yellow gradient, as a polished chrome ball bursts through its right side in a spray of glass shards." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Shape Smasher</span><span class="p-sub">Pocket Sculpture Demolition</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/wrecking-ball-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/shatter-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Shape Smasher is a 2D physics game for phones and PC with two halves: <strong>make art, then smash it</strong>. In a level editor you build sculptures out of geometric shapes in wood, glass, stone, metal, dirt and ice. Every sculpture is a level, and everyone else gets to wreck it.</p>
+            <p>Smashing is done with your finger. Grab any piece of the sculpture, drag to set its direction and speed, and let go, or bring in a wrecking shape you can reshape, resize and set on fire. Each sculpture has a few little ragdoll <strong>minidudes</strong> scattered through it, and clearing them out is the goal, but how much of the art goes with them is up to you: a needle for just the minidude, or a sledgehammer for everything. There's no penalty either way.</p>
+            <p>The idea started as an Angry Birds or Crush the Castle that wasn't a puzzle about scarce shots, but a stress toy: abundant, spontaneous carnage you can pull out of your pocket anywhere, with no XP, coins, unlocks or intrusive ads. This page shows the design's later, simplified version, which made it more of a game and less of a social network.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>People who want <strong>a quick, guilt-free release</strong> on a bus ride or a coffee break, and who miss physics wreckers from before they grew energy timers, star ratings and coin shops.</p>
+                    <p>And people who like <strong>making little things for others</strong>, and want to see what became of them.</p>
+                    <p>One thumb is enough. The whole game is tap, drag and hold, laid out for the reach of a thumb, mirrored for left-handed players if they ask.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Excitement and release:</strong> stress relief and anger venting through satisfying destruction.</p>
+                    <p><strong>Power:</strong> the whole arsenal at your fingertips, nothing rationed.</p>
+                    <p><strong>Creation and self-expression:</strong> sculptures that say something, and smashing as a way of answering.</p>
+                    <p><strong>Giving and receiving:</strong> authors see exactly what their art went through.</p>
+                    <p>It avoids draining <strong>rest</strong> (no timers, no stats, exit at any moment), <strong>money</strong> (no shop) and <strong>safety</strong> (no written comments, so nowhere to be cruel).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/cubes-lorc.png)"></span>Core concept</h3>
+                    <p>Physics wreckers usually <strong>ration your shots</strong>, grade every level in stars, and hold the next levels back until you've scored enough of them.</p>
+                    <p>Here every tool is yours from the start, <strong>you decide when a level is finished</strong>, and the levels never run out, because they come from other players and from a generator that works offline.</p>
+                    <p>The push-back comes from the sculpture itself: where the minidudes hide, and how much of the art you want left standing.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/shape-smasher_5_story.jpg" alt="A bright white gallery hall with a polished floor and a lilac wall, a long row of pastel sculptures of blocks and metal stars on white plinths, some standing, some lying in heaps of broken coloured shapes." width="1280" height="720" loading="lazy">
+            <figcaption>"Every level is a sculpture someone built, often with a message in it, and every play is a reaction to it."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/palette-delapouite.png)"></span>The idea</h2>
+            <p>Shape Smasher has no story of its own. Its stories are the sculptures, and the people who make and break them.</p>
+
+            <h3>Art that's meant to be eaten</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/01-chef.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The design compares a level maker to a chef. You spend an hour on a beautiful dish, set it in front of a stranger, and they devour it in minutes. If it was good, you made someone's day. A sculpture works the same way, except it's served to everyone who downloads it, all at once.</p>
+            <p>In most galleries, reworking someone's piece is frowned upon. Here it's the whole point: you make art expecting it to be torn apart in creative ways, and the fun is seeing how raw the reactions were.</p>
+
+            <h3>Why levels became art</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/02-origin.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A wrecking game needs levels, so the editor came first, for making the first levels at all. Then came the real problem: smashing takes seconds and no thought, while building takes thinking and up to an hour. Why would anyone make levels? Because arranging shapes is already an art form: patterns, colors and silhouettes can carry meaning. So levels became sculptures, their makers became artists with something to say, and smashing became a kind of critique.</p>
+
+            <h3>Why the sculptures have residents</h3>
+            <p>The first version of the design was a social art platform, with accounts, a level store and feedback flowing back to every author. The later version keeps the art and drops the network: levels travel as packs, the way mods do, and each sculpture gets a handful of minidudes to clear out. That gives every level a goal and every player a choice, and keeps the sculpture's author in the picture.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/smartphone-delapouite.png)"></span>Controls and interface</h2>
+            <p>Shape Smasher plays in portrait or landscape on a phone, and in landscape on PC, where the mouse does what the finger does. Everything is a tap, a drag or a hold. The play screen is split into a spawn band along the top, where your tools appear, and the art space below it, with the sculpture standing on the ground.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Smashing</h3>
+                    <dl>
+                        <div><dt>Hold a piece</dt><dd>Grab any object; its momentum stops</dd></div>
+                        <div><dt>Drag</dt><dd>Set a new direction and speed while you hold it</dd></div>
+                        <div><dt>Let go</dt><dd>Launch it along the path you set</dd></div>
+                        <div><dt>Second finger</dt><dd>Hold anywhere: the piece follows your first finger instead, with a firmer grip</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Wrecking shape</h3>
+                    <dl>
+                        <div><dt>Tap the spawn band</dt><dd>Bring it in, or take it away</dd></div>
+                        <div><dt>Shape menu</dt><dd>Change its form, size and material</dd></div>
+                        <div><dt>Density</dt><dd>Make it solid or hollow</dd></div>
+                        <div><dt>Element</dt><dd>Imbue it with fire or another element</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Building</h3>
+                    <dl>
+                        <div><dt>Editor box</dt><dd>The current shape sits in the centre; sliders set height and width, a handle rotates it</dd></div>
+                        <div><dt>Drag out</dt><dd>Drop the shape into the art zone</dd></div>
+                        <div><dt>Side buttons</dt><dd>Shape, material, color tint; duplicate, templates, multiselect</dd></div>
+                        <div><dt>Delete zone</dt><dd>Appears at the edge while you drag; drop a shape there to bin it</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Getting around</h3>
+                    <dl>
+                        <div><dt>Quickplay</dt><dd>Straight from boot to a sculpture</dd></div>
+                        <div><dt>Next</dt><dd>On to the next level when you've decided you're done</dd></div>
+                        <div><dt>Exit</dt><dd>Leave at any moment, nothing lost</dd></div>
+                        <div><dt>Hand choice</dt><dd>Asked once at first launch; mirrors every menu and button</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>A grip lasts until something else crashes into the piece you're holding: any moving object that hits it knocks it loose from your finger. The design maps the comfortable reach of a thumb, a quarter circle over the lower part of the screen, and keeps the common actions inside it, with the side strips for two-handed grips: one thumb, one hand holding and the other tapping, a vertical Game Boy grip or a sideways one.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/shape-smasher_2_vignette.jpg" alt="A pink block flies in on a motion trail and smashes into a tower of clear glass and yellow triangles, glittering fragments spraying from the impact, against a plum backdrop." width="1280" height="720" loading="lazy">
+            <figcaption>"Grab any piece of the sculpture, drag to set its direction and speed, and let go."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/throwing-ball-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One sculpture</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/03-sculpture.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A sculpture opens with its title and its author's message. A few minidudes sit somewhere in it, placed at random, so the same sculpture is a different job every time. You get a weapon loadout for the level, and then it's you and the physics: fling a stone block into a glass arch, drag a beam through a tower, drop the wrecking shape from the top.</p>
+                        <p>The level is done when you say so. There's no required percentage of destruction and no timer.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/nested-hexagons-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A level pack</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/04-pack.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Levels come in <strong>packs</strong>: a bunch of similarly themed sculptures by one author, or a campaign put together by players, with the author's thoughts riding along. A pack is a short, finite run with a start and an end, shown as a row of circles that fill in as you go. Packs without a name get one from a random name generator.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/photo-camera-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>An endless gallery</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/05-gallery.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There's always another sculpture: packs from other players, and a generator that builds random sculptures (some of them gloriously nonsensical) offline. Random picks never serve you one you've already played.</p>
+                        <p>Your <strong>player log</strong> keeps every level you've played, each with its aftermath and the one feeling you gave it, and any of them can be replayed. Your own sculptures have a log too: the aftermath gallery shows what everyone did to them. That's a record of what happened, not a score.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Whip it out, have a blast, put it away</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/06-pocket.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The design's own flow, in its words: whip it out, boot it, hit quickplay, have a blast, exit any time. One sculpture takes a minute or two. Stop mid-level and nothing is lost, nothing is counting down, and nothing will ask you to come back. A pack waits where you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/balloons-lorc.png)"></span>Game modes</h2>
+            <p>Every mode plays on the same sculptures, so any level can be played several ways:</p>
+            <div class="p-table-wrap">
+                <table class="p-table modes">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What you do</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Clear-out levels</th><td data-label="What you do">Remove every minidude with a random loadout, sparing as much or as little of the art as you like</td><td data-label="For">The main game: a goal, a choice, no penalty</td></tr>
+                        <tr><th scope="row">Rescue levels</th><td data-label="What you do">Tag minidudes with balloons that float them up to safety, without bringing the sculpture down on them</td><td data-label="For">Careful play, for when weapons-free isn't the mood</td></tr>
+                        <tr><th scope="row">Free smash</th><td data-label="What you do">No minidudes and no goal: wreck any sculpture, or a generated one, until you're satisfied</td><td data-label="For">The pure stress toy, online or offline</td></tr>
+                        <tr><th scope="row">Create</th><td data-label="What you do">Build sculptures and packs in the editor, test them, and share them</td><td data-label="For">Saying something, and seeing what people make of it</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>A pack can mix clear-out and rescue levels, so a run alternates between careful and weapons-free.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/wrecking-ball-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/pointing-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A slingshot without the slingshot</p>
+                        <h3>Grab anything, fling it</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/07-fling.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The controls are Angry Birds' slingshot, except that <strong>every piece of the level is the bird</strong>. Point and hold on any object: its momentum stops and a temporary joint forms between it and your finger. Drag to give it a new direction and speed, and let go. If nothing interferes, it launches exactly the way you set it.</p>
+                        <p>Hold a second finger anywhere and the joint changes mode: the piece now follows your finger around instead, with a stronger grip that's harder to knock loose, for dragging a beam through a tower or lifting a slab to drop it. An optional overdrive boost multiplies your force, and fixed physics limits on speed and size keep the simulation stable however hard you throw. You can level a whole sculpture this way without ever touching a weapon.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/wrecking-ball-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Your own piece</p>
+                        <h3>The wrecking shape</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/08-wrecking.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Besides the sculpture's own pieces, you have one <strong>wrecking shape</strong>: indestructible, and only ever one of it at a time. Change its shape, its size, its material (which sets its friction), its density (solid or hollow), and imbue it with an element.</p>
+                        <p>Every property follows the same physics as the sculpture's pieces. A big one is heavy and bulldozes; a small one is sharp and punches through. A burning one sets wood alight. It's one tool that covers everything from a pin to a wrecking ball.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sewing-needle-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Needle or sledgehammer</h3>
+                        <p>In a clear-out level, the minidudes are the goal and the sculpture is <strong>collateral</strong>. Say one is wedged in an awkward spot between two glass panels: you can thread the needle and take only the minidude, leaving the art untouched, or swing the sledgehammer and take the whole thing down with it. Both finish the level. Neither is scored.</p>
+                        <p>That choice is the design's original idea, Spare or Smash, turned into play. Respecting someone's art is something you do with your hands, shot by shot, instead of a button you press. Because minidude positions and your loadout are rolled fresh each time, the same sculpture asks the question differently every play.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/shape-smasher_3_feature.jpg" alt="A sunburst sculpture split down the middle: the left half, yellow rays around an orange disc, stands intact; the right half, in pink, is collapsing into a heap of cream, grey and pink pieces on the floor." width="1280" height="720" loading="lazy">
+                            <figcaption>"No score for sparing the art, no penalty for wrecking it. How much survives is your call."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/paint-brush-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The editor</p>
+                        <h3>Sculptures from shapes</h3>
+                        <p>Every piece is a shape stretched freely along both axes: <strong>basic</strong> squares, triangles and hexagons; <strong>advanced</strong> right triangles, diamonds, pentagons, heptagons, octagons and flat slivers; <strong>special</strong> stars and slanted pieces; and unique entities like ropes, chains, vines, explosives and heaters. A <strong>material</strong> is laid over the stretched shape and decides its look and behavior, and its mass and strength come from its size: bigger is heavier, smaller breaks sooner. A color tint goes on top.</p>
+                        <p>Pieces can stand loose, be linked by joints, or be glued into composite shells that still break apart along the pieces they're built from. Optional indestructible <strong>framing ground</strong> (a floor, one wall, both) frames the art zone. A background mode adds gradients, patterns and desaturated background shapes, one rotatable ambient light and up to four colored point lights, from bright daylight to a moody night.</p>
+                        <p>Multiselect handles the tedious parts: box select, select similar, handpick, select all, and "deselect random" with a percentage slider, for roughing up a tidy wall.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/brainstorm-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Blank-canvas help</p>
+                        <h3>Never stuck on a blank canvas</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/09-canvas.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Building is the hard half, so the editor helps you start. A <strong>framing word</strong>, a random word, phrase or question, gives a sculpture a subject. A <strong>weekly theme</strong> gives everyone the same prompt to answer in their own way. The <strong>generator</strong> can build a complete or partial random sculpture as a starting point.</p>
+                        <p>Every shape and material menu has a <strong>randomize</strong> button, with a dice checkbox on each category to include or leave it out, so a single tap drops a random shape at a random size. Anything you like can be saved as a template and spawned again later. Tutorials cover both the game and the craft of making a level, down to a light art primer.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/photo-camera-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Feedback without comments</p>
+                        <h3>The aftermath gallery</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/shape-smasher/10-aftermath.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>When the last minidude goes, the game takes an automatic <strong>low-resolution screenshot</strong> of that final moment, tags it with the level or pack name, and uploads it to a simple image server. Anyone can browse the latest hundred plays, or look up an author from an alphabetical list and see what became of each of their sculptures: left pristine, gently trimmed, or flattened. Old images expire after a while, so storage stays small.</p>
+                        <p>After a level you can also leave <strong>one feeling</strong>, once: like, neutral or dislike at the least, from a small grid that also has surprise, sadness, anger, love, confusion and "really makes you think". There is deliberately <strong>no written feedback</strong> at all, so there's nowhere to be cruel. A level you don't want to see again can be blocked for you alone, and real abuse is reported and removed on the server.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/theater-curtains-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Support, if you feel like it</p>
+                        <h3>The ad circus</h3>
+                        <p>The game is free and never interrupts you with an ad. Instead there's an <strong>ad circus</strong>, tucked away in a submenu, never on the main screen: a wall of tiles behind closed theatre curtains. Open one and you see an ad; close it whenever you like. Five seconds counts as a view toward a support bar, and an info panel explains plainly what the ads pay for: server costs, data, funding goals and what's being built next.</p>
+                        <p>It only asks you to watch if you want to, for your own reasons. And because this is Shape Smasher, you can also pick an ad and break it to pieces instead. For anyone who wants to say thank you with money, there's a separate paid extra on an outside store, linked from the app.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/shape-smasher_4_boxart.jpg" alt="Box art: a giant chrome ball hangs above a tall stacked tower of pink, yellow, grey stone and clear glass shapes, two small metal stars floating beside it, on a yellow-to-violet gradient." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Gallery rules</p>
+                <h2 id="sendoff">Shape Smasher: Pocket Sculpture Demolition</h2>
+                <p>Please touch the art. Pick up the pieces. Throw them at the other pieces. Bring your own wrecking ball, and set it on fire if you like.</p>
+                <p>Then build something of your own, put a message in it, and hand it to the world to see what they do with it.</p>
+                <p><strong>Make art, then smash it.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Angry Birds and Crush the Castle</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Unsteady Oversteer and Zeroes One (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
