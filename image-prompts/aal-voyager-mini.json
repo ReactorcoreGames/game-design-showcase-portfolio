@@ -1,0 +1,20 @@
+{
+  "slug": "aal-voyager-mini",
+  "out": "site/projects/mini/aal-voyager",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "03 Style - Graphite Watercolor",
+  "lead": "Retro travel poster watercolor, warm sunset, mustard, coral and plum. ",
+  "images": [
+    {"n": 1, "name": "sport", "ratio": "3:2", "prompt": "A crowd watching a giant screen showing a robot racing across a wild planet"},
+    {"n": 2, "name": "courses", "ratio": "3:2", "prompt": "A map of distant worlds, a jungle planet, a neon city and a desert junkyard"},
+    {"n": 3, "name": "making-do", "ratio": "3:2", "prompt": "A small robot building a ladder from scrap beside a glowing vent"},
+    {"n": 4, "name": "course", "ratio": "3:2", "prompt": "A winding road over hills leading to a far landmark tower"},
+    {"n": 5, "name": "album", "ratio": "3:2", "prompt": "An open photo album of postcards of a little robot at famous landmarks"},
+    {"n": 6, "name": "evening", "ratio": "3:2", "prompt": "A VR headset resting on a sofa in a cozy living room at evening"},
+    {"n": 7, "name": "packing", "ratio": "3:2", "prompt": "A small robot packing a backpack with wire, tools and a lamp"},
+    {"n": 8, "name": "gates", "ratio": "3:2", "prompt": "A robot looking at a deep gorge with a rope bridge half built"},
+    {"n": 9, "name": "spare", "ratio": "3:2", "prompt": "A spare robot body arriving in a drop pod on a dusty plain"},
+    {"n": 10, "name": "power", "ratio": "3:2", "prompt": "A small water wheel generator on a stream powering a lamp"}
+  ]
+}

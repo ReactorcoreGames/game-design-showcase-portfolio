@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Voyager: Robinson Survival Challenge</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: an endurance sport where you ride a robot body by VR through a course of generated remote places, wild planets, neon alien cities and scrapyard frontiers, with nothing but your hands and a fabricator built into your arms. Reach the landmark, pack for the next leg.">
+    <meta name="keywords" content="game design concept, survival crafting, exploration, side-view platformer, procedural generation, robot, Subnautica inspired, Adios Amigos inspired, Amazing Race inspired, AAL universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-voyager.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Voyager: Robinson Survival Challenge">
+    <meta property="og:description" content="A game design concept: ride a robot body through a course of generated remote places with only your hands and a fabricator in your arms. Reach the landmark, pack for the next leg. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-voyager.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-voyager_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a small robot hauls a cart of scrap across a desert badland toward a scrap village">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Voyager: Robinson Survival Challenge">
+    <meta name="twitter:description" content="A game design concept: ride a robot body through a course of generated remote places with only your hands and a fabricator in your arms.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-voyager_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Voyager: Robinson Survival Challenge",
+        "description": "A game design concept, not a released game: a side-view survival and crafting game framed as an endurance sport, where the player remotely rides a robot body through a course of generated remote locations with only bare hands and an arm-mounted fabricator, crafting what each leg needs and choosing what to carry to the next. Set in Reactorcore's AAL universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Adventure", "Survival", "Platformer"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-voyager.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-voyager_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#1a1220">
+
+    <link rel="preload" href="../fonts/skateblade.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* AAL Voyager: a mid-century travel poster at dusk. Deep plum ground, mustard for the
+           road ahead, a dusty coral for warmth, and paper cream. Skateblade, sporty and slanted,
+           for the title and headings; Aldrich for the subtitle and kickers. */
+        @font-face { font-family: "Skateblade"; src: url("../fonts/skateblade.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Aldrich"; src: url("../fonts/aldrich.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #1a1220;
+            --flow-2: #3d2338;
+            --grid-minor: rgba(255, 210, 160, 0.04);
+            --grid-major: rgba(255, 210, 160, 0.09);
+            --p-ground: rgba(26, 18, 31, 0.95);
+            --p-panel: #251a2b;
+            --p-1: #f2c14e;
+            --p-2: #ec8a72;
+            --p-3: #fbf0dc;
+            --p-text: #e8dfe0;
+            --p-dim: #b3a5ad;
+            --p-line: rgba(255, 215, 180, 0.15);
+            --font-title: "Skateblade", "Segoe UI", sans-serif;
+            --font-sub: "Aldrich", "Segoe UI", sans-serif;
+            --shade: #0f0a13;
+        }
+
+        /* Title effect, "sunrise": a warm horizon glow rises under the name from coral to
+           mustard and sinks again, slow as a day on the road. Layered dark shadows keep it legible
+           at every frame. Skateblade is wide, so the title runs a little smaller than the default. */
+        .p-name {
+            font-size: clamp(2rem, 0.9rem + 4.8vw, 5.4rem);
+            letter-spacing: 0.02em;
+            animation: sunrise 8s ease-in-out infinite;
+        }
+        @keyframes sunrise {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 14px 26px rgba(236, 138, 114, 0.25); }
+            50% { color: #fff8ea; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 6px 22px rgba(242, 193, 78, 0.75), 0 0 40px rgba(236, 138, 114, 0.45); }
+        }
+        .p-sub { letter-spacing: 0.08em; text-transform: uppercase; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: sunrise-line 8s ease-in-out infinite;
+        }
+        @keyframes sunrise-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(236, 138, 114, 0.3); opacity: 0.7; }
+            50% { box-shadow: 0 0 14px rgba(242, 193, 78, 0.85), 0 0 28px rgba(236, 138, 114, 0.5); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 8s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(242, 193, 78, 0.6); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.12em; }
+
+        .p-nest > div { --c: var(--p-1); }
+        .p-nest > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .places td { width: 30%; }
+        .carry td:first-of-type { width: 60%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/aal-voyager_1_title.jpg" alt="A small cream and mustard robot stands on a cliff edge looking across a wild alien valley at sunset toward a colossal stone arch on the horizon with a beacon light on top." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">AAL Voyager</span><span class="p-sub">Robinson Survival Challenge</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/vr-headset-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/horizon-road-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">AAL Voyager is a survival adventure framed as an endurance sport. Through a VR headset, your mind rides a real robot body, dropped at the start of a course of remote places. Each leg ends at a landmark. You have your hands, a fabricator built into your arms, and whatever you thought to bring.</p>
+            <p>It's Subnautica made light and portable, mixed with Adios Amigos and The Amazing Race. There's no base to build and no stone age to climb out of: the fabricator in your arms skips straight to useful things, as long as you can find a power source to stand next to. What you can't do is fly, fight or carry much, so every leg is a puzzle of what to make, what to take and what to leave behind.</p>
+            <p>It's one of three games grown from the same notebook, and it's set in Reactorcore's <a href="../aal/">AAL universe</a>.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love the first hours of a survival game best, landing somewhere strange with nothing and working it out, and who get bored once the base is built and the tech tree is climbed.</p>
+                    <p>They want <strong>resourcefulness</strong>: the clever improvised fix, not a hundred hours of chopping trees.</p>
+                    <p>Platformer controls, keyboard and mouse. No combat, no reflex tests: the challenge is in the thinking.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Creation and learning:</strong> sizing up a place and inventing your way through it with what's there.</p>
+                    <p><strong>Challenge:</strong> getting a fragile body across a hostile place with your bare hands.</p>
+                    <p><strong>Variety and adventure:</strong> wild planets, neon alien cities and scrapyard frontiers, never the same course twice.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> (a robot body has no hunger or thirst meters, only power) and <strong>safety</strong> (losing a body costs the body, never the course).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Survival games usually start you in the stone age, pin you to one island, and fill the hours with base building, tech trees and meters to keep topped up.</p>
+                    <p>Here you start with a fabricator and skip the stone age. There's <strong>no base</strong>, because you're always moving on: most of what you build is disposable, and the next leg is somewhere new.</p>
+                    <p>What carries over is what you pack and what you've learned. The course generator never runs dry.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-voyager_5_story.jpg" alt="A sunny futuristic plaza where relaxed people sit at cafe tables under umbrellas below a giant outdoor screen showing a small robot climbing a red canyon wall, a tram passing by." width="1280" height="720" loading="lazy">
+            <figcaption>"Nobody has to work any more. Some people spend their freedom crossing a strange world with their bare hands."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/ticket-delapouite.png)"></span>Lore and story</h2>
+            <h3>A sport for a universe with time on its hands</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/01-sport.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>In the AAL universe's peaceful age, nobody needs to work. People chase whatever they like: art, science, romance, adrenaline. One of the most popular ways to chase adrenaline is the Voyager Challenge, an endurance sport somewhere between an Ironman race, The Amazing Race and Robinson Crusoe.</p>
+            <p>Contestants never leave home. Through a VR headset and a hyperwave link, a contestant's mind takes over a <strong>real robot body</strong> waiting on a remote world, and has to get it to the leg's landmark: a natural wonder, an old ruin, a famous building, a person to meet, an extraction point.</p>
+
+            <h3>The courses</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/02-courses.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The courses run through places the galactic community has charted but not joined. Some are wild planets with no one on them at all. Others belong to neutral alien civilizations that get along with humanity fine but haven't yet worked out how to look after everyone: bustling neon cities run on money and hustle, and rough frontier towns of scavengers, farmers and nomads.</p>
+            <p>The rule of the sport is simple: the body arrives with nothing. No tools, no weapons, no cash. Whatever it needs, it makes or finds there.</p>
+
+            <h3>The race right now</h3>
+            <p>Your body has just been dropped at the start of a new course. There's a landmark on the horizon and a hint about where the next leg might be. Put the headset on.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>The robot body is controlled from the side, like a classic platformer hero with a few extra skills: it runs, jumps, swims, climbs grids and walls in the background, climbs ropes in any direction, and grabs, tosses and drops things. It can't fly, double jump or dash, and it has no built-in weapons or tools. Just two capable hands.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>A / D</dt><dd>Walk; hold Shift to run</dd></div>
+                        <div><dt>Space</dt><dd>Jump</dd></div>
+                        <div><dt>W / S</dt><dd>Climb ropes, ladders and grids; swim; crouch</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Hands</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Grab, pick up, drop</dd></div>
+                        <div><dt>Left click</dt><dd>Use what's in your hands</dd></div>
+                        <div><dt>Right click</dt><dd>Throw it toward the pointer</dd></div>
+                        <div><dt>Q</dt><dd>Swap what's in your hands with your pack</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Pack and fabricator</h3>
+                    <dl>
+                        <div><dt>I</dt><dd>Inventory</dd></div>
+                        <div><dt>F</dt><dd>Fabricate (only beside a power source)</dd></div>
+                        <div><dt>C</dt><dd>Hitch or unhitch a cart, sled or tethered bag</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Interface</h3>
+                    <dl>
+                        <div><dt>M</dt><dd>Leg map: the landmark and the next-leg hint</dd></div>
+                        <div><dt>Tab</dt><dd>Body status: battery, heat, pressure, damage</dd></div>
+                        <div><dt>Esc</dt><dd>Pause; lift the headset</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The body status is the only meter that matters, and it's about the machine, not a stomach: how much charge the battery holds, and whether the heat, cold, pressure or radiation around you is more than this body is built for.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-voyager_2_vignette.jpg" alt="A small cream and mustard robot pulls a two-wheeled cart piled with scrap metal across a sunset desert toward a village of patched-together huts." width="1280" height="720" loading="lazy">
+            <figcaption>"The bag holds what you need. The cart holds what you might. Each one slows you down a little more."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hand-grip-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Making do</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/03-making-do.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Arrive with what you packed. Look around: what's here, what's scarce, where's the power? Scrounge, climb, swim, haul. Find a vent or a socket, set up beside it, and fabricate what the next stretch needs: a raft, a rope, an insulated shell, a ladder, a cart. Then push on toward the landmark, carrying as much as you can stand to.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mountain-road-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A course</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/04-course.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A course is a chain of legs across different places. You're dropped off at the first, as is customary, and every landmark you reach sends you on to the next. Between legs you get a hint about where you're going, and a moment to decide what to take: the only things that cross over are what you can carry.</p>
+                        <p>A short course is a weekend; a long expedition crosses a dozen worlds.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/photo-camera-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The travel album</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/05-album.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every landmark you reach goes into your <strong>travel album</strong> as a snapshot of the body standing there, battered and proud, with the route that got it there and the odd contraptions that helped. It's a record of where you've been and how you got there: a memento, not a medal table.</p>
+                        <p>The sport goes on forever, because the generator never runs out of courses. There's always another starting line somewhere strange.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One leg per evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/06-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A leg takes an hour or so. Lift the headset whenever you like, which is the game's pause and save in one: the body waits exactly where you left it. There's no clock on the course. Your times are written in the album for your own interest, and nobody else's.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/horizon-road-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the challenge</strong>, at any length you like. It nests:</p>
+            <div class="p-nest" aria-label="The challenge, outermost first">
+                <div><span>The sport</span><small>Endless: course after course, and an album that keeps growing.</small>
+                    <div><span>A course</span><small>A chain of legs across different worlds: a weekend to a long expedition.</small>
+                        <div><span>A leg</span><small>One place, one landmark: an evening.</small>
+                            <div><span>A stretch</span><small>The next obstacle and what it takes to cross it: a few minutes.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/vr-headset-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crafting-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>A fabricator in your arms</h3>
+                        <p>Imagine Subnautica's fabricator, built into your forearms. Feed it materials and it makes useful things straight away: ropes, rafts, carts, ladders, shells against heat or pressure, a generator, a pump. There's <strong>no stone age</strong> to climb out of and no workbench to build first.</p>
+                        <p>The catch is power. The body's battery is small, enough to keep it moving and not much more, so fabricating means <strong>standing next to a real power source</strong>: a generator you've set over a geothermal vent, a wind or water wheel, a city socket, a junkyard engine coaxed back to life. Machines you build are the same: they need a power line, which pins them in place.</p>
+                        <p>So every leg has a rhythm: find the power, set up beside it, make what the road ahead needs, and carry it away from the only place you could have made it.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/aal-voyager_3_feature.jpg" alt="A small cream and mustard robot kneels beside a glowing geothermal vent in a purple canyon, a boxy generator hanging on a cable above it, sparks pouring from its forearm as it builds a small wooden raft." width="1280" height="720" loading="lazy">
+                            <figcaption>"The fabricator makes almost anything, but only while you stand next to power."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/backpack-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Travel light, or try not to</p>
+                        <h3>Carrying</h3>
+                        <p>The body's own inventory is small, and nearly everything you make is disposable: it wears out, breaks, or simply can't come with you to the next leg. To carry more, you build ways to carry, and each one costs you something:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table carry">
+                                <thead><tr><th scope="col">Way to carry</th><th scope="col">The cost</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Your hands and inventory</th><td data-label="Cost">Nothing, but there's very little room</td></tr>
+                                    <tr><th scope="row">An extra bag</th><td data-label="Cost">A bit slower, and you can't swim well</td></tr>
+                                    <tr><th scope="row">A cart or luggage</th><td data-label="Cost">Needs flat-ish ground, and one hand to pull it</td></tr>
+                                    <tr><th scope="row">A tethered bag dragged behind a carried one</th><td data-label="Cost">Clumsy: it snags, swings, and drags you back off ledges</td></tr>
+                                    <tr><th scope="row">A vehicle with cargo space</th><td data-label="Cost">Needs a route, fuel or power, and has to be abandoned at the end</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/modern-city-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Not only islands</p>
+                        <h3>Three kinds of place</h3>
+                        <p>Unlike most survival games, Voyager isn't stuck on a desert island. Each kind of place turns the usual survival problem around:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table places">
+                                <thead><tr><th scope="col">Place</th><th scope="col">Plentiful</th><th scope="col">Scarce</th><th scope="col">How you get things</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Wild planets</th><td data-label="Plentiful">Raw natural resources</td><td data-label="Scarce">Anything made; every advanced part has to be crafted from scratch</td><td data-label="How">Gather, mine, dig, fabricate</td></tr>
+                                    <tr><th scope="row">Neon cities</th><td data-label="Plentiful">Finished goods, everywhere, behind a price</td><td data-label="Scarce">Anything free</td><td data-label="How">Dumpster diving, shops, a lucky night at a casino, or sneaking into a guarded warehouse</td></tr>
+                                    <tr><th scope="row">Frontier badlands</th><td data-label="Plentiful">Medium-grade parts and machinery, in junkyards</td><td data-label="Scarce">The basics: pure copper, organic material, simple stuff</td><td data-label="How">Scavenge and trade with the villages, outposts and nomads</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The cities and towns belong to neutral alien peoples who don't mind contestants, as long as they don't make trouble. You can't fight anyone anyway: you have no weapons.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">What crosses over</p>
+                        <h3>Packing for the next leg</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/07-packing.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Near the end of each leg you get a hint about the next place: "somewhere cold", "a city that never sleeps", "deep water". Whatever you bring from here can let you skip a hard part there, make it easier, or do something that would otherwise be out of reach.</p>
+                        <p>A coil of copper wire from a wild world is worth a fortune in a badland town. A bag of city electronics saves you a day of mining on a barren moon. Choosing what fills your few slots is the strategy layer of the whole game.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mountain-climbing-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Locks you build through</p>
+                        <h3>Hazards and natural gates</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/08-gates.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each place is a generated side-view world with Super Metroid's lock-and-key structure, except the keys are things you build. Deep water needs a pressure shell or a raft. A lava cave needs insulation. A cliff needs a rope, a gap needs a bridge, a locked city gate needs a pass or another way round. The world's own nature makes the gates: no invisible walls, no doors that open because you've collected enough of something.</p>
+                        <p>Heat, cold, pressure and radiation are measured against the body, not against meters ticking down. Stay inside its limits and it's fine; push past them and parts start failing.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/robot-leg-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">It's only a body</p>
+                        <h3>Losing one</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/09-spare.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A robot body can be crushed, drowned, cooked or simply shaken apart. When it is, you lift the headset, unharmed, and the course sends a spare body to the leg's drop-off point, arriving with nothing, like the first one.</p>
+                        <p>The world doesn't reset. Everything you built is still where you left it, and the old body's wreck, with whatever it was carrying, is wherever it fell. Go back for it, if you can.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/power-generator-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Streamlined survival</p>
+                        <h3>One need, not ten</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-voyager/10-power.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A robot doesn't eat, drink or sleep. That clears away the meters most survival games pile on and leaves one need with real consequences: <strong>power</strong>. It shapes everything, from where you can fabricate to how far you can range from a source and how long you can work a stubborn machine.</p>
+                        <p>Mining is the same: soft ground digs by hand, Motherlode-style, while anything harder needs a tool, and a powered tool needs a charge.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/island-delapouite.png)"></span>Trivia</h2>
+            <h3>Three games from one notebook</h3>
+            <p>Reactorcore played Terrene, a pixel-art planet explorer, liked its world of tall planet slices, and kept wanting it to be something else. The result was one long design for a planetary explorer, the Inspector, that tried to be everything at once, and then three remixes that each took one part of it and went all the way: this hands-only survival race, the gentle collectathon of <a href="aal-collector.html">AAL Collector</a>, and the all-out assault of <a href="aal-exterminator.html">AAL Exterminator</a>. Voyager is the one that threw away the starship.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/aal-voyager_4_boxart.jpg" alt="Box art: two small cream and mustard robots climb a rope up a tall sunlit cliff over a winding river valley, a slender landmark tower at the top against a warm sunset sky." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Your entry is confirmed</p>
+                <h2 id="sendoff">AAL Voyager: Robinson Survival Challenge</h2>
+                <p>Your body is waiting at the starting line on a world you've never seen. It has two hands, a fabricator, a small battery and nothing else.</p>
+                <p>Somewhere past the jungle, the city or the junkyard stands a landmark. Get there. Pack what you can for the next one.</p>
+                <p><strong>Bring nothing. Make everything. Keep going.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Terrene, Subnautica, Adios Amigos, The Amazing Race, Robinson Crusoe, Super Metroid and Motherlode</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Skateblade, Aldrich, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

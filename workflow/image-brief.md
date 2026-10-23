@@ -88,6 +88,8 @@ Painterly presets sign their work. The Frazetta Oil Paint and Digital Anime 90s 
 
 Nano Banana doesn't always obey its no-text line: on a 2:3 box art it painted a made-up title in big letters. Manga presets (Murata) add speech-bubble lettering on their own. Small lettering on plain sky can be removed with OpenCV inpainting (`cv2.inpaint`, masking only the strokes) on the finished JPG; note it in the manifest, because a later `finish` overwrites the fix.
 
+The James Gilleard preset (batch 12, AAL Voyager) treats the picture as a poster: a 2:3 "travel poster" with "room for a title" came back with a big made-up title, and a giant screen in a city scene got a gibberish caption bar. Keep "poster" and "room for a title" out of its prompts, end them with "Pure illustration with no lettering, no words, no border", and check every screen or sign in the picture. It also frames some images with a cream border, which suits it.
+
 Make every alt text describe what was actually generated, not what the prompt asked for.
 
 ## Mini images (SDXL)

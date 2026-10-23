@@ -130,7 +130,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Metroid Forever concept, now Lockbreaker
 - [x] AAL Collector
 - [x] AAL Exterminator
-- [ ] AAL Voyager
+- [x] AAL Voyager
 - [x] AAL Inspector (no page of its own, Reactorcore's call: it's the foundation the trio grew from, folded into their pages; all five docs are in `designs/done/AAL Terrene Clones/`)
 - [ ] AAL Trash Miner
 - [ ] Temporal Shift RTS

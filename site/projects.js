@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "aal-voyager.html", prefix: "aal-voyager",
+    title: "AAL Voyager", subtitle: "Robinson Survival Challenge",
+    icon: "vr-headset-delapouite", tint: "yellow",
+    blurb: "An endurance sport for a universe with time on its hands: ride a robot body by VR across generated wild planets, neon alien cities and scrapyard frontiers, with only your hands and a fabricator that works beside a power source. Reach the landmark, pack for the next leg.",
+    genres: ["sandbox", "action"], tags: ["survival", "crafting", "exploration", "procedural campaigns"],
+    universe: "aal", status: "concept", added: "2026-10-23"
+  },
+  {
     page: "aal-exterminator.html", prefix: "aal-exterminator",
     title: "AAL Exterminator", subtitle: "Three-Layer Planetary Assault",
     icon: "missile-mech-lorc", tint: "red",

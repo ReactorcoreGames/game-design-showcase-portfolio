@@ -1,0 +1,37 @@
+{
+  "slug": "aal-voyager",
+  "preset": "09 Artist - James Gilleard (Japan by Car)",
+  "style": "Palette of deep plum and dusty violet shadows, warm mustard yellow, dusty coral and paper cream, sunset light, travel poster mood.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide landscape at sunset: on a rocky cliff edge on the right stands a small slim humanoid robot with a cream and mustard-yellow body, a round dark visor face and a small backpack, looking out across a wild alien valley of strange round trees, a winding river and layered purple mountains. Far away on the horizon rises a colossal natural stone arch with a tiny bright beacon light on top. The lower left of the picture is calm open valley and sky."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side view of a sunset desert badland with mesas: a small slim humanoid robot with a cream and mustard-yellow body, a round dark visor face and a small backpack walks from left to right pulling a two-wheeled cart piled with scrap metal, pipes and a coil of rope, a cloth sack dragging behind it on a rope. Ahead in the distance, a small village of patched-together huts, wind wheels and a junk pile."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Side view in a rocky volcanic canyon at dusk: a glowing orange geothermal vent with a small boxy generator set over it, a cable running from the generator. Beside it kneels a small slim humanoid robot with a cream and mustard-yellow body, a round dark visor face and a small backpack, bright light and sparks pouring from its forearm onto a small wooden raft it is building. A dark river flows beyond."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait illustration of a tall sunlit cliff face with a slender ancient landmark tower on its top. Halfway up the cliff, a small, clearly mechanical robot with a boxy cream and mustard-yellow metal body, a round dark visor and a small backpack hangs from a long rope, climbing. Far below, a winding river valley. The top third of the picture is a wide, empty warm sunset sky with soft layered clouds. Pure illustration with no lettering, no words, no border."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide sunny view of a clean futuristic city plaza with trees, terraces and tram lines, seen from a distance. On the side of a tall building hangs a giant outdoor screen showing a small cream and mustard-yellow robot climbing a red canyon wall. Small distant groups of relaxed people sit at cafe tables under umbrellas below it. Bicycles parked, a passing tram, warm afternoon light."
+    }
+  ]
+}
