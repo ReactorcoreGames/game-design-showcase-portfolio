@@ -344,4 +344,4 @@ Maybe a special reusable ability ala Cryptark would be cool too.
 
 ## Player support vessel(?)
 V1 may be enough to just spawn, fight and retreat if you're out of ammo or don't think you'll stay alive to complete the mission.
-V2 could include a resupply vessel that repairs, rearms and refuels the mechjet. This vessel doesn't move, just provides a box collider to designate a supply spot when within. This could be a floating heli platform, a crawler, a boat with helipad, blimp, hot air balloon, mothership spacecraft, an small ground depot, minibase, or supply cache ala gunmetal regenerator.
+V2 could include a resupply vessel that repairs, rearms and refuels the mechjet. This vessel doesn't move, just provides a box collider to designate a supply spot when within. This could be a floating heli platform, a crawler, a boat with helipad, blimp, hot air balloon, mothership spacecraft, an small ground depot, minibase, or supply cache ala Gunmetal (a PC game by Yeti Studios) regenerator.

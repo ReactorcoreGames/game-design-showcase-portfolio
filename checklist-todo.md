@@ -119,7 +119,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Ukrainian Turbo Minesweeper (released; images from its own promo folder, no generation)
 - [x] Graviton Singularity Mecha (Momentum Missile Mayhem 2 Redux) (pilot 2)
 - [x] Ragdoll battle royale (PUBG doc), now Jetboot Resistance
-- [-] Planet Warfare (Skip until further notice - I need to prepare for this)
+
 - [x] RoomSpace
 - [x] Shape Smasher
 - [x] Net Terminal (BLAME!-inspired), now Lattice Walker
@@ -127,13 +127,11 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Closed-room smasher (rosebud doc), now God Tier Tantrum
 - [ ] Soldat Doom Infinite
 - [ ] Space Chunks–inspired blast-em-up
-- [ ] AAL Standalone
 - [ ] Metroid Forever concept
 - [ ] AAL Collector
 - [ ] AAL Exterminator
 - [ ] AAL Voyager
 - [ ] AAL Inspector (decide after the trio: its own page, or folded into the trio)
-- [-] TopVerse (Skip until further notice - I need to prepare for this)
 - [ ] AAL Trash Miner
 - [ ] Temporal Shift RTS
 - [ ] Type 1-X Mecha RTS
@@ -141,7 +139,6 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [ ] Metsanelaimet
 - [ ] Auto chess (or fold it into another page)
 - [ ] Bazooka Bomber
-- [-] Party Hard–style (its own page, or part of the Kenney anthology (Author note: its own page.)) (Skip, needs some manual preps by me.)
 - [ ] Telekinetic Eradicator
 - [ ] UNO-inspired family (decide the split: 1–3 pages)
 - [ ] ETCC family (about 3 pages: v1 casual, v2 full, KMF)
@@ -150,6 +147,10 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [ ] Human Apex
 - [ ] Motherlode × Tasty Planet (pick the best variants)
 - [ ] Pinball mix
+- [-] Party Hard–style (its own page, or part of the Kenney anthology (Author note: its own page.)) (Skip, needs some manual preps by me.)
+- [-] Planet Warfare (Skip until further notice - I need to prepare for this)
+- [-] TopVerse (Skip until further notice - I need to prepare for this)
+- [-] AAL Standalone (Skip until further notice - I need to prepare for this)
 
 ## 5. Image generation (local sessions only)
 
