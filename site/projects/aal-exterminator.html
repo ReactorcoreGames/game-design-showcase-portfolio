@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Exterminator: Three-Layer Planetary Assault</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a one-man-army assault on generated hostile star systems with three units at three scales: a flying battle-suit agent, a transforming jet mecha and a siege carrier. Strike from orbit to bedrock, crack fortress cores, and keep a log of every tyranny ended.">
+    <meta name="keywords" content="game design concept, action, shoot 'em up, destructible terrain, transforming mecha, carrier, orbital bombardment, procedural campaigns, Terrene inspired, Utopia Must Fall inspired, Cryptark inspired, AAL universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-exterminator.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Exterminator: Three-Layer Planetary Assault">
+    <meta property="og:description" content="A game design concept: one operative, one transforming jet and one siege carrier against a whole hostile star system, from high orbit down to bedrock. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-exterminator.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-exterminator_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a black and red fighter jet strafes a hovering enemy fortress over a burning alien city">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Exterminator: Three-Layer Planetary Assault">
+    <meta name="twitter:description" content="A game design concept: one operative, one transforming jet and one siege carrier against a whole hostile star system, from high orbit down to bedrock.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-exterminator_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Exterminator: Three-Layer Planetary Assault",
+        "description": "A game design concept, not a released game: a side-view action game in destructible tile worlds where one player commands three units at three scales, a flying battle-suit agent, a transforming jet mecha and a siege carrier, to clear generated hostile star systems from high orbit to bedrock. Set in Reactorcore's AAL universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Shooter"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-exterminator.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-exterminator_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#140c0c">
+
+    <link rel="preload" href="../fonts/spectrashell.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* AAL Exterminator: AAL's military colour code, red and black, with a hot orange for
+           railgun fire and engine glow, and white paneling for highlights. Spectrashell, condensed
+           and heavy, for the title and headings; Turret Road for the subtitle and kickers. */
+        @font-face { font-family: "Spectrashell"; src: url("../fonts/spectrashell.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Turret Road"; src: url("../fonts/turret-road-bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+        :root {
+            --flow-1: #140c0c;
+            --flow-2: #3a1414;
+            --grid-minor: rgba(255, 140, 120, 0.04);
+            --grid-major: rgba(255, 140, 120, 0.09);
+            --p-ground: rgba(20, 13, 13, 0.95);
+            --p-panel: #1f1414;
+            --p-1: #ff3d3d;
+            --p-2: #ff9a3c;
+            --p-3: #f8eeea;
+            --p-text: #e7dcd8;
+            --p-dim: #b3a19c;
+            --p-line: rgba(255, 170, 150, 0.15);
+            --font-title: "Spectrashell", "Segoe UI", sans-serif;
+            --font-sub: "Turret Road", "Segoe UI", sans-serif;
+            --shade: #0b0606;
+        }
+
+        /* Title effect, "target lock": the name sits in white with a faint red rim, then a lock-on
+           alarm strobes red three times, ending in a hard orange flash, the railgun firing. Layered
+           dark shadows keep it legible at every frame. */
+        .p-name {
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            animation: lock 5.5s steps(1, end) infinite;
+        }
+        @keyframes lock {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(255, 61, 61, 0.2); }
+            70% { color: #ffe9e6; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 16px rgba(255, 61, 61, 0.85); }
+            74% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(255, 61, 61, 0.2); }
+            78% { color: #ffe9e6; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 16px rgba(255, 61, 61, 0.85); }
+            82% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(255, 61, 61, 0.2); }
+            86% { color: #fff4e8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 10px rgba(255, 154, 60, 1), 0 0 36px rgba(255, 154, 60, 0.7); }
+            90% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(255, 61, 61, 0.2); }
+        }
+        .p-sub { font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.3rem; height: 3px;
+            background: var(--p-1);
+            animation: lock-line 5.5s steps(1, end) infinite;
+        }
+        @keyframes lock-line {
+            0%, 100%, 74%, 82%, 90% { box-shadow: none; opacity: 0.6; }
+            70%, 78% { box-shadow: 0 0 10px rgba(255, 61, 61, 0.9); opacity: 1; }
+            86% { box-shadow: 0 0 16px rgba(255, 154, 60, 1), 0 0 30px rgba(255, 154, 60, 0.6); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 5.5s steps(1, end) infinite; }
+        @keyframes h2-line { 0%, 100%, 90% { box-shadow: none; } 86% { box-shadow: 0 0 12px rgba(255, 154, 60, 0.8); } }
+        h2 { text-transform: uppercase; letter-spacing: 0.04em; }
+        h3 { letter-spacing: 0.03em; }
+        /* Spectrashell is condensed, so its headings run a size up. */
+        .p-card h3 { font-size: 1.3rem; }
+        .p-layer h3, .p-feature h3 { font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.65rem); }
+        .p-kicker { font-family: var(--font-sub); font-weight: 700; letter-spacing: 0.12em; }
+
+        .zones td:first-of-type { width: 46%; }
+        .cats td:first-of-type { width: 34%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.95rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/aal-exterminator_1_title.jpg" alt="A massive armored black and red warship hangs above a red-lit planet, firing bright orange beams down toward the surface while a small black and red fighter jet flies beside it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">AAL Exterminator</span><span class="p-sub">Three-Layer Planetary Assault</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/missile-mech-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/orbital-rays-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">AAL Exterminator is a one-man-army assault on a whole hostile star system. You command three units at three scales, a flying battle-suit agent, a transforming jet mecha and a siege carrier, and switch between them to take the enemy apart from high orbit down to bedrock.</p>
+            <p>Every planet and every stretch of space is one destructible, side-view tile world. The carrier pounds fortresses from orbit, the jet wins the skies and the seas, and the agent slips into tunnels and bunkers to plant a bomb where it hurts. The job is total: <strong>every hostile on the map has to go</strong>, and by the end the map looks like it.</p>
+            <p>It's built on the tech of Terrene, the pixel-art planet explorer, with the railguns of Utopia Must Fall, the layer-by-layer dismantling of Cryptark, and a pinch of Gundam SEED, Macross and Titanfall. It's one of three games grown from the same notebook, and it's set in Reactorcore's <a href="../aal/">AAL universe</a>.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love the feeling of being hugely outgunned and winning anyway: Utopia Must Fall, Cryptark, Starfox 64, Armored Core's boost, the moment a fortress reactor goes up and you're racing out ahead of the blast.</p>
+                    <p>They want <strong>catharsis</strong>: something oppressive, and the power to end it completely.</p>
+                    <p>Mouse aim and WASD, fast and aggressive, but with a safe place one zone up whenever the pressure gets too much.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power:</strong> one operative taking apart an entire armed system, and the terrain along with it.</p>
+                    <p><strong>Excitement:</strong> boost, railgun fire, collapsing fortresses and escape countdowns.</p>
+                    <p><strong>Meaning:</strong> the protective use of force. Every campaign ends a tyranny or an infestation, and the log remembers what came after.</p>
+                    <p>It deliberately avoids draining <strong>safety</strong> (high orbit is always a sanctuary, and nothing about a death is permanent) and <strong>variety</strong> (every system, map and enemy is generated, and your powers keep changing).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Action games usually give you one vehicle on fixed levels, or a roguelite run that starts you weak and resets when you die.</p>
+                    <p>Here you're <strong>overpowered from the first minute</strong>, with three units for three scales of problem, so every target can be solved several ways: bombard it, strafe it, or sneak in and blow its core.</p>
+                    <p>Star systems are generated without end, and what changes between them is the enemy and your mix of supercores, not a grind back up to strength.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-exterminator_5_story.jpg" alt="A dark red planet crowned with a jagged black fortress citadel, ringed by orbital defense stations and a fleet of angular warships, under a blood-red nebula." width="1280" height="720" loading="lazy">
+            <figcaption>"Every offer was refused. The commission goes out only after the last one."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/planet-conquest-delapouite.png)"></span>Lore and story</h2>
+            <h3>Out past the edge of kindness</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/01-edge.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The galactic community is generous to the point of stubbornness. Any newly met people, however strange, are offered everything: abundance, immortality, a place at the table, and every piece of evidence that the offer is real. Nearly everyone accepts.</p>
+            <p>Out in the uncharted systems, a few refuse, and they're never the people who'd lose anything by accepting. They're the ones who'd lose their power: tyrants who rule whole star systems by fear, regimes that keep their people poor and frightened, armies that exist to make someone else suffer. Next to them grow the other problems no one can reason with: space monster infestations dug deep into a world, and pest swarms eating an ecosystem alive.</p>
+
+            <h3>The exterminators</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/02-carrier.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>When every offer has failed, the commission goes to an exterminator: one operative with a carrier, a jet and a battle suit, all from Alteisen Arsenal Laboratories, sent to end it alone. One person, because one person is enough. The equipment is that good.</p>
+            <p>Extermination isn't the end of anyone, in this universe. Souls return in new lives, and a tyrant's will come back somewhere better, without the empire, the army or the fear. What ends is the regime. The people it held get the offer they were never allowed to hear.</p>
+
+            <h3>The job right now</h3>
+            <p>A new commission is in: a star system, an enemy with a name, a list of what it has done. Warp in, park the carrier in high orbit, and start taking it apart.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You fly one unit at a time, in side view with mouse aim. The controls are the same in every unit, so switching from the jet to the agent mid-fight changes what each button does, never where it is.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Fly in any direction (the agent too)</dd></div>
+                        <div><dt>Shift</dt><dd>Boost: afterburner, mech dash, suit overboost</dd></div>
+                        <div><dt>Space</dt><dd>Transform the jet to mecha or back</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fire</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim; pointer close spreads the railgun wide, far keeps it tight</dd></div>
+                        <div><dt>Left click</dt><dd>Railgun</dd></div>
+                        <div><dt>Right click</dt><dd>Blade or lance: close is a slash, far is a lunge; hold to charge</dd></div>
+                        <div><dt>F</dt><dd>Smart bomb: power bomb or fusion missile</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Units</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Board or leave the jet; dock with the carrier</dd></div>
+                        <div><dt>R</dt><dd>Recall the jet to you</dd></div>
+                        <div><dt>C</dt><dd>Call the carrier's artillery on the pointer</dd></div>
+                        <div><dt>Q / Z</dt><dd>Roll the carrier, while docked at its helm</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Interface</h3>
+                    <dl>
+                        <div><dt>Tab</dt><dd>The location map: zones, targets, cores</dd></div>
+                        <div><dt>M</dt><dd>Star map (on the carrier)</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The HUD is minimal and line-drawn, a data readout in one corner and a crosshair. Health regenerates in every unit, faster when docked. The only real resource to watch is the smart bomb stock, which the carrier rebuilds over time: spend it all in one glorious burst, or one at a time where it matters.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-exterminator_2_vignette.jpg" alt="A black and red fighter jet with long twin cannons streaks low over a ruined alien fortress city, firing orange tracers into a huge hovering armored airship as blocky buildings crumble below." width="1280" height="720" loading="lazy">
+            <figcaption>"Hold the pointer close and the railgun sprays wide. Push it out and every shot lands on one point."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bright-explosion-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Peeling a location, layer by layer</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/03-assault.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each location defends itself in three layers: escorts, outer defenses, inner defenses around a core. That might be a whole planet, top to bottom, or a single airship. You decide how to get through: launch the jet to clear low orbit so the carrier can move in and bombard, or skip the slugfest, drop the agent at a quiet landing zone and plant a power bomb on the core.</p>
+                        <p>It's fast and aggressive. You go in, melt through terrain like butter, and leave the map in pieces.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/orbit-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A star system commission</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/04-system.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is one star system: several planets, moons, stations and asteroid fields held by one enemy, playable <strong>in any order</strong>. Every location is cleared when its last hostile is gone, and the commission is done when every location is.</p>
+                        <p>Everything is generated: the maps, the enemy forces, and the enemy itself, with its name, its look, what it calls itself and what it has done.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/wanted-reward-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The extermination log</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/05-log.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every finished commission adds a page to your log, like a card in a collection: the enemy's mugshot, its crimes, how badly your assault mangled it, and <strong>what the system became afterwards</strong>, now that it's free. Over time the log becomes a record of how much good you've done.</p>
+                        <p>Commissions never run out, because there's always another system that refused. The log doesn't score you or unlock anything. It remembers.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A location or a whole system</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/06-orbit.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A location takes half an hour or so, a commission a few evenings. Back in high orbit nothing can reach you, so it's always a safe place to stop. Save anywhere, and the system waits exactly as you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/skull-crack-lorc.png)"></span>Game modes</h2>
+            <p>The same campaign comes in two kinds, which differ only in who the enemy is:</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Campaign</th><th scope="col">The enemy</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Commission</th><td>Generated: a regime, an infestation or a plague of pests, each with its own name, look, forces and record of crimes.</td></tr>
+                        <tr><th scope="row">Vendetta</th><td>Seeded by you. Type a name, any name, and the game builds a tyrant around it: a regime, minions, allies, a list of misdeeds and a star system to hold them. Then you go and end it. It's a pressure valve, for the days when something has been weighing on you and you'd like to watch it explode.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/missile-mech-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/triforce-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Three units, three scales</h3>
+                        <p>Each unit is the best tool at its own scale and clumsy outside it, so the fight keeps asking which one to bring:</p>
+                        <ul>
+                            <li><strong>The agent</strong>, a battle-suited human who flies anywhere like a superhero on a gravity-well pack. Tiny, so it slips into tunnels, ducts and bunkers where nothing bigger fits, and melts through rock with a thermal lance. Best underground, indoors and against the small fry.</li>
+                            <li><strong>The jet</strong>, a transforming fighter and mecha with twin railguns and a thermal blade. Rules everything from low orbit to the seabed, but it's too big for tunnels.</li>
+                            <li><strong>The carrier</strong>, a warp-capable warship with siege railcannons. It can break a fortress head-on, but once it comes into range, the fortress can shoot back.</li>
+                        </ul>
+                        <p>The jet can be <strong>recalled</strong> to the agent anywhere in open air or space, like a Titanfall titan: it arrives in seconds through the background, needing only a clear landing zone. So the agent can go spelunking with a getaway always one key away.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/aal-exterminator_3_feature.jpg" alt="A side-view cutaway like a game level: a dark warship and small jets over a ruined red-lit city, and beneath the ground a tiny armored figure in a tunnel facing a glowing red reactor core." width="1280" height="720" loading="lazy">
+                            <figcaption>"The carrier breaks the fortress, the jet clears the sky, and the agent goes where neither fits."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/orbital-rays-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">One world, top to bottom</p>
+                        <h3>Four zones</h3>
+                        <p>As in Terrene, every location is one tall, side-view tile room. A planet has four zones stacked on top of each other, and each one favors a different unit:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table zones">
+                                <thead><tr><th scope="col">Zone</th><th scope="col">What happens there</th><th scope="col">Best unit</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">High orbit</th><td data-label="What happens">Out of range. The carrier starts here and can launch the jet and the agent, but can't fire its main guns. No enemy ever comes up here: it's always a sanctuary to retreat to.</td><td data-label="Best unit">The carrier, safe</td></tr>
+                                    <tr><th scope="row">Low orbit</th><td data-label="What happens">No gravity. Satellites, stations and high-altitude fighting. The carrier can now bombard all the way down to the surface, and the enemy's anti-orbital weapons can hit it back.</td><td data-label="Best unit">The jet; the agent inside derelict stations</td></tr>
+                                    <tr><th scope="row">Atmosphere to surface</th><td data-label="What happens">Dropping in lights up a re-entry burn, bigger the faster you come. Airships, ground fortresses, cities.</td><td data-label="Best unit">The jet; the agent inside airships and buildings</td></tr>
+                                    <tr><th scope="row">Underwater and underground</th><td data-label="What happens">The jet can fight underwater, like a heavy diving suit; the agent is too exposed down there. Underground is the agent's: it's one tile wide and digs freely, while the jet is three to five tiles wide and gouges awkward holes one tile at a time.</td><td data-label="Best unit">The jet underwater, the agent underground</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>In space, the room lies on its side: you come in from one edge and fight across to the other.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/multiple-targets-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The enemy mirrors you</p>
+                        <h3>Three classes of target</h3>
+                        <p>Every enemy, whether it's a regime's army, a monster brood or a pest swarm, comes in three classes that mirror your three units:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table cats">
+                                <thead><tr><th scope="col">Class</th><th scope="col">What it is</th><th scope="col">Who fights it</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Creature class</th><td data-label="What it is">About one tile: soldiers, critters, mines, turrets</td><td data-label="Fights it">The agent</td></tr>
+                                    <tr><th scope="row">Vehicle class</th><td data-label="What it is">One to nine tiles: tanks, fighters, gunboats, big beasts</td><td data-label="Fights it">The jet</td></tr>
+                                    <tr><th scope="row">Fortress class</th><td data-label="What it is">From 5×5 up to about 50×50 tiles: stations, bunkerships, citadels, hives</td><td data-label="Fights it">All three: the carrier on the hull, the jet on intermediate weak points, the agent on the critical ones</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Creatures and vehicles are simple: one attack, maybe one passive ability, one way of moving. What they lack alone they make up in numbers. They can be organic, mechanical, biometal or cyborg, and they can turn up anywhere except high orbit.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mushroom-cloud-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Blow the core, then run</p>
+                        <h3>Fortress cores and escape countdowns</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/07-core.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A fortress is a body of blocks over a background, like Cryptark's derelicts, with one or more <strong>core modules</strong> somewhere inside. Destroy a core and the whole structure goes with it: small explosions break out all over it, a countdown starts, and you run for the exit. Then the final blast swells from the center and swallows the entire thing, hiding the moment its background vanishes.</p>
+                        <p>Get far enough away or take a beating. It's Super Metroid's escape sequence, built into every big target.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/drill-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Melt it like butter</p>
+                        <h3>Everything is made of blocks</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/08-blocks.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Terrain, airships, space stations, bunkers and buildings are all built from the same static blocks, so all of it can be destroyed. A simple version gives every block the same strength; a richer one has soft and hard materials. The edges of the map are solid, and the bottom is bedrock that nothing breaks.</p>
+                        <p>Charged attacks cross a threshold into a powered mode that wrecks terrain: the jet's blade carves through walls, the agent's lance tunnels, the smart bombs crater. Below the threshold, strikes only hurt enemies, so you choose when the scenery goes too.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/turtle-shell-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A home that fights</p>
+                        <h3>The carrier</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/09-turtle.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Seen from the front, the carrier is shaped like a turtle. Its upper half is an impenetrable shell housing the gravity-well engines, warp drive and shield generator, built to face whatever it flies into. Its lower half holds a big turret on a 180° mount, which is everything at once: the jet's launch catapult, its repair and rearm gantry, the agent's door home, and the carrier's main gun.</p>
+                        <p>Dock the jet into that turret and it locks in like Gundam SEED's METEOR units: its twin railguns join the carrier's arsenal, supercharged, and you take the carrier's helm. Around the turret sit two to four point-defense laser turrets and a <strong>gravity tractor</strong> that can grab things in front of the ship, hold them under the main gun, or hurl an asteroid at someone.</p>
+                        <p>From high orbit it can also call in <strong>artillery</strong> where the agent or jet points: precise siege-breaking shots, suppressive fire to deny an area, or a saturation bombardment. It can't be destroyed, only knocked out of the fight for a while to repair, and it heals and rearms whatever docks with it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jet-fighter-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Fighter and mecha</p>
+                        <h3>The jet</h3>
+                        <p>The jet is a Macross-style transformer that can't crash: fly it into terrain and it lands as a mecha on the spot, and it folds back into a jet as soon as there's open space around it. The mecha hovers in place and fights; the jet flies with Nova Drift's handling, where higher speed means more drag.</p>
+                        <ul>
+                            <li><strong>Twin rapid railguns</strong> in the style of Utopia Must Fall: hold the pointer close for a wide spray, far for tight, accurate fire.</li>
+                            <li><strong>A thermal blade</strong>, drawn like a beam saber: a slash near the jet pushes enemies away, a lunge toward a far pointer pierces and stuns. In jet mode it's a searing lance or a pushing aura.</li>
+                            <li><strong>A fusion smart bomb</strong>, half missile and half grenade, in the spirit of Starfox 64's.</li>
+                            <li><strong>A grapple tether</strong> to moor the jet to a station or asteroid while the agent explores nearby.</li>
+                        </ul>
+                        <p>If the jet is shot down, the agent ejects and has to hold out until the carrier builds a new one and drops it in. That costs time, nothing more.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/nested-hexagons-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Take their edge</p>
+                        <h3>Supercores</h3>
+                        <p>Enemies carry supercores, and you take them. Each one boosts one thing, for one unit or all of them: railgun fire rate, blade reach, boost recharge, smart bomb yield. They <strong>stack</strong>, so you can amass them, but each has a <strong>durability</strong> that wears down with use until it breaks.</p>
+                        <p>So you're constantly cycling: old cores crumble, new ones come in from the latest enemy, and the facets you're strong in keep shifting. No two campaigns play the same, and you never grow into an unstoppable, bored god.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/paint-brush-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Nothing un-happens</p>
+                        <h3>Death, regrouping and your own colors</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-exterminator/10-colors.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The agent can die, but never for good: it wakes on the carrier after a while, and the jet flies itself home. The world doesn't rewind. While you're gone, the enemy <strong>regroups</strong>: some of what you destroyed is rebuilt, some survivors dig back in. Dying costs ground, not the campaign.</p>
+                        <p>You choose your callsign and tint each unit's body, engine glow and weapon fire separately. Player sprites can be replaced with your own, full-colour ones included, so the exterminator can be anyone you like.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/mecha-head-delapouite.png)"></span>Trivia</h2>
+            <h3>Three games from one notebook</h3>
+            <p>Reactorcore played Terrene, a pixel-art planet explorer, liked its world of tall planet slices, and kept wanting it to be something else. The result was one long design for a planetary explorer, the Inspector, that tried to be everything at once, and then three remixes that each took one part of it and went all the way: this assault, the gentle collectathon of <a href="aal-collector.html">AAL Collector</a>, and the hands-only survival race of <a href="aal-voyager.html">AAL Voyager</a>. The Inspector's carrier, jet and agent became Exterminator's three units.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/aal-exterminator_4_boxart.jpg" alt="Box art: a black and red fighter jet climbs straight up past the dark armored hull of the carrier, trailing orange afterburner fire, a burning red planet below." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Commission received</p>
+                <h2 id="sendoff">AAL Exterminator: Three-Layer Planetary Assault</h2>
+                <p>Target: one star system. Hostiles: all of them. Every offer has been made and refused. Support: none, because none is needed.</p>
+                <p>Park the carrier in high orbit. Launch the jet. Drop the agent where the walls are thinnest. When the core goes, run.</p>
+                <p><strong>One operative. One system. Nothing left standing.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Terrene, Utopia Must Fall, Cryptark, Super Metroid, Starfox 64, Titanfall, Nova Drift, Macross and Gundam SEED</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Spectrashell (CC0), Turret Road, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

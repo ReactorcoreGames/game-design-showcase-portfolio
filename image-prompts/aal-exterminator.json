@@ -1,0 +1,37 @@
+{
+  "slug": "aal-exterminator",
+  "preset": "08 Games - Daemon X Machina (Action/3D)",
+  "style": "Palette of black and deep signal red with hot orange glow, white panel accents, smoky red skies. No people visible.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide cinematic shot in space above a dark red-lit planet. On the right hangs a massive black and red warship shaped like a turtle seen from the front: a huge armored dome shell on top and, underneath it, one big rotating cannon turret firing a thick bright orange beam straight down toward the planet surface. A small sleek angular black and red fighter jet with two long cannons on side pylons streaks away from the warship trailing orange engine glow. The lower left of the picture is the dark curve of the planet."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Dynamic side-view action shot over a ruined alien fortress city made of blocky dark towers. A sleek angular black and red fighter jet with two long cannons on side pylons streaks low from left to right, firing a stream of bright orange tracer rounds into a huge hovering armored enemy airship of dark grey plates and red lights. Chunks of blocky buildings crumble and fall below, fires glowing in the ruins, smoke-filled red sky."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Side-view cross-section of a planet like a video game level, layered from top to bottom. At the top in black space, a huge black and red dome-shelled warship. Below it, in a smoky red sky, a small black and red fighter jet. Then a ruined city surface. Underground, in brown rock layers, a narrow glowing orange tunnel bored by a tiny armored figure in a black and red hard-shell suit holding a glowing lance, heading toward a buried enemy bunker with a pulsing red reactor core."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover. A sleek angular black and red fighter jet with two long cannons on side pylons climbs straight up the middle of the picture, trailing a long orange afterburner flame. Behind it looms the dark armored dome of a colossal black and red warship. At the bottom, a dark red planet with fires glowing across its surface. The top third is black space with a red nebula, with room for a title."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Very wide establishing shot of a hostile alien star system: a dark red planet crowned with a jagged black fortress citadel of spires, ringed by armored orbital defense stations and a fleet of angular dark warships with red lights, under a blood-red nebula and a dim red sun. Ominous and oppressive, no living creatures visible."
+    }
+  ]
+}

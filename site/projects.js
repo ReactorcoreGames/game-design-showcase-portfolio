@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "aal-exterminator.html", prefix: "aal-exterminator",
+    title: "AAL Exterminator", subtitle: "Three-Layer Planetary Assault",
+    icon: "missile-mech-lorc", tint: "red",
+    blurb: "One operative, one transforming jet and one siege carrier against a whole hostile star system, from high orbit down to bedrock. Destructible everything, fortress cores with escape countdowns, and a log of every tyranny ended.",
+    genres: ["action", "mecha", "physics"], tags: ["destructible terrain", "transforming mecha", "orbital bombardment", "procedural campaigns"],
+    universe: "aal", status: "concept", added: "2026-10-23"
+  },
+  {
     page: "aal-collector.html", prefix: "aal-collector",
     title: "AAL Collector", subtitle: "Reach, Capture, Recover",
     icon: "raccoon-head-delapouite", tint: "green",

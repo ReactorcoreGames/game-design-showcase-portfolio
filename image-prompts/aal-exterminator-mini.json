@@ -1,0 +1,20 @@
+{
+  "slug": "aal-exterminator-mini",
+  "out": "site/projects/mini/aal-exterminator",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - O - Nuclear-Fire",
+  "lead": "Cinematic sci-fi film still, black and red machines, orange fire glow. ",
+  "images": [
+    {"n": 1, "name": "edge", "ratio": "3:2", "prompt": "A dark fortress world at the edge of charted space, its spires lit red"},
+    {"n": 2, "name": "carrier", "ratio": "3:2", "prompt": "A lone dark armored starship waiting in orbit above a red planet"},
+    {"n": 3, "name": "assault", "ratio": "3:2", "prompt": "A fighter jet streaking past exploding defense towers over a ruined city"},
+    {"n": 4, "name": "system", "ratio": "3:2", "prompt": "A hostile star system of red planets and armored stations seen from far away"},
+    {"n": 5, "name": "log", "ratio": "3:2", "prompt": "A metal dossier of wanted posters and mugshot cards pinned to a dark wall"},
+    {"n": 6, "name": "orbit", "ratio": "3:2", "prompt": "A quiet dark cockpit high in orbit, a red planet glowing far below"},
+    {"n": 7, "name": "core", "ratio": "3:2", "prompt": "A glowing reactor core inside a fortress about to explode, sirens flashing"},
+    {"n": 8, "name": "blocks", "ratio": "3:2", "prompt": "A glowing thermal lance melting a tunnel through layers of rock"},
+    {"n": 9, "name": "turtle", "ratio": "3:2", "prompt": "A huge turtle-shaped warship with a heavy cannon turret on its underside"},
+    {"n": 10, "name": "colors", "ratio": "3:2", "prompt": "A hangar of fighter jets painted in custom color schemes, spray cans nearby"}
+  ]
+}
