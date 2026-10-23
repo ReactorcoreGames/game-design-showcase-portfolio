@@ -1,0 +1,37 @@
+{
+  "slug": "trash-miner",
+  "preset": "08 Games - Rollercoaster Tycoon 2 (Simulation/Isometric 2D)",
+  "style": "Palette of hazmat yellow, fresh leaf green, murky compost brown and grey, pale straw highlights. No text, signs or lettering anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide isometric view of a huge landfill hill made of colorful garbage bags, bottles, tyres, crates and scrap, grey-brown haze over its top. Across its slope a chunky yellow bulldozer with a wide steel blade pushes a big rolling wave of trash downhill. At the foot of the hill stands a tidy little recycling plant with green hoppers, chutes and conveyor belts. Beyond it, on the right, a small green village with red roofs, trees and a church tower in bright sunshine. The lower left corner of the picture is calm open green ground."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Isometric close view of a landfill sector: a chunky yellow bulldozer with a wide steel blade, its driver in a sealed yellow hazmat suit and gas mask inside an open cab, plows a wave of colorful garbage bags, plastic bottles, cans and scrap toward a large square green hopper sunk into the ground. A conveyor belt runs from the hopper to a small recycling shed. Loose trash spills around the edges of the blade. Heaps of junk all around."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Isometric view of a chunky yellow bulldozer with a wide steel blade driving into a huge rolling wave of thousands of small round chunks of colorful garbage, red, blue, white, green and brown, pushing them like a flood toward a long wide glowing green intake trench at the edge of a landfill. The chunks tumble, roll and pile up in front of the blade. Busy, dense, satisfying scene."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait isometric scene: a chunky yellow bulldozer with a wide steel blade, its driver in a sealed yellow hazmat suit and gas mask inside an open cab, stands proudly on the very top of a tall mountain of colorful garbage bags, tyres, bottles and scrap. Far below, green fields, a winding river and a small village with red roofs. The top third of the picture is a wide clear blue sky with a few soft white clouds."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Very wide isometric view of a whole countryside region seen from high above. The left half is sickly: grey-brown landfill hills of garbage under a yellowish haze, dead trees, murky puddles. The right half is healed: green meadows, flowering trees, small villages with red roofs, and neat little recycling plants with green roofs and conveyor belts. A winding river runs through both halves. Bright sunny day."
+    }
+  ]
+}

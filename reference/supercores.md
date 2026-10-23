@@ -42,7 +42,7 @@ So the constant parts are: **each campaign's enemy has a distinctive edge; the e
 | AAL Tile Mechs (`Grid-based realtime mech…`) | Upgrade modules carried by bosses, which wear out with use and let the mech do things its loadout normally can't (an open idea, left off the page). |
 | Terrene family (Inspector, Exterminator, Collector) | Boosters taken from enemies, with durability that wears down, stacking and cycling so the player's strengths keep shifting. Inspector: up to ten carry over to the next star system, and careless damage to protected places costs you them one by one. The AAL Exterminator page uses the stacking and wear; the AAL Collector page makes them rare finds (its "DK coins") with Inspector's carry-over limit of ten, and drops the Inspector's supercore tax as a punishment, replacing it with natural consequences (a dropped relic arrives chipped, a trampled nest's creatures flee). |
 | Space Chunks 2–inspired blast-em-up | A random starting loadout of three to six upgrades plus a run perk, so every run starts differently instead of starting naked. |
-| AAL Trash Miner | Each campaign has a quirk you can loot and carry into the next campaign, wearing off after a few; possibly inverted into temporary curses unleashed from the landfills you open. |
+| AAL Trash Miner | Each campaign has a quirk you can loot and carry into the next campaign, wearing off after a few; possibly inverted into temporary curses unleashed from the landfills you open. The page keeps both: relics of the old world that stack and wear out, and residue that clings to you for a few jobs. |
 
 ## When presenting supercores on a page
 

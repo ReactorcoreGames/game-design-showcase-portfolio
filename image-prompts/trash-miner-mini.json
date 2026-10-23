@@ -1,0 +1,20 @@
+{
+  "slug": "trash-miner-mini",
+  "out": "site/projects/mini/trash-miner",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - S - Tilt Shift",
+  "lead": "Tilt-shift miniature photograph, sunny, hazard yellow and fresh green. ",
+  "images": [
+    {"n": 1, "name": "leftovers", "ratio": "3:2", "prompt": "An old landfill hill of garbage bags and scrap leaking into a murky stream"},
+    {"n": 2, "name": "job", "ratio": "3:2", "prompt": "A worker in a yellow hazmat suit beside a yellow bulldozer at the foot of a garbage hill"},
+    {"n": 3, "name": "plowing", "ratio": "3:2", "prompt": "A yellow bulldozer blade pushing a wave of colorful trash"},
+    {"n": 4, "name": "landfill", "ratio": "3:2", "prompt": "Terraced layers of an excavated landfill, older darker layers deeper down"},
+    {"n": 5, "name": "region", "ratio": "3:2", "prompt": "A model countryside with green villages and one grey garbage hill"},
+    {"n": 6, "name": "sector", "ratio": "3:2", "prompt": "A parked yellow bulldozer at sunset beside a cleared patch of land"},
+    {"n": 7, "name": "plant", "ratio": "3:2", "prompt": "A small recycling plant with conveyor belts and green hoppers"},
+    {"n": 8, "name": "yard", "ratio": "3:2", "prompt": "A row of bulldozers of different sizes parked in a machine yard"},
+    {"n": 9, "name": "relics", "ratio": "3:2", "prompt": "A rusty old crane magnet lying half buried in a garbage heap"},
+    {"n": 10, "name": "hazards", "ratio": "3:2", "prompt": "A small methane flare burning on a muddy garbage slope in the rain"}
+  ]
+}

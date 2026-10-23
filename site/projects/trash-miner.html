@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Trash Miner: Landfill Recycling Bonanza</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: drive a bulldozer into the old world's buried landfills and shove thousands of physics chunks of garbage into the chutes that recycle them, sector by sector down to the core, until the town gets its land back.">
+    <meta name="keywords" content="game design concept, physics, bulldozer, recycling, landfill, isometric, low poly, procedural generation, Zombie Miner inspired, AAL universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/trash-miner.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Trash Miner: Landfill Recycling Bonanza">
+    <meta property="og:description" content="A game design concept: plow thousands of physics chunks of buried garbage into the chutes that recycle them, and turn a poisoned hill back into land. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/trash-miner.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/trash-miner_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a yellow bulldozer plows a sea of colorful garbage toward a recycling hopper">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Trash Miner: Landfill Recycling Bonanza">
+    <meta name="twitter:description" content="A game design concept: plow thousands of physics chunks of buried garbage into the chutes that recycle them, and give a town its land back.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/trash-miner_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Trash Miner: Landfill Recycling Bonanza",
+        "description": "A game design concept, not a released game: an isometric physics game where the player drives a bulldozer through generated landfills, pushing thousands of garbage chunks into material-specific recycling chutes, sector by sector down to the core, and heals a region of towns one landfill at a time. Set in Reactorcore's AAL universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Simulation", "Arcade", "Physics"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/trash-miner.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/trash-miner_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#16150d">
+
+    <link rel="preload" href="../fonts/exo2-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* AAL Trash Miner: a landfill on its way to becoming a meadow. Murky compost ground,
+           hazmat yellow for the machine and the warnings, fresh leaf green for the land coming
+           back, and a pale straw highlight. Exo 2 Black, heavy as a blade, for the title and
+           headings; Unique, round and friendly, for the subtitle and kickers. */
+        @font-face { font-family: "Exo 2 Black"; src: url("../fonts/exo2-black.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Unique"; src: url("../fonts/unique.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #16150d;
+            --flow-2: #303a17;
+            --grid-minor: rgba(230, 225, 140, 0.04);
+            --grid-major: rgba(230, 225, 140, 0.09);
+            --p-ground: rgba(23, 22, 14, 0.95);
+            --p-panel: #211f14;
+            --p-1: #f2cf35;
+            --p-2: #8fdc5a;
+            --p-3: #f5f0d6;
+            --p-text: #e6e2cf;
+            --p-dim: #b3ad94;
+            --p-line: rgba(240, 230, 160, 0.15);
+            --font-title: "Exo 2 Black", "Segoe UI", sans-serif;
+            --font-sub: "Unique", "Segoe UI", sans-serif;
+            --shade: #0e0d07;
+        }
+
+        /* Title effect, "reclaim": the glow under the name drifts from a murky hazmat yellow to a
+           fresh leaf green and back, a hill turning into a meadow. Layered dark shadows keep it
+           legible at every frame. */
+        .p-name { animation: reclaim 9s ease-in-out infinite; }
+        @keyframes reclaim {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(242, 207, 53, 0.35); }
+            50% { color: #fbfff0; text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(143, 220, 90, 0.7), 0 0 44px rgba(143, 220, 90, 0.35); }
+        }
+        .p-sub { letter-spacing: 0.06em; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 4px;
+            background: var(--p-1);
+            animation: blade 9s ease-in-out infinite;
+        }
+        @keyframes blade {
+            0%, 100% { background: var(--p-1); box-shadow: 0 0 4px rgba(242, 207, 53, 0.35); }
+            50% { background: var(--p-2); box-shadow: 0 0 14px rgba(143, 220, 90, 0.8); }
+        }
+        .section-mark::after { animation: h2-line 9s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(143, 220, 90, 0.6); } }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; }
+
+        .p-nest > div { --c: var(--p-1); }
+        .p-nest > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .chutes td:first-of-type { width: 32%; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/trash-miner_1_title.jpg" alt="An isometric view of a huge hill of colorful garbage bags and tyres with dark smoke rising from its top, a yellow bulldozer pushing trash down its slope, a recycling plant with green hoppers at its foot and a village with a church tower beside it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">AAL Trash Miner</span><span class="p-sub">Landfill Recycling Bonanza</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/bulldozer-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/hazmat-suit-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">AAL Trash Miner is a physics game about a strangely satisfying job: driving a bulldozer into a sea of garbage and shoving it, thousands of pieces at a time, into the chute where it belongs.</p>
+            <p>The garbage is the old world's. Centuries of it lie buried under hills that nobody builds on, slowly poisoning the land around them. Every load you push in is reprocessed into raw material, and every landfill you clear, sector by sector down to its foul core, turns back into land the town can use.</p>
+            <p>It grew out of the ads for Zombie Miner, a mobile game where a bulldozer pushes ore and gems into a grinder for coins. Reactorcore loved the push and nothing around it: a zombie mining gold to buy a bigger bulldozer to mine more gold, across a fixed run of handmade maps. This keeps the push and gives it a reason. It's set in Reactorcore's <a href="../aal/">AAL universe</a>.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love the tactile pleasure of cleanup and pushing games, the plow that bunches up a heap and the heap that spills over, and who are tired of games that wrap that pleasure in coin counters and endless upgrades.</p>
+                    <p>They want <strong>satisfaction with a point to it</strong>: a mess that ends up clean, and a place that ends up better.</p>
+                    <p>Drive and push, on keyboard or gamepad. Nothing to aim and no reflex tests.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/ecology-delapouite.png)"></span>Game's purpose</h3>
+                    <p><strong>Enjoyment and play:</strong> the physical joy of plowing into a sea of loose things and steering the wave.</p>
+                    <p><strong>Meaning:</strong> a poisoned hill turned back into land, and a town that gets it back.</p>
+                    <p><strong>Variety:</strong> every landfill generated, every core buried with something different.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> (no timers, no fail state that wipes a landfill) and the sense of <strong>purpose</strong> (no greed for its own sake: every job has an end and a reason).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Push-and-upgrade games run on an endless greed loop: more gold to buy a bigger machine to get more gold, through a gauntlet of handmade maps that are the same every time.</p>
+                    <p>Here every job has a <strong>purpose and an end</strong>: a landfill emptied and a town healed. The landfills are generated, and the machines are all yours from the start.</p>
+                    <p>What never ends is the world: the old world buried its garbage everywhere, so there's always another town with a hill.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/trash-miner_5_story.jpg" alt="An isometric view across a wide region: on one side grey-brown landfill hills under a sickly haze, on the other green meadows, small towns and neat recycling plants under a clear sky." width="1280" height="720" loading="lazy">
+            <figcaption>"Every town has one: a hill nobody builds on, where the old world buried what it didn't want."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/nuclear-waste-delapouite.png)"></span>Lore and story</h2>
+            <h3>The old world's leftovers</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/01-leftovers.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Before the AAL universe's peaceful age, people threw things away. Centuries of it still sit under old Earth and the first colonies: hills of plastic, scrap, rot and drums nobody labelled, leaking into the soil and the water.</p>
+            <p>Today everything is printed to order and recycled automatically when it wears out, so a landfill is two things at once. It's a <strong>mine</strong>, because every forgotten tonne is raw material. And it's a <strong>wound</strong>, because the land around it can't heal while it's there.</p>
+
+            <h3>The job</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/02-job.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The towns living beside the old dumps ask for their land back, and recovery crews answer: one operator in a sealed hazmat suit, one bulldozer, and a reprocessing plant set up at the edge of the hill. Nobody in this universe has to work. People do this job because it's the most satisfying one going, and because the whole town comes out to watch the hill disappear.</p>
+
+            <h3>The job right now</h3>
+            <p>A town with a silly name has asked for its hill back. The plant is humming at the foot of it. The first sector is a sea of bags and bottles, and nobody knows what's at the bottom.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You drive one bulldozer at a time, seen from a three-quarter view above the landfill. The machine is simple on purpose: a box with a blade, so all the attention goes to the heap in front of it.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Drive</h3>
+                    <dl>
+                        <div><dt>W / S</dt><dd>Forward and reverse</dd></div>
+                        <div><dt>A / D</dt><dd>Steer</dd></div>
+                        <div><dt>Shift</dt><dd>Low gear: slower, but pushes harder</dd></div>
+                        <div><dt>Space</dt><dd>Raise or lower the blade</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>View and information</h3>
+                    <dl>
+                        <div><dt>Q / E, wheel</dt><dd>Turn the camera, zoom</dd></div>
+                        <div><dt>Tab</dt><dd>Sector manifest: what's left and where it goes</dd></div>
+                        <div><dt>M</dt><dd>The region map</dd></div>
+                        <div><dt>Esc</dt><dd>Pause and save</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>With the blade down you push everything in your path; raised, you can drive over a low heap without disturbing it, or back out of a pile you've buried yourself in. A gamepad plays the same way: one stick drives, the triggers set the blade.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/trash-miner_2_vignette.jpg" alt="A chunky yellow bulldozer plows a wave of colorful garbage bags, bottles and scrap toward a large green hopper with a conveyor belt running off to a recycling shed." width="1280" height="720" loading="lazy">
+            <figcaption>"Every material has its own chute. Push it in by the thousand."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bulldozer-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Plowing</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/03-plowing.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Drive the blade into a heap and feel it bunch up, roll and spill around the edges. Steer the wave to its chute. Clear a lane, build a mountain, then shove the whole thing in at once. Skirt the puddle that's eating the tracks and the slope that's about to slide.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dig-hole-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One landfill</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/04-landfill.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A landfill is a campaign, and each sector of it is a level. The outer rings are loose and light: bags, bottles, packaging. Deeper in, the layers are older, denser and heavier, and the core holds the nastiest and most valuable stuff of all.</p>
+                        <p>The job ends when the core is clean and the hill is gone. The plant you fed all the way down stays behind as the town's recycling center.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/globe-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The region map</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/05-region.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Between jobs you look at a region of towns and cities with generated, comically local-sounding names, every one of them starting out grey and sickly around its dump. Each landfill you clear turns its corner of the map green, with a recycling center feeding the town new raw material.</p>
+                        <p>The map is the memento: a picture of the region you healed, growing greener with every job. There are no ranks, titles or medals, by the design's own choice. The region is the record. And beyond it is another region, because the old world buried its garbage everywhere.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A sector at a time</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/06-sector.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A sector takes ten to twenty minutes, and a whole landfill an evening or two. There's no clock and no quota: the end of each sector is a natural place to stop, and the game saves whenever you pause, so the heap waits exactly where you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/globe-ring-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the recovery work</strong>, region by region. It nests:</p>
+            <div class="p-nest" aria-label="The recovery work, outermost first">
+                <div><span>The regions</span><small>Endless: a map of towns turning green, then the next region.</small>
+                    <div><span>A landfill</span><small>One town's hill, from the outer rings down to the core: an evening or two.</small>
+                        <div><span>A sector</span><small>One level of the dig: ten to twenty minutes.</small>
+                            <div><span>A heap</span><small>One wave of garbage into its chute: a minute or two.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/factory-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stone-stack-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Thousands of things to push</h3>
+                        <p>The whole game stands on one promise: drive into a sea of thousands of loose objects and every one of them reacts. The ads that inspired it were almost certainly pre-rendered, so the design starts from the opposite end: <strong>the push must hold sixty frames a second on an ordinary computer</strong>, even when it gets crazy, before anything else gets built.</p>
+                        <p>That's why everything is kept simple underneath. The bulldozer is a box with a blade; each piece of garbage is a sphere or a point with a radius, with simple arcade physics, dressed up in low-poly models of bags, drums, tyres and scrap. Pieces that have settled go to sleep until something touches them, and only the heap in front of the blade is fully awake. If even that can't hold, the fallback is a different way of moving things that still feels physical, never a smaller heap.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/trash-miner_3_feature.jpg" alt="A yellow bulldozer drives into a huge rolling wave of thousands of small round colorful garbage chunks, pushing them toward a wide glowing intake at the edge of a landfill." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every chunk is its own physics object, and the blade moves thousands at once."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/factory-arm-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Sort as you plow</p>
+                        <h3>Every material has a chute</h3>
+                        <p>The garbage isn't all one thing, and it doesn't all go to the same place. Each material has its own intake at the plant, and each one behaves differently under the blade:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table chutes">
+                                <thead><tr><th scope="col">Material</th><th scope="col">Goes to</th><th scope="col">Under the blade</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Plastics and packaging</th><td data-label="Goes to">The reprocessor</td><td data-label="Under the blade">Light and bouncy; a big wave rolls easily and scatters easily</td></tr>
+                                    <tr><th scope="row">Scrap metal</th><td data-label="Goes to">The smelter</td><td data-label="Under the blade">Heavy; needs low gear and a straight run</td></tr>
+                                    <tr><th scope="row">Rot and compost</th><td data-label="Goes to">The digester</td><td data-label="Under the blade">Soft and sloppy; spills around the blade's edges</td></tr>
+                                    <tr><th scope="row">Glass and rubble</th><td data-label="Goes to">The crusher</td><td data-label="Under the blade">Grinds along slowly and stays where you leave it</td></tr>
+                                    <tr><th scope="row">Drums and batteries</th><td data-label="Goes to">The sealed vault</td><td data-label="Under the blade">Fragile; burst one and it leaks a puddle you'll have to drive around</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Most sectors are a mix, so plowing is also sorting: peel the metal off one side of the heap, shove the bags toward the reprocessor, and leave the drums for a careful trip of their own.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cargo-crane-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">What you dig builds the dig</p>
+                        <h3>The plant grows with the job</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/07-plant.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Zombie Miner's best idea was spending what you pushed on the site itself, and that stays. Material you feed the plant comes back as <strong>infrastructure for this landfill</strong>: conveyor belts that carry a heap the last stretch, wider and stronger bridges over the pits, intakes moved closer to the face, ramps and shortcuts down into the next layer.</p>
+                        <p>It belongs to the site, not to you. When the landfill is done it stays with the town, and the next job starts with a fresh plant at the edge of a fresh hill. Power rises over a job and falls between them, the way it does for a real crew.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mine-truck-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The machine yard</p>
+                        <h3>The right dozer for the sector</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/08-yard.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The original game had you climb a ladder of ever bigger bulldozers. Here the whole yard is open from the start: a nimble compact for trenches and buried tunnels, a standard machine, a wide-blade sweeper for open fields of light trash, and a heavy crawler for the dense layers near the core.</p>
+                        <p>Bigger isn't always better. The crawler won't fit the narrow cut through an old scrapyard, and its weight sinks into soft compost. Choosing the machine for each sector is part of reading it, not a reward for having played long enough.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/biohazard-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">What the past leaves on you</p>
+                        <h3>Relics and residue</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/09-relics.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every landfill buries something peculiar to itself, and you take some of it with you, for better and for worse.</p>
+                        <p>A <strong>relic</strong> is a piece of the old world worth keeping, a take on the supercores in several of Reactorcore's designs: a crane magnet that tugs scrap toward your blade, an old sweeper's brush that gathers spilled litter. It comes with you to the next jobs and stacks with others, and it wears out after a few.</p>
+                        <p><strong>Residue</strong> is what you unleash by opening the hill: a reek that brings scavenging birds to pick at your heaps, oily slime that makes every chunk slippery, a filter that clogs and fogs your view, squalls that turn compost to mud. You got down and dirty, and it takes a few jobs to wash off. It also says, plainly, why burying garbage was a bad idea.</p>
+                        <p>Relics and residue both fade, so the mix you bring to each landfill keeps changing.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/poison-gas-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No enemies, only the hill</p>
+                        <h3>Hazards of the old world</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/trash-miner/10-hazards.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Nothing in a landfill fights back on purpose, but plenty of it is dangerous: pockets of methane that flare when the blade breaks them open, leachate pools that bog down the tracks, slopes that slide when you dig out their foot, smouldering layers that have been burning for a century, and rain that turns the whole sector to sludge.</p>
+                        <p>The deeper you go the worse it gets, which is what makes the core the climax of every job. Getting stuck or burying the machine costs time, never the landfill: a winch truck tows you out and the heap is still there.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/gas-mask-lorc.png)"></span>Trivia</h2>
+            <h3>A zombie, a gold mine and no reason</h3>
+            <p>Reactorcore's notes on the original ad are blunt: a zombie mining gold makes no sense and gives no reason to play, and gold for the sake of more gold isn't a healthy goal. The fix was to keep exactly what made the ad compelling, the feel of pushing a sea of physics objects, and replace everything around it with a reason worth having: clean the place up, give it back, and watch the map turn green.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/trash-miner_4_boxart.jpg" alt="Box art: a chunky yellow bulldozer with its driver in a yellow hazmat suit stands on top of a mountain of colorful garbage in bright sunshine, green fields and a small town spread out below." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Work order</p>
+                <h2 id="sendoff">AAL Trash Miner: Landfill Recycling Bonanza</h2>
+                <p>Site: one landfill, about two centuries old, behind the village of Lower Bogsworth. Contents: unknown. Smell: known.</p>
+                <p>Assigned: one operator, one bulldozer, one reprocessing plant. The village would like its hill back, and says it will bring snacks.</p>
+                <p><strong>Push it all in. Give them their land back.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Zombie Miner</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Exo 2 Black, Unique, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

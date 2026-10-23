@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "trash-miner.html", prefix: "trash-miner",
+    title: "AAL Trash Miner", subtitle: "Landfill Recycling Bonanza",
+    icon: "bulldozer-delapouite", tint: "green",
+    blurb: "Drive a bulldozer into the old world's buried landfills and plow thousands of physics chunks of garbage into the chutes that recycle them, sector by sector down to the core, until the town gets its land back and its corner of the map turns green.",
+    genres: ["physics", "arcade", "sandbox"], tags: ["bulldozer", "recycling", "isometric", "procedural campaigns"],
+    universe: "aal", status: "concept", added: "2026-10-23"
+  },
+  {
     page: "aal-voyager.html", prefix: "aal-voyager",
     title: "AAL Voyager", subtitle: "Robinson Survival Challenge",
     icon: "vr-headset-delapouite", tint: "yellow",
