@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "punk-orphans.html", prefix: "punk-orphans",
+    title: "Titanium Punk Orphans", subtitle: "Turn-Based Mecha Artillery",
+    icon: "guitar-head-delapouite", tint: "magenta",
+    blurb: "Unkillable punk kids in welded-together scrap mecha take their world back from an incompetent alien empire, Worms-style: destructible terrain, three hops a turn, Smash Bros knockback instead of hit points, and fortresses to crack open.",
+    genres: ["strategy", "mecha", "physics"], tags: ["artillery", "turn-based", "destructible terrain", "squad"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "type-x-mecha.html", prefix: "type-x-mecha",
     title: "Type 1-X Mecha", subtitle: "Tech-Tier Real-Time Strategy",
     icon: "battle-mech-delapouite", tint: "red",

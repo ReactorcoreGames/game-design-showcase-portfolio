@@ -6,6 +6,7 @@ How to write the image prompts for a page (the five Klein images and the SDXL mi
 
 - **Model:** FLUX.2 klein 4B (`klein4b`), **Standard** tier: 1536×864 at 16:9, 1024×1536 at 2:3.
 - **Budget:** about 75 free Klein images a day, but **plan for 70**. Using the full allowance also locks out the free SDXL lane, which is the fallback. That's 14 projects a day at five images each. `tools/images.py gen` refuses a batch over 70.
+- **Count before generating.** The allowance runs on UTC days (midnight UTC), and it can end early: in batch 13 it ran out after 62 finished Klein images that day (flagged attempts seem to use neurons too), and SDXL stopped with it, so two pages were left without any images. Count the day's images first, e.g. `find _work -path '*raw-klein4b*' -name '*.jpg' -newermt '<today> 00:00 UTC' | wc -l`, and when the day is nearly spent, run the free SDXL minis before the Klein images.
 - Each project's prompts must be locked before generating. The goal is one run per project with no retries, so the prompts carry the quality.
 
 ## The spec file

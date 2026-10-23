@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanium Punk Orphans: Turn-Based Mecha Artillery</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a Worms-style turn-based artillery game where a rag-tag squad of unkillable punk kids in welded-together scrap mecha take back their world from an incompetent alien empire. Destructible terrain, three hops a turn, Smash Bros knockback instead of hit points, and fortresses to crack open.">
+    <meta name="keywords" content="game design concept, turn-based artillery, Worms inspired, destructible terrain, mecha, knockback, Super Smash Bros inspired, XCOM inspired, squad, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/punk-orphans.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Titanium Punk Orphans: Turn-Based Mecha Artillery">
+    <meta property="og:description" content="A game design concept: unkillable punk kids in welded-together scrap mecha take back their world from an incompetent alien empire, Worms-style, with destructible terrain and Smash Bros knockback. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/punk-orphans.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/punk-orphans_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a graffiti-painted scrap mecha hops over a crater firing a cluster of welded rocket launchers">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Titanium Punk Orphans: Turn-Based Mecha Artillery">
+    <meta name="twitter:description" content="A game design concept: unkillable punk kids in scrap mecha take back their world, Worms-style, with destructible terrain and Smash Bros knockback.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/punk-orphans_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Titanium Punk Orphans: Turn-Based Mecha Artillery",
+        "description": "A game design concept, not a released game: a singleplayer turn-based artillery game with destructible terrain, where a persistent squad of invulnerable teenage pilots in modified scrap mecha assault the fortified positions of an alien empire, using three hop-and-shoot actions per turn and knockback-based eliminations.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Strategy", "Artillery", "Turn-based tactics"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/punk-orphans.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/punk-orphans_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#16131a">
+
+    <link rel="preload" href="../fonts/hydrogen-whiskey.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Titanium Punk Orphans: a garage wall covered in spray paint. Asphalt ground, toxic lime
+           and hot pink straight out of the can, and a chalky cream for highlights. Hydrogen
+           Whiskey, a dripping metal-band face, for the title and headings; Exo 2 Bold Italic,
+           fast and loud, for the subtitle and kickers. */
+        @font-face { font-family: "Hydrogen Whiskey"; src: url("../fonts/hydrogen-whiskey.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Exo 2 Bold Italic"; src: url("../fonts/exo2-bold-italic.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #16131a;
+            --flow-2: #3a1636;
+            --grid-minor: rgba(255, 200, 240, 0.04);
+            --grid-major: rgba(255, 200, 240, 0.09);
+            --p-ground: rgba(22, 19, 26, 0.95);
+            --p-panel: #201b26;
+            --p-1: #b8ff3c;
+            --p-2: #ff4fa8;
+            --p-3: #fff2df;
+            --p-text: #e9e3ea;
+            --p-dim: #b0a6b3;
+            --p-line: rgba(255, 210, 240, 0.15);
+            --font-title: "Hydrogen Whiskey", "Segoe UI", sans-serif;
+            --font-sub: "Exo 2 Bold Italic", "Segoe UI", sans-serif;
+            --shade: #0b090d;
+        }
+
+        /* Title effect, "stage lights": a hard offset shadow like a cheap screen print, and
+           behind it the glow flips between lime and pink like a gig's lights on the beat. The
+           layered dark shadows stay put, so it reads at every frame. */
+        .p-name { letter-spacing: 0.02em; animation: stage-lights 4s steps(1, end) infinite; }
+        @keyframes stage-lights {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 4px 4px 0 var(--p-2), 0 0 28px rgba(184, 255, 60, 0.45); }
+            50% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 4px 4px 0 var(--p-1), 0 0 28px rgba(255, 79, 168, 0.55); }
+        }
+        .p-sub { letter-spacing: 0.06em; text-transform: uppercase; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 4px;
+            background: var(--p-2);
+            animation: stage-line 4s steps(1, end) infinite;
+        }
+        @keyframes stage-line {
+            0%, 100% { background: var(--p-2); box-shadow: 0 0 10px rgba(255, 79, 168, 0.7); }
+            50% { background: var(--p-1); box-shadow: 0 0 10px rgba(184, 255, 60, 0.7); }
+        }
+        .section-mark::after { animation: h2-line 4s steps(1, end) infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: 0 0 8px rgba(255, 79, 168, 0.5); } 50% { box-shadow: 0 0 8px rgba(184, 255, 60, 0.5); } }
+        h2, h3 { letter-spacing: 0.03em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; }
+
+        .p-nest > div { --c: var(--p-1); }
+        .p-nest > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .terrain td:first-of-type { width: 34%; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/punk-orphans_1_title.jpg" alt="A side view of a cratered, crumbling landscape where three graffiti-painted scrap mecha with spiked armor stand on a hill, facing a grim alien fortress across the valley." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Titanium Punk Orphans</span><span class="p-sub">Turn-Based Mecha Artillery</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/guitar-head-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/worms-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Titanium Punk Orphans is a turn-based artillery game in the tradition of Worms: destructible terrain, a ridiculous arsenal, and one shot at a time. The worms are punk kids in scrap mecha, and they can't be killed.</p>
+            <p>An alien empire wiped out the grown-ups. The kids survived, found their parents' military hardware, read every manual, welded three bazookas together, and went on the offensive. Their enemy is huge, heavily armed, and run on fear and corruption so badly that nothing works properly.</p>
+            <p>Under the cartoon is a different structure from Worms. Battles are mostly assaults on fortified positions rather than duels between equal teams. Mecha hop instead of crawl, three actions a turn. Damage builds up knockback, as in Super Smash Bros., until a machine flies off the map. And the squad is persistent, as in XCOM, with kids who get tired, hurt, older and better.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Worms and Scorched Earth fans who love blowing holes in the landscape with absurd weapons, but find one equal-team elimination match much like the next. XCOM fans who love a persistent squad, without the grief of losing it.</p>
+                    <p>They want <strong>explosive slapstick with real tactics underneath</strong>, and a gang of kids worth rooting for.</p>
+                    <p>Mouse-driven, turn-based, and no turn timer: take as long as you like over every shot.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and silliness:</strong> craters, chain reactions and machines flying off the screen yelling.</p>
+                    <p><strong>Power and freedom:</strong> the underdogs taking their world back from a bully.</p>
+                    <p><strong>Belonging:</strong> a rag-tag found family that grows up over the campaign.</p>
+                    <p><strong>Growth:</strong> reading terrain and fortifications and cracking them open.</p>
+                    <p>It deliberately avoids draining <strong>safety</strong> (the kids can't die, only get hurt or tired) and <strong>rest</strong> (no timers, ever).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Worms is a standalone match between equal teams, won by whoever wipes out the other first. It's great for a party, and samey alone.</p>
+                    <p>Here it's an <strong>asymmetric assault</strong>: a small squad against bunkers, turret networks and fortresses, inside a campaign that frees a region and then the next.</p>
+                    <p>Knockback replaces hit points, so every hit moves things; hops replace crawling, so every turn is a small plan; and the squad carries on from battle to battle.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/punk-orphans_5_story.jpg" alt="A ruined city skyline under occupation, huge alien battleships floating above it and a grim alien fortress built over the ruins, a small graffiti-covered scrap workshop glowing in the foreground." width="1280" height="720" loading="lazy">
+            <figcaption>"The invaders killed the grown-ups. They couldn't kill the kids."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/spray-lorc.png)"></span>Lore and story</h2>
+            <h3>The day the grown-ups died</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/01-invasion.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The Hegemony came from the stars the way it always does: greedy, expansionist, and bigger than anything it meets. Its soldiers are a cloned mix of blue, green and purple aliens, brutish giants, cyborg hulks and haughty, prissy officers, bred without childhoods and without children. It took the world in a week and killed nearly every adult on it.</p>
+            <p>It couldn't kill the children. Nobody knows why. Bullets bounce, blasts knock them flat and they get up again; they bruise, they get tired, they can be knocked out and dragged off to a cell, but they can't die. The adults used to call it a mercy. The kids call it plot armor.</p>
+
+            <h3>The Orphans</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/02-orphans.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>So the kids went into the bunkers and garages and found what their parents left: tanks, mecha, crates of weapons and the manuals for all of it. They read every page. Then they did what kids do with anything: painted it, spiked it, welded two of it together and taped a third on top.</p>
+            <p>Every kid stays invulnerable until their eighteenth birthday. After that they choose: <strong>retire</strong> into the jobs that keep the rebellion running, fixing mecha, running supplies, patching up the hurt, teaching the younger ones; or stay in the cockpit as a <strong>legend</strong>, sharper and stronger than any kid, and mortal.</p>
+
+            <h3>The fight right now</h3>
+            <p>The Hegemony holds the valley with a fortress, three turret nests and a grounded battleship. Its soldiers are miserable, its officers are stabbing each other in the back, and half its guns jam. The Orphans have four mecha, a war chest full of terrible ideas, and nothing to lose.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>It plays mostly with the mouse. On your turn you have three actions with one mecha: hop, shoot, use an ability, in any order and any mix. Valid landing spots light up when you hop, the way Advance Wars shows where a unit can move, with the arc drawn so you know exactly where you'll come down.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Hop to a lit spot (one action)</dd></div>
+                        <div><dt>Ctrl + click</dt><dd>Short hop, a third of an action</dd></div>
+                        <div><dt>S + click</dt><dd>Crouch-hop into a slide, with brakes</dd></div>
+                        <div><dt>Space</dt><dd>Mid-hop: rope, parachute or bungee (free)</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Q</dt><dd>Weapon menu: the mecha's own and the war chest</dd></div>
+                        <div><dt>Mouse, hold click</dt><dd>Aim; hold for power, release to fire</dd></div>
+                        <div><dt>E</dt><dd>Ability menu</dd></div>
+                        <div><dt>A</dt><dd>Anchor to the ground against knockback</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Squad</h3>
+                    <dl>
+                        <div><dt>Tab</dt><dd>Switch to another mecha (costs an action)</dd></div>
+                        <div><dt>Enter</dt><dd>End the turn early</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>View</h3>
+                    <dl>
+                        <div><dt>Wheel, right drag</dt><dd>Zoom and pan</dd></div>
+                        <div><dt>Esc</dt><dd>Menu and save</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The weapon and ability menus are big grids in the spirit of Worms 2 at its peak: every option on one screen, with what each one does to mecha and to terrain shown before you pick it.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/punk-orphans_2_vignette.jpg" alt="Side view: a graffiti-painted scrap mecha leaps over a smoking crater, firing a cluster of rocket launchers welded together at an alien bunker on a hill, chunks of dirt flying." width="1280" height="720" loading="lazy">
+            <figcaption>"Three actions a turn: hop, shoot, hop back. Or shoot, shoot, shoot."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jump-across-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Hop, aim, boom</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/03-boom.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Look at the battlefield. Pick a mecha and spend three actions: hop up to a ledge, lob a cluster bomb into the turret nest, hop back behind the rock. Watch the terrain cave in and an enemy mech tumble down the slope. Then it's their turn, and they try the same on you.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/flag-objective-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>Liberating a region</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/04-region.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign frees one region from the Hegemony: a generated map of occupied towns, turret lines, bunkerships and fortresses, each a battle. Weapons picked up in one battle can be used in the next, the hurt kids sit one out, and the region falls when its last stronghold does.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/spray-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Taking the world back, then space</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/05-wall.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Beyond the region is the rest of the world, and beyond the world, the Hegemony's other conquests and the space monsters that roam between them. The Orphans keep going, planet after planet, into zero gravity and out among the stars.</p>
+                        <p>Home is the workshop, and its wall is the record: every region freed gets tagged on it in spray paint, next to the names of the kids who grew up and retired, and the legends who fell.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A battle at a time</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/06-battle.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There are no timers on turns, so the pace is XCOM's or Advance Wars', but snappier, because only one mecha moves at a time. A battle takes twenty to forty minutes, and saves between turns. A region is a few evenings.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/boombox-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the rebellion</strong>. Most battles are assaults on Hegemony positions, and some are straight mecha-against-mecha brawls in the old Worms style. It nests:</p>
+            <div class="p-nest" aria-label="The rebellion, outermost first">
+                <div><span>The rebellion</span><small>Endless: region after region, world after world.</small>
+                    <div><span>A region</span><small>Occupied towns, turret lines and fortresses: a few evenings.</small>
+                        <div><span>A battle</span><small>One map, one objective: twenty to forty minutes.</small>
+                            <div><span>A turn</span><small>Three actions with one mecha: a minute or two.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/guitar-head-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/knockout-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Knockback, not hit points</h3>
+                        <p>Mecha don't crash and burn when their health runs out. As in Super Smash Bros., every hit makes a machine <strong>more vulnerable to knockback</strong>: a fresh mecha shrugs off a blast with a stagger, a battered one is sent flying across the map by the same blast. A machine is out of the battle when it's knocked off the edge of the map or into lava or acid, yelling all the way.</p>
+                        <p>Its pilot is fine: a teleport tether snaps them back to safety the moment the mecha goes, as in Cryptark. It makes every hit matter, because every hit moves something, and it turns the terrain into part of every attack. A mecha can <strong>anchor</strong> itself to the ground against being knocked around, at the cost of being a sitting target.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/punk-orphans_3_feature.jpg" alt="A bulky alien war robot knocked flying off a cliff edge by a blast, tumbling through the air above a deep gorge, debris spinning around it." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every hit makes a machine easier to knock flying, until one blast sends it off the edge of the map."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jump-across-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Instead of the crawl</p>
+                        <h3>Three actions a turn</h3>
+                        <p>Worms' worms crawl and jump on a timer. Here, borrowed from Reactorcore's Epic Toy Cool Combat rules, a mecha gets <strong>three actions</strong> and spends them however it likes:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Turn</th><th scope="col">What it's for</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Hop, shoot, hop</th><td data-label="What it's for">Pop out of cover, fire, duck back</td></tr>
+                                    <tr><th scope="row">Shoot, shoot, shoot</th><td data-label="What it's for">Stand and unload on something that matters</td></tr>
+                                    <tr><th scope="row">Hop, hop, hop</th><td data-label="What it's for">Cross the map, or get out of trouble</td></tr>
+                                    <tr><th scope="row">Ability, hop, shoot</th><td data-label="What it's for">Set up overwatch or a shield first, then act</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>A hop can be split into three short hops for fine footwork, or turned into a braking slide. Mid-hop, a ninja rope, parachute or bungee can be fired for free, so a single hop can swing, glide or rebound across wrecked terrain. Some mecha can also hover and stay airborne until something concussive knocks them down.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dig-dug-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The ground fights back</p>
+                        <h3>Terrain in layers</h3>
+                        <p>The terrain is a destructible bitmap, as in Worms, but not all of it is the same, as in Clonk:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table terrain">
+                                <thead><tr><th scope="col">Material</th><th scope="col">What it takes</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Dirt</th><td data-label="Takes">Anything blows a hole in it</td></tr>
+                                    <tr><th scope="row">Rock</th><td data-label="Takes">Only explosives shatter it</td></tr>
+                                    <tr><th scope="row">Granite</th><td data-label="Takes">Two explosive hits</td></tr>
+                                    <tr><th scope="row">Obsidian</th><td data-label="Takes">Three explosive hits</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Broken ground drops chunks that roll downhill and tumble with the blasts. Mines and fuel barrels lie around, some targets are buried and have to be dug out as in Cortex Command, and water is no longer an instant death: mecha float. Lava and acid are another matter.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bunker-quoting.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Not a fair fight, on purpose</p>
+                        <h3>Fortresses to crack</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/07-fortress.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Most battles are a small squad against a fortified position: turret emplacements, bunkers, a grounded battleship bristling with guns, and Forts-style fortresses with armor, weak points, facilities and a reactor waiting to go up.</p>
+                        <p>The enemy gets three actions a turn too, spent on one of its units or on one <strong>turret network</strong>: a sector's linked turrets count as a single unit and fire together. A big base has several networks, each its own unit. Knock out a network's control and its whole sector goes quiet.</p>
+                        <p>The Hegemony's equipment is as rotten as its command. Its designs have weak points nobody bothered to fix, and its guns don't always do what they should. Find the flaw and use it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/missile-launcher-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Welded, taped, glorious</p>
+                        <h3>A punk arsenal</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/08-arsenal.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The weapons are Worms-crazy but grounded in military hardware, then punked up: multiple bazookas welded into one launcher, twenty shotguns taped into a bundle, cluster munitions, dirt bombs, airstrikes, homing missiles, a remote-steered hopping charge, a falling concrete slab, and super weapons at the top. Front Mission's wanzer arms and Lost Planet's mech weapons, multiplied.</p>
+                        <p>Some weapons belong to a particular mecha; the rest live in a shared <strong>war chest</strong> any mecha can draw from. And the chest keeps changing, in the spirit of Reactorcore's supercores: weapons are found on the battlefield, taken along from the workshop, or captured from the enemy, and old ones run out of uses or break. Utility tools, like the blowtorch, drill and girder, sit alongside them.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cog-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">As big as the weapon menu</p>
+                        <h3>Abilities</h3>
+                        <p>Beside the weapon grid is an ability grid of the same size, with XCOM-style options: overwatch, hunker down, double move, shields, toggled passives. Some have limited uses, some cool down, some switch on and off. Some belong to one mecha, others apply to the whole squad.</p>
+                        <p>Enemy officers carry abilities too, inside cores in their machines. Take one intact, and it's yours.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/team-idea-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A found family</p>
+                        <h3>The squad grows up</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/09-squad.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The Orphans are a persistent roster, as in XCOM and its police spinoff Chimera Squad: a rotating gang of pilots, each with their own mecha class (heavy, light, and everything between), who join, get promoted, get worn out and get hurt. A pilot whose mecha was knocked out ends up bruised in the infirmary for a battle or two; one who's run out of steam needs rest.</p>
+                        <p>Nobody dies, so losing a battle is a setback, never a funeral. But time passes, and kids grow up. At eighteen each one chooses: retire into the workshop, the supply runs or the classroom, or become a legend pilot, better than any kid and mortal. Legends who fall go on the wall, and their names stay there.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/smoke-bomb-darkzaitzev.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">What you can't see</p>
+                        <h3>Fog, smoke and tunnels</h3>
+                        <p>Each mecha reveals everything in a radius around it and sees along its line of sight beyond that, so the map is hidden in two ways: what's out of sight, and what's out of reach. Smoke and fog block the long view but clear close in.</p>
+                        <p>Underground targets, buried bunkers and tunnels give the drill and the dirt bomb a job, and give the enemy places to hide.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/alien-bug-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Up to four sides</p>
+                        <h3>Brawls, mosh pits and monsters</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/punk-orphans/10-monsters.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A battle can have up to four sides: the Orphans and up to three enemy factions, who fight each other as happily as they fight you. Besides the Hegemony there are the space monsters, each its own faction with its own units, structures and terrain: bug swarms, hive growths, rogue robots, mutants, zombies and cyborg skeletons. A faction can even split into rival copies of itself, recolored, like two players picking the same fighter in Smash Bros.</p>
+                        <p>Sides start facing each other across the map, or are dropped in pods all over it, mosh-pit style, the way classic Worms scatters its teams. Theme packs reskin the battlefields with new textures, parallax backdrops and lighting, and some battles leave the ground entirely, in zero gravity.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/prank-glasses-caro-asercion.png)"></span>Trivia</h2>
+            <h3>Nanomachines, son</h3>
+            <p>The kids' invulnerability is a nod to Fallout 3, where children are essential characters and can't be killed. Reactorcore's note on how seriously to take all of this quotes Senator Armstrong from Metal Gear Rising: "Nanomachines, son." The tone is the 90s and 00s Saturday-morning cartoon, Teenage Mutant Ninja Turtles, Biker Mice from Mars, Swat Kats, where the heroes get captured, never killed, and the enemy's huge army is always somehow hopeless.</p>
+            <p>The aliens owe something to Macross: invaders who are cloned and have no children of their own, so it's never humans killing humans.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/punk-orphans_4_boxart.jpg" alt="Box art: three graffiti-painted scrap mecha with spiked armor and welded-on weapons pose on a heap of wrecked alien machinery under a loud, colorful sky." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">A flyer stapled to a wall</p>
+                <h2 id="sendoff">Titanium Punk Orphans: Turn-Based Mecha Artillery</h2>
+                <p>Hey, Hegemony. You took our world. You took our parents. You forgot to take our garage.</p>
+                <p>We've got four mecha, a welder, a war chest and all the time in the world. You've got a fortress full of guns that jam. See you in the crater.</p>
+                <p><strong>Can't kill us. Can't stop us. Can't aim.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Worms 2, Armageddon and World Party, Scorched Earth, Super Smash Bros., XCOM, Xenonauts, Chimera Squad, Front Mission, Lost Planet, Macross, Red Alert 2, Cortex Command, Clonk, Cryptark, Forts, Aposimz and Fallout 3</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Hydrogen Whiskey (CC0), Exo 2, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -135,7 +135,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] AAL Trash Miner
 - [x] Temporal Shift RTS
 - [x] Type 1-X Mecha RTS (images pending)
-- [ ] Titanium Punk Orphans
+- [x] Titanium Punk Orphans (images pending)
 - [ ] Metsanelaimet
 - [ ] Auto chess (or fold it into another page)
 - [ ] Bazooka Bomber

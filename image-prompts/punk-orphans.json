@@ -1,0 +1,37 @@
+{
+  "slug": "punk-orphans",
+  "preset": "03 Style - Popart",
+  "style": "Palette of toxic lime green, hot pink, chalky cream and asphalt black, with purple and teal alien accents. No text, letters, words or logos anywhere, the graffiti is pure shapes and colors.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide side view of a cratered, crumbling hilly landscape cut by explosions, like a cross-section of earth with tunnels and loose rocks. On a hill on the right stand three boxy, clearly mechanical scrap mecha robots welded together from tank parts, painted in lime and pink spray-paint patterns, with spiked armor plates and oversized welded-on rocket launchers. Across the valley on the far left horizon, a grim angular purple alien fortress with turrets. The lower left of the picture is calm open ground."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side view of a destructible dirt and rock landscape: a boxy, clearly mechanical scrap mecha robot painted in lime and pink spray-paint patterns, with spiked armor plates, leaps through the air over a smoking crater, firing a cluster of four rocket launchers welded together toward a squat purple alien bunker on a hill. Clumps of dirt and rocks fly from the crater rim. A dotted arc trail behind the jumping robot."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Side view of a bulky, clearly mechanical purple alien war robot with heavy angular armor, knocked off its feet and sent flying backwards off a cliff edge by a bright burst of impact, tumbling through the air above a deep gorge, bolts and armor plates and rocks spinning around it. Bold speed lines, big empty sky."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait poster-style illustration: three boxy, clearly mechanical scrap mecha robots welded together from tank parts, painted in lime and pink spray-paint patterns, with spiked armor plates and oversized welded-on weapons, pose proudly on top of a heap of wrecked purple alien machinery. Paint drips and splashes around them. The top third of the picture is a loud empty sky of hot pink and lime color blocks."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide view of a ruined city skyline at dusk under alien occupation: huge angular purple alien battleships float in the sky above broken towers, and a grim alien fortress with spikes is built over the ruins. In the foreground, a small cluttered scrap workshop in a garage, its walls covered in lime and pink spray-paint patterns, warm light spilling out of its open door."
+    }
+  ]
+}
