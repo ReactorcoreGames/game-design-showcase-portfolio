@@ -134,7 +134,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] AAL Inspector (no page of its own, Reactorcore's call: it's the foundation the trio grew from, folded into their pages; all five docs are in `designs/done/AAL Terrene Clones/`)
 - [x] AAL Trash Miner
 - [x] Temporal Shift RTS
-- [ ] Type 1-X Mecha RTS
+- [x] Type 1-X Mecha RTS (images pending)
 - [ ] Titanium Punk Orphans
 - [ ] Metsanelaimet
 - [ ] Auto chess (or fold it into another page)

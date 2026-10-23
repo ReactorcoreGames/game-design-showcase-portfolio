@@ -1,0 +1,20 @@
+{
+  "slug": "type-x-mecha-mini",
+  "out": "site/projects/mini/type-x-mecha",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - D - Hard Feel",
+  "lead": "Hard-lit industrial sci-fi film still, crimson and gunmetal, dusk. ",
+  "images": [
+    {"n": 1, "name": "types", "ratio": "3:2", "prompt": "Rows of giant robots of different sizes standing in a hangar"},
+    {"n": 2, "name": "systems", "ratio": "3:2", "prompt": "A distant star system with several planets and smoke over one moon"},
+    {"n": 3, "name": "arms", "ratio": "3:2", "prompt": "Walking war machines and tanks advancing together across a rocky plain"},
+    {"n": 4, "name": "campaign", "ratio": "3:2", "prompt": "A planet and its moons seen from a starship bridge window"},
+    {"n": 5, "name": "hangar", "ratio": "3:2", "prompt": "Engineers working on a giant robot in a carrier hangar bay"},
+    {"n": 6, "name": "evening", "ratio": "3:2", "prompt": "A quiet starship hangar at night, a giant robot under work lights"},
+    {"n": 7, "name": "crossover", "ratio": "3:2", "prompt": "A small advanced armored suit standing next to a huge crude walking machine"},
+    {"n": 8, "name": "shapes", "ratio": "3:2", "prompt": "A wide beam of light sweeping across a battlefield"},
+    {"n": 9, "name": "base", "ratio": "3:2", "prompt": "A colossal walking fortress with factories on its back"},
+    {"n": 10, "name": "bands", "ratio": "3:2", "prompt": "Old rusty walking machines in a muddy trench"}
+  ]
+}

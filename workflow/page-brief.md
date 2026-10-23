@@ -96,7 +96,7 @@ Every page shares the template's layout and differs in palette, fonts and title 
 
 Designs explain better with something to look at than with walls of text. The template's diagram kit replaces mermaid (which is no longer used); use it wherever it beats a paragraph:
 
-- `.p-table` (inside `.p-table-wrap`): comparisons, modes, arsenals, opponent types. Give each `td` a `data-label` when the column name helps, because on phones every row becomes a stacked card.
+- `.p-table` (inside `.p-table-wrap`): comparisons, modes, arsenals, opponent types. Give each `td` a `data-label` when the column name helps, because on phones every row becomes a stacked card. Column widths a page sets (`.places td { width: 30% }`) only apply on desktop; the template resets them for the stacked phone cards.
 - `.p-chain`: steps or a dependency chain, with arrows (vertical on phones).
 - `.p-nest`: nested structure, such as galaxy > region > mission > battle.
 - `.p-keys`: the controls.

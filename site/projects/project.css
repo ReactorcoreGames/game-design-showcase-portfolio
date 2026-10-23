@@ -244,6 +244,8 @@ kbd {
     .p-table tr:last-child { border-bottom: 0; }
     .p-table th, .p-table td { display: block; border: 0; padding: 0.15rem 0.9rem; }
     .p-table tbody th { white-space: normal; padding-bottom: 0.3rem; }
+    /* Pages set column widths for desktop (".places td { width: 30% }"); stacked cells take the full row. */
+    .p-table-wrap .p-table tbody tr > * { width: auto; }
     .p-table td[data-label]::before {
         content: attr(data-label) ": ";
         font-family: var(--font-ui); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--p-1);

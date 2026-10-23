@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "type-x-mecha.html", prefix: "type-x-mecha",
+    title: "Type 1-X Mecha", subtitle: "Tech-Tier Real-Time Strategy",
+    icon: "battle-mech-delapouite", tint: "red",
+    blurb: "A base-building RTS of mecha graded in six Types, from lumbering primitive walkers to colossal fortress machines and star gods, on planets and in orbit, with a four-way damage chart, weapons that grow from single shots to sweeping shapes, and a unit maker that greys out what won't fit.",
+    genres: ["strategy", "mecha"], tags: ["rts", "unit editor", "tech tiers", "space and planets"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "temporal-shift.html", prefix: "temporal-shift",
     title: "Temporal Shift", subtitle: "Time-Bending Real-Time Strategy",
     icon: "sands-of-time-lorc", tint: "cyan",
