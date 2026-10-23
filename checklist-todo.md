@@ -128,10 +128,10 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Soldat Doom Infinite, now Hellsweep Infinite
 - [x] Space Chunks–inspired blast-em-up, now Thermonuclear Berserker
 - [x] Metroid Forever concept, now Lockbreaker
-- [ ] AAL Collector
+- [x] AAL Collector
 - [ ] AAL Exterminator
 - [ ] AAL Voyager
-- [ ] AAL Inspector (decide after the trio: its own page, or folded into the trio)
+- [x] AAL Inspector (no page of its own, Reactorcore's call: it's the foundation the trio grew from, folded into their pages; all five docs are in `designs/done/AAL Terrene Clones/`)
 - [ ] AAL Trash Miner
 - [ ] Temporal Shift RTS
 - [ ] Type 1-X Mecha RTS

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Collector: Reach, Capture, Recover</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a chill side-view collectathon across generated star systems. Follow glinting trails, reach the unreachable, stun and capture alien creatures in the right containers, and recover procedurally generated relics for a gallery that keeps growing.">
+    <meta name="keywords" content="game design concept, collectathon, exploration, creature capture, procedural generation, side-view platformer, Terrene inspired, Donkey Kong Country 3 inspired, Subnautica inspired, AAL universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-collector.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Collector: Reach, Capture, Recover">
+    <meta property="og:description" content="A game design concept: a chill collectathon across generated star systems. Reach the unreachable, capture creatures in the right containers, recover one-of-a-kind relics. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-collector.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-collector_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a small explorer carries a stunned alien critter through a glowing jungle cave">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Collector: Reach, Capture, Recover">
+    <meta name="twitter:description" content="A game design concept: a chill collectathon across generated star systems. Reach the unreachable, capture creatures in the right containers, recover one-of-a-kind relics.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-collector_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Collector: Reach, Capture, Recover",
+        "description": "A game design concept, not a released game: a side-view collectathon across procedurally generated star systems, where a small field operative follows signals, reaches hard places, stuns and captures alien creatures in fitting containers, and recovers procedurally generated relics for a growing gallery. Set in Reactorcore's AAL universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Adventure", "Platformer", "Exploration"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-collector.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-collector_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#101710">
+
+    <link rel="preload" href="../fonts/fragile-bombers.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* AAL Collector: deep jungle green under a canopy, with a fresh leaf green for the living
+           things you find and a honey gold for the glints and relics. Fragile Bombers, round and
+           chunky, for the title and headings; Expletus Sans for the subtitle and kickers. */
+        @font-face { font-family: "Fragile Bombers"; src: url("../fonts/fragile-bombers.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Expletus Sans"; src: url("../fonts/expletus-sans-regular.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #101710;
+            --flow-2: #233a1c;
+            --grid-minor: rgba(200, 240, 150, 0.04);
+            --grid-major: rgba(200, 240, 150, 0.09);
+            --p-ground: rgba(16, 22, 15, 0.95);
+            --p-panel: #18221a;
+            --p-1: #9bdc5c;
+            --p-2: #f3bd4f;
+            --p-3: #fff2d6;
+            --p-text: #dfe6d4;
+            --p-dim: #a7b39b;
+            --p-line: rgba(210, 240, 170, 0.15);
+            --font-title: "Fragile Bombers", "Segoe UI", sans-serif;
+            --font-sub: "Expletus Sans", "Segoe UI", sans-serif;
+            --shade: #0a0f09;
+        }
+
+        /* Title effect, "glint": the name rests in cream, then a honey-gold sparkle catches it
+           like a collectible turning in the light, twice in quick succession, and fades. Layered
+           dark shadows keep it legible at every frame. */
+        .p-name {
+            letter-spacing: 0.02em;
+            animation: glint 5s ease-in-out infinite;
+        }
+        @keyframes glint {
+            0%, 100%, 62% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade); }
+            68% { color: #fffaf0; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), -6px -4px 14px rgba(243, 189, 79, 0.9), 0 0 26px rgba(243, 189, 79, 0.5); }
+            74% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 8px rgba(243, 189, 79, 0.25); }
+            80% { color: #fffaf0; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 6px -4px 18px rgba(243, 189, 79, 0.95), 0 0 30px rgba(155, 220, 92, 0.45); }
+            90% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade); }
+        }
+        .p-sub { letter-spacing: 0.04em; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.3rem; height: 3px;
+            background: var(--p-1);
+            animation: glint-line 5s ease-in-out infinite;
+        }
+        @keyframes glint-line {
+            0%, 62%, 100% { box-shadow: none; opacity: 0.65; }
+            80% { box-shadow: 0 0 12px rgba(243, 189, 79, 0.85), 0 0 24px rgba(155, 220, 92, 0.5); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 62%, 100% { box-shadow: none; } 80% { box-shadow: 0 0 10px rgba(243, 189, 79, 0.7); } }
+        h2, h3 { letter-spacing: 0.03em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.08em; }
+
+        .p-nest > div { --c: var(--p-2); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .finds td:first-of-type, .vessels td:first-of-type { width: 55%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/aal-collector_1_title.jpg" alt="Side view of a lush alien jungle: a small explorer in a green field suit and round amber visor stands on a mossy ledge holding up a glowing golden relic, a trail of golden crystals leading into a cave, a small rocket parked behind." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">AAL Collector</span><span class="p-sub">Reach, Capture, Recover</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/raccoon-head-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/bug-net-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">AAL Collector is a chill, side-view collectathon across generated star systems. You're a small field operative who climbs, swims and squeezes into hard-to-reach places, stuns and captures the local wildlife, and carries home relics no one has ever seen before.</p>
+            <p>Every planet, moon and drifting wreck is one tall slice of world, from orbit down through the sky, the surface, the seas and the caves to the bedrock. You fly a shuttle down, follow a glinting trail toward a signal, and solve the problem of getting there and back with your hands full. Combat is light and mostly optional. The game is about <strong>grabbing, tossing and hauling stuff around like a cheeky raccoon</strong>.</p>
+            <p>It's built on the tech of Terrene, the pixel-art planet explorer, with the collect-everything joy of Donkey Kong Country 3, Subnautica's creatures and the unhurried pace of Super Metroid before the final stretch. It's one of three games grown from the same notebook, and it's set in Reactorcore's <a href="../aal/">AAL universe</a>.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who loved finding the hidden barrel in Donkey Kong Country, watching Subnautica's creatures, or filling a Pokédex, and who are tired of survival games that turn every creature into a threat and collectathons that turn every find into a checklist.</p>
+                    <p>They want to <strong>wander, notice things and bring them home</strong>, at their own pace.</p>
+                    <p>Keyboard and mouse, platformer controls. A careful player is never punished for being slow, and nearly every creature can simply be avoided.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Discovery and variety:</strong> worlds, creatures and relics that are new every time, and the curiosity of finding out what that glint is.</p>
+                    <p><strong>Play and silliness:</strong> picking things up and throwing them, just because you can.</p>
+                    <p><strong>Care:</strong> bringing creatures home safely, each in a container that suits it.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> (no timers, no survival meters, very little combat) and <strong>autonomy</strong> (any world in any order, leave any of them half-explored and come back later).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Collectathons usually hand you a fixed list to tick off. Collectibles buy unlocks, and at 100% the game is over.</p>
+                    <p>Here every collectible <strong>has a job in the world</strong>: a trail shows the way, a cache marks a place worth reaching, a relic is a thing worth keeping.</p>
+                    <p>And the list never runs out. Every star system is generated, every relic is one of a kind, and what you bring back fills a <strong>gallery that keeps growing</strong> for as long as you play.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-collector_5_story.jpg" alt="An enormous white research ship hangs in a hazy sky above a wild alien jungle world, a small automated outpost with antenna towers below it." width="1280" height="720" loading="lazy">
+            <figcaption>"The monsters are gone. Everything else is still there, and someone ought to catalogue it."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span>Lore and story</h2>
+            <h3>After the Standalones</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/01-after.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The space monster wars are over. The Standalones, self-replicating berserker superweapons, swept whole regions of the universe clean, and behind them they left small automated outposts: factories and towers crewed by worker bots, keeping the peace on worlds nobody has settled yet.</p>
+            <p>Those worlds are safe now, but far from empty. They're wild, full of native creatures, strange plants and the leftovers of civilizations that came long before. Before colonists move in, somebody has to go and see what's there.</p>
+
+            <h3>The Bioarchive</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/02-bioarchive.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>That somebody is the Bioarchive: a colossal research and collection megaship that travels from star system to system, cataloguing everything living and everything left behind. Creatures brought aboard are studied and given a home in its habitat decks. Relics are cleaned up and put on display. The ship is far too big to go anywhere near a planet, so it sends collectors.</p>
+
+            <h3>The collector</h3>
+            <p>You're one of them: a small human operative with a light, gentle kit, a shuttle for going down to the surface, and a carrier that serves as your own home base out in each system. Your tools stun and capture rather than kill, and your hands are your most important equipment.</p>
+
+            <h3>The job right now</h3>
+            <p>A new star system has been charted. The carrier has a list of signals worth checking, and the Bioarchive has a wish list. Go down, follow the glints, and bring back whatever's asked for, and whatever else catches your eye.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>On foot you control the collector from the side, with platformer movement in the spirit of Donkey Kong Country and mouse aim for anything you throw or fire. The shuttle flies freely in every direction, between the carrier in orbit and anywhere on the planet that has room to land.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>On foot</h3>
+                    <dl>
+                        <div><dt>A / D</dt><dd>Walk and run</dd></div>
+                        <div><dt>Space</dt><dd>Jump; hold to jump higher</dd></div>
+                        <div><dt>W / S</dt><dd>Climb vines, ropes and back walls; swim; crouch</dd></div>
+                        <div><dt>Shift</dt><dd>Roll, under gaps and through loose ground</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Hands</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Grab, pick up, put down</dd></div>
+                        <div><dt>Left click</dt><dd>Throw what you're carrying at the pointer; the distance sets the strength</dd></div>
+                        <div><dt>Right click</dt><dd>Stun shot</dd></div>
+                        <div><dt>Q</dt><dd>Throw a capture pod at a stunned creature</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Shuttle</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Thrust in any direction</dd></div>
+                        <div><dt>Shift</dt><dd>Boost</dd></div>
+                        <div><dt>Right click</dt><dd>Winch: hook a heavy load and haul it underneath</dd></div>
+                        <div><dt>E</dt><dd>Board, or step out</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Kit</h3>
+                    <dl>
+                        <div><dt>F</dt><dd>Scan a creature, a relic or a signal</dd></div>
+                        <div><dt>Tab</dt><dd>Signal list and the star map</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Carrying is the heart of the controls. <strong>Anything loose can be picked up</strong>: a rock, an egg, a relic, a stunned creature in its pod, a crate, a worker bot that's stuck. Light things go overhead and barely slow you down; heavy ones take both hands, make jumps shorter and turn a climb into a puzzle. The HUD is small and quiet: the carried object's weight, the signal you're heading for, and nothing else.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-collector_2_vignette.jpg" alt="Side view of a glowing jungle cave: the small explorer carries a round, fluffy, dazed alien critter over their head across mossy stone platforms, golden crystals glinting along the path ahead." width="1280" height="720" loading="lazy">
+            <figcaption>"Light things go over your head. Heavy things make every jump a little shorter."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/grab-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One world, one signal at a time</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/03-signal.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Drop from the carrier in the shuttle, burn through the atmosphere and land where there's room. Then go on foot: follow the glint trail, climb, swim, roll through a gap, toss a rock at a switch, sneak past a territorial beast or stun it and carry it off.</p>
+                        <p>Whatever you find has to get back to the shuttle, and that's the other half of the puzzle: the egg is fragile, the relic is heavy, and the creature you just captured is in a pod you're carrying up a cliff.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A star system expedition</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/04-system.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each star system is one expedition: a handful of planets, moons, asteroid fields and derelicts on the carrier's star map, each with its own list of signals and the Bioarchive's wish list on top. Visit them <strong>in any order</strong>, leave one half-explored, come back later. There's no final gate to unlock and no countdown.</p>
+                        <p>When the list is done, or when you've had enough of this system, the carrier warps on to the next one.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/colombian-statue-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The Bioarchive's galleries</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/05-gallery.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Everything you bring home ends up aboard the Bioarchive. Each star system gets its own <strong>gallery of recovered relics</strong>, every one of them unique, and the creatures you captured live on in its habitat decks, each one logged with where and how you found it.</p>
+                        <p>That's the infinite overarching goal: cataloguing a universe that has no end of systems. The galleries are a living record of where you've been. They don't pay out or unlock anything; they're simply yours, and they're worth wandering through.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One signal or a whole system</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/06-session.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A single signal takes a quarter of an hour or so, a world an evening, a whole system a few evenings. Save anywhere. Back on the carrier, everything waits: the map, the half-explored worlds, the crate of finds you haven't sent up yet.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/space-shuttle-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the expedition</strong>. It nests, so it fits any amount of free time:</p>
+            <div class="p-nest" aria-label="The expedition, outermost first">
+                <div><span>The Bioarchive</span><small>Endless: one star system after another, and a gallery for each.</small>
+                    <div><span>A star system</span><small>Several worlds on the star map, in any order: a few evenings.</small>
+                        <div><span>A world</span><small>One tall slice from orbit to bedrock, with its own signals: an evening.</small>
+                            <div><span>A signal</span><small>One trail, one find, and the trip back to the shuttle: a quarter of an hour.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Two people's finds never get compared, and nothing is timed.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/raccoon-head-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cage-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Stun, capture, contain</h3>
+                        <p>Creatures behave the way Subnautica's do: some peaceful, some territorial, some shy, a few predatory, in every size. Usually you can just go around them. When one is on the Bioarchive's wish list, or simply one you'd like to keep, <strong>stun it, pod it and carry it home</strong>.</p>
+                        <p>The pod only holds a creature for the trip. Back at the carrier it needs a proper container, and <strong>every kind of creature needs its own</strong>, which you build in the carrier's workshop from what you've gathered:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table vessels">
+                                <thead><tr><th scope="col">The creature</th><th scope="col">Its container</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Slime and jelly creatures</th><td data-label="Container">A sealed glass tank</td></tr>
+                                    <tr><th scope="row">Swimmers</th><td data-label="Container">A water tank</td></tr>
+                                    <tr><th scope="row">Lava and magma beings</th><td data-label="Container">A stone cube</td></tr>
+                                    <tr><th scope="row">Burrowing critters</th><td data-label="Container">A packed earth box</td></tr>
+                                    <tr><th scope="row">Fliers</th><td data-label="Container">A tall wooden crate</td></tr>
+                                    <tr><th scope="row">Clever, fussy hunters</th><td data-label="Container">A climate-controlled tech pod</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Reading a creature to work out what it needs is half the fun, and the scanner helps. Nothing gets hurt along the way: a stunned creature wakes up groggy and fine.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/aal-collector_3_feature.jpg" alt="Side view of a jungle ledge at dusk: the small explorer hauls a glass tank holding a glowing pink jelly creature toward a little parked rocket, a wooden crate and a glowing stone cube stacked beside it." width="1280" height="720" loading="lazy">
+                            <figcaption>"The pod only holds it for the trip. At the carrier, every creature gets a container that suits it."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/grab-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Cheeky raccoon physics</p>
+                        <h3>Grab it, toss it, haul it</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/07-toss.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Everything loose in the world has a weight and can be picked up, carried, dropped and thrown. A thrown rock presses a switch, knocks fruit loose or lures a predator away; a crate stacked on another crate is a step; an egg dropped from too high breaks.</p>
+                        <p>Weight is the natural limit. Light finds ride overhead, heavy ones take both hands and slow you down, and the heaviest relics need the <strong>shuttle's winch</strong>: hook them underneath and fly them out of the canyon, carefully. Big loads go into the shuttle's hold, and the hold goes up to the carrier.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/footprint-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Collectibles with a job</p>
+                        <h3>Four kinds of find</h3>
+                        <p>The collectibles follow Donkey Kong Country 3's set of four, but each one does something in the world instead of filling a counter:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table finds">
+                                <thead><tr><th scope="col">Find</th><th scope="col">What it's for</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Glint trails</th><td>Small golden crystals strung along the way to a signal, like DKC's bananas. They show the route, and the gaps in a trail show where the route gets interesting.</td></tr>
+                                    <tr><th scope="row">Caches</th><td>Survey caches tucked into the hardest places to reach, or guarded by a big territorial creature. Reaching one is the point; inside are supplies for the workshop.</td></tr>
+                                    <tr><th scope="row">Challenge sites</th><td>Small, self-contained puzzles and obstacle runs, like DKC's bonus rooms. Each one leaves you a short-lived booster: a higher jump, a lighter load, a longer stun.</td></tr>
+                                    <tr><th scope="row">Supercores</th><td>The big, rare finds: alien power cores that boost your kit until they wear out (see below).</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>None of them is a key or a currency. Nothing in the game is locked behind a count of anything.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/colombian-statue-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">One of a kind, every time</p>
+                        <h3>Generated relics</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/08-relic.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Relics aren't drawn by hand. Each one is <strong>assembled from random shapes in a random arrangement</strong>, each shape with its own micro-texture, tint and pattern, so no two are ever alike. A star system's relics share a little of its look, the way finds from one dig site do, so its gallery hangs together.</p>
+                        <p>This is content that multiplies: a few dozen shapes, textures and patterns combine into more relics than anyone could ever collect, and every one you carry home is the only one there is.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/radar-sweep-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Why you go where you go</p>
+                        <h3>Signals and honest guesses</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/09-signals.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The carrier picks up signals from each world: biosigns, heat, radiation, electromagnetic noise, rumbling, odd weather, smoke, a strange smell. Each comes with the intel officer's best guess at what it is and <strong>how sure they are</strong>, from "no idea" to "absolutely certain".</p>
+                        <p>Sometimes the guess is wrong, and there's always a reason you can find on site: the "rare mineral" was a creature that eats rare minerals. Some signals are small chores rather than finds: plant a tracking beacon, scan an anomaly, or give a stuck worker bot a piggyback ride back to its outpost. The bots wave when you help.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dig-hole-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The shared foundation</p>
+                        <h3>A world in one tall slice</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-collector/10-slice.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>As in Terrene, each world is one tile-based room from top to bottom. Space at the top is weightless; gravity fades in through the upper atmosphere; coming down too fast lights up a re-entry glow; below the surface there's water and then caves, down to bedrock you can't break. The edges are solid walls.</p>
+                        <p>Underground areas are generated with several methods mixed together, so worlds don't all feel alike: tile-matching rules and shape grammars for built places, mazes, noise-carved caves, and open chambers linked by tunnels. Soft ground can be dug, and the dirt goes to the nearest outpost's factory instead of vanishing, so you never leave a world full of holes.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/chest-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Power that comes and goes</p>
+                        <h3>Supercores and a gentle hand</h3>
+                        <p>Supercores are alien power cores, rare and usually somewhere awkward. Plugged into your kit, each one does one thing: a stronger winch, a longer stun, a faster shuttle, a lighter step. They stack, and they <strong>wear down with use</strong> until they crumble, so your kit keeps changing shape. At most ten come along to the next star system.</p>
+                        <p>The worlds were handed over in good shape, and the game asks you to leave them that way: ruins, nests and old growth are worth more intact. That's natural, not a rule with a penalty. A relic dropped down a shaft arrives home chipped, and the gallery shows the chip. A nest you stomped through is a nest whose creatures have fled.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/ecology-delapouite.png)"></span>Trivia</h2>
+            <h3>Three games from one notebook</h3>
+            <p>Reactorcore played Terrene, a pixel-art planet explorer, liked its world of tall planet slices, and kept wanting it to be something else. The result was one long design for a planetary explorer, the Inspector, that tried to be everything at once, and then three remixes that each took one part of it and went all the way: this gentle collectathon, the all-out assault of <a href="aal-exterminator.html">AAL Exterminator</a>, and the hands-only survival race of <a href="aal-voyager.html">AAL Voyager</a>. They share the same world tech and very little else.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/aal-collector_4_boxart.jpg" alt="Box art: the small explorer swings on a vine high above a layered alien jungle, cute round creatures peeking from the leaves, a ringed planet in the sky." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">From the Bioarchive, with thanks</p>
+                <h2 id="sendoff">AAL Collector: Reach, Capture, Recover</h2>
+                <p>Dear collector, a new star system is on the map. We'd like a sample of everything that lives there, a look at everything left behind, and anything at all that glints.</p>
+                <p>Take the shuttle. Follow the trail. Carry it carefully, and bring the little ones home in something they'll like.</p>
+                <p><strong>Everything you bring back gets a place in the gallery.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Terrene, Donkey Kong Country 3, Subnautica, Super Metroid and Metroid Fusion</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Fragile Bombers (CC0), Expletus Sans, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

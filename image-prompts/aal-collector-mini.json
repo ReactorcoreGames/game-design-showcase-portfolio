@@ -1,0 +1,20 @@
+{
+  "slug": "aal-collector-mini",
+  "out": "site/projects/mini/aal-collector",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "03 Style - Graphite Watercolor",
+  "lead": "Soft watercolor illustration, lush alien jungle, leaf green and honey gold light. ",
+  "images": [
+    {"n": 1, "name": "after", "ratio": "3:2", "prompt": "A quiet alien world after a war, small white outpost towers among wild jungle and old ruins"},
+    {"n": 2, "name": "bioarchive", "ratio": "3:2", "prompt": "A colossal white research ship cataloguing life, habitat domes full of plants and creatures"},
+    {"n": 3, "name": "signal", "ratio": "3:2", "prompt": "A small explorer following a trail of glinting golden crystals through a jungle cave"},
+    {"n": 4, "name": "system", "ratio": "3:2", "prompt": "A star map of several colorful planets and moons, a little ship parked in orbit"},
+    {"n": 5, "name": "gallery", "ratio": "3:2", "prompt": "A museum gallery of strange colorful alien relics on pedestals, soft light"},
+    {"n": 6, "name": "session", "ratio": "3:2", "prompt": "A cozy spaceship cabin with crates of jungle finds and a window onto a green planet"},
+    {"n": 7, "name": "toss", "ratio": "3:2", "prompt": "A small explorer tossing a round rock toward a stone switch in a jungle"},
+    {"n": 8, "name": "relic", "ratio": "3:2", "prompt": "A strange relic made of mismatched stacked shapes, each with its own pattern and color"},
+    {"n": 9, "name": "signals", "ratio": "3:2", "prompt": "A glowing radar screen over a jungle world, colored signal blips among the trees"},
+    {"n": 10, "name": "slice", "ratio": "3:2", "prompt": "A cross-section of a planet from sky to deep caves, layers of jungle, water and rock"}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "aal-collector",
+  "preset": "08 Games - Donkey Kong Country (Platformer/2D Sprite)",
+  "style": "Palette of deep jungle greens and fresh leaf green with warm honey-gold highlights and soft cream light, cheerful and calm, no enemies attacking.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide side-view scene of a lush layered alien jungle with giant curling ferns, glowing mushrooms and hanging vines, a huge pale moon in a hazy sky. On a mossy stone ledge on the right stands a small human explorer in a rounded olive-green field suit with a big round amber-tinted visor helmet and a chunky backpack, holding up a glowing golden relic made of odd stacked shapes. A trail of small glinting golden crystals leads from the ledge down into a dark cave mouth. Behind the explorer a small stubby white rocket shuttle is parked on the ledge. The lower left of the picture is soft dark jungle foliage."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side-view platformer scene inside a glowing jungle cave with mossy stone platforms over a shallow pool. A small human explorer in a rounded olive-green field suit with a big round amber-tinted visor helmet and a chunky backpack hops between platforms, carrying a round fluffy sleepy-looking alien critter with big closed eyes held above their head with both hands. A line of small glinting golden crystals floats along the path ahead. Pale floating jellyfish-like creatures drift near the cave ceiling, hanging roots and glowing fungi everywhere."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Side-view scene on a jungle cliff ledge at dusk. A small human explorer in a rounded olive-green field suit with a big round amber-tinted visor helmet and a chunky backpack pushes a big glass tank on little wheels; inside the tank floats a glowing pink round jelly creature with a happy face. Ahead on the ledge stands a small stubby white rocket shuttle with its cargo hatch open. Beside the shuttle are stacked a wooden crate with small round holes and a grey stone cube with orange light glowing through its cracks. Vines and giant leaves frame the scene."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover. In the middle, a small human explorer in a rounded olive-green field suit with a big round amber-tinted visor helmet and a chunky backpack swings on a long jungle vine high above a deep layered alien jungle, one arm reaching out. Cute round alien creatures with big eyes peek out from giant leaves around them, and golden crystals glint along the vines. The top third of the picture is open bright sky with a huge ringed planet, with room for a title."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Very wide zoomed-out side-view landscape of a wild alien jungle world with rolling green hills, waterfalls and giant trees. High in the hazy sky floats an enormous long white research starship with rows of glowing windows and green-lit domes. Below it, on a hill, a small tidy automated outpost of white towers, antennas and a little factory with a few small boxy worker robots. A tiny rocket flies up from the outpost toward the ship."
+    }
+  ]
+}

@@ -48,18 +48,18 @@ FONTS = [
     ("Radio Stars.otf", "radio-stars.woff2", None, None),                   # CC0, AAL-Stealth-Sector, cyberdungeon, starforge-legion
     ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector
     ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon, colossal_devastators, hellsweep-infinite
-    ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon, thermonuclear-berserker
+    ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon, thermonuclear-berserker, aal-exterminator
     ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice, god-tier-tantrum
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
     ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer
     ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace, smash-droids
     ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron
     ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron, bunkership, roomspace
-    ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount, Underground Brawl, lattice-walker
+    ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount, Underground Brawl, lattice-walker, aal-exterminator
     ("ShareTechMono-Regular.ttf", "share-tech-mono.woff2", None, None),     # SIL OFL, Custom Dismount, greensteelcommander, lockbreaker
     ("Hydrogen Whiskey.otf", "hydrogen-whiskey.woff2", None, None),         # CC0, EradicationWars, RussiBiomonster, unhinged_lander_heist_scifi
-    ("Aldrich-Regular.ttf", "aldrich.woff2", None, None),                   # SIL OFL, EradicationWars
-    ("Fragile Bombers.otf", "fragile-bombers.woff2", None, None),           # CC0, Halberd_Suit_Wars, Skullhead
+    ("Aldrich-Regular.ttf", "aldrich.woff2", None, None),                   # SIL OFL, EradicationWars, aal-voyager
+    ("Fragile Bombers.otf", "fragile-bombers.woff2", None, None),           # CC0, Halberd_Suit_Wars, Skullhead, aal-collector
     ("Iceland-Regular.ttf", "iceland.woff2", None, None),                   # SIL OFL, Halberd_Suit_Wars, lattice-walker
     ("ExpletusSans-Bold.ttf", "expletus-sans-bold.woff2", None, None),      # SIL OFL, HazardMissionTeam (2)
     ("MatrixTypeDisplay-Bold.ttf", "matrixtype-display-bold.woff2", None, None),  # CC0, Justice Will Glass Them, lockbreaker
@@ -71,7 +71,7 @@ FONTS = [
     ("Skateblade-RegularItalic.ttf", "skateblade-italic.woff2", None, None),  # SIL OFL, Mosh_Pit_Mayhem (with Anklepants)
     ("Zeroes Two.otf", "zeroes-two.woff2", None, None),                     # CC0, MutantLoveQuest, unhinged_lander_heist_scifi
     ("ExpletusSans-Medium.ttf", "expletus-sans-medium.woff2", None, None),  # SIL OFL, MutantLoveQuest
-    ("Skateblade-Regular.ttf", "skateblade.woff2", None, None),             # SIL OFL, Planetary Ring Miner, kickblade
+    ("Skateblade-Regular.ttf", "skateblade.woff2", None, None),             # SIL OFL, Planetary Ring Miner, kickblade, aal-voyager
     ("exo.regular.otf", "exo-regular.woff2", None, None),                   # SIL OFL, Planetary Ring Miner
     ("World of Water.otf", "world-of-water.woff2", None, None),             # CC0, Poo Storm Janitor Powersuit
     ("Exo2.0-ExtraBoldItalic.otf", "exo2-extrabold-italic.woff2", None, None),  # SIL OFL, Poo Storm Janitor Powersuit
@@ -92,6 +92,7 @@ FONTS = [
     ("Exo2.0-Bold.otf", "exo2-bold.woff2", None, None),                     # SIL OFL, starforge-legion
     ("Exo2.0-Medium.otf", "exo2-medium.woff2", None, None),                 # SIL OFL, thunderstrike-justice
     ("ExpletusSans-MediumItalic.ttf", "expletus-sans-medium-italic.woff2", None, None),  # SIL OFL, vectorthunder
+    ("ExpletusSans-Regular.ttf", "expletus-sans-regular.woff2", None, None),  # SIL OFL, aal-collector
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 

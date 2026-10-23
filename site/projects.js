@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "aal-collector.html", prefix: "aal-collector",
+    title: "AAL Collector", subtitle: "Reach, Capture, Recover",
+    icon: "raccoon-head-delapouite", tint: "green",
+    blurb: "A chill collectathon across generated star systems: follow glinting trails, reach the unreachable, stun and capture alien creatures in containers that suit them, and haul one-of-a-kind relics home to a gallery that keeps growing.",
+    genres: ["action", "sandbox"], tags: ["collectathon", "exploration", "creature capture", "platformer"],
+    universe: "aal", status: "concept", added: "2026-10-23"
+  },
+  {
     page: "lockbreaker.html", prefix: "lockbreaker",
     title: "Lockbreaker", subtitle: "Endless Metroidvania Expedition",
     icon: "key-lock-delapouite", tint: "green",
