@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoomSpace: Terrarium Ragdoll Universe</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a persistent 2D side-view universe built from thousands of terrarium-like rooms, each with its own climate, where everyone is a floppy physics ragdoll who can fly. Rooms add up to planets and galaxies, matter is never created or destroyed, and a campaign generator tells a new story in the same universe every time.">
+    <meta name="keywords" content="game design concept, ragdoll physics, 2D sandbox, procedural universe, persistent world, terrarium, side view, mothership, infinite campaign generator, Floppy Heroes inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/roomspace.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="RoomSpace: Terrarium Ragdoll Universe">
+    <meta property="og:description" content="A game design concept: a universe of terrarium rooms full of flying physics ragdolls, where every room has its own climate and nothing is ever lost, only changed. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/roomspace.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/roomspace_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: floppy ragdoll fighters tumble through the air of a half-flooded cave room">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="RoomSpace: Terrarium Ragdoll Universe">
+    <meta name="twitter:description" content="A game design concept: a universe of terrarium rooms full of flying physics ragdolls, where nothing is ever lost, only changed.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/roomspace_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "RoomSpace: Terrarium Ragdoll Universe",
+        "description": "A game design concept, not a released game: a persistent 2D side-view universe of terrarium-like rooms with local climates, populated by flying physics ragdolls, generated from the distribution of matter, with an infinite campaign generator running in the same universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Sandbox", "Action", "Physics"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/roomspace.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/roomspace_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0a1513">
+
+    <link rel="preload" href="../fonts/jersey-10.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* RoomSpace: aquarium jade and moss lime over deep terrarium teal, with pale lichen for
+           highlights, like light through the glass of a tank. Jersey 10 for the title and headings
+           (the game is pixel art), Electrolize for the subtitle and kickers. */
+        @font-face { font-family: "Jersey 10"; src: url("../fonts/jersey-10.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Electrolize"; src: url("../fonts/electrolize.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0a1513;
+            --flow-2: #10392f;
+            --grid-minor: rgba(160, 255, 210, 0.045);
+            --grid-major: rgba(160, 255, 210, 0.10);
+            --p-ground: rgba(11, 21, 19, 0.95);
+            --p-panel: #12221e;
+            --p-1: #4fe3b0;
+            --p-2: #c4e86a;
+            --p-3: #e9f6e1;
+            --p-text: #d6e5dc;
+            --p-dim: #9db5a9;
+            --p-line: rgba(160, 255, 210, 0.15);
+            --font-title: "Jersey 10", "Segoe UI", sans-serif;
+            --font-sub: "Electrolize", "Segoe UI", sans-serif;
+            --shade: #06100e;
+        }
+
+        /* Title effect, "tank light": a soft jade glow drifts up through the letters and fades, like
+           light rippling through aquarium water, over layered dark shadows so the title stays
+           legible at the dimmest frame. */
+        .p-name {
+            font-size: clamp(3rem, 1.6rem + 6.4vw, 7.4rem);
+            letter-spacing: 0.04em;
+            animation: tank 7s ease-in-out infinite;
+        }
+        @keyframes tank {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 10px 40px rgba(79, 227, 176, 0.18); }
+            40% { color: #f6fff1; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 -4px 18px rgba(79, 227, 176, 0.75), 0 -10px 34px rgba(196, 232, 106, 0.35); }
+            60% { color: #f6fff1; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 -8px 22px rgba(79, 227, 176, 0.6), 0 -16px 40px rgba(196, 232, 106, 0.3); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: tank-line 7s ease-in-out infinite;
+        }
+        @keyframes tank-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(79, 227, 176, 0.3); opacity: 0.7; }
+            50% { box-shadow: 0 0 14px rgba(79, 227, 176, 0.9), 0 0 28px rgba(196, 232, 106, 0.45); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 7s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(79, 227, 176, 0.65); } }
+        h2, h3 { letter-spacing: 0.04em; }
+        h2 { font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.5rem); }
+        .p-layer h3, .p-feature h3 { font-size: clamp(1.35rem, 1.2rem + 0.8vw, 1.8rem); }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .p-nest > div > div > div > div > div { --c: var(--p-3); }
+        .modes td:nth-of-type(1) { width: 62%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1.05rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/roomspace_1_title.jpg" alt="Pixel art: a riveted metal-framed glass room floats in deep space like a terrarium, a ringed planet and a teal nebula behind it. Inside, a ragdoll astronaut in a white and teal suit drifts with a rifle among floating mossy boulders, small plants and a tumbling crate." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">RoomSpace</span><span class="p-sub">Terrarium Ragdoll Universe</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/aquarium-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">RoomSpace is a 2D side-view universe built out of thousands of rooms. Each room is a little terrarium with its own climate: its own gravity, air, water, heat, light and materials. Everyone in it, you included, is a floppy physics ragdoll who can push against gravity and fly anywhere in the room, like a fish in an aquarium.</p>
+            <p>Rooms connect through doors in their walls, the way Super Metroid's rooms do, and they influence each other: water, heat and gas seep from one into the next. Rooms add up to planets, planets to star systems, and those to galaxies and a universe, all generated from how matter was spread out, never from biome templates. Matter is never created or destroyed in RoomSpace, only transformed, so a desert you flood stays flooded and a forest you burn stays ash until something grows back.</p>
+            <p>Moment to moment it's a physics combat and tinkering game: grab anything, throw it, rip it, fly into it at full speed. Around that, a campaign generator tells a new story in the same persistent universe every time, and what happened in the last campaign is still there in the next. It grew out of Floppy Heroes, a small ragdoll gladiator game, and the mobile headquarters motherships of Mobile Suit Gundam.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love <strong>physics toys and open worlds</strong>: Cortex Command, Terraria, Starbound, Minecraft, No Man's Sky. People who have reached the end of one of those and found the world frozen behind them, or the story running down a funnel the rest of the game never needed.</p>
+                    <p>They want to <strong>play with a world, not watch one</strong>, and to come back to it for years.</p>
+                    <p>Mouse and keyboard. The basics are only WASD and two buttons; the extra keys (limb selection, flipping items, tearing) are there for players who want finer control.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play, movement and silliness:</strong> the tactile joy of a floppy body that does unexpected things.</p>
+                    <p><strong>Freedom and power:</strong> fly anywhere, grab anything, reshape a room, a planet, a region.</p>
+                    <p><strong>Variety and understanding:</strong> a universe whose every place has a reason for being the way it is, and that reason can be found.</p>
+                    <p><strong>Meaning:</strong> what you did stays done. The design's own words: make memories.</p>
+                    <p>It avoids draining <strong>autonomy</strong> (no scripted bottleneck) and <strong>rest</strong> (stop anywhere; only one room is ever running).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/cubes-lorc.png)"></span>Core concept</h3>
+                    <p>Even the most open sandbox worlds usually end in <strong>a finite scripted story</strong>: a final boss, credits, and a world that either freezes or has to be thrown away for a new one.</p>
+                    <p>RoomSpace turns that around. The universe is the platform and the story is yours: <strong>each campaign has a beginning, middle and end</strong>, generated in the same universe, and its outcomes carry over into the next.</p>
+                    <p>Places are built from forces and materials, so the universe never runs out of situations to put a ragdoll in.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/roomspace_5_story.jpg" alt="Pixel art cross-section of a bowl-shaped planet seen from the side: a forested surface under a band of clouds and stars, brown caverns with small lit rooms set into them, an underground sea, a red mantle, and a blazing core at the bottom where a shaft from the surface ends." width="1280" height="720" loading="lazy">
+            <figcaption>"A planet is a cup of rooms: orbit at the rim, a core at the bottom, and every layer of sky, ground and sea in between."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/planet-core-delapouite.png)"></span>Lore and story</h2>
+            <p>RoomSpace has no single fixed story, on purpose. It has a universe with natural laws, and every campaign is a story told inside it. What stays the same is the shape of the place.</p>
+
+            <h3>A universe of rooms</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/roomspace/01-rooms.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The universe is a grid of <strong>nodes</strong>, each about a hundred cubic kilometres of space, rock, sea or sky. At the heart of each node is its <strong>core room</strong>, the place you actually play in: between 9 and 30 metres across, with a door on each side. A room stands for the remarkable spot in a much bigger area, the way a single screen in an old adventure game stands for a whole forest. The rest of the node is its atmosphere and a reserve of matter, seen through the room's walls in the background.</p>
+            <p>Doors are airlocked and the real distance between two rooms can be huge, so the rooms themselves never bleed into each other. Their atmospheres do.</p>
+
+            <h3>Cup worlds</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/roomspace/02-cupworld.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>In side view, a planet is a <strong>cup world</strong>: a cup of rooms that descends from orbit through the high atmosphere, the clouds, the surface, the underground or the sea, and the mantle, down to a <strong>core room</strong> at the bottom. The surface row loops around the planet, and shafts branch down from it to meet at the core.</p>
+            <p>The core decides what kind of planet it is: whether it attracts or repels certain materials, how strong its gravity is and which way it points, how often it sends quakes up through the rock. Cups come in many shapes, from narrow wells and wide bowls to multi-lobed worlds with a core in each lobe. There are even <strong>Aethers</strong>, negative-mass cups that open downward with their core at the top, and pocket worlds, where a core has sunk into space like a weight on a rubber sheet.</p>
+            <p>Out in space, the grid is seen from above, split into regions, star systems, galaxies and superclusters.</p>
+
+            <h3>The shape of everything</h3>
+            <p>The universe holds 131,072 rooms, nested like this:</p>
+            <div class="p-nest" aria-label="The universe, outermost first">
+                <div><span>The universe</span><small>Sixteen universe quadrants.</small>
+                    <div><span>A universe quadrant</span><small>Sixteen galaxy quadrants.</small>
+                        <div><span>A galaxy quadrant</span><small>Sixteen star cluster quadrants.</small>
+                            <div><span>A star cluster quadrant</span><small>Thirty-two places: planets, stations, ships or stretches of local space.</small>
+                                <div><span>A room</span><small>One node's core room, 9 to 30 metres across, where the ragdolls are.</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Only the rooms you actually visit need to be filled in, so the universe can grow later by adding quadrants without changing a single room.</p>
+
+            <h3>Already in motion</h3>
+            <p>The universe doesn't start at zero. Its matter was spread out by several big bangs, gathered into galaxies, stars and planetary cores, and along the way people built <strong>districts</strong>: buildings, caves, fortresses and ships, anchored into the nodes they stand in. Some of those districts have since launched and flown off as ships, leaving bare docking struts behind. Bangs and crunches are a normal part of a region's life, so somewhere a sector is always being born and another is collapsing.</p>
+
+            <h3>Your goal right now</h3>
+            <p>That depends on the campaign. You might be building up a people against hostile factions, chasing a legend as a hero who keeps coming back, terraforming dead worlds into gardens, or hunting something that shouldn't exist. Whatever it is, it has a clear end, and the universe will still be there afterwards with your mark on it.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You don't walk your character around; you push its body. WASD applies force to the torso in eight directions, and the arms and legs flop along behind it. The hands reach toward the mouse pointer, and pointing a hand or a held item somewhere also nudges the whole body that way, so aiming and moving blend into one floaty motion.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Body</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Push your body in any of eight directions, against any gravity</dd></div>
+                        <div><dt>Shift</dt><dd>Dash: boost and turn your whole body into a weapon</dd></div>
+                        <div><dt>Shift on a wall</dt><dd>Hold to charge a push-off; leave the wall and it fires you the other way</dd></div>
+                        <div><dt>W / S lying</dt><dd>Hold W to stand up; hold S to slump, tap to crouch, double-tap to go limp</dd></div>
+                        <div><dt>F</dt><dd>Mirror turn: face the other way, the limbs catch up</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Hands</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>The hands reach toward the pointer</dd></div>
+                        <div><dt>Left click</dt><dd>Grab, use, fire; hold to crush or to pull</dd></div>
+                        <div><dt>Right click</dt><dd>Aim, reach and rotate the torso; swing to add speed to a throw</dd></div>
+                        <div><dt>Q</dt><dd>Hold to pull your hands apart: tear whatever they're holding</dd></div>
+                        <div><dt>T</dt><dd>Tap to drop, tap while swinging to toss, hold to charge a throw</dd></div>
+                        <div><dt>X</dt><dd>Flip a held item 90°, double-tap for 180°</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Gear</h3>
+                    <dl>
+                        <div><dt>Tab</dt><dd>Hold for the radial menu: reload, previous or next set, empty your hands; keep holding for stats</dd></div>
+                        <div><dt>R</dt><dd>Reload or cycle</dd></div>
+                        <div><dt>C</dt><dd>Limb selection: pick which hand acts</dd></div>
+                        <div><dt>V</dt><dd>Hands together on one item, or each on its own</dd></div>
+                        <div><dt>Z</dt><dd>Switch a hand off, so it stays put</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>View and travel</h3>
+                    <dl>
+                        <div><dt>Wheel</dt><dd>Zoom from 25% to 600%</dd></div>
+                        <div><dt>Right click</dt><dd>Hold toward a screen edge to pan the camera</dd></div>
+                        <div><dt>E + direction</dt><dd>Warp out through an exit, in rooms that allow it</dd></div>
+                        <div><dt>Esc</dt><dd>Pause: the camera freezes and a ghost cursor marks your aim</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The <strong>radial menu</strong> opens around your character and its layout is chosen for panic: on foot, reload is on top and "empty your hands" at the bottom; in a vehicle the two swap, so a frantic press right after bailing out never throws away your gear. Holding it a little longer shows what you carry, each item's ammunition and health, and your own condition. Everything stays usable during a mirror turn, and a turn can be cancelled halfway.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/roomspace_2_vignette.jpg" alt="Pixel art: three ragdoll adventurers in leather and scrap armor tumble through the air of a mossy cave above glowing green water full of bubbles and fish, a sword spinning loose between them, a heavy metal door in the right wall." width="1280" height="720" loading="lazy">
+            <figcaption>"Bumping into a wall never hurts. Damage only happens when it's meant: a dash, a swing, a charged throw, a shot."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/puppet-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One room, one situation</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/roomspace/03-room-fight.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>You float into a room and it's a situation: up to sixteen characters, the items lying around, the terrain, the climate. A flooded cave with two scavengers fighting over a crate. A zero-gravity hangar where everything drifts. A desert surface where the heat is cooking your rifle.</p>
+                        <p>You deal with it with your body and whatever is in reach: grab a rock and throw it, rip the gun out of someone's hands, dash through a crowd, cut a hole in the terrain, open a vent and let the room flood. The physics does the rest, often in ways nobody planned.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/doorway-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A generated campaign</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/roomspace/04-campaign.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is a story with a <strong>clear beginning, middle and end</strong>, generated in the universe you already know, using old places and new ones, old foes and new. It might stay inside one room complex, cross one cup world, or reach across a whole sector.</p>
+                        <p>Its job can be anything the design's catalogue holds: clear pests out of a station with as little damage as possible, reduce a fortress to fine rubble, hunt a monster, infiltrate a megastructure, explore and help people Knytt-style, seed a barren world. Living side events from the rest of the universe can surprise it, sidetrack it or twist it on the way.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The universe and your trail through it</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/roomspace/05-trail.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The universe is the infinite part. When a campaign ends, the generator writes a new one in the same place, and <strong>everything you did carries over</strong>: the rooms you terraformed, the districts you launched or emptied, the people who now like or hate you.</p>
+                        <p>The design's focus here is "make memories, focus on the past, not the future". The game documents your trail of victories, destruction and change, and celebrates or mourns it with you. Even the camera follows the idea, drifting toward where you've been rather than where you're going. A mothership of your own (see Features) is the home you carry with you between campaigns.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A free Sunday</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/roomspace/06-sunday.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The design compares a session to waking up on a free Sunday and deciding what kind of day it'll be: relaxing, exciting, adventuring, working, or just pondering. Where you travel decides what kind of play you get.</p>
+                        <p>Every door is a natural place to stop. Only the room you're in is running, so the game can save the moment you quit and pick up in that same room, mid-campaign, whenever you return. Nothing in the universe moves on without you.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/world-lorc.png)"></span>Game modes</h2>
+            <p>RoomSpace is a platform first, so its "modes" are ways of framing the same universe. The design leaves open whether each becomes a separate game or whether they all live together in one <strong>omni-game</strong>, an infinite campaign generator in one seamless universe, where the mode is simply whatever kind of campaign you're on.</p>
+            <div class="p-table-wrap">
+                <table class="p-table modes">
+                    <thead><tr><th scope="col">Framing</th><th scope="col">What you do</th><th scope="col">Who you are</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Conquest</th><td data-label="What you do">Build up your people and fight hostile factions on the ground, in the air and in space until every threat is gone</td><td data-label="Who you are">An exchangeable hero: when one falls, another of your people carries on</td></tr>
+                        <tr><th scope="row">Adventure</th><td data-label="What you do">Chase grand achievements across the universe</td><td data-label="Who you are">A hero who reincarnates after every death</td></tr>
+                        <tr><th scope="row">Engineer and gardener</th><td data-label="What you do">Terraform and cultivate worlds into a paradise</td><td data-label="Who you are">A builder of climates</td></tr>
+                        <tr><th scope="row">Investigator</th><td data-label="What you do">Uncover the universe's wicked mysteries and face eldritch monstrosities</td><td data-label="Who you are">A bounty hunter and detective</td></tr>
+                        <tr><th scope="row">Spirit Mode</th><td data-label="What you do">Possess ragdoll bodies and tear through rooms of opponents for pure anger relief</td><td data-label="Who you are">An angry spirit with no body of its own</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>Spirit Mode</strong> is the smallest and the loudest. The longer you keep one possessed body alive, the more the spirit warps it, with random mutations, traits, abilities and even allies, until it becomes a kind of demigod; but the warping only works while you're inside, so an abandoned body is weaker than it started. A body that lasts long enough enters a hall of fame with a small screenshot of its last moment, and one that lasts all the way <strong>ascends</strong> to another dimension instead.</p>
+            <p>The same engine also fits three small arena games the design names as a first step: one big room with a hundred targets, a Floppy Heroes-style arena of up to nine fighters a side, and a Hotline Miami-style string of small rooms with a few opponents each.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/atom-core-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jellyfish-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The feel of it</p>
+                        <h3>Fish in an aquarium</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/roomspace/07-flying.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every living or powered thing can resist gravity. A <strong>gravity drive</strong> pushes the torso in any direction, so characters fly through every room whatever its gravity, while the limbs flop along behind with their own weight. The torso rotates freely too. It sits somewhere between a top-down and a side-view game.</p>
+                        <p>A <strong>dash</strong> is a boost that tenses the whole body into a weapon. Press against a wall while holding it and an acceleration charges up; break contact and it fires you off the other way. In gravity, an idle character lies on the floor, can slump or go fully limp, and can even drag itself along the ground by any limb that touches it.</p>
+                        <p>The <strong>mirror turn</strong> flips the torso instantly, but the limbs keep floating where they were and travel back to their sockets in a time set by their size and mass, so a nimble fighter turns crisply and a hulking one swings around like a ship.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/grab-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Anything for anyone</p>
+                        <h3>Hands that take anything</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/roomspace/08-hands.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every character is a <strong>core</strong> with limbs attached: sensors (a head), auxiliary limbs (legs, tails), manipulators (hands, claws), mounted items (a built-in gun) and vehicle interfaces. The same structure covers humans, dogs, worms and spider-walkers. Any working hand can grab almost anything, and <strong>every item works for every character</strong>, player and enemy alike, so each new item multiplies what all the others can do.</p>
+                        <p>A grip holds firmly under light force, slips under medium force and breaks under heavy force, depending on how slippery the hand and the object are. Pull with two hands in opposite directions and you <strong>rip</strong>: tension builds, then damage goes into the joints. Squeeze and you <strong>crush</strong>. Hold the throw key and you charge a throw that hits as hard as its mass, its speed and your strength allow.</p>
+                        <p>Characters store items on their back, against the core, where they add their weight and can't be hit unless they poke out. Lose every hand and the head takes over as an <strong>emergency hand</strong>: it can grab with its mouth, bite and eat, though it can't throw, only spit things out.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/punch-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Honest damage</p>
+                        <h3>It only hurts when it's meant</h3>
+                        <p>Anyone and anything can slam into walls without harm. Damage happens only when an action is active and voluntary: a dash, a swing, a charged throw, a fired shot. Every object, limb or item, has three limits:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Limit</th><th scope="col">What wears it down</th><th scope="col">When it's passed</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Hit points</th><td data-label="Worn down by">Blunt impacts, blades, fire, poison, electricity</td><td data-label="When passed">At zero a limb comes off; far below zero it bursts into pieces</td></tr>
+                                    <tr><th scope="row">Impulse limit</th><td data-label="Worn down by">Crushing, focused pressure, hard force impacts</td><td data-label="When passed">The object bursts</td></tr>
+                                    <tr><th scope="row">Joint strength</th><td data-label="Worn down by">Ripping, dragging, being spun around</td><td data-label="When passed">The joint lets go</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Blunt damage, called <strong>charged kinetic pressure</strong>, adds up speed, mass, charge time and the target's density, and counts the momentum of both sides: dash into someone standing still for a full hit, into someone fleeing at the same speed for none. <strong>Blades</strong> deflect or penetrate, get stuck or cut, and do their damage by how far they travel inside the target. An object that has taken a beating grows brittle and bursts sooner.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/gears-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">One system for every gadget</p>
+                        <h3>Items built from parts</h3>
+                        <p>Every item is assembled from the same few parts: a <strong>body</strong>, a <strong>socket</strong> where a hand snaps on, <strong>weaponized surfaces</strong> that cut or bludgeon, and <strong>emission points</strong> where projectiles, beams or exhaust come out. Every part can be destroyed on its own. A rifle with a bayonet, a rocket hammer, a flail on free joints, a ripsaw and a crossbow are all the same anatomy in different shapes, so modders can build anything without new code.</p>
+                        <p>Every powered item follows one <strong>power chain</strong>:</p>
+                        <ol class="p-chain" aria-label="An item's power chain">
+                            <li><b>Ammo or fuel</b>The reserve</li>
+                            <li><b>Reactor</b>Feeds the charge</li>
+                            <li><b>Capacitor</b>Holds it ready</li>
+                            <li style="--c: var(--p-2)"><b>Launch</b>The shot, the swing, the beam</li>
+                            <li style="--c: var(--p-3)"><b>The tax</b>Recoil, heat and waste</li>
+                        </ol>
+                        <p>All that stored power is <strong>volatility</strong>: the more an item holds, the harder it hits and the worse it goes off when broken. A <strong>safety rating</strong> trades power for containment. Recoil comes out of the same numbers, and a strong enough gun throws your arm back, or you across the room. The ammunition, reactor or capacitor can live in a pack on your back wired to the gun, so a destroyed gun drops the pack safely and a destroyed pack leaves the gun dead.</p>
+                        <p>There's one trigger for everything: press, hold and release cover semi-auto, full-auto, bursts, charge shots and multistage weapons.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/matter-states-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Every room a terrarium</h3>
+                        <p>Each room has a small <strong>interior</strong>, the play space, sitting in the vast <strong>atmosphere</strong> of its node. Every wall panel and door constantly cycles air, liquid and heat between the two, and the room drifts toward its surroundings: a room in a sea node slowly floods, a room in a frozen one cools. Rooms also exchange with their neighbours through shared walls, and whole nodes seep into the nodes beside them.</p>
+                        <p>You can steer it. Wall panels can be <strong>insulated</strong> to slow or stop the flow, unless the outside is fierce enough to break through. The flow is drawn right on the walls as lines whose count, thickness and colour show how much is passing and what: straight for solids, wavy for liquids, zigzag for gas. That's how players turn deserts into forests and back.</p>
+                        <p>Only the room you're in is fully simulated. Every other room is a dormant file, and a background universe process updates them as needed and sets up events, so entering a room can find it changed by what its neighbours did while you were away. A huge universe stays within what an ordinary computer can run.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/roomspace_3_feature.jpg" alt="Pixel art cutaway of a wall of rooms stacked like a shelf of dioramas: icy rooms with icicles, jungle rooms with vines, flooded rooms with fish, a desert with cacti, a cavern lit by lava seams, and one empty room open to black space. Tiny figures float in several of them." width="1280" height="720" loading="lazy">
+                            <figcaption>"Rooms never share their interiors, but their air, water and heat seep through the walls into each other."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/entry-door-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Room to room</p>
+                        <h3>Doors that fold you up</h3>
+                        <p>Characters come in many sizes, and some carry ten-metre beams, so every door uses one standard: to pass, a character and everything it holds fold into a <strong>3×3 metre package</strong>, items and hands on top, feet and inventory below, in a few frames.</p>
+                        <p>It happens on its own. Touch a door's <strong>pack zone</strong> with any body part or held item and you fold; inside the zone is a <strong>commit line</strong>, and until your centre of mass crosses it you can back off and unfold. Once committed, you're carried through, desaturated and untouchable, and you come out the other side with your <strong>momentum and rotation intact</strong>. A chase keeps its speed from room to room.</p>
+                        <p>Loose objects never wander through doors by themselves; they travel only when someone carries them. Exits always match on both sides (air to air, water to water), and some wall compartments are reverse doors that push their contents into a room: a crate of supplies, a flood, a ceiling hatch full of spiders. The matter for those has to come from somewhere.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/tree-growth-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Forces, not templates</p>
+                        <h3>Nothing is lost, only changed</h3>
+                        <p>The generator doesn't place biomes. It starts by spreading all matter through the universe with several big bangs, marks zones from the result, gathers matter into galaxies, systems and planetary cores, and only then renders each node and its room from everything above it. Each level leaves an imprint the next one reads. A room is snowy, swampy or scorched <strong>because of where it is</strong>, and a player who knows the rules can tell why. Under the hood it's a long chain of if-statements.</p>
+                        <p>The universe obeys <strong>equivalent exchange</strong>: matter is never created or destroyed. Terrain comes in chunks that cut along a grid or shatter into loose blobs, and blobs give their liquids and gases back to the room's air. Push enough matter into one chunk and it reaches <strong>critical density</strong>: it burns mass away as heat and radiation and transmutes into heavier elements, and if the cramming outruns that, it collapses into a star, a black hole or a singularity.</p>
+                        <p>Even the game's own safety net follows the law. Anything that ends up outside a wall is pushed back, moved to a free spot, or, as a last resort, turned into a <strong>glitch blast</strong> at the spot it should be, so its matter isn't lost. Room walls are indestructible, but overload one and it breaks out in a Border Glitch Anomaly of random forces, spawns and mutations before sealing itself again, a little weaker.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/brain-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Characters with needs</p>
+                        <h3>Opponents who feel</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/roomspace/09-ai.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The head is the mind: a character with a head thinks, a headless one just repeats a pattern, like a jellyfish. Thinking characters run on <strong>needs, feelings and actions</strong>, after Nonviolent Communication. Circumstances move their needs (safety, success, focus, fun), the needs stir feelings (fear, rage, shock, curiosity, impatience, whimsy), and the feelings choose the next likely action: rush, take cover, keep distance, flee, grab the nearest item, spray and pray. Faces show the state, and stats like bravery, patience and whimsy are rolled per character, so simple rules give very individual behavior.</p>
+                        <p>Everyone forms an <strong>opinion</strong> of everyone in the room: friend or foe, how much of a threat, how much patience is left. Every hit carries its attacker's tag, so victims know exactly who hurt them, and they can tell others: "the player hurt me, they're not our ally any more." Anyone can turn friendly, neutral or hostile toward anyone. Flags like loyal, protect, follow, nemesis, stalker and repulsed shape who sticks to whom.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/spaceship-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The mobile headquarters</p>
+                        <h3>Districts that launch</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/roomspace/10-mothership.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Buildings, caves and fortresses are <strong>districts</strong>: grids of up to sixteen rooms anchored into a node, the node's backbone. Give a district propulsion that suits the medium (vacuum, gas or liquid), convert all of its rooms for travel, and it can <strong>launch</strong> as a mobile district: a freighter, a starship, a floating fortress, a moving base. The node it leaves stands bare until some other ship docks there.</p>
+                        <p>Mobile districts travel node to node, one step north, south, east or west at a time, to a dock point reserved in advance. Every core room has four dock points at its corners; a fifth ship at a node is a <strong>blockade</strong>. Docked ships appear in the room's background, connected by tethers and buoys you can walk through, and a room's air defenses can fire at ships in their own or neighbouring nodes. Boarding actions in ship-to-ship fights are part of it.</p>
+                        <p>A ship can't be blown apart. It can only be <strong>sterilized</strong>: stripped of air, people and systems down to its bare frame. Only <strong>nullware</strong>, the weapon tier above antimatter, can erase one. That's the fantasy the design was written for: a group of people travelling together on an epic adventure in a big machine that is also their home.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/ghost-lorc.png)"></span>Trivia</h2>
+            <p><strong>Strong Opinion Ragdolls</strong> is a campaign idea in the notes. Everyone in the universe gets a random name and belongs to a group with strong opinions about some mundane preference. Each campaign opens with a random character yelling a preference question at you; answering one way makes everyone on the other side furious, and "nothing" comes in polite, indifferent and hostile flavors, all of which make someone angry. If nobody from the offended side is in the first room, a few of them crash through the wall anyway: "I heard you talking like I wouldn't find out!"</p>
+            <p>The design fills two notebooks titled "C2 DEV PROJECT", after Construct 2, the engine first planned for it, plus a spiral notepad of door and room sketches in between. The worst-case room it was budgeted for has sixteen fully armed characters dual-wielding full-auto weapons among fifty destructible rocks, with rain, wind, a gravity well and a flood about to arrive.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/roomspace_4_boxart.jpg" alt="Box art: a ragdoll astronaut in a white and teal suit floats upside down with two rifles drifting beside him, under a huge blocky mothership of lit modules, above a round crater-like pit glowing with a golden core." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">A keeper's welcome</p>
+                <h2 id="sendoff">RoomSpace: Terrarium Ragdoll Universe</h2>
+                <p>Your universe has 131,072 rooms. Each one comes with its own weather, its own gravity, its own residents, and opinions about you that will change.</p>
+                <p>Float in. Grab what's lying around. Flood the cave, cool the desert, throw the crate, launch the fortress and fly it to the next star. When the story ends, another one begins in the same place, and the place remembers.</p>
+                <p><strong>Nothing here is ever lost. It only changes shape.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Floppy Heroes, Super Metroid and the motherships of Mobile Suit Gundam</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Jersey 10, Electrolize, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

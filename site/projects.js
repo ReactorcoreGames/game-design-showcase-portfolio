@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "roomspace.html", prefix: "roomspace",
+    title: "RoomSpace", subtitle: "Terrarium Ragdoll Universe",
+    icon: "aquarium-delapouite", tint: "green",
+    blurb: "A 2D universe of terrarium rooms, each with its own climate, full of flying physics ragdolls who can grab, throw and rip anything. Rooms make planets, matter is never lost, districts launch as motherships, and every campaign's outcome stays in the universe for the next.",
+    genres: ["ragdoll", "physics", "sandbox", "action"], tags: ["persistent universe", "terrarium", "mothership", "procedural campaigns"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "jetboot-resistance.html", prefix: "jetboot-resistance",
     title: "Jetboot Resistance", subtitle: "Ragdoll Liberation Raids",
     icon: "boots-lorc", tint: "red",

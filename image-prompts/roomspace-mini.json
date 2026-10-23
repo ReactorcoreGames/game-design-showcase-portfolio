@@ -1,0 +1,20 @@
+{
+  "slug": "roomspace-mini",
+  "out": "site/projects/mini/roomspace",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - S - Tilt Shift",
+  "lead": "Tilt-shift miniature diorama photograph inside a glass terrarium box, jade green and teal light. ",
+  "images": [
+    {"n": 1, "name": "rooms", "ratio": "3:2", "prompt": "A grid of small glass rooms, each holding a different place: rock, sea, sky, with doors between them"},
+    {"n": 2, "name": "cupworld", "ratio": "3:2", "prompt": "A planet cut open like a cup, layers of sky, ground, sea and a glowing core at the bottom"},
+    {"n": 3, "name": "room-fight", "ratio": "3:2", "prompt": "Little floppy figures floating and tussling over a crate in a flooded cave room"},
+    {"n": 4, "name": "campaign", "ratio": "3:2", "prompt": "A tiny explorer figure floating toward an open doorway into a ruined space station"},
+    {"n": 5, "name": "trail", "ratio": "3:2", "prompt": "A trail of scorch marks, wrecks and new gardens across a row of rooms, seen from above"},
+    {"n": 6, "name": "sunday", "ratio": "3:2", "prompt": "A quiet sunny morning in a cozy little room with plants, an open door to space"},
+    {"n": 7, "name": "flying", "ratio": "3:2", "prompt": "A small figure in a space suit swimming through the air like a fish in an aquarium"},
+    {"n": 8, "name": "hands", "ratio": "3:2", "prompt": "Little figures grabbing and tugging at floating rocks, tools and a heavy crate"},
+    {"n": 9, "name": "ai", "ratio": "3:2", "prompt": "A crowd of small figures with expressive faces, some angry, some curious, some fleeing"},
+    {"n": 10, "name": "mothership", "ratio": "3:2", "prompt": "A blocky mothership of stacked lit modules docked beside a small room in space"}
+  ]
+}

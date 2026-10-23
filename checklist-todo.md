@@ -120,7 +120,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Graviton Singularity Mecha (Momentum Missile Mayhem 2 Redux) (pilot 2)
 - [x] Ragdoll battle royale (PUBG doc), now Jetboot Resistance
 - [-] Planet Warfare (Skip until further notice - I need to prepare for this)
-- [ ] RoomSpace
+- [x] RoomSpace
 - [ ] Shape Smasher
 - [ ] Net Terminal (BLAME!-inspired)
 - [ ] AAL Smash Droids
