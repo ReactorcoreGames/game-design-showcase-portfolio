@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "god-tier-tantrum.html", prefix: "god-tier-tantrum",
+    title: "God Tier Tantrum", subtitle: "Stress Relief Smasher",
+    icon: "fulguro-punch-lorc", tint: "orange",
+    blurb: "An absurdly overpowered, extremely loud hero, a closed room, and something annoying that never fights back. Keep the combo clock going, then smash it through the wall, into a mountain, through the planet or into the sun. Ten rooms, then the villain.",
+    genres: ["action", "arcade"], tags: ["stress relief", "combo", "knockback", "parody"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "smash-droids.html", prefix: "smash-droids",
     title: "AAL Smash Droids", subtitle: "Resonance Knockout Arena",
     icon: "robot-helmet-delapouite", tint: "green",

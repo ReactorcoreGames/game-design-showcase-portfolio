@@ -124,7 +124,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Shape Smasher
 - [x] Net Terminal (BLAME!-inspired), now Lattice Walker
 - [x] AAL Smash Droids
-- [ ] Closed-room smasher (rosebud doc)
+- [x] Closed-room smasher (rosebud doc), now God Tier Tantrum
 - [ ] Soldat Doom Infinite
 - [ ] Space Chunks–inspired blast-em-up
 - [ ] AAL Standalone

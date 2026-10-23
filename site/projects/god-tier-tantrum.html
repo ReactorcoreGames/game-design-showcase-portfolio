@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Tier Tantrum: Stress Relief Smasher</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a closed-room stress-relief toy with platform-fighter controls. Juggle something annoying around the walls, keep the combo going, then smash it through the wall, into a mountain, through the planet or into the sun. Nothing fights back.">
+    <meta name="keywords" content="game design concept, stress relief game, platform fighter controls, combo, knockback, closed room, Super Smash Bros inspired, Nanaca Crash inspired, Flash game parody, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/god-tier-tantrum.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="God Tier Tantrum: Stress Relief Smasher">
+    <meta property="og:description" content="A game design concept: an absurdly overpowered hero, a closed room, and something annoying to smash through the wall and into the sun. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/god-tier-tantrum.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/god-tier-tantrum_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a golden-haired hero juggles a dented robot inside a closed room full of saws and bumpers">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="God Tier Tantrum: Stress Relief Smasher">
+    <meta name="twitter:description" content="A game design concept: an absurdly overpowered hero, a closed room, and something annoying to smash through the wall and into the sun.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/god-tier-tantrum_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "God Tier Tantrum: Stress Relief Smasher",
+        "description": "A game design concept, not a released game: a small stress-relief toy with platform-fighter controls, where an overpowered hero combos harmless victims around closed rooms and smashes them through the walls, across a ten-room gauntlet with a definite ending.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Arcade", "Fighting"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/god-tier-tantrum.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/god-tier-tantrum_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0e0d22">
+
+    <link rel="preload" href="../fonts/anklepants.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* God Tier Tantrum: a blazing golden aura against the Gloom Baron's ultramarine night,
+           with cream for the highlights. Anklepants, as heavy as a finisher, for the title and
+           headings; Exo 2 Black Italic, leaning into the punch, for the subtitle and kickers. */
+        @font-face { font-family: "Anklepants"; src: url("../fonts/anklepants.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Exo 2 Black Italic"; src: url("../fonts/exo2-black-italic.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0e0d22;
+            --flow-2: #2a2552;
+            --grid-minor: rgba(255, 220, 140, 0.04);
+            --grid-major: rgba(255, 220, 140, 0.09);
+            --p-ground: rgba(16, 15, 36, 0.95);
+            --p-panel: #1b1a36;
+            --p-1: #ffc93c;
+            --p-2: #8f9bff;
+            --p-3: #fff6e0;
+            --p-text: #e3e1ee;
+            --p-dim: #aaa7c4;
+            --p-line: rgba(255, 220, 140, 0.16);
+            --font-title: "Anklepants", "Segoe UI", sans-serif;
+            --font-sub: "Exo 2 Black Italic", "Segoe UI", sans-serif;
+            --shade: #07061a;
+        }
+
+        /* Title effect, "power up": the golden aura flares in two quick surges, like a hero
+           screaming his way to the next level, then a big burst, then it simmers down.
+           Layered dark shadows keep it legible at every frame. */
+        .p-name {
+            letter-spacing: 0.02em;
+            animation: power-up 5s ease-in-out infinite;
+        }
+        @keyframes power-up {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 18px rgba(255, 201, 60, 0.2); }
+            30% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 22px rgba(255, 201, 60, 0.55); }
+            36% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 14px rgba(255, 201, 60, 0.3); }
+            50% { color: #fffdf3; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 -6px 18px rgba(255, 201, 60, 0.95), 0 0 40px rgba(255, 201, 60, 0.7); }
+            62% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 24px rgba(255, 201, 60, 0.4); }
+        }
+        .p-sub { text-transform: uppercase; letter-spacing: 0.04em; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: power-line 5s ease-in-out infinite;
+        }
+        @keyframes power-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(143, 155, 255, 0.3); opacity: 0.7; }
+            50% { box-shadow: 0 0 16px rgba(255, 201, 60, 0.95), 0 0 30px rgba(143, 155, 255, 0.6); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 12px rgba(255, 201, 60, 0.75); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.06em; }
+
+        .finish td:first-of-type, .victims td:first-of-type { width: 100%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.95rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/god-tier-tantrum_1_title.jpg" alt="Manga-style art: a huge hero in an indigo armored suit, golden flame-shaped hair and dark sunglasses, wreathed in golden fire, punches a black sports car into a cracking concrete wall in a burst of shockwave." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">God Tier Tantrum</span><span class="p-sub">Stress Relief Smasher</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/fulguro-punch-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/aura-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">God Tier Tantrum is a stress-relief toy with the controls of a platform fighter. You're Omega Blitz, a ridiculously overpowered and extremely loud hero, locked in a room with something annoying. Bounce it off the walls, keep the combo going, and finish it with a hit that sends it through the wall, into a mountain, down through the planet or straight into the sun.</p>
+            <p>Nothing fights back. The victims never threaten you, so there's no way to lose and nothing to dodge. The whole game is the spectacle of the smash: juggling, ricocheting, stacking up damage, and one bombastic finish.</p>
+            <p>It plays like a closed-room Super Smash Bros with a dash of Nanaca Crash and Street Fighter II's car-smashing bonus stage, and its hero is a loving parody of the bootleg anime super-warriors of Newgrounds-era Flash cartoons: loud, explosive and over the top to an excessive degree.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Anyone who's had a bad day and wants to hit something, harmlessly and spectacularly.</p>
+                    <p>They want <strong>release without pressure</strong>: no opponent, no way to fail, no timer to beat, just something satisfying to wreck in a few minutes.</p>
+                    <p>It's played on the keyboard alone, WASD for direction and a few action keys under the right hand, and every move is a direction plus a button. It's easy to pick up, and juggling well is a skill you get better at for its own sake.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Relief:</strong> letting frustration out on things that can't be hurt and can't mind.</p>
+                    <p><strong>Play and silliness:</strong> absurd, loud, over-the-top finishers.</p>
+                    <p><strong>Power:</strong> a hero so strong that the only question is how far it flies.</p>
+                    <p>It deliberately avoids draining <strong>safety</strong> (nothing ever attacks you) and <strong>rest</strong> (a whole run fits in a short break, and there's nothing to grind).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Fighting games make you earn every hit against someone trying to beat you. Stress-relief toys often go the other way and turn into clicker grinds with upgrade trees.</p>
+                    <p>This is neither: <strong>a toy with a definite ending</strong>. Ten rooms of a villain's goons and gadgets, then the villain himself, then the credits. Every run reshuffles the rooms, the victims and the hazards.</p>
+                    <p>You start at full, ridiculous power and stay there. The fun is entirely in the moment: the combo, the bounce, the finish.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/god-tier-tantrum_5_story.jpg" alt="A night city seen from above, huge black domes of shadow sitting over several districts while the rest glows gold, a black craft swooping low over the rooftops under a full moon." width="1280" height="720" loading="lazy">
+            <figcaption>"Every night the Gloom Baron drops his shadow over another neighborhood. Tonight, someone far stronger than him has had enough."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/mountaintop-lorc.png)"></span>Lore and story</h2>
+            <h3>The Gloom Baron</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/01-baron.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A smug cartoon villain who blankets the city in gloom: domes of shadow dropped over one neighborhood after another, night after night, from a silent black craft that skims the rooftops. Under a dome the streetlights die, the music stops, and everybody goes to bed early in a bad mood. He thinks it's hilarious.</p>
+
+            <h3>Omega Blitz</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/02-blitz.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The city's protector is an absurdly overpowered hero with a towering crest of blazing golden hair, dark sunglasses he never takes off, a voice that rattles windows, and no volume control. He's loud, edgy in a way nobody takes seriously, intimidating mostly to furniture, and very, very tired of the dark.</p>
+
+            <h3>Tonight</h3>
+            <p>He has tracked down the Baron's operation. Ten rooms of gloom-bots, gadgets and getaway vehicles stand between him and the man himself, and he isn't going to sneak.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control Omega Blitz in side view, in a single closed room. Every action key does a basic move on its own, and a <strong>power move when you press a direction with it</strong>: up, down, forward or back.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Move, aim the next move's direction, crouch</dd></div>
+                        <div><dt>L</dt><dd>Jump</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Act</h3>
+                    <dl>
+                        <div><dt>H</dt><dd>Attack</dd></div>
+                        <div><dt>J</dt><dd>Special</dd></div>
+                        <div><dt>K</dt><dd>Defend, block or dodge</dd></div>
+                        <div><dt>F</dt><dd>Grab, use, equip, throw or drop</dd></div>
+                        <div><dt>Q</dt><dd>Switch move set</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The design also sketches a mouse-aimed layout for rooms seen from above or in zero gravity: WASD moves in every direction, the mouse sets the facing, the mouse buttons attack, use an alternate move, block and grab, Shift dashes, and the number keys fire swappable abilities.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/god-tier-tantrum_2_vignette.jpg" alt="Inside a concrete room lined with circular saws and round bumpers, the golden-haired hero, drawn twice as if in motion, kicks a boxy grey robot up into the air, crates and debris flying." width="1280" height="720" loading="lazy">
+            <figcaption>"Every hit resets the combo clock, a little shorter each time. Keep it going and the damage keeps multiplying."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/high-punch-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One room, one victim</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/03-room.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A closed room: walls, floor and ceiling, a few active hazards inside it, and nastier ones waiting outside. In it is one victim. You knock it around the walls, juggle it, bounce it off bumpers and through saws, and build the combo until it's ready to break.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dark-squad-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>Ten rooms to the Baron</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/04-gauntlet.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A run is a gauntlet of ten rooms: the Baron's gadgets, vehicles and gloom-bots first, then the Baron himself in the last. Each run draws its rooms, victims and hazards fresh, so the order and the matchups change every time. When the Baron flies, the city's lights come back on and the credits roll.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sunrise-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Nothing more, on purpose</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/05-dawn.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There's no upgrade tree, no currency and no meta-progression to work toward. This is a small toy with a beginning and an end, and the reason to play again is simply that smashing things is fun. Each finished run is a short, complete release, not a step on a ladder.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A coffee break</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/06-coffee.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A room takes a minute or two, and a whole run about as long as a coffee break. Pause anywhere, stop between rooms, and the run waits for you.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span>Game modes</h2>
+            <p><strong>The gauntlet</strong> is the game: ten reshuffled rooms ending with the Baron.</p>
+            <p><strong>A single room</strong> is the toy on its own: pick a room and a victim, and smash for as long as you like, with no gauntlet around it.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/punch-blast-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/empty-hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The engine of it</p>
+                        <h3>The combo clock</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/07-combo.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every hit starts a short window before the victim recovers, and <strong>every hit inside the window resets it, a little shorter each time</strong>. As long as the chain holds, the damage stacks and multiplies, shown as a percentage the way Smash Bros shows it.</p>
+                        <p>The chain ends one of two ways: the windows get too short to keep up with, or the stacked damage passes what the victim can take. Either way, that's the moment for the finisher.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/brick-wall-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Through the wall</h3>
+                        <p>Push the victim's damage high enough and a finishing blow <strong>breaks it through the room's surfaces</strong>. Where it ends up depends on which way you hit it:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table finish">
+                                <thead><tr><th scope="col">Direction</th><th scope="col">What happens</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Sideways</th><td>It flies off and obliterates a mountain on the horizon</td></tr>
+                                    <tr><th scope="row">Down</th><td>It goes clean through the planet and out the other side, or punches a neat little hole that a tombstone pops up to plug</td></tr>
+                                    <tr><th scope="row">Up</th><td>It flies into the sun and goes poof</td></tr>
+                                    <tr><th scope="row">Point blank</th><td>It vaporizes or bursts apart on the spot</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The finish exists for its own sake: a short, loud animation of something annoying going a very long way.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/god-tier-tantrum_3_feature.jpg" alt="A boxy grey robot blasts out through the wall of a small concrete building, streaking across the dusk sky toward a distant mountain whose peak erupts in a huge dust cloud." width="1280" height="720" loading="lazy">
+                            <figcaption>"Hit it up and it goes into the sun. Hit it sideways and the mountain behind the room doesn't survive either."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/target-dummy-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Something to hit</p>
+                        <h3>Victims with personalities</h3>
+                        <p>Each victim moves differently, so each room asks for a different kind of combo:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table victims">
+                                <thead><tr><th scope="col">Victim</th><th scope="col">How it behaves</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">The getaway car</th><td>Like Street Fighter II's bonus car, except it flies all over the room, more mangled with every hit, until it explodes</td></tr>
+                                    <tr><th scope="row">The dummy squad</th><td>A team of flimsy wireframe dummies that go down easily</td></tr>
+                                    <tr><th scope="row">The safe</th><td>A heavy static thing that stays put in the middle of the room</td></tr>
+                                    <tr><th scope="row">The bouncer</th><td>A lightweight thing that ricochets everywhere</td></tr>
+                                    <tr><th scope="row">The anchor</th><td>Something pulled back to the center that resists being moved away</td></tr>
+                                    <tr><th scope="row">The holdout</th><td>Something that has to be pushed back hit by hit until it falls off a ledge, like Super Metroid's Crocomire</td></tr>
+                                    <tr><th scope="row">The stack</th><td>A pile of barrels and crates, all of it at once</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>None of them ever attacks you. They exist to make the room more interesting to smash in, not to make it hard.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/expanded-rays-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Directional everything</p>
+                        <h3>One button, five moves</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/08-moves.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each action key does a basic move alone and a power move with each of the four directions, so a handful of keys makes a full move list without memorizing a single input string.</p>
+                        <p>Under the hood almost every attack is the same simple thing: it <strong>spawns a hitbox, pushes whatever is inside it, pushes you a little too</strong>, adds damage, and starts a short cooldown before the next action. A projectile is the same hitbox flying on its own. Move while you attack and the hitbox slides along with your momentum, so a running swing covers more of the room.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/swap-bag-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Grab a new style</p>
+                        <h3>Move sets you pick up</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/09-items.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Items in the rooms carry move sets, the way Kirby takes on a power from whatever he swallows. Grab one and your attack, special and defend keys do something new. The sets you've picked up stay on Q, Mega Man–style, so you can swap between them whenever you like.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/circular-sawblade-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The room is a weapon</p>
+                        <h3>Hazards inside and out</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/god-tier-tantrum/10-hazards.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Inside the room, the hazards are active ones that push and hurt: saws, beams, bumpers and other things that throw the victim back into play and keep a combo going.</p>
+                        <p>Static hazards like spikes and lava are too dull to bounce things off, so they sit <strong>outside the walls</strong> instead, where they're the landing for a finisher: smash a victim through the wall and straight onto the spikes.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/god-tier-tantrum_4_boxart.jpg" alt="Box art: the hero in his indigo armored suit stands with arms crossed and a wide grin behind dark sunglasses, golden flames roaring around him, a night city with black domes of shadow behind." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Lights out, Baron</p>
+                <h2 id="sendoff">God Tier Tantrum: Stress Relief Smasher</h2>
+                <p>Every night another neighborhood goes dark, and every night the Baron laughs about it. Tonight the city's loudest, strongest and most fed-up hero is coming in through the front door, and the door won't be the only thing that doesn't survive.</p>
+                <p>Ten rooms. Nobody fighting back. Combos until the walls give way.</p>
+                <p><strong>Turn the lights back on. Loudly.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Super Smash Bros, Nanaca Crash, Street Fighter II's bonus stages and the Flash parodies of the Newgrounds era</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Anklepants (CC0), Exo 2, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

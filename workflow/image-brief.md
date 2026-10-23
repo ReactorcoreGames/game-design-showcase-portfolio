@@ -80,6 +80,10 @@ Cartoon people being hurt get flagged even without blood. On Jetboot Resistance 
 
 Klein ignores small anatomical details it finds unusual. A "cyclops with one single large eye" came out with two eyes in the title shot while the box art, a close portrait, got it right. Check faces closely, and when a detail defines the character, frame it close or move that image to Nano Banana.
 
+Heroic figures get flagged even when nothing is violent, probably by the output's nudity check. In batch 10 two box arts with a lone standing hero were flagged, along with every other image of the same hero: a "chunky humanoid robot in glossy white armor" (a smooth glossy body reads as skin) passed only as "a boxy, clearly mechanical robot with a square visor head and bolted armor plates", and a "ridiculously muscular hero in a torn bodysuit" was flagged on every wording and preset tried and went to Nano Banana. Describe figures as fully clothed or plainly mechanical from the first prompt, and keep "torn", "muscular" and "glossy" off people.
+
+Nano Banana doesn't always obey its no-text line: on a 2:3 box art it painted a made-up title in big letters. Manga presets (Murata) add speech-bubble lettering on their own. Small lettering on plain sky can be removed with OpenCV inpainting (`cv2.inpaint`, masking only the strokes) on the finished JPG; note it in the manifest, because a later `finish` overwrites the fix.
+
 Make every alt text describe what was actually generated, not what the prompt asked for.
 
 ## Mini images (SDXL)

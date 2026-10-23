@@ -49,7 +49,7 @@ FONTS = [
     ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector
     ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon, colossal_devastators
     ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon
-    ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice
+    ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice, god-tier-tantrum
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
     ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer
     ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace, smash-droids
@@ -81,7 +81,7 @@ FONTS = [
     ("Zeroes Three.otf", "zeroes-three.woff2", None, None),                 # CC0, Zero Space Robo Derby
     ("Cranberry Gin.otf", "cranberry-gin.woff2", None, None),               # CC0, abyssal_caretaker
     ("ExpletusSans-SemiBoldItalic.ttf", "expletus-sans-semibold-italic.woff2", None, None),  # SIL OFL, abyssal_caretaker
-    ("Exo2.0-BlackItalic.otf", "exo2-black-italic.woff2", None, None),      # SIL OFL, admiralwars, vectorthunder
+    ("Exo2.0-BlackItalic.otf", "exo2-black-italic.woff2", None, None),      # SIL OFL, admiralwars, vectorthunder, god-tier-tantrum
     ("TurretRoad-Regular.ttf", "turret-road.woff2", None, None),            # SIL OFL, admiralwars
     ("MatrixType-Regular.ttf", "matrixtype.woff2", None, None),             # CC0, antigrav_deconstruction
     ("Exo2.0-ExtraBold.otf", "exo2-extrabold.woff2", None, None),           # SIL OFL, astro_industry

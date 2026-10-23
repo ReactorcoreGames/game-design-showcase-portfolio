@@ -1,0 +1,40 @@
+{
+  "slug": "god-tier-tantrum",
+  "preset": "09 Artist - Yusuke Murata (One-Punch Man)",
+  "style": "Full colour. Palette of blazing gold aura light and cream highlights against deep ultramarine and indigo night shadows.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Dynamic low-angle action shot inside a cramped bare concrete room: a big burly hero in a full-length armored indigo jumpsuit with gauntlets, with a towering flame-shaped golden pompadour, dark sunglasses and a crackling golden aura, throws a huge punch into a shiny black sports car, which folds in half and flies toward the cracking wall in a burst of shockwave rings, shattered glass and debris. Dense speed lines. The hero stands on the right; the lower left of the picture is dust and empty floor. No text, lettering or signatures anywhere.",
+      "model": "nano-banana-2-lite"
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Inside a closed square concrete room with spinning circular saw blades and big round bumpers set into the walls: a big burly hero in a full-length armored indigo jumpsuit with gauntlets with a towering flame-shaped golden pompadour, dark sunglasses and a golden aura launches a dented boxy grey robot upward with a rising kick, the robot spinning in mid-air, crates and debris bouncing around the room, impact stars and motion lines. No text, lettering or signatures anywhere.",
+      "model": "nano-banana-2-lite"
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide view of a landscape at dusk: a dented boxy grey robot rockets out of a fresh jagged hole in the wall of a small concrete building on the left, flying across the sky in a long bright streak with a shockwave ring behind it, toward a distant mountain on the right whose peak is exploding into a gigantic dust cloud. From the hole, a golden glow."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover: a big burly hero in a full-length armored indigo jumpsuit with gauntlets with a towering flame-shaped golden pompadour and dark sunglasses stands with arms crossed and a huge confident grin, a roaring golden aura blazing around him and lifting chunks of pavement. Behind him a night city skyline, some districts swallowed by huge domes of black shadow. Empty space at the top of the picture. No text, lettering or signatures anywhere.",
+      "model": "nano-banana-2-lite"
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide view of a big city at night seen from a hilltop: several neighborhoods are covered by enormous smooth domes of pitch-black shadow, their lights dead, while the rest of the city still glows warm gold. A sleek black flying craft glides low over the rooftops, dropping a new dome of darkness over another district. A full moon and stars in a deep indigo sky."
+    }
+  ]
+}

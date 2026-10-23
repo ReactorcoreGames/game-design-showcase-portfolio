@@ -1,0 +1,20 @@
+{
+  "slug": "god-tier-tantrum-mini",
+  "out": "site/projects/mini/god-tier-tantrum",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - F - Extreme",
+  "lead": "Extreme dramatic action photograph, blazing golden light against deep indigo night. ",
+  "images": [
+    {"n": 1, "name": "baron", "ratio": "3:2", "prompt": "A huge dome of black shadow dropped over a city neighborhood at night, streetlights dying"},
+    {"n": 2, "name": "blitz", "ratio": "3:2", "prompt": "A muscular hero silhouette with glowing golden spiky hair shouting on a rooftop"},
+    {"n": 3, "name": "room", "ratio": "3:2", "prompt": "A closed concrete room with saw blades and bumpers on the walls, debris flying"},
+    {"n": 4, "name": "gauntlet", "ratio": "3:2", "prompt": "A long corridor of doors, each one smashed open, golden light pouring out"},
+    {"n": 5, "name": "dawn", "ratio": "3:2", "prompt": "City lights coming back on at dawn after a long dark night"},
+    {"n": 6, "name": "coffee", "ratio": "3:2", "prompt": "A steaming coffee cup on a desk next to a glowing screen showing an explosion"},
+    {"n": 7, "name": "combo", "ratio": "3:2", "prompt": "A boxy robot juggled in mid-air by a rapid flurry of golden glowing punches"},
+    {"n": 8, "name": "moves", "ratio": "3:2", "prompt": "A glowing fist striking in four directions at once, radiating shockwaves"},
+    {"n": 9, "name": "items", "ratio": "3:2", "prompt": "A glowing power-up orb floating in a wrecked room, sparks around it"},
+    {"n": 10, "name": "hazards", "ratio": "3:2", "prompt": "A spinning circular saw blade in a concrete wall throwing sparks"}
+  ]
+}
