@@ -1,0 +1,20 @@
+{
+  "slug": "smash-droids-mini",
+  "out": "site/projects/mini/smash-droids",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - K - Utopian-Hightech",
+  "lead": "High-tech photograph, glossy white lab, graphite and steel, lime-green neon accents. ",
+  "images": [
+    {"n": 1, "name": "frame", "ratio": "3:2", "prompt": "An experimental armored android frame standing in a test bay, engineers around it"},
+    {"n": 2, "name": "arena", "ratio": "3:2", "prompt": "Remote-operated robots fighting on a makeshift stage full of hazards, a crowd watching"},
+    {"n": 3, "name": "bout", "ratio": "3:2", "prompt": "Two robots on floating platforms trading shots, a spark of impact between them"},
+    {"n": 4, "name": "gauntlet", "ratio": "3:2", "prompt": "A row of arena stages lit one after another, a huge champion robot waiting at the end"},
+    {"n": 5, "name": "workshop", "ratio": "3:2", "prompt": "A workshop wall of robot parts, guns and paint, a robot on a workbench being customized"},
+    {"n": 6, "name": "break", "ratio": "3:2", "prompt": "A robot sitting on a crate between fights, a cup of coffee on a console nearby"},
+    {"n": 7, "name": "loadout", "ratio": "3:2", "prompt": "A rack of rifles, swords and hammers next to robot leg and arm modules"},
+    {"n": 8, "name": "ammo", "ratio": "3:2", "prompt": "A glowing ammo crate on an arena floor, spent guns scattered around it"},
+    {"n": 9, "name": "pace", "ratio": "3:2", "prompt": "A robot floating gently in mid-air above a platform, a slow glowing projectile passing by"},
+    {"n": 10, "name": "crates", "ratio": "3:2", "prompt": "Reinforced crates, barrels and glass panes stacked as cover on a bright stage"}
+  ]
+}

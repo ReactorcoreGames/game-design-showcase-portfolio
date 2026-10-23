@@ -123,7 +123,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] RoomSpace
 - [x] Shape Smasher
 - [x] Net Terminal (BLAME!-inspired), now Lattice Walker
-- [ ] AAL Smash Droids
+- [x] AAL Smash Droids
 - [ ] Closed-room smasher (rosebud doc)
 - [ ] Soldat Doom Infinite
 - [ ] Space Chunks–inspired blast-em-up

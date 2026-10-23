@@ -1,0 +1,37 @@
+{
+  "slug": "smash-droids",
+  "preset": "01 Main - 3D High Poly",
+  "style": "Palette of glossy lab white, graphite black and steel grey, with acid lime-green neon glow as the one bright accent.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Dynamic low-angle shot of a floating arena platform in a huge bright test hangar under stage spotlights. On the right, a boxy, clearly mechanical robot fighter with a square visor head, bolted graphite-black armor plates and glowing lime-green seams points a chunky toy-like energy blaster. Further right, a stocky steel-grey robot tumbles backward off the platform edge, a bright lime shockwave ring and a sparkle trail behind it. Floating platforms and crates around. The lower left of the picture is open stage floor and soft light."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side view of a 2D platform fighter arena: several floating metal platforms over a deep glowing pit, wooden crates and glass panes as cover. A chunky humanoid robot in glossy graphite-black armor with glowing lime-green seams crouches behind a crate on the left, holding a chunky toy-like energy blaster. On a higher platform to the right, a stocky steel-grey robot pulls a glowing battery pack out of its own stubby blaster. Spare blasters lying on the platforms and a glowing supply box. Clean readable silhouettes."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide shot above the clouds: a stocky steel-grey humanoid robot flies away at enormous speed toward a distant bright horizon, its armor glowing and vibrating with lime-green energy lines, a long bright streak behind it. In the lower foreground, the edge of a floating arena platform where a huge lime shockwave ring is still expanding from the hit. The robot is small in the sky, like a shooting star."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover: a heroic boxy, clearly mechanical robot fighter with a square visor head, bolted graphite-black armor plates and glowing lime-green seams stands in a confident pose on a floating arena platform, a chunky toy-like energy blaster resting on one shoulder and a big glowing hammer in the other hand. Bright stage spotlights and floating crates behind, a steel-grey robot tumbling away far off in the sky. Empty space at the top of the picture."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide view of an enormous bright research hangar: a white test facility with several floating arena stages suspended at different heights, spinning saw hazards and round bumpers on them, small robots fighting on the far stages. In the foreground, a glass control booth where engineers in white lab coats sit at consoles cheering, screens glowing lime green. Spotlights and gantries overhead."
+    }
+  ]
+}

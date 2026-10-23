@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Smash Droids: Resonance Knockout Arena</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a 2D platform fighter played with guns. Build an android fighter, give it two weapons from a big arsenal, charge rivals' armor with resonance and launch them off the stage, at a calm, tactical pace.">
+    <meta name="keywords" content="game design concept, platform fighter, knockback, gun combat, build your own fighter, Super Smash Bros inspired, Duck Game inspired, Soldat inspired, Robot Wars inspired, AAL universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/smash-droids.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Smash Droids: Resonance Knockout Arena">
+    <meta property="og:description" content="A game design concept: a platform fighter with guns, where androids you build charge each other with resonance until one hit sends them over the horizon. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/smash-droids.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/smash-droids_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: two android fighters trade fire across floating arena platforms">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Smash Droids: Resonance Knockout Arena">
+    <meta name="twitter:description" content="A game design concept: a platform fighter with guns, where androids you build charge each other with resonance until one hit sends them over the horizon.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/smash-droids_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Smash Droids: Resonance Knockout Arena",
+        "description": "A game design concept, not a released game: a 2D platform fighter where custom-built android fighters use guns and melee weapons to charge each other's armor with resonance and knock each other off the stage, against AI opponents through gauntlets and boss hunts. Set in Reactorcore's AAL universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Fighting", "Action", "Platformer"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/smash-droids.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/smash-droids_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0f1012">
+
+    <link rel="preload" href="../fonts/squares-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* AAL Smash Droids: AAL's lab colours, white and black with one neon, here an acid lime for
+           resonance, plus the steel grey of unpowered armor. Squares Bold for the title and
+           headings; Jersey 10, a pixel face for a 32-pixel game, for the subtitle and kickers. */
+        @font-face { font-family: "Squares Bold"; src: url("../fonts/squares-bold.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Jersey 10"; src: url("../fonts/jersey-10.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0f1012;
+            --flow-2: #23282c;
+            --grid-minor: rgba(220, 255, 140, 0.04);
+            --grid-major: rgba(220, 255, 140, 0.09);
+            --p-ground: rgba(16, 17, 19, 0.95);
+            --p-panel: #1a1c1f;
+            --p-1: #c8ff2e;
+            --p-2: #a3b0c2;
+            --p-3: #f5f7f2;
+            --p-text: #dfe2e0;
+            --p-dim: #a5aaad;
+            --p-line: rgba(220, 240, 200, 0.15);
+            --font-title: "Squares Bold", "Segoe UI", sans-serif;
+            --font-sub: "Jersey 10", "Segoe UI", sans-serif;
+            --shade: #08090a;
+        }
+
+        /* Title effect, "resonance": the name hums, a lime glow building in short pulses like
+           armor taking hits, until one big flash and a jolt sideways, the launch, then it settles.
+           Layered dark shadows keep it legible at every frame. Squares Bold is wide, so the title
+           runs smaller than the template's default. */
+        .p-name {
+            font-size: clamp(1.7rem, 0.7rem + 4.4vw, 5rem);
+            letter-spacing: 0.02em;
+            animation: resonance 6s ease-in-out infinite;
+        }
+        @keyframes resonance {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade); }
+            20% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 10px rgba(200, 255, 46, 0.35); }
+            40% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 16px rgba(200, 255, 46, 0.55); }
+            60% { color: #fbffe8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(200, 255, 46, 0.75); }
+            64% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 10px 0 0 rgba(200, 255, 46, 0.7), 22px 0 16px rgba(200, 255, 46, 0.4), 0 0 34px rgba(200, 255, 46, 0.9); }
+            72% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 8px rgba(200, 255, 46, 0.2); }
+        }
+        .p-sub { font-size: clamp(1.4rem, 1rem + 1.9vw, 2.6rem); letter-spacing: 0.08em; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.2rem; height: 3px;
+            background: var(--p-2);
+            animation: resonance-line 6s ease-in-out infinite;
+        }
+        @keyframes resonance-line {
+            0%, 100% { box-shadow: none; opacity: 0.6; }
+            60% { box-shadow: 0 0 10px rgba(200, 255, 46, 0.6); opacity: 0.9; }
+            64% { box-shadow: 0 0 18px rgba(200, 255, 46, 0.95), 0 0 34px rgba(200, 255, 46, 0.5); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 6s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 64% { box-shadow: 0 0 12px rgba(200, 255, 46, 0.7); } }
+        h2 { font-size: clamp(1.25rem, 1rem + 1.2vw, 1.9rem); letter-spacing: 0.02em; }
+        h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 1.15rem; letter-spacing: 0.08em; }
+
+        .hits td:first-of-type, .modes td:first-of-type { width: 64%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.82rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/smash-droids_1_title.jpg" alt="A boxy graphite robot fighter with lime-green glowing seams fires a blaster from the edge of a floating platform in a bright white test hangar, a lime shockwave ring bursting around it and debris flying." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">AAL Smash Droids</span><span class="p-sub">Resonance Knockout Arena</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/robot-helmet-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/android-mask-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">AAL Smash Droids is a 2D platform fighter in the spirit of Super Smash Bros, played with guns. Build an android fighter, give it two weapons from a big arsenal, and knock other androids off the stage once their armor is ringing with enough stored impact.</p>
+            <p>There are no innate superpowers. Fighters are 32-pixel androids with whatever loadout you gave them: rifles, shotguns, swords, hammers, a jump type, a smash punch, a block. Everything else is picked up off the floor. It plays at a comfortable, floaty pace, closer to Soldat or Halo: Combat Evolved than to a twitchy fighting game, so fights are won by positioning, timing and catching an opponent mid-reload.</p>
+            <p>It's inspired by Super Smash Bros, Brawlhalla, Duck Game, Soldat and Robot Wars, and set in Reactorcore's <a href="../aal/">AAL universe</a>.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love the knockback chaos of platform fighters and the gunplay of Duck Game or Soldat, but find fighting games too fast, too combo-heavy or too much about beating another person.</p>
+                    <p>They want <strong>clever, readable fights</strong>: line of sight, cover, a reload to punish, a smash hit landed at the right moment.</p>
+                    <p>Mouse aim and WASD, with weapon handling on the keys nearby. Movement floats and projectiles fly a touch slow, so dodging is about reading the fight, not reflexes.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and silliness:</strong> armored androids blasting off over the horizon at absurd speeds.</p>
+                    <p><strong>Mastery:</strong> positioning, timing, and knowing exactly when an opponent can't shoot back.</p>
+                    <p><strong>Creativity:</strong> building your own fighter, from its body to its jump.</p>
+                    <p>It deliberately avoids draining <strong>equality and connection</strong> (there's no ranked ladder, and the two-player mode is sparring, not a contest) and <strong>rest</strong> (a calm pace, and short bouts with a natural break after each).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Platform fighters usually sell themselves on beating other people, and their characters are fixed sets of moves to memorize.</p>
+                    <p>Here you <strong>build the fighter</strong>, and its moves come from the weapons it holds, which you can drop, throw and swap mid-fight. You fight AI opponents, alone or with a friend beside you, through generated gauntlets and boss hunts.</p>
+                    <p>When two people do face each other, it's <strong>Spar Training</strong>: framed as a dance in which both sides get better, not a tally of who knocked out whom.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/smash-droids_5_story.jpg" alt="A huge bright white test hangar with floating arena stages and small robots fighting on them, engineers cheering at lime-lit consoles in a glass control booth in front." width="1280" height="720" loading="lazy">
+            <figcaption>"Too tough to break, too easy to launch: the frame failed every combat trial and became the best toy in the lab."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/lab-coat-delapouite.png)"></span>Lore and story</h2>
+            <h3>A frame that failed upward</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/01-frame.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>In an Alteisen Arsenal Laboratories test facility, engineers built an experimental armored android frame. Powered up, its armor is close to indestructible, almost comically so, the way Gundam SEED's Phase Shift armor is: hard as anything while it's energized, ordinary light metal the moment the power cuts.</p>
+            <p>The catch is where the energy of every hit goes. The armor doesn't shed it; it <strong>stores it as resonance</strong>, a vibration that builds up in the frame. The more it has absorbed, the less it takes for the next hard hit to release it all at once and send the android flying toward the far horizon.</p>
+
+            <h3>From failure to arena</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/02-arena.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>For combat, that's useless: a frame that picks up charge from anything mildly hazardous can't hold a line. For fun, it's perfect. Someone on the team remembered the old platform fighters, everyone loved the idea, and the frames were repurposed for a battle arena: remote-operated androids fighting on makeshift stages full of hazards, purely to watch them blast off.</p>
+            <p>Nobody is inside. The androids are flown from a booth, and when a fight ends, combat mode powers down and the stored resonance bleeds away safely, so a frame can be patched up for the next bout. This is the AAL universe's Golden Age, when nobody has to work, and an AAL lab has all the time in the world for a ridiculous idea.</p>
+
+            <h3>The arena now</h3>
+            <p>The program has grown: a set of arenas, a stable of house fighters, and a gauntlet anyone can enter with a frame of their own design. The job is simple. Build a fighter, pick its guns, and see how far you can send the others.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control one android directly, with mouse aim as in Soldat. Its weapons are separate sprites held in two floating hands, and each weapon <strong>turns toward the crosshair at its own speed</strong>: a pistol snaps round, a heavy cannon swings slowly, so every gun's handling is part of who it is.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>A / D</dt><dd>Move left and right</dd></div>
+                        <div><dt>W</dt><dd>Jump, in the style your loadout gives</dd></div>
+                        <div><dt>S</dt><dd>Crouch, or drop through a platform</dd></div>
+                        <div><dt>Space</dt><dd>Dash or leap toward the pointer</dd></div>
+                        <div><dt>Ctrl</dt><dd>Sprint</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim; the weapon turns to follow at its own rate</dd></div>
+                        <div><dt>Left click</dt><dd>Fire or swing; empty-handed, try to slap an opponent's gun away</dd></div>
+                        <div><dt>Right click</dt><dd>Smash punch toward the pointer, or block when holding a melee weapon</dd></div>
+                        <div><dt>Shift</dt><dd>Block, in the style your loadout gives</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Weapons</h3>
+                    <dl>
+                        <div><dt>Q</dt><dd>Switch to the other carried weapon</dd></div>
+                        <div><dt>R</dt><dd>Reload</dd></div>
+                        <div><dt>E</dt><dd>Pick up, swap with a weapon on the floor, or interact</dd></div>
+                        <div><dt>F</dt><dd>Throw the weapon in hand</dd></div>
+                        <div><dt>Z</dt><dd>Drop it</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Kit</h3>
+                    <dl>
+                        <div><dt>X</dt><dd>Auxiliary ability</dd></div>
+                        <div><dt>C</dt><dd>Use the consumable item</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Jumps and dashes can be <strong>aimed with the mouse</strong> toward a point instead of always going straight up, which is what makes micro-gravity and reversed-gravity arenas playable. The HUD is a single colour of your choosing, like Fallout 3's.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/smash-droids_2_vignette.jpg" alt="Two chunky graphite robots with lime seams on floating arena platforms: one crouches behind a wooden crate with a blaster, the other aims from a higher ledge, spare blasters lying on the floor." width="1280" height="720" loading="lazy">
+            <figcaption>"A gun mid-reload can't shoot back. That's the moment to close in."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/punch-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A bout</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/03-bout.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Fighters spawn at spawn points on a handcrafted arena, the way they do in Smash Bros or Unreal Tournament, each with the loadout chosen beforehand. Hits build up resonance, smash hits launch, and once a fighter is charged high enough, a smash hit sends it off the screen. Weapons litter the floor, crates break and cover shatters.</p>
+                        <p>Bouts are against AI fighters, alone or with a friend on your side.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dark-squad-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A gauntlet or a hunt</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/04-gauntlet.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A <strong>gauntlet</strong> is a run of random stages that ends with a souped-up final challenger, like a classic platform fighter's single-player run. A <strong>boss hunt</strong> is a chain of linear levels with a house fighter waiting at the end, in the spirit of Robot Wars' house robots, built from modules with randomized equipment, so no two hunts end the same way.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/gears-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The workshop and its scrapbook</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/05-workshop.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Above the runs sits your workshop: the fighters you've built, saved with their loadouts, body packs and paint, ready for any run. Nothing has to be unlocked. <strong>The whole arsenal and every body part is there from the start.</strong></p>
+                        <p>The arenas reshuffle their spawn zones every time, every hunt's house fighter is rebuilt from modules, and every gauntlet rolls a new run of stages, so there's always a fresh one waiting. The workshop also keeps each fighter's history, the gauntlets it finished and the house fighters it sent flying: a scrapbook, not a ranking.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Five minutes or an evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/06-break.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A bout lasts a couple of minutes, a gauntlet or a hunt about a sitting. The end of each stage is a natural place to stop, and the run waits there for you. For a short break, the Weapon Gallery is always open.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/target-dummy-lorc.png)"></span>Game modes</h2>
+            <div class="p-table-wrap">
+                <table class="p-table modes">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What happens</th><th scope="col">With a friend</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Arena Tournament Gauntlet</th><td>Random stages, one after another, up to a souped-up final challenger.</td><td data-label="With a friend">Co-op</td></tr>
+                        <tr><th scope="row">Boss Hunter</th><td>A chain of linear levels with a randomized house fighter at the end.</td><td data-label="With a friend">Co-op</td></tr>
+                        <tr><th scope="row">Weapon Gallery</th><td>A lab for trying any weapon on destructible targets, like Street Fighter II's car-wrecking bonus stage: strip a wreck layer by layer down to its engine block, then knock the block off the stage. There's no timer and no score; it shows you each weapon's numbers instead.</td><td data-label="With a friend">Either way</td></tr>
+                        <tr><th scope="row">Spar Training</th><td>Two players face each other as sparring partners. It's framed as a dance: the shared aim is for both to improve and finish level, not to pile up knockouts.</td><td data-label="With a friend">That's the point</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/static-waves-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/static-waves-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Resonance instead of health</h3>
+                        <p>There's no health bar to empty. <strong>Every hit charges the target's armor with resonance</strong>, and the charge decides how far the next big hit sends it. Hits come in three kinds:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table hits">
+                                <thead><tr><th scope="col">Hit</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Light hit</th><td>Adds resonance, with little or no knockback</td></tr>
+                                    <tr><th scope="row">Smash hit</th><td>Adds a lot of resonance and launches the target; the higher its charge, the further it flies</td></tr>
+                                    <tr><th scope="row">Kill hit</th><td>An impact or crush strong enough to break the frame outright once its integrity is spent</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>A knockout is a fighter launched off the screen, or broken. As in Smash Bros, a fresh fighter can take a smash hit and stay in the fight, while one ringing with charge can be sent over the horizon by a well-timed one. Light hits are how you get there.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/smash-droids_3_feature.jpg" alt="A steel-grey robot streaks away over a sea of clouds trailing lime-green energy, a huge lime shockwave ring spreading from the edge of an arena platform below." width="1280" height="720" loading="lazy">
+                            <figcaption>"A fresh frame shrugs off a smash hit. A frame full of resonance rides it over the horizon."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/battle-gear-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Build your own fighter</p>
+                        <h3>The loadout</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/07-loadout.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Before a fight you choose a primary and a secondary weapon, a reusable or passive auxiliary ability, a consumable item, a jump type (one big double jump, a medium triple jump, a small quadruple jump, or Kirby-style flight), a smash punch and a block type.</p>
+                        <p>A <strong>body pack</strong> sets the frame: lighter and faster, or heavier, tougher and harder-hitting. The trade is honest: <strong>more armor means bigger or more weak points</strong>, because a nimble fighter has to work harder to land its hits, so the heavy one has to give it something to aim for.</p>
+                        <p>Any 32-pixel character sprite can be a fighter, with two floating hands that grip its weapons. Hue-shift the body, tint the hands, and pick your HUD colour.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crossed-pistols-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Guns in a platform fighter</p>
+                        <h3>Two weapons, one in hand</h3>
+                        <p>Each fighter carries <strong>two weapons and uses one at a time</strong>. Switching takes an equip time that depends on the weapon being drawn, so pulling out a heavy cannon is a commitment. Weapons can be dropped, thrown, or swapped for anything lying on the floor, and dedicated melee weapons (swords, hammers and the like) are usually better than the default smash punch in some way.</p>
+                        <p>Disarmed fighters aren't helpless: with both hands empty, the fire button tries to <strong>slap the weapon out of an opponent's hands</strong>, once a second, as in Soldat.</p>
+                        <p>Ranges are stylized so they read inside an arena about a hundred meters across:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Class</th><th scope="col">Range</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Sniper</th><td>About 150 m, further than the arena is wide</td></tr>
+                                    <tr><th scope="row">Long</th><td>About 60 m</td></tr>
+                                    <tr><th scope="row">Medium</th><td>About 30 m</td></tr>
+                                    <tr><th scope="row">Short</th><td>About 10 m</td></tr>
+                                    <tr><th scope="row">Melee</th><td>1 to 3 m</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/reload-gun-barrel-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Scavenge and adapt</p>
+                        <h3>Ammunition and the floor</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/08-ammo.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Ammunition is what lets the most devastating weapons stay devastating without being nerfed into blandness. Every fighter starts with both weapons fully loaded and <strong>no ammo regeneration</strong>. Small and big ammo packs turn up around the arena, each for one type. Run dry and you do what everyone else does: drop the spent gun and grab whatever's nearby.</p>
+                        <p>Spent weapons stay on the level until they're pushed off it, or thrown hard against things often enough to break, or kept safe until you find their ammo. A weapon finishes reloading while it's stashed, and pauses its reload when it's dropped or thrown.</p>
+                        <p>Two other rule sets are there for a change of feel. In <strong>throwaway</strong> rules there are no reloads, more guns spawn, and every gun breaks after enough hits, as in Hotline Miami. In <strong>endless</strong> rules there's no ammo at all, and every weapon is balanced by its refire, reload and pre-fire delays instead.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sands-of-time-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Comfortable, not twitchy</p>
+                        <h3>A pace for thinking</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/09-pace.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Fighters move slowly and float a little, so they're never maddening to hit. Projectiles fly somewhat slower than real ones, so a shot can be read and dodged. Weapons turn to the crosshair at their own rate. And the hitstun, dodge and shield rules are reworked from Smash Bros so that ranged combat never turns into being juggled from across the screen.</p>
+                        <p>All of it points one way: <strong>tactics over reaction speed</strong>. You win with positioning, cover, mobility and timing, by hitting an opponent while they're stuck in a reload or a cooldown, and by not giving them the same chance.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/wooden-crate-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Same stage, new fight</p>
+                        <h3>Arenas with spawn zones</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/smash-droids/10-crates.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Arenas are handcrafted in the spirit of Soldat's maps: corners, curves, hills, obstacles, and colliders that stop only projectiles, to break up lines of sight. Reinforced crates, barrels, boxes, tables and glass make cover that holds until it doesn't.</p>
+                        <p>Every arena has <strong>spawn zones</strong> where weapons, ammo, power-ups and extra hazards turn up differently each time, so a familiar stage still plays as a new fight. Power-ups include medkits, supply packs and short boosts to speed, damage, rate of fire and jump height. Some arenas reverse the gravity, or take most of it away.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/smash-droids_4_boxart.jpg" alt="Box art: a boxy graphite robot fighter with a square visor head and lime-green seams stands on an arena pedestal holding a blaster and a hammer, another robot tumbling through the air behind it." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Now entering the arena</p>
+                <h2 id="sendoff">AAL Smash Droids: Resonance Knockout Arena</h2>
+                <p>The lab built armor that can't be broken, then found out how easily it can be launched. So they built an arena around it.</p>
+                <p>Design a frame. Pick two guns and a jump. Ring your opponent up with light hits, wait for the reload, and land the one that sends them over the horizon. Then patch up, and go again.</p>
+                <p><strong>Charge them up. Send them flying.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Super Smash Bros, Brawlhalla, Duck Game, Soldat and Robot Wars</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Squares Bold, Jersey 10, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

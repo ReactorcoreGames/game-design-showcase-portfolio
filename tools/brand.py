@@ -44,7 +44,7 @@ FONTS = [
     ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships, greensteelcommander
     ("OperationNapalm-Regular.ttf", "operation-napalm.woff2", None, None),  # CC0, AAL-Bunkerships
     ("Zero Hour.otf", "zero-hour.woff2", None, None),                       # CC0, graviton-mayhem
-    ("Squares Bold Free.otf", "squares-bold.woff2", None, None),            # SIL OFL, graviton-mayhem
+    ("Squares Bold Free.otf", "squares-bold.woff2", None, None),            # SIL OFL, graviton-mayhem, smash-droids
     ("Radio Stars.otf", "radio-stars.woff2", None, None),                   # CC0, AAL-Stealth-Sector, cyberdungeon, starforge-legion
     ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector
     ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon, colossal_devastators
@@ -52,7 +52,7 @@ FONTS = [
     ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
     ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer
-    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace
+    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace, smash-droids
     ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron
     ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron, bunkership, roomspace
     ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount, Underground Brawl, lattice-walker

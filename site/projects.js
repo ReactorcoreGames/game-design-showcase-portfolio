@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "smash-droids.html", prefix: "smash-droids",
+    title: "AAL Smash Droids", subtitle: "Resonance Knockout Arena",
+    icon: "robot-helmet-delapouite", tint: "green",
+    blurb: "A platform fighter played with guns: build an android fighter, give it two weapons, charge rivals' armor with resonance and send them over the horizon. A calm, tactical pace, AI opponents, and sparring instead of rankings.",
+    genres: ["action", "arcade", "physics"], tags: ["platform fighter", "knockback", "build your own fighter", "co-op"],
+    universe: "aal", status: "concept", added: "2026-10-23"
+  },
+  {
     page: "lattice-walker.html", prefix: "lattice-walker",
     title: "Lattice Walker", subtitle: "Megastructure Parkour Trek",
     icon: "laser-blast-lorc", tint: "yellow",
