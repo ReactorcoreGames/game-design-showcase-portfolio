@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporal Shift: Time-Bending Real-Time Strategy</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a classic base-building RTS in the spirit of Red Alert 2 and Tiberian Sun, with seamless slow motion down to a full pause, units sent forward in time, reinforcements borrowed from the future, and an AI that plays by exactly the same rules as you.">
+    <meta name="keywords" content="game design concept, real-time strategy, RTS, time travel, slow motion, base building, Red Alert 2 inspired, Tiberian Sun inspired, procedural campaigns, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/temporal-shift.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Temporal Shift: Time-Bending Real-Time Strategy">
+    <meta property="og:description" content="A game design concept: a Red Alert 2-style RTS where you can slow time to a crawl, jump units forward in time and borrow reinforcements from the future, against an AI that never cheats. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/temporal-shift.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/temporal-shift_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a formation of blue and silver tanks advances across a green valley toward an enemy base">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Temporal Shift: Time-Bending Real-Time Strategy">
+    <meta name="twitter:description" content="A game design concept: a Red Alert 2-style RTS with slow motion on demand, units sent forward in time and reinforcements borrowed from the future.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/temporal-shift_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Temporal Shift: Time-Bending Real-Time Strategy",
+        "description": "A game design concept, not a released game: a singleplayer base-building real-time strategy game where the player can slow time seamlessly down to a pause, send units forward in time to reappear elsewhere, borrow units from the future and interdict enemy time travel, fought in generated campaigns against AI commanders that follow the same rules as the player.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Strategy", "Real-time strategy"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/temporal-shift.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/temporal-shift_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0d0f1f">
+
+    <link rel="preload" href="../fonts/zero-hour.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Temporal Shift: a command table at night with time bent around it. Midnight indigo
+           ground, a chrono teal for the light of a time jump, a pale lilac for the shimmer it
+           leaves, and an ice-white highlight. Zero Hour, wide and sleek, for the title and
+           headings; Turret Road for the subtitle and kickers. */
+        @font-face { font-family: "Zero Hour"; src: url("../fonts/zero-hour.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Turret Road Medium"; src: url("../fonts/turret-road-medium.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0d0f1f;
+            --flow-2: #1d2350;
+            --grid-minor: rgba(150, 230, 255, 0.04);
+            --grid-major: rgba(150, 230, 255, 0.09);
+            --p-ground: rgba(13, 15, 31, 0.95);
+            --p-panel: #151a33;
+            --p-1: #3ee6d0;
+            --p-2: #c4a6ff;
+            --p-3: #eaf6ff;
+            --p-text: #dde3f2;
+            --p-dim: #a3abc6;
+            --p-line: rgba(170, 220, 255, 0.15);
+            --font-title: "Zero Hour", "Segoe UI", sans-serif;
+            --font-sub: "Turret Road Medium", "Segoe UI", sans-serif;
+            --shade: #070815;
+        }
+
+        /* Title effect, "time slip": most of the cycle the name holds still with a faint teal halo;
+           then it stutters, a lilac echo offset to one side and a teal one to the other, like a unit
+           blinking out of time, and settles again. Layered dark shadows keep it legible throughout.
+           Zero Hour is very wide, so the title runs smaller than the default. */
+        .p-name {
+            font-size: clamp(1.7rem, 0.7rem + 4.2vw, 4.6rem);
+            letter-spacing: 0.02em;
+            animation: time-slip 7s linear infinite;
+        }
+        @keyframes time-slip {
+            0%, 70%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 2px 2px 0 var(--shade), 0 0 24px rgba(62, 230, 208, 0.35); }
+            74% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), -6px 0 0 rgba(196, 166, 255, 0.55), 6px 0 0 rgba(62, 230, 208, 0.55), 0 0 30px rgba(62, 230, 208, 0.6); }
+            78% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 0 0 rgba(196, 166, 255, 0.45), -3px 0 0 rgba(62, 230, 208, 0.45), 0 0 26px rgba(196, 166, 255, 0.5); }
+            82% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 2px 2px 0 var(--shade), 0 0 36px rgba(62, 230, 208, 0.7); }
+        }
+        .p-sub { letter-spacing: 0.08em; text-transform: uppercase; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 2px;
+            background: var(--p-2);
+            animation: slip-line 7s linear infinite;
+        }
+        @keyframes slip-line {
+            0%, 70%, 100% { box-shadow: 0 0 4px rgba(196, 166, 255, 0.35); }
+            76% { box-shadow: -10px 0 12px rgba(196, 166, 255, 0.9), 10px 0 12px rgba(62, 230, 208, 0.9); }
+        }
+        .section-mark::after { animation: h2-line 7s linear infinite; }
+        @keyframes h2-line { 0%, 70%, 100% { box-shadow: none; } 76% { box-shadow: 0 0 10px rgba(62, 230, 208, 0.7); } }
+        h2 { font-size: clamp(1.2rem, 0.95rem + 1vw, 1.75rem); letter-spacing: 0.02em; }
+        .p-sendoff h2 { font-size: clamp(1rem, 0.85rem + 0.8vw, 1.5rem); }
+        .p-kicker { font-family: var(--font-sub); font-weight: 500; letter-spacing: 0.12em; }
+
+        .p-nest > div { --c: var(--p-1); }
+        .p-nest > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .chrono td:first-of-type { width: 42%; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/temporal-shift_1_title.jpg" alt="Smooth green hills where a column of blue and silver tanks rolls past a blue domed base, missiles hanging in the air above them, the lead tanks passing through a glowing teal ring of distorted time." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Temporal Shift</span><span class="p-sub">Time-Bending Real-Time Strategy</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/sands-of-time-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Temporal Shift is a classic base-building real-time strategy game in the style of Red Alert 2 and Tiberian Sun, with one thing those games never gave you: time. Slow the battle to a crawl or stop it entirely, lay out a plan, and watch it unfold.</p>
+            <p>Time is also a weapon. You can send a unit a short way into the future to reappear where you want it, call in reinforcements from a future you then have to make happen, and drag enemy time travellers back into the present before they arrive.</p>
+            <p>Underneath the time machinery is a long list of fixes to what makes classic RTS games exhausting: units that feed themselves to the enemy one at a time, an AI that cheats, campaign missions with only one right answer, and the demand that one person do the work of a thousand specialists in a few frantic minutes.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who grew up on Red Alert 2 and Tiberian Sun and loved the bases, the armies and the waypoints, but always felt the game went too fast to use any of it. They want to command like a general, and got stuck clicking like a switchboard operator.</p>
+                    <p>They want <strong>the satisfaction of a plan that works</strong>, not a contest of clicks per minute.</p>
+                    <p>Mouse and keyboard, classic RTS controls. Because time can stop, nothing ever depends on fast hands.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power and choice:</strong> commanding a whole army with real control over what every part of it does.</p>
+                    <p><strong>Growth and understanding:</strong> reading a battlefield, planning combined-arms tactics and seeing them play out.</p>
+                    <p><strong>Fairness and order:</strong> an opponent bound by the same rules, and units that do what a sensible soldier would.</p>
+                    <p>It deliberately avoids draining <strong>ease</strong> (no frantic multitasking) and <strong>trust</strong> (no AI that builds what it couldn't, and no mission that only works one way).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>The classic RTS rewards speed over thought: whoever clicks fastest builds the biggest blob of units and wins. Its campaigns are handmade puzzles with one intended answer, played once.</p>
+                    <p>Here <strong>time is under your control</strong>, so the battle moves at the speed of your thinking, and the tactics the old games had room for, like split groups, waypoints and timed strikes, finally become usable.</p>
+                    <p>Campaigns are generated fronts of open-ended battles: the context of a campaign, with the freedom of a skirmish.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/temporal-shift_5_story.jpg" alt="A wide isometric view of a green river valley seen from high above: two military bases on opposite banks, a railway with a train crossing a bridge, a small town, forests and a winding road between them." width="1280" height="720" loading="lazy">
+            <figcaption>"Every front is a living map: towns, trains, bandits, wildlife, and an enemy who has to play fair."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/clockwork-lorc.png)"></span>Lore and story</h2>
+            <h3>The hour that went missing</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/01-hour.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>It's an alternate, atomic-age world of streamlined tanks, gleaming walkers and tidy prefab bases, where a lab accident one quiet afternoon taught people to nudge things a little way into the future. The trick spread faster than anyone could agree on what to do with it.</p>
+            <p>Now every warlord with a grudge and a factory has a chrono drive. Some want land, some want to rule, and the worst of them want to own tomorrow: to call in an army from a future that hasn't happened yet and dare the world to stop them making it real.</p>
+
+            <h3>The Meridian Guard</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/02-guard.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You command a field force of the Meridian Guard, the people who answer when a region falls under one of these regimes. You arrive with a construction vehicle, a few squads and a chrono drive of your own, and you push the regime out, front by front, until the region belongs to the people living in it again.</p>
+            <p>The commanders you face are built from the oldest failings there are: the proud one who can't retreat, the greedy one who overextends for every crate, the furious one who throws everything at the last place you hurt him. Each plays by the same rules you do.</p>
+
+            <h3>The war right now</h3>
+            <p>A new front has opened. The briefing shows a river valley, a railway, a town caught in the middle and a regime base on the far bank. You have a construction vehicle and a plan to make.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>The controls are Red Alert 2's, with the additions of modern strategy games like Zero-K and Beyond All Reason: queued orders, area commands, formation drags, repeat queues for factories. On top sits the time dial.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Time</h3>
+                    <dl>
+                        <div><dt>Space</dt><dd>Pause and resume</dd></div>
+                        <div><dt>Q / E</dt><dd>Turn the time dial slower or faster</dd></div>
+                        <div><dt>Shift</dt><dd>Hold to queue orders into a plan</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Orders</h3>
+                    <dl>
+                        <div><dt>Left click, drag</dt><dd>Select; box-select</dd></div>
+                        <div><dt>Right click</dt><dd>Move, attack or interact</dd></div>
+                        <div><dt>Right drag</dt><dd>Formation move: set the line and its facing</dd></div>
+                        <div><dt>A / G</dt><dd>Attack-move; guard an area</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Chrono</h3>
+                    <dl>
+                        <div><dt>J</dt><dd>Jump forward in time: pick a spot and a delay</dd></div>
+                        <div><dt>B</dt><dd>Borrow units from the future</dd></div>
+                        <div><dt>I</dt><dd>Raise an interdiction field</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Base and groups</h3>
+                    <dl>
+                        <div><dt>T</dt><dd>Base plans: place a whole block at once</dd></div>
+                        <div><dt>Ctrl + 1–9</dt><dd>Make a group; 1–9 selects it</dd></div>
+                        <div><dt>Esc</dt><dd>Menu and save</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The time dial runs smoothly from full speed through a Fallout VATS-style crawl to a dead stop, with no menus and no cooldown. It's a singleplayer game, so there's nobody to wait for: the battle simply moves as fast as you want it to.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/temporal-shift_2_vignette.jpg" alt="An isometric green valley where rows of blue and silver tanks and armored trucks stand massed in formation on a meadow, facing a grey fortress with red roofs across a road and a river." width="1280" height="720" loading="lazy">
+            <figcaption>"Stop time, draw the plan, let it run. A formation arrives together and fights together."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/pause-button-guard13007.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Plan, run, adjust</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/03-plan.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Slow the battle down and look. Split your army into the groups the situation needs: anti-armor for the tanks, anti-air for the gunships, anti-infantry for the swarm, a scout out front. Draw their routes and timings, let time run, and step in whenever something surprises you. Between fights, run the base, gather resources and pick up the supply crates scattered across the map.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/flag-objective-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A front</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/04-front.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A front is a generated campaign: a chain of battles across one region, each with a briefing, a goal and its own starting state. What you hold at the end of one battle shapes the next: a base you took becomes a base you start in, a bridge you blew stays blown. The front ends when the regime is out of the region.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-conquest-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The war map</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/05-map.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Between fronts you look at the war map: the regions you've freed, the regimes still standing, the commanders you've met and what became of them. Every front leaves its mark there, along with a short report of each battle in it, which is a history of your war rather than a score.</p>
+                        <p>There's always another front, because there's always another warlord with a chrono drive. The war map just keeps getting brighter.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A battle an evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/06-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The pace is a little slower than Red Alert 2, so a battle runs about half an hour to an hour, and a front a handful of evenings. Pause and save at any moment, mid-battle included. The end of each battle is a natural place to stop.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/flying-flag-lorc.png)"></span>Game modes</h2>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What it is</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Fronts</th><td data-label="What it is">Generated campaigns of linked battles across a region, on the war map</td><td data-label="What it's for">The main game: a campaign's context and consequences, with open-ended battles</td></tr>
+                        <tr><th scope="row">Skirmish</th><td data-label="What it is">A single battle on a generated map, with the starting state, opponents and size you choose</td><td data-label="What it's for">One evening's battle exactly the way you want it, or a place to try an idea</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Both nest the same way:</p>
+            <div class="p-nest" aria-label="The war, outermost first">
+                <div><span>The war map</span><small>Endless: front after front.</small>
+                    <div><span>A front</span><small>A region freed, battle by battle: a few evenings.</small>
+                        <div><span>A battle</span><small>One map, one goal: half an hour to an hour.</small>
+                            <div><span>A plan</span><small>One set of orders, laid out in slowed time and run: a minute or two.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/sands-of-time-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/snail-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Slow motion on demand</h3>
+                        <p>A classic RTS asks one person to do, in minutes, the work of a whole army staff: scouting, logistics, base building, and the tactics of every unit at once. It's fun for a while and then it's a blur. Most players end up doing the one thing that's possible at that speed: building a <strong>death ball</strong>, one huge blob of units, and throwing it at the enemy.</p>
+                        <p>Temporal Shift gives the player control over time itself. The dial slows the battle smoothly, all the way to a crawl and then a full stop, whenever you want and for as long as you want. Nothing is lost by slowing down, so the battle moves at the speed you think.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/temporal-shift_3_feature.jpg" alt="A battlefield seen from above in frozen slow motion: dozens of shells and missiles with glowing trails hang motionless in the air over blue and silver tanks inside a huge translucent teal dome of slowed time." width="1280" height="720" loading="lazy">
+                            <figcaption>"Slow time to a crawl or stop it dead, as often as you like. The battle waits for your plan."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/path-distance-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Command, don't click</p>
+                        <h3>Plans that play out</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/07-plans.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Tiberian Sun and Red Alert 2 had fine waypoint systems that hardly anyone used, because there was never time. With time stopped, they come into their own: queue routes and timings for every group, tell the artillery to open up when the tanks reach the ridge, send the engineers in behind them, then let time run and watch the plan go.</p>
+                        <p>Plans don't have to be perfect. Make small corrections as it unfolds, or freeze everything the moment the enemy does something you didn't expect.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/portal-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Time as a weapon</p>
+                        <h3>Three ways to bend time</h3>
+                        <p>The chrono drive gives both sides the same three tools:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table chrono">
+                                <thead><tr><th scope="col">Tool</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Jump forward</th><td data-label="What it does">A unit vanishes from the field and reappears where you told it, within a radius, after a delay you set. It skips everything in between, walls and minefields included.</td></tr>
+                                    <tr><th scope="row">Borrow from the future</th><td data-label="What it does">Units arrive now that you haven't built yet. Later you have to build them and send them back from the place they came from, or pay for it.</td></tr>
+                                    <tr><th scope="row">Interdict</th><td data-label="What it does">A field that catches enemy units in mid-jump and drags them back into the present early, wherever they happen to be.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>A jump leaves a faint shimmer where it will land, a few seconds before the unit arrives. Slow time and you can read the enemy's jumps on the map, and meet them.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/time-bomb-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A debt to yourself</p>
+                        <h3>The paradox</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/08-paradox.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Borrowing from the future is the most powerful thing you can do, and the most dangerous. The army arrives right now, when you need it. In exchange, a marker on the map shows where and when those same units must be sent back from: you have to build them in time, get them to the spot and send them.</p>
+                        <p>If you can't, time collapses around your base: a spacetime tear that wrecks it like a superweapon strike. It's shown plainly before you borrow, with the deadline in front of you the whole time. It's a loan you take knowingly, never a trap.</p>
+                        <p>The enemy borrows too, and their debt markers can be seen. Cut off the factory that has to repay the loan, and let their own future come for them.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/star-formation-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No more conga lines</p>
+                        <h3>Armies that fight together</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/09-formation.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>In the old games an army marched in a single file. The unit in front stopped to shoot the moment it saw an enemy, blocking everyone behind it, who then tried to walk around and did the same. A force big enough to win got fed into the grinder one unit at a time.</p>
+                        <p>Here groups <strong>move in formation</strong> at the pace of their slowest member and arrive together. Friendly units have small collision boxes, so they slide past each other instead of jamming, while their boxes against enemies are larger, so a line of tanks really does block a road. On contact the formation spreads into a firing line instead of stopping in a queue.</p>
+                        <p>Units also choose targets sensibly. An anti-armor squad shoots the tank, not the infantry beside it; nobody ignores the defense turret that's killing them to chase a damaged unit into the enemy base. You can set priorities per group, but the defaults should already be what a sensible soldier would do.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/checked-shield-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Same rules on both sides</p>
+                        <h3>An AI that never cheats</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/temporal-shift/10-fair.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>In Tiberian Sun and Red Alert 2 the computer could build units without owning the buildings that make them, and started without the tight budget that made every early loss crippling for the player. The AI here has the <strong>same economy, the same prerequisites, the same build times and the same fog of war</strong> as you.</p>
+                        <p>So attrition cuts both ways. Destroy its refinery and it really is poorer; wipe out an attack wave and it really has to rebuild. And losing a few early units never cripples either side, because reinforcements trickle in along each side's supply line all battle long.</p>
+                        <p>What makes the AI commanders different from each other is personality, not cheating: the proud one who won't retreat, the greedy one who overreaches. Learn them, and use it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/military-fort-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Bases without the busywork</p>
+                        <h3>Neat bases, fewer clicks</h3>
+                        <p>Building a tidy base with walls, pavement, gates and lights is half the charm of the genre, and also the biggest drain on attention. Here you lay out <strong>base plans</strong>: a power block, a refinery yard, a wall line with gates, placed in one move and built in order by your construction crews. Damage is repaired and lost buildings rebuilt from the plan, unless you tell them otherwise.</p>
+                        <p>And bases aren't always built from nothing. You'll still often start with a lone construction vehicle, but many battles begin with bases already standing, yours and the enemy's, taken in an earlier battle of the front or left over from the war before. The generator keeps those starts fair: an uphill battle is fine, a hopeless one isn't, and the briefing tells you which you're in.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/checkbox-tree-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Not a Simon-says affair</p>
+                        <h3>Campaigns with open battles</h3>
+                        <p>Classic campaign missions are handmade puzzles: the author built a scenario that funnels you toward the one solution they had in mind, so it's barely surprising the first time and pointless the second. Reactorcore calls it a "Simon-says affair".</p>
+                        <p>Fronts keep what campaigns are good at, a story, a briefing, objectives and a starting situation, and generate it all instead of scripting it. Each battle is then an open-ended skirmish: win it however you like. Maps follow Deus Ex's approach of several ways through, so even a map that favors one strategy leaves room for another.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/subway-train-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A world, not a chessboard</p>
+                        <h3>Maps with a life of their own</h3>
+                        <p>Terrain matters as in Advance Wars 2: roads, forests, hills, rivers and swamps change how fast things move and how well they hide. Between the two bases live other things: hazards to avoid, minor bandit groups and unaffiliated hostiles, wildlife, and trains and barges that belong to nobody and carry whoever boards them.</p>
+                        <p>Supply crates turn up across the map, and organizing a pickup without losing the truck is a small operation of its own. All of it feeds the plan: a train is a fast way across the map, and an ambush waiting to happen.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/extra-time-delapouite.png)"></span>Trivia</h2>
+            <h3>Two RTS ideas in one notebook</h3>
+            <p>Temporal Shift shares its design file with <a href="type-x-mecha.html">Type 1-X Mecha</a>, an RTS of tiered mecha across planets and space. Reactorcore's note says the two can be combined into one game, or Temporal Shift can be built first as a small proof of concept. The time machinery is the important part, because it answers what Reactorcore calls the nonsense core of the classic RTS: one person doing the work of a thousand trained specialists, alone, in an absurdly tiny timeframe.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/temporal-shift_4_boxart.jpg" alt="Box art: a heavy silver and blue hover tank bursts out of a glowing teal rift between two lattice radio towers, small tanks spread across the green fields below, a deep blue and lilac evening sky above." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Field orders</p>
+                <h2 id="sendoff">Temporal Shift: Time-Bending Real-Time Strategy</h2>
+                <p>Commander: a regime has taken the river valley and is borrowing an army from next week to keep it. You have a construction vehicle, three squads and a chrono drive.</p>
+                <p>Take all the time you need. Literally. Stop the clock, study the ground, draw the plan, and make sure their tomorrow never arrives.</p>
+                <p><strong>Stop the clock. Draw the plan. Let it run.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Command &amp; Conquer: Red Alert 2 and Tiberian Sun, Zero-K, Beyond All Reason, Advance Wars 2, Deus Ex, Fallout's VATS and Streets of Rogue</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Zero Hour (CC0), Turret Road, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "slug": "temporal-shift",
+  "preset": "08 Games - C&C Allies (RTS/Isometric 2D)",
+  "style": "Palette of blue and silver hardware, green terrain, glowing chrono teal light and pale lilac shimmer. No text, signs, numbers or interface elements anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide isometric battlefield frozen in slow motion: a column of streamlined blue and silver hover tanks crosses a green valley on the right, artillery shells and missile trails hanging motionless in the air above them. One tank at the front fades out of existence inside a glowing ring of teal light and rippling distorted air. A blue and silver base with domes and radar dishes on a hill in the background. The lower left of the picture is calm open green grass."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Isometric view of a green river valley: a wide orderly formation of streamlined blue and silver hover tanks, walkers and armored trucks advances side by side in a line across the grass toward a fortified enemy base of grey bunkers and red-roofed towers on the far side. Thin glowing teal lines on the ground trace their planned routes ahead of them. Forests, a road and a small bridge."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Isometric view from above of a battlefield frozen in time: dozens of artillery shells, rockets and tracer rounds with glowing trails hang completely motionless in mid-air over a group of streamlined blue and silver hover tanks. A huge translucent teal dome of slowed time covers the scene, the air inside it rippling. Smoke puffs frozen in place, grass and dirt below."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait scene: a heavy streamlined blue and silver hover tank bursts out of a glowing teal rift torn in the air, rings of light and lilac sparks spinning around it, above a green battlefield. Behind it a tall silver command tower with a radar dish and a row of smaller tanks. The top third of the picture is a wide empty evening sky in deep blue and soft lilac."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Very wide isometric view from high above of a green river valley: a blue and silver military base with domes on the near bank, a grey fortified base with red towers on the far bank, a railway line with a long train crossing a stone bridge over the river, a small town of houses in the middle, forests, fields and a winding road. Peaceful sunny strategic map."
+    }
+  ]
+}

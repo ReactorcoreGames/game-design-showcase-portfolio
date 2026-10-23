@@ -1,0 +1,73 @@
+{
+  "slug": "temporal-shift-mini",
+  "out": "site/projects/mini/temporal-shift",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - K - Utopian-Hightech",
+  "lead": "Retro-futurist military film still, dusk, teal and violet light. ",
+  "images": [
+    {
+      "n": 1,
+      "name": "hour",
+      "ratio": "3:2",
+      "prompt": "A laboratory with a glowing time machine ring and frozen sparks in the air"
+    },
+    {
+      "n": 2,
+      "name": "guard",
+      "ratio": "3:2",
+      "prompt": "A column of futuristic tanks rolling out of a base at dawn"
+    },
+    {
+      "n": 3,
+      "name": "plan",
+      "ratio": "3:2",
+      "prompt": "A glowing battle map table with model tanks and drawn routes"
+    },
+    {
+      "n": 4,
+      "name": "front",
+      "ratio": "3:2",
+      "prompt": "A river valley front line with searchlights and distant smoke"
+    },
+    {
+      "n": 5,
+      "name": "map",
+      "ratio": "3:2",
+      "prompt": "A large war map on a wall with pins and lit regions"
+    },
+    {
+      "n": 6,
+      "name": "evening",
+      "ratio": "3:2",
+      "prompt": "A quiet command bunker at night, monitors glowing"
+    },
+    {
+      "n": 7,
+      "name": "plans",
+      "ratio": "3:2",
+      "prompt": "Light trails of vehicles moving along winding routes through hills"
+    },
+    {
+      "n": 8,
+      "name": "paradox",
+      "ratio": "3:2",
+      "prompt": "A swirling vortex of light torn open in the sky above a base"
+    },
+    {
+      "n": 9,
+      "name": "formation",
+      "ratio": "3:2",
+      "prompt": "A line of armored vehicles advancing side by side with headlights"
+    },
+    {
+      "n": 10,
+      "name": "fair",
+      "ratio": "3:2",
+      "prompt": "Two rival war factories with tall chimneys facing each other across a dark valley"
+    }
+  ]
+}

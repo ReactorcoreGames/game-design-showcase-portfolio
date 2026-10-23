@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "temporal-shift.html", prefix: "temporal-shift",
+    title: "Temporal Shift", subtitle: "Time-Bending Real-Time Strategy",
+    icon: "sands-of-time-lorc", tint: "cyan",
+    blurb: "A Red Alert 2-style base-building RTS where you can slow the battle to a crawl or stop it dead, jump units forward in time, borrow an army from a future you then have to make happen, and face AI commanders who never cheat.",
+    genres: ["strategy"], tags: ["rts", "time travel", "slow motion", "procedural campaigns"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "trash-miner.html", prefix: "trash-miner",
     title: "AAL Trash Miner", subtitle: "Landfill Recycling Bonanza",
     icon: "bulldozer-delapouite", tint: "green",
