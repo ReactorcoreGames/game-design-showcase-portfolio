@@ -52,9 +52,9 @@ FONTS = [
     ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
     ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer
-    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators
+    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace
     ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron
-    ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron, bunkership
+    ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron, bunkership, roomspace
     ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount, Underground Brawl
     ("ShareTechMono-Regular.ttf", "share-tech-mono.woff2", None, None),     # SIL OFL, Custom Dismount, greensteelcommander
     ("Hydrogen Whiskey.otf", "hydrogen-whiskey.woff2", None, None),         # CC0, EradicationWars, RussiBiomonster, unhinged_lander_heist_scifi
@@ -75,9 +75,9 @@ FONTS = [
     ("exo.regular.otf", "exo-regular.woff2", None, None),                   # SIL OFL, Planetary Ring Miner
     ("World of Water.otf", "world-of-water.woff2", None, None),             # CC0, Poo Storm Janitor Powersuit
     ("Exo2.0-ExtraBoldItalic.otf", "exo2-extrabold-italic.woff2", None, None),  # SIL OFL, Poo Storm Janitor Powersuit
-    ("Zeroes One.otf", "zeroes-one.woff2", None, None),                     # CC0, StardustAssault
+    ("Zeroes One.otf", "zeroes-one.woff2", None, None),                     # CC0, StardustAssault, shape-smasher
     ("MatrixTypeDisplay-Regular.ttf", "matrixtype-display.woff2", None, None),  # CC0, StardustAssault
-    ("Unsteady Oversteer.otf", "unsteady-oversteer.woff2", None, None),     # CC0, Zero Space Robo Derby
+    ("Unsteady Oversteer.otf", "unsteady-oversteer.woff2", None, None),     # CC0, Zero Space Robo Derby, shape-smasher
     ("Zeroes Three.otf", "zeroes-three.woff2", None, None),                 # CC0, Zero Space Robo Derby
     ("Cranberry Gin.otf", "cranberry-gin.woff2", None, None),               # CC0, abyssal_caretaker
     ("ExpletusSans-SemiBoldItalic.ttf", "expletus-sans-semibold-italic.woff2", None, None),  # SIL OFL, abyssal_caretaker
