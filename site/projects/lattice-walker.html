@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lattice Walker: Megastructure Parkour Trek</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a 2D parkour platformer through an endless, half-ruined megastructure. Ask strangers for directions, carve paths with an absurdly overpowered beam pistol, and reconnect the structure sector by sector. Death is only a detour.">
+    <meta name="keywords" content="game design concept, 2D parkour platformer, megastructure, destructible terrain, procedural rooms, beam weapon, immortal protagonist, BLAME! inspired, Tsutomu Nihei inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/lattice-walker.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Lattice Walker: Megastructure Parkour Trek">
+    <meta property="og:description" content="A game design concept: walk an endless megastructure, carve paths with an overkill beam pistol, and reconnect it sector by sector. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/lattice-walker.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/lattice-walker_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a lone hooded figure walks a walkway through a vast concrete hall toward a seated stranger">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Lattice Walker: Megastructure Parkour Trek">
+    <meta name="twitter:description" content="A game design concept: walk an endless megastructure, carve paths with an overkill beam pistol, and reconnect it sector by sector.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/lattice-walker_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Lattice Walker: Megastructure Parkour Trek",
+        "description": "A game design concept, not a released game: a 2D parkour platformer through generated rooms of an endless megastructure, where an immortal agent asks strangers for directions, carries an overpowered beam pistol whose use has consequences, and reconnects the structure sector by sector.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Platformer", "Action", "Exploration"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/lattice-walker.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/lattice-walker_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#101211">
+
+    <link rel="preload" href="../fonts/spectrashell.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Lattice Walker: weathered concrete, with old brass for the lights that still work and
+           verdigris for everything that's gone green with age. Spectrashell, tall and condensed
+           like the shafts, for the title and headings; Iceland for the subtitle and kickers. */
+        @font-face { font-family: "Spectrashell"; src: url("../fonts/spectrashell.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Iceland"; src: url("../fonts/iceland.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #101211;
+            --flow-2: #2b2f29;
+            --grid-minor: rgba(225, 215, 170, 0.04);
+            --grid-major: rgba(225, 215, 170, 0.09);
+            --p-ground: rgba(17, 19, 17, 0.95);
+            --p-panel: #1b1e1b;
+            --p-1: #e3cf86;
+            --p-2: #8fb8a6;
+            --p-3: #f1ede1;
+            --p-text: #dcdcd2;
+            --p-dim: #a6a99c;
+            --p-line: rgba(225, 215, 170, 0.15);
+            --font-title: "Spectrashell", "Segoe UI", sans-serif;
+            --font-sub: "Iceland", "Segoe UI", sans-serif;
+            --shade: #0a0b0a;
+        }
+
+        /* Title effect, "discharge": the letters stay dim and still for a long while, then a
+           white-hot flash runs through them, like the beam firing far off in the background,
+           and fades to a brass afterglow. Layered dark shadows keep it legible at every frame. */
+        .p-name {
+            letter-spacing: 0.03em;
+            animation: discharge 8s ease-out infinite;
+        }
+        @keyframes discharge {
+            0%, 78%, 100% { color: #d9d4c6; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade); }
+            80% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 6px rgba(255, 255, 255, 0.95), 0 0 26px rgba(255, 250, 230, 0.8); }
+            88% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(227, 207, 134, 0.55); }
+        }
+        .p-sub { text-transform: uppercase; letter-spacing: 0.14em; text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        /* A thin cable under the subtitle that charges up and discharges with the title. */
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 2px;
+            background: var(--p-2);
+            animation: cable 8s ease-out infinite;
+        }
+        @keyframes cable {
+            0% { box-shadow: 0 0 2px rgba(143, 184, 166, 0.2); opacity: 0.5; }
+            76% { box-shadow: 0 0 10px rgba(143, 184, 166, 0.7); opacity: 0.9; }
+            80% { box-shadow: 0 0 16px rgba(255, 255, 255, 0.9), 0 0 30px rgba(227, 207, 134, 0.6); opacity: 1; }
+            100% { box-shadow: 0 0 2px rgba(143, 184, 166, 0.2); opacity: 0.5; }
+        }
+        .section-mark::after { animation: h2-line 8s ease-out infinite; }
+        @keyframes h2-line { 0%, 78%, 100% { box-shadow: none; } 80% { box-shadow: 0 0 12px rgba(255, 250, 230, 0.7); } }
+        h2, h3 { letter-spacing: 0.04em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.95rem; letter-spacing: 0.12em; }
+
+        .nodes td:first-of-type { width: 100%; }
+        .modes td:first-of-type { width: 62%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1.05rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/lattice-walker_1_title.jpg" alt="Looking up a colossal concrete shaft of a megastructure, hung with cables and dim lamps, light far above; a small hooded figure in a long coat and respirator stands on a ledge at the right." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Lattice Walker</span><span class="p-sub">Megastructure Parkour Trek</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/laser-blast-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/i-beam-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Lattice Walker is a 2D parkour platformer about walking through a megastructure so vast that nobody has mapped it: endless concrete, pipes and walkways, built and rebuilt by machines that never stopped. Most of the time it's a quiet trek. Now and then it isn't.</p>
+            <p>You play Kade, a troubleshooting agent for the authority that still runs the structure's core. Cut-off sectors need reconnecting, and every trip is a chain of generated rooms between a train station and a problem: a hive, a jammed machine, a gang, something huge. You find the way by asking strangers, and you carry a beam pistol that can punch through anything, which is exactly why you try not to use it.</p>
+            <p>It's strongly inspired by Tsutomu Nihei's manga BLAME!: its silent architecture, its lone wanderer and his impossible gun. The world, the cast and every name here are its own.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love the mood of vast, silent places, in BLAME!, Hollow Knight, Rain World or Inside, and who want to walk them rather than speedrun them.</p>
+                    <p>They want <strong>atmosphere first and action in bursts</strong>: long calm stretches, a sudden fight, and a gun that makes them feel unstoppable for a moment.</p>
+                    <p>The controls are keyboard and mouse with a lot of verbs (grapple, rocket boots, beam, shotgun, blade), but nothing is timed against you: slow motion is on the mouse wheel, and the item menu stops time.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Beauty and wonder:</strong> vistas of impossible architecture, and never knowing what the next room holds.</p>
+                    <p><strong>Power:</strong> a weapon that cuts through anything, used with the restraint the world asks for.</p>
+                    <p><strong>Freedom and safety:</strong> a trip can't fail. Death is a detour, and every wall can be dug through.</p>
+                    <p><strong>Meaning:</strong> a city coming back online, sector by sector, and the stranded people it reaches.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> (most rooms are calm) and <strong>your time</strong> (nothing you've done is ever lost).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Procedurally generated platformers usually mean roguelite runs: a death sends you back to the start, and the run is tuned so you'll lose.</p>
+                    <p>Here <strong>death is a detour</strong>: you wake in a ditch a few rooms away and walk back. A trip can take longer, but it can't fail.</p>
+                    <p>There's no map. You cross a maze of generated rooms by <strong>asking people the way</strong>, like a route in Slay the Spire or FTL that you can only hear about. And above the trips, the structure itself is the job that never ends: there's always another dark sector to reconnect.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/lattice-walker_5_story.jpg" alt="A canyon of endless megastructure floors and pipes fading into haze, lit windows dotting the walls, a small train crossing a bridge far below." width="1280" height="720" loading="lazy">
+            <figcaption>"Nobody has seen the edge of the structure. The machines that build it never stopped, and these days nobody can tell them to."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/mesh-network-delapouite.png)"></span>Lore and story</h2>
+            <h3>The structure</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/01-structure.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A city with no outside: stacked levels of concrete, pipes, walkways and shafts deeper than light reaches, extended without pause by the Masons, the machines that build it. Somewhere at its center is the core, where the Stewardship, the authority that runs the structure, still keeps the lights on.</p>
+            <p>Everyone in the structure used to be connected to the Lattice, its network. A connected person can digitize themselves and live on in the network's virtual spaces, or come back out in any body and style they like, mostly to hang out. Death was something you recovered from.</p>
+
+            <h3>The outage</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/02-outage.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Not everyone wanted that. A fanatical sect, the Unplugged, believed digitizing destroys what makes a person human, and made sure nobody could do it: they caused the disaster that knocked most of the structure off the Lattice. Out in the disconnected sectors the Masons went haywire, "repairing" things into mazes, and the Stewardship's own guardians, cut off from their orders, turned hostile.</p>
+            <p>Others moved into the gap. The Chorus converts people into hive creatures, insisting it's more productive and closer to nature. The Glassborn turned themselves into crystalline silicon life. Ghosts of people who moved on to somewhere else still drift through the ruins, curious and strange. And in between are the stranded: ordinary people whose services were cut and who mostly want them back. They're kind and helpful, with the usual few jerks among them, and they have plenty of opinions about everyone's ideology.</p>
+
+            <h3>The agent</h3>
+            <p>Kade is one of the Stewardship's special agents: not a guard, more of a travelling sysadmin with an all-access pass to every cache and depot. Inside the structure's reach he draws power from its walls: he regenerates without end, he doesn't stay dead, and his Rift Emitter, a heavy beam pistol, can cut through anything the Masons ever made.</p>
+            <p>He's laconic, relaxed and in no hurry. Officially, he's looking for someone who still carries the Lattice gene, the trait that once let a person into the network without any hardware, and he opens every conversation the same way: "Do you carry the Lattice gene?" Nobody he asks has it. Most of them know something useful anyway. Unofficially, he'd settle for the next long elevator ride, with a driver who doesn't mind the company.</p>
+
+            <h3>The job right now</h3>
+            <p>Ride into a cut-off sector, find what's keeping it dark, deal with it, and ride out. Behind every sector Kade clears, the Stewardship moves in, reconnects it, and the people stranded there get the Lattice back. Then the next train leaves.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control Kade directly, in side view: a small figure in rooms a screen or two across. He moves with real momentum, air friction and terminal velocity, and he's deliberately unhurried. He walks, climbs and hangs, and bursts into action with dashes and rocket boosts that each have a moment of slowness after.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>A / D</dt><dd>Walk left and right</dd></div>
+                        <div><dt>W / S</dt><dd>Jump and crouch; hold S and press W to drop through a platform</dd></div>
+                        <div><dt>Shift</dt><dd>Lunge, backhop, or a floor slide from a crouch</dd></div>
+                        <div><dt>Q</dt><dd>Rockets: prime a rocket jump, boost a slide, or thrust in mid-air</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim the gun, the grapple and the grab arm</dd></div>
+                        <div><dt>Left click</dt><dd>Fire the Rift Emitter into the background at the pointer; hold to charge</dd></div>
+                        <div><dt>Right hold</dt><dd>Raise it into the foreground; left click then fires a beam to the room's edge</dd></div>
+                        <div><dt>F</dt><dd>Blade swipe, stronger the faster you're moving</dd></div>
+                        <div><dt>Mouse 5</dt><dd>Shotgun</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Hands</h3>
+                    <dl>
+                        <div><dt>Mouse 4</dt><dd>Grapple: pull small things in, or pull yourself to big ones</dd></div>
+                        <div><dt>E</dt><dd>Talk and interact; grab with the arm; hold to throw harder</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Time</h3>
+                    <dl>
+                        <div><dt>Wheel</dt><dd>Slow motion at a fifth of the speed, as long as you keep scrolling</dd></div>
+                        <div><dt>Middle click</dt><dd>Time-freeze menu: shotguns, consumables, the beam's default power</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The Rift Emitter has two ways to fire. By default a shot goes <strong>into the background</strong>, at the point under the pointer: a distant blast that still shakes the room, drops debris and can bring platforms down. Raise it into the foreground and each shot becomes <strong>a beam from Kade to the edge of the room</strong>, through everything in between. A shot fires when you let go of the button, so charging is just holding it; or set a default power level in the menu and fire on a cooldown instead.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/lattice-walker_2_vignette.jpg" alt="Ink drawing of a vast concrete hall of walkways, nets and dark doorways over a drop; a hooded figure with a heavy pistol stands near a stranger sitting against the wall, while another small hooded figure walks along the walkway." width="1280" height="720" loading="lazy">
+            <figcaption>"Most rooms are a walk: a strange view, a stranger to ask, and a choice of exits."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/footprint-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One room at a time</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/03-room.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A room is a screen or two of generated megastructure: destructible concrete and pipe, fragile walkways and stairs, nets and ladders, an entry and one to three exits. Kade walks in, takes in the view, and looks for someone or something to ask: a person, a terminal, an infopad, a machine.</p>
+                        <p>Usually that's all. Sometimes there's a creature, up close or far off in the background, and the room becomes a fight. Kade won't leave a room with hostiles still in it ("I haven't finished clearing this room yet"), so the fight is part of the way through.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/subway-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One trip into a sector</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/04-trip.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is a single trip. Kade arrives by elevator or train at a cut-off sector, works his way through rooms to the goal, deals with whatever is wrong there, and makes for the exit station that takes him out again.</p>
+                        <p>The goal is one problem with a face: a hive, a hive with a boss, a jammed machine, an obstruction, a gang of bandits, a creepy recluse, a juggernaut, or a swarm that haunts the whole trip. If it beats him, it's still there when he comes back, in a different room.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/network-bars-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Reconnecting the structure</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/05-reconnect.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every cleared sector goes back on the Lattice. The Stewardship moves in to secure it, its rogue guardians are restored or shut down, and the people stranded there can connect again: digitize, live in the network, or step back out in a new body and go hang out. There's always another dark sector further out.</p>
+                        <p>Between rooms, the loading screen shows a new piece of art of Kade crossing the structure, so the trip draws itself as you go. The game also keeps <strong>your own album</strong>: screenshots of each trip's big moments, taken automatically and marked as yours, played back as a montage when a sector comes back online. It's a record, not a prize.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A trip in an evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/06-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Launch to the mission cards: a few trips on offer, each with its task and its intensity, reshuffled every time unless you lock the ones you like. Pick one and ride in.</p>
+                        <p>A room takes a few minutes, and you can stop in any of them: the trip waits where you left it. A calm trip is a slow evening's walk; an intense one is shorter and louder.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/subway-train-caro-asercion.png)"></span>Game modes</h2>
+            <p>There's one game, the trips, and two ways to change how it plays. How hard a trip is comes mostly from the mission card you pick: its intensity decides how much of the trip is calm walking and how much is fighting.</p>
+            <div class="p-table-wrap">
+                <table class="p-table modes">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What it is</th><th scope="col">Changes the structure?</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Trips</th><td>The main game: pick a mission card, its task and intensity, and ride into a sector. Each one you clear stays reconnected.</td><td data-label="Changes the structure">Yes</td></tr>
+                        <tr><th scope="row">Flashback</th><td>Paste a finished trip's seed and play it again as a story Kade is telling someone, with cheats and new-game-plus mutators to switch on.</td><td data-label="Changes the structure">No, it's a retelling</td></tr>
+                        <tr><th scope="row">Heavy mode</th><td>An optional setting for players who want harder fights: Kade is more sluggish and the beam's limits are tighter, or the beam is even more overpowered and its side effects worse, so the shotgun and the blade do more of the work.</td><td data-label="Changes the structure">Yes</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/laser-blast-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/ray-gun-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>The Rift Emitter</h3>
+                        <p>Kade's beam pistol is overkill at its lowest setting. <strong>Anything the beam touches rips apart</strong>: terrain, defenses, creatures. Nothing stops it, one hit kills anything, it never runs out, and it can fire as fast as you click.</p>
+                        <p>Charging widens the beam from <strong>16 to 32 to 48 pixels</strong>. Keep holding long past that and a limit break kicks in, the way the Vector Cannon does in Zone of the Enders: a <strong>96-pixel beam</strong> that's frankly absurd. Shots into the background grow the same way, in blast radius and in after-effects: more debris, earthquakes, a lingering warp in gravity.</p>
+                        <p>Every shot has weight. The room shakes, debris rains down and the light flashes, even when the target is a hive tower half a kilometer back.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/lattice-walker_3_feature.jpg" alt="A hooded figure in a long coat and respirator aims a pistol down a ruined corridor as a blinding horizontal white beam tears across the room, concrete chunks flying." width="1280" height="720" loading="lazy">
+                            <figcaption>"Fired into the distance, it shakes the room. Fired across it, it takes the floor with it."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/falling-rocks-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Power with a price</p>
+                        <h3>Every shot costs the structure</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/07-collapse.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The Rift Emitter is like swearing: fine now and then, a problem if it's all you do. Each room has an acceptable amount of use, roughly <strong>two shots per medium-sized enemy plus two spare</strong> in the foreground, and ten times that into the background.</p>
+                        <p>Go past it and the damage spreads. Other rooms of the trip take the collateral, and the rogue guardians start paying attention, like the police in GTA: the more heat, the more of them. Nothing forbids the beam. The world simply reacts to it, which leaves the question of when it's worth it to you.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/talk-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Navigation by conversation</p>
+                        <h3>Asking for directions</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/08-stranger.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There's no map. A room with more than one exit always holds at least one clue: a stranger sitting somewhere, a terminal, an infopad, a machine. Kade asks his question, and the answer is nearly always "No, but…" followed by something useful: which exit leads on, where there's a shortcut.</p>
+                        <p>Good information gets you closer. Bad information sends you on a <strong>detour of two to seven rooms</strong>, which isn't all bad: detours can hold food bricks, ammunition, kits, lore or a clue to a shortcut, and you might take one on purpose for a chance at them. Some people talk gibberish, and you leave them be. A few lie on purpose, and you may run into them again later. What you do about it is up to you, though the local enforcers don't much care who started it.</p>
+                        <p>The structure also leaves things lying around: <strong>datalogs</strong>, bite-sized snippets about science, technology and possible futures, the kind of short "huh, really?" read that suits a quiet room. They come in a cycle, so none repeats until you've read them all.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/elevator-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A maze without a map</p>
+                        <h3>Nodes and the paths between them</h3>
+                        <p>Behind the scenes, a trip is an invisible network of landmark nodes, and the rooms Kade stumbles through are the ways between them:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table nodes">
+                                <thead><tr><th scope="col">Node</th><th scope="col">What's there</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Sector entry</th><td>The train or elevator stop that brought Kade in</td></tr>
+                                    <tr><th scope="row">Goal</th><td>The trip's problem: a boss, a machine, an objective</td></tr>
+                                    <tr><th scope="row">Sector exit</th><td>The station that takes Kade out and ends the trip</td></tr>
+                                    <tr><th scope="row">Ditch</th><td>Where Kade wakes after a blackout: the bottom of the barrel, little danger, the only way is up</td></tr>
+                                    <tr><th scope="row">Cache</th><td>An uncommon stash of consumables and extras that runs dry after one to four visits ("out of service")</td></tr>
+                                    <tr><th scope="row">Vista</th><td>A scenic, quiet place: somber, odd, epic, creepy, tranquil or simply bland</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Between nodes run chains of pathway rooms, anywhere from one room to nine, with shortcuts and long ways round of their own. About eight in ten are calm, though now and then one is wilder than any landmark. Each next room follows from the last, the way Star Fox's routes do: in its direction, and in whether it's indoors, outdoors or both.</p>
+                        <p>A landmark <strong>isn't one fixed room</strong>. It's a place with endless vantage points. Come back to a boss after a blackout and it's the same place, with the same occupants, approached from a fresh, newly generated angle.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/broken-wall-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Generated, then wrecked</p>
+                        <h3>Rooms that can't trap you</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/09-nets.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each room is built in order. First the entry and exits, each standing on a one-way platform frame, with enough hook points, climbing nets and walls to <strong>guarantee a route between them even if everything else is blown away</strong>. Then the solid terrain, then props cut into it, then the backdrop: an interior, an exterior with one to three parallax layers, or a mix of both.</p>
+                        <p>Interior rooms have solid edges. Exterior rooms open onto a bottomless drop, like a Smash Bros stage. The terrain is smooth, chunky destructible concrete and pipe, so every crater is a real shape you can stand in.</p>
+                        <p>The generator tries to leave at least one path that doesn't need the beam, in case it's been stolen. And since the blade and the shotgun never run out, Kade can always dig his way to an exit.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hole-ladder-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Time doesn't rewind</p>
+                        <h3>Death is a detour</h3>
+                        <p>Kade has 200 hit points and <strong>regenerates one every second, always</strong>. If damage outpaces that, he blacks out and wakes in a ditch room, walks one to five rooms back, finds whatever took him down and settles it. After that, the trip carries on as if he'd passed that room the first time.</p>
+                        <p>Sometimes the thing that beat him <strong>has taken his Rift Emitter</strong>. Depending on what it is, it might fire it again and again at a slow rate, fire once and get blown away by the recoil, not manage it at all, or have it fly out of its hands and stick in a net where Kade can climb to it.</p>
+                        <p>Falling or being knocked off the edge of an exterior room is milder: a short swear, and a few seconds later Kade crawls back in through the entrance. Some monsters are finished for good by throwing them out; the stubborn ones crawl back in through an exit, just like him.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/grapple-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Slow, then sudden</p>
+                        <h3>Parkour with a wind-down</h3>
+                        <p>Kade is mostly grounded and moves on terrain, grapple points and nets. He's no tireless bunny-hopper: <strong>everything has a cooldown</strong>, so bursts of speed are short and violent and then he's relaxed again.</p>
+                        <p>His verbs: walk, crouch, lunge, backhop, floor slide, climb nets and ladders, jump, rocket-slide, rocket-jump and rocket-fly, drift in zero gravity on thrusters, grapple small things toward him or pull himself to big things and latch on, and grab and throw. <strong>Rocket fuel is limited and carries over</strong> from room to room, while the small impulse thrusters recharge forever, so dodging never runs out.</p>
+                        <p>Rooms bend the rules too: gravity that varies, moving platforms and mini elevators, fans that blow and ducts that suck, surfaces with sideways gravity, spinning platforms, orbital gravity spheres.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/shotgun-sbed.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The pockets</p>
+                        <h3>Shotguns and consumables</h3>
+                        <p>When the beam is too much, there's a blade and a shotgun. The blade is a short, blunt, superheated slab that knocks things back, and it hits harder the faster Kade is moving relative to his target. The default shotgun is plain and dependable.</p>
+                        <p>Power-ups turn it into something else for a while, in the spirit of Time Crisis and Metal Slug: rapid auto, quad barrel, tri-barrel burst, flame, explosive, laser, remote grenade, sticky mine, plasma bomb, smart auto-aim, force, arc lightning, slicer, hypervelocity, cannonball, minigun, black hole, nuke and more, each with limited ammunition before it reverts. Kade carries up to <strong>four shotguns and four consumables</strong>, picked from a menu that freezes time, as in Super Mario Bros. 3.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Consumable</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Rocket fuel</th><td>Refills the boots</td></tr>
+                                    <tr><th scope="row">Food bricks</th><td>Faster stamina recharge and shorter cooldowns</td></tr>
+                                    <tr><th scope="row">Health kit</th><td>Instant healing, instead of waiting for the regeneration</td></tr>
+                                    <tr><th scope="row">Ammo</th><td>Reloads the current shotgun</td></tr>
+                                    <tr><th scope="row">Reactive bricks</th><td>Passive: instantly kill a melee attacker and soak up heavy hits</td></tr>
+                                    <tr><th scope="row">Deflector orb</th><td>Passive: a number of light projectiles pass through Kade as if he weren't there</td></tr>
+                                    <tr><th scope="row">Shock vest</th><td>Absorbs three quarters of incoming damage until it's spent</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Most come in small, medium and large, and some stack.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hive-sbed.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Everyone plays by the same rules</p>
+                        <h3>A structure that pushes back</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lattice-walker/10-hive.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Background enemies sit far off: conversion towers, hives, bombardment and sniper units. Some start in the distance and come forward, and go back again. Foreground creatures climb, crawl, jump, hang and run the way Kade does, each with one or two attacks and <strong>one job that makes trouble</strong>: putting up an obstacle, getting in the way, or wrecking the very clue Kade came to ask.</p>
+                        <p>Hazards are everywhere: radiation pylons, crushers, grinders, hot exhaust, explosive tanks, molten metal, live surfaces, ice, sticky fungus, rebar spikes, mines, lasers, zero-gravity fields and dumb little turret bots. <strong>They hurt monsters and enforcers exactly as much as they hurt Kade</strong>, so the room itself is a weapon.</p>
+                        <p>Civilians are the complication. Monsters will eat them and so will a careless shot, and every innocent killed calls in local enforcer bots that attack Kade and the monsters alike. When they show up the room turns to chaos: stay and fight the wave, or run for the nearest exit.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/lattice-walker_4_boxart.jpg" alt="Box art: a masked figure in a long coat stands on a broken concrete ledge with a pistol, a towering wall of megastructure floors and pipes behind him." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Next train leaving</p>
+                <h2 id="sendoff">Lattice Walker: Megastructure Parkour Trek</h2>
+                <p>A sector has gone dark. Its machines are building mazes, its guardians shoot on sight, and the people stranded there want their lives back. Somebody has to walk in.</p>
+                <p>You have a train ticket, a body that won't stay down, a shotgun with ideas, and a beam pistol you should fire far less often than you'll want to. Ask the way. Take the detour. Ride out.</p>
+                <p><strong>Do you carry the Lattice gene?</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Tsutomu Nihei's manga BLAME!</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Spectrashell (CC0), Iceland, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

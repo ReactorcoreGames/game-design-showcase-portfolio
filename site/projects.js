@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "lattice-walker.html", prefix: "lattice-walker",
+    title: "Lattice Walker", subtitle: "Megastructure Parkour Trek",
+    icon: "laser-blast-lorc", tint: "yellow",
+    blurb: "Walk an endless, half-ruined megastructure one generated room at a time, asking strangers the way. Carry a beam pistol that cuts through anything and costs the structure every time you use it. Death is only a detour.",
+    genres: ["action", "physics"], tags: ["platformer", "parkour", "destructible terrain", "megastructure"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "shape-smasher.html", prefix: "shape-smasher",
     title: "Shape Smasher", subtitle: "Pocket Sculpture Demolition",
     icon: "wrecking-ball-lorc", tint: "magenta",

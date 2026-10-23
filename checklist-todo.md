@@ -122,7 +122,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [-] Planet Warfare (Skip until further notice - I need to prepare for this)
 - [x] RoomSpace
 - [x] Shape Smasher
-- [ ] Net Terminal (BLAME!-inspired)
+- [x] Net Terminal (BLAME!-inspired), now Lattice Walker
 - [ ] AAL Smash Droids
 - [ ] Closed-room smasher (rosebud doc)
 - [ ] Soldat Doom Infinite

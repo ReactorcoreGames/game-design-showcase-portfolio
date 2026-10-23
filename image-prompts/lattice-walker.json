@@ -1,0 +1,37 @@
+{
+  "slug": "lattice-walker",
+  "preset": "09 Artist - Tsutomu Nihei (Blame!)",
+  "style": "Mostly black and white ink, with faint washes of old brass yellow on the few working lights and pale verdigris green on aged metal.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide shot from a low angle, looking up a colossal vertical shaft inside a brutalist megastructure: endless concrete floors, girders, pipes and hanging cables climbing into haze far above. On a thin broken walkway right of center stands one lone small figure in a long hooded grey coat with a respirator mask over his face, chunky rocket boots, and a heavy oversized pistol hanging at his side. A faint warm light leaks from an opening high above. The lower left of the picture is dark open space. Empty, silent, immense."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side view of a vast concrete hall inside a megastructure, composed like a wide frame from a 2D platformer: walkways, rusted stairs and hanging chain-link nets at several heights over a dark drop, two dark doorways in the far wall. A lone small figure in a long hooded grey coat with a respirator mask, chunky rocket boots and a heavy oversized pistol at his hip walks calmly along a walkway toward a ragged stranger sitting cross-legged against a pillar. Dust drifting in thin shafts of light. Calm and quiet."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Side view across a ruined megastructure room: a perfectly straight horizontal beam of blinding white light, as wide as a doorway, shoots from a heavy oversized pistol held out by a lone small figure in a long hooded grey coat with a respirator mask, and punches clean through three thick concrete walls and a tangle of pipes. Concrete chunks blast outward along the beam and rain down, a walkway snaps in half, dust and debris everywhere, the whole room shaking."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover: a lone figure in a long hooded grey coat with a respirator mask over his face, chunky rocket boots and a heavy oversized pistol in one hand stands at the edge of a narrow concrete beam, seen from slightly below, small against an immense brutalist megastructure that towers into darkness above him, with cables and pipes hanging down. Empty dark space in the upper part of the picture. A faint warm glow behind him."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Extreme wide view from far away across a gigantic megastructure city with no sky: layered concrete strata, colossal pillars, bridges and shafts stretching to every horizon and fading into haze. In the far distance one region glows with small warm lights, while the nearer sectors are dark, broken and crusted with strange organic hive-like growths. A tiny train crosses a long thin bridge between them."
+    }
+  ]
+}

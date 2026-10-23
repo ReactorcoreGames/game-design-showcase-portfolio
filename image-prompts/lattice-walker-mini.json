@@ -1,0 +1,20 @@
+{
+  "slug": "lattice-walker-mini",
+  "out": "site/projects/mini/lattice-walker",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - J - Dystopian-Bleak",
+  "lead": "Bleak cinematic photograph, vast brutalist concrete interior, dust, dim brass light, verdigris. ",
+  "images": [
+    {"n": 1, "name": "structure", "ratio": "3:2", "prompt": "A city with no outside: stacked levels of concrete, pipes, walkways and shafts deeper than light reaches"},
+    {"n": 2, "name": "outage", "ratio": "3:2", "prompt": "A dead control room, dark screens and cut cables, a disaster that switched everything off"},
+    {"n": 3, "name": "room", "ratio": "3:2", "prompt": "Fragile walkways, stairs and chain-link nets over a dark drop, a lone hooded wanderer"},
+    {"n": 4, "name": "trip", "ratio": "3:2", "prompt": "An old elevator platform arriving at a dark, abandoned station"},
+    {"n": 5, "name": "reconnect", "ratio": "3:2", "prompt": "Rows of lights coming back on along a long corridor, people gathering in the glow"},
+    {"n": 6, "name": "evening", "ratio": "3:2", "prompt": "A lone traveller resting on a bench in a quiet train carriage"},
+    {"n": 7, "name": "collapse", "ratio": "3:2", "prompt": "Concrete platforms collapsing, debris raining down, dust after a huge blast"},
+    {"n": 8, "name": "stranger", "ratio": "3:2", "prompt": "A ragged stranger sitting against a pillar, pointing the way down a corridor"},
+    {"n": 9, "name": "nets", "ratio": "3:2", "prompt": "Chain-link climbing nets and ladders hanging over a blasted crater"},
+    {"n": 10, "name": "hive", "ratio": "3:2", "prompt": "An organic insect hive growing over concrete walls and pipes"}
+  ]
+}
