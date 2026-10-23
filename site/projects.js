@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "lockbreaker.html", prefix: "lockbreaker",
+    title: "Lockbreaker", subtitle: "Endless Metroidvania Expedition",
+    icon: "key-lock-delapouite", tint: "green",
+    blurb: "A metroidvania that never runs out: every campaign generates a lone hero, a place, a world of locks and keys and a build made to open them. Secrets follow rules, the map remembers what you missed, and no boss can wall you.",
+    genres: ["action"], tags: ["metroidvania", "procedural generation", "exploration", "builds"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "thermonuclear-berserker.html", prefix: "thermonuclear-berserker",
     title: "Thermonuclear Berserker", subtitle: "Planetfall Arcade Blaster",
     icon: "nuclear-bomb-skoll", tint: "magenta",

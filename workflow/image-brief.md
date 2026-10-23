@@ -82,6 +82,10 @@ Klein ignores small anatomical details it finds unusual. A "cyclops with one sin
 
 Heroic figures get flagged even when nothing is violent, probably by the output's nudity check. In batch 10 two box arts with a lone standing hero were flagged, along with every other image of the same hero: a "chunky humanoid robot in glossy white armor" (a smooth glossy body reads as skin) passed only as "a boxy, clearly mechanical robot with a square visor head and bolted armor plates", and a "ridiculously muscular hero in a torn bodysuit" was flagged on every wording and preset tried and went to Nano Banana. Describe figures as fully clothed or plainly mechanical from the first prompt, and keep "torn", "muscular" and "glossy" off people.
 
+Machines that look like bodies get the same treatment. In batch 11 a "gaunt skeletal biomechanical war machine" (Thermonuclear Berserker, Digital Anime 90s preset) was flagged on every combat shot, then again as "clearly robotic" with a skull-shaped head, and again with all destruction taken out; only "a lean, spindly combat mecha robot with a narrow pointed visor head" passed, and only in a calm shot. Its combat shots went to Nano Banana. Keep skeleton, rib, skull and claw words off machines from the first prompt.
+
+Painterly presets sign their work. The Frazetta Oil Paint and Digital Anime 90s presets put a small painted signature in a bottom corner of about one image in three, so check the corners at full size, not on the collage. Remove them as below.
+
 Nano Banana doesn't always obey its no-text line: on a 2:3 box art it painted a made-up title in big letters. Manga presets (Murata) add speech-bubble lettering on their own. Small lettering on plain sky can be removed with OpenCV inpainting (`cv2.inpaint`, masking only the strokes) on the finished JPG; note it in the manifest, because a later `finish` overwrites the fix.
 
 Make every alt text describe what was actually generated, not what the prompt asked for.

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lockbreaker: Endless Metroidvania Expedition</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a metroidvania that never runs out. Every campaign generates a lone hero, a place, a world of locks and keys and a full build designed around it, with secrets that follow rules, a map that remembers for you, and bosses that never wall you.">
+    <meta name="keywords" content="game design concept, metroidvania, procedural generation, lock and key, exploration, builds, Super Metroid inspired, Nova Drift inspired, Azimuth inspired, Ex Vitro inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/lockbreaker.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Lockbreaker: Endless Metroidvania Expedition">
+    <meta property="og:description" content="A game design concept: a new world of locks and keys every campaign, a build made to match, and you on your own. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/lockbreaker.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/lockbreaker_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a lone explorer in a powersuit fires an energy rifle down a cracked, dark pixel-art corridor">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Lockbreaker: Endless Metroidvania Expedition">
+    <meta name="twitter:description" content="A game design concept: a new world of locks and keys every campaign, a build made to match, and you on your own.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/lockbreaker_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Lockbreaker: Endless Metroidvania Expedition",
+        "description": "A game design concept, not a released game: a generated metroidvania in which every campaign builds a new lone hero, a new place, a lock-and-key world and a matching build of weapon mods, with rule-bound secrets, a map that marks what you missed, lenient bosses and a movie-poster memento of every finished campaign.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Adventure", "Metroidvania"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/lockbreaker.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/lockbreaker_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0b1218">
+
+    <link rel="preload" href="../fonts/matrixtype-display-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Lockbreaker: the cold slate of a dark, empty facility, a mint scanner glow for the
+           energy you find in it, and a soft lilac for the alien pockets. MatrixType Display Bold,
+           a 16-bit block face, for the title and headings; Share Tech Mono, a suit's readout,
+           for the subtitle and kickers. */
+        @font-face { font-family: "MatrixType Display Bold"; src: url("../fonts/matrixtype-display-bold.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Share Tech Mono"; src: url("../fonts/share-tech-mono.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0b1218;
+            --flow-2: #17303a;
+            --grid-minor: rgba(110, 255, 200, 0.035);
+            --grid-major: rgba(110, 255, 200, 0.08);
+            --p-ground: rgba(12, 19, 25, 0.95);
+            --p-panel: #15222b;
+            --p-1: #5cffc0;
+            --p-2: #c59bff;
+            --p-3: #eefcf6;
+            --p-text: #dde7e9;
+            --p-dim: #9fb1b6;
+            --p-line: rgba(110, 255, 200, 0.15);
+            --font-title: "MatrixType Display Bold", "Segoe UI", sans-serif;
+            --font-sub: "Share Tech Mono", "Segoe UI", monospace;
+            --shade: #050a0e;
+        }
+
+        /* Title effect, "scanner": the name sits in a cold dim light while a mint scan pulse
+           sweeps across it every few seconds, the way a visor picks up an energy signature,
+           then fades back out. Layered dark shadows keep it legible at every frame. */
+        .p-name {
+            letter-spacing: 0.04em;
+            animation: scan 5s ease-in-out infinite;
+        }
+        @keyframes scan {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), -6px 0 14px rgba(92, 255, 192, 0); }
+            40% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), -10px 0 16px rgba(92, 255, 192, 0.35); }
+            55% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(92, 255, 192, 0.85), 0 0 30px rgba(92, 255, 192, 0.5); }
+            70% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 10px 0 16px rgba(197, 155, 255, 0.4); }
+        }
+        .p-sub { text-transform: uppercase; letter-spacing: 0.1em; color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 2px;
+            background: var(--p-2);
+            animation: scan-line 5s ease-in-out infinite;
+        }
+        @keyframes scan-line {
+            0%, 100% { box-shadow: 0 0 3px rgba(197, 155, 255, 0.3); opacity: 0.6; }
+            55% { box-shadow: 0 0 14px rgba(92, 255, 192, 0.9), 0 0 26px rgba(197, 155, 255, 0.6); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 55% { box-shadow: 0 0 12px rgba(92, 255, 192, 0.75); } }
+        h2, h3 { letter-spacing: 0.04em; }
+        .p-kicker { font-family: var(--font-sub); letter-spacing: 0.1em; }
+
+        .variants td:last-of-type, .roles td:last-of-type { width: 100%; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/lockbreaker_1_title.jpg" alt="Pixel art in side view: a lone explorer in a bulky teal and cream powersuit stands on a rock ledge in a vast dark cavern full of pipes and ruined machinery, a glowing green doorway far below on the left." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Lockbreaker</span><span class="p-sub">Endless Metroidvania Expedition</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/key-lock-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/locked-door-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Lockbreaker is a metroidvania that never runs out. Every campaign generates a new lone hero, a new place to explore, a new network of rooms full of locks and keys, and a full build of weapons and upgrades designed to open them. You play it from the first room to the final boss, a few evenings' worth, and then a different one is waiting.</p>
+            <p>The heart of the genre stays exactly as it is: a complex world of rooms, obstacles that need the right ability, weapon or protection to pass, and keys that stay useful afterwards, so every lock you open also makes you stronger, faster and able to do more. What changes is everything that makes the genre frustrating: secrets you have to bomb every inch of the wall to find, a map that leaves you looking things up, weapons you juggle between instead of growing, and bosses that stop you cold.</p>
+            <p>It's a rough idea for making Super Metroid, Ex Vitro and Azimuth better and endlessly playable, with Nova Drift's builds, Cryptark's ships-as-maps, Tunnels of the Underworld's cave flying, Syndemic's generated room networks, Iji's world and secrets and Oblige's generated levels in the mix.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>People who love the moment a locked door finally opens and the whole world folds back on itself, and who have finished every metroidvania they could find, some of them more than once.</p>
+                    <p>They want <strong>a new world to learn</strong>, not the same one again, and they're tired of probing walls, reading wikis and fighting the menu to switch weapons.</p>
+                    <p>WASD and the mouse, two weapons and a handful of keys. Easy to pick up; the depth is in the builds.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Understanding and discovery:</strong> learning a place until it opens up.</p>
+                    <p><strong>Growth and power:</strong> from a lone arrival to a walking arsenal, in every campaign.</p>
+                    <p><strong>Variety:</strong> a new place, a new hero and a new build each time.</p>
+                    <p>It deliberately avoids draining <strong>respect for your time</strong> (secrets that follow rules, a map that remembers) and <strong>safety</strong> (no boss can wall you).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>The genre default is a single handmade world, finished once. After that you replay a world you already know by heart, or wait years for a sequel.</p>
+                    <p>This design keeps the handmade feel and changes the structure: <strong>a generator that builds the world and the build together</strong>, from a database of locks, keys, rooms, enemies and bosses, so every campaign is a whole, coherent, first-time expedition.</p>
+                    <p>The genre's promise, becoming overpowered by the end, is kept on purpose.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/lockbreaker_5_story.jpg" alt="Pixel art landscape: a domed research complex on the cliffs of a dark alien jungle, lit windows half hidden by giant roots, cave arches below and lightning in the night sky." width="1280" height="720" loading="lazy">
+            <figcaption>"Somewhere with diverse sectors and a source of high technology, and nobody coming to help."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/distress-signal-delapouite.png)"></span>Lore and story</h2>
+            <p>There's no single story. <strong>Every campaign generates its own</strong>: a hero, a place and an event, told without words. The one rule that never changes is the genre's oldest one: <strong>you're on your own</strong>. Nobody is coming, you can't call for backup, or something stands in the way of anyone who tries.</p>
+
+            <h3>Who you are</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/01-who.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A hazard worker, an enemy's prisoner, a bounty hunter, a scavenger, an explorer, a rescue worker, a government auditor, a sheriff, a captive alien, a scout or special forces unit, a hunter-killer robot, an assassin, a researcher, a security officer, a local hunter. Each brings a different reason to be alone in there.</p>
+
+            <h3>Where you are</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/02-where.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A space lab, a planetary research bunker, a military fortress, a starship, colony ship or space hulk, a base inside an asteroid, moon or megastructure, an evil compound, an open underwater or underground sector, an island chain, ancient ruins, a derelict debris field, a ship graveyard, or a journey that starts in a town, runs through a city and ends at the top of a space elevator.</p>
+            <p>The place can be natural, artificial or both, but it always needs <strong>a source of technology</strong>, because your upgrades come from there: a base, outposts, or just scattered containers in the wild while the land itself provides the locks.</p>
+
+            <h3>What's happening</h3>
+            <p>Each campaign also rolls an event: someone trapped, something escaped, something buried waking up. The few people you meet speak in nods, a word or two and simple icons, and some of them can be saved, or not, depending on what you do along the way.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>Side view, WASD to move and the mouse to aim, for better movement and aim than a gamepad's eight directions. Gravity is light and floaty, or absent altogether, apart from force and gravity zones that push things around. The design names the scheme; the key layout below fills in the rest.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>A D</dt><dd>Move</dd></div>
+                        <div><dt>W, Space</dt><dd>Jump, or thrust upward</dd></div>
+                        <div><dt>S</dt><dd>Crouch, drop down, or thrust downward</dd></div>
+                        <div><dt>Shift</dt><dd>The build's movement ability</dd></div>
+                        <div><dt>M</dt><dd>Map</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim</dd></div>
+                        <div><dt>Left button</dt><dd>Primary weapon</dd></div>
+                        <div><dt>Right button</dt><dd>Secondary weapon</dd></div>
+                        <div><dt>Both buttons</dt><dd>The hidden technique, once your build has one</dd></div>
+                        <div><dt>E</dt><dd>Use, talk, take</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>There's no weapon switching. Two weapons sit on the two mouse buttons for the whole campaign, and upgrades make them better instead of adding more to juggle.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/lockbreaker_2_vignette.jpg" alt="Pixel art in side view: the explorer in the teal and cream powersuit fires a fan of mint energy beams down a narrow dark metal corridor whose cracked wall panels are sprouting purple crystal growths." width="1280" height="720" loading="lazy">
+            <figcaption>"Only walls with visible cracks or wear can be broken, and the marks tell you at a glance what will break them."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <div class="p-nest" aria-label="Structure of the game, outermost first">
+                <div><span>The expeditions</span><small>One generated campaign after another. Never runs out.</small>
+                    <div><span>A campaign</span><small>One hero, one place, one build, played to the final boss.</small>
+                        <div><span>A sector</span><small>A cluster of rooms with its own look, locks and boss.</small>
+                            <div><span>A room</span><small>Enemies, a lock, a key, maybe a secret.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/doorway-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Room by room</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/03-room.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Fight through the swarmers and regulars, deal with the occasional bruiser or elite, spot what's locked and what it would take to open it, and open what you can. Defeated enemies drop what refuels your weapons and energy, so the fight itself keeps you supplied.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/maze-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One expedition</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/04-expedition.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is a whole metroidvania: sectors of room clusters linked by cross-routes and dead ends, a boss foreshadowed in each, upgrades hidden along the way, and a final boss at the end. You arrive alone and leave overpowered, by however much you went looking for.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/film-strip-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>A shelf of movie posters</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/05-posters.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The generator never runs out of expeditions, and each finished one leaves a memento of what happened in it: a <strong>movie-poster prompt</strong>, written from your campaign's hero, place and events, to paste into the image generator of your choice. Or the game composes a cover from its own sprites, like the amateur pixel-art box covers Oblige makes for its levels. Every finished campaign also keeps a button to <strong>replay its seed</strong>, to run it again faster or hand it to someone else.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A few evenings each</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/06-evenings.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is a few evenings long, played in sittings of a sector or two. Save whenever you stop; the expedition waits where you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/visored-helm-lorc.png)"></span>Game variants</h2>
+            <p>There's one way to play, the generated expedition, but the design lists <strong>six bodies it could be built around</strong>. Each changes how you move and what counts as a lock. Whether they become separate games or a choice each campaign makes is left open.</p>
+            <div class="p-table-wrap">
+                <table class="p-table variants">
+                    <thead><tr><th scope="col">Variant</th><th scope="col">What you are</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Powersuit</th><td>The classic: an armored explorer on foot</td></tr>
+                        <tr><th scope="row">Cave flyer</th><td>A small ship threading tunnels, as in Tunnels of the Underworld</td></tr>
+                        <tr><th scope="row">Vehicle</th><td>A Metal Slug–style tank, remote-driven by an android</td></tr>
+                        <tr><th scope="row">From nothing</th><td>An ordinary human who starts unarmed and ends the campaign in a powersuit</td></tr>
+                        <tr><th scope="row">Mech and pilot</th><td>A walking mech, as in Metal Knights or Front Mission: Gun Hazard, whose tiny pilot can climb out and go where it can't</td></tr>
+                        <tr><th scope="row">Top-down</th><td>Any of the above, seen from above</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/skeleton-key-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dice-twenty-faces-twenty-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>A world built around its locks</h3>
+                        <p>The generator doesn't scatter upgrades through a random maze. It works the way a designer of a handmade metroidvania would, in order, and <strong>every step decides what the next one can use</strong>:</p>
+                        <ol class="p-chain" aria-label="How a campaign is generated">
+                            <li><b>The place</b>Sectors and room networks, from room templates</li>
+                            <li><b>The locks</b>What blocks each path: a weapon, a movement ability, an item, or nothing</li>
+                            <li style="--c: var(--p-2)"><b>The build</b>Which weapons and upgrades exist, and in what form, to open them</li>
+                            <li style="--c: var(--p-2)"><b>The opposition</b>Enemies and bosses, with their extra modules</li>
+                            <li style="--c: var(--p-3)"><b>The story</b>The hero, the event, the people you'll meet</li>
+                        </ol>
+                        <p>It draws everything from <strong>a database of locks, keys, room templates, objects, enemies, bosses and boss modules</strong>. A level might have no weapon-locked doors at all, only movement and item paths, and that in turn changes which weapons and upgrades get made. Add one new lock, room or boss module to the database and it can turn up in every campaign from then on.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/lockbreaker_3_feature.jpg" alt="Pixel art cross-section of a huge underground complex: dozens of small rooms of machinery stacked in a grid and linked by shafts and corridors, doors glowing mint, lilac and amber, a tiny explorer in one room near the middle." width="1280" height="720" loading="lazy">
+                            <figcaption>"The generator places the locks first, then decides which weapons and upgrades this campaign needs to open them."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cog-lock-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Grow, don't swap</p>
+                        <h3>Builds, not side-grades</h3>
+                        <p>Azimuth's weapons were mostly side-grades: a hassle to switch between, and more buttons than anyone needs. Here <strong>every upgrade empowers what you already have</strong>, combining effects into the same weapon, the way Nova Drift's mods do.</p>
+                        <p>Nova Drift's motto is "no matter what build you want, there is a way to make it work." The difference here is that <strong>the campaign picks the build</strong>: it chooses a focus (your body, the primary or secondary weapon, an ability, a shield or a construct) and offers mods that suit it, with variants and side branches. Many mods double as keys, combat, puzzle or mobility, with some elemental and utility effects baked in. How overpowered you end up depends on how many of the optional ones you go and find.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/missile-pod-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Light, heavy, either</p>
+                        <h3>Two weapons, any roles</h3>
+                        <p>Super Metroid has three weapons and Nova Drift has one. Here you always have <strong>two, and they can be anything</strong>: two ranged weapons, two melee weapons, or one of each, even a pile bunker. In the classic setup the beam is the light weapon and the missile the heavy one that opens doors; here the beam might be the heavy door-opener and the rockets the swarm clearer.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table roles">
+                                <thead><tr><th scope="col">Rule</th><th scope="col">Why</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Generic archetypes</th><td>Thermal lance, grenade, missile salvo, blast, blade, railgun, flak, and hybrids like a grenade salvo, flak rail or blast lance, each with its own affinity (speed, size, blast radius, projectile count, fire rate)</td></tr>
+                                    <tr><th scope="row">Fits every upgrade</th><td>Every archetype works with the generic mods: fire rate, velocity, projectile size, spread, recoil and the rest</td></tr>
+                                    <tr><th scope="row">One ammo weapon at most</th><td>Either weapon may run on ammo, never both, so you're never out of options</td></tr>
+                                    <tr><th scope="row">Heat, not self-damage</th><td>Nothing hurts you for firing it; powerful weapons build heat and vent instead</td></tr>
+                                    <tr><th scope="row">Charging is an upgrade</th><td>Either weapon, both or neither can gain a charge, in many styles: a classic charge shot, a multi-stage charge, charges stored in pickups, or powered shots that refill over time</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/secret-door-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No probing every inch</p>
+                        <h3>Secrets that follow rules</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/07-secrets.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Finding a secret should be a pleasure, not a chore of bombing and shooting every surface. So the rules are consistent and predictable: <strong>only certain walls can break</strong>, those with a visible overlay like cracks or erosion, and you can safely ignore the rest.</p>
+                        <p>The mark also tells you <strong>at a glance what will break it</strong>: a missile, a bomb, a heavier blast, a speed charge. The puzzle is getting what it needs, never finding out that it was there.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No wiki needed</p>
+                        <h3>A map that remembers for you</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/08-map.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The map marks every room with an unclaimed upgrade, as an energy signature: <strong>a circle while something is still there, a dot once it's all taken</strong>, whether it's in the room itself or in a little dead-end compartment beside it. It also shows the room's connections and possible exits.</p>
+                        <p>So you never have to look up what you missed, or wonder whether a forgotten dead end was really empty. What stays up to you is remembering what that spot needed to open, which is the part of the genre worth keeping.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/boss-key-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Epic, never a wall</p>
+                        <h3>Bosses you can always outlast</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/09-boss.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every boss is <strong>foreshadowed</strong> at least in the room before it, and often across its sector. Its presence shapes the area, with blockages and hazards it causes, like vines choking a reactor, that clear when it falls.</p>
+                        <p>A diligent explorer who found most upgrades beats it easily; one with the bare minimum gets a tough but doable fight. And no boss can wall you: if the fight goes badly, you can <strong>switch to defense and dodging and refill your health and ammo from what the boss drops</strong>, all the way to full, as you dance around it. The only cost is that the fight takes longer, and you'll know you could have done it with more finesse.</p>
+                        <p>Bosses are preset types, the way Starsector's ships are, with randomized extra components: abilities, weapons, passives and cosmetic parts. Fights are meant as epic slugfests rather than David against Goliath.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/atomic-slashes-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Worth the effort</p>
+                        <h3>The hidden technique</h3>
+                        <p>There's no ultimate beam at the end; a fully modded pair of weapons is plenty. Instead, a build can include <strong>a hidden technique</strong>: something special you do on purpose that, for the extra effort and a share of your ammo, unleashes a move strong enough to be worth it.</p>
+                        <p>Super Metroid's hidden techniques were mostly too convoluted for their payoff and rarely used outside curiosity. This one is meant to be used: a super attack like a fighting game's, up close or at range, or a defensive field around you that protects and damages, and it takes its shape from your current weapons, armor, shield and mods.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/film-projector-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Told without words</p>
+                        <h3>Stories in icons</h3>
+                        <p>Every campaign has its own story, event and context, told through the environment. The people in it are mostly stuck in one place: they do one thing, and when something changes, they do another. They communicate in nods and a few simple signs:</p>
+                        <ol class="p-chain" aria-label="How characters talk">
+                            <li><b>Please, help</b>A request</li>
+                            <li><b>Thank you</b>Or a curse</li>
+                            <li style="--c: var(--p-2)"><b>Arrows</b>Directions</li>
+                            <li style="--c: var(--p-2)"><b>! !! !!!</b>Danger, rising</li>
+                            <li style="--c: var(--p-3)"><b>? ?? ???</b>Confusion, or a clue nearby</li>
+                            <li style="--c: var(--p-3)"><b>OK</b>Clear, thumbs up</li>
+                        </ol>
+                        <p>Like in Iji, what you do along the way can change how it ends: someone you reach in time can be saved.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/eyedropper-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Cheap to grow</p>
+                        <h3>White sprites, tinted per world</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/lockbreaker/10-tint.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Room templates, objects, enemies and bosses are drawn as <strong>white sprites and tinted during generation</strong>, the way Astroneer recolors its plants, objects and hazards to match or contrast with the terrain around them. One sprite becomes a different-looking creature in every world, so the database looks far bigger than it is.</p>
+                        <p>Enemies come in standard roles: weak swarmers, medium regulars, uncommon bruisers and rare elites. Some respawn, some come from endless spawners, and the elites and special ones stay dead once killed. Some rooms hold an enemy that a specific weapon handles best, even though breaking the intended order is allowed.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/lockbreaker_4_boxart.jpg" alt="Box art in pixel art: the explorer in the teal and cream powersuit stands alone on a rock ledge with an energy rifle, below an enormous dark facility built on top of a cliff, a few windows glowing mint and lilac, lightning in the storm sky above." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Signal lost</p>
+                <h2 id="sendoff">Lockbreaker: Endless Metroidvania Expedition</h2>
+                <p>No backup is coming. Somewhere ahead there's a source of technology, a door that won't open yet, and a thing in the dark that has been waiting a long time. You'll come out of it carrying everything you found on the way in.</p>
+                <p>Then there's another place, another stranger in another suit, and another door.</p>
+                <p><strong>Every lock has a key. Go find it.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Super Metroid, Ex Vitro, Azimuth, Nova Drift, Cryptark, Tunnels of the Underworld, Syndemic, Iji and Oblige</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: MatrixType Display (CC0), Share Tech Mono, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

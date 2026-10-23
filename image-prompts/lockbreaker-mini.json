@@ -1,0 +1,73 @@
+{
+  "slug": "lockbreaker-mini",
+  "out": "site/projects/mini/lockbreaker",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - J - Dystopian-Bleak",
+  "lead": "Bleak cinematic sci-fi photograph, cold slate shadows and mint green glow. ",
+  "images": [
+    {
+      "n": 1,
+      "name": "who",
+      "ratio": "3:2",
+      "prompt": "A lone figure in a heavy armored suit at the end of a dark corridor"
+    },
+    {
+      "n": 2,
+      "name": "where",
+      "ratio": "3:2",
+      "prompt": "An abandoned research bunker deep inside a cave, lights flickering"
+    },
+    {
+      "n": 3,
+      "name": "room",
+      "ratio": "3:2",
+      "prompt": "A dark metal room with a sealed round door glowing green"
+    },
+    {
+      "n": 4,
+      "name": "expedition",
+      "ratio": "3:2",
+      "prompt": "A long vertical shaft descending into darkness, ladders and pipes"
+    },
+    {
+      "n": 5,
+      "name": "posters",
+      "ratio": "3:2",
+      "prompt": "Old sci-fi movie posters pinned on a dark wall under a single lamp"
+    },
+    {
+      "n": 6,
+      "name": "evenings",
+      "ratio": "3:2",
+      "prompt": "A dim room at night with a glowing screen showing a dark cave"
+    },
+    {
+      "n": 7,
+      "name": "secrets",
+      "ratio": "3:2",
+      "prompt": "A cracked concrete wall with green light leaking through the cracks"
+    },
+    {
+      "n": 8,
+      "name": "map",
+      "ratio": "3:2",
+      "prompt": "A glowing green holographic map of tunnels and rooms in the dark"
+    },
+    {
+      "n": 9,
+      "name": "boss",
+      "ratio": "3:2",
+      "prompt": "Thick alien vines choking a giant reactor in a dark chamber"
+    },
+    {
+      "n": 10,
+      "name": "tint",
+      "ratio": "3:2",
+      "prompt": "Strange glowing plants of many colors in a dark alien cave"
+    }
+  ]
+}

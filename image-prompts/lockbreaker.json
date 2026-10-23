@@ -1,0 +1,37 @@
+{
+  "slug": "lockbreaker",
+  "preset": "08 Games - Super Metroid (Action/2D Sprite)",
+  "style": "Palette of cold slate blue and grey shadows with glowing mint green energy light and soft lilac alien glow.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide side-view shot of a vast dark underground cavern full of ruined alien machinery, huge pipes and broken metal walkways, faint glowing doorways far below. On a rock ledge on the right stands a small lone explorer in a bulky, rounded teal-and-cream armored powersuit with a dark visor helmet, holding a compact energy rifle, looking out over it. The lower left of the picture is dark open cavern."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side-view action shot in a narrow dark metal corridor: a small lone explorer in a bulky, rounded teal-and-cream armored powersuit with a dark visor helmet, holding a compact energy rifle, fires a wide fan of glowing mint energy shots at a swarm of small purple flying alien bugs. Beside them, one wall panel is cracked and eroded with a faint glowing seam. Pipes and grating along the ceiling."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide side-view cross-section of a huge underground complex like a cutaway map: dozens of rectangular rooms stacked and linked by vertical shafts and long corridors, each room a different chamber of rock, machinery or alien growth, round doors glowing mint, lilac and amber between them. In one small room near the middle, a tiny explorer in a teal-and-cream powersuit."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover in side view: at the bottom, a small lone explorer in a bulky, rounded teal-and-cream armored powersuit with a dark visor helmet, holding a compact energy rifle, stands alone on a jagged rock ledge looking up at an enormous dark facility built into a towering cliff, a few windows glowing mint and lilac, pipes and antennas on its roof. Stormy dark sky with lightning fills the top of the picture."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Extreme wide side view of a dark alien jungle at night: a research complex sunk into the cliffs and caves, its pipes, domes and lit windows half swallowed by giant roots and vines, cave mouths below leading deep underground, a heavy storm overhead with distant lightning."
+    }
+  ]
+}
