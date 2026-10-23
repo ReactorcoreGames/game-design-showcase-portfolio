@@ -126,7 +126,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] AAL Smash Droids
 - [x] Closed-room smasher (rosebud doc), now God Tier Tantrum
 - [x] Soldat Doom Infinite, now Hellsweep Infinite
-- [ ] Space Chunks–inspired blast-em-up
+- [x] Space Chunks–inspired blast-em-up, now Thermonuclear Berserker
 - [ ] Metroid Forever concept
 - [ ] AAL Collector
 - [ ] AAL Exterminator

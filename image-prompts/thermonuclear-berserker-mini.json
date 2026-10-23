@@ -1,0 +1,73 @@
+{
+  "slug": "thermonuclear-berserker-mini",
+  "out": "site/projects/mini/thermonuclear-berserker",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - E - Cinematic",
+  "lead": "Cinematic sci-fi film still, deep violet space and hot magenta glow. ",
+  "images": [
+    {
+      "n": 1,
+      "name": "dominion",
+      "ratio": "3:2",
+      "prompt": "A vast fleet of dark angular warships arriving over a colony world"
+    },
+    {
+      "n": 2,
+      "name": "berserker",
+      "ratio": "3:2",
+      "prompt": "A glowing nuclear reactor core inside a skeletal metal machine"
+    },
+    {
+      "n": 3,
+      "name": "sector",
+      "ratio": "3:2",
+      "prompt": "A battle in space among drifting wrecks and burning warships"
+    },
+    {
+      "n": 4,
+      "name": "descent",
+      "ratio": "3:2",
+      "prompt": "A fiery streak falling through the clouds toward a planet's surface"
+    },
+    {
+      "n": 5,
+      "name": "log",
+      "ratio": "3:2",
+      "prompt": "A glowing holographic star chart floating over a dark console, red and blue star systems"
+    },
+    {
+      "n": 6,
+      "name": "break",
+      "ratio": "3:2",
+      "prompt": "A quiet control room with a glowing star map, a chair turned away"
+    },
+    {
+      "n": 7,
+      "name": "upgrade",
+      "ratio": "3:2",
+      "prompt": "A glowing capsule of energy floating among wreckage in space"
+    },
+    {
+      "n": 8,
+      "name": "drift",
+      "ratio": "3:2",
+      "prompt": "A spindly robot spacecraft drifting sideways among the stars, side thrusters firing"
+    },
+    {
+      "n": 9,
+      "name": "debris",
+      "ratio": "3:2",
+      "prompt": "Tumbling chunks of a wrecked space station among glowing pink gas clouds"
+    },
+    {
+      "n": 10,
+      "name": "wingmen",
+      "ratio": "3:2",
+      "prompt": "Small fighter ships unfolding from metal pods in space"
+    }
+  ]
+}

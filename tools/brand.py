@@ -41,14 +41,14 @@ FONTS = [
     ("Orbitron[wght].ttf", "rc-display-black.woff2", {"wght": 900}, "RC Display"),
     # Project pages' own display fonts (see workflow/page-brief.md). Check each font's
     # embedded licence first; prefer CC0 and SIL OFL ones.
-    ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships, greensteelcommander
+    ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships, greensteelcommander, thermonuclear-berserker
     ("OperationNapalm-Regular.ttf", "operation-napalm.woff2", None, None),  # CC0, AAL-Bunkerships
     ("Zero Hour.otf", "zero-hour.woff2", None, None),                       # CC0, graviton-mayhem
     ("Squares Bold Free.otf", "squares-bold.woff2", None, None),            # SIL OFL, graviton-mayhem, smash-droids
     ("Radio Stars.otf", "radio-stars.woff2", None, None),                   # CC0, AAL-Stealth-Sector, cyberdungeon, starforge-legion
     ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector
     ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon, colossal_devastators, hellsweep-infinite
-    ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon
+    ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon, thermonuclear-berserker
     ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice, god-tier-tantrum
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
     ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer

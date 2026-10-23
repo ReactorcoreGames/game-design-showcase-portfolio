@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermonuclear Berserker: Planetfall Arcade Blaster</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a top-down arcade blast-em-up where you pilot a nuclear-powered biomechanical war machine from deep space down through orbit, sky and ground to an enemy world's control nexus. Every launch rolls a different loadout, and the run ends with the payload going off.">
+    <meta name="keywords" content="game design concept, arcade shooter, blast-em-up, top-down space shooter, mecha, newtonian flight, random loadout, Space Chunks 2 inspired, Rayforce inspired, Omega Boost inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/thermonuclear-berserker.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Thermonuclear Berserker: Planetfall Arcade Blaster">
+    <meta property="og:description" content="A game design concept: a nuclear war machine that grew legs, falling from deep space to an enemy world's core, and growing stronger with everything it wrecks on the way. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/thermonuclear-berserker.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/thermonuclear-berserker_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a spindly war machine with a magenta reactor core tears through a swarm of alien fighters in space">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Thermonuclear Berserker: Planetfall Arcade Blaster">
+    <meta name="twitter:description" content="A game design concept: a nuclear war machine that grew legs, falling from deep space to an enemy world's core.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/thermonuclear-berserker_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Thermonuclear Berserker: Planetfall Arcade Blaster",
+        "description": "A game design concept, not a released game: a top-down arcade blast-em-up in which a biomechanical nuclear war machine descends from deep space through orbit, sky and ground to an enemy world's control nexus, with a randomly rolled loadout every launch and a living log of the worlds it has taken.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Arcade", "Shooter"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/thermonuclear-berserker.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/thermonuclear-berserker_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#120a1e">
+
+    <link rel="preload" href="../fonts/stormfaze.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Thermonuclear Berserker: a hot magenta reactor glow in deep violet space, with amber for
+           the missile trails and a white-hot pink for the highlights. Stormfaze, wide and armored,
+           for the title and headings; Turret Road Bold, a targeting readout, for the subtitle and kickers. */
+        @font-face { font-family: "Stormfaze"; src: url("../fonts/stormfaze.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Turret Road Bold"; src: url("../fonts/turret-road-bold.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #120a1e;
+            --flow-2: #3a1250;
+            --grid-minor: rgba(255, 120, 200, 0.04);
+            --grid-major: rgba(255, 120, 200, 0.09);
+            --p-ground: rgba(19, 11, 31, 0.95);
+            --p-panel: #22153a;
+            --p-1: #ff4fb0;
+            --p-2: #ffb547;
+            --p-3: #ffeaf6;
+            --p-text: #e9e0ef;
+            --p-dim: #b3a5c2;
+            --p-line: rgba(255, 120, 200, 0.17);
+            --font-title: "Stormfaze", "Segoe UI", sans-serif;
+            --font-sub: "Turret Road Bold", "Segoe UI", sans-serif;
+            --shade: #09040f;
+        }
+
+        /* Title effect, "critical mass": the reactor glow builds slowly over the cycle, brighter
+           and hotter, flashes white at the peak, and drops back to a low simmer, like a core
+           charging up to detonation. Layered dark shadows keep it legible at every frame. */
+        .p-name {
+            font-size: clamp(1.7rem, 5.2vw, 3.6rem);
+            letter-spacing: 0.02em;
+            animation: critical 6s ease-in infinite;
+        }
+        @keyframes critical {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 10px rgba(255, 79, 176, 0.2); }
+            70% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(255, 79, 176, 0.6); }
+            88% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 16px rgba(255, 234, 246, 0.95), 0 0 42px rgba(255, 79, 176, 0.95); }
+            94% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 10px rgba(255, 79, 176, 0.2); }
+        }
+        .p-sub { text-transform: uppercase; letter-spacing: 0.08em; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: charge-bar 6s ease-in infinite;
+        }
+        @keyframes charge-bar {
+            0%, 100% { box-shadow: 0 0 3px rgba(255, 79, 176, 0.3); opacity: 0.6; }
+            88% { box-shadow: 0 0 18px rgba(255, 234, 246, 0.9), 0 0 32px rgba(255, 79, 176, 0.8); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 6s ease-in infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 88% { box-shadow: 0 0 12px rgba(255, 79, 176, 0.85); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); letter-spacing: 0.08em; }
+
+        .modes td:last-of-type, .perks td:first-of-type { width: 100%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/thermonuclear-berserker_1_title.jpg" alt="Anime-style art: a lean dark-grey war machine with a glowing magenta reactor in its chest and pink plasma trailing from its thrusters flies high above a cloudy planet, a fleet of small dark ships strung out below it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Thermonuclear Berserker</span><span class="p-sub">Planetfall Arcade Blaster</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/nuclear-bomb-skoll.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/atom-core-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Thermonuclear Berserker is a fast, loud, deliberately simple top-down arcade shooter. You fly a nuclear bomb that grew arms, legs and thrusters: a biomechanical war machine launched at an enemy-held world. It falls from deep space through the orbital defenses, down through the sky and across the surface, wrecking everything on the way, until it reaches the world's control nexus and the payload goes off.</p>
+            <p>A blaster, missiles, a bomb and a berserk slow-motion ability: that's the whole arsenal, with no weapon switching, no inventory and no items. What changes is everything around it. Every launch rolls a different loadout, a different quirk and a different way for each weapon to unload, so no two berserkers fight alike.</p>
+            <p>It started as a list of everything that bugged Reactorcore about a much-loved little game, Space Chunks 2, and grew from there: Rayforce's dive from space down to a planet's core, Omega Boost's one-way trip from sector to sector, Nova Drift's builds and Gundam Wing's lone machine falling on a world.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>People who want a quick, explosive arcade session where they're the overwhelming force, not the underdog.</p>
+                    <p>They want <strong>to blow up a whole armada with their own hands</strong>, and they're tired of arcade games that make them chase floating pickups, sit through invulnerable boss phases and get graded on accuracy.</p>
+                    <p>WASD and the mouse, a boost, a bomb and one ability. Easy to pick up, with a lot of room to fly well.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power:</strong> one machine against a fleet, a sky and a world.</p>
+                    <p><strong>Excitement and movement:</strong> drift, boost and dive through meaty explosions.</p>
+                    <p><strong>Variety:</strong> every launch is a new build to discover and push to its limit.</p>
+                    <p>It deliberately avoids draining <strong>respect for your time</strong>: no waiting for enemies, no chasing loot, no grades, and a run that saves between stages.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Arcade upgrade shooters usually start you naked, make you scrape your way up, overpower you by the end, and then reset you to naked again. Space Chunks 2 had exactly that arc, and the design names it as the problem.</p>
+                    <p>Here, <strong>every launch starts already rolled</strong>: a handful of upgrades on, a quirk and a fire mode per weapon. You don't climb out of poverty; you find out what this particular berserker is good at.</p>
+                    <p>And the run ends with a win by design: the payload going off is the finale, not a failure.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/thermonuclear-berserker_5_story.jpg" alt="Anime-style space scene: a grey-green planet bristling with dark spiked orbital fortresses and warships, its night side dotted with lights, a yellow sun and a tiny magenta streak far off among violet nebulae." width="1280" height="720" loading="lazy">
+            <figcaption>"Launched from beyond visual range like a deep-space probe, it unfurls only once it reaches the world it was sent to take."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/planet-conquest-delapouite.png)"></span>Lore and story</h2>
+            <h3>The Devourer Dominion</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/01-dominion.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Early in humanity's spread across the galaxy, alongside a few friendly alien peoples, a war empire arrived at the edge of their colonies with a fleet in the sky and started conquering, calmly and without a word. Captured prisoners made the truth plain: the Dominion sees everyone else as raw material. It conquers, consumes and pollutes, endlessly, and it can't be talked to.</p>
+            <p>Its technology is ordinary and its strategy is brute force: fighters to dreadnoughts, good armor and blasters, missiles, mines, tractor beams and shields, and an endless supply of cannon fodder thrown forward without a second thought. It's incapable of changing, and each of its worlds obeys a single planetary nexus that runs everything on it.</p>
+
+            <h3>The Berserker</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/02-berserker.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The alliance survived the invasion and broke the advancing armadas. To keep the Dominion from ever coming back, and to stop losing lives fighting it, it built a weapon inspired by an infamous project from humanity's past: a nuclear ramjet that would fly over its targets for as long as its reactor ran.</p>
+            <p>The Berserker is that idea grown legs. A gaunt, skeletal, nuclear-powered war machine with twin blaster cannons, twin missile launchers, a bomb dropper, a hardened shield and, deep inside, its payload. It evolves as it fights, pulling material from the wreckage to grow new upgrades, and the payload grows with it. It's operated remotely, so nobody rides it in.</p>
+
+            <h3>The job</h3>
+            <p>Take one Dominion world. Wipe out the guarding fleet and the orbital defenses that would shoot down an ordinary torpedo, then the interceptors in the sky, then every base, factory, depot and defense on the ground, and finally the control nexus itself. Then the payload goes off: a burst of radiation tuned to the Dominion alone, which leaves the world's own wildlife and nature standing for the alliance to reclaim.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>Seen from above, in a wide arena that loops around at its edges. The mouse points the Berserker, which turns toward it at its own turn speed, the way the mechs of Starsector do, and WASD flies it relative to where it's facing.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Fly</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Point the Berserker</dd></div>
+                        <div><dt>W</dt><dd>Thrust forward</dd></div>
+                        <div><dt>S</dt><dd>Brake, then fly backward</dd></div>
+                        <div><dt>A D</dt><dd>Strafe</dd></div>
+                        <div><dt>Shift</dt><dd>Boost: tap, hold, or overboost</dd></div>
+                        <div><dt>Esc</dt><dd>Pause and menu</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Left button</dt><dd>Blaster</dd></div>
+                        <div><dt>Right button</dt><dd>Missiles, locking on near the cursor</dd></div>
+                        <div><dt>Q</dt><dd>Drop a bomb</dd></div>
+                        <div><dt>F</dt><dd>Berserk: slow motion with six times the damage</dd></div>
+                        <div><dt>Double-tap</dt><dd>Any weapon button unleashes that weapon's rolled fire mode</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>That's all the keys there will ever be. No upgrade adds a new button or combo; upgrades change what the existing ones do. The HUD shows hull, shield, missile and bomb counts, the berserk meter and a charge bar when a weapon is charging. There's no accuracy rating, no hits-taken grade and no score for how you used your missiles.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/thermonuclear-berserker_2_vignette.jpg" alt="Anime-style action: the spindly war machine streaks through a swarm of small angular enemy fighters, magenta blaster bolts and amber missile trails crossing, two fighters bursting into fireballs ahead of it." width="1280" height="720" loading="lazy">
+            <figcaption>"There's no friction in open space. W thrusts, S brakes, and the Berserker drifts wherever its momentum takes it."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <div class="p-nest" aria-label="Structure of the game, outermost first">
+                <div><span>The war</span><small>Sol's corner of the galaxy, freed one Dominion world at a time. Never runs out.</small>
+                    <div><span>A world</span><small>One launch, one Berserker, from deep space to the nexus.</small>
+                        <div><span>A zone</span><small>Space, orbit, sky or ground, ending with a boss.</small>
+                            <div><span>A sector</span><small>One looping arena, its defenders already there.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/battle-mech-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One sector, all guns</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/03-sector.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The Berserker descends into a sector where the enemy is already waiting: a looping arena of warships, turrets, debris and clouds. You drift, boost, strafe and unload until nothing is left, then cruise straight on to the next sector. No waiting for waves to warp in.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-core-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One world, all the way down</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/04-descent.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A run is a single strike on a single world: the zones in order from deep space to the ground, several sectors each, a boss at the end of every zone, and the nexus at the very bottom. Before each boss you take an upgrade. Clear the nexus and the payload goes off. It's a one-way ticket, and that's the point.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/orbital-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The war log</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/05-log.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Canonically it's a small war in a small corner of the galaxy, around Sol and its neighbors, and you can keep fighting it forever. Every world you take goes into the log; every world that held out stays on it, red, waiting for another launch.</p>
+                        <p>The log itself is the memento. It starts on a red background and turns gradually blue as worlds fall, fully blue at around a hundred, and then <strong>generative patterns start growing over it</strong>, changing with every world after that. It also keeps a running total of Dominion units destroyed and the tonnage of enemy metal wrecked.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Save between zones</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/06-break.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>After each boss, the transition to the next zone offers a choice: carry on, or save and quit. A whole world fits in an evening, and a zone in a short break.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/exploding-planet-delapouite.png)"></span>Game modes</h2>
+            <p>There's one game: <strong>launch a Berserker at a world</strong>. Each launch runs on two seeds, one for the Berserker's loadout and upgrades and one for the world and its defenders, so <strong>any world that held out can be relaunched</strong> from the log with the same seeds, to try again until it falls. Each seed also gives its Berserker its own color; launch the same seed twice and you simply get another unit of the same model.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/missile-swarm-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/charged-arrow-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>A different weapon every launch</h3>
+                        <p>The arsenal is fixed and standard: the blaster, the missiles, the bomb, collisions (armor and shield) and the thruster flame. Every launch starts at the basic level of each, then <strong>rolls three to six upgrades already switched on</strong>, so you never start naked, and you start differently every time.</p>
+                        <p>On top of that, <strong>each weapon rolls its own double-tap mode</strong>, separately for the blaster, the missiles and the bomb. Double-tap its button and it does one of three things:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table modes">
+                                <thead><tr><th scope="col">Mode</th><th scope="col">Best for</th><th scope="col">What happens</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Burst</th><td data-label="Best for">Hit and run</td><td data-label="What happens">An instant dump-fire you commit to: triple damage and triple fire rate, then a two-second recovery</td></tr>
+                                    <tr><th scope="row">Barrage</th><td data-label="Best for">Focused firepower</td><td data-label="What happens">Hold it down and the fire ramps up, every shot stronger, while turning and moving slow to a crawl. The blaster builds heat and needs three seconds to vent if it maxes out; missiles and bombs fire in salvos of at least four, each shot after the fourth half again stronger</td></tr>
+                                    <tr><th scope="row">Charge</th><td data-label="Best for">Prepared multi-kills</td><td data-label="What happens">A bar fills up. Fire early for up to 60% more damage; wait for full charge and it's a super shot with six times the damage and more speed, blast, pierce, freeze or corrosion, then a one-second cooldown</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Three weapons, three modes each, plus the rolled upgrades and the run's quirk: you'll run out of evenings long before the combinations run out.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/thermonuclear-berserker_3_feature.jpg" alt="Anime-style art, framed like an old TV screen: the spindly war machine fires a huge glowing magenta charged shot through a ring of light, tearing straight through a line of dark angular ships that break apart along it." width="1280" height="720" loading="lazy">
+                            <figcaption>"Let a charged shot fill all the way and it hits for six times the damage, piercing whatever is lined up behind the first target."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dice-six-faces-five-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">This launch's character</p>
+                        <h3>A quirk per run</h3>
+                        <p>Each launch can also roll a perk, something like a class for just this run. Every one leans toward attack: anything that lowers damage gives something back that still leaves your total firepower higher than before. Waiting and turtling are never the answer.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table perks">
+                                <thead><tr><th scope="col">Example perk</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Glass cannon</th><td>Double damage, three quarters of the armor</td></tr>
+                                    <tr><th scope="row">Bruiser</th><td>Heavy armor, heavy guns, slow</td></tr>
+                                    <tr><th scope="row">Finesse sniper</th><td>Fast, precise, long range</td></tr>
+                                    <tr><th scope="row">Spray and pray</th><td>Wider spread and more fire rate at 80% damage</td></tr>
+                                    <tr><th scope="row">Slammer</th><td>Five times the collision damage, and armor hardened against collisions</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/falling-star-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Planetfall</p>
+                        <h3>From deep space to the core</h3>
+                        <p>Every world is taken in the same order, the way Rayforce dives from space toward a planet's heart. The backgrounds change with each zone in simple, clean transitions, so you always feel how far down you've come:</p>
+                        <ol class="p-chain" aria-label="The zones of one world, top to bottom">
+                            <li><b>Deep space</b>The guarding fleet</li>
+                            <li><b>Orbit</b>Orbital defenses that would shoot down any ordinary torpedo</li>
+                            <li style="--c: var(--p-2)"><b>The sky</b>Interceptors and air fleets</li>
+                            <li style="--c: var(--p-2)"><b>The ground</b>Bases, factories, depots, defenses</li>
+                            <li style="--c: var(--p-3)"><b>The nexus</b>The world's control center, and the payload</li>
+                        </ol>
+                        <p>Destroy the nexus and every remaining Dominion unit on the world loses its tyrant and dies with it. The design leaves room for more depth later: seas, underwater zones, caverns and the planet's mantle and core, with walls and tighter spaces, plus gas giants, asteroid belts, nebulae and modest megastructures (shipyards, mining fleets, moon bases, prisons, depots), kept at a grounded, low-tech level.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cluster-bomb-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Growing on the way down</p>
+                        <h3>Upgrades before the boss</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/07-upgrade.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Right before each boss, the Berserker picks up <strong>a major upgrade</strong>, Metroid-style, so it's there to use in the fight: a new blaster type (freeze, pierce, phase, triple, scatter, ricochet, homing, airburst), a new armor (heat, gravity, reactive, anti-knockback, anti-EMP), a shield effect, a movement trick like a speed charge or a spinning boost attack, or new engine flames.</p>
+                        <p>Then nine options are offered at random and you <strong>take three to five</strong>, covering movement, berserk, armor, shields, each weapon, allies and utilities: hijacking enemy mines and missiles, shields that repel shots, a visor that shows what the enemy is about to do or reveals cloaked ships.</p>
+                        <p>Upgrades have no prerequisites, so the order they come in can be fully random. And they never change what a weapon is: the blaster stays a blaster, never a beam. Homing is an upgrade called seeker that can go on the blaster, the missiles or the bomb.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rocket-thruster-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Momentum</p>
+                        <h3>Real drift, real brakes</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/08-drift.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Space Chunks 2 had no momentum, and its movement felt stiff for it. The Berserker <strong>drifts</strong>: thrust sets you moving, S brakes, and W and S together bring you to a dead stop. Open space has almost no drag; atmosphere, gas and nebulae add more, so each zone flies a little differently.</p>
+                        <p>Missiles lock on to the enemy nearest the cursor and, if it dies before they arrive, pick the next nearest. Boosting is on its own key, from a quick tap to a long overboost, so a fast pass through a fleet is always one finger away.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/shield-disabled-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No cheap tricks</p>
+                        <h3>Enemies that fight fair</h3>
+                        <p><strong>No invulnerable shields, ever.</strong> Nothing turns white and makes you wait for it. Enemy shields are real shields that can be broken.</p>
+                        <p><strong>Turrets are weak points, not gates.</strong> You never have to strip a ship's guns before its hull can be hurt; hitting them just brings the hull down faster, and as a ship takes damage its turrets blow off one by one.</p>
+                        <p><strong>No ranks.</strong> Enemy classes are standard, each with its own weapon, ability, movement and turret slots, and none of them double their stats as the game goes on. Uncommon and rare elites turn up instead, recognizably special. Swarmers, marauders, minelayers, stealth ships, tractor-beam ships, carriers, shield ships, destroyers, dreadnoughts and motherships, with ground turrets and structures you can shoot from above, and bosses built from parts the way Warning Forever builds them.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/asteroid-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The battlefield fights back</p>
+                        <h3>Space full of things</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/09-debris.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Space isn't just a few flimsy rocks. Sectors hold big station fragments and asteroids to use as cover, debris fields of small fragments that sting a little and add up if you barrel through too fast, dust and nebula clouds that hide things, and methane clouds you can ignite, which regrow five seconds later. Explosions throw hazardous fragments of their own. The sky and the ground get their own equivalents.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/egg-pod-sbed.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Never quite alone</p>
+                        <h3>Wingmen in a box</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/thermonuclear-berserker/10-wingmen.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The Berserker builds its own allies inside itself and releases them like eggs or packages that unfold into small ships linked to it. They fight at its side, and if the Berserker falls, they lose power and crash with it.</p>
+                        <p>Allies and enemies alike talk: a line when they arrive, when they score a kill, when they're hurt, when they die, and now and then just from confidence or desperation, depending on how their hull is holding up.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/eye-target-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A hard budget</p>
+                        <h3>Never a slowdown</h3>
+                        <p>Reactorcore crashed an old laptop playing Space Chunks 2, with a stacked ultimate attack and salvos of cluster missiles on screen at once. So the design sets <strong>a tight maximum of things that can exist at any moment</strong> and keeps the game stable no matter what the player builds.</p>
+                        <p>It also keeps content cheap: every unit, prop, ally, enemy and boss fits inside a square sprite with a circle collider. That makes them easy to draw, even with generated art, easy to add, and every new one works with everything else.</p>
+                        <p>Pickups follow the same spirit. Health, missiles and bombs drop the way they do in Metroid, without fleeing candy to chase after or rocks to break open for points, so your attention stays on the fight.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/thermonuclear-berserker_4_boxart.jpg" alt="Box art: a skeletal war machine with a round armored head, three glowing magenta eyes, long clawed arms and an exposed ribcage of pistons dives toward the edge of a planet in a burst of pink light." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Launch order</p>
+                <h2 id="sendoff">Thermonuclear Berserker: Planetfall Arcade Blaster</h2>
+                <p>Target: one Dominion world. Delivery: beyond visual range. On arrival the package unfolds, clears the fleet, the orbit, the sky and the ground, grows stronger on everything it breaks, and finds the nexus. What happens next is the whole reason it was built.</p>
+                <p>Every launch a different machine. Every world one more step of the log toward blue.</p>
+                <p><strong>Fall on them like the end of the world.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Space Chunks 2, Rayforce, Omega Boost, Nova Drift, Azimuth, Gundam Wing, ABARA, Gun Metal, Raptor: Call of the Shadows and Warning Forever</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Stormfaze (CC0), Turret Road, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

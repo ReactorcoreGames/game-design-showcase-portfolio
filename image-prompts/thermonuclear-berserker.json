@@ -1,0 +1,39 @@
+{
+  "slug": "thermonuclear-berserker",
+  "preset": "01 Main - Digital Anime 90s",
+  "style": "Palette of hot magenta and pink-white reactor glow with amber missile trails against deep violet and indigo space.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide cinematic shot in deep space above a cloudy grey planet: a lean, spindly dark-grey combat mecha robot with a narrow pointed visor head, thin exposed metal limbs, a blazing magenta reactor core glowing in its chest, twin cannon barrels on its forearms and thruster packs on its back trailing pink-white plasma, flying out of a long open torpedo-shaped casing, facing a distant fleet of dark angular spaceships. Stars and a faint nebula behind. The robot is on the right; the lower left of the picture is empty dark space."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Dynamic action shot in space seen from slightly above: a lean, spindly dark-grey combat mecha robot with a narrow pointed visor head, thin exposed metal limbs, a blazing magenta reactor core glowing in its chest, twin cannon barrels on its forearms and thruster packs on its back trailing pink-white plasma, streaks through a swarm of small angular dark alien fighter ships, firing magenta blaster bolts while amber missile trails curve away from its shoulders toward the enemies, two fighters bursting into orange fireballs, metal debris scattered around. No text, lettering or signatures anywhere.",
+      "model": "nano-banana-2-lite"
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide side shot in space: a lean, spindly dark-grey combat mecha robot with a narrow pointed visor head, thin exposed metal limbs, a blazing magenta reactor core glowing in its chest, twin cannon barrels on its forearms and thruster packs on its back trailing pink-white plasma, both cannon arms pointed forward, fires one enormous glowing magenta charged plasma shot that pierces straight through a long line of dark angular alien warships, the ships breaking apart one after another along the shot's path. A bright ring of light at the cannons, stars behind. No text, lettering or signatures anywhere.",
+      "model": "nano-banana-2-lite"
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover: a gaunt skeletal biomechanical war machine, a tall mechanical skeleton of dark gunmetal plates and exposed ribbed pistons with a blazing magenta reactor core in its chest, long clawed mechanical arms ending in twin cannon barrels, and thruster vents on its back trailing pink-white plasma, dives head-first down toward the curved edge of a planet far below, wreathed in magenta and pink re-entry flames, its arms swept back. Dark violet starry space fills the top of the picture."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Extreme wide view of space: a dull grey-green planet ringed by dark spiked orbital fortresses and angular alien warships, its night side scarred with the glow of industry. Far away on the left among the stars, a single tiny bright magenta streak races toward the planet. A violet nebula and a distant yellow sun behind."
+    }
+  ]
+}

@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "thermonuclear-berserker.html", prefix: "thermonuclear-berserker",
+    title: "Thermonuclear Berserker", subtitle: "Planetfall Arcade Blaster",
+    icon: "nuclear-bomb-skoll", tint: "magenta",
+    blurb: "Fly a nuclear bomb that grew arms and thrusters, falling from deep space through orbit, sky and ground to an enemy world's nexus. Every launch rolls a different loadout and fire modes, and every world taken turns the war log a little bluer.",
+    genres: ["action", "arcade", "mecha"], tags: ["top-down shooter", "blast-em-up", "random loadout", "newtonian flight"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "hellsweep-infinite.html", prefix: "hellsweep-infinite",
     title: "Hellsweep Infinite", subtitle: "Momentum Demon Shooter",
     icon: "horned-skull-lorc", tint: "red",
