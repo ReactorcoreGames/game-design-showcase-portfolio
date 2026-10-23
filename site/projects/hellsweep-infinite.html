@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellsweep Infinite: Momentum Demon Shooter</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: an old-school demon shooter rebuilt around a 2D shooter's arsenal and pace. Every gun from the first minute, standard ammo that never runs out, jet boots, on-demand slow motion, adrenaline powers, and a death that never rewinds anything.">
+    <meta name="keywords" content="game design concept, first-person shooter, boomer shooter, demon shooter, momentum movement, jet boots, slow motion, infinite ammo, respawn, Doom inspired, Soldat inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/hellsweep-infinite.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Hellsweep Infinite: Momentum Demon Shooter">
+    <meta property="og:description" content="A game design concept: a bunch of guys decided to kill hell, and you can be one of them. Every gun, no ammo hunts, jet boots and slow motion. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/hellsweep-infinite.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/hellsweep-infinite_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: an armored soldier on jet boots flies over a crowd of imps in a lava cavern">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Hellsweep Infinite: Momentum Demon Shooter">
+    <meta name="twitter:description" content="A game design concept: a bunch of guys decided to kill hell, and you can be one of them. Every gun, no ammo hunts, jet boots and slow motion.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/hellsweep-infinite_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Hellsweep Infinite: Momentum Demon Shooter",
+        "description": "A game design concept, not a released game: a first-person demon shooter with a 2D shooter's arsenal and time-to-kill, every weapon available from the start, standard ammo that never runs out, jet boots, on-demand slow motion and adrenaline powers, and endless respawns that never rewind the map.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Shooter"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/hellsweep-infinite.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/hellsweep-infinite_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#1a0b09">
+
+    <link rel="preload" href="../fonts/dendritic-voltage.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Hellsweep Infinite: hellfire red over scorched maroon, with brass for the spent casings
+           and bone for the highlights. Dendritic Voltage, all spikes, for the title and headings;
+           Operation Napalm Italic, a stencil on an ammo crate, for the subtitle and kickers. */
+        @font-face { font-family: "Dendritic Voltage"; src: url("../fonts/dendritic-voltage.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Operation Napalm Italic"; src: url("../fonts/operation-napalm-italic.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #1a0b09;
+            --flow-2: #4a1510;
+            --grid-minor: rgba(255, 140, 100, 0.04);
+            --grid-major: rgba(255, 140, 100, 0.09);
+            --p-ground: rgba(26, 12, 10, 0.95);
+            --p-panel: #2a1512;
+            --p-1: #ff5a36;
+            --p-2: #e3ad4f;
+            --p-3: #f4e7d2;
+            --p-text: #eadfd8;
+            --p-dim: #b9a49b;
+            --p-line: rgba(255, 140, 100, 0.17);
+            --font-title: "Dendritic Voltage", "Segoe UI", sans-serif;
+            --font-sub: "Operation Napalm Italic", "Segoe UI", sans-serif;
+            --shade: #100504;
+        }
+
+        /* Title effect, "muzzle flash": the hellfire glow sits low and smoulders, then two hard
+           flashes in quick succession, like a burst from a rifle, then it settles again.
+           Layered dark shadows keep it legible at every frame. */
+        .p-name {
+            letter-spacing: 0.03em;
+            animation: muzzle 4.5s steps(1, end) infinite;
+        }
+        @keyframes muzzle {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(255, 90, 54, 0.35); }
+            70% { color: #fff6e8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(255, 200, 120, 0.95), 0 0 34px rgba(255, 90, 54, 0.85); }
+            73% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(255, 90, 54, 0.35); }
+            76% { color: #fff6e8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(255, 200, 120, 0.95), 0 0 34px rgba(255, 90, 54, 0.85); }
+            79% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(255, 90, 54, 0.5); }
+        }
+        .p-sub { text-transform: uppercase; letter-spacing: 0.05em; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-1);
+            animation: smoulder 4.5s ease-in-out infinite;
+        }
+        @keyframes smoulder {
+            0%, 100% { box-shadow: 0 0 4px rgba(255, 90, 54, 0.35); opacity: 0.75; }
+            75% { box-shadow: 0 0 16px rgba(255, 200, 120, 0.9), 0 0 28px rgba(255, 90, 54, 0.7); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 4.5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 75% { box-shadow: 0 0 12px rgba(255, 90, 54, 0.8); } }
+        h2, h3 { letter-spacing: 0.03em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.06em; }
+
+        .arsenal td:last-of-type, .pocket td:first-of-type { width: 100%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/hellsweep-infinite_1_title.jpg" alt="Oil painting: three soldiers in heavy combat armor and helmets stand on a ridge of black volcanic rock, looking out over a burning red hellscape of lava rivers and spiked fortresses, a colossal horned silhouette in the smoke beyond." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Hellsweep Infinite</span><span class="p-sub">Momentum Demon Shooter</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/horned-skull-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/hell-crosses-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Hellsweep Infinite takes the old-school first-person demon shooter and swaps its arsenal and pace for those of a frantic 2D multiplayer shooter. Every gun is in play from the first minute, the standard ones never run out of ammo, demons die in a few well-placed shots, and so do you. You stay alive by moving: jet boots, momentum jumps, backflips and slow motion on demand.</p>
+            <p>When you die, you're back in the fight a moment later, and nothing you did is undone. The demons you killed stay dead. The only thing between you and the end of the map is how well you move and shoot.</p>
+            <p>It's a love letter to two games at once: Doom's hell and its demons, and Soldat's guns, time-to-kill and acrobatics, with Max Payne's bullet time and Unreal Tournament 2004's adrenaline powers in the mix. It's a small design on purpose: a combat overhaul, not a story.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Fans of the fast, old-school shooters who love the speed and the demons but are tired of the parts in between.</p>
+                    <p>They want <strong>the fight, all of the fight</strong>, without scrounging for ammo, saving the good gun for later, or replaying a whole stretch because one mistake sent them back to a save.</p>
+                    <p>It's mouse and keyboard, with a few more movement keys than usual. The basics are easy; moving well is a skill that keeps growing.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power and freedom:</strong> every gun, every power, from the start, and the choice of how to use them.</p>
+                    <p><strong>Movement and excitement:</strong> flying, flipping and slowing time in a fight that's over in seconds.</p>
+                    <p><strong>Play:</strong> a simple premise taken completely seriously as a playground.</p>
+                    <p>It deliberately avoids draining <strong>safety</strong> and <strong>respect for your time</strong>: no ammo hunts, no lost progress, no reloads of the last save.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>The genre default hands out weapons one by one, keeps ammo scarce, and rewinds you to a save when you die. That's arbitrary progression, artificial scarcity and time that rewinds, all three.</p>
+                    <p>This design drops them: <strong>everything from the start, ammo that never runs dry, and a death that only costs you a moment</strong>.</p>
+                    <p>The challenge moves to where it belongs: a fight where both sides die fast, and you have far better ways to move.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/hellsweep-infinite_5_story.jpg" alt="Oil painting of an endless hellscape seen from high above: rivers of lava winding between black spires and spiked fortresses under a blood-red sky, a small armored transport descending through the smoke into a burning crater." width="1280" height="720" loading="lazy">
+            <figcaption>"Somebody had to go down there and kill hell. A bunch of guys volunteered."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/flame-tunnel-lorc.png)"></span>Lore and story</h2>
+            <p>The design's entire lore is one line: <strong>a bunch of guys decided to kill hell, and you can be one of them.</strong> That's it, and that's on purpose. Everything else is the fight.</p>
+
+            <h3>Hell</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/01-hell.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Lava, bone, black stone and fortresses full of demons: small fry that die by the dozen, horned knights and spider-walkers that take a few shots, and the towering lords and titans at the top.</p>
+
+            <h3>The crew</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/02-crew.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Ordinary soldiers in body armor with a 2D shooter's armory and a pair of jet boots each. Nobody sent them. They just decided hell had gone on long enough.</p>
+
+            <h3>Right now</h3>
+            <p>Drop in, clear the map, move on to the next one. When one of the crew goes down, the next one is already on the way in.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>A first-person shooter on mouse and keyboard. The design lists the moves and powers; the key layout below fills in a standard arrangement for them.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Run and strafe</dd></div>
+                        <div><dt>Space</dt><dd>Jump; hold in the air for the jet boots</dd></div>
+                        <div><dt>S + Space</dt><dd>Backflip</dd></div>
+                        <div><dt>C</dt><dd>Crouch</dd></div>
+                        <div><dt>X</dt><dd>Go prone</dd></div>
+                        <div><dt>Shift</dt><dd>Slow motion, on and off</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim; left button fires</dd></div>
+                        <div><dt>Q</dt><dd>Swap primary and secondary</dd></div>
+                        <div><dt>R</dt><dd>Reload</dd></div>
+                        <div><dt>F</dt><dd>Throw a grenade</dd></div>
+                        <div><dt>V</dt><dd>Melee, with any weapon</dd></div>
+                        <div><dt>E</dt><dd>Take a weapon from the floor</dd></div>
+                        <div><dt>1 – 4</dt><dd>Spend adrenaline on a power</dd></div>
+                        <div><dt>Wheel, G</dt><dd>Pick a carried powerup, use it</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The HUD shows the essentials: health and armor, the slow-motion meter, the adrenaline meter, and the powerups in your pocket. The two guns you carry need no ammo counter, only a magazine; the special weapons show what they have left.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/hellsweep-infinite_2_vignette.jpg" alt="Oil painting: a soldier in heavy armor and a steel helmet flies through a lava cavern on twin jets of flame from his boots, his rifle blazing toward a crowd of startled red horned imps on the rocks below." width="1280" height="720" loading="lazy">
+            <figcaption>"A horned knight goes down in a few shots. So do you, at a hundred health. The jet boots are your armor."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crosshair-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Seconds-long fights</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/03-fight.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A room full of demons, two guns, a grenade or two and a pair of jet boots. Fights are decided in seconds, because both sides die fast. You read the room, pick your angle, fly, flip, slow time for the one moment that matters, and keep moving.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/portal-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One map, cleared</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/04-map.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A map of hell to sweep from entrance to exit, room by room. Every death drops you back in without resetting anything: killed demons stay dead, opened doors stay open, and the map only ever moves forward. It ends when you reach the exit, and how many times you fell on the way is just part of the story.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/infinity-various-artists.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Kill hell. All of it.</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/05-all-of-it.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The design is a combat overhaul and leaves the maps open, so this layer is a gap filled the way the design's title points: <strong>hell never runs out</strong>. The combat works on any map built for it, handmade or generated, so there's always another stretch of hell to sweep. The crew's war is the overarching goal, and it's never finished.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A map a sitting</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/06-sitting.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A map is a sitting of a quarter of an hour or so. Pause anywhere and save whenever you need to stop; since death never rewinds, a save is only ever a bookmark, never a safety net.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/imp-laugh-lorc.png)"></span>Game modes</h2>
+            <p>There's one way to play: <strong>drop in and sweep the map</strong>. The design has no separate modes, difficulty ladder or score attack. The demons' numbers and the map decide how hard a stretch of hell is.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/bullets-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/minigun-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Every gun, from the first minute</h3>
+                        <p>The whole arsenal is in play from the start. You carry <strong>a primary and a secondary</strong>, the way Soldat does it: you begin with a random pair and a few grenades, and swap either one for whatever you find on the floor, since every weapon pickup is random too. The standard guns keep their original character and <strong>never run out of ammo</strong>; you only reload.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table arsenal">
+                                <thead><tr><th scope="col">Weapon</th><th scope="col">Slot</th><th scope="col">How it fights</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Twin hand cannons</th><td data-label="Slot">Primary</td><td data-label="How it fights">Semi-automatic, two shots at once</td></tr>
+                                    <tr><th scope="row">Flurry SMG</th><td data-label="Slot">Primary</td><td data-label="How it fights">A fast flurry with a wide spread</td></tr>
+                                    <tr><th scope="row">Burst rifle</th><td data-label="Slot">Primary</td><td data-label="How it fights">Fast bursts</td></tr>
+                                    <tr><th scope="row">Battle rifle</th><td data-label="Slot">Primary</td><td data-label="How it fights">Slow and steady</td></tr>
+                                    <tr><th scope="row">Marksman rifle</th><td data-label="Slot">Primary</td><td data-label="How it fights">Semi-automatic precision</td></tr>
+                                    <tr><th scope="row">Combat shotgun</th><td data-label="Slot">Primary</td><td data-label="How it fights">Loaded shell by shell, wide spread, pushes hard</td></tr>
+                                    <tr><th scope="row">Grenade thumper</th><td data-label="Slot">Primary</td><td data-label="How it fights">One shot, one instant kill, dangerous up close</td></tr>
+                                    <tr><th scope="row">Anti-materiel rifle</th><td data-label="Slot">Primary</td><td data-label="How it fights">A slow, long-range shot that pierces</td></tr>
+                                    <tr><th scope="row">Squad machine gun</th><td data-label="Slot">Primary</td><td data-label="How it fights">The middle ground of automatic fire</td></tr>
+                                    <tr><th scope="row">Minigun</th><td data-label="Slot">Primary</td><td data-label="How it fights">Relentless spray that pushes and stuns</td></tr>
+                                    <tr><th scope="row">Sidearm</th><td data-label="Slot">Secondary</td><td data-label="How it fights">A quick finisher</td></tr>
+                                    <tr><th scope="row">Knife</th><td data-label="Slot">Secondary</td><td data-label="How it fights">An instant-kill stab, or a throw that flies back on its own or waits to be picked up</td></tr>
+                                    <tr><th scope="row">Chainsaw</th><td data-label="Slot">Secondary</td><td data-label="How it fights">Carves through crowds or one big target, if you dare get close</td></tr>
+                                    <tr><th scope="row">Rocket tube</th><td data-label="Slot">Secondary</td><td data-label="How it fights">A huge blast, a very slow reload, fired only crouched on solid ground</td></tr>
+                                    <tr><th scope="row">Flamer</th><td data-label="Slot">Special</td><td data-label="How it fights">A short-to-medium range fire hose</td></tr>
+                                    <tr><th scope="row">War bow</th><td data-label="Slot">Special</td><td data-label="How it fights">Semi-automatic instant kills; blast arrows make it a faster, longer-range grenade thumper</td></tr>
+                                    <tr><th scope="row">The emplacement</th><td data-label="Slot">Special</td><td data-label="How it fights">A brutal heavy machine gun, the top of the arsenal, with limited piercing</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The <strong>special weapons</strong> are the exception: limited ammo, and found at the map's one fixed pickup, which hands out a special weapon with a full refill. Grenades come in two kinds: a timed frag for groups at close range, and a cluster bomb that splits into five in its direction of flight, in the air or on impact. Every weapon can also melee, and the knife and chainsaw hit harder when they do.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/hellsweep-infinite_3_feature.jpg" alt="Oil painting: on a long black stone altar lit by lava glow, a whole arsenal laid out: assault rifles, scoped rifles, a bow, a rocket tube and a heap of round grenades, with horned stone statues watching from the shadows." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every gun is in the pool from the first minute, and none of the standard ones ever runs dry."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/heavy-bullets-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Fast both ways</p>
+                        <h3>A 2D shooter's time-to-kill</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/07-ttk.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The weapons are tuned so that <strong>the mid-tier demons, the horned knights, spider-walkers and bloated flame-gunners, die as fast as a player does in Soldat</strong>. Everything below them is chow. The war bow takes a demon lord in one hit and a titan in four.</p>
+                        <p>Every gun hits at full power up to a set range and weakens past it, and every shot is a real projectile you can lead and dodge, except the minigun's instant spray.</p>
+                        <p>You get the same deal. You have <strong>100 health</strong>, and armor is rare: a green vest absorbs 90% of the damage until 200 points of it are spent, a blue one until 500. A stimpack heals half your health and a medkit all of it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jetpack-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Movement is armor</p>
+                        <h3>Jet boots, flips and momentum</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/08-boots.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>With so little health, standing still is the real danger. Every soldier wears <strong>jet boots that recharge</strong> on their own, and moves with Soldat's acrobatics: jumps that carry and build momentum, boosts off a jump, backflips and going prone.</p>
+                        <p>The heaviest weapons ask you to stop: the rocket tube only fires crouched on solid ground. Choosing when to plant your feet is part of the fight.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Two gauges</p>
+                        <h3>Slow motion and adrenaline</h3>
+                        <p><strong>Slow motion</strong> is an ability you switch on whenever you like, the way Max Payne does it, and the design's focus is on using it well: one heartbeat of slowed time to land the shot that matters. It runs on a meter filled by health vials and by ammo pickups, which give you either slow-motion juice or a grenade and also reset your weapons' cooldowns.</p>
+                        <p><strong>Adrenaline</strong> works like Unreal Tournament 2004's: kills and armor shards fill it, and a full meter buys one of four powers for a while:</p>
+                        <ol class="p-chain" aria-label="The four adrenaline powers">
+                            <li><b>Regen</b>Health flows back</li>
+                            <li style="--c: var(--p-2)"><b>Speed</b>Faster running and higher jumps</li>
+                            <li style="--c: var(--p-3)"><b>Flight</b>The jet boots never run out</li>
+                            <li><b>Fire rate</b>Every gun shoots twice as fast</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/invisible-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Use them when you choose</p>
+                        <h3>Powerups in your pocket</h3>
+                        <p>Powerups don't fire the moment you touch them. <strong>Every one goes into your inventory</strong>, and you decide when it's worth spending. Their durations are longer than in a 2D shooter, to fit the size of a demon fight:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table pocket">
+                                <thead><tr><th scope="col">Powerup</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Shade</th><td>A shimmering blur that makes you hard to see</td></tr>
+                                    <tr><th scope="row">Soul flame</th><td>Burns hot with stolen life, overcharging your health</td></tr>
+                                    <tr><th scope="row">Untouchable</th><td>Invulnerability for a while</td></tr>
+                                    <tr><th scope="row">Heavy</th><td>Heavy armor plus the emplacement gun, the big one</td></tr>
+                                    <tr><th scope="row">Night eyes</th><td>Night-vision goggles for the dark places</td></tr>
+                                    <tr><th scope="row">Hazard suit</th><td>Protection from lava, slime and poison</td></tr>
+                                    <tr><th scope="row">Berserk</th><td>Six times the damage for 30 seconds</td></tr>
+                                    <tr><th scope="row">Plasma pack</th><td>A backpack upgrade for 300 seconds: every weapon fires plasma shots with an area blast and three times the damage</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/burning-skull-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Nothing un-happens</p>
+                        <h3>Death is a detour</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/hellsweep-infinite/09-detour.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>You <strong>respawn endlessly</strong>, and the map never resets. The demons you killed stay dead, the doors stay open, and the next soldier of the crew picks up where the last one fell. There are no lives to count and no checkpoint to replay.</p>
+                        <p>That's what lets the fight be this lethal. A shooter where both sides die in a few hits is only fun when dying costs you a moment rather than ten minutes, so the danger stays in the fight and never leaks into your evening.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/hellsweep-infinite_4_boxart.jpg" alt="Box art, oil painting: seen from behind, a soldier in heavy combat armor and helmet holds a rifle and faces a towering demon lord with a goat's skull for a face and flaming curved horns, arms spread, molten rock glowing around them." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Volunteers wanted</p>
+                <h2 id="sendoff">Hellsweep Infinite: Momentum Demon Shooter</h2>
+                <p>No briefing. No orders. Just a pair of jet boots, every gun anyone ever built, and the ammo to go with them. Hell has gone on long enough, and a bunch of guys decided to do something about it.</p>
+                <p>Fall down, get back up, keep sweeping. The demons you killed stay dead.</p>
+                <p><strong>Kill hell. You can be one of them.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Doom, Soldat, Max Payne and Unreal Tournament 2004</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Dendritic Voltage and Operation Napalm (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

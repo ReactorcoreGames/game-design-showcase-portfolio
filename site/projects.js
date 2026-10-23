@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "hellsweep-infinite.html", prefix: "hellsweep-infinite",
+    title: "Hellsweep Infinite", subtitle: "Momentum Demon Shooter",
+    icon: "horned-skull-lorc", tint: "red",
+    blurb: "A bunch of guys decided to kill hell, and you can be one of them. Every gun from the first minute, standard ammo that never runs dry, jet boots, slow motion on demand, and a death that never rewinds the map.",
+    genres: ["action"], tags: ["first-person shooter", "demons", "momentum movement", "slow motion"],
+    status: "concept", added: "2026-10-23"
+  },
+  {
     page: "god-tier-tantrum.html", prefix: "god-tier-tantrum",
     title: "God Tier Tantrum", subtitle: "Stress Relief Smasher",
     icon: "fulguro-punch-lorc", tint: "orange",

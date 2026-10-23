@@ -47,7 +47,7 @@ FONTS = [
     ("Squares Bold Free.otf", "squares-bold.woff2", None, None),            # SIL OFL, graviton-mayhem, smash-droids
     ("Radio Stars.otf", "radio-stars.woff2", None, None),                   # CC0, AAL-Stealth-Sector, cyberdungeon, starforge-legion
     ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector
-    ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon, colossal_devastators
+    ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon, colossal_devastators, hellsweep-infinite
     ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon
     ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice, god-tier-tantrum
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
@@ -64,7 +64,7 @@ FONTS = [
     ("ExpletusSans-Bold.ttf", "expletus-sans-bold.woff2", None, None),      # SIL OFL, HazardMissionTeam (2)
     ("MatrixTypeDisplay-Bold.ttf", "matrixtype-display-bold.woff2", None, None),  # CC0, Justice Will Glass Them
     ("Micro5-Regular.ttf", "micro5.woff2", None, None),                     # SIL OFL, Justice Will Glass Them, tile-mechs
-    ("OperationNapalm-Italic.ttf", "operation-napalm-italic.woff2", None, None),  # CC0, Mafia_Takedown
+    ("OperationNapalm-Italic.ttf", "operation-napalm-italic.woff2", None, None),  # CC0, Mafia_Takedown, hellsweep-infinite
     ("TurretRoad-Medium.ttf", "turret-road-medium.woff2", None, None),      # SIL OFL, Mafia_Takedown
     ("Exo2.0-BoldItalic.otf", "exo2-bold-italic.woff2", None, None),        # SIL OFL, Megalodon
     ("MatrixType-Bold.ttf", "matrixtype-bold.woff2", None, None),           # CC0, Megalodon

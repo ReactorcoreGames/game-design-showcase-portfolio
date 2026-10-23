@@ -1,0 +1,19 @@
+{
+  "slug": "hellsweep-infinite-mini",
+  "out": "site/projects/mini/hellsweep-infinite",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - D - Hard Feel",
+  "lead": "Hard dramatic cinematic photograph, hellfire red glow and black volcanic smoke. ",
+  "images": [
+    {"n": 1, "name": "hell", "ratio": "3:2", "prompt": "A fortress of black stone and bone spires above a river of lava"},
+    {"n": 2, "name": "crew", "ratio": "3:2", "prompt": "A few soldiers in body armor checking their rifles before going in"},
+    {"n": 3, "name": "fight", "ratio": "3:2", "prompt": "A soldier leaping across a smoky cavern, muzzle flash lighting the rocks"},
+    {"n": 4, "name": "map", "ratio": "3:2", "prompt": "A long hellish corridor of carved stone doors, all blown open"},
+    {"n": 5, "name": "all-of-it", "ratio": "3:2", "prompt": "An endless burning landscape of lava rivers stretching to the horizon"},
+    {"n": 6, "name": "sitting", "ratio": "3:2", "prompt": "An armored helmet resting on a crate by a small campfire in a cave"},
+    {"n": 7, "name": "ttk", "ratio": "3:2", "prompt": "Brass bullet casings flying through red smoke in slow motion"},
+    {"n": 8, "name": "boots", "ratio": "3:2", "prompt": "Armored boots with jets of flame lifting off from black rock"},
+    {"n": 9, "name": "detour", "ratio": "3:2", "prompt": "A soldier stepping out of a glowing portal into a smoky lava cave"}
+  ]
+}

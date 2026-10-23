@@ -125,7 +125,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Net Terminal (BLAME!-inspired), now Lattice Walker
 - [x] AAL Smash Droids
 - [x] Closed-room smasher (rosebud doc), now God Tier Tantrum
-- [ ] Soldat Doom Infinite
+- [x] Soldat Doom Infinite, now Hellsweep Infinite
 - [ ] Space Chunks–inspired blast-em-up
 - [ ] Metroid Forever concept
 - [ ] AAL Collector

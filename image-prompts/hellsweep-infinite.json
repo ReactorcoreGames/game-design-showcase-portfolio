@@ -1,0 +1,37 @@
+{
+  "slug": "hellsweep-infinite",
+  "preset": "01 Main - Frazetta Oil Paint",
+  "style": "Palette of hellfire red and molten orange glow, brass highlights and bone-white smoke against scorched maroon and black rock.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide low-angle shot from behind: four soldiers in heavy grey combat armor, full helmets and armored boots stand on a jagged ridge of black volcanic rock, rifles held low, looking out over a vast burning hellscape of glowing lava rivers, black spires and spiked fortresses under a blood-red sky. Far away in the smoke, the colossal silhouette of a horned giant. The soldiers stand on the right; the lower left of the picture is dark rock and haze."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Dynamic wide action shot inside a huge lava cavern: a soldier in heavy grey combat armor and a full helmet soars high through the air on twin jets of orange flame from his armored boots, holding a compact submachine gun ready. Far below him on the glowing rocks, a pack of small red horned imps with long claws looks up. Embers and smoke fill the air, a lava river glows in the background."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide still-life view of a long altar of black stone in a hellish hall lit by orange lava glow: a whole arsenal laid out in a neat row along it, assault rifles, a long sniper rifle, a pump shotgun, a heavy six-barrelled minigun, a chainsaw, a recurve war bow with arrows, a flamethrower with its fuel tank, a shoulder rocket tube and a heap of round grenades. Smoke curls between the guns, horned stone statues stand in the shadows behind."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait cover: seen from behind at the bottom of the picture, a soldier in heavy grey combat armor and a full helmet stands braced, holding a big six-barrelled minigun. Facing him across a field of glowing molten rock, a towering horned demon lord with a goat-like skull face and huge curved horns, wreathed in flames, its arms spread. Thick red smoke and a dark sky fill the top of the picture."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Extreme wide view from high above an endless hellscape: rivers of glowing lava wind between black stone spires, bone-white cliffs and spiked fortresses, stretching to a horizon lost in red smoke under a blood-red sky. In the middle distance, a small boxy armored transport craft with glowing thrusters descends through the smoke toward a huge burning crater."
+    }
+  ]
+}
