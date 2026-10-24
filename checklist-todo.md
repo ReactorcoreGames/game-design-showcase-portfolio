@@ -137,7 +137,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Type 1-X Mecha RTS (images pending)
 - [x] Titanium Punk Orphans (images pending)
 - [x] Metsanelaimet
-- [ ] Auto chess (or fold it into another page)
+- [x] Auto chess, now Auto Art Chess (its own small page)
 - [ ] Bazooka Bomber
 - [ ] Telekinetic Eradicator
 - [ ] UNO-inspired family (decide the split: 1–3 pages)

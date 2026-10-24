@@ -1,0 +1,20 @@
+{
+  "slug": "auto-art-chess-mini",
+  "out": "site/projects/mini/auto-art-chess",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "03 Style - Graphite Watercolor",
+  "lead": "Loose watercolor painting, chess pieces and bright paint strokes, crimson and teal washes. ",
+  "images": [
+    {"n": 1, "name": "board", "ratio": "3:2", "prompt": "An empty chessboard in soft muted tones"},
+    {"n": 2, "name": "teams", "ratio": "3:2", "prompt": "Two rows of chess pieces in two different colors facing each other"},
+    {"n": 3, "name": "paint", "ratio": "3:2", "prompt": "Ribbons of paint trailing across checkered squares"},
+    {"n": 4, "name": "frame", "ratio": "3:2", "prompt": "A small square framed painting of a chessboard hanging on a wall"},
+    {"n": 5, "name": "move", "ratio": "3:2", "prompt": "A single chess knight sliding across the board"},
+    {"n": 6, "name": "match", "ratio": "3:2", "prompt": "A fallen chess king lying in a splash of paint"},
+    {"n": 7, "name": "collection", "ratio": "3:2", "prompt": "A stack of square canvases leaning against a studio wall"},
+    {"n": 8, "name": "evening", "ratio": "3:2", "prompt": "A quiet evening room with a glowing chessboard painting on a desk"},
+    {"n": 9, "name": "coin", "ratio": "3:2", "prompt": "A coin spinning in the air above a chessboard"},
+    {"n": 10, "name": "palette", "ratio": "3:2", "prompt": "A painter's palette with many bright color swatches and a brush"}
+  ]
+}

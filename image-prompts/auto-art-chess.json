@@ -1,0 +1,37 @@
+{
+  "slug": "auto-art-chess",
+  "preset": "04 Special - Splash",
+  "style": "One team's pieces glossy crimson, the other's glossy teal, on a muted checkered board. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Top-down view of a chessboard with muted pale and dark squares, covered in long flowing ribbons of liquid paint left by moving chess pieces, crimson trails from one side and teal trails from the other crossing and overlapping. Glossy crimson and teal chess pieces stand on the board. One small chess piece flies off the right edge of the board, trailing a streak of liquid color. The lower left of the picture is quiet, plain board."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Top-down view of a chessboard in the middle of a game: glossy crimson and teal chess pieces slide across the muted checkered squares, each one leaving a smooth permanent ribbon of liquid paint in its own color along the path it moved. A knight's L-shaped path is painted in teal. The board is already half covered in criss-crossing crimson and teal ribbons."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Close, low angle over a chessboard: a glossy crimson knight chess piece lands on a square and a glossy teal pawn chess piece is knocked flying off the board, spinning away. Where the pawn stood, a big splash of liquid teal paint bursts outward across the square in a star-shaped splatter. Crimson and teal paint ribbons already cover the squares around it."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait composition: a single glossy crimson chess king piece stands on a chessboard seen at a low angle, the squares around it covered in swirling ribbons of crimson and teal paint. Behind and above the king, a huge splash of liquid paint bursts upward like a crown of color, crimson and teal droplets frozen in the air. The upper third is a soft muted backdrop. Pure illustration with no lettering."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "A long gallery wall seen straight on, hung with many square framed paintings in neat rows. Every painting is a top-down chessboard covered in flowing ribbons and splashes of paint, each one in a different pair of colors: crimson and teal, gold and violet, lime and coral, ink blue and orange. A wooden floor and soft gallery lighting."
+    }
+  ]
+}

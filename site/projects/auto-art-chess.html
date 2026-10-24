@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Art Chess: Self-Playing Canvas Duels</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a chess game that plays itself, where every move leaves a permanent trail of paint and every capture a splash, so each match ends as a unique painting you can save.">
+    <meta name="keywords" content="game design concept, generative art, self-playing chess, autoplay, chess art, web app, ambient, screensaver, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/auto-art-chess.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Auto Art Chess: Self-Playing Canvas Duels">
+    <meta property="og:description" content="A game design concept: chess that plays itself and paints the board as it goes, so every match ends as a picture. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/auto-art-chess.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/auto-art-chess_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: crimson and teal chess pieces leave ribbons of paint across a chessboard">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Auto Art Chess: Self-Playing Canvas Duels">
+    <meta name="twitter:description" content="A game design concept: chess that plays itself and paints the board as it goes, so every match ends as a picture.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/auto-art-chess_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Auto Art Chess: Self-Playing Canvas Duels",
+        "description": "A game design concept, not a released game: a small browser toy where two computer players play chess by coin toss, every move painting a permanent trail on the board, so each match ends as a unique image that can be saved as a PNG.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Generative art", "Board game", "Ambient"],
+        "gamePlatform": "Web browser",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/auto-art-chess.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/auto-art-chess_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#151019">
+
+    <link rel="preload" href="../fonts/cranberry-gin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Auto Art Chess: a dim gallery around a painted board. Ink-plum ground, crimson and
+           teal for the two teams, canvas cream for highlights. Cranberry Gin, thin and rounded,
+           for the title and headings (in mixed case, since its capital B reads as a D); Exo 2
+           Medium for the subtitle and kickers. */
+        @font-face { font-family: "Cranberry Gin"; src: url("../fonts/cranberry-gin.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Exo 2 Medium"; src: url("../fonts/exo2-medium.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #151019;
+            --flow-2: #3a1630;
+            --grid-minor: rgba(240, 210, 230, 0.04);
+            --grid-major: rgba(240, 210, 230, 0.09);
+            --p-ground: rgba(21, 16, 25, 0.95);
+            --p-panel: #1f1824;
+            --p-1: #ff5f7e;
+            --p-2: #3fd6c8;
+            --p-3: #f6eedf;
+            --p-text: #e7e1e6;
+            --p-dim: #ada3ae;
+            --p-line: rgba(240, 210, 230, 0.15);
+            --font-title: "Cranberry Gin", "Segoe UI", sans-serif;
+            --font-sub: "Exo 2 Medium", "Segoe UI", sans-serif;
+            --shade: #0c090e;
+        }
+
+        /* Title effect, "new match": the name's glow drifts slowly from one team color to the
+           next, as every match picks new colors, and the subtitle's underline is a stroke of
+           paint that follows it. The layered dark shadows never change. */
+        h2, h3, .p-name { text-transform: none; letter-spacing: 0.01em; }
+        .p-name { font-weight: 700; animation: hue-drift 16s ease-in-out infinite; }
+        @keyframes hue-drift {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(255, 95, 126, 0.7); }
+            25% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(255, 196, 70, 0.7); }
+            50% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(63, 214, 200, 0.7); }
+            75% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(170, 120, 255, 0.7); }
+        }
+        .p-sub { color: var(--p-3); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.4rem; height: 5px; border-radius: 3px;
+            animation: hue-line 16s ease-in-out infinite;
+        }
+        @keyframes hue-line {
+            0%, 100% { background: #ff5f7e; box-shadow: 0 0 10px rgba(255, 95, 126, 0.6); }
+            25% { background: #ffc446; box-shadow: 0 0 10px rgba(255, 196, 70, 0.6); }
+            50% { background: #3fd6c8; box-shadow: 0 0 10px rgba(63, 214, 200, 0.6); }
+            75% { background: #aa78ff; box-shadow: 0 0 10px rgba(170, 120, 255, 0.6); }
+        }
+        .section-mark::after { animation: h2-line 16s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: 0 0 8px rgba(255, 95, 126, 0.5); } 50% { box-shadow: 0 0 8px rgba(63, 214, 200, 0.5); } }
+        h2, h3 { font-weight: 700; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.12em; }
+        .rules td:first-of-type { width: 34%; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/auto-art-chess_1_title.jpg" alt="Top-down view of a chessboard on a pale background, its squares crossed by long splashing ribbons of crimson and teal paint, glossy crimson and teal pieces standing in the paint and a teal streak flying off the right edge." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Auto Art Chess</span><span class="p-sub">Self-Playing Canvas Duels</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/chess-knight-skoll.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/empty-chessboard-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Auto Art Chess is a chess game that plays itself, badly and beautifully. Two computer players in randomly chosen colors take turns on a board in its own random tint. Every piece that moves leaves a permanent trail of its team's paint, every captured piece bursts into a splash and flies off the board, and when a king finally falls, the board is a finished painting you can save.</p>
+            <p>It's a small, calm thing: a web page that starts playing the moment it opens, with no sound and nothing to learn. Leave it running like a lava lamp on a second screen, or watch one match to the end and keep the picture if you like it.</p>
+            <p>The pieces move by the real rules of chess. The players just don't care who wins: they choose their moves by coin toss.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/easel-caro-asercion.png)"></span>Target audience</h3>
+                    <p>People who like lava lamps, fish tanks, screensavers and generative art, and chess fans who'd enjoy watching their game played with complete abandon.</p>
+                    <p>They want <strong>something pretty and gently surprising</strong> to look at, without having to do anything for it.</p>
+                    <p>The interface is four buttons. You never have to touch them.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/palette-delapouite.png)"></span>Game's purpose</h3>
+                    <p><strong>Beauty:</strong> every match ends as a picture nobody has seen before.</p>
+                    <p><strong>Rest:</strong> slow, eased movement, quiet colors and no sound, to watch or half-watch.</p>
+                    <p><strong>Whim and silliness:</strong> kings fall to random pawns, and beaten pieces go flying off the screen.</p>
+                    <p>It deliberately avoids draining <strong>attention</strong>: it needs no input, and nothing is lost by looking away.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/chess-king-skoll.png)"></span>Core concept</h3>
+                    <p>Chess is the classic contest: two minds trying to defeat each other, where only the result matters.</p>
+                    <p>Here <strong>the result is a picture, and the moves are the brushstrokes</strong>. The two players aren't opponents so much as two painters taking turns on one canvas.</p>
+                    <p>Nobody wins anything that lasts. What lasts is the image, if you choose to keep it.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/auto-art-chess_5_story.jpg" alt="A gallery wall hung with two rows of square framed paintings, each a chessboard splashed with paint in a different color pair, crimson and teal, gold, violet, lime, orange and blue, above a polished wooden floor." width="1280" height="720" loading="lazy">
+            <figcaption>"Every match picks new colors for the board, the background and both teams, so no two canvases hang alike."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="canvas">
+            <h2 class="section-mark" id="canvas"><span class="icon" style="--icon: url(../icons/paint-roller-delapouite.png)"></span>The canvas</h2>
+            <p>There's no story here, and that's on purpose. What there is instead is a canvas with its own rules.</p>
+
+            <h3>The board</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/01-board.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>An ordinary eight-by-eight chessboard fills the right side of the window, with a narrow column of labels and buttons on the left. The board can take any hue, but always a muted one: the dark squares stay very dark and the light squares nearly white, so the paint always stands out. The background around it is another hue, kept dim.</p>
+
+            <h3>Two teams</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/02-teams.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Each match rolls a color for each team: any hue, at a strong saturation, one darker and one lighter. The second team always takes a hue offset from the first, so they never blend. The pieces are one set of white shapes, tinted to their team.</p>
+            <p>Each team is named after the color it's closest to, so the match title reads like <strong>Dark Red vs Bright Cyan</strong> or <strong>Medium Blue vs Pale Gold</strong>.</p>
+
+            <h3>The paint</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/03-paint.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A moving piece leaves a <strong>permanent trail</strong> of its team's color along its path. A captured piece leaves a splash where it stood, then flies off the board in the direction its attacker was moving, faster still, and vanishes a few seconds after it crosses the edge. By the end of a long match, the board is layered with every path either side ever took.</p>
+
+            <h3>The frame</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/04-frame.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>At any moment, one button saves the board, its pieces and all its stains, with a thin margin of the background around them, as a square PNG of 512 by 512 pixels. That's the whole collection: pictures in a folder of your own, which open anywhere.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You don't play; you watch, and step in only when you want to. The four controls are always on screen in the left column, and each one has a key.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Buttons</h3>
+                    <dl>
+                        <div><dt>New match</dt><dd>Clear the board and start fresh, with new colors for everything, even mid-match</dd></div>
+                        <div><dt>Pause</dt><dd>Pause or resume the current match</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Keeping it going</h3>
+                    <dl>
+                        <div><dt>Auto</dt><dd>Checkbox: start a new match 30 seconds after a king falls</dd></div>
+                        <div><dt>Save</dt><dd>Save the board as a PNG</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The keyboard shortcuts are N for a new match, Space to pause, A for the auto-restart checkbox and S to save, and any key starts the next match once one has ended. The left column always shows the title, the match name, whose turn it is (or who won), the state of play (normal, check or checkmate) and, with auto-restart on, the countdown to the next match. Its text is colored to contrast with whatever background the match rolled, so it's always readable.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/auto-art-chess_2_vignette.jpg" alt="Top-down view of a chessboard where glossy crimson pieces on one side and teal pieces on the other sit among broad flowing streams of crimson and teal paint that cross in the middle of the board." width="1280" height="720" loading="lazy">
+            <figcaption>"Every move leaves a trail of its team's paint that never fades, so the board records the whole match."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/chess-pawn-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One move, one stroke</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/05-move.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A piece is chosen, and it glides to its square over one to three seconds, on an easing curve picked at random each time: one move eases in gently, the next lurches and settles. Its trail paints in behind it. Half a second after it lands, the other side moves.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/chess-queen-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A match, a canvas</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/06-match.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A match runs from the opening position until a king is captured. The labels then announce which team won, and the finished board waits for you to look at it, save it, or start the next one.</p>
+                        <p>Random play can run out of ways to end: two bare kings can never take each other. When neither king can ever fall, the match is called a draw and ends the same way.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/large-paint-brush-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Your own gallery</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/07-collection.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>There's no score across matches, no record of wins and nothing to build up. The only thing that carries over is what you chose to keep: the saved pictures, in your own folder, in a format anything can open. It's the simplest possible living history, and every one of them is unique.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Open it and leave it</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/08-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Open the page and the first match is already underway. Watch for a minute or an evening; tick the auto-restart box and it keeps painting new boards for as long as the window is open. Close it whenever you like. There's nothing to save but the pictures.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/chess-rook-skoll.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the self-playing match</strong>. With auto-restart on, it becomes an endless exhibition:</p>
+            <ol class="p-chain" aria-label="The exhibition loop">
+                <li><b>New colors</b>Board, background and two teams, all rolled fresh</li>
+                <li style="--c: var(--p-2)"><b>The match</b>Coin-toss chess, painting as it goes</li>
+                <li style="--c: var(--p-3)"><b>A king falls</b>The winner is announced; the canvas is finished</li>
+                <li><b>Thirty seconds</b>Time to look, or to save the picture</li>
+            </ol>
+            <p>Then it starts again, in colors nobody has picked yet.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/chess-knight-skoll.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/paint-brush-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Every move paints</h3>
+                        <p>The trails and splashes are painted straight into the board's own image rather than kept as separate objects on screen. A match of three hundred moves costs no more to show than a match of three, and the canvas stays smooth however crowded it gets.</p>
+                        <p>Captures are the loudest strokes. The captured piece leaves a splash on its square and is <strong>flung off the board</strong> along the attacker's line of movement, with an extra kick of one and a half to two times its speed, and disappears three seconds after it leaves the screen. Some matches end tidy, with a few long trails; others end in a storm of splashes.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/auto-art-chess_3_feature.jpg" alt="Close and low over a chessboard: a glossy crimson knight stands in a starburst of teal paint while a green glass piece topples over beside it, droplets flying." width="1280" height="720" loading="lazy">
+                            <figcaption>"A captured piece leaves a splash where it stood and flies off the board along its attacker's line of movement."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/coinflip-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Players who don't care who wins</p>
+                        <h3>The coin-toss AI</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/09-coin.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Both sides think the same way, in this order, every turn:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table rules">
+                                <thead><tr><th scope="col">Step</th><th scope="col">What it decides</th></tr></thead>
+                                <tbody>
+                                    <tr><td data-label="Step">Can I take the king?</td><td data-label="Decides">If any piece can, it always does, and the match is over.</td></tr>
+                                    <tr><td data-label="Step">Can I take anything?</td><td data-label="Decides">If a piece can capture, a coin toss decides whether it attacks or just moves.</td></tr>
+                                    <tr><td data-label="Step">Where do I go?</td><td data-label="Decides">A random piece with legal moves goes forward or diagonally forward 60% of the time, sideways 30% and backward 10%, as far as that piece is allowed to move that way.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>That's enough to make every match different and nearly every one absurd: queens wander off, pawns march, and kings are lost to whatever happens to be standing next to them. The lean toward moving forward keeps the two sides meeting in the middle, where the paint piles up.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rainbow-star-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Randomness with rules</p>
+                        <h3>A palette per match</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/auto-art-chess/10-palette.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Pure random colors would give a lot of mud. Each color here is random only inside a range chosen to look good: the board is always muted with dark dark squares and pale light ones, the background always dim, the teams always strong and kept apart by an offset in hue, and the labels always picked to contrast with what's behind them.</p>
+                        <p>Within those limits, anything goes, so a match can come out as a quiet ink drawing in two blues or a loud clash of lime and magenta, and the team names on the board tell you which.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/auto-art-chess_4_boxart.jpg" alt="Box art: a tall glossy crimson king stands among crimson and teal pawns on a chessboard, a huge crown-shaped splash of crimson and teal paint bursting up behind it." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Gallery placard</p>
+                <h2 id="sendoff">Auto Art Chess: Self-Playing Canvas Duels</h2>
+                <p><em>Dark Red vs Bright Cyan.</em> Paint on chessboard, 512 × 512.</p>
+                <p>Painted by two players who never once tried to win. Thirty-two pieces, several hundred strokes, one fallen king. The artists have already started on the next one.</p>
+                <p><strong>No two matches hang alike.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Icons by Skoll, Delapouite, Lorc and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Cranberry Gin (CC0), Exo 2, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "auto-art-chess.html", prefix: "auto-art-chess",
+    title: "Auto Art Chess", subtitle: "Self-Playing Canvas Duels",
+    icon: "chess-knight-skoll", tint: "magenta",
+    blurb: "A chess game that plays itself by coin toss, in new colors every match: each move leaves a permanent trail of paint and each capture a splash, so every match ends as a painting you can save.",
+    genres: ["sandbox"], tags: ["generative art", "chess", "autoplay", "web toy"],
+    status: "concept", added: "2026-10-24"
+  },
+  {
     page: "metsanelaimet.html", prefix: "metsanelaimet",
     title: "Metsanelaimet", subtitle: "Woodland Tunnel Shootout",
     icon: "squirrel-delapouite", tint: "green",
