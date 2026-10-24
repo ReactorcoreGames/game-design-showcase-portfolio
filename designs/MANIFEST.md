@@ -95,7 +95,6 @@ Proposed slugs. They are open to change until the page is built, then frozen. Fi
 | 11 | `aal-standalone` | AAL Standalone | `Standalone.txt` | The Terrene games are set after this one |
 | 17 | `topverse` | TopVerse | `TopVerse.txt` | |
 | 25 | `party-crasher` | (simplified Party Hard, 16x16 sprites) | `simplified party hard with 16x16 sprites.md` | Close relative of #30. Decide at planning whether it is its own page or one of the games on the anthology page. |
-| 26 | `telekinetic-eradicator` | Telekinetic Eradicator | `theme idea, Telekinetic Eradicator.txt` | The doc's villain list names real-world groups and nationalities. The page uses fictional stand-ins (archetypes of cruelty, not real groups). |
 | 27 | TBD | (UNO-inspired card game family) | `UNO/` folder: `uno card game web app singleplayer.md` (main "SuperUNO" design), `Uno poke energy card spinoff addon.txt` (elemental spinoff), `uno bizarro idea.md` (reverse rules, "ONU"), `txt based uno card game setup.md` (text-only presentation idea) | Probably 1–3 games. Decide the split at planning. Credit UNO as the inspiration, with an original title and no UNO naming in-game. |
 | 28 | TBD | Epic Toy Cool Combat (ETCC) family | `ETCC/` folder: `v1 Casual Lego Combat - Quick ruleset.txt`, the `v2 ETCC - *.txt` set (Introduction, Game Rules, Unit Designer, Weapon Designer; AI Control and Campaign Maker are empty stubs), `KMF Kinetic Minifig Fights - Proto ETCC physics driven simple.txt`, `vX Simplified Minifig Only ETCC.txt`, `Lego Combat inspirations.md` | Reactorcore counts about 3 separate games here: v1 casual quick play, v2 full ETCC with unit and weapon designers, and KMF physics-driven minifig fights. Confirm at planning. Credit the toy-brick inspiration, but no LEGO naming. |
 | 29 | `vigilant-pursuit` | (vehicular pursuit racing) | `vigilant terminator pursuit.md` | Title TBD |
@@ -113,4 +112,5 @@ Roughly 35–40 new pages at 5 images each is about 175–200 images, which is 3
 These stay in `designs/done/` and get no page of their own:
 
 - `Minesender Maximum.txt`: superseded by the released Ukrainian Turbo Minesweeper (see above)
+- `theme idea, Telekinetic Eradicator.txt`: retired on Reactorcore's word (2026-10-24). A random theme idea (a list of telekinetic powers and a Postal 2-style day structure), not a proper game concept.
 - `ALREADY DONE Pixel Sprites ala ReactorCore.txt`: an art-asset system, not a game (companion to Planet Warfare)

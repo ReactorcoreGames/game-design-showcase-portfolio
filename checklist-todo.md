@@ -139,7 +139,6 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Metsanelaimet
 - [x] Auto chess, now Auto Art Chess (its own small page)
 - [x] Bazooka Bomber, now AAL Bazooka Bomber
-- [ ] Telekinetic Eradicator
 - [ ] UNO-inspired family (decide the split: 1–3 pages)
 - [ ] ETCC family (about 3 pages: v1 casual, v2 full, KMF)
 - [ ] Vigilant pursuit racing
