@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "metsanelaimet.html", prefix: "metsanelaimet",
+    title: "Metsanelaimet", subtitle: "Woodland Tunnel Shootout",
+    icon: "squirrel-delapouite", tint: "green",
+    blurb: "Liero made into a singleplayer campaign: woodland animals and insects with bazookas float, dig and blast through destructible dirt, in generated campaigns you pick by mood and a silly Galactic Newspaper that remembers every one.",
+    genres: ["action", "physics"], tags: ["digging", "destructible terrain", "side view", "procedural campaigns"],
+    status: "concept", added: "2026-10-24"
+  },
+  {
     page: "punk-orphans.html", prefix: "punk-orphans",
     title: "Titanium Punk Orphans", subtitle: "Turn-Based Mecha Artillery",
     icon: "guitar-head-delapouite", tint: "magenta",

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metsanelaimet: Woodland Tunnel Shootout</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a singleplayer Liero-style digging shooter where woodland animals and insects with bazookas blast through destructible dirt, in generated campaigns you pick by mood, recorded in a silly Galactic Newspaper.">
+    <meta name="keywords" content="game design concept, Liero inspired, digging shooter, destructible terrain, woodland animals, singleplayer campaign, procedural levels, side view shooter, Soldat, Cryptark, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/metsanelaimet.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Metsanelaimet: Woodland Tunnel Shootout">
+    <meta property="og:description" content="A game design concept: woodland critters with bazookas dig and blast through destructible dirt in endless generated campaigns. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/metsanelaimet.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/metsanelaimet_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a cartoon hedgehog fires a rocket down a dirt tunnel, bursting the far wall into flying clods">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Metsanelaimet: Woodland Tunnel Shootout">
+    <meta name="twitter:description" content="A game design concept: woodland critters with bazookas dig and blast through destructible dirt in endless generated campaigns.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/metsanelaimet_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Metsanelaimet: Woodland Tunnel Shootout",
+        "description": "A game design concept, not a released game: a singleplayer side-view digging shooter in the spirit of Liero, where woodland animals and insects armed with bazookas fight through destructible dirt in generated campaigns chosen by mood, each one recorded in a personal Galactic Newspaper.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Shooter", "Destructible terrain"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/metsanelaimet.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/metsanelaimet_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#10140d">
+
+    <link rel="preload" href="../fonts/chargen-6809.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Metsanelaimet: a forest floor seen from below. Dark loam ground, moss green, acorn
+           amber and birch-bark cream. 6809 Chargen, an old computer's character set, for the
+           title and headings, after the DOS boot screen the name comes from; Expletus Sans
+           Italic, round and bouncy, for the subtitle and kickers. */
+        @font-face { font-family: "6809 Chargen"; src: url("../fonts/chargen-6809.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Expletus Sans Italic"; src: url("../fonts/expletus-sans-italic.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #10140d;
+            --flow-2: #2a3a18;
+            --grid-minor: rgba(200, 230, 170, 0.04);
+            --grid-major: rgba(200, 230, 170, 0.09);
+            --p-ground: rgba(16, 20, 13, 0.95);
+            --p-panel: #1a2014;
+            --p-1: #a3d65a;
+            --p-2: #f0b43c;
+            --p-3: #f4ead2;
+            --p-text: #e2e6d9;
+            --p-dim: #a9b29c;
+            --p-line: rgba(200, 230, 170, 0.15);
+            --font-title: "6809 Chargen", "Segoe UI", sans-serif;
+            --font-sub: "Expletus Sans Italic", "Segoe UI", sans-serif;
+            --shade: #0a0d08;
+        }
+
+        /* Title effect, "boot screen": the name glows like an old monitor's phosphor with a
+           faint flicker, and an amber block cursor blinks after the subtitle, as on the DOS
+           screen the name comes from. The layered dark shadows never change. */
+        .p-name {
+            font-size: clamp(1.9rem, 0.8rem + 5vw, 5.4rem);
+            letter-spacing: 0.02em;
+            animation: phosphor 5s steps(1, end) infinite;
+        }
+        @keyframes phosphor {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(163, 214, 90, 0.55); }
+            47% { color: #fffbe9; text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 30px rgba(163, 214, 90, 0.8); }
+            49% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 12px rgba(163, 214, 90, 0.3); }
+            51% { color: #fffbe9; text-shadow: 0 2px 0 var(--shade), 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 30px rgba(163, 214, 90, 0.8); }
+        }
+        .p-sub { color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; display: inline-block; width: 0.5em; height: 0.85em; margin-left: 0.3em; vertical-align: -0.08em;
+            background: var(--p-2); box-shadow: 0 0 10px rgba(240, 180, 60, 0.7), 0 0 0 2px var(--shade);
+            animation: cursor 1.1s steps(1, end) infinite;
+        }
+        @keyframes cursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(163, 214, 90, 0.6); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.08em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .sides td:first-of-type, .temper td:first-of-type { width: 34%; }
+        .families th[scope="row"] { width: 16%; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/metsanelaimet_1_title.jpg" alt="Side-view cross-section of a forest hillside: pine trees and grass on top, and below them brown dirt full of round burrow pockets and grey stones, where a red squirrel with a small gun and a hedgehog peek out." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Metsanelaimet</span><span class="p-sub">Woodland Tunnel Shootout</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/squirrel-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/acorn-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Metsanelaimet is a side-view digging shooter where woodland animals and insects, all scaled to the same size and all packing a bazooka or something sillier, fight their way through levels packed with destructible dirt. Every shot carves the map, every tunnel is a decision, and the ground itself keeps shifting under the fight.</p>
+            <p>It's built on the old DOS game <strong>Liero</strong>, a real-time worm duel in a field of dirt, and even takes its name from the line Liero showed when it booted. Liero was a party game for two people at one keyboard. Metsanelaimet is a <strong>singleplayer campaign game against computer-controlled critters</strong>, with levels that work like Bomberman's single-player maps and Smash Bros' "break the targets": a map of dirt and air pockets where enemies wait, to be explored, dug through and cleared.</p>
+            <p>Soldat lends it a cast where every bot is its own species with its own stats, Cryptark its floating movement, and Clonk and Cortex Command their soils of different hardness with loose nuggets to dig up and throw. The tone is goofy on purpose: a bunch of critters decided to blow each other up, and you're one of them.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/paw-print-lorc.png)"></span>Target audience</h3>
+                    <p>Players who remember Liero, Worms and Soldat as glorious chaos, but who have nobody to play them with, or never liked that the fun ended with one friend beating another.</p>
+                    <p>They want <strong>silly, destructive action on their own terms</strong>: a quick blast over coffee or a campaign in an evening, against opponents who are there to be outwitted.</p>
+                    <p>Mouse aim and WASD. The core is two buttons, shoot and dig; the rest of the hotkeys are extras you pick up as you go.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/hedgehog-caro-asercion.png)"></span>Game's purpose</h3>
+                    <p><strong>Play and silliness:</strong> cartoon animals, ridiculous guns and a map that falls apart in the most entertaining ways.</p>
+                    <p><strong>Excitement and freedom:</strong> fights that are messy and deliberate at once, with a hundred ways through the dirt.</p>
+                    <p><strong>Choice and variety:</strong> you pick what kind of session you're in the mood for, and the generator never serves the same one twice.</p>
+                    <p>It deliberately avoids draining <strong>respect for your time</strong> (no progression ladder, nothing to unlock) and <strong>safety</strong> (nothing you've done is ever taken away).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/dig-hole-delapouite.png)"></span>Core concept</h3>
+                    <p>Arena shooters reset to zero after every match, and campaign shooters usually make you weak first and drip-feed the good guns.</p>
+                    <p>Here <strong>every species and every weapon is there from the start</strong>, and campaigns are generated from your mood: which side you're on and what kind of world you're in.</p>
+                    <p>What ties the sessions together isn't a power curve but a <strong>personal Galactic Newspaper</strong>, a growing catalog of the silly stories you made, each one replayable from its seed.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/metsanelaimet_5_story.jpg" alt="Three cartoon lands side by side under a dusk sky with planets: a green town with wind turbines, a grey walled fortress and a purple toxic jungle full of junk, with a strip of dirt running beneath them all." width="1280" height="720" loading="lazy">
+            <figcaption>"Somewhere out there, a third of the worlds are green, a third are grim and a third are wild, and on every one of them, critters are digging."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/pine-tree-lorc.png)"></span>Lore and story</h2>
+            <h3>Survival of the silliest</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/01-critters.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You play one of the animals in a fight for survival of the fittest. Eat or neutralize the other critters before they eat you, for whatever typical animal reason: territory, a food source, a mating ritual, entertainment, or plain annoyance. It's the same premise Soldat had: a bunch of dudes decided to blow each other up, and you're one of them. Silly, but it works.</p>
+            <p>Every critter is drawn at the same size, so a beetle can stand up to a badger, and every one of them is carrying a gun.</p>
+
+            <h3>Three kinds of world</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/02-worlds.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The fights happen anywhere: underground, underwater, in space, in other dimensions. The universe is a big, nonsensical place, and it comes in three flavors:</p>
+            <ul>
+                <li><strong>Green worlds:</strong> healthy, open, democratic places, tidy towns full of parks and wind turbines.</li>
+                <li><strong>Grim worlds:</strong> oppressive dystopias of bunkers, prison camps, grey tower blocks and fortresses.</li>
+                <li><strong>Wild worlds:</strong> post-apocalyptic wastelands and toxic jungles, full of raiders, punks, mutants and flesh horrors.</li>
+            </ul>
+            <p>The universe doesn't keep score. At any moment it's roughly a third green, a third grim and a third wild, whatever you do. You can't change it, only take part in it and make stories inside it.</p>
+
+            <h3>Pick your side</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/03-sides.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Before each campaign you choose what kind of critter you feel like being today, the hero, the villain or the agent of chaos, and what kind of world you want to do it in. The pairing decides the story and which stage types turn up:</p>
+            <div class="p-table-wrap">
+                <table class="p-table sides">
+                    <thead><tr><th scope="col">Side and world</th><th scope="col">What the campaign is about</th></tr></thead>
+                    <tbody>
+                        <tr><td data-label="Pairing">Hero in a green world</td><td data-label="Story">Taking out thugs and corruption</td></tr>
+                        <tr><td data-label="Pairing">Hero in a grim world</td><td data-label="Story">Overthrowing the dictator</td></tr>
+                        <tr><td data-label="Pairing">Hero in a wild world</td><td data-label="Story">Rebuilding the world</td></tr>
+                        <tr><td data-label="Pairing">Villain in a green world</td><td data-label="Story">Being a malicious menace to a peaceful place</td></tr>
+                        <tr><td data-label="Pairing">Villain in a grim world</td><td data-label="Story">Two warlords scheming against each other</td></tr>
+                        <tr><td data-label="Pairing">Villain in a wild world</td><td data-label="Story">Conquering the wasteland and ruling it</td></tr>
+                        <tr><td data-label="Pairing">Chaos anywhere</td><td data-label="Story">Making the place an even wilder world</td></tr>
+                        <tr><td data-label="Pairing">The mixed bag</td><td data-label="Story">A wandering mercenary doing whatever gets them another banana. No reason, no regret.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>The job right now</h3>
+            <p>Whatever you picked. The newspaper will report on it either way.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control one critter in side view. Gravity is light and the critters float, Cryptark-style: WASD pushes you in any direction with momentum and good air control, and a short boost covers ground fast when you need it. The mouse aims the gun and points the shovel.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Float and steer in any direction</dd></div>
+                        <div><dt>Space</dt><dd>Boost, dash or jump, depending on the species</dd></div>
+                        <div><dt>Right click</dt><dd>Hold to dig toward the pointer; further away digs faster</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Shoot, or melee attack</dd></div>
+                        <div><dt>R</dt><dd>Reload</dd></div>
+                        <div><dt>Wheel</dt><dd>Cycle the guns you're carrying</dd></div>
+                        <div><dt>G</dt><dd>Throw a grenade, item or dug-up nugget</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Hands</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Pick up, drop, throw or swap a weapon</dd></div>
+                        <div><dt>Q</dt><dd>Use your species' special ability</dd></div>
+                        <div><dt>C</dt><dd>Cycle items</dd></div>
+                        <div><dt>F</dt><dd>Interact; hold two seconds to leave by an exit hole</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Time</h3>
+                    <dl>
+                        <div><dt>Shift</dt><dd>Slow motion on and off</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The camera sits between you and your crosshair, as in Soldat, or can be clamped to the map's edges if you prefer. Holding a look key pushes the view further out, though some species see less far than others, which lets you feel what it's like to be one. <strong>Slow motion</strong> can be set to unlimited, or to a meter of a hundred points that drains while it's on and refills while it's off; how slow it goes, from a tenth of normal speed to nine tenths, is a setting too.</p>
+            <p>The HUD shows health, the guns and ammunition you're carrying, the refire delay, your ability's cooldown, the objective and an arrow toward it, and warning shapes over anything about to happen: a circle where dirt is about to fall, a flashing mark where a hazard will appear. Enemy critters show little emoji reactions, so you can read what they're about to do.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/metsanelaimet_2_vignette.jpg" alt="Side view underground: a hedgehog in a dug-out pocket fires a rocket launcher, and the rocket bursts a dirt wall into flying clods, while a small critter peeks from a burrow above." width="1280" height="720" loading="lazy">
+            <figcaption>"Every shot stops in the dirt and carves a piece of it away, so a gunfight reshapes the map as it goes."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dig-dug-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One stage, one patch of dirt</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/04-stage.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A stage is a single map, from a compact arena about twenty critters wide and fifteen tall to a big mountain of a level. It has enemies, dirt, props, hazards, loot, an objective, exit holes, and a background behind it all.</p>
+                        <p>You dig, float and shoot your way to your targets, using your guns as shovels when the shovel is too slow. Enemies dig and shoot through dirt too, and come looking for you, so the fight doesn't wait for you to start it. A whole map can be chewed down to bare rock in a few minutes, until the ground shakes and drops fresh dirt back in.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/golf-flag-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A campaign of your mood</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/05-campaign.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Pick a side and a kind of world, and the game generates a campaign: a run of about ten stages in places with their own generated names, with stage types chosen to fit the story. A hero in a grim world gets rescues, heists and fortress assaults; a villain in a green world gets the troublemaking stages.</p>
+                        <p>Each stage gets a line on a <strong>golf-style scorecard</strong>: winning on the first try is a hole in one, and every retry is another stroke. A lost stage keeps its seed, so the retry is exactly the same setup, and the card honestly counts every attempt. The campaign's total time sits beside it.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/newspaper-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The Galactic Newspaper</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/06-newspaper.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The universe never changes, so the continuity lives somewhere else: in a newspaper that reports on your exploits in a random, spontaneous and humorous way. Every finished campaign becomes an article, with the places, the situation, your scorecard, a snapshot of the local critter you played, and a dish cooked up to commemorate it.</p>
+                        <p>Over time it becomes a catalog of campaigns that exist nowhere else, a personal history you can browse, label, replay or share. There's no progression system, no prewritten storyline and nothing to unlock behind it. The design says so outright: those are finite, and they buy off the motivation the game itself should provide.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A stage or an evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/07-session.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Start the game, pick a side and a world (or continue the campaign you left), and you're digging within a minute. A stage takes a few minutes; a campaign, an evening or two.</p>
+                        <p>Stop between any two stages and the campaign waits where you left it. When it's done, the newspaper prints its article, and the next campaign is whatever you're in the mood for next time.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/dice-six-faces-five-delapouite.png)"></span>Game modes</h2>
+            <p>The way to play is <strong>the generated campaign</strong>, plus a random gauntlet that mixes everything. Inside them, every stage is one of nineteen stage types, all played against computer-controlled critters (the design leaves room for friends to drop in and play together). They come in five families:</p>
+            <div class="p-table-wrap">
+                <table class="p-table families">
+                    <thead><tr><th scope="col">Family</th><th scope="col">Stage types</th><th scope="col">What happens</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Brawls</th><td data-label="Types">Dominance, Last Standing, Duel, Eliminator</td><td data-label="Happens">Straight fights: score the most points before the others, outlast everyone's lives, a five-stock one-on-one like Smash Bros, or several lives against a crowd that has only one each.</td></tr>
+                        <tr><th scope="row">Jobs</th><td data-label="Types">Defend, Rescue, Gauntlet, Steal, Hoard</td><td data-label="Happens">Protect your nest until time runs out, escort a one-life prisoner out, get from A to B on a single life (fighting is optional), fetch an indestructible prize and bring it back, or stop raiders dragging your hoard to the exit.</td></tr>
+                        <tr><th scope="row">Sieges</th><td data-label="Types">Forts, Vaults</td><td data-label="Happens">Attack the enemy's nest while they attack yours, as in King Arthur's Gold: thin out their lives, then go in. Vaults is the heist version, with long respawns giving you a window to steal.</td></tr>
+                        <tr><th scope="row">Giants</th><td data-label="Types">Behemoth, Kaiju, Beast Wars, Two Titans</td><td data-label="Happens">Take down a scaled-up boss and its minions, be the giant yourself, fight with giants only, or keep respawning to help your side's titan beat theirs.</td></tr>
+                        <tr><th scope="row">Trouble</th><td data-label="Types">Loose Cannon, Bar Fight, Den Shootout, Heist</td><td data-label="Happens">Everyone is peaceful until you fire the first shot. Then the crowd panics, the forest wardens come for you, a bar brawl breaks out where everyone shoots whoever's most likely to shoot them, a gang boss shows up, or a quiet bank turns into chaos. One life, no respawns.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Every stage has room for three kinds of side: yours, the opposition, and the unaffiliated, from bystanders who flee to rogue animals and hazards that belong to nobody.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/squirrel-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rock-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Dirt that fights back</h3>
+                        <p>Most maps begin mostly filled with dirt. Hold the dig button and your critter chews toward the pointer, slower than floating but never tedious. Every projectile is <strong>stopped by terrain</strong>, removing a little dirt on impact or none at all; nothing pierces walls. So shooting is digging, and a big gun can shred a map the way Liero's Big Nuke did, while a small one barely scratches it.</p>
+                        <p>Soils come in different strengths, with near-unbreakable rock scattered through them. The starting layout always offers a <strong>path of least resistance but most risk</strong> and slower paths that are safer, so you choose between rushing through the open and tunneling around.</p>
+                        <p>Dirt also comes back. Every weapon has a <strong>shake</strong> value, and as a stage's shaking adds up, it triggers a quake that drops fresh dirt into the map. Some maps are steadier than others and take more shaking. Fresh dirt is always marked in advance, with enough time to get out of its way, and the shake count resets after each drop. Mud floods, lava clefts and creatures that burst into dirt when beaten refill the ground too.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/metsanelaimet_3_feature.jpg" alt="A badger in a yellow hard hat digs a tunnel under a mushroom-dotted forest floor, small red and white nuggets in the dirt around it and a row of big grey boulders below." width="1280" height="720" loading="lazy">
+                            <figcaption>"Shots never pierce the ground. Every tunnel was dug by a shovel or a gun."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jetpack-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Movement standards</p>
+                        <h3>Floaty, not frantic</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/08-float.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Liero's movement had harsh gravity, no speed limit and weak air control. Metsanelaimet fixes all three: <strong>more float, more air resistance, gentler acceleration, lighter gravity and much better air control</strong>, closer to Cryptark's drifting than to a platformer's jumps.</p>
+                        <p>The levels are small, so critters move slowly and deliberately and boosts are short. Momentum still matters: a well-aimed boost can take you across the map in under a second, and getting the most out of your drift is half the skill. A <strong>global gravity setting</strong> can multiply, reverse or switch off gravity for a whole stage.</p>
+                        <p>Each species also brings one <strong>special ability</strong> on one button, using the direction you're facing: a ninja rope, a gravity gun, an overboost, a lobster-style backward escape, grab and hold, flipping your own gravity, a moon jump, or a short warp forward.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/badger-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Like Soldat's bots</p>
+                        <h3>Every species a stat sheet</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/09-species.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each species, from squirrel and hedgehog to stag beetle, owl, ant and badger, is a set of numbers, the way each bot in Soldat was. Health, speed, jet thrust and fuel, knockback resistance, bounciness, friction, air control, regeneration, digging speed, how many guns it carries and how often it switches between them, its melee attack, its ability and its cooldown.</p>
+                        <p>Three senses decide how it finds you. <strong>Sight</strong> lets it track and shoot. <strong>Hearing</strong> ignores dirt but can't track you, so a gun that shoots through walls will fire at where you last were. <strong>Smell</strong> reaches through the ground with a delay, and every species also has a smelliness: a value below one makes it harder to sniff out, zero makes it undetectable, and two doubles the range it can be smelled from. Pick a stinky species and nobody will lose you.</p>
+                        <p>The same sheet sets its sounds, its colors and how it bursts when beaten. You can play any species from the first minute.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rocket-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">An arsenal built from parts</p>
+                        <h3>Guns from a stat list</h3>
+                        <p>A weapon is also a list of values, and each one combines with the others: damage, knockback (which can pull instead of push), recoil, fire rate, magazine and maximum ammo, shot speed, count, spread, gravity and acceleration, lifetime, whether it inherits your movement, its weight (heavier is slower) and its <strong>cumbersomeness</strong>, a delay on how quickly your aim follows the mouse.</p>
+                        <p>Its shot can be a projectile, a cone, a line, a sphere, a curve or a sine wave. It can explode on contact, on a timer or by proximity, leave a trail of other projectiles, split into submunitions, stun, make noise that enemies hear, and remove a chosen radius of dirt. A flag decides whether it can break rock.</p>
+                        <p>What a shot spawns when it goes off follows one strict rule: a blast with a radius, damage, knockback or pull, stun, and optionally a ball of fresh dirt. <strong>No falloff, no damage over time, no odd shapes</strong>: the effect lands on the spot, in full, and is gone. Those simple pieces combine into hundreds of weapons that all behave predictably, so you can read any new gun at a glance.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/owl-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Opponents with moods</p>
+                        <h3>Six temperaments</h3>
+                        <p>Every computer-controlled critter runs one of six behaviors, chosen by the stage type, the campaign and the map:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table temper">
+                                <thead><tr><th scope="col">Temperament</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><td data-label="Temperament">Hunter</td><td data-label="Does">Hunts you down anywhere on the map, deathmatch style</td></tr>
+                                    <tr><td data-label="Temperament">Predator</td><td data-label="Does">Chases you once you come close, like a hungry animal</td></tr>
+                                    <tr><td data-label="Temperament">Sentry</td><td data-label="Does">Guards its territory with overwatch</td></tr>
+                                    <tr><td data-label="Temperament">Bystander</td><td data-label="Does">Unaware until provoked, then becomes one of the three above; a sentry hurt badly enough turns hunter</td></tr>
+                                    <tr><td data-label="Temperament">Runner</td><td data-label="Does">Flees for an exit hole and leaves the stage</td></tr>
+                                    <tr><td data-label="Temperament">Cowerer</td><td data-label="Does">Avoids you without leaving, hides and never fights back</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Critters patrol between points of their own, dig, and shoot at the terrain between you to shorten the way. Each one keeps to the range its gun works best at, closing in or backing off as it should. Leaving through an exit hole takes two seconds of standing in it, for you and for them, so a fleeing critter can still be stopped.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/lightning-tree-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Maps from rules, not by hand</p>
+                        <h3>Generated stages and weather</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/metsanelaimet/10-weather.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Stages are generated from a tree of rules: dirt fill, scattered hard rock, open gaps, embedded props. Some maps are packed solid, others are open caves and tunnels, others just a few islands of dirt floating in the air. Maps can also be <strong>drawn as a picture</strong>, two colors for dirt and empty space plus a background image and a list of spawn points, and the game checks them on load.</p>
+                        <p>Sizes come in standard templates: a compact arena for duels, a long horizontal map for gauntlets and sieges, a tall tower, and a big mountain. Even on a fixed map, something is always shuffled at the start: spawn spots, props, loot, the enemies' species, loadouts and moods.</p>
+                        <p><strong>Weather</strong> keeps a stage moving: gravity surges, projectiles raining in from an edge, particle storms, earthquakes that drop fresh dirt, rogue animals wandering in, and ion storms that scramble ranged weapons and force a melee. Bonus drops arrive on a visible wave from the map's edge, so you always see where and when they'll land.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cargo-crate-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Abundance from the start</p>
+                        <h3>Ammo, crates and nuggets</h3>
+                        <p>You start every stage with <strong>generous ammunition</strong>, enough that you're never forced into scavenging just to keep shooting. A campaign can choose to make supplies lean on purpose, as a theme, but that's a setting of that campaign, never the default.</p>
+                        <p>Weapon crates let you swap guns: drop yours into the crate with its remaining ammo, and take what's inside. Loose props, embedded in the dirt or resting on any surface at any angle, can be shot to pieces and sometimes burst with an effect of their own.</p>
+                        <p>Like in Clonk, the dirt hides <strong>small loose nuggets</strong>: rock, flint, loam, firebomb pebbles. Dig one up and throw it like a grenade. A flint lobbed into a tunnel can settle a fight before anyone fires a shot.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/meal-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A living history</p>
+                        <h3>What the newspaper keeps</h3>
+                        <p>Every article in the Galactic Newspaper records one finished campaign:</p>
+                        <ul>
+                            <li>the region and the local places, down to street, town and neighborhood names, and the situation's name</li>
+                            <li>the golf scorecard and the total time</li>
+                            <li>a snapshot of the local critter you played, with their generated name, and your own profile name</li>
+                            <li>a <strong>commemorative dish</strong> or sculpture made of fruit, generated with its own colors, name and freshness, which reflects how the campaign went</li>
+                            <li>the campaign's seed and the game version it was played on</li>
+                            <li>your own label and a mark if you're happy with it, so you can say "oh, this was that one"</li>
+                        </ul>
+                        <p>The generated art is tinted by your own profile, so the same campaign looks slightly different for every player, a little like a shiny Pokémon. Beside the paper there's a growing <strong>hoard of cakes</strong>, one for every critter you outlasted, a nod to the forest's eat-or-be-eaten way of life. None of it buys anything; it's a record of what happened, and it's yours.</p>
+                        <p>Campaigns can be grouped into themed sets, such as the elements, the four seasons or a kind of place, and you can play any of them whenever you like.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/checkbox-tree-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Foundations first</p>
+                        <h3>Content as files, seeds that last</h3>
+                        <p>Every weapon, species, prop and map is its own file. The game reads them on load and fills its lists from them: the loadout menus, and the pools that random enemies draw their species and guns from. Add a file, and it turns up everywhere at once.</p>
+                        <p>Each piece of content carries the <strong>version number</strong> it arrived in. A seed plus a version rebuilds a campaign exactly as it was first played, even years and many updates later, or, if you like, remixes the same campaign with everything added since. Shared seeds work the same way on everyone's machine.</p>
+                        <p>Two tools make new content: one that builds a <strong>balanced</strong> species or weapon automatically, using a point value for every stat, and one with no limits at all, for whatever silliness you have in mind.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/beetle-shell-lorc.png)"></span>Trivia</h2>
+            <h3>A misspelling on purpose</h3>
+            <p>When Liero booted up, it showed the line "Liero ja metsäneläimet", "Liero and the forest animals". This game is named after it, and spelled the way that screen spelled it, without the ä's, which an old DOS character set couldn't always show.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/metsanelaimet_4_boxart.jpg" alt="Box art: a fox with a toy-like bazooka stands on the forest floor between pine trees with two hedgehogs, and below them a dirt cross-section where two more armed critters wait in burrows." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Galactic Newspaper, late edition</p>
+                <h2 id="sendoff">Metsanelaimet: Woodland Tunnel Shootout</h2>
+                <p>Residents of a quiet hillside report a hedgehog with a rocket launcher, a beetle with a grudge and a badger who "just wanted the banana". Witnesses describe the hill as "mostly tunnels now".</p>
+                <p>Local authorities have advised everyone to keep their heads down, dig sideways and watch for falling dirt. More on page two, if there's still a page two.</p>
+                <p><strong>Somewhere out there, a critter is digging toward you.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Liero, Soldat, Cryptark, Clonk, Cortex Command, Bomberman, Super Smash Bros and King Arthur's Gold</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: 6809 Chargen (CC0), Expletus Sans, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

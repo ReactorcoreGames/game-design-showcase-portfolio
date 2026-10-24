@@ -1,0 +1,37 @@
+{
+  "slug": "metsanelaimet",
+  "preset": "08 Games - Super Mario World (Platformer/2D Sprite)",
+  "style": "Palette of moss green, rich brown loam, warm amber light and birch-bark cream. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide side-view cross-section of a forest hillside: a thin strip of grass and pine trees along the top, and below it a huge mass of brown dirt cut through with winding hand-dug tunnels and round air pockets, grey boulders embedded here and there. In a tunnel in the middle, a small cartoon red squirrel holding a chunky toy-like bazooka floats in the air on a little puff of jet smoke. In other pockets, a cartoon hedgehog and a cartoon stag beetle peek out. The lower left is calm, plain dirt."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Side view underground, a cartoon platform game level made of brown dirt with tunnels: on the left, a small cartoon hedgehog floats in a tunnel and fires a chunky toy-like rocket launcher. The rocket streaks to the right along the tunnel and bursts a far dirt wall into a spray of flying clods and pebbles, opening a new hole. Far from the burst, a cartoon stag beetle peeks out of another air pocket. Grey boulders embedded in the dirt."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Side-view cross-section of layered ground in a cartoon platform game: soft brown loam, darker packed dirt, big grey boulders that look unbreakable, and small shiny flint nuggets and red round firebomb pebbles embedded in the dirt. A cartoon badger in a tiny miner's helmet digs a fresh tunnel through the loam, clods of dirt flying behind it. Above, a grassy forest floor with mushrooms."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait scene, side-view cross-section of the ground under a pine forest: the top third is a sunny forest canopy and sky. Below, brown dirt full of tunnels and pockets. In the center, a cartoon fox with a chunky toy-like bazooka floats upward through a tunnel on a little puff of jet smoke. Around it, in other pockets, a cartoon owl, a cartoon hedgehog and a cartoon ant, each holding a small toy-like blaster, peek out. Pure illustration with no lettering."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Very wide side-view panorama of three cartoon lands side by side under one starry dusk sky: on the left a tidy green town of parks, trees and wind turbines; in the middle grey concrete bunkers and walled fortresses; on the right a strange toxic purple jungle full of junk and scrap. A forest floor runs across the whole bottom, with dirt and tunnels below it and tiny cartoon woodland animals scattered along it. Planets hang in the sky."
+    }
+  ]
+}

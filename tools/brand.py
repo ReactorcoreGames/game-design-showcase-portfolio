@@ -93,6 +93,7 @@ FONTS = [
     ("Exo2.0-Medium.otf", "exo2-medium.woff2", None, None),                 # SIL OFL, thunderstrike-justice
     ("ExpletusSans-MediumItalic.ttf", "expletus-sans-medium-italic.woff2", None, None),  # SIL OFL, vectorthunder
     ("ExpletusSans-Regular.ttf", "expletus-sans-regular.woff2", None, None),  # SIL OFL, aal-collector
+    ("ExpletusSans-Italic.ttf", "expletus-sans-italic.woff2", None, None),  # SIL OFL, metsanelaimet
 ]
 FONT_LICENSES = [("Oxanium-OFL.txt", "OFL-oxanium.txt"), ("Orbitron-OFL.txt", "OFL-orbitron.txt")]
 

@@ -1,0 +1,20 @@
+{
+  "slug": "metsanelaimet-mini",
+  "out": "site/projects/mini/metsanelaimet",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - R - Macro Closeup",
+  "lead": "Macro nature photograph, mossy forest floor, moss green and warm amber light. ",
+  "images": [
+    {"n": 1, "name": "critters", "ratio": "3:2", "prompt": "A squirrel, a hedgehog and a beetle facing each other on a mossy log"},
+    {"n": 2, "name": "worlds", "ratio": "3:2", "prompt": "A single tiny diorama of a toxic purple jungle growing beside a grey concrete bunker"},
+    {"n": 3, "name": "sides", "ratio": "3:2", "prompt": "A banana lying on a mossy stone like a prize"},
+    {"n": 4, "name": "stage", "ratio": "3:2", "prompt": "A cross-section of brown soil with tunnels dug through it"},
+    {"n": 5, "name": "campaign", "ratio": "3:2", "prompt": "A winding trail of acorns leading through the forest floor"},
+    {"n": 6, "name": "newspaper", "ratio": "3:2", "prompt": "A carved wooden bowl heaped with berries and fruit on a mossy tree stump"},
+    {"n": 7, "name": "session", "ratio": "3:2", "prompt": "A small burrow entrance at dusk with warm light inside"},
+    {"n": 8, "name": "float", "ratio": "3:2", "prompt": "A flying squirrel gliding between tree trunks"},
+    {"n": 9, "name": "species", "ratio": "3:2", "prompt": "A stag beetle standing proudly on a pine cone"},
+    {"n": 10, "name": "weather", "ratio": "3:2", "prompt": "Clods of earth and pebbles falling through a sunbeam in the woods"}
+  ]
+}

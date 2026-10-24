@@ -136,7 +136,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Temporal Shift RTS
 - [x] Type 1-X Mecha RTS (images pending)
 - [x] Titanium Punk Orphans (images pending)
-- [ ] Metsanelaimet
+- [x] Metsanelaimet
 - [ ] Auto chess (or fold it into another page)
 - [ ] Bazooka Bomber
 - [ ] Telekinetic Eradicator
