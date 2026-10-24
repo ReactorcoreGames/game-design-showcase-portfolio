@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "bazooka-bomber.html", prefix: "bazooka-bomber",
+    title: "AAL Bazooka Bomber", subtitle: "Underground Rocket Demolition",
+    icon: "incoming-rocket-lorc", tint: "yellow",
+    blurb: "Bomberman where you launch your bombs instead of dropping them: a small mining mech fires rocket bombs down the grid to clear monster-infested colony mines, ten generated maps and a boss each, with power-ups that wear out as you use them.",
+    genres: ["action", "arcade", "puzzle"], tags: ["grid", "bombs", "destructible blocks", "procedural campaigns"],
+    universe: "aal", status: "concept", added: "2026-10-24"
+  },
+  {
     page: "auto-art-chess.html", prefix: "auto-art-chess",
     title: "Auto Art Chess", subtitle: "Self-Playing Canvas Duels",
     icon: "chess-knight-skoll", tint: "magenta",

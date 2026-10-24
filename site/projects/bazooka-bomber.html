@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Bazooka Bomber: Underground Rocket Demolition</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: Bomberman where you launch your bombs instead of dropping them. A small mining mech fires rocket bombs down the grid to clear monster-infested colony mines, with power-ups that wear out and readable fire.">
+    <meta name="keywords" content="game design concept, Bomberman inspired, grid action, launched bombs, rocket, mining mech, destructible blocks, Sokoban, procedural maps, AAL Universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/bazooka-bomber.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Bazooka Bomber: Underground Rocket Demolition">
+    <meta property="og:description" content="A game design concept: Bomberman with launched bombs, clearing monster-infested colony mines one ten-map campaign at a time. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/bazooka-bomber.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/bazooka-bomber_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a fireball bursts among stone blocks and crates in an underground grid while a small yellow tracked robot shelters behind its shield">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Bazooka Bomber: Underground Rocket Demolition">
+    <meta name="twitter:description" content="A game design concept: Bomberman with launched bombs, clearing monster-infested colony mines one ten-map campaign at a time.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/bazooka-bomber_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Bazooka Bomber: Underground Rocket Demolition",
+        "description": "A game design concept, not a released game: a top-down grid action game in the spirit of Bomberman where bombs are launched along the grid instead of dropped, played by a mining mech clearing dormant monsters out of new colony mines in ten-map generated campaigns.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Arcade", "Puzzle"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/bazooka-bomber.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/bazooka-bomber_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#14110e">
+
+    <link rel="preload" href="../fonts/exo2-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* AAL Bazooka Bomber: a mine lit by work lamps and blasts. Dark rock-brown ground,
+           hazard yellow, ember red and a pale steel for highlights. Exo 2 Black, heavy and
+           blunt, for the title and headings; Spectrashell, a stencilled tech face, for the
+           subtitle and kickers. */
+        @font-face { font-family: "Exo 2 Black"; src: url("../fonts/exo2-black.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Spectrashell"; src: url("../fonts/spectrashell.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #14110e;
+            --flow-2: #3a2410;
+            --grid-minor: rgba(255, 220, 160, 0.04);
+            --grid-major: rgba(255, 220, 160, 0.09);
+            --p-ground: rgba(20, 17, 14, 0.95);
+            --p-panel: #1e1a15;
+            --p-1: #ffc93c;
+            --p-2: #ff5a3c;
+            --p-3: #e8ecee;
+            --p-text: #e6e2dc;
+            --p-dim: #aea69b;
+            --p-line: rgba(255, 220, 160, 0.15);
+            --font-title: "Exo 2 Black", "Segoe UI", sans-serif;
+            --font-sub: "Spectrashell", "Segoe UI", sans-serif;
+            --shade: #0b0907;
+        }
+
+        /* Title effect, "fuse and flash": the name smoulders with an ember glow, then every few
+           seconds a blast flashes white, the way the game's bombs flash half a second before
+           their fire appears, and burns back down to red. The dark shadows never change. */
+        .p-name {
+            font-size: clamp(1.9rem, 0.9rem + 4.4vw, 5.2rem);
+            letter-spacing: 0.01em;
+            animation: blast 5s linear infinite;
+        }
+        @keyframes blast {
+            0%, 84%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 24px rgba(255, 90, 60, 0.45); }
+            87% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 40px rgba(255, 255, 255, 0.95), 0 0 16px rgba(255, 220, 120, 1); }
+            92% { color: #ffe9b0; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 4px 4px 0 var(--shade), 0 0 34px rgba(255, 201, 60, 0.9); }
+        }
+        .p-sub { color: var(--p-1); text-transform: uppercase; text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.4rem; height: 4px;
+            background: var(--p-2);
+            animation: blast-line 5s linear infinite;
+        }
+        @keyframes blast-line {
+            0%, 84%, 100% { background: var(--p-2); box-shadow: 0 0 6px rgba(255, 90, 60, 0.5); }
+            87% { background: #ffffff; box-shadow: 0 0 18px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 201, 60, 0.8); }
+            92% { background: var(--p-1); box-shadow: 0 0 12px rgba(255, 201, 60, 0.8); }
+        }
+        .section-mark::after { animation: h2-line 5s linear infinite; }
+        @keyframes h2-line { 0%, 84%, 100% { box-shadow: none; } 87% { box-shadow: 0 0 12px rgba(255, 220, 120, 0.9); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        /* Spectrashell draws small for its size, so the kickers run larger than the template's. */
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; font-size: 1rem; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .kit td:first-of-type { width: 26%; }
+        .moods th[scope="row"] { width: 18%; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/bazooka-bomber_1_title.jpg" alt="Three-quarter overhead view of a dark mine cavern of stone-block walls, wooden crates and red barrels under yellow lamps, where a boxy yellow tracked mining robot fires a glowing streak down a corridor toward the crates." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">AAL Bazooka Bomber</span><span class="p-sub">Underground Rocket Demolition</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/incoming-rocket-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/mining-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">AAL Bazooka Bomber is a top-down grid action game in the spirit of Bomberman, with one twist that changes everything: you don't set your bombs down, you <strong>launch</strong> them. Fire, and a rocket-propelled bomb leaves your tile and slides straight down the grid in the direction you're facing, until it hits a wall or another bomb, and then it goes off in a cross of fire.</p>
+            <p>You pilot a small mining mech clearing new colony mines of the monsters that were found sleeping in the rock. A mine is a campaign of ten generated maps with a boss at the bottom, and when it's clear, the colony gets its mine and you move on to the next. As the design puts it, this is less a bomberman than a rocket-propelled-grenade man.</p>
+            <p>It takes its grid and chain reactions from Bomberman and Super Bomberman 2, its blocks that take several hits from Breakout, and its pushing and pulling of blocks from Sokoban.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/mining-helmet-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love Bomberman's chain reactions and tidy grids, but find dropping a bomb and running away a little passive.</p>
+                    <p>They want <strong>explosions they aim</strong>, a puzzle-like map to take apart, and short maps that add up to something.</p>
+                    <p>The controls fit under one hand: WASD and the keys around it. The design wants it playable one-handed.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/bright-explosion-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power and excitement:</strong> chains of explosions tearing through a packed mine, one after another.</p>
+                    <p><strong>Play and mastery:</strong> range, fuse timing, backblast and reading the fire before it lands.</p>
+                    <p><strong>Meaning:</strong> every campaign finishes something. A mine gets cleared and opened; nothing is ever redone for nothing.</p>
+                    <p>It deliberately avoids draining <strong>safety</strong> (every blast is telegraphed and every hit is followed by a generous grace period) and <strong>respect for your time</strong> (no upgrade grind between runs).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/fire-zone-lorc.png)"></span>Core concept</h3>
+                    <p>In Bomberman, power-ups stack until you're maxed out, and from then on every pickup is meaningless. And a game where you clear the same kind of stage forever, with nothing ever changing, ends up feeling pointless.</p>
+                    <p>Here <strong>power-ups wear out with use</strong>, so your firepower rises and falls with every map, and the bomb itself becomes something you aim.</p>
+                    <p>And every campaign <strong>completes</strong> something: a cleared mine is added to the colony's growing network, and it stays cleared.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/bazooka-bomber_5_story.jpg" alt="A rust-red alien desert at dusk with a second moon in the sky: a mining colony of steel headframes, conveyor belts, domes and lit buildings sits beside a huge dark cave mouth in the cliffs." width="1280" height="720" loading="lazy">
+            <figcaption>"The new mines are ready to dig. Something was already sleeping down there."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/gold-mine-delapouite.png)"></span>Lore and story</h2>
+            <h3>The colony mines</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/01-colony.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The game is set in the <a href="../aal/">AAL Universe</a>, at the end of its Golden Age. Civilization has left scarcity behind and is spreading across the stars, and every new colony starts the same way: survey the rock, sink a mine, and feed the planet's materials into the chain that builds everything else.</p>
+
+            <h3>What sleeps in the rock</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/02-dormant.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>This is the era when the first space monsters are found: dormant ones, buried and waiting. Colony crews keep breaking into them. Pale crawlers in the walls, burrowing brutes, nests that wake when the drills come near, and at the bottom of every infested mine, something big that floats.</p>
+            <p>Monsters can't be reasoned with or moved somewhere else. A mine with a nest in it can't be worked, and the colony can't grow without it.</p>
+
+            <h3>The bazooka miner</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/03-mech.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>So the colonies send in a small, tough, tracked mining mech built for blasting tunnels, operated remotely from the surface. Its launcher fires rocket-propelled charges that slide along a straight line and blow rock apart in a cross. Pointed at a nest, it works just as well. Its blast shield was built to take the heat of its own charges, which is handy, because in a mine the backblast is usually yours.</p>
+
+            <h3>The job right now</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/04-job.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Go down, level by level, from the entrance to the nest at the bottom. Clear out everything that's awake, take apart the thing that keeps waking the rest, and come back up. Then the crews move in.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You move your mech one tile at a time across a grid seen from above. Everything sits under the left hand, and the menus use the same keys, so the game can be played one-handed.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Move; walking into a crate or barrel pushes it</dd></div>
+                        <div><dt>R</dt><dd>Pull: face a block and step back with it one tile</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Bazooka</h3>
+                    <dl>
+                        <div><dt>F</dt><dd>Launch a bomb in the direction you're facing</dd></div>
+                        <div><dt>Q</dt><dd>Detonate your bombs now</dd></div>
+                        <div><dt>Space</dt><dd>Hold up the blast shield</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Items</h3>
+                    <dl>
+                        <div><dt>Z X C</dt><dd>Consumable slots A, B and C: tap to use or toggle, hold to swap</dd></div>
+                        <div><dt>E</dt><dd>Interact</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Menus</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Yes, enter</dd></div>
+                        <div><dt>Q</dt><dd>No, back</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Movement forgives near misses the way classic Bomberman does: walk into a block's edge when you were almost past the opening, and the mech slides sideways into the gap. On the left of the screen, your active power-ups form a <strong>vertical list of icons</strong>, each with the number of uses it has left, and below them your three consumable slots show their uses and whether they're switched on or off.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/bazooka-bomber_2_vignette.jpg" alt="Top-down view of a mine grid of stone blocks and crates: a big fireball bursts in the middle, jets of fire shooting out sideways and crates splintering, while a small yellow tracked robot sits just outside it inside a thin orange ring of shield." width="1280" height="720" loading="lazy">
+            <figcaption>"A blast flashes for half a second before its fire appears: just enough time to raise the shield if you misjudged the range."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/falling-bomb-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One map of the mine</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/05-map.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each map is a level of the mine: a grid of crates, stone and barrels, with monsters and their burrows somewhere inside. You come in at the top left, and the way down is at the bottom right. Clear out every hostile, then reach the exit.</p>
+                        <p>The mech takes three hits, and each hit is followed by two seconds of invulnerability, for monsters too. On arrival you get fifteen seconds of grace to look around, which ends early when you first fire, leaving two seconds to get clear of your own fire.</p>
+                        <p>If all three hits are gone, the wreck is winched out and a fresh mech is lowered in at the map's entrance. The map stays exactly as you left it: broken blocks stay broken and beaten monsters stay beaten. Only the power-ups that were on the old mech are lost with it.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mine-truck-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A mine, ten maps deep</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/06-campaign.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is one mine: ten maps, one after another, with a boss in the last. Maps are generated with their own mix of empty floor, soft and hard blocks, props and monsters. Early levels are calmer and later ones more chaotic, but <strong>not necessarily harder</strong>.</p>
+                        <p>Every campaign also gets two color profiles, and its levels shift from one to the other a step per map: floor, walls and frames drift through two or three neighboring hues, getting brighter or darker, more vivid or more muted, so you can feel how deep you are. When the boss is beaten, the nest goes up in a string of small explosions, then a big one, a white flash, and it's gone.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The colony network</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/07-network.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Between campaigns you're on the overworld: a map of the colonies and their mines. Every mine you clear is <strong>added to the network</strong> and starts production, and its light stays on. The map slowly fills with working mines, a record of every one you made safe.</p>
+                        <p>There's always another colony breaking new ground, so there's always another mine to clear. But no mine is ever cleared twice, and nothing you finished is ever rolled back. The design is explicit about this: don't redo or repeat; advance and complete.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A map or a mine</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/08-flow.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Pick a mine on the overworld and you're on the first map in seconds. A map takes a few minutes; a whole mine, an evening. Stop between any two maps and the mine waits for you, and when you come back, the overworld shows how far down you got.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/hole-ladder-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode, <strong>the mine campaign</strong>. When you choose the next mine, you also choose its mood:</p>
+            <div class="p-table-wrap">
+                <table class="p-table moods">
+                    <thead><tr><th scope="col">Mood</th><th scope="col">What the maps are like</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Gentle</th><td>Roomier maps with fewer monsters and fewer barrels, for a relaxed dig</td></tr>
+                        <tr><th scope="row">Structured</th><td>Orderly layouts of corridors and block rows, like a classic Bomberman stage</td></tr>
+                        <tr><th scope="row">Chaotic</th><td>Dense, wildly mixed maps full of barrels waiting for a chain reaction</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-nest" aria-label="The structure, outermost first">
+                <div><span>The colony network</span><small>Endless: there's always another mine.</small>
+                    <div><span>A mine</span><small>Ten maps and a boss: an evening.</small>
+                        <div><span>A map</span><small>Clear the monsters, reach the exit: a few minutes.</small>
+                            <div><span>A blast</span><small>Launch, flash, fire: three seconds.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/incoming-rocket-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rocket-thruster-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Bombs on rails</h3>
+                        <p>A bomb is placed on your own tile and launched at once, centered on the grid, in the direction you were facing. It flies straight, as if on a rail, and stops only when it hits a wall or another bomb. Monsters, power-ups and you don't stop it; it passes over all of them.</p>
+                        <p>By default it travels <strong>three tiles</strong> on a three-second fuse. Press detonate to set off your bombs early, and every bomb launched leaves a short <strong>backblast</strong> of fire on the tile behind you, like a real bazooka's, so where you stand when you fire matters as much as where you aim.</p>
+                        <p>Since you can only have a few bombs out at once, the skill is in the placement: one bomb sent down a corridor to stop against a wall, a second sent after it to stop against the first, and a chain of crosses that clears half the map.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/bazooka-bomber_3_feature.jpg" alt="A small yellow tracked mining robot in a stone-block corridor, a flame-tailed bomb canister flying toward the viewer; behind it, red barrels and broken crates with pale, many-limbed cave creatures clinging to them." width="1280" height="720" loading="lazy">
+                            <figcaption>"A launched bomb flies straight along the grid and stops only at a wall or another bomb."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/fire-wave-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Readable fire</p>
+                        <h3>Flash, fire, linger</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/10-shield.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>An explosion is never instant. First comes a <strong>growing flash</strong> on impact; half a second later the whole cross of fire appears at once, as far as your power-ups reach. The fire then <strong>lingers for a second and a half</strong>, and anything that enters a burning tile, you or a monster, takes a hit.</p>
+                        <p>Chain reactions never go off all together either. Each explosion joins a queue and goes off <strong>0.3 seconds after the last</strong>, so a big chain rolls across the map where you can watch it, rather than happening in a single frame.</p>
+                        <p>That half-second flash is your cue for the <strong>blast shield</strong>. It's built against flame, so it holds your own fire well, but monster projectiles heat it up fast. It slows you down while it's up, and when its heat meter fills, it has to cool before you can raise it again.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stars-stack-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Power that comes and goes</p>
+                        <h3>Power-ups that wear out</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bazooka-bomber/09-powerups.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Broken blocks reveal power-ups, and you can stack them up to a limit. Each one has a <strong>number of uses</strong>, between ten and sixty depending on the kind, and loses one every time you do what it improves, mostly every time you fire. No timers: it lasts as long as you use it, not as long as you wait.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table kit">
+                                <thead><tr><th scope="col">Power-up</th><th scope="col">Each one adds</th></tr></thead>
+                                <tbody>
+                                    <tr><td data-label="Power-up">Range</td><td data-label="Adds">One more tile of flight, and a fifth of a second more fuse</td></tr>
+                                    <tr><td data-label="Power-up">Fire length</td><td data-label="Adds">One more tile on each arm of the cross</td></tr>
+                                    <tr><td data-label="Power-up">Fire power</td><td data-label="Adds">One more hit of damage to every tile it reaches</td></tr>
+                                    <tr><td data-label="Power-up">Penetration</td><td data-label="Adds">Fire carries on through one more block instead of stopping at the first</td></tr>
+                                    <tr><td data-label="Power-up">Bomb quota</td><td data-label="Adds">One more bomb out at the same time</td></tr>
+                                    <tr><td data-label="Power-up">Run speed</td><td data-label="Adds">Faster movement</td></tr>
+                                    <tr><td data-label="Power-up">Backblast</td><td data-label="Adds">One more tile of fire behind you</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Several can run out at once, leaving you suddenly lighter, but with free slots for whatever the next blocks reveal. And power-ups lying on the floor <strong>burn up</strong> if fire reaches them, so firing wildly destroys your own supply. The way to hit hard is to fire carefully, collect what you uncover and let the stack build, so each shot does more of the work.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/grenade-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Three slots, many tricks</p>
+                        <h3>Consumables</h3>
+                        <p>Three slots hold consumables, which change your next launches or perform an action, and may have several uses each:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table kit">
+                                <thead><tr><th scope="col">Consumable</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><td data-label="Consumable">Shaped charge</td><td data-label="Does">No backblast, and a fuse a quarter shorter</td></tr>
+                                    <tr><td data-label="Consumable">Impact fuse</td><td data-label="Does">The bomb goes off the moment it hits a wall or a monster</td></tr>
+                                    <tr><td data-label="Consumable">Airburst</td><td data-label="Does">A bomb that stops in the open goes off right away instead of waiting</td></tr>
+                                    <tr><td data-label="Consumable">Cluster bomb</td><td data-label="Does">After going off, the bomb leaves another in the same spot, every two seconds: one, two, three or five times over</td></tr>
+                                    <tr><td data-label="Consumable">Fire branches</td><td data-label="Does">The arms of the cross sprout side branches, up to a tapering tree of fire at the top level</td></tr>
+                                    <tr><td data-label="Consumable">Sequence detonator</td><td data-label="Does">Bombs in a chain go off one by one, with a delay, instead of together</td></tr>
+                                    <tr><td data-label="Consumable">Slab charge</td><td data-label="Does">A solid rectangle of fire instead of a cross</td></tr>
+                                    <tr><td data-label="Consumable">Dash, armor</td><td data-label="Does">A quick dash, or extra hits to survive</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/push-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A map you take apart</p>
+                        <h3>Crates, stone and barrels</h3>
+                        <p>Every solid thing on the map can be destroyed, it's just a question of how many hits. <strong>Crates</strong> are wood, metal or reinforced, taking one, three or five hits. <strong>Stone</strong> is soft, hard or obsidian and takes ten to sixty, so it's for long sieges or heavy fire power. <strong>Explosive barrels</strong> come in five sizes, from a pop to a crater, and turn any careless shot into a chain reaction.</p>
+                        <p>Crates and barrels can be pushed by walking into them, or pulled one tile back with you, as in Sokoban, to clear a lane, build cover or drag a barrel up to a nest.</p>
+                        <p>Because you have <strong>unlimited bombs</strong> and everything solid breaks, every map can always be finished, even when the generator boxes you in. The challenge is never whether you can get through. It's not blowing yourself up and not getting caught on the way.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hive-sbed.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">What's down there</p>
+                        <h3>Monsters and the thing at the bottom</h3>
+                        <p>Small, medium and large burrows release monsters that live by the same rules you do: they walk the grid, collide with blocks and walls, and carry weaker versions of the boss attacks below. The tougher ones come singly: an <strong>elite</strong> one tile across that takes five hits, a <strong>miniboss</strong> two by two that takes fifteen, and the <strong>boss</strong>, three by three, that takes forty.</p>
+                        <p>Bosses ignore the grid. They float slowly around the map, bouncing off its walls, and each has one or two attacks from a list: launching bombs that can't hurt it or its minions, spawning minions, ramming you, drifting over you and burning the tile beneath, firing slow bursts of shots, or setting tiles on fire with a warning of two seconds or more. If one ever ends up outside the map's borders, it heads straight back to the center before its walls work again, so no boss can get stuck or hide.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/bazooka-bomber_4_boxart.jpg" alt="Box art: looking down a tall shaft of stone blocks lit by yellow lamps, a star-shaped burst of fire and flying crates halfway up, and a yellow tracked robot with a cannon waiting at the bottom." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Colony work order</p>
+                <h2 id="sendoff">AAL Bazooka Bomber: Underground Rocket Demolition</h2>
+                <p>Site: new shaft, ten levels. Status: infested. Requested: one bazooka miner.</p>
+                <p>Clear every level from the lift to the bottom chamber. Remove the nest. Mind the barrels. Mind your backblast. Do not let the crews down until the lights are green.</p>
+                <p><strong>The colony starts digging the day you're done.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Bomberman, Super Bomberman 2, Breakout, Sokoban and Dead Space</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Spectrashell (CC0), Exo 2, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "slug": "bazooka-bomber",
+  "preset": "08 Games - Synthetik 2 (Action/Top-Down 3D)",
+  "style": "Palette of hazard yellow, ember red, rusty brown rock and cold steel grey. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Three-quarter overhead view of a dark underground mine cavern laid out as a grid of square stone blocks, wooden crates and red explosive barrels, lit by hanging hazard-yellow lamps. On the left, a small boxy yellow tracked mining robot with a shoulder-mounted rocket tube. A glowing rocket flies straight away from it down a corridor between the blocks, toward a wall of crates on the right. The lower left of the picture is plain dark rock floor."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Top-down view of an underground mine laid out as a grid of square stone blocks and wooden crates: a big cross-shaped explosion of fire spreads along the straight corridors between the blocks, shattering crates into splinters. A few tiles away, a small boxy yellow tracked mining robot with a shoulder-mounted rocket tube waits behind a glowing orange curved energy shield. Smoke and embers."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Top-down view of a straight corridor in an underground mine grid of square stone blocks: a stubby rocket-propelled bomb slides along the corridor on a trail of flame, a few tiles ahead of a small boxy yellow tracked mining robot with a shoulder-mounted rocket tube. At the end of the corridor, a wall of wooden crates and red explosive barrels, and in a pocket behind them, pale many-legged cave creatures."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait scene looking down a deep vertical mine shaft built from square stone blocks and steel girders, hazard-yellow lamps on the walls. Far below at the bottom of the shaft, a small boxy yellow tracked mining robot with a shoulder-mounted rocket tube. Halfway up the shaft, a huge cross-shaped burst of fire blooms among the blocks, crates and splinters flying. Pure illustration with no lettering."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide view of a rocky rust-brown alien planet at dusk: a small new colony mining town with steel headframes, conveyor belts, round domes and a landing pad with a cargo ship, lit by hazard-yellow lights. Beside the town, a big dark cave mouth leads down into the ground, with a winch and cables going into it. A second moon in the sky."
+    }
+  ]
+}

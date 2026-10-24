@@ -1,0 +1,20 @@
+{
+  "slug": "bazooka-bomber-mini",
+  "out": "site/projects/mini/bazooka-bomber",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - H - Gritty-Dirty",
+  "lead": "Gritty sci-fi film still, underground mine, hazard-yellow lamps and ember-red firelight. ",
+  "images": [
+    {"n": 1, "name": "colony", "ratio": "3:2", "prompt": "A new mining colony on a rusty alien planet"},
+    {"n": 2, "name": "dormant", "ratio": "3:2", "prompt": "Strange pale shapes sleeping in a dark cave wall"},
+    {"n": 3, "name": "mech", "ratio": "3:2", "prompt": "A small yellow tracked mining robot with a rocket tube on its shoulder"},
+    {"n": 4, "name": "job", "ratio": "3:2", "prompt": "A mine entrance with a winch and cables going down into darkness"},
+    {"n": 5, "name": "map", "ratio": "3:2", "prompt": "A tunnel blocked by stone blocks and wooden crates"},
+    {"n": 6, "name": "campaign", "ratio": "3:2", "prompt": "Mine tunnels lit in slowly changing colors from amber to red"},
+    {"n": 7, "name": "network", "ratio": "3:2", "prompt": "A glowing star map with mining sites marked as lights"},
+    {"n": 8, "name": "flow", "ratio": "3:2", "prompt": "A mine elevator rising toward daylight"},
+    {"n": 9, "name": "powerups", "ratio": "3:2", "prompt": "Glowing equipment canisters on a scorched rock floor"},
+    {"n": 10, "name": "shield", "ratio": "3:2", "prompt": "An orange energy shield glowing in a smoky tunnel"}
+  ]
+}
