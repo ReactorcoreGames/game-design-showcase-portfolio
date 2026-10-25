@@ -1,0 +1,37 @@
+{
+  "slug": "power-pile",
+  "preset": "09 Artist - Barclay Shaw (Harlan Ellison Covers)",
+  "style": "Retro-futurist 1980s casino glamour. Palette of money emerald green, hot neon pink and champagne gold on deep green-black. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide view of a glamorous card table under a gleaming chrome dome, five flamboyant gamblers in sharp suits, white tuxedos and sequined evening gowns leaning in over the green felt. In the middle of the table rises a towering glowing pile of blank colorful playing cards, spilling over the edges, gold coins scattered around it. Neon pink and emerald reflections on the chrome. The lower left of the picture is plain dark felt."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Close view across a green felt card table: a sweating gambler in a white tuxedo with slicked-back hair peeks at a single card held close to his chest, eyes wide. Beside him, a woman in a sequined emerald evening gown smirks over her fan of blank colorful cards. Between them stands a tall glowing pile of blank colorful playing cards. Chrome table rim, neon pink light."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Close low view of a huge mound of blank colorful playing cards on a glossy green felt table, the mound glowing from within, golden light streaming up from it. A hand in a white glove lays one final card on top of the mound. The polished chrome rim of the table reflects the glow, a dark lounge behind."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall view of a gleaming round chrome bank vault door swung wide open. Inside the vault, a mountain of blank colorful playing cards and gold coins glowing warmly. Sitting on top of the heap, a smug gambler in a white tuxedo fanning a hand of cards. Neon pink and emerald light on the polished chrome. Pure illustration with no lettering."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide view of a retro-futuristic harbor city at night from above the water: a long strip of chrome towers, glass domes and sleek lounges lit with neon pink and emerald lights, a monorail curving between them, white yachts moored in the harbor, the lights reflecting in the dark water, more towers further down the coast."
+    }
+  ]
+}

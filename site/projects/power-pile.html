@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Pile: Who Takes It All?</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: an UNO-style push-your-luck card game where a table of hopelessly greedy gamblers feeds one ever-growing pile, and whoever plays their last card takes it all. Tells, steals, house rules and no real money.">
+    <meta name="keywords" content="game design concept, card game, shedding game, push your luck, UNO inspired, mau-mau, bluffing, house rules, singleplayer card game, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/power-pile.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Power Pile: Who Takes It All?">
+    <meta property="og:description" content="A game design concept: greedy gamblers feed one ever-growing pile of cards, and whoever plays their last card takes it all. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/power-pile.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/power-pile_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: gamblers at a chrome card table eye a glowing pile of cards">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Power Pile: Who Takes It All?">
+    <meta name="twitter:description" content="A game design concept: greedy gamblers feed one ever-growing pile of cards, and whoever plays their last card takes it all.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/power-pile_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Power Pile: Who Takes It All?",
+        "description": "A game design concept, not a released game: a singleplayer UNO-style push-your-luck card game against computer gamblers. Every card played grows one pile, whoever plays their last card takes it, and the drama comes from deciding when to go out, reading faces, stealing cards and each venue's house rules. No real money is involved.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Card game", "Party", "Casual"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/power-pile.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/power-pile_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0c1410">
+
+    <link rel="preload" href="../fonts/audiowide.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Power Pile: felt and neon. Green-black ground, money emerald for the main accent,
+           hot pink neon for the second, champagne for highlights. Audiowide, a rounded neon-sign
+           face, for the title and headings; Exo 2 Black Italic for the subtitle and kickers. */
+        @font-face { font-family: "Audiowide"; src: url("../fonts/audiowide.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Exo 2 Black Italic"; src: url("../fonts/exo2-black-italic.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0c1410;
+            --flow-2: #3a1236;
+            --grid-minor: rgba(200, 255, 220, 0.04);
+            --grid-major: rgba(200, 255, 220, 0.09);
+            --p-ground: rgba(12, 20, 16, 0.95);
+            --p-panel: #14211b;
+            --p-1: #3fe58f;
+            --p-2: #ff52a8;
+            --p-3: #fff1c2;
+            --p-text: #e1ebe4;
+            --p-dim: #a2b3a8;
+            --p-line: rgba(200, 255, 220, 0.15);
+            --font-title: "Audiowide", "Segoe UI", sans-serif;
+            --font-sub: "Exo 2 Black Italic", "Segoe UI", sans-serif;
+            --shade: #060b08;
+        }
+
+        /* Title effect, "neon sign": the name buzzes like a sign over a card den, a steady pink
+           glow with two quick stutters in every cycle, and the subtitle's underline is a strip of
+           marquee lights that chases from left to right. The layered dark shadows never change. */
+        .p-name { animation: neon 6s linear infinite; }
+        @keyframes neon {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(255, 82, 168, 0.8), 0 0 40px rgba(255, 82, 168, 0.35); }
+            61% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(255, 82, 168, 0.8), 0 0 40px rgba(255, 82, 168, 0.35); }
+            62% { color: #d9cfa8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade); }
+            64% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(255, 82, 168, 0.8), 0 0 40px rgba(255, 82, 168, 0.35); }
+            66% { color: #d9cfa8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade); }
+            68% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(255, 82, 168, 0.95), 0 0 50px rgba(255, 82, 168, 0.45); }
+        }
+        .p-sub { color: var(--p-1); letter-spacing: 0.04em; text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.45rem; height: 4px;
+            background: repeating-linear-gradient(90deg, var(--p-1) 0 8px, transparent 8px 14px);
+            animation: marquee 6s linear infinite;
+        }
+        @keyframes marquee {
+            0%, 100% { box-shadow: -40px 0 10px -6px rgba(63, 229, 143, 0.0); opacity: 0.7; }
+            50% { box-shadow: 0 0 12px rgba(63, 229, 143, 0.85); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 6s linear infinite; }
+        @keyframes h2-line { 0%, 61%, 68%, 100% { box-shadow: 0 0 8px rgba(255, 82, 168, 0.55); } 62%, 66% { box-shadow: none; } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.08em; }
+        .steals th[scope="row"], .rules th[scope="row"], .risks th[scope="row"] { width: 9rem; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/power-pile_1_title.jpg" alt="Three gamblers in black tuxedos, one in a sequined jacket, lean over a round green felt table under a big chrome lamp glowing neon pink, a heaped pile of colorful cards in the middle and gold coins scattered around it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Power Pile</span><span class="p-sub">Who Takes It All?</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/coins-pile-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/poker-hand-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">Power Pile is a push-your-luck card game in the family of UNO and mau-mau, played by a table of hopelessly greedy gamblers. Every card played lands on one pile in the middle of the table, the Power Pile, and whoever plays their last card takes the lot. So everybody wants to go out, and nobody wants to go out early.</p>
+            <p>It's a singleplayer game against computer gamblers, two to eight at a table, every one of them with a face that gives them away if you know how to look. The pile is pretend wealth in a pretend city: there is <strong>no real money in the game, nothing to buy and nothing to bet</strong>. The thrill is the size of the pile and the nerve it takes to let it grow.</p>
+            <p>Power Pile is one of three games designed on the same card engine, each in its own mood. Its siblings are the cozy campfire of <a href="bonfire.html">Bonfire</a> and the duelling wizards of <a href="ultimate-card.html">Ultimate Card</a>.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/fingers-crossed-generalace135.png)"></span>Target audience</h3>
+                    <p>Players who love the drama of a big pot and a good bluff, poker nights, push-your-luck dice games, Balatro, without real money, ranked tables or strangers online.</p>
+                    <p>They want <strong>the thrill of holding their nerve</strong> and the laugh of watching a greedy table get what it deserves.</p>
+                    <p>It's played with the mouse. Anyone who has played UNO can sit down at once; reading faces and timing the finish is what takes a while.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/coinflip-caro-asercion.png)"></span>Game's purpose</h3>
+                    <p><strong>Excitement:</strong> every card makes the pile bigger and the next decision louder.</p>
+                    <p><strong>Play and silliness:</strong> a table of cartoon misers stealing from each other.</p>
+                    <p><strong>Mastery and choice:</strong> reading tells, and choosing the moment to take it all.</p>
+                    <p>It deliberately avoids draining <strong>safety</strong> (no real money, no purchases, nothing real at stake) and <strong>rest</strong> (leave any table between pots, and nothing is lost).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/money-stack-delapouite.png)"></span>Core concept</h3>
+                    <p>Gambling games are built to keep you betting: real stakes, near misses and a house that always wins in the end.</p>
+                    <p>Here <strong>the stakes are pretend and there is no house</strong>. The only people you can win from are the other gamblers, and the tension comes from the pile itself: the longer everyone holds out, the more there is to take, and the more there is to lose to whoever goes out first.</p>
+                    <p>Your winnings buy nothing. They pile up in your vault, where you can admire them.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/power-pile_5_story.jpg" alt="A retro-futuristic harbor city at night seen from above: a strip of chrome towers and domes lit in neon pink and emerald, a monorail curving between them and yachts in the harbor." width="1280" height="720" loading="lazy">
+            <figcaption>"The Strip never closes. There's always one more table, and somebody at it who thinks they're due."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/slot-machine-caro-asercion.png)"></span>Lore and story</h2>
+            <h3>Glimmerport</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/power-pile/01-glimmerport.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Glimmerport is a harbor city of chrome and neon that grew up around one street, the Strip: card dens, riverboats, rooftop lounges and private rooms, one after another down to the water and further along the coast every year. Everyone in it is there for the same reason, and everyone is sure tonight is their night.</p>
+
+            <h3>The pile</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/power-pile/02-pile.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Glimmerport plays one game, and its tables have no dealer to take a cut. Everyone throws into the same pile, nobody is allowed to take anything back out, and the pile belongs to whoever empties their hand first. A big pile is the most beautiful thing in the city, and the most dangerous thing at the table.</p>
+
+            <h3>The gamblers</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/power-pile/03-gamblers.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Every regular on the Strip is greedy in their own way: the hoarder who can't bear to let a card go, the show-off who plays big for the crowd, the sweet-talker who makes deals and breaks them, the daredevil who plays the riskiest card in the deck on principle, the old money who has never once lost gracefully. You pick yours from the same crowd, and play them just as badly as you like.</p>
+
+            <h3>Tonight</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/power-pile/04-tonight.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Every venue on the Strip has a high roller who runs the back room and has never been cleaned out. Work your way through the tables, sit down across from them, and take their pile. Then find out what's opened up further down the street.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>The table is seen from your seat: your hand at the bottom, the pile in the middle with its count glowing on the table edge, and the other gamblers around it with their faces and the size of their hands showing. Everything works with the mouse; the keys are shortcuts.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Your hand</h3>
+                    <dl>
+                        <div><dt>Click</dt><dd>Pick a card; click more of the same number to make a set</dd></div>
+                        <div><dt>Drag</dt><dd>Reorder your hand, or the set you're about to play</dd></div>
+                        <div><dt>Right click</dt><dd>Read what a card does</dd></div>
+                        <div><dt>Click a gambler</dt><dd>Choose who a targeted card hits</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>The table</h3>
+                    <dl>
+                        <div><dt>Space</dt><dd>Play the picked cards onto the pile</dd></div>
+                        <div><dt>D</dt><dd>Draw a card, up to three a turn</dd></div>
+                        <div><dt>Enter</dt><dd>End your turn</dd></div>
+                        <div><dt>Tab</dt><dd>Table overview: hands, alliances, house rules</dd></div>
+                        <div><dt>Esc</dt><dd>Pause, or get up and leave once the pot's done</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>When a gambler lifts a card, watch their face: that's where the game hides its information. When anyone is down to their last card, a warning lights up over their seat on its own, and nobody has to shout anything.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/power-pile_2_vignette.jpg" alt="At a green felt card table, a gambler in a white tuxedo frowns at the single card in his hand, while a woman in a sequined emerald gown beside him smiles over a fan of rainbow-colored cards, a tall glowing stack of cards between them." width="1280" height="720" loading="lazy">
+            <figcaption>"Some gamblers hide their feelings better than others. A face that lights up at a drawn card is a face holding something good."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/card-play-quoting.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A turn at the table</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/power-pile/05-turn.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Count the pile, count the hands, read the faces. Then play a card or a set, steal something, send someone a stack of cards to draw, or sit on your hand and let the pile grow a little more.</p>
+                        <p>Every turn takes seconds, and every one of them asks the same question in a new way: is it big enough yet?</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A night at one venue</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/power-pile/06-venue.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each venue is a small map in the style of Super Mario Bros. 3: five to eight tables joined by corridors with a few forks, and the high roller's back room at the end. Each table is one pot, rolled up on its own: how many gamblers sit down, whether it's every one for themselves or teams, how many colors are in the deck, how many cards everyone starts with, and the <strong>house rules</strong>.</p>
+                        <p>Win the pot or don't, the night goes on to the next table. The high roller brings extra consumables and a trick of their own. Take their pot and the venue is broken; miss it, and their back room waits for another night.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/locked-chest-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The vault, the trophy room and the Strip</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/power-pile/07-vault.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Everything you take goes into your <strong>vault</strong>, a heap of cards and coins that grows with every pot you win, and spends on nothing. It's a monument to your greed, and you can go and stand in it.</p>
+                        <p>Next door is the <strong>trophy room</strong>: the biggest piles you ever took and the most outrageous finishes, each kept with the seed of its table so it can be played again from the first card. The plaques boast. Each one claims three times what really happened, with the true number in small print underneath.</p>
+                        <p>Outside, the <strong>Strip</strong> keeps going. Every venue you break puts your name in lights on its sign, and new venues keep opening further down the coast, so there's always another back room.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One pot, or the whole night</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/power-pile/08-night.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The game opens on the Strip. Carry on with the venue you're working through, or choose the kind of night you want and the Strip offers one to match: <strong>a quick hand</strong> (small hands, a short pot), <strong>a long night</strong> (big hands and big piles) or <strong>a chaos night</strong> (house rules rolled at random at every table). Whatever you choose, the winnings go to the same vault.</p>
+                        <p>Get up between any two pots, or pause in the middle of one, and the night waits where you left it.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/rolling-dice-cup-delapouite.png)"></span>Game modes</h2>
+            <p>Every table seats its gamblers one of three ways. The venue rolls which, unless you've asked for one.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">How it plays</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Free for all</th><td data-label="Plays">Two to eight gamblers, each for themselves</td><td data-label="For">Pure greed: anyone can be hit, anyone can take it</td></tr>
+                        <tr><th scope="row">Teams</th><td data-label="Plays">Sides of fairly even size (2v2, 2v3, 3v4, 2v2v2), partners taking their turns back to back; attacks only touch the other sides, and partners split the pile. An uneven table is a David and Goliath match, with handicaps that make it fair</td><td data-label="For">Passing a partner the color they need, and splitting a big pile</td></tr>
+                        <tr><th scope="row">Conspiracy</th><td data-label="Plays">Alliances dealt at random, with turns alternating between sides (one of yours, one of theirs); every card hits anyone, allies included, and an ally who takes the pile only shares it if they feel like it</td><td data-label="For">Backstabbing aplenty</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/gold-stack-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/coins-pile-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Taking it all</h3>
+                        <p>The deck is endless and the pile is never shuffled back into it: every card played stays on the pile, and its count only grows. When someone plays their last card, they take the pile: one for every card in it, plus the face value of every card still in the other gamblers' hands (numbers at their number, action cards twenty, jokers fifty), as in the points variant of UNO.</p>
+                        <p>That's the whole game in one sentence: the longer the pile grows, the more there is to take, and the more it hurts when somebody else takes it. Two things make a finish bigger:</p>
+                        <ul>
+                            <li><strong>The last card:</strong> going out with a whole set is allowed, but a single card held back and played alone on a later turn takes half as much again. While you wait, a warning over your seat tells everyone you're on one card.</li>
+                            <li><strong>The jackpot card:</strong> a rare card that doubles the take if it's the last one you play, and is an ordinary joker otherwise.</li>
+                        </ul>
+                        <p>A pile can hold 999 cards, the house limit. If it ever gets there, the hand stops, and the gambler holding the fewest cards takes it.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/power-pile_3_feature.jpg" alt="A mound of pink and pastel playing cards on a round chrome tray on green felt, golden light streaming down onto it as a white-gloved hand lays one final card on top." width="1280" height="720" loading="lazy">
+                            <figcaption>"Whoever plays their last card takes the whole pile, plus every card still left in the others' hands."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dice-fire-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Too greedy</p>
+                        <h3>Going bust, and the risky cards</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/power-pile/09-bust.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A gambler who ends up holding <strong>twenty-five cards</strong> (some tables allow up to fifty) is bust: out of the pot, with their whole hand tipped onto the pile. Every bust makes the pot bigger for the people still playing, which is exactly why they were sent all those cards.</p>
+                        <p>The deck also carries cards that only a gambler would play:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table risks">
+                                <thead><tr><th scope="col">Card</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Apocalypse</th><td>Flip a coin three times. All heads, and the next gambler draws twenty-five; anything else, and nothing happens at all</td></tr>
+                                    <tr><th scope="row">Mutual ruin</th><td>Every gambler draws, you included; but if it's your last card, you're spared and the pile is yours</td></tr>
+                                    <tr><th scope="row">Roulette</th><td>Name a color: the next gambler draws until they find it, up to ten</td></tr>
+                                    <tr><th scope="row">Burden</th><td>A curse that counts fifty against you if it's still in your hand when someone goes out, and the only way to play it is to draw ten cards first</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/semi-closed-eye-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Poker faces</p>
+                        <h3>Tells</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/power-pile/10-tell.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every gambler at the table has a face, and it moves: idle glances at the pile and at each other, anger when they're hit, a smug grin when they land a big draw on someone, glee when they take a pot, a knockout look when they go bust.</p>
+                        <p>The face that matters most is the one they make when they <strong>lift a card</strong>: neutral, disgusted or excited. Each gambler has a chance of showing what they really feel, and the chance is part of who they are. The show-off can't hide anything; the old money almost never cracks. Read them right and you know who's about to go out and who's bluffing about it.</p>
+                        <p>For everything else there are peeks: a card that shows you the next gambler's hand, one that keeps a chosen hand face up until its owner's next turn, and one that turns every hand face up, yours included.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/robber-hand-darkzaitzev.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Sticky fingers</p>
+                        <h3>Swaps, trades and steals</h3>
+                        <p>Greed needs tools. On top of the usual draws, skips and reverses, Power Pile's deck is full of cards that move cards between hands:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table steals">
+                                <thead><tr><th scope="col">Card</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Swap</th><td>Trade your whole hand with the next gambler, or with one you choose</td></tr>
+                                    <tr><th scope="row">Pass it round</th><td>Every hand moves one seat along in the direction of play</td></tr>
+                                    <tr><th scope="row">Trade</th><td>See the next gambler's hand, give them a random card of yours and take the one you want</td></tr>
+                                    <tr><th scope="row">Pickpocket</th><td>See their hand and take the card you want without giving one back: a card more in your own hand, but their best card out of theirs</td></tr>
+                                    <tr><th scope="row">On your tab</th><td>Hand the next gambler cards straight from your own hand, or a chosen gambler with the targeted version</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The swaps are the most dangerous cards in the game. A gambler on twenty-four cards can hand them to the one on a single card, and a careful player saves a swap for exactly the moment someone else has been fed a mountain.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/card-joker-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Every table is different</p>
+                        <h3>House rules</h3>
+                        <p>Every venue has its own customs, and every table can have a few of them. They come from the many ways people really play UNO at home, renamed for Glimmerport:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table rules">
+                                <thead><tr><th scope="col">House rule</th><th scope="col">What changes</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Buffet</th><td>Everyone starts with ten or twenty cards instead of seven</td></tr>
+                                    <tr><th scope="row">Extra hot</th><td>Bigger draws (+3, +6), skips that jump two gamblers, freezes that sit someone out for two or three rounds</td></tr>
+                                    <tr><th scope="row">Jump in</th><td>Hold the exact card just played (same color, same number) and you can play it at once, out of turn</td></tr>
+                                    <tr><th scope="row">Sevens and zeros</th><td>A seven swaps your hand with a gambler of your choice; a zero passes every hand one seat along</td></tr>
+                                    <tr><th scope="row">Lucky number</th><td>One number, chosen at the start, lets whoever plays it swap hands</td></tr>
+                                    <tr><th scope="row">Runs</th><td>Besides sets of one number, runs of one color (a 3, 4 and 5) can go down together</td></tr>
+                                    <tr><th scope="row">Doomsday zero</th><td>One particular card can only be played after drawing ten</td></tr>
+                                    <tr><th scope="row">Tally</th><td>The table plays several pots and keeps score, and the lowest total at the end takes them all</td></tr>
+                                    <tr><th scope="row">Tight or loose</th><td>Every draw one card bigger or one smaller; or you can only draw one or two cards before your turn ends</td></tr>
+                                    <tr><th scope="row">Open books</th><td>Every hand but your own is always face up, or no card can ever reveal a hand</td></tr>
+                                    <tr><th scope="row">Free card</th><td>Each turn starts by flipping the deck's top card straight onto the pile</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The rules underneath stay the same everywhere: match the color, the number or the symbol, or play a joker; play a set of one number in any order, so the card on top is the one you want; draw up to three if nothing fits; and pass a draw or a skip along by answering with the same kind, so the chain grows until it reaches someone who can't.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/card-draw-faithtoken.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A bigger deck</p>
+                        <h3>Eight suits and flex cards</h3>
+                        <p>A table's deck comes in one of three sizes: <strong>classic</strong> (red, green, blue, yellow), <strong>extended</strong> (adding orange and purple) or <strong>maximum</strong> (adding teal and brown, with black and white as the two kinds of joker). More colors mean fewer matches and longer hands, which means bigger piles.</p>
+                        <p><strong>Flex cards</strong> carry two, three or four colors and can be played on any of them; hidden-power cards can't be played at all until their condition is met. Any action card can also come <strong>doubled up</strong>: one effect twice or three times, or two to four effects on one card. Rarity sets how often each turns up, from the common numbers to the legendary jokers.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Trivia</h2>
+            <p>Power Pile is one of three games split from a single design, a singleplayer "Super UNO" that tried to hold every card idea at once. The other two are <a href="bonfire.html">Bonfire</a>, where the pile is a campfire and the finale a light show, and <a href="ultimate-card.html">Ultimate Card</a>, where it's a singularity and the finish deals damage. This one keeps the swaps, steals, alliances and house rules, because greedy people at a card table use every one of them.</p>
+            <p>The house rules started as a list of UNO variations found online, which the design notes suggest using as mutators whenever the player asks for a chaos game. The one that didn't make it is Silent Sevens, where anyone who speaks has to draw: hard to enforce on a table of computer players.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/power-pile_4_boxart.jpg" alt="Box art: seen through the round opening of a gleaming chrome vault door, a grinning gambler in a cream suit sits on a heap of cards and gold coins, holding up a hand of cards, lit in neon pink and green." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">A private invitation</p>
+                <h2 id="sendoff">Power Pile: Who Takes It All?</h2>
+                <p>You are cordially invited to the back room. The pile is already knee-high. The gentleman in white hasn't lost a hand all season, the lady in green is on one card and smiling about it, and the old man at the end has been holding a swap since Tuesday.</p>
+                <p>Sit down. Throw something on the pile. Watch their faces. And when it's big enough, if it's ever big enough, take it.</p>
+                <p><strong>Everyone's in. Nobody's out. Who takes it all?</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by UNO and its many house variants, mau-mau and Super Mario Bros. 3's world map</p>
+                <p>Icons by Lorc, Delapouite, Quoting and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Audiowide, Exo 2, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

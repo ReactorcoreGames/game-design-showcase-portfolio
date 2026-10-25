@@ -1,0 +1,73 @@
+{
+  "slug": "power-pile-mini",
+  "out": "site/projects/mini/power-pile",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - G - Glossy-Shiny",
+  "lead": "Glossy retro photograph, neon lounge at night, emerald and hot pink light. ",
+  "images": [
+    {
+      "n": 1,
+      "name": "glimmerport",
+      "ratio": "3:2",
+      "prompt": "A street of chrome towers glowing by a harbor at night"
+    },
+    {
+      "n": 2,
+      "name": "pile",
+      "ratio": "3:2",
+      "prompt": "A tall pile of colorful playing cards on a green felt table"
+    },
+    {
+      "n": 3,
+      "name": "gamblers",
+      "ratio": "3:2",
+      "prompt": "Well-dressed people leaning over a card table, eyeing each other"
+    },
+    {
+      "n": 4,
+      "name": "tonight",
+      "ratio": "3:2",
+      "prompt": "A velvet curtain half open onto a private back room"
+    },
+    {
+      "n": 5,
+      "name": "turn",
+      "ratio": "3:2",
+      "prompt": "A hand placing a card on a growing pile of cards"
+    },
+    {
+      "n": 6,
+      "name": "venue",
+      "ratio": "3:2",
+      "prompt": "A long corridor of a lounge lined with card tables"
+    },
+    {
+      "n": 7,
+      "name": "vault",
+      "ratio": "3:2",
+      "prompt": "An open round chrome vault door with a golden glow inside"
+    },
+    {
+      "n": 8,
+      "name": "night",
+      "ratio": "3:2",
+      "prompt": "An empty card table at dawn with scattered cards and coins"
+    },
+    {
+      "n": 9,
+      "name": "bust",
+      "ratio": "3:2",
+      "prompt": "Close up of gloved hands overflowing with playing cards above green felt"
+    },
+    {
+      "n": 10,
+      "name": "tell",
+      "ratio": "3:2",
+      "prompt": "Eyes peeking over a fan of playing cards"
+    }
+  ]
+}

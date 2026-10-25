@@ -54,6 +54,14 @@ window.PROJECTS = [
     status: "concept", added: "2026-10-25"
   },
   {
+    page: "power-pile.html", prefix: "power-pile",
+    title: "Power Pile", subtitle: "Who Takes It All?",
+    icon: "coins-pile-delapouite", tint: "green",
+    blurb: "A table of hopelessly greedy gamblers feeds one ever-growing pile, and whoever plays their last card takes it all: an UNO-style push-your-luck game of tells, steals and house rules, with no real money anywhere.",
+    genres: ["puzzle"], tags: ["card game", "push your luck", "bluffing", "house rules"],
+    status: "concept", added: "2026-10-25"
+  },
+  {
     page: "bazooka-bomber.html", prefix: "bazooka-bomber",
     title: "AAL Bazooka Bomber", subtitle: "Underground Rocket Demolition",
     icon: "incoming-rocket-lorc", tint: "yellow",
