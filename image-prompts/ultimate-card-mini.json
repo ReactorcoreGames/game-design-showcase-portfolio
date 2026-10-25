@@ -1,0 +1,20 @@
+{
+  "slug": "ultimate-card-mini",
+  "out": "site/projects/mini/ultimate-card",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - L - Dreamy-Surreal",
+  "lead": "Dreamy surreal photograph, arcane night, deep indigo and gold light. ",
+  "images": [
+    {"n": 1, "name": "convergence", "ratio": "3:2", "prompt": "Lines of light crossing on a mountaintop under a thin glowing sky"},
+    {"n": 2, "name": "wizards", "ratio": "3:2", "prompt": "Robed figures standing in a circle around a swirling vortex"},
+    {"n": 3, "name": "archmages", "ratio": "3:2", "prompt": "A glowing crystal resting on an ancient stone throne"},
+    {"n": 4, "name": "quest", "ratio": "3:2", "prompt": "A lone stone tower on a ridge with a faint vortex above it"},
+    {"n": 5, "name": "turn", "ratio": "3:2", "prompt": "A hand holding glowing cards beside a swirling dark sphere"},
+    {"n": 6, "name": "ladder", "ratio": "3:2", "prompt": "Stone towers connected by winding mountain paths at dusk"},
+    {"n": 7, "name": "realm", "ratio": "3:2", "prompt": "A landscape half flooded with lakes and half grown into forest"},
+    {"n": 8, "name": "flip", "ratio": "3:2", "prompt": "A card that is half bright and half dark, floating in mist"},
+    {"n": 9, "name": "core", "ratio": "3:2", "prompt": "A glowing crystal in an old wizard's open palm"},
+    {"n": 10, "name": "rival", "ratio": "3:2", "prompt": "A hooded wizard smirking in candlelight"}
+  ]
+}

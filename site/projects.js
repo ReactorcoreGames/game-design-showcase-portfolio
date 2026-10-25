@@ -46,6 +46,14 @@ window.PROJECTS = [
     status: "concept", added: "2026-10-25"
   },
   {
+    page: "ultimate-card.html", prefix: "ultimate-card",
+    title: "Ultimate Card", subtitle: "Wizard Singularity Supremacy",
+    icon: "magic-swirl-lorc", tint: "yellow",
+    blurb: "Rival wizards feed one singularity with elemental cards, and whoever plays their last card claims it: an UNO-style duel with element reactions and detonations, counter cards, commander powers and archmage ladders across an endless realm.",
+    genres: ["strategy", "puzzle"], tags: ["card game", "card battler", "wizards", "elements"],
+    status: "concept", added: "2026-10-25"
+  },
+  {
     page: "bazooka-bomber.html", prefix: "bazooka-bomber",
     title: "AAL Bazooka Bomber", subtitle: "Underground Rocket Demolition",
     icon: "incoming-rocket-lorc", tint: "yellow",

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Card: Wizard Singularity Supremacy</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: an UNO-style duelling card game where rival wizards feed one singularity with elemental cards, and whoever plays their last card claims it, with elemental reactions, counter cards, wizard powers and an endless realm of ladders.">
+    <meta name="keywords" content="game design concept, card game, card battler, shedding game, UNO inspired, mau-mau, wizards, elemental reactions, singleplayer card game, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/ultimate-card.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Ultimate Card: Wizard Singularity Supremacy">
+    <meta property="og:description" content="A game design concept: rival wizards feed one singularity with elemental cards, and whoever plays their last card claims it. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/ultimate-card.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/ultimate-card_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: two wizards duel with glowing cards beside a swirling vortex">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Ultimate Card: Wizard Singularity Supremacy">
+    <meta name="twitter:description" content="A game design concept: rival wizards feed one singularity with elemental cards, and whoever plays their last card claims it.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/ultimate-card_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Ultimate Card: Wizard Singularity Supremacy",
+        "description": "A game design concept, not a released game: a singleplayer UNO-style duelling card game against computer wizards. Every card feeds an elemental singularity, elements react and detonate, counter cards turn attacks around, and whoever plays their last card deals the others' leftover hands as damage, on Street Fighter II-style ladders across an endless realm.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Card game", "Strategy", "Fantasy"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/ultimate-card.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/ultimate-card_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0f0d1c">
+
+    <link rel="preload" href="../fonts/hydrogen-whiskey.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Ultimate Card: a night sky over a stone circle. Ink-indigo ground, spell gold for the
+           singularity's light, aether teal for the second accent, pale lilac for highlights.
+           Hydrogen Whiskey, tall and arcane, for the title and headings (its & looks like a 6,
+           so headings say "and"); Unique for the subtitle and kickers. */
+        @font-face { font-family: "Hydrogen Whiskey"; src: url("../fonts/hydrogen-whiskey.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Unique"; src: url("../fonts/unique.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0f0d1c;
+            --flow-2: #2a1d4a;
+            --grid-minor: rgba(220, 200, 255, 0.04);
+            --grid-major: rgba(220, 200, 255, 0.09);
+            --p-ground: rgba(15, 13, 28, 0.95);
+            --p-panel: #191630;
+            --p-1: #f0c75e;
+            --p-2: #5fe0cf;
+            --p-3: #efe8ff;
+            --p-text: #e2ddf0;
+            --p-dim: #a8a1bf;
+            --p-line: rgba(220, 200, 255, 0.15);
+            --font-title: "Hydrogen Whiskey", "Segoe UI", sans-serif;
+            --font-sub: "Unique", "Segoe UI", sans-serif;
+            --shade: #08070f;
+        }
+
+        /* Title effect, "collapse": a wide gold halo is drawn inward until it hugs the letters
+           in a tight white-gold rim, then springs back out, like a singularity pulling in its
+           light. The layered dark shadows never change. */
+        .p-name { letter-spacing: 0.04em; animation: collapse 7s ease-in-out infinite; }
+        @keyframes collapse {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 60px rgba(240, 199, 94, 0.35); }
+            55% { color: #fffaf0; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(240, 199, 94, 0.95), 0 0 4px rgba(255, 240, 200, 0.9); }
+            62% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 30px rgba(95, 224, 207, 0.7); }
+        }
+        .p-sub { color: var(--p-1); letter-spacing: 0.08em; text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.4rem; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--p-1), var(--p-2), transparent);
+            animation: collapse-line 7s ease-in-out infinite;
+        }
+        @keyframes collapse-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(240, 199, 94, 0.3); opacity: 0.6; }
+            55% { box-shadow: 0 0 14px rgba(240, 199, 94, 0.9), 0 0 24px rgba(95, 224, 207, 0.5); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 7s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 55% { box-shadow: 0 0 10px rgba(240, 199, 94, 0.7); } }
+        h2, h3 { letter-spacing: 0.04em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.12em; }
+        .chart th[scope="row"] { width: 7rem; }
+        .releases th[scope="row"], .spells th[scope="row"] { width: 9rem; }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/ultimate-card_1_title.jpg" alt="Robed wizards in cloaks of different colors stand around a stone terrace at night, a swirling sphere of dark energy ringed with glowing cards hovering at its center, streams of colored light flowing into it from their raised hands." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Ultimate Card</span><span class="p-sub">Wizard Singularity Supremacy</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/magic-swirl-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/wizard-face-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Ultimate Card is a duelling card game in the family of UNO and mau-mau, played by rival wizards around a singularity they cast together. Every card thrown in feeds it an element. Whoever plays their last card claims everything it has gathered, and every other wizard takes the cards still in their hand as damage.</p>
+            <p>It's a singleplayer game against computer wizards, two to six at a table, climbing a ladder of tables to each region's archmage in the style of Street Fighter II's arcade mode. The rules start from the ones everybody knows and add what a duel needs: elements that react and detonate, counter cards that turn an attack around, a light and a dark face on every card, and a wizard's own powers, charged by the punishment they take.</p>
+            <p>Ultimate Card is the fiercest of three games designed on the same card engine. Its siblings are the cozy campfire of <a href="bonfire.html">Bonfire</a> and the greedy gamblers of <a href="power-pile.html">Power Pile</a>.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/wizard-staff-lorc.png)"></span>Target audience</h3>
+                    <p>Players who love card battlers and fighting-game ladders, the Pokémon card game, Advance Wars' commander powers, but find deckbuilders slow and heavy going.</p>
+                    <p>They want <strong>the speed of UNO with the depth of a duel</strong>: a turn that takes seconds and a combination that takes the whole table apart.</p>
+                    <p>It's played with the mouse. The basics are known to everyone; the depth is in how the elements, counters and powers combine, and every card explains itself on a right click.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/book-aura-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power:</strong> a finishing card that doubles the damage, a Super Power saved for the right moment.</p>
+                    <p><strong>Mastery:</strong> reading the singularity's buildup, timing a counter, choosing when to go out.</p>
+                    <p><strong>Excitement and variety:</strong> chains that grow around the table, and every table rolled up differently.</p>
+                    <p>It deliberately avoids draining <strong>fairness</strong> (every rule is visible and the computer wizards play by the same ones) and the player's <strong>time</strong> (stop between any two tables).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/star-swirl-lorc.png)"></span>Core concept</h3>
+                    <p>Card battlers tend to keep their best cards behind packs, unlocks and rarity grinds, and their campaigns end.</p>
+                    <p>Here <strong>every card, skill and wizard is available from the start</strong>, and rarity only means how often a card turns up in a match. The power you take from archmages is the one thing you gather, and you can only hold five at a time.</p>
+                    <p>The realm never runs out of convergences, so there's always another ladder to climb.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/ultimate-card_5_story.jpg" alt="A painted fantasy realm at twilight: mountain ranges and valleys crossed by shimmering lines of light, a small stone tower with a faint vortex where the lines meet, regions tinted by element: a flooded blue lowland, a green forest, a red volcanic ridge and a yellow storm plain." width="1280" height="720" loading="lazy">
+            <figcaption>"Wherever the realm's lines of power cross, the sky wears thin, and the wizards gather to cast a singularity together."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/magic-portal-lorc.png)"></span>Lore and story</h2>
+            <h3>The convergences</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/01-convergence.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The realm is crossed by lines of power, and wherever they cross, the sky wears thin. No single wizard can open it. A gathering of them can: standing in a circle, they cast a <strong>singularity</strong> between them and take turns feeding it with spells, each one a card from their hand.</p>
+            <p>The singularity takes everything it's given and holds it. When one wizard finally lays down their last spell, it collapses into them, and the power it gathered is theirs.</p>
+
+            <h3>The wizards</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/02-wizards.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Every wizard wants that power, and every one of them has a reason and a temperament: the hoarder who sits on a full hand, the hothead who attacks at every chance, the trickster who swaps and flips, the warden who waits behind shields, the gambler who throws in the most dangerous card in the deck to see what happens. You pick yours from the same roster, the way you'd pick a fighter in Street Fighter II.</p>
+
+            <h3>The archmages</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/03-archmages.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Each region's great convergence is held by an archmage, who came by their seat the same way and wears its proof: a crystal of concentrated power, a <strong>core</strong>, that gives them an edge nobody else at the table has. The lesser wizards of the region sit at their tables and learn their tricks.</p>
+
+            <h3>The quest</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/04-quest.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Ultimate power, the stories say, waits for whoever claims them all. Nobody ever has, because the realm keeps making new crossings at its edges. What you can do is climb one region's ladder, take its archmage's seat, and watch the land around that convergence turn to your element. Then pick the next one.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>The table is seen from your place in the circle: your hand at the bottom, the singularity in the middle with its current element and buildup, and the other wizards around it with their faces, life, hand sizes and power meters. Everything works with the mouse; the keys are shortcuts.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Your hand</h3>
+                    <dl>
+                        <div><dt>Click</dt><dd>Pick a card; click more of the same number to make a set</dd></div>
+                        <div><dt>Drag</dt><dd>Reorder your hand, or the set you're about to play</dd></div>
+                        <div><dt>Right click</dt><dd>Read a card, both its faces</dd></div>
+                        <div><dt>Click a wizard</dt><dd>Choose the target of a targeted card</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>The table</h3>
+                    <dl>
+                        <div><dt>Space</dt><dd>Cast the picked cards into the singularity</dd></div>
+                        <div><dt>D</dt><dd>Draw a card, up to three a turn</dd></div>
+                        <div><dt>Q / W</dt><dd>Use your Power / your Super Power</dd></div>
+                        <div><dt>Enter</dt><dd>End your turn</dd></div>
+                        <div><dt>Tab</dt><dd>Table overview: life, hands, buildup, cores</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>Counter cards are played out of turn: when something is aimed at you, the cards in your hand that can answer it <strong>light up</strong>, and the game waits a moment for you to choose. When any wizard is down to one card, a warning appears above them automatically.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/ultimate-card_2_vignette.jpg" alt="On a stone terrace, a silver-bearded wizard in a deep blue robe hurls a burst of glowing blue water, while a sorceress in a crimson hooded robe stands inside a ring of golden light, two dark swirling vortices behind them." width="1280" height="720" loading="lazy">
+            <figcaption>"Attacks can be passed on. Answer with the same spell and it moves to the next wizard, carrying yours with it."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/card-play-quoting.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A turn in the circle</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/05-turn.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Read the singularity: its element, how high it's built up, who's on one card, whose power meter is nearly full. Then decide whether to feed the buildup, detonate it into the next wizard, hold a counter, or quietly empty your hand.</p>
+                        <p>A turn takes seconds. The duel is in the sequence: the card you leave on top for the next wizard, the chain you choose to pass on, the last card you've been keeping.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crescent-staff-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A ladder to the archmage</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/06-ladder.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A region is a small map of convergences in the style of Super Mario Bros. 3, six to eight tables joined by paths with a few forks, and the archmage's seat at the end. Each table is rolled up on its own: two to six wizards, every one for themselves or in teams, how many cards everyone starts with, how many elements are in play, extra cards or extra rules, sometimes a curse card already in every hand.</p>
+                        <p>A table ends when one wizard or one team is left standing. If it isn't you, the winner claims that convergence and the ladder carries on at the next table; the lost one stays in their colors on the map until you come back for it on another night. The archmage's table is the same, with one difference: the archmage brings extra consumables and their core.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The realm and the chronicle</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/07-realm.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The regions sit together on a map of the realm. Every convergence you claim reshapes the land around it in your element, so a water wizard's realm floods into lakes and rivers and a plant wizard's grows into forest, and the map becomes a picture of where you've been. The realm offers the next ladders from it: regions next to your lands, regions held by rivals, new crossings opening at the edges.</p>
+                        <p>Every claimed singularity is written into the <strong>chronicle</strong> with the seed of its table, so any duel can be played again from its first card. Read back, the chronicle tells each victory the way bards do: the replay of its last moments comes back three times as bombastic as it was.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A duel or a whole region</h3>
+                        <p>The game opens on the realm map. Carry on with the ladder you're climbing, or choose the kind of session you want and the realm offers one to match: <strong>a single table</strong> for fifteen minutes, <strong>a ladder</strong> for an evening or two, or <strong>a chaos table</strong> with its rules rolled at random. Whatever you choose counts toward the same realm.</p>
+                        <p>Stop between any two tables, or in the middle of one, and it waits where you left it.</p>
+                        <div class="p-nest" aria-label="The structure, outermost first">
+                            <div><span>The realm</span><small>Endless: claimed lands, rival lands, new crossings at the edges.</small>
+                                <div><span>A ladder</span><small>Six to eight tables and an archmage: an evening or two.</small>
+                                    <div><span>A table</span><small>Rounds until one wizard or team stands: ten to twenty minutes.</small></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/crystal-ball-lorc.png)"></span>Game modes</h2>
+            <p>Every table is one of two kinds. The ladder rolls which, unless you've asked for one.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">How it plays</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Free for all</th><td data-label="Plays">Two to six wizards, each for themselves; a two-wizard table is a straight duel</td><td data-label="For">The classic game, with every spell aimed wherever you like</td></tr>
+                        <tr><th scope="row">Teams</th><td data-label="Plays">Two or three sides of fairly even size (2v2, 3v3, 2v2v2, 2v3); attacks only touch the other side, and a side is beaten when all its wizards are. An uneven table (one against three) is a David and Goliath match, with handicaps that make it fair</td><td data-label="For">Feeding a partner the elements they need, and holding a counter for them</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/spell-book-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/black-hole-bolas-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>The singularity and the finish</h3>
+                        <p>The deck is endless and the singularity is never shuffled back into it: every card played stays in, and its count only grows. Each wizard has a <strong>life total</strong> set by the table. When someone plays their last card, every other wizard takes damage equal to the cards still in their hand: numbers count their face value, action cards twenty, legendary cards fifty. A wizard at zero life is out, and so is a wizard who ends up <strong>holding twenty-five cards</strong>, crushed by their own hand. The others play the next round, until one is left.</p>
+                        <p>So the goal is not only to go out but to go out <strong>when the others are holding the most</strong>, which changes everything about when you play your attacks. Two cards make the finish bigger:</p>
+                        <ul>
+                            <li><strong>The last card:</strong> going out with a whole set is allowed, but a single card held back and played alone on a later turn deals half again as much. While you wait, everyone can see you're on one card.</li>
+                            <li><strong>The atom card:</strong> a rare card that doubles the damage if it's the last card you play, and is an ordinary wild otherwise.</li>
+                        </ul>
+                        <p>A singularity can hold 999 cards. If it ever reaches that, it collapses on its own, and the wizard with the fewest cards claims it.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/ultimate-card_3_feature.jpg" alt="A swirling black sphere crackling with layered bands of red fire, blue water, green vines and yellow lightning spiraling into it, a single glowing card hurled in from the lower left and a ring of light bursting outward." width="1280" height="720" loading="lazy">
+                            <figcaption>"When a wizard plays their last card, every other wizard takes the cards still in their hand as damage."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/fire-spell-cast-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Colors that fight</p>
+                        <h3>The elemental chart</h3>
+                        <p>The card colors are elements, after the energy types of the Pokémon card game, and they don't just match; they act on each other. A table plays with four, six or all of them:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table chart">
+                                <thead><tr><th scope="col">Element</th><th scope="col">What it does to the others</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Water</th><td>Beats fire, washes away ground</td></tr>
+                                    <tr><th scope="row">Fire</th><td>Beats plant, blows up with electric</td></tr>
+                                    <tr><th scope="row">Plant</th><td>Beats water, grows into ground</td></tr>
+                                    <tr><th scope="row">Electric</th><td>Explodes fire, electrocutes water and plant</td></tr>
+                                    <tr><th scope="row">Ground</th><td>Fire and electric can't be cast onto it; nourishes plant; blocks the next wizard unless they can get through</td></tr>
+                                    <tr><th scope="row">Psychic</th><td>Passes through everything but plant and electric, and turns the direction of play around</td></tr>
+                                    <tr><th scope="row">Metal</th><td>Blocks water, plant and ground; fire and electric melt through it</td></tr>
+                                    <tr><th scope="row">Aether</th><td>Distorts the next card played into a stronger or a weaker version of itself</td></tr>
+                                    <tr><th scope="row">Null</th><td>Grey: fits on anything and clears every buildup</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Every cast is one of five things: <strong>neutral</strong> (the two elements ignore each other), <strong>same element</strong> (it builds up), <strong>strong against</strong> (it can set off what's built up), <strong>resisted</strong> (not allowed at all) or <strong>blocked</strong> (the next wizard misses their turn unless they hold a card that gets through).</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crowned-explosion-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Charge and release</p>
+                        <h3>Buildups and detonations</h3>
+                        <p>Cards of one element cast one after another <strong>build up</strong> in the singularity: two is a small charge, three medium, four heavy, and five or more a nuke, which is as strong as it gets. Cast the right element onto a built-up charge and it <strong>detonates</strong> into the next wizard, at the strength of the charge:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table releases">
+                                <thead><tr><th scope="col">Detonation</th><th scope="col">Cast</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Mudslide</th><td data-label="Cast">Water onto ground</td><td data-label="Does">Buries the next wizard: they draw and miss their turn</td></tr>
+                                    <tr><th scope="row">Smokescreen</th><td data-label="Cast">Water onto fire</td><td data-label="Does">Hides you: attacks pass you by until your next turn</td></tr>
+                                    <tr><th scope="row">Explosion</th><td data-label="Cast">Fire onto electric</td><td data-label="Does">The next wizard draws heavily</td></tr>
+                                    <tr><th scope="row">Firestorm</th><td data-label="Cast">Fire onto plant</td><td data-label="Does">Every other wizard draws</td></tr>
+                                    <tr><th scope="row">Plasma</th><td data-label="Cast">Electric onto fire</td><td data-label="Does">The next wizard draws two for every fire card in the charge, and no shield stops it</td></tr>
+                                    <tr><th scope="row">Stun storm</th><td data-label="Cast">Electric onto metal</td><td data-label="Does">Skips the next wizards, more of them the bigger the charge</td></tr>
+                                    <tr><th scope="row">Mutation</th><td data-label="Cast">Plant onto psychic</td><td data-label="Does">Turns cards in the next wizard's hand into random others</td></tr>
+                                    <tr><th scope="row">Overgrowth</th><td data-label="Cast">Plant onto ground</td><td data-label="Does">The next wizard draws until they find a plant card</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Ground, metal and psychic never detonate. Stacked, they become a <strong>wall</strong> that blocks the next wizard, harder the higher it's built, and cast onto someone else's charge they defuse it. Any pairing not in the table is neutral.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/shield-reflect-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Attack and answer</p>
+                        <h3>Chains and counters</h3>
+                        <p>Draw and skip attacks can be <strong>chained</strong>: answer one with the same kind of card and it moves on to the next wizard with yours added, growing around the table until it reaches someone who can't pass it on. Turning the direction around isn't an attack, so it can't be chained. And some cards answer an attack outright, played out of turn like the parries of Nanaca Crash:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table spells">
+                                <thead><tr><th scope="col">Card</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Hex +1 to +10</th><td>The next wizard draws; targeted versions hit the wizard you choose</td></tr>
+                                    <tr><th scope="row">Bind</th><td>The next wizard skips a turn (or several, or everyone, giving you a double turn); targeted versions too</td></tr>
+                                    <tr><th scope="row">Turn</th><td>Reverses the direction of play; the targeted version makes play skip toward the wizard you choose, and lingers until it reaches them</td></tr>
+                                    <tr><th scope="row">Prism</th><td>Wild: choose the next element; Prism Hunt makes the next wizard draw until they find it, up to ten</td></tr>
+                                    <tr><th scope="row">Cataclysm</th><td>Every wizard draws, you included, unless it's your last card: then you're spared, and it's your finish</td></tr>
+                                    <tr><th scope="row">Ward</th><td>Absorbs the attack aimed at you</td></tr>
+                                    <tr><th scope="row">Mirror</th><td>Sends the attack back to whoever cast it</td></tr>
+                                    <tr><th scope="row">Bend</th><td>Sends it to a wizard of your choice</td></tr>
+                                    <tr><th scope="row">Riposte</th><td>Sends it back doubled</td></tr>
+                                    <tr><th scope="row">Blink</th><td>Steps aside: the next wizard takes it instead</td></tr>
+                                    <tr><th scope="row">Scry</th><td>Reveals one wizard's hand to you, or every hand to the whole table until your next turn</td></tr>
+                                    <tr><th scope="row">Exchange</th><td>Swaps hands with a wizard, trades a card with them, or takes the card you want without giving one back</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Any of these can come <strong>combined</strong> on one card: a single effect two to four times, or two to four effects at once.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/duality-mask-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Two sides of every spell</p>
+                        <h3>Light and dark</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/08-flip.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every card has two faces. The <strong>light face</strong> helps its caster or keeps the peace: a ward for yourself, a card given away from your own hand. The <strong>dark face</strong> harms the others or sows chaos: the same card as a hex on the next wizard, or a swap of every hand around the table.</p>
+                        <p>A match starts on the light side. A <strong>flip card</strong> turns the singularity dark, and with it every card in every hand, until another flip turns it back, much like UNO Flip. The two faces of each card are printed on it, so a flip changes your plans without hiding anything: right-click any card to see what it becomes.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/glowing-hands-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Commander powers</p>
+                        <h3>Powers and skills</h3>
+                        <p>Every wizard has two signature abilities in the style of Advance Wars' commanders: a <strong>Power</strong> and a stronger <strong>Super Power</strong>. They charge from a meter that fills as you take punishment, every card you're forced to draw, so the wizard who's losing is the one closest to a comeback. A water wizard's Power might turn the whole buildup to water; their Super Power floods every other hand with two cards.</p>
+                        <p>Before a ladder you also equip a few <strong>skills</strong>, passive bonuses in the style of Advance Wars: Dual Strike, within a budget: holding more cards before you're crushed, a free counter once per table, drawing one fewer card from every attack. Every skill is available from the start; the budget is the limit. Some cards in the deck are <strong>ability cards</strong>, which fire one of your equipped skills on the spot, and some abilities need a condition before they work.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/book-aura-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Bring your own spells</p>
+                        <h3>Spellbooks</h3>
+                        <p>Each wizard sits down with a <strong>spellbook</strong>: the mix of cards and elements they bring to the table. The deck is endless, so a spellbook isn't a stack of cards but a recipe, and the singularity draws from <strong>everyone's recipes combined</strong>. A table of three fire wizards and a water wizard will be dealing a lot of fire, to everyone, including the water wizard.</p>
+                        <p>You build yours from every card in the game, all of it available from the start, in the spirit of the Pokémon card game's deck rules. Rarity sets how often a card can turn up: numbers are common, skips and reverses uncommon, the bigger hexes rare, wilds and combined cards legendary. Cards can also be <strong>multi-element</strong> (two, three or four elements on one card, playable on any of them), or carry a <strong>hidden power</strong> that only works once its condition is met.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/floating-crystal-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Taking their edge</p>
+                        <h3>Archmages and their cores</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/09-core.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each archmage carries a <strong>core</strong>, a crystal holding a passive edge that's theirs alone: every metal card they cast also blocks, or they shrug off the first hex of every round. It colors their whole region, since the wizards there lean toward the same element and tricks. An archmage also brings extra consumables to their own table.</p>
+                        <p>Beat an archmage and their core is yours, to carry into later ladders. You can hold <strong>five</strong>; taking a sixth means letting one go. That's the limit that keeps any wizard, you included, from growing stronger forever, and it means your edge keeps changing with the archmages you've beaten.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/face-to-face-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Opponents with faces</p>
+                        <h3>Rival wizards</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/ultimate-card/10-rival.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every wizard reacts to the duel as it happens: idle glances around the table, a look when they lift a card (neutral, disgusted or excited, and some hide it better than others), anger when they're hit, a smug grin when they land an attack, delight when they go out, and a knockout when they're crushed, after which they sit out cold until the table is over.</p>
+                        <p>Each computer wizard plays by its temperament, and the temperament shows: the hoarder hangs on to counters, the hothead chains every attack, the trickster can't resist a flip. Learning to read them is part of the game, just as it is with the people at a real table.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Trivia</h2>
+            <p>Ultimate Card is one of three games split from a single design, a singleplayer "Super UNO" that tried to hold every card idea at once. The other two are <a href="bonfire.html">Bonfire</a>, a cozy one with no life totals and nobody knocked out, and <a href="power-pile.html">Power Pile</a>, a greedy one about the size of the pot. The design notes point out that life totals only make sense in the fiercer variants, which is why this is the only one of the three that has them.</p>
+            <p>The finishing rule comes from an old mobile UNO clone Reactorcore used to play, where the point was to go out while making sure everyone else was stuck holding as much as possible. The atom card is the jack of mau-mau, promoted.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/ultimate-card_4_boxart.jpg" alt="Box art: a regal archmage in ornate violet and gold robes stands between stone pillars holding up one glowing card, a swirl of teal and pink energy rising from the round dais at his feet, other cards floating under a starry sky." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">A summons</p>
+                <h2 id="sendoff">Ultimate Card: Wizard Singularity Supremacy</h2>
+                <p>By order of the convergence: the sky over the eastern ridge has worn thin. Five seats are laid around it. Bring your spellbook, your cores and whatever you're holding back.</p>
+                <p>Feed the singularity. Build the fire to a nuke, then hand it to the next wizard in plasma. Turn the hex back on the one who cast it. Keep your last card until the others are holding everything, and claim it all.</p>
+                <p><strong>One card left. Make it count.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by UNO (and UNO Flip), mau-mau, the Pokémon card game, Advance Wars: Dual Strike, Nanaca Crash, Street Fighter II and Super Mario Bros. 3's world map</p>
+                <p>Icons by Lorc, Delapouite, Quoting and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Hydrogen Whiskey (CC0), Unique, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

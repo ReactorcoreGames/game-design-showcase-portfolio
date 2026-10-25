@@ -1,0 +1,37 @@
+{
+  "slug": "ultimate-card",
+  "preset": "08 Games - Master of Orion 2016 (4X Strategy/2D Painted)",
+  "style": "High fantasy setting. Palette of deep indigo night, spell gold and aether teal, with pale lilac highlights. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide view of a circular stone terrace on a mountaintop at night, five wizards in long hooded robes of different colors, blue, red, green, gold and violet, standing in a circle around a swirling sphere of dark energy hovering at the center. The sphere is ringed with orbiting glowing cards, and a stream of colored light flows into it from each wizard's raised hand. Aurora in the sky, distant peaks. The lower left of the picture is plain dark stone."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Medium view of a magical duel on a stone terrace at night: on the left, an old wizard with a long silver beard in a deep blue hooded robe flings a glowing blue card that bursts into a splash of water. On the right, a young sorceress in a long crimson hooded robe raises a hexagonal golden barrier of light, and the water splashes against it. Between them, in the background, a swirling dark vortex ringed with gold light."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Close view of a swirling black singularity sphere hovering in a night sky, crackling with stacked spiraling bands of colored energy: red flame, blue water, green vines and yellow lightning all being drawn into it. A single glowing card flies into it from the lower left, and a bright ring of golden light bursts outward from the sphere."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall view of a regal archmage in ornate layered gold and violet robes and a high collar, standing on a round stone dais and holding one glowing card high above a swirling vortex of colored energy that spins at the foot of the dais. More glowing cards orbit the vortex. Dark starry night sky above, broken stone pillars at the sides. Pure illustration with no lettering."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Zoomed-out painted view of a fantasy realm at twilight from high above: mountain ranges and valleys crossed by long shimmering lines of light. Where the lines cross stands a small stone tower with a faint swirling vortex above it. The land around each tower is changed: a flooded blue lowland of lakes, a dense green overgrown forest, a red volcanic ridge, a yellow plain under a lightning storm."
+    }
+  ]
+}
