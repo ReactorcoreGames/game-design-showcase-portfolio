@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "bonfire.html", prefix: "bonfire",
+    title: "Bonfire", subtitle: "Cozy Card Battles",
+    icon: "campfire-lorc", tint: "orange",
+    blurb: "An UNO-style card game played by a circle of friends around a magical campfire: every card is enchanted firewood that colors the flame, the pile is the fire, and every match ends in a light show built from what was played.",
+    genres: ["puzzle"], tags: ["card game", "shedding game", "cozy", "light show"],
+    status: "concept", added: "2026-10-25"
+  },
+  {
     page: "bazooka-bomber.html", prefix: "bazooka-bomber",
     title: "AAL Bazooka Bomber", subtitle: "Underground Rocket Demolition",
     icon: "incoming-rocket-lorc", tint: "yellow",

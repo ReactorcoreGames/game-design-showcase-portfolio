@@ -46,20 +46,20 @@ FONTS = [
     ("Zero Hour.otf", "zero-hour.woff2", None, None),                       # CC0, graviton-mayhem
     ("Squares Bold Free.otf", "squares-bold.woff2", None, None),            # SIL OFL, graviton-mayhem, smash-droids
     ("Radio Stars.otf", "radio-stars.woff2", None, None),                   # CC0, AAL-Stealth-Sector, cyberdungeon, starforge-legion
-    ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector
+    ("Unique.ttf", "unique.woff2", None, None),                             # SIL OFL, AAL-Stealth-Sector, ultimate-card
     ("Dendritic Voltage.otf", "dendritic-voltage.woff2", None, None),       # CC0, AALSuperweapon, colossal_devastators, hellsweep-infinite
     ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon, thermonuclear-berserker, aal-exterminator
     ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice, god-tier-tantrum
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
-    ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer
+    ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer, power-pile
     ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace, smash-droids
     ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron
     ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron, bunkership, roomspace
     ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount, Underground Brawl, lattice-walker, aal-exterminator
     ("ShareTechMono-Regular.ttf", "share-tech-mono.woff2", None, None),     # SIL OFL, Custom Dismount, greensteelcommander, lockbreaker
-    ("Hydrogen Whiskey.otf", "hydrogen-whiskey.woff2", None, None),         # CC0, EradicationWars, RussiBiomonster, unhinged_lander_heist_scifi
+    ("Hydrogen Whiskey.otf", "hydrogen-whiskey.woff2", None, None),         # CC0, EradicationWars, RussiBiomonster, unhinged_lander_heist_scifi, ultimate-card
     ("Aldrich-Regular.ttf", "aldrich.woff2", None, None),                   # SIL OFL, EradicationWars, aal-voyager
-    ("Fragile Bombers.otf", "fragile-bombers.woff2", None, None),           # CC0, Halberd_Suit_Wars, Skullhead, aal-collector
+    ("Fragile Bombers.otf", "fragile-bombers.woff2", None, None),           # CC0, Halberd_Suit_Wars, Skullhead, aal-collector, bonfire
     ("Iceland-Regular.ttf", "iceland.woff2", None, None),                   # SIL OFL, Halberd_Suit_Wars, lattice-walker
     ("ExpletusSans-Bold.ttf", "expletus-sans-bold.woff2", None, None),      # SIL OFL, HazardMissionTeam (2)
     ("MatrixTypeDisplay-Bold.ttf", "matrixtype-display-bold.woff2", None, None),  # CC0, Justice Will Glass Them, lockbreaker
@@ -70,7 +70,7 @@ FONTS = [
     ("MatrixType-Bold.ttf", "matrixtype-bold.woff2", None, None),           # CC0, Megalodon
     ("Skateblade-RegularItalic.ttf", "skateblade-italic.woff2", None, None),  # SIL OFL, Mosh_Pit_Mayhem (with Anklepants)
     ("Zeroes Two.otf", "zeroes-two.woff2", None, None),                     # CC0, MutantLoveQuest, unhinged_lander_heist_scifi
-    ("ExpletusSans-Medium.ttf", "expletus-sans-medium.woff2", None, None),  # SIL OFL, MutantLoveQuest
+    ("ExpletusSans-Medium.ttf", "expletus-sans-medium.woff2", None, None),  # SIL OFL, MutantLoveQuest, bonfire
     ("Skateblade-Regular.ttf", "skateblade.woff2", None, None),             # SIL OFL, Planetary Ring Miner, kickblade, aal-voyager
     ("exo.regular.otf", "exo-regular.woff2", None, None),                   # SIL OFL, Planetary Ring Miner
     ("World of Water.otf", "world-of-water.woff2", None, None),             # CC0, Poo Storm Janitor Powersuit
@@ -81,7 +81,7 @@ FONTS = [
     ("Zeroes Three.otf", "zeroes-three.woff2", None, None),                 # CC0, Zero Space Robo Derby
     ("Cranberry Gin.otf", "cranberry-gin.woff2", None, None),               # CC0, abyssal_caretaker
     ("ExpletusSans-SemiBoldItalic.ttf", "expletus-sans-semibold-italic.woff2", None, None),  # SIL OFL, abyssal_caretaker
-    ("Exo2.0-BlackItalic.otf", "exo2-black-italic.woff2", None, None),      # SIL OFL, admiralwars, vectorthunder, god-tier-tantrum
+    ("Exo2.0-BlackItalic.otf", "exo2-black-italic.woff2", None, None),      # SIL OFL, admiralwars, vectorthunder, god-tier-tantrum, power-pile
     ("TurretRoad-Regular.ttf", "turret-road.woff2", None, None),            # SIL OFL, admiralwars
     ("MatrixType-Regular.ttf", "matrixtype.woff2", None, None),             # CC0, antigrav_deconstruction
     ("Exo2.0-ExtraBold.otf", "exo2-extrabold.woff2", None, None),           # SIL OFL, astro_industry

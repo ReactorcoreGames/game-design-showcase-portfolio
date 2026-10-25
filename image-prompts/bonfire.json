@@ -1,0 +1,37 @@
+{
+  "slug": "bonfire",
+  "preset": "08 Games - Kingdom Rush (Strategy/Isometric 2D)",
+  "style": "Palette of ember amber, rose pink and deep plum night, with cream highlights. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide view at dusk of a small forest clearing at the edge of a village, a circle of six friends in cozy hooded travel cloaks and scarves sitting on logs around a big magical bonfire. The flames rise in twisting bands of red, blue, green and gold. Above the fire hovers a glowing round orb, and blank colorful playing cards drift down from it like leaves. Paper lanterns hang in the trees. The lower left of the picture is quiet dark grass."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Close view over the shoulder of a seated traveler in a cozy knitted scarf, holding a fan of blank playing cards in bright red, blue, green and yellow, tossing one green card into a crackling campfire where the flame flares bright green. Across the fire sit three friends in warm cloaks reacting: one laughing, one grimacing, one leaning in with a sly grin. Sparks rise into the night, logs to sit on, a dark forest behind."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide view at night of a village green where a huge bonfire erupts into a towering column of multicolored light: spirals of red, blue, green, yellow and violet sparks bursting high into firework flowers in the starry sky. A circle of small friends in cloaks sits on logs close to the fire, and a wider ring of small villagers on blankets watches from the edges, thatched cottages behind them."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall view of a magical campfire in a forest clearing at night, its flame rising very tall in twisting bands of red, blue, green and gold. A glowing round orb hovers high above the flame with blank colorful playing cards fluttering around it. At the bottom, four friends in cozy hooded cloaks sit on logs around the fire, seen from behind. Dark pine trees frame the sides and a starry sky fills the top. Pure illustration with no lettering."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Zoomed-out view of a storybook countryside valley at dusk: a winding dirt road with a few forks links small villages of thatched cottages, each village with a glowing lantern on a tall pole. In one village square, festival bunting and a big stack of firewood ready for a bonfire. A covered wagon with a few travelers rolls along the road. Forests, a river and rolling hills, warm golden evening light."
+    }
+  ]
+}

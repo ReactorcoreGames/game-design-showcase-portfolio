@@ -1,0 +1,20 @@
+{
+  "slug": "bonfire-mini",
+  "out": "site/projects/mini/bonfire",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - C - Soft Feel",
+  "lead": "Soft warm photograph, campfire glow at dusk, amber and plum tones. ",
+  "images": [
+    {"n": 1, "name": "fire", "ratio": "3:2", "prompt": "A magical bonfire with flames in many colors in a forest clearing"},
+    {"n": 2, "name": "friends", "ratio": "3:2", "prompt": "Friends in warm cloaks sitting on logs around a campfire at night"},
+    {"n": 3, "name": "trip", "ratio": "3:2", "prompt": "A covered wagon on a country road toward a village at sunset"},
+    {"n": 4, "name": "tonight", "ratio": "3:2", "prompt": "A village square with lanterns and a stack of firewood for a festival"},
+    {"n": 5, "name": "turn", "ratio": "3:2", "prompt": "A hand tossing a colorful card into a crackling campfire"},
+    {"n": 6, "name": "valley", "ratio": "3:2", "prompt": "An old hand-drawn map of a valley with a trail of villages"},
+    {"n": 7, "name": "land", "ratio": "3:2", "prompt": "Lanterns glowing in distant villages across dark hills at night"},
+    {"n": 8, "name": "night", "ratio": "3:2", "prompt": "A sleeping bag beside a dying campfire under the stars"},
+    {"n": 9, "name": "last-log", "ratio": "3:2", "prompt": "A single log glowing in the embers of a campfire"},
+    {"n": 10, "name": "faces", "ratio": "3:2", "prompt": "A laughing friend lit by warm firelight at night"}
+  ]
+}

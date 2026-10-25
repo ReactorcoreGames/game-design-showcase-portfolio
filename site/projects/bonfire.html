@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonfire: Cozy Card Battles</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a cozy UNO-style shedding card game played by a circle of friends around a magical campfire, where every card is enchanted firewood and every match ends in a light show built from what was played.">
+    <meta name="keywords" content="game design concept, card game, shedding game, UNO inspired, mau-mau, cozy game, singleplayer card game, campfire, light show, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/bonfire.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Bonfire: Cozy Card Battles">
+    <meta property="og:description" content="A game design concept: a cozy shedding card game around a magical campfire, where every card colors the flame and every match ends in a light show. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/bonfire.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/bonfire_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: friends play cards around a campfire whose flame changes color">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Bonfire: Cozy Card Battles">
+    <meta name="twitter:description" content="A game design concept: a cozy shedding card game around a magical campfire, where every match ends in a light show.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/bonfire_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Bonfire: Cozy Card Battles",
+        "description": "A game design concept, not a released game: a singleplayer UNO-style shedding card game against computer friends around a magical campfire. Every card is enchanted firewood that colors the flame, the pile grows into the fire, and every match ends in a light show generated from the cards played, on a trip from village to village.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Card game", "Casual", "Cozy"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/bonfire.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/bonfire_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#170e14">
+
+    <link rel="preload" href="../fonts/fragile-bombers.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Bonfire: a night in the woods. Plum-dark ground, ember amber for the fire, rose for the
+           embers' glow, cream for highlights. Fragile Bombers, hand-drawn and a little wobbly, for
+           the title and headings; Expletus Sans Medium for the subtitle and kickers. */
+        @font-face { font-family: "Fragile Bombers"; src: url("../fonts/fragile-bombers.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Expletus Sans Medium"; src: url("../fonts/expletus-sans-medium.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #170e14;
+            --flow-2: #4a1f18;
+            --grid-minor: rgba(255, 200, 150, 0.04);
+            --grid-major: rgba(255, 200, 150, 0.09);
+            --p-ground: rgba(23, 14, 20, 0.95);
+            --p-panel: #23161d;
+            --p-1: #ffb347;
+            --p-2: #ff7aa2;
+            --p-3: #fff0d9;
+            --p-text: #efe3dc;
+            --p-dim: #b9a7a3;
+            --p-line: rgba(255, 200, 160, 0.15);
+            --font-title: "Fragile Bombers", "Segoe UI", sans-serif;
+            --font-sub: "Expletus Sans Medium", "Segoe UI", sans-serif;
+            --shade: #0e080c;
+        }
+
+        /* Title effect, "firelight": the name's warm glow flickers unevenly, the way a campfire
+           lights faces, and the subtitle's underline glows like a log's embers. The layered dark
+           shadows never change, so the title stays legible at the dimmest frame. */
+        h2, h3, .p-name { text-transform: none; letter-spacing: 0.01em; }
+        .p-name { animation: firelight 5s linear infinite; }
+        @keyframes firelight {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 22px rgba(255, 179, 71, 0.55); }
+            8% { color: #fff6e8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 30px rgba(255, 179, 71, 0.85); }
+            14% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 18px rgba(255, 122, 162, 0.5); }
+            37% { color: #fff6e8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 34px rgba(255, 179, 71, 0.9); }
+            44% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 20px rgba(255, 179, 71, 0.5); }
+            71% { color: #fff6e8; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 28px rgba(255, 122, 162, 0.75); }
+            79% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 24px rgba(255, 179, 71, 0.6); }
+        }
+        .p-sub { color: var(--p-1); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.4rem; height: 4px; border-radius: 2px;
+            background: linear-gradient(90deg, #ff7aa2, #ffb347, #ff7aa2);
+            animation: embers 5s ease-in-out infinite;
+        }
+        @keyframes embers {
+            0%, 100% { box-shadow: 0 0 6px rgba(255, 179, 71, 0.4); opacity: 0.75; }
+            40% { box-shadow: 0 0 14px rgba(255, 179, 71, 0.9), 0 0 26px rgba(255, 122, 162, 0.5); opacity: 1; }
+            70% { box-shadow: 0 0 9px rgba(255, 122, 162, 0.6); opacity: 0.85; }
+        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 40% { box-shadow: 0 0 10px rgba(255, 179, 71, 0.7); } }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; }
+        .elements th[scope="row"] { width: 8.5rem; }
+        .cards th[scope="row"] { width: 9rem; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/bonfire_1_title.jpg" alt="A circle of friends in hooded cloaks sitting on logs around a big bonfire in a forest clearing at night, lanterns in the trees, the flames rising in bands of red, blue, green and gold, a glowing orb hovering above with cards drifting down from it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Bonfire</span><span class="p-sub">Cozy Card Battles</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/campfire-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/wood-pile-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Bonfire is a shedding card game in the family of UNO and mau-mau, played by a circle of friends around a magical campfire. Every card is a piece of enchanted firewood: it lands in the fire and turns the flame its color. The longer a match goes, the bigger the fire grows, and when someone throws their last card, the whole pile goes up in a light show made from everything that was played.</p>
+            <p>It's a singleplayer game, with the other friends at the fire played by the computer, each with a face that reacts to every card. The rules are the familiar ones, match the color or the number and get rid of your hand, with a few additions that make sets, chains and comebacks easier. Winning a match is nice. The point of the evening is the fire.</p>
+            <p>Bonfire is one of three games designed on the same card engine, each in its own mood. Its siblings are the duelling wizards of <a href="ultimate-card.html">Ultimate Card</a> and the greedy gamblers of <a href="power-pile.html">Power Pile</a>.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/shaking-hands-delapouite.png)"></span>Target audience</h3>
+                    <p>People who love family card nights, campfires and cozy games, and who'd rather share a good evening than beat anyone.</p>
+                    <p>They want <strong>company and something pretty</strong> at the end of a day, without stakes, scores or anyone being knocked out.</p>
+                    <p>It's played with the mouse alone. Anyone who has played UNO knows the basics already, and the new cards explain themselves when you hover over them.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/fluffy-flame-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Connection and belonging:</strong> a circle of friends who laugh, groan and grin at your cards.</p>
+                    <p><strong>Beauty:</strong> a fire and a light show that the match itself builds.</p>
+                    <p><strong>Play and silliness:</strong> sending a friend off to fetch more firewood, and getting it right back.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> and <strong>self-worth</strong>: there are no timers, nobody is eliminated, and losing a match costs nothing.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/firework-rocket-lorc.png)"></span>Core concept</h3>
+                    <p>Shedding games are races: the first one out wins, and everyone else loses.</p>
+                    <p>Here the race still happens, but <strong>the result that matters is shared</strong>: the pile is the fire, and a longer match makes a bigger show for everyone sitting around it. Holding on to your last card to let the fire grow is a real choice.</p>
+                    <p>There's no score kept between matches. What carries on is the trip, and the stories.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/bonfire_5_story.jpg" alt="A storybook village at dusk seen from above: thatched cottages along winding dirt roads, lamp posts glowing, a small cart on the road and a fire glowing in one yard, a river valley and forested hills behind." width="1280" height="720" loading="lazy">
+            <figcaption>"Every village on the road has a festival coming, and every festival needs a fire."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/lantern-flame-lorc.png)"></span>Lore and story</h2>
+            <h3>The fire</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/bonfire/01-fire.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The circle carries an ember from a very old fire, and wherever they set it down, it grows into a bonfire that answers to cards. Above it hovers an orb that never runs empty: reach up and a card drops into your hand. Throw a card into the fire and the flame takes its color, its crackle and its mood.</p>
+            <p>Nobody in the circle knows where the ember came from. They know it likes company.</p>
+
+            <h3>The friends</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/bonfire/02-friends.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Two to six friends sit at the fire on any given night, and you choose which of them is you, the way you'd pick a fighter in a fighting game. Each one has their own face, their own habits at the table and their own way of reacting to a good card or a bad one.</p>
+
+            <h3>The trip</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/bonfire/03-trip.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The friends travel the countryside from village to village. Every village has a festival coming, and every festival needs a fire, so they ask the circle to light it. The villagers bring blankets and sit in a wider ring around the players to watch the flame change, and to see what the night's show turns out to be.</p>
+
+            <h3>Tonight</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/bonfire/04-tonight.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>There's a valley ahead, a road through it with a few forks, a village at every bend, and a big midsummer fire waiting at the far end. Light them in whatever order the road lets you.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You see the fire from your seat in the circle, your hand fanned out at the bottom of the screen and your friends around the fire with their faces and the size of their hands showing. Everything is done with the mouse; the keys are shortcuts.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Your hand</h3>
+                    <dl>
+                        <div><dt>Click</dt><dd>Pick a card; click more of the same number to make a set</dd></div>
+                        <div><dt>Drag</dt><dd>Reorder your hand, or the set you're about to play</dd></div>
+                        <div><dt>Right click</dt><dd>Read what a card does</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>The fire</h3>
+                    <dl>
+                        <div><dt>Click fire / Space</dt><dd>Throw the picked cards in</dd></div>
+                        <div><dt>Click orb / D</dt><dd>Draw a card, up to three a turn</dd></div>
+                        <div><dt>Enter</dt><dd>End your turn</dd></div>
+                        <div><dt>Esc</dt><dd>Pause, rules and the map</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>A set is played in the order you picked it, so the last card you pick lands on top and decides what the next friend has to match. Hovering over a friend shows how many cards they hold, and the moment anyone is down to their last card, a <strong>warning</strong> appears above them on its own. Nobody has to shout anything.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/bonfire_2_vignette.jpg" alt="Over the shoulder of a traveler in a knitted sweater holding red, blue, yellow and green cards beside a campfire burning bright green, three friends in brown coats across the fire reacting: one crying out in dismay, one worried, one grinning slyly, sparks rising into the night." width="1280" height="720" loading="lazy">
+            <figcaption>"Every card you play turns the flame its color. Three of the same element in a row, and the fire climbs with them."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/card-play-quoting.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A turn at the fire</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bonfire/05-turn.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Look at the flame, look at your hand, and throw something in: one card, or a whole set of one number. The fire flares in the new color, the friends react, and the turn passes on. If nothing fits, reach up to the orb.</p>
+                        <p>Most turns take seconds. The small decisions are the fun of it: which color to leave on top for the next friend, whether to send them for firewood now or keep that card for later, whether to go out or let the fire grow a little more.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A trip across one valley</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bonfire/06-valley.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each valley is a small map in the style of Super Mario Bros. 3: a road of five to nine villages with a few forks, ending at a midsummer fire where everyone the circle met along the way sits in. Every village is one festival night, and one match.</p>
+                        <p>Each village sets up its own night: how many friends sit at the fire, how many elements are in the orb (four, six or eight), how many cards everyone starts with, and now and then a local custom that bends a rule. The road decides what comes next, and you decide which fork to take.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/asian-lantern-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The land and its stories</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bonfire/07-land.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The valleys sit side by side on a map of the whole land, and there's always another one over the next hill. Every village you've lit keeps a <strong>lantern burning</strong> on that map, in the color its fire ended on, so the land slowly fills with little lights of every color.</p>
+                        <p>The land map also offers the next trips, shaped by where you've been: a valley next to one you lit in blues might be a river country with water in every hand.</p>
+                        <p>Every night's finale goes into the <strong>story book</strong> with the seed that made it, so any show can be watched again. Retold from the book, though, a night comes back the way campfire stories do: a little bigger every time, with taller flames and louder bangs than anyone actually saw.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/night-sleep-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One night, or a whole valley</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bonfire/08-night.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The game opens on the land map. Pick up the trip you're on, or choose the kind of night you want and the map offers a valley to match: <strong>a quick fire</strong> (small hands, ten minutes or so), <strong>a long night</strong> (big hands and a big show) or <strong>a wild night</strong> (the villages' customs rolled at random).</p>
+                        <p>Stop after any match, or in the middle of one, and the trip waits where you left it. Whatever kind of night you chose, it counts toward the same land.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/paper-lantern-lorc.png)"></span>Game modes</h2>
+            <p>Every night is either a free circle or a night in pairs. The village decides which, unless you've asked for one.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">How it plays</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Free circle</th><td data-label="Plays">Everyone plays for themselves, two to six at the fire</td><td data-label="For">The classic game: a little mischief between friends</td></tr>
+                        <tr><th scope="row">Pairs</th><td data-label="Plays">Two or three teams of two, partners sitting across the fire; action cards only touch the other teams, and when one partner goes out, the pair is out together</td><td data-label="For">Playing with a friend instead of against one, and feeding each other the colors you need</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/celebration-fire-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/campfire-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>The pile is the fire</h3>
+                        <p>In ordinary shedding games the deck runs out and the discard pile is shuffled back in. Here the orb is <strong>endless</strong> and the pile is never recycled: every card thrown in stays in the fire, and the fire grows with it. The game only has to remember a count and the order the elements came in, so a fire of eight hundred cards is as light to run as a fire of eight.</p>
+                        <p>When someone throws their last card, the match ends and the pile goes up in the <strong>finale</strong>: a light show generated from the match itself. Its length follows the size of the pile, and its colors, bursts and set pieces follow the elements in the order they were played, so a long match of blues and greens becomes a long, cool, rolling show, and a short fiery one a quick bright bang.</p>
+                        <p>A fire can grow to 999 cards and no further. If it ever gets there, the match ends on its own, and the friend holding the fewest cards throws the last log.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/bonfire_3_feature.jpg" alt="A huge bonfire at night erupting into a towering column of multicolored light, spirals of red, blue, green, yellow and violet sparks bursting into firework flowers above a village green, small villagers and a circle of friends watching from the edges." width="1280" height="720" loading="lazy">
+                            <figcaption>"When the last card is played, the whole pile goes up. The more cards in the fire, the longer the show."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/fire-iris-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Colors that mean something</p>
+                        <h3>Elements as firewood</h3>
+                        <p>The card colors are elements, after the energy types of the Pokémon card game, and each one burns its own way. A night uses four, six or all eight:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table elements">
+                                <thead><tr><th scope="col">Element</th><th scope="col">The flame it makes</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Water</th><td>Blue, low and rolling, with drifting mist</td></tr>
+                                    <tr><th scope="row">Fire</th><td>Red and roaring, the ordinary fire turned up</td></tr>
+                                    <tr><th scope="row">Plant</th><td>Green, with glowing vines curling out of the logs</td></tr>
+                                    <tr><th scope="row">Electric</th><td>Yellow, crackling, with little arcs jumping between the logs</td></tr>
+                                    <tr><th scope="row">Ground</th><td>Brown and heavy, embers like a glowing hearth (from six elements on)</td></tr>
+                                    <tr><th scope="row">Psychic</th><td>Purple, swirling slowly against the wind (six and up)</td></tr>
+                                    <tr><th scope="row">Metal</th><td>Silver-white and sharp, sparks like a forge (eight)</td></tr>
+                                    <tr><th scope="row">Aether</th><td>Teal and pink, shimmering (eight)</td></tr>
+                                    <tr><th scope="row">Ash</th><td>The wild card: pale grey, fits on anything, lets you pick the next element, and calms a climbing flame back down</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Cards of the same element played one after another <strong>build up</strong>: two make the flame climb a little, three make it tall, four make it roar, and five or more is as high as it goes. When a different element lands on a built-up flame, the pair sets off a <strong>set piece</strong>: water on fire sends up a ring of smoke, electric on fire a plasma arc, fire on plant a firestorm of sparks, plant on ground an overgrowth of glowing vines. Set pieces are for watching, and they're written into the finale; they don't punish anyone.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/card-exchange-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The rules, eased</p>
+                        <h3>Sets, chains and the orb</h3>
+                        <p>Match the top card's element, its number or its symbol, or play an ash card. On top of that, three rules make the game smoother than the one it comes from:</p>
+                        <ul>
+                            <li><strong>Sets, as in rummy:</strong> play any number of cards with the same number (or the same action) in one turn, in the order you choose, so the one on top is the one you want the next friend to face.</li>
+                            <li><strong>The orb:</strong> if nothing fits, draw up to three cards, one at a time; play the first one that fits, or end your turn. You can also draw instead of playing, even with a playable card, if you'd rather keep it.</li>
+                            <li><strong>Chains:</strong> when someone sends you to fetch firewood or makes you nap, you can answer with the same kind of card and pass it on, with yours added. The chain grows around the circle until it reaches a friend who can't pass it on. Turning the circle around is not an attack, so it can't be chained.</li>
+                        </ul>
+                        <p>You can go out by playing a whole set as your last move. There's no rule about announcing your last card; the warning does it for you.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/shield-reflect-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Friendly mischief</p>
+                        <h3>The cards</h3>
+                        <p>Besides the numbers from zero to nine in every element, the orb gives out action cards, rarer the stronger they are. Every one of them is something a friend would do to another friend at a campfire:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table cards">
+                                <thead><tr><th scope="col">Card</th><th scope="col">What it does</th><th scope="col">How often</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Fetch wood +1 to +3</th><td data-label="Does">The next friend draws that many cards</td><td data-label="Often">Uncommon to rare</td></tr>
+                                    <tr><th scope="row">Nap</th><td data-label="Does">The next friend misses a turn</td><td data-label="Often">Uncommon</td></tr>
+                                    <tr><th scope="row">Turn around</th><td data-label="Does">Play goes the other way round the circle</td><td data-label="Often">Uncommon</td></tr>
+                                    <tr><th scope="row">Share</th><td data-label="Does">Hand one of your cards to the next friend</td><td data-label="Often">Uncommon</td></tr>
+                                    <tr><th scope="row">Show and tell</th><td data-label="Does">The next friend's hand stays face up until their next turn</td><td data-label="Often">Uncommon</td></tr>
+                                    <tr><th scope="row">Blanket</th><td data-label="Does">Wrap up: the fetch or nap aimed at you just stops</td><td data-label="Often">Rare</td></tr>
+                                    <tr><th scope="row">Duck</th><td data-label="Does">It sails past you to the friend after you</td><td data-label="Often">Rare</td></tr>
+                                    <tr><th scope="row">Toss it back</th><td data-label="Does">It goes back to whoever sent it</td><td data-label="Often">Rare</td></tr>
+                                    <tr><th scope="row">Swap seats</th><td data-label="Does">Trade your whole hand with the next friend's</td><td data-label="Often">Rare</td></tr>
+                                    <tr><th scope="row">Ash, Ash +4</th><td data-label="Does">Wild: choose the next element (the +4 also sends the next friend for four logs)</td><td data-label="Often">Legendary</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Blanket, Duck and Toss it back are played on someone else's turn, the moment something is aimed at you, like the parries in Nanaca Crash.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/night-sleep-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Nobody gets knocked out</p>
+                        <h3>The last log, and dozing off</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bonfire/09-last-log.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Going out ends the night, so the last card is worth thinking about. Play your last two cards as a set and you're out at once. Keep one back instead, and go out with it alone on a later turn, and it becomes <strong>the last log</strong>: its element crowns the finale and the show runs half again as long. That's a risk, because while you wait, the warning tells everyone you're on one card.</p>
+                        <p>A friend who ends up holding twenty-five cards or more doesn't lose. They <strong>doze off</strong>, wrapped in a blanket by the fire, and sit out the rest of the match. They wake up for the next one, and the finale still wakes them for the show.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/face-to-face-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Company, not opponents</p>
+                        <h3>Faces at the fire</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/bonfire/10-faces.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every friend reacts to the night as it goes: idling and glancing around the circle, a little look when they lift a card from the orb (pleased, disgusted or excited, though some of them hide it better than others), a scowl when you send them for firewood, a smug look when they get you back, delight when they go out, and a soft snore when they doze off.</p>
+                        <p>Those faces are what make the computer players feel like a circle of friends instead of a set of opponents. They're also a gentle part of the game: a friend who just lit up at the card they drew is probably holding something good.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Trivia</h2>
+            <p>Bonfire began as one project, a singleplayer "Super UNO" with every card idea Reactorcore could find. Three different moods kept pulling it apart, so it became three games on one card engine: this cozy one, a fierce one (<a href="ultimate-card.html">Ultimate Card</a>) and a greedy one (<a href="power-pile.html">Power Pile</a>). Each takes the parts of the shared design that suit it best.</p>
+            <p>Reactorcore wanted a new name for the game from the start: "UNO" is a trademark, and "mau-mau", the older name for this kind of game, sounds to Reactorcore like a silly cat noise.</p>
+            <p>The game needs almost no artwork. The cards, the flames and the fireworks can all be drawn by code, with particles and screen effects, and a handful of sound effects reused cleverly.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/bonfire_4_boxart.jpg" alt="Box art: a magical campfire in a forest at night, its flame rising tall in twisting bands of red, blue, green and gold, a glowing orb above it with cards fluttering around, two friends in hooded cloaks sitting on logs below, seen from behind." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">An invitation</p>
+                <h2 id="sendoff">Bonfire: Cozy Card Battles</h2>
+                <p>Dear friend, the fire's going and there's a log with your name on it. Bring a blanket. We're on the road again tomorrow, and the next village has been asking about us.</p>
+                <p>Throw in a blue and watch it roll. Send someone for firewood and pretend you're sorry. Hold on to your last card a little longer than you should. Then stay for the show.</p>
+                <p><strong>Bring a card. Leave a story.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by UNO and mau-mau, the Pokémon card game's energy types, Nanaca Crash and Super Mario Bros. 3's world map</p>
+                <p>Icons by Lorc, Delapouite, Quoting and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Fragile Bombers (CC0), Expletus Sans, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
