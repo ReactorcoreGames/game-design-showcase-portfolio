@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Toy Cool Combat: Tape Measure Tactics</title>
+
+    <meta name="description" content="A tabletop game design concept by Reactorcore: turn-based tactical battles fought on the floor or the kitchen table with your own toys, a tape measure and one die. The model is the stat sheet, the parts you can knock off are its health, and every battle goes into a war diary.">
+    <meta name="keywords" content="game design concept, tabletop game, toy wargame, construction toys, action figures, turn-based tactics, tape measure, dice, XCOM inspired, BrikWars inspired, solo tabletop, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/epic-toy-cool-combat.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Epic Toy Cool Combat: Tape Measure Tactics">
+    <meta property="og:description" content="A tabletop game design concept: tactical battles with your own toys, a tape measure and one die. Knock the parts off, pick them back up. Free for anyone to play or build on.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/epic-toy-cool-combat.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/epic-toy-cool-combat_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a yellow tape measure stretched from a brick-built toy robot to a toy truck on a wooden table, a die between them">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Epic Toy Cool Combat: Tape Measure Tactics">
+    <meta name="twitter:description" content="A tabletop game design concept: tactical battles with your own toys, a tape measure and one die.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/epic-toy-cool-combat_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Epic Toy Cool Combat: Tape Measure Tactics",
+        "description": "A tabletop game design concept, not a released game: turn-based tactical battles played with the players' own toys, a tape measure and one die, where detachable parts are a unit's health and every battle is recorded in an ongoing war diary.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Tabletop game", "Tactics", "Wargame"],
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/epic-toy-cool-combat.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/epic-toy-cool-combat_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#1b1013">
+
+    <link rel="preload" href="../fonts/zeroes-three.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Epic Toy Cool Combat: toy-box brick red and sunny yellow over a dark, warm carpet, with
+           cream for highlights. Zeroes Three for the title and headings, Exo 2 Black for the
+           subtitle and kickers. */
+        @font-face { font-family: "Zeroes Three"; src: url("../fonts/zeroes-three.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Exo 2 Black"; src: url("../fonts/exo2-black.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #1b1013;
+            --flow-2: #4a1a1c;
+            --grid-minor: rgba(255, 210, 140, 0.045);
+            --grid-major: rgba(255, 210, 140, 0.10);
+            --p-ground: rgba(27, 17, 19, 0.95);
+            --p-panel: #2a1a1c;
+            --p-1: #ff5b4a;
+            --p-2: #ffcf3a;
+            --p-3: #fff1d6;
+            --p-text: #ecdfd6;
+            --p-dim: #b9a59d;
+            --p-line: rgba(255, 200, 160, 0.16);
+            --font-title: "Zeroes Three", "Segoe UI", sans-serif;
+            --font-sub: "Exo 2 Black", "Segoe UI", sans-serif;
+            --shade: #120a0b;
+        }
+
+        /* Title effect, "knockback": the letters sit on a hard brick-red drop shadow, like a toy
+           on its baseplate, and every few seconds they take a hit: the shadow jolts out, a yellow
+           flash, and everything snaps back into place. Dark layered shadows keep it legible. */
+        .p-name {
+            letter-spacing: 0.01em;
+            animation: knock 5s ease-out infinite;
+        }
+        @keyframes knock {
+            0%, 84%, 100% { color: var(--p-3); text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 4px 4px 0 #b3291d, 5px 5px 0 var(--shade); }
+            88% { color: #fffbe8; text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 10px 7px 0 #b3291d, 11px 8px 0 var(--shade), 0 0 26px rgba(255, 207, 58, 0.85); }
+            92% { color: var(--p-3); text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 #b3291d, 4px 4px 0 var(--shade), 0 0 12px rgba(255, 207, 58, 0.4); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        /* The underline is a strip of yellow tape measure, ticked every centimetre-ish. */
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.45rem; height: 6px;
+            background: repeating-linear-gradient(90deg, var(--shade) 0 1px, transparent 1px 9px), var(--p-2);
+            animation: tape 5s ease-out infinite;
+        }
+        @keyframes tape {
+            0%, 84%, 100% { box-shadow: 0 0 4px rgba(255, 207, 58, 0.25); }
+            88% { box-shadow: 0 0 16px rgba(255, 207, 58, 0.9), 0 0 30px rgba(255, 91, 74, 0.6); }
+        }
+        .section-mark::after { animation: h2-line 5s ease-out infinite; }
+        @keyframes h2-line { 0%, 84%, 100% { box-shadow: none; } 88% { box-shadow: 0 0 12px rgba(255, 91, 74, 0.8); } }
+        h2, h3 { letter-spacing: 0.01em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .tiers td:nth-of-type(1) { width: 34%; }
+        .ladder td:nth-of-type(1) { white-space: nowrap; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/epic-toy-cool-combat_1_title.jpg" alt="On a deep red living room rug, a red brick-built toy tank faces a toy dinosaur riding a wheeled cardboard robot, a yellow tape measure stretched between them, a sofa and a glowing lamp behind." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Epic Toy Cool Combat</span><span class="p-sub">Tape Measure Tactics</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/measure-tape-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/battle-mech-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Epic Toy Cool Combat is a turn-based tactics game played in real life, on the floor, a table, a bed or the garden, with the toys you already own. Brick-built figures, action figures, robots, dinosaurs, tanks, teddy bears and cardboard creations all fight under one set of rules. All you need besides them is a tape measure and one die.</p>
+            <p>There are no stat cards. <strong>The model is the stat sheet:</strong> what a unit carries is what it can do, and the parts you can knock off it are its health. A hit sends the part flying across the table, and the unit can go and pick it back up.</p>
+            <p>It began as a way to give toy battles rules, so that distances and dice decide what happens instead of whoever narrates hardest. The turns borrow XCOM's clarity (three units, three actions each), and the "build anything" spirit comes from BrikWars and Mobile Frame Zero, the free wargames for construction toys. The aim is the depth of a good tactics game with none of the bookkeeping of a big tabletop wargame.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Anyone who ever staged a battle with their toys on the living room floor and wanted it to <strong>really count</strong>: builders of construction toys, collectors of action figures, crafters, and fans of XCOM-style squad tactics.</p>
+                    <p>They bounce off thick rulebooks, stat cards, point costs and expensive proprietary miniatures, or simply don't have a free weekend to learn them.</p>
+                    <p>The interface is a tape measure, one die (or a coin) and a single printed reference sheet. Seven-year-olds can play it, and nobody outgrows it.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/party-flags-delapouite.png)"></span>Game's purpose</h3>
+                    <p><strong>Creation and play:</strong> designing your own warriors and machines, then watching them come alive in a fight.</p>
+                    <p><strong>Silliness and excitement:</strong> helmets and cannons flying across the table, a tiny figure with a giant gun taking down a tank.</p>
+                    <p><strong>Celebration and meaning:</strong> cool moments worth retelling, kept in a war diary that grows season by season.</p>
+                    <p>It deliberately avoids draining <strong>ease</strong> (nothing to track on paper during a fight), <strong>money</strong> (scrap crafts are as valid as boxed sets) and <strong>respect</strong> (nobody touches anyone else's toys, and both sides agree the fight is fair before it starts).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/o-brick-delapouite.png)"></span>Core concept</h3>
+                    <p>Tabletop wargames usually ask for a unit card, a points list and a rulebook for every model, and a match ends and is forgotten.</p>
+                    <p>Here <strong>what you see is what you have</strong>. Health, armor, weapons and speed are read off the model itself, and every hit changes the model in front of you, so nothing needs tracking.</p>
+                    <p>Battles are scenes in a <strong>season</strong> that a dice-driven generator keeps writing, so every fight adds to a story that goes on as long as you like.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/epic-toy-cool-combat_5_story.jpg" alt="A living room at dusk turned into a battlefield: toy tanks, dinosaurs, soldiers and cardboard robots spread across a red rug between the sofas, a yellow tape measure unrolled through the middle." width="1280" height="720" loading="lazy">
+            <figcaption>"The battle gods can summon anything that moves and can carry a weapon: a brick-built knight, a robot made of cardboard, a teddy bear with a rocket launcher."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/hand-of-god-delapouite.png)"></span>Lore and story</h2>
+            <h3>The battle gods</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/01-gods.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Somewhere above the living room live the immortal battle gods, and they share one overwhelming desire: to engage in <strong>EPIC TOY COOL COMBAT</strong>. With a surge of their power they assemble, arm and awaken inanimate creations, raise them from the toy box, and send them to fight the creations of the other gods for everlasting glory and epic, cool memories.</p>
+            <p>You are one of those gods. Take command of your forces.</p>
+
+            <h3>Anything can answer the call</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/02-summoned.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>A god may call any creature, person, machine or thing into battle through a physical toy: construction bricks, action figures, dolls, teddy bears, model kits or do-it-yourself creations. Only three things matter. It can move, it can carry weapons and armor that come off and go back on, and it's <strong>epic</strong>, which means whatever its god loves about it.</p>
+
+            <h3>Why the gods fight</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/03-battlefield.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Sometimes cool combat settles a dispute. Sometimes it decides who gets a prize that can't be shared. Most often it's simply to create cool situations, regardless of victory or loss, and to have a story worth telling afterwards.</p>
+            <p>Right now, the gods are choosing their champions. The rug is the battlefield, the books are mountains, and the sofa is a cliff.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/dice-six-faces-three-delapouite.png)"></span>Controls and interface</h2>
+            <p>The controls are your hands, and the interface is the table. Everything is measured in centimetres with full 360° freedom, up and down included, so there's no grid, no hexes and no board to buy.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>The kit</h3>
+                    <dl>
+                        <div><dt>Your toys</dt><dd>A unit or an army per side, built before the game</dd></div>
+                        <div><dt>Tape</dt><dd>A retractable tape measure, 3 m is ideal: every move, range, blast and knockback</dd></div>
+                        <div><dt>One die</dt><dd>A six-sided die, or a coin to flip</dd></div>
+                        <div><dt>Notebook</dt><dd>Pen and paper (or a web app) for the war diary, never for the fight</dd></div>
+                        <div><dt>One sheet</dt><dd>The printed A4 reference: distances, chances and tiers at a glance</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>A unit's actions (three per turn)</h3>
+                    <dl>
+                        <div><dt>Move</dt><dd>Measure and move, then choose which way to face</dd></div>
+                        <div><dt>Attack</dt><dd>Fire or swing one weapon at one target</dd></div>
+                        <div><dt>Ability</dt><dd>Boost, grapple, pull, push, build cover, take control</dd></div>
+                        <div><dt>Recover</dt><dd>Pick up a lost part and snap it back on</dd></div>
+                        <div><dt>Interact</dt><dd>Grab, install, operate, board or bail out</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>A turn is short by design. You pick <strong>up to three of your units</strong>, and each gets three actions in any order and combination: move-move-move, move-attack-move, attack-attack-recover. The rest of your army waits. However large the armies get, nobody waits long for their turn.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/epic-toy-cool-combat_2_vignette.jpg" alt="On a wooden table, a hand holds a red brick-built toy robot while a yellow tape measure runs from it to a small cream toy truck, a white die between them and stacked books behind." width="1280" height="720" loading="lazy">
+            <figcaption>"Close enough to touch is a sure hit. Across the room is a long shot. The tape measure settles every argument."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crosshair-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Measure, roll, knock it off</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/04-measure.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Pull out the tape, see which range band the target is in, and roll. If it hits and the defender's dodge fails, the defender picks a part to lose, and the unit is pushed back along the line of the shot while the part flies twice as far.</p>
+                        <p>Then the question every turn turns on: chase the part you lost, cover a friend, or press the attack while the enemy is stripped bare?</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rally-the-troops-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A battle with a mission</h3>
+                        <p>Every battle has an objective, and the battle ends when it's done or failed. Most missions aren't about wiping out the other side:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Mission</th><th scope="col">What it asks</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Take down the leader</th><td>Destroy one named unit: a commander, a hero, an ace, a hivemind</td></tr>
+                                    <tr><th scope="row">Nemesis</th><td>Destroy a unit that comes back twice: it has three lives</td></tr>
+                                    <tr><th scope="row">Guard or destroy</th><td>A reactor, pylon, radar, artifact or planetary gun that isn't part of either army</td></tr>
+                                    <tr><th scope="row">Escort</th><td>A convoy, a civilian or a carried object that can't move itself; its protector moves it as an extra unit</td></tr>
+                                    <tr><th scope="row">Delivery and assembly</th><td>Carry a number of objects to a place, or build something from parts scattered across the room</td></tr>
+                                    <tr><th scope="row">Race and breakthrough</th><td>Reach a place first, or break through a blockade while the other side holds it</td></tr>
+                                    <tr><th scope="row">Hold the prize</th><td>Keep a special object, or a hill, for a number of turns</td></tr>
+                                    <tr><th scope="row">Wipe them out</th><td>The classic: the last side standing</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Sides start about three metres apart, beyond the reach of any weapon, so the opening turns are about positioning, like the first moves in chess. Ambushes and standoffs can start anywhere.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/notebook-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The war diary</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/05-diary.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Battles can be one-offs, but they're meant to add up. The game is structured like a cartoon series: a <strong>season</strong> is a whole war, an <strong>episode</strong> is a campaign within it, and each battle is a <strong>scene</strong>. A war diary records every one of them: who fought, what happened, the coolest moment, who fell.</p>
+                        <p>The next scene isn't invented on the spot. A few <strong>decision sheets</strong>, driven by the die or by a vote, roll it up from what came before: where it picks up, the starting positions, how the forces compare, the main and side objectives, and special events, like a strong wind that pushes every unit ten centimetres to the left. Each episode continues from where the last one left off.</p>
+                        <p>Armies change as the war goes on. New units can join between battles, and the last unit destroyed in a battle retires for the rest of the season, its story written into the diary. Nothing un-happens. When a season ends, the next one picks up its threads.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Set up in minutes, pack up in one</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/06-setup.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Bring your units already built. Make terrain out of whatever is in the room: books, cushions, boxes, the furniture itself. Show each other your units, roll or pick the scene, and start.</p>
+                        <p>A one-on-one duel fits in a short sitting, three against three is a relaxed evening, and nine against nine or more is a proper battle. Afterwards, snap the loose parts back on, the toys go back on the shelf, and the diary waits for the next scene, next week or next year.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/empty-chessboard-delapouite.png)"></span>Game modes</h2>
+            <p>The same rules serve every table. Who's playing decides the mode:</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">Who plays</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Solo</th><td data-label="Who">You against an army the die commands</td><td data-label="For">Rule-bound toy battles alone, where you can't simply decide who wins</td></tr>
+                        <tr><th scope="row">Together</th><td data-label="Who">Friends side by side against a dice army</td><td data-label="For">A shared war, with every player commanding their own units</td></tr>
+                        <tr><th scope="row">Sparring</th><td data-label="Who">Two or more gods, or teams of them, by agreement</td><td data-label="For">Friendly play-fights that everyone agreed to, and a chance to show off what each of you built; two to four sides is the sweet spot</td></tr>
+                        <tr><th scope="row">Spectate</th><td data-label="Who">The die against the die</td><td data-label="For">Watching two armies fight it out, or testing a new unit</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>The dice commander</strong> runs any army nobody is playing. At the start of each of its units' activations, roll the die and follow the result, moving its toys for it:</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Roll</th><th scope="col">The unit will…</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">1 · Charge</th><td>Attack the nearest enemy aggressively, ignoring the objective</td></tr>
+                        <tr><th scope="row">2 · Objective</th><td>Go for the mission objective, whatever it takes</td></tr>
+                        <tr><th scope="row">3 · Recover</th><td>Take cover, pick up lost parts, hide</td></tr>
+                        <tr><th scope="row">4 · Reposition</th><td>Move to better ground: higher up, a flank, behind cover</td></tr>
+                        <tr><th scope="row">5 · Support</th><td>Join up with the nearest ally, or attack carefully from range</td></tr>
+                        <tr><th scope="row">6 · Chaos</th><td>Roll again for a direction (north, east, south, west, toward the nearest enemy, away from it), move that way, and shoot whatever it can see</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>The commander always takes the likeliest shot its result allows, and activates the three units closest to the action. That's enough to make it unpredictable without making it stupid.</p>
+            <p>Four <strong>variants</strong> change the rules themselves, and mix with any mode:</p>
+            <ul>
+                <li><strong>Kinetic Figure Fights:</strong> figures only, one shared reference card instead of any unit sheets, one tape measure and one die. The fastest way in.</li>
+                <li><strong>Hardcore:</strong> no dodge rolls. Faster and far more lethal.</li>
+                <li><strong>Floor is lava:</strong> rugs, cardboard and furniture are islands; a unit that starts its turn anywhere else loses a part.</li>
+                <li><strong>Paper health:</strong> for toys without removable parts. A small strip of paper with one square per part stands in for them, and hits cross squares off; recovering one takes the unit's whole turn. Dabs of putty stuck on as "armor" work too.</li>
+            </ul>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/battle-gear-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/eye-target-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No stat cards</p>
+                        <h3>What you see is what you have</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/07-model.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every unit is described by its physical model. A long barrel is a long-range gun, a thruster pack means it's fast, a thick shield wall on one side is armor on that side. Other wargames define all this on a card; here the toy itself <strong>is</strong> the card, and everyone at the table can read it.</p>
+                        <p>So every weapon and ability must be visible and recognizable to the other players, who agree it's valid. That consent is the balance system, together with a simple rule of believability: <strong>cheap, fast, good, pick two</strong>. Something huge is powerful but heavy; something light is weak or short-ranged. Before the first battle, everyone shows their units (a photo and a few words can go in the diary) and checks that each side has at least one weapon that can hurt the other side's toughest unit.</p>
+                        <p>Units come in four sizes, judged by what they can do more than by their exact size:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Size</th><th scope="col">What it is</th><th scope="col">Parts</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Figure</th><td data-label="What">Anyone with two arms who can ride or pilot something; about 4 cm</td><td data-label="Parts">3</td></tr>
+                                    <tr><th scope="row">Steed</th><td data-label="What">A horse, bike, small car, power armor, bear, small turret; 5 to 10 cm</td><td data-label="Parts">5</td></tr>
+                                    <tr><th scope="row">Vehicle</th><td data-label="What">A tank, jet, mecha, dragon, gunship, a whole house; 10 to 20 cm</td><td data-label="Parts">10</td></tr>
+                                    <tr><th scope="row">Titan</th><td data-label="What">A giant mecha, battleship, mobile fortress or kaiju; 20 cm and up</td><td data-label="Parts">20</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/armor-downgrade-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Parts are health, and hits are physics</h3>
+                        <p>A unit's health is the stuff attached to it: hats, helmets, held weapons, backpacks, armor plates, turrets, wings. Each size can carry a set number of these <strong>parts</strong> (above). One successful attack removes one part, and the defender chooses which, so they decide what they can live without.</p>
+                        <ol class="p-chain" aria-label="What happens when a unit is hit">
+                            <li><b>Roll to hit</b>The range band sets the chance.</li>
+                            <li style="--c: var(--p-2)"><b>Dodge</b>The defender gets one roll for the whole attack.</li>
+                            <li style="--c: var(--p-3)"><b>Lose a part</b>The defender picks it and takes it off.</li>
+                            <li><b>Knockback</b>The unit slides back along the shot; the part flies twice as far.</li>
+                        </ol>
+                        <p>When the parts are gone, the next hit takes its <strong>propulsion</strong>: a figure loses its legs and crawls, a vehicle is laid on its side and can't move. The hit after that breaks its <strong>core</strong>, a head or a reactor, and it's out of the battle. A fully armed figure takes five hits; a titan takes twenty-two.</p>
+                        <p>Only things that come off easily count as parts. Arms and hands are never pulled off a figure; the weapon in the hand comes off instead. A toy whose weapon is built into its body gets an <strong>armor plate</strong> to stand in for that health, and it keeps the weapon until the end.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/epic-toy-cool-combat_3_feature.jpg" alt="A red and yellow brick-built toy vehicle tips back on its wheels as bricks and a small cannon burst off it, loose bricks scattered across the wooden table." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every hit knocks a real part off the model, and the part flies twice as far as the unit is pushed."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/robot-grab-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Healing is a place on the table</p>
+                        <h3>Recover and deny</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/08-recover.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Lost parts aren't gone. They lie where they landed, and a unit within reach of one (5 cm for a figure, 10 cm for a machine) can spend an action to <strong>recover</strong> it: an even chance, and on a success it snaps back on with everything it did. A unit can pick up a part an ally dropped, too, as long as it stays within its own size's part limit.</p>
+                        <p>Healing means walking out to where your helmet landed, possibly into the enemy's line of fire. And the enemy can <strong>deny</strong> it: attacking a loose part knocks it further away, so you spend more actions chasing it. Every lost part becomes a small objective of its own.</p>
+                        <p>Nobody touches, steals or uses anyone else's toys. Each god handles only their own creations.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dice-six-faces-three-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Short turns, real choices</p>
+                        <h3>Three units, three actions</h3>
+                        <p>Each turn you activate <strong>up to three units</strong>, and each takes three actions in any combination. With a big army you choose which three matter most this turn; the rest stand ready. There are no overwatch or reaction rules: the turn is yours, then it's theirs.</p>
+                        <p>Every move is measured from the unit's centre, in any direction, up and down included. After moving, a unit chooses which way it faces, which matters for armor, weak points and front-firing weapons:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Who</th><th scope="col">Per move action</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Figure</th><td>30 cm, or 15 cm when slow</td></tr>
+                                    <tr><th scope="row">Steed, vehicle, titan</th><td>40 cm, or 20 cm when slow</td></tr>
+                                    <tr><th scope="row">Jets</th><td>60 cm, mostly straight ahead (a 10 cm sidestep); turning in place costs an action</td></tr>
+                                    <tr><th scope="row">Boost, jump or dash ability</th><td>50 cm (30 cm when slow); 100 cm for jets</td></tr>
+                                    <tr><th scope="row">Crawling</th><td>10 cm, once the legs or wheels are gone</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>A figure becomes <strong>slow</strong> by carrying a heavy (tier 3) weapon or bigger. A machine becomes slow by being built with heavy or super armor, unless it carries add-on thrusters, which are parts too: shoot them off and it slows down.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/coinflip-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">One die or a coin</p>
+                        <h3>The chance ladder</h3>
+                        <p>Every roll in the game is one of four steps on a single ladder, and each step works with a six-sided die or with coin flips, which give nearly the same odds:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table ladder">
+                                <thead><tr><th scope="col">Chance</th><th scope="col">Die</th><th scope="col">Coins</th><th scope="col">Used for</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Sure</th><td data-label="Die">no roll</td><td data-label="Coins">no flip</td><td data-label="Used for">Melee, and attacks at close range (up to 10 cm)</td></tr>
+                                    <tr><th scope="row">Likely</th><td data-label="Die">3 to 6</td><td data-label="Coins">two flips, either heads</td><td data-label="Used for">Medium range (up to 25 cm); everyday abilities like a boost or a jump</td></tr>
+                                    <tr><th scope="row">Even</th><td data-label="Die">4 to 6</td><td data-label="Coins">one flip, heads</td><td data-label="Used for">Long range (up to 50 cm); recovering a part; strong abilities like a grapple or a tractor beam; dodging a blast</td></tr>
+                                    <tr><th scope="row">Long shot</th><td data-label="Die">5 or 6</td><td data-label="Coins">two flips, both heads</td><td data-label="Used for">Far range (up to 1 m); dodging an attack; outrageous abilities like mind control</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Range bands double for weapons fired by vehicles and titans, and nothing reaches beyond 2 m, however big the gun. A visible targeting part (a scope, a radar dish, a sensor eye) moves a shot one step up the ladder, though never to Sure. Titans are one step easier to hit, because they're huge.</p>
+                        <p>The defender <strong>dodges once per attack</strong>, even when the weapon hits twice: one roll, and the whole attack misses or lands. It keeps turns quick and the odds easy to see.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/armor-upgrade-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Bigger hits harder, and pays for it</p>
+                        <h3>The tier ladder</h3>
+                        <p>Weapons come in six tiers, and armor in five classes. A weapon hurts any armor up to its own tier, and simply bounces off anything tougher: the defender doesn't even need to dodge. The tier also sets how far a hit knocks the target back, and how wide a blast is.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table tiers">
+                                <thead><tr><th scope="col">Tier</th><th scope="col">Looks like</th><th scope="col">Hurts up to</th><th scope="col">Knockback and blast</th><th scope="col">The catch</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">1 · Light</th><td data-label="Looks like">Pistols, knives, fists, rocks</td><td data-label="Hurts">Unarmored figures</td><td data-label="Knockback">7 cm</td><td data-label="Catch">None: it attacks twice per action</td></tr>
+                                    <tr><th scope="row">2 · Medium</th><td data-label="Looks like">Rifles, blasters, swords, flamethrowers</td><td data-label="Hurts">Armored figures</td><td data-label="Knockback">7 cm</td><td data-label="Catch">Bounces off every machine's armor</td></tr>
+                                    <tr><th scope="row">3 · Heavy</th><td data-label="Looks like">Bazookas, miniguns, big hammers, heavy machine guns</td><td data-label="Hurts">Light armor</td><td data-label="Knockback">10 cm</td><td data-label="Catch">Makes a figure slow</td></tr>
+                                    <tr><th scope="row">4 · Ultra</th><td data-label="Looks like">A figure's oversized railgun or buster sword; autocannons, laser cannons</td><td data-label="Hurts">Heavy armor</td><td data-label="Knockback">15 cm</td><td data-label="Catch">Fires only to the front</td></tr>
+                                    <tr><th scope="row">5 · Siege</th><td data-label="Looks like">Plasma cannons, vehicle railguns, big missiles</td><td data-label="Hurts">Super armor</td><td data-label="Knockback">25 cm</td><td data-label="Catch">Vehicles and titans only</td></tr>
+                                    <tr><th scope="row">6 · Superweapon</th><td data-label="Looks like">Mega rockets, doom cannons, anything absurd</td><td data-label="Hurts">Everything, two parts per hit, and the attacker picks them</td><td data-label="Knockback">40 cm</td><td data-label="Catch">Makes its carrier slow, and fires only to the front</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Armor runs from <strong>unarmored</strong> and <strong>armored figures</strong> (a helmet or chest plate counts, until it's knocked off) through <strong>light armor</strong> (most steeds) and <strong>heavy armor</strong> (tanks, battle mechs) to <strong>super armor</strong>, a massive shield wall that covers one to three sides of a vehicle or titan. Figures and steeds carry weapons up to tier 4; vehicles and titans can mount anything.</p>
+                        <p>Vehicles can deploy with more than their ten parts, but the first hit on an overloaded vehicle makes it shed parts of its owner's choice down to nine. The urge to bolt armor onto every last surface is real; the game just doesn't let it last.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rocket-thruster-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Where you stand matters</p>
+                        <h3>Facing, weak points and super armor</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/09-flank.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every unit has six sides: front, back, left, right, top and bottom. A side with thrusters, exhausts, a jetpack or an open cockpit is a <strong>weak point</strong>, and counts as one armor class lower. An armored figure with a jetpack is unarmored from behind, so even a pistol can finish it there. Speed and armor can live on one unit, but never everywhere at once.</p>
+                        <p>Super armor works the other way: only siege weapons get through it, so a weaker weapon has to find a side it doesn't cover. Flanking a fortress with a squad of figures carrying bazookas is a plan, not a hope.</p>
+                        <p>Hand-held and turret weapons fire in any direction. <strong>Built-in weapons</strong> fire only to the front, and so do ultra weapons and superweapons. A unit chooses its facing for free after a move, but turning in place costs an action. That's the trade: a built-in weapon can never be knocked off, while a turret swivels but can be lost.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/thrown-spear-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The fun stuff</p>
+                        <h3>Specials, pets, pilots and rams</h3>
+                        <ul>
+                            <li><strong>Blast, pierce and chain:</strong> a heavy or ultra weapon can have one of these, siege and superweapons can combine two. A blast hits everyone within its knockback distance of the target, allies and the shooter included, but its victims dodge at even odds. A piercing beam hits everything in a straight line, through walls. A chain bolt or ricochet must jump to one more unit within range, even a friend.</li>
+                            <li><strong>Thrown weapons:</strong> rocket fists, spears and axes can be thrown for a hit that takes two parts, but the weapon lands next to the target and has to be fetched back.</li>
+                            <li><strong>Pets and minions:</strong> a dog, a parrot, a swarm of bees or a little drone is a part, not a unit. It attacks in a straight line or around a corner, then comes home.</li>
+                            <li><strong>Pilots:</strong> most machines need a figure aboard to act, unless they show an antenna, an autopilot or are a creature with a mind of its own. A pilot in an open cockpit can be shot directly, at one step harder. A closed canopy saves them: when the machine is destroyed, the pilot pops out alive with whatever weapons were stowed aboard.</li>
+                            <li><strong>Slams and rams:</strong> every steed, vehicle and titan can slam something within reach, or ram it with a move. A steed can't ram a vehicle, a vehicle can't ram a titan; a titan can ram anything.</li>
+                            <li><strong>Abilities:</strong> boosters and wings move a unit further, grappling hooks and tractor beams move something else, aura bursts hit everything around it, and stranger powers move the terrain itself or take over an enemy for the rest of the turn (never to make it destroy itself).</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cardboard-box-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Any table, any budget</p>
+                        <h3>Any toy, any scale</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/epic-toy-cool-combat/10-scrap.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Construction toys make it easy to build units with parts that snap off and back on, but nothing in the rules needs them. Units can be crafted from <strong>clean scrap</strong>: cardboard, bottle caps, popsicle sticks, tin foil, fabric, putty, origami. A box with eyes drawn on it is a valid unit, as long as its parts come off and everyone agrees what they are.</p>
+                        <p>A starter squad (a figure or two and a small vehicle) is a single small set, and one tape measure, one die and a notebook cost a few coins. A collection can grow into a titan-led army, but the game works just as well at the smallest size, so <strong>try it small first</strong>: it's far too easy to spend more than you meant to.</p>
+                        <p>The same rules shrink too. At micro scale, where a person is a single small brick and a mecha fits in your palm (as in Mobile Frame Zero), halve every distance and the game fits on a coffee table.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Trivia</h2>
+            <p>Before settling on Epic Toy Cool Combat, the design notes went through a list of other names: Toy God Battles, Toy God Wars, Battle Toy Gods, Brick God Combat, Combat Bricks, Epic Toy Battles. The battle gods made it into the lore anyway.</p>
+            <p>The overloaded-vehicle rule exists because of a well-known joke among military vehicle fans: the compulsion to cover a tank in more and more explosive reactive armor blocks until there's barely a tank left underneath. A parts-as-health system makes that very tempting.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/epic-toy-cool-combat_4_boxart.jpg" alt="Box art: a kitchen table under a hanging lamp set up as a battlefield, a red toy tank and a small fortress with a flag between cliffs of stacked books, a yellow tape measure and a white die in front." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">A summons from the battle gods</p>
+                <h2 id="sendoff">Epic Toy Cool Combat: Tape Measure Tactics</h2>
+                <p>The gods are bored, and the toy box is full. Choose your champions: the knight with the bazooka, the cardboard robot, the dragon that's a little too big for its shelf. Arm them with everything they can carry. Then clear the rug.</p>
+                <p>Measure the distance. Roll the die. Watch the helmet fly. Then send someone to go and get it back.</p>
+                <p><strong>Bring your best toys. Bring a tape measure.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by construction toys and toy battles everywhere, BrikWars, Mobile Frame Zero, XCOM: Enemy Unknown, Armored Core, MechWarrior and BattleTech, Lost Planet, Daemon X Machina, Dead Space, Homeworld, Cortex Command, Mobile Suit Gundam and Red Alert 2</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Zeroes Three (CC0), Exo 2 Black, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

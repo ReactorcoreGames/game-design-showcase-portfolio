@@ -1,0 +1,73 @@
+{
+  "slug": "epic-toy-cool-combat-mini",
+  "out": "site/projects/mini/epic-toy-cool-combat",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - S - Tilt Shift",
+  "lead": "Tilt-shift photograph of toys in a cozy home, warm lamp light, brick red and sunny yellow. ",
+  "images": [
+    {
+      "n": 1,
+      "name": "gods",
+      "ratio": "3:2",
+      "prompt": "Giant hands lifting small toy warriors out of an open toy box"
+    },
+    {
+      "n": 2,
+      "name": "summoned",
+      "ratio": "3:2",
+      "prompt": "A teddy bear, a toy knight, a toy robot and a cardboard robot standing side by side"
+    },
+    {
+      "n": 3,
+      "name": "battlefield",
+      "ratio": "3:2",
+      "prompt": "Toy soldiers on a rug between stacks of books like mountains"
+    },
+    {
+      "n": 4,
+      "name": "measure",
+      "ratio": "3:2",
+      "prompt": "A yellow tape measure stretched between two toy soldiers on a table"
+    },
+    {
+      "n": 5,
+      "name": "diary",
+      "ratio": "3:2",
+      "prompt": "An open handwritten notebook on a table with small toy soldiers standing on its pages"
+    },
+    {
+      "n": 6,
+      "name": "setup",
+      "ratio": "3:2",
+      "prompt": "Toy armies set out on a living room floor among cushions and boxes"
+    },
+    {
+      "n": 7,
+      "name": "model",
+      "ratio": "3:2",
+      "prompt": "A brick-built toy tank with many small guns and armor plates on a table"
+    },
+    {
+      "n": 8,
+      "name": "recover",
+      "ratio": "3:2",
+      "prompt": "A small toy soldier reaching for a toy helmet lying on a wooden floor"
+    },
+    {
+      "n": 9,
+      "name": "flank",
+      "ratio": "3:2",
+      "prompt": "Small toy soldiers sneaking around the back of a big toy fortress"
+    },
+    {
+      "n": 10,
+      "name": "scrap",
+      "ratio": "3:2",
+      "prompt": "A robot made of cardboard, bottle caps and popsicle sticks on a craft table"
+    }
+  ]
+}

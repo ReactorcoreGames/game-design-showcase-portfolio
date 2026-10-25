@@ -1,0 +1,37 @@
+{
+  "slug": "epic-toy-cool-combat",
+  "preset": "02 Photo - R - Macro Closeup",
+  "style": "Toy photography at tabletop level, warm evening lamp light in a cozy home. Palette of toy brick red, sunny yellow and cream against dark warm wood and a deep red rug. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Low wide shot at floor level across a deep red living room rug: two small toy armies face off from either side. On the left, blocky plastic toy soldiers built from construction bricks and a chunky red brick-built toy tank; on the right, a boxy robot crafted from cardboard and bottle caps, a plastic toy dinosaur and a small toy walker machine. A bright yellow retractable tape measure is stretched across the rug between the two armies. A sofa and a warm lamp glow softly out of focus behind. The lower left of the picture is plain rug."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Close view across a wooden kitchen table during a toy battle: a human hand stretches a bright yellow tape measure from a small blocky plastic toy soldier built from construction bricks, holding a toy blaster, to a chunky boxy toy walker machine a short distance away. A single white six-sided die lies on the table between them. Stacked books stand behind as cliffs, other small toys out of focus around them."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Frozen-motion close shot on a wooden tabletop: a chunky boxy toy walker robot built from red and yellow construction bricks rocks backwards as small rectangular armor plates and a little toy cannon fly off it through the air, scattering in a spray of small plastic pieces. A few loose bricks already lie on the table in front of it. Warm lamp light, dark room behind."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall view looking down at a wooden kitchen table at night set up as a toy battlefield, stacks of books standing as cliffs. In the middle distance, a chunky red brick-built toy tank with a long cannon and a small cardboard fortress with a flag. In the foreground, a bright yellow retractable tape measure lies half unrolled beside a single white six-sided die. Small toy vehicles scattered between the books. Warm lamp light from above, dark kitchen behind."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide high view of a cozy living room turned into a toy battlefield at dusk: a deep red rug covered with two toy armies of blocky brick-built soldiers, toy tanks, toy dinosaurs and cardboard robots, spread out between sofa cushions laid on the floor as hills and stacks of books as towers. A yellow tape measure lies unrolled across the rug. A warm floor lamp lights the scene, a window with a purple evening sky behind."
+    }
+  ]
+}

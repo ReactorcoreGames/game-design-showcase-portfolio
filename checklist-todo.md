@@ -140,7 +140,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Auto chess, now Auto Art Chess (its own small page)
 - [x] Bazooka Bomber, now AAL Bazooka Bomber
 - [x] UNO-inspired family, now three pages: Bonfire, Ultimate Card and Power Pile
-- [ ] ETCC family (about 3 pages: v1 casual, v2 full, KMF)
+- [x] ETCC family, now one page: Epic Toy Cool Combat (v2 is v1's unfinished rewrite; KMF is a variant on it)
 - [ ] Vigilant pursuit racing
 - [ ] Kenney Jam anthology page
 - [ ] Human Apex

@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "epic-toy-cool-combat.html", prefix: "epic-toy-cool-combat",
+    title: "Epic Toy Cool Combat", subtitle: "Tape Measure Tactics",
+    icon: "measure-tape-delapouite", tint: "red",
+    blurb: "A tabletop tactics game played on the floor with your own toys, a tape measure and one die: the model is the stat sheet, the parts you knock off are its health, and every battle goes into a war diary.",
+    genres: ["strategy", "physics"], tags: ["tabletop", "toys", "turn-based tactics", "dice"],
+    status: "concept", added: "2026-10-25"
+  },
+  {
     page: "bonfire.html", prefix: "bonfire",
     title: "Bonfire", subtitle: "Cozy Card Battles",
     icon: "campfire-lorc", tint: "orange",
