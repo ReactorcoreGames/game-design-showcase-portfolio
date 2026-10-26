@@ -145,7 +145,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [ ] Kenney Jam anthology page
 - [x] Human Apex
 - [ ] Motherlode × Tasty Planet (pick the best variants)
-- [ ] Pinball mix
+- [x] Pinball mix, now Core Kicker: Reactor Meltdown Pinball
 - [-] Party Hard–style (its own page, or part of the Kenney anthology (Author note: its own page.)) (Skip, needs some manual preps by me.)
 - [-] Planet Warfare (Skip until further notice - I need to prepare for this)
 - [-] TopVerse (Skip until further notice - I need to prepare for this)

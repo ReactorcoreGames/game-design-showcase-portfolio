@@ -1,0 +1,23 @@
+{
+  "slug": "core-kicker-mini",
+  "out": "site/projects/mini/core-kicker",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - P - Long Exposure",
+  "lead": "Long exposure photograph, glowing light trails in a dark sci-fi machine room, magenta and acid yellow. ",
+  "images": [
+    {"n": 1, "name": "armada", "ratio": "3:2", "prompt": "A fleet of huge dark warships moving across a starry sky"},
+    {"n": 2, "name": "drone", "ratio": "3:2", "prompt": "A small angular robot clinging to the hull of a giant spaceship"},
+    {"n": 3, "name": "core", "ratio": "3:2", "prompt": "A glowing reactor core sphere in the middle of a dark machine hall"},
+    {"n": 4, "name": "rally", "ratio": "3:2", "prompt": "A glowing ball bouncing between round metal bumpers in the dark"},
+    {"n": 5, "name": "ship", "ratio": "3:2", "prompt": "A dark starship corridor lit by flashing warning lights"},
+    {"n": 6, "name": "wrecks", "ratio": "3:2", "prompt": "Broken spaceship wrecks drifting above a planet"},
+    {"n": 7, "name": "machine", "ratio": "3:2", "prompt": "A pinball machine glowing in a dark room"},
+    {"n": 8, "name": "combo", "ratio": "3:2", "prompt": "Zigzag light trails of a fast ball bouncing between walls"},
+    {"n": 9, "name": "bricks", "ratio": "3:2", "prompt": "Glowing bricks shattering into sparks"},
+    {"n": 10, "name": "meltdown", "ratio": "3:2", "prompt": "A huge burst of white light tearing a dark spaceship apart"}
+  ]
+}

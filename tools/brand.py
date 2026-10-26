@@ -51,7 +51,7 @@ FONTS = [
     ("TurretRoad-Bold.ttf", "turret-road-bold.woff2", None, None),          # SIL OFL, AALSuperweapon, thermonuclear-berserker, aal-exterminator
     ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice, god-tier-tantrum
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
-    ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer, power-pile
+    ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer, power-pile, core-kicker
     ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace, smash-droids
     ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron, human-apex
     ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron, bunkership, roomspace
@@ -67,7 +67,7 @@ FONTS = [
     ("OperationNapalm-Italic.ttf", "operation-napalm-italic.woff2", None, None),  # CC0, Mafia_Takedown, hellsweep-infinite
     ("TurretRoad-Medium.ttf", "turret-road-medium.woff2", None, None),      # SIL OFL, Mafia_Takedown
     ("Exo2.0-BoldItalic.otf", "exo2-bold-italic.woff2", None, None),        # SIL OFL, Megalodon
-    ("MatrixType-Bold.ttf", "matrixtype-bold.woff2", None, None),           # CC0, Megalodon
+    ("MatrixType-Bold.ttf", "matrixtype-bold.woff2", None, None),           # CC0, Megalodon, core-kicker
     ("Skateblade-RegularItalic.ttf", "skateblade-italic.woff2", None, None),  # SIL OFL, Mosh_Pit_Mayhem (with Anklepants), vigilant-pursuit
     ("Zeroes Two.otf", "zeroes-two.woff2", None, None),                     # CC0, MutantLoveQuest, unhinged_lander_heist_scifi
     ("ExpletusSans-Medium.ttf", "expletus-sans-medium.woff2", None, None),  # SIL OFL, MutantLoveQuest, bonfire

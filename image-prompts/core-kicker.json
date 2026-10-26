@@ -1,0 +1,37 @@
+{
+  "slug": "core-kicker",
+  "preset": "08 Games - Warning Forever (Shmup/2D)",
+  "style": "Palette of hot plasma magenta and acid yellow with white-hot highlights, on deep violet-black. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide landscape top-down view filling the entire frame from edge to edge: a sprawling neon reactor chamber inside an enemy starship, laid out like a wide pinball table. A huge pulsing reactor core sphere on the right side, ringed by round bumpers, curved rails and rows of glowing bricks spread across the whole width. At the bottom middle, a small angular robot launcher. A single bright plasma ball streaks across the chamber on a long glowing curved trail. The lower left corner is darker floor plating."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Close top-down view inside a neon reactor chamber: a bright glowing plasma ball smashes through a row of glowing bricks, fragments scattering outward, as round bumpers around it flash with light on impact. Beyond them, a ring of armored reactor components around a pulsing core, cracks of light spreading across it."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide landscape top-down view of the lower half of a neon reactor chamber laid out like a pinball table: the floor slopes down from both sides in a V shape toward a small angular robot machine at the bottom center, which has just flicked a bright glowing plasma ball upward with a short paddle arm. The ball flies up on a long glowing trail toward round bumpers above. Clean geometric shapes, clearly readable."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall vertical view of a huge angular armored warship in dark space, splitting open from within as a blinding reactor explosion bursts out of its middle, glowing debris and armor plates flying outward. A tiny angular robot device is silhouetted against the light near the center. Stars behind."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide view of space above a small blue colony planet: a vast armada of angular dark warships approaches in formation from one side, and a swarm of tiny glowing robot devices streaks out from the planet toward them like sparks. Wrecks of broken warships drift in the foreground, glowing at their torn edges."
+    }
+  ]
+}

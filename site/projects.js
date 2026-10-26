@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "core-kicker.html", prefix: "core-kicker",
+    title: "Core Kicker", subtitle: "Reactor Meltdown Pinball",
+    icon: "pinball-flipper-delapouite", tint: "magenta",
+    blurb: "Pinball without the death pit: a sabotage drone plugged into an enemy warship's reactor kicks plasma balls through bumpers and bricks, whacking them onto new lines in slow motion, until the core melts down.",
+    genres: ["arcade", "physics"], tags: ["pinball", "breakout", "combo", "slow motion"],
+    status: "concept", added: "2026-10-26"
+  },
+  {
     page: "human-apex.html", prefix: "human-apex",
     title: "Human Apex", subtitle: "Overreacting Justice Against Animal Kingdom",
     icon: "wolf-head-lorc", tint: "green",

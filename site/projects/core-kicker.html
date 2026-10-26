@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Kicker: Reactor Meltdown Pinball</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: pinball without the death pit. A sabotage drone plugged into an enemy warship's reactor kicks a plasma ball around the chamber, with breakout bricks and Nanaca Crash-style slow-motion whacks, until the core melts down.">
+    <meta name="keywords" content="game design concept, pinball, breakout, Nanaca Crash, arcade, physics, combo, slow motion, reactor meltdown, space war, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/core-kicker.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Core Kicker: Reactor Meltdown Pinball">
+    <meta property="og:description" content="A game design concept: pinball with no death pit, played inside an enemy warship's reactor until it melts down. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/core-kicker.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/core-kicker_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a reactor core bursting with magenta light between rows of neon bricks">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Core Kicker: Reactor Meltdown Pinball">
+    <meta name="twitter:description" content="A game design concept: pinball with no death pit, played inside an enemy warship's reactor until it melts down.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/core-kicker_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Core Kicker: Reactor Meltdown Pinball",
+        "description": "A game design concept, not a released game: a pinball and breakout arcade game with no death pit, where a sabotage drone plugged into an enemy warship's reactor kicks an endless supply of plasma balls around the chamber, building combos and steering in slow motion, until the core melts down.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Arcade", "Pinball", "Physics"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/core-kicker.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/core-kicker_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#120a16">
+
+    <link rel="preload" href="../fonts/audiowide.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Core Kicker: hot plasma magenta and acid yellow on a violet-black reactor chamber, with
+           white-hot highlights. Audiowide for the title and headings, MatrixType Bold (a dot-matrix
+           face, like a pinball machine's score display) for the subtitle and kickers. */
+        @font-face { font-family: "Audiowide"; src: url("../fonts/audiowide.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "MatrixType Bold"; src: url("../fonts/matrixtype-bold.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #120a16;
+            --flow-2: #3a1046;
+            --grid-minor: rgba(255, 160, 230, 0.045);
+            --grid-major: rgba(255, 160, 230, 0.10);
+            --p-ground: rgba(18, 10, 22, 0.95);
+            --p-panel: #1f1224;
+            --p-1: #ff44ac;
+            --p-2: #e6f03c;
+            --p-3: #fff2fa;
+            --p-text: #eadde8;
+            --p-dim: #b39fb4;
+            --p-line: rgba(255, 160, 230, 0.16);
+            --font-title: "Audiowide", "Segoe UI", sans-serif;
+            --font-sub: "MatrixType Bold", "Segoe UI", sans-serif;
+            --shade: #0b060d;
+        }
+
+        /* Title effect, "bumper hit": the letters sit in a low magenta glow, and every few seconds
+           the ball strikes: a white-hot flash, a second smaller one as it bounces, then the glow
+           settles back. Dark layered shadows keep it legible throughout. */
+        .p-name {
+            letter-spacing: 0.02em;
+            animation: bumper 3.6s ease-out infinite;
+        }
+        @keyframes bumper {
+            0%, 78%, 100% { color: var(--p-3); text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(255, 68, 172, 0.35); }
+            81% { color: #ffffff; text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 10px rgba(255, 68, 172, 1), 0 0 30px rgba(255, 68, 172, 0.85), 0 0 4px rgba(230, 240, 60, 0.9); }
+            86% { color: var(--p-3); text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(255, 68, 172, 0.5); }
+            89% { color: #ffffff; text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), 0 0 8px rgba(255, 68, 172, 0.9), 0 0 20px rgba(255, 68, 172, 0.6); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        /* The underline is a row of score-display dots lighting up. */
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.45rem; height: 4px;
+            background: radial-gradient(circle, var(--p-2) 0 1.6px, transparent 2px) 0 50% / 8px 4px repeat-x;
+            animation: dots 3.6s ease-out infinite;
+        }
+        @keyframes dots {
+            0%, 78%, 100% { opacity: 0.6; filter: none; }
+            81%, 89% { opacity: 1; filter: drop-shadow(0 0 4px rgba(230, 240, 60, 0.9)); }
+        }
+        .section-mark::after { animation: h2-line 3.6s ease-out infinite; }
+        @keyframes h2-line { 0%, 78%, 100% { box-shadow: none; } 81%, 89% { box-shadow: 0 0 12px rgba(255, 68, 172, 0.8); } }
+        h2, h3 { letter-spacing: 0.01em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.86rem; letter-spacing: 0.12em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .cores td:nth-of-type(1) { width: 30%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/core-kicker_1_title.jpg" alt="A wide neon reactor chamber seen from above, laid out like a pinball table: a swirling magenta core on the right, rows of bricks along the top, a small robot launcher at the bottom and a plasma ball streaking toward the core." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Core Kicker</span><span class="p-sub">Reactor Meltdown Pinball</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/pinball-flipper-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/reactor-sbed.png)"></span>Game overview</h2>
+            <p class="p-lead">Core Kicker is pinball without the death pit. A sabotage drone has cut its way into an enemy warship and plugged itself into the reactor, and it kicks a ball of plasma around the reactor chamber, smashing components until the core melts down and takes the ship with it.</p>
+            <p>The ball always comes back to you. There are no side drains and no balls to lose: you time each kick to keep the combo going, nudge the ball in flight, and slow time down to whack it onto a better line, the way Nanaca Crash does. Good play makes the ball faster, harder and tougher. Bad play only means the ball shatters sooner, and the drone loads another.</p>
+            <p>It mixes the satisfying part of pinball (watching the ball fly, bounce and smash things) with Breakout's bricks and Nanaca Crash's slow-motion course corrections, set in a far-future war.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>People who love watching a pinball fly, bounce and light up a table, but hate the moment it rolls down the drain between the flippers. Fans of Breakout, Peggle and physics toys, and anyone who wants <strong>ten minutes of flow</strong> rather than a test.</p>
+                    <p>The controls are about as simple as games get: one kick button, a left-right tilt, and slow motion with a pointer for the occasional whack.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Enjoyment and movement:</strong> the pleasure of watching a ball do most of the work, flying, ricocheting and smashing.</p>
+                    <p><strong>Mastery:</strong> timing kicks, reading angles and keeping a combo alive.</p>
+                    <p><strong>Power:</strong> one tiny drone bringing down a warship from the inside, with a finale as big as the run that caused it.</p>
+                    <p>It avoids draining <strong>rest</strong> and <strong>safety</strong>: there's no drain to fear, no lives to count and no game over. A bad run is only a smaller explosion.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Pinball is built around losing: a pit at the bottom, a limited number of balls, and a game that ends when you run out. Most of a pinball session is anxiety about the drain.</p>
+                    <p>Core Kicker <strong>removes the pit</strong>. The bottom of every chamber funnels back to your kicker, balls are unlimited, and every board ends in a meltdown. What's left is the part people actually love: the ball in flight, the chain of hits, the flash of the bumpers.</p>
+                    <p>Skill still matters. It decides how fast the ball gets, how long it survives, and how big the ship goes up.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/core-kicker_5_story.jpg" alt="Above a small blue colony planet, an armada of dark angular warships approaches in formation as a swarm of tiny glowing drones streaks out to meet it, broken wrecks drifting in the foreground." width="1280" height="720" loading="lazy">
+            <figcaption>"The colonies can't match the armada ship for ship. So they send drones that break in and turn each ship's reactor against it."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/iron-hulled-warship-cathelineau.png)"></span>Lore and story</h2>
+            <h3>The Hoard</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/01-armada.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Far in the future, an armada called the Hoard moves from star system to star system, strip-mining every world it finds and leaving rubble behind. It's huge, heavily armored, and built on greed: every warship is also a factory, and every factory wants more.</p>
+            <p>Its latest target is a small system of colony worlds with no navy worth the name. In a straight fight, the colonies would last an afternoon.</p>
+
+            <h3>The kickers</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/02-drone.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>So they don't fight straight. Their answer is a sabotage drone, small, cheap and built by the hundred. It rides a stealth dart onto a warship's hull, cuts its way to the reactor, and plugs into the reactor's own control interface.</p>
+            <p>From there it takes over the containment machinery that's meant to keep the core stable, and uses it the other way: it forms balls of plasma in magnetic fields and kicks them around the reactor chamber, smashing coolant pumps, containment rings and control rods until the core gives out. The drone is unmanned and goes up with the ship. The colonies' crews call the drones kickers.</p>
+
+            <h3>The cores</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/03-core.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The Hoard builds its ships around several kinds of reactor drive, and each kind has a chamber of its own, with its own layout, its own components and its own strange behavior once a kicker starts tearing it apart. Learning the cores is learning the game.</p>
+
+            <h3>The job right now</h3>
+            <p>A battle group has entered the system. Choose a ship, send the drone in, and kick until the lights go out.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control one thing: the drone's kicker at the bottom of the chamber. It launches the first ball and kicks every ball that comes back down. The ball does the rest of the work.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>The kicker</h3>
+                    <dl>
+                        <div><dt>Space</dt><dd>Kick. A well-timed kick is stronger and keeps the combo going.</dd></div>
+                        <div><dt>A / D</dt><dd>Tilt the kicker to aim the kick left or right</dd></div>
+                        <div><dt>W</dt><dd>Nudge the ball in flight (a small, slow magnetic tug)</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Slow motion and slots</h3>
+                    <dl>
+                        <div><dt>Shift</dt><dd>Slow motion while the meter lasts</dd></div>
+                        <div><dt>Mouse</dt><dd>Aim a whack, or a launcher slot's shot</dd></div>
+                        <div><dt>Left click</dt><dd>Whack the ball toward the pointer, or fire the slot</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The HUD shows the ball's <strong>field strength</strong> (its health), its speed and the current combo, the slow-motion meter, and the core's state: which components are still standing and how close it is to meltdown.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/core-kicker_2_vignette.jpg" alt="A reactor core bursts with magenta light as it is struck, rows of neon bricks on either side and armored components around it, fragments flying outward." width="1280" height="720" loading="lazy">
+            <figcaption>"Every valid hit makes the ball faster, harder and tougher. Missing lets its magnetic field fade."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/ball-glow-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One ball, one rally</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/04-rally.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The kicker launches a ball up into the chamber. It flies, ricochets off bumpers, cracks bricks, slams into reactor components and eventually falls back toward you, and you kick it again. A good rally strings hit after hit together, and the ball gets faster and more destructive with each one.</p>
+                        <p>Every ball eventually shatters, when its magnetic field fades. The drone forms a new one, and the combo starts again from zero, but every component the last ball broke stays broken.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/atom-core-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A ship</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/05-ship.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each warship is one board: its reactor chamber. You bring the core down either by <strong>smashing its critical components</strong> or by <strong>pounding the core itself</strong> until it overloads, whichever the board makes easier. Bonus objectives along the way open gates, remove armor plates and hand out boosts.</p>
+                        <p>Then the meltdown. The camera pulls out to watch the warship blow apart, and the size of the explosion follows the score of the run. You can't fail a ship; you can only bring it down more or less spectacularly.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/moon-orbit-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The defense of the colonies</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/06-wrecks.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The war map shows the home system and the Hoard battle group currently inside it: a handful of ships with different cores. You pick which ship to send a kicker into next, in any order, with the group's flagship and its huge reactor usually saved for last.</p>
+                        <p>Every ship you bring down stays in the system as a <strong>drifting wreck</strong>, and the wreck fields grow battle group after battle group, a sky full of the war you've been fighting. The Hoard is endless, so a new battle group arrives whenever you're ready for one. The wrecks are a record, not a score.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sands-of-time-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>A ship over coffee</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/07-machine.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A ship takes roughly five to ten minutes, a whole battle group an evening. Start the game, pick a ship on the war map, and you're kicking within seconds.</p>
+                        <p>Pausing is always allowed, and stopping between ships costs nothing: the battle group waits with the same ships still in the sky.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/orbital-rays-lorc.png)"></span>Game modes</h2>
+            <p>There's one mode, <strong>the war</strong>, in nested pieces you can stop between:</p>
+            <div class="p-nest" aria-label="The war, outermost first">
+                <div><span>The war</span><small>Endless: battle group after battle group, as long as you want to play.</small>
+                    <div><span>A battle group</span><small>A handful of ships with different cores, ending with its flagship: an evening.</small>
+                        <div><span>A ship</span><small>One reactor chamber, ending in a meltdown: five to ten minutes.</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/pinball-flipper-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bouncing-spring-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>No death pit</h3>
+                        <p>A Core Kicker board works like a pinball table, with gravity pulling everything down, but two things are gone. There's <strong>no plunger lane</strong> dropping the ball in from the top, and there's <strong>no drain</strong>: no gap between flippers and no side lanes leading to one. The bottom of every chamber is a slanted floor that funnels the ball back to the kicker.</p>
+                        <p>Instead of two flippers there's one device, the drone's <strong>launcher and rebounder</strong>, which starts each ball and kicks it back up every time it comes down. Time the kick as the ball arrives and it goes up harder and keeps the combo; mistime it and it still goes up, just weaker. Tilt the kicker to choose a side.</p>
+                        <p>Balls are unlimited. The only way a ball ends is by shattering when its field fails, and then the drone simply makes another.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/core-kicker_3_feature.jpg" alt="The bottom of a neon reactor chamber: two slanted walls funnel the floor in a V down to a small robot machine, which fires a glowing plasma ball straight up toward the bumpers." width="1280" height="720" loading="lazy">
+                            <figcaption>"There's no drain. The floor of every chamber slopes back to the kicker, and the drone always has another ball."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/magnet-blast-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The ball is the score</p>
+                        <h3>Combos build the ball</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/08-combo.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each ball is plasma held in a <strong>magnetic field</strong>, and the field is its health. Hits on valid targets (components, bumpers, bricks, the core) feed the combo, and the combo feeds the ball: it gets <strong>faster</strong>, hits <strong>harder</strong> and becomes <strong>tougher</strong>, so it takes less damage from its own impacts.</p>
+                        <p>Missing does the opposite. Long flights that hit nothing and bounces off bare armor let the field fade, and a ball that's fading breaks sooner. A great rally is a ball that keeps getting stronger; a poor one shatters early and leaves less damage behind.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sands-of-time-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">As in Nanaca Crash</p>
+                        <h3>Slow motion and course-correcting whacks</h3>
+                        <p>Pinball usually leaves you helpless once the ball leaves the flipper. Here you get a little say. A gentle <strong>nudge</strong> pulls the ball slightly while it flies, and <strong>slow motion</strong> drops the game to a crawl while its meter lasts.</p>
+                        <p>In slow motion you can <strong>whack</strong> the ball toward the pointer: a forward boost to keep momentum, or a push in any direction to put it back on a line toward the target you need. The meter refills as the combo grows, so a good rally keeps paying for its own rescues.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/atom-core-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Boards from templates</p>
+                        <h3>One chamber per core, never the same twice</h3>
+                        <p>Each kind of reactor drive has its own hand-made chamber template: the shape of the board, where the core sits, which components guard it. On top of the template, every ship rolls its own extras: added bumpers, semi-randomly placed bricks, and events caused by the core itself as it starts to fail.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table cores">
+                                <thead><tr><th scope="col">Core</th><th scope="col">How its chamber plays</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Fusion</th><td data-label="Plays">The classic table: steady gravity, a ring of containment magnets around a central core, flares that briefly light up whole rows of bricks.</td></tr>
+                                    <tr><th scope="row">Plasma</th><td data-label="Plays">Hot and fast: vents that blast the ball sideways, and walls that soften and give way as the core overheats.</td></tr>
+                                    <tr><th scope="row">Ion</th><td data-label="Plays">Magnetic storms sweep the chamber and bend the ball's path, so slow-motion whacks matter more.</td></tr>
+                                    <tr><th scope="row">Singularity</th><td data-label="Plays">No gravity at all: the ball drifts, loses speed on every wall and shatters if it gets too slow, and speeds up on every valid hit.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/brick-wall-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Pinball meets Breakout</p>
+                        <h3>Bricks, gates and launcher slots</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/09-bricks.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Between the bumpers are <strong>bricks</strong>, as in Breakout. Some break after a number of hits, some only to a hit that's hard enough, and some need both, so a fast, strong ball opens paths a weak one can't.</p>
+                        <p><strong>Gates and armor plates</strong> block the best routes to the core until a bonus objective opens or removes them. <strong>Launcher slots</strong> catch the ball when it rolls in and fire it back out at great speed, in a direction you aim, which is the board's way of handing you a precise shot at something that matters.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/nuclear-bomb-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Feedback, not a leaderboard</p>
+                        <h3>The meltdown</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/core-kicker/10-meltdown.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every board ends the same way: the core goes critical and the ship tears itself apart. What changes is <strong>how hard</strong>. The run's score, built from the damage done and the combos chained, sets the size of the final explosion, from a ship breaking in half to a blast that lights up the whole system.</p>
+                        <p>The score isn't ranked against anyone. Its only job is to show you how well that run went, in the most satisfying way the game has.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Trivia</h2>
+            <p>The idea came from a clip of pinball on Reddit and a simple question: what if pinball had no death pit? The design notes then describe the goal as scoring enough hits "upon the reactorcore" to cause a total meltdown, which is a fitting thing for a game by Reactorcore to be about.</p>
+            <p>The notes float a second mix from the same core: pinball, minigolf and arena battle, in the spirit of Beyblade and Reactorcore's own ragdoll and physics designs. They suggest building one game with the core mechanics first, then spinning each mix off as its own game.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/core-kicker_4_boxart.jpg" alt="Box art: a huge angular warship in dark space splits open as a blinding reactor explosion bursts from its middle, debris flying outward, a tiny drone silhouetted in the light." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Drone deployed · Interface linked</p>
+                <h2 id="sendoff">Core Kicker: Reactor Meltdown Pinball</h2>
+                <p>Connection established. Containment controls: yours. Reactor: hostile, armored, very large. Supply of plasma: unlimited.</p>
+                <p>Kick the ball. Keep the combo alive. Crack the bricks, break the rings, find the angle to the core, and make sure that when this ship goes, the whole system sees it.</p>
+                <p><strong>No drain. No lives. One very unstable reactor.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by pinball, Breakout and Nanaca Crash</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: MatrixType Bold (CC0), Audiowide, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
