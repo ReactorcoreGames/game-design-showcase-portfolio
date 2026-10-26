@@ -1,0 +1,37 @@
+{
+  "slug": "human-apex",
+  "preset": "08 Games - Overwatch (Hero Shooter/3D)",
+  "style": "Lighthearted, slightly absurd mood. Palette of olive drab military green and khaki with bright hazard yellow accents and warm golden light. No text, letters, numbers or logos anywhere, no blood.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Low wide shot at the edge of a pine forest at golden hour: a line of heavily armored soldiers in full olive tactical gear and helmets with glowing red visor lenses marches toward the trees beside a huge battle tank, its long cannon pointed at the forest. In the forest shadows, a few grey wolves peer out nervously from behind the trunks. A black quadcopter hovers above. The lower left of the picture is open grass."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Third-person view over the shoulder of a heavily armored soldier in full olive tactical gear and helmet with a glowing red visor lens, rifle raised, looking across a sunny forest clearing where three grey wolves scatter and run off in different directions, kicking up leaves. A battle tank rolls through the trees behind, flattening bushes. A tall barbed wire fence runs along the far edge of the clearing."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide shot of a farm field at midday: a single small red fox sits alone in the middle of the field, looking around in alarm. Surrounding it on every side, at a distance, stands an enormous ring of military hardware: battle tanks, artillery guns, missile trucks, hovering helicopters and dozens of armored soldiers in full olive tactical gear, all pointed at the fox. A barbed wire fence encircles everything. Red barn and chicken coop in the background."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall low-angle view at the edge of a pine forest: a huge battle tank crashes out through the trees in a burst of leaves and splinters, armored soldiers in full olive tactical gear and helmets with glowing red visor lenses striding beside it. In the foreground, a grey wolf runs toward the camera with its ears back. Two military helicopters in the golden sky above."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide view of a quiet countryside town at dusk beside a forest: a long military convoy of tanks, trucks and towed artillery rolls down the main street past cozy houses, townspeople waving and cheering from their porches. At the forest edge, small figures of soldiers unroll a long barbed wire fence. Helicopters fly overhead toward the woods."
+    }
+  ]
+}

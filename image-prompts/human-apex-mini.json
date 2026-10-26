@@ -1,0 +1,23 @@
+{
+  "slug": "human-apex-mini",
+  "out": "site/projects/mini/human-apex",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - B - Candid Amateur",
+  "lead": "Candid snapshot photograph, countryside, olive military green and hazard yellow. ",
+  "images": [
+    {"n": 1, "name": "ancestors", "ratio": "3:2", "prompt": "Prehistoric people huddled around a campfire at night while wolves watch from the dark"},
+    {"n": 2, "name": "headline", "ratio": "3:2", "prompt": "A man in a suit angrily crumpling a newspaper in his hands"},
+    {"n": 3, "name": "decree", "ratio": "3:2", "prompt": "A wooden gavel striking a desk in a government chamber"},
+    {"n": 4, "name": "operation", "ratio": "3:2", "prompt": "Soldiers in full gear walking into a pine forest"},
+    {"n": 5, "name": "briefing", "ratio": "3:2", "prompt": "A military briefing room with a chalk drawing of a wolf on the blackboard"},
+    {"n": 6, "name": "town", "ratio": "3:2", "prompt": "Townspeople cheering a passing military convoy on a country road"},
+    {"n": 7, "name": "dusk", "ratio": "3:2", "prompt": "Soldiers resting by a campfire at the edge of a forest at dusk"},
+    {"n": 8, "name": "fence", "ratio": "3:2", "prompt": "Soldiers unrolling barbed wire along the edge of a forest"},
+    {"n": 9, "name": "thermal", "ratio": "3:2", "prompt": "Thermal camera view of animals moving across rocky hills"},
+    {"n": 10, "name": "artillery", "ratio": "3:2", "prompt": "An artillery gun firing in a grassy field, kicking up dust"}
+  ]
+}

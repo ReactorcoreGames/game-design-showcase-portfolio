@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "human-apex.html", prefix: "human-apex",
+    title: "Human Apex", subtitle: "Overreacting Justice Against Animal Kingdom",
+    icon: "wolf-head-lorc", tint: "green",
+    blurb: "A fox ate the chickens, so the government sent two tank platoons and an artillery battery. A singleplayer military sandbox comedy: command the whole army against misbehaving animals inside a fence, with no way to lose.",
+    genres: ["action", "sandbox"], tags: ["military", "comedy", "stress relief", "squad commands"],
+    status: "concept", added: "2026-10-26"
+  },
+  {
     page: "vigilant-pursuit.html", prefix: "vigilant-pursuit",
     title: "Vigilant Pursuit", subtitle: "Fugitive Combat Racing",
     icon: "wanted-reward-delapouite", tint: "red",

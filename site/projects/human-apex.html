@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Apex: Overreacting Justice Against Animal Kingdom</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a singleplayer military sandbox comedy where a fox that ate the chickens gets two tank platoons and an artillery battery. Command soldiers, tanks and helicopters against misbehaving animals in a fenced-off zone, with no way to lose.">
+    <meta name="keywords" content="game design concept, military sandbox, comedy shooter, stress relief, squad commands, overpowered, singleplayer, Battlefield 2 inspired, Mass Effect 2 inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/human-apex.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Human Apex: Overreacting Justice Against Animal Kingdom">
+    <meta property="og:description" content="A game design concept: a fox ate the chickens, and the government sent the army. A military sandbox comedy with no way to lose. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/human-apex.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/human-apex_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: an armored soldier watches wolves scatter across a forest clearing as a tank rolls through the trees">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Human Apex: Overreacting Justice Against Animal Kingdom">
+    <meta name="twitter:description" content="A game design concept: a fox ate the chickens, and the government sent the army.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/human-apex_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Human Apex: Overreacting Justice Against Animal Kingdom",
+        "description": "A game design concept, not a released game: a singleplayer military sandbox comedy where the government answers every animal misdeed with absurd military overkill, and the player commands soldiers, tanks, helicopters and artillery against misbehaving animals in a fenced-off zone, with no way to lose.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Shooter", "Sandbox", "Comedy"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/human-apex.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/human-apex_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#13150d">
+
+    <link rel="preload" href="../fonts/operation-napalm.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Human Apex: olive drab and khaki with hazard yellow for anything that's about to be
+           overdone, and cream for highlights. Operation Napalm (a stencil face) for the title and
+           headings, Exo 2 Black for the subtitle and kickers. */
+        @font-face { font-family: "Operation Napalm"; src: url("../fonts/operation-napalm.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Exo 2 Black"; src: url("../fonts/exo2-black.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #13150d;
+            --flow-2: #2d3317;
+            --grid-minor: rgba(220, 230, 160, 0.045);
+            --grid-major: rgba(220, 230, 160, 0.10);
+            --p-ground: rgba(19, 21, 13, 0.95);
+            --p-panel: #1e2214;
+            --p-1: #a9c94b;
+            --p-2: #ffcc33;
+            --p-3: #f2ecd6;
+            --p-text: #e2e3d2;
+            --p-dim: #aeb092;
+            --p-line: rgba(220, 230, 160, 0.16);
+            --font-title: "Operation Napalm", "Segoe UI", sans-serif;
+            --font-sub: "Exo 2 Black", "Segoe UI", sans-serif;
+            --shade: #0b0c07;
+        }
+
+        /* Title effect, "red eyes": the stencil letters sit on a hard olive drop shadow, and every
+           few seconds they flash with the Prime Minister's glowing red stare, a quick double
+           pulse, then settle. Dark layered shadows keep it legible throughout. */
+        .p-name {
+            letter-spacing: 0.04em;
+            animation: red-eyes 5s ease-in-out infinite;
+        }
+        @keyframes red-eyes {
+            0%, 70%, 100% { color: var(--p-3); text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 4px 4px 0 #4a5a1c, 5px 5px 0 var(--shade); }
+            76% { color: #fff4ee; text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 4px 4px 0 #4a5a1c, 5px 5px 0 var(--shade), 0 0 18px rgba(255, 50, 40, 0.95), 0 0 36px rgba(255, 50, 40, 0.55); }
+            80% { color: var(--p-3); text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 4px 4px 0 #4a5a1c, 5px 5px 0 var(--shade), 0 0 8px rgba(255, 50, 40, 0.3); }
+            84% { color: #fff4ee; text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 4px 4px 0 #4a5a1c, 5px 5px 0 var(--shade), 0 0 18px rgba(255, 50, 40, 0.95), 0 0 36px rgba(255, 50, 40, 0.55); }
+        }
+        /* The subtitle is long (it's the design's own), so it runs smaller than the default. */
+        .p-sub {
+            font-size: clamp(0.9rem, 0.6rem + 1.3vw, 1.7rem);
+            text-transform: uppercase; color: var(--p-2);
+            text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade);
+        }
+        /* The underline is hazard tape. */
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.45rem; height: 5px;
+            background: repeating-linear-gradient(-45deg, var(--p-2) 0 8px, var(--shade) 8px 16px);
+            animation: tape 5s ease-in-out infinite;
+        }
+        @keyframes tape {
+            0%, 70%, 100% { box-shadow: 0 0 4px rgba(255, 204, 51, 0.25); }
+            76%, 84% { box-shadow: 0 0 14px rgba(255, 204, 51, 0.8), 0 0 26px rgba(255, 50, 40, 0.45); }
+        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 70%, 100% { box-shadow: none; } 76%, 84% { box-shadow: 0 0 12px rgba(255, 50, 40, 0.7); } }
+        h2, h3 { letter-spacing: 0.03em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.1em; }
+
+        .cases th[scope="row"] { white-space: normal; }
+        .cases td:nth-of-type(1) { width: 34%; }
+        .cases td:nth-of-type(2) { width: 22%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.8rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/human-apex_1_title.jpg" alt="A column of armored soldiers marches beside a battle tank along the edge of a pine forest at golden hour, a grey wolf peering nervously from behind a tree." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Human Apex</span><span class="p-sub">Overreacting Justice Against Animal Kingdom</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/wolf-head-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/newspaper-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">A fox ate every chicken on a farm. The government has responded with two tank platoons, an artillery battery, a drone squadron and you. Human Apex is a singleplayer military sandbox comedy about answering the animal kingdom's misdeeds with wildly disproportionate force.</p>
+            <p>Each operation starts with an incident in a newspaper and ends with a fenced-off forest, field or beach full of craters. In between, you command heavily armored soldiers, drive the tanks, fly the helicopters and call in the artillery, in whatever mix you like. The animals run, hide, bluff and fight back, and none of it ever really threatens you.</p>
+            <p>It's not a challenge game and doesn't pretend to be. It's a toy for feeling enormously powerful and laughing at how unfair the fight is, played like a singleplayer Battlefield 2 with Mass Effect 2's squad commands.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who unwind by blowing things up in a sandbox: an evening of Just Cause, the vehicles of Battlefield, the slapstick of Goat Simulator. They come home tired or angry and want to <strong>burn it off and laugh</strong>, not be tested.</p>
+                    <p>They're frustrated by shooters where the player is always outnumbered and one mistake means a reload.</p>
+                    <p>The controls are standard shooter controls plus a few command keys, and nothing needs precision or quick reflexes.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power and release:</strong> being the overwhelming force for once, and burning away anger at things nobody can control.</p>
+                    <p><strong>Silliness and play:</strong> the absurd mismatch between a fox and an artillery battery, played completely straight.</p>
+                    <p><strong>Safety, celebrated:</strong> humans spent almost all of their history as prey. This is the victory lap.</p>
+                    <p>It avoids draining <strong>rest</strong> and <strong>autonomy</strong>: you can't fail, every tool is open from the start, and a thermal drone means you never spend an hour hunting for the last wolf. The joke is the overreaction, so the animals are cartoon creatures that go down in puffs of fur and feathers, never anything grisly.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Military shooters usually sell power and deliver scarcity: limited ammunition, enemies who outnumber you, difficulty that rises until you fail and reload.</p>
+                    <p>Human Apex turns that inside out. <strong>You are the overwhelming side</strong>, the opponents can't kill you, and the whole arsenal is yours from the first operation.</p>
+                    <p>What's left is a sandbox with a shopping list: a fenced zone, a list of culprits, and every toy the military owns. How you clear the list is your call.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/human-apex_5_story.jpg" alt="A military convoy of tanks, trucks and towed artillery rolls through a quiet countryside town at dusk as residents wave from their porches, soldiers unrolling barbed wire at the forest edge and helicopters overhead." width="1280" height="720" loading="lazy">
+            <figcaption>"Every operation answers a letter from a town that's had enough, and the town turns out to watch the convoy roll in."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/banging-gavel-delapouite.png)"></span>Lore and story</h2>
+            <h3>A very long grudge</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/human-apex/01-ancestors.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>For almost all of human history, people were on the menu. Our ancestors huddled around fires while wolves circled in the dark, lost children to big cats, livestock to foxes and whole villages to fevers carried by insects. Territory, hunger or plain bad temper: the animal kingdom had the upper hand for a very long time.</p>
+            <p>It doesn't anymore. Fully equipped humans are now so absurdly outmatched against any animal that the fight is a joke, and the game is that joke told at full volume.</p>
+
+            <h3>The opening</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/human-apex/02-headline.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The game opens on a newspaper: a wolf wandered into the suburbs and attacked a boy walking home, having "identified him as valid prey". Two hands crumple the page. The camera turns to the reader, a man in a suit with a controlled, disgusted look on his face, and a caption arrow names him: the Prime Minister. His eyes begin to glow red.</p>
+            <p>A gavel comes down. In a barracks briefing room, a stern officer taps a chalk drawing of a wolf. A rifle is loaded with great ceremony. Rows of soldiers with glowing red eyes walk calmly past the camera, then into the woods. Behind them, a tank plows through the undergrowth, engineers string barbed wire along the treeline, a drone's thermal camera finds the pack, and an artillery piece raises its barrel and fires. Fade to black. Title.</p>
+
+            <h3>The directive</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/human-apex/03-decree.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>From that day on, the law is simple: <strong>any animal that harms a citizen answers to the armed forces</strong>. Every town in the country can write in, and every letter gets the full treatment, whatever the offense: a mauled hiker, a bitten triathlete, a goat that headbutted a man off a cliff, a deer that dropkicked a kid.</p>
+
+            <h3>The job right now</h3>
+            <p>Open the next case file, read what happened and who did it, and take the whole army there. The animals are waiting inside the fence. They have no idea what's coming.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You play in first or third person as any unit in the operation, and you can jump into any other at any moment: a soldier, a tank, a helicopter gunner, a drone operator or an artillery spotter. Every unit is strong enough to handle things alone, so commanding the rest is a convenience, never a requirement.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Move, or drive and fly</dd></div>
+                        <div><dt>Shift</dt><dd>Sprint, or boost</dd></div>
+                        <div><dt>Space</dt><dd>Jump, or climb</dd></div>
+                        <div><dt>E</dt><dd>Enter or leave a vehicle</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Fight</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim</dd></div>
+                        <div><dt>Left click</dt><dd>Fire</dd></div>
+                        <div><dt>Right click</dt><dd>Aim down the sights, or zoom</dd></div>
+                        <div><dt>1 – 4</dt><dd>Switch weapon or vehicle gun</dd></div>
+                        <div><dt>G</dt><dd>Throw a grenade</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Command</h3>
+                    <dl>
+                        <div><dt>Q</dt><dd>Order your squad to the pointer: move, attack or flush out, by context</dd></div>
+                        <div><dt>Z / X</dt><dd>Hold position, or follow me</dd></div>
+                        <div><dt>C</dt><dd>Support wheel: artillery, airstrike, drone sweep, smoke</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Take over</h3>
+                    <dl>
+                        <div><dt>Tab</dt><dd>Operation map (time stops): jump into any unit</dd></div>
+                        <div><dt>T</dt><dd>Thermal view of the culprits still at large</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The HUD carries the <strong>shopping list</strong>: each culprit species and how many are left. When the last one is dealt with, the operation can end, or you can stay and finish redecorating the area.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/human-apex_2_vignette.jpg" alt="Over the shoulder of an armored soldier with a raised rifle, three grey wolves scatter across a sunny forest clearing as a tank flattens bushes behind and a barbed wire fence runs along the far edge." width="1280" height="720" loading="lazy">
+            <figcaption>"The wolves can knock a soldier over or stun him for a moment. They can't do anything worse."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/battle-tank-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Inside the fence</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/human-apex/04-operation.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A fenced-off zone: a forest, a farm, a mountainside, a beach, a swamp. Somewhere in it are the culprits. You walk, drive or fly in with whatever you fancy, find them, and deal with them with as much or as little firepower as you like.</p>
+                        <p>The animals behave like animals. A wolf pack scatters and tries to flank, a bear charges, a snake hides in the grass, a goat climbs where tanks can't. They yelp and flee, bluff and fight back, and the best they can do is knock a soldier on his back.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A case file</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/human-apex/05-briefing.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Each operation is one case file, and every case file runs the same proud sequence:</p>
+                        <ol class="p-chain">
+                            <li><b>The incident</b>A headline in the local paper.</li>
+                            <li><b>The briefing</b>The culprits, the ground, the shopping list.</li>
+                            <li><b>The fence</b>Engineers seal the area; nothing gets out.</li>
+                            <li><b>The operation</b>You and the army go in.</li>
+                            <li><b>The report</b>The tally, and the town's front page.</li>
+                        </ol>
+                        <p>An operation ends when the shopping list is clear. The after-action report then sets what was deployed against what it was deployed at, in all seriousness: three tanks, forty soldiers, two helicopters and an artillery barrage, for one fox.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/village-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>A grateful nation</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/human-apex/06-town.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The game's home is the operations room: a map of the country with a pin for every town that has written in. You pick the next case file from there, in any order. New letters keep arriving, because every animal, every kind of ground and every kind of offense combine into new incidents, so the country never runs out of grievances.</p>
+                        <p>Each finished case puts the town's front page on the operations room wall, reporting your overreaction as a triumph, and turns its pin on the map from red to green. The wall is the record of the whole campaign, and it's the funniest thing in the game to read. It doesn't buy anything.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/coffee-mug-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One bad day, one operation</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/human-apex/07-dusk.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>An operation takes fifteen to thirty minutes, depending on the ground and how much you enjoy the scenery. Come home, open a case file, flatten a forest, read the headline, and go to bed lighter.</p>
+                        <p>The game saves inside the operation too, so you can stop whenever you like and come back to the same fence with the same culprits still hiding.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/fox-head-lorc.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>answering case files</strong>. What changes from one to the next is the culprit, the ground, and which part of the arsenal suddenly makes sense. A few from the opening batch:</p>
+            <div class="p-table-wrap">
+                <table class="p-table cases">
+                    <thead><tr><th scope="col">Culprit</th><th scope="col">The incident</th><th scope="col">The ground</th><th scope="col">The response</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">A wolf pack</th><td data-label="Incident">Attacked a boy in the suburbs</td><td data-label="Ground">Pine forest</td><td data-label="Response">Infantry, tanks and the artillery from the opening</td></tr>
+                        <tr><th scope="row">A bear</th><td data-label="Incident">Mauled a hiker</td><td data-label="Ground">Mountain valley</td><td data-label="Response">A mechanized battalion and a gunship</td></tr>
+                        <tr><th scope="row">A shark</th><td data-label="Incident">Bit a triathlete</td><td data-label="Ground">The bay</td><td data-label="Response">Patrol boats, divers and depth charges</td></tr>
+                        <tr><th scope="row">A snake</th><td data-label="Incident">Poisoned the village elder</td><td data-label="Ground">Jungle village</td><td data-label="Response">Flamethrower squads and a bulldozer</td></tr>
+                        <tr><th scope="row">A deer</th><td data-label="Incident">Dropkicked a kid</td><td data-label="Ground">Suburban parkland</td><td data-label="Response">Riot police in armored vans, then the army anyway</td></tr>
+                        <tr><th scope="row">A goat</th><td data-label="Incident">Headbutted a man off a cliff</td><td data-label="Ground">Sea cliffs</td><td data-label="Response">Mountain troops and helicopter rappelling</td></tr>
+                        <tr><th scope="row">A fox</th><td data-label="Incident">Ate every chicken on a farm</td><td data-label="Ground">Farmland</td><td data-label="Response">Everything</td></tr>
+                        <tr><th scope="row">A mosquito swarm</th><td data-label="Incident">Gave a village a fever</td><td data-label="Ground">Swamp</td><td data-label="Response">Crop-duster jets, flamethrowers and a fog of insecticide</td></tr>
+                        <tr><th scope="row">An owl</th><td data-label="Incident">Carried off a family's small dog</td><td data-label="Ground">Woods at night</td><td data-label="Response">Night vision, searchlights and anti-aircraft guns</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/wolf-head-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/great-war-tank-cathelineau.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Overkill on demand</h3>
+                        <p>The whole military is available for every case file from the first one: infantry in heavy armor with rifles, machine guns, grenade and rocket launchers and flamethrowers; tanks, armored cars and bulldozers; transport and attack helicopters; drones; artillery, mortars and airstrikes; boats and divers where the ground is wet.</p>
+                        <p>Nothing is bought, earned or upgraded. The only question is what you feel like using, and the honest answer is <strong>usually far too much</strong>. That's the joke, and the game commits to it: the briefing treats a fox like a hostile army, and the hardware arrives accordingly.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/human-apex_3_feature.jpg" alt="A single small red fox sits in the middle of a farm field, surrounded at a distance by a ring of tanks, artillery, helicopters and armored soldiers inside a barbed wire fence, a red barn behind." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every case file gets the whole arsenal, whatever the culprit did. This one is a fox."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/walkie-talkie-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Be anyone in the operation</p>
+                        <h3>Switch into anything, command the rest</h3>
+                        <p>Every soldier, vehicle and support unit in the operation is yours to play. Ride in as a rifleman, take over the tank when the bear appears, hop into the helicopter to chase the goat up the cliff, and finish from the artillery spotter's binoculars.</p>
+                        <p>Whoever you're playing can give orders to the squad around them, as in Mass Effect 2: move here, attack that, flush out that thicket, hold, follow. Everyone else carries on sensibly on their own. Each unit is <strong>powerful as a standalone</strong>, so teamwork is something you play with, not something the game demands.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/barbed-wire-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No tedious searching</p>
+                        <h3>The fence and the thermal drone</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/human-apex/08-fence.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Before you go in, combat engineers fence the whole zone with cheap barbed wire. It's the game's one natural limit: the culprits can't leave, and you can't wander off into an empty countryside.</p>
+                        <p>A drone's <strong>thermal camera</strong> shows where the remaining animals are hiding whenever you ask, so an operation never ends in a long search for the last snake. Finding them is quick; what you do when you get there is the fun.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/brodie-helmet-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Not a challenge game</p>
+                        <h3>Soldiers who can't lose</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/human-apex/09-thermal.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The soldiers are heavily armored enough to "eat a wolf for breakfast". An animal can <strong>knock one down, stun him or send him tumbling</strong>: a bear's swipe puts a soldier on his back, a snake bite leaves him woozy for a minute, a goat can headbutt him off a ledge into a bush. Then he gets up.</p>
+                        <p>Nobody on your side dies, and no operation can fail. There's no health to manage, no ammunition to ration and no reload screen. The game's whole design is permission: to feel enormously strong for half an hour without being tested on it.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/paw-print-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Cartoon wildlife</p>
+                        <h3>Animals that act like animals</h3>
+                        <p>Every species has its own behavior, borrowed from the real animal and exaggerated: wolves hunt in packs and flank, bears charge and stand their ground, foxes dive into burrows, snakes vanish into tall grass, sharks circle under the surface, goats climb where vehicles can't follow, owls hunt at night from the treetops, and mosquitoes come as a cloud.</p>
+                        <p>They react to you the way the opening promises: they scatter in alarm, hide, bluff and occasionally try their luck. The tone is lightly absurd, so they're cartoon creatures with ragdoll physics that go down in <strong>puffs of fur and feathers</strong>, never anything grisly.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/newspaper-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Feedback, not a score</p>
+                        <h3>The after-action report and the front page</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/human-apex/10-artillery.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every operation closes with an after-action report written with total military seriousness: units deployed, rounds fired, hectares of forest reshaped, culprits accounted for. The numbers are there to be laughed at, not judged against.</p>
+                        <p>Then the town that wrote in gets its say, as a newspaper front page celebrating the operation like a war won. The front pages pile up on the operations room wall: the game's living history, and the clearest picture of how far out of proportion the whole country has gone.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Trivia</h2>
+            <p>The opening described in the lore is in the design notes as a full shot list, camera angles included, written to be rendered as a trailer with an AI video model. The notes also mark which shots could be skipped in favor of fading straight to the title.</p>
+            <p>The notes weigh two ways to build it: a 2D top-down shooter with light strategy, or a 3D shooter in the style of Battlefield 2. They pick 3D, because it shows off how small a wolf looks next to a tank.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/human-apex_4_boxart.jpg" alt="Box art: a battle tank crashes out of a pine forest between two armored soldiers with red goggles, a grey wolf running toward the viewer and helicopters in the golden sky." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">By order of the Prime Minister</p>
+                <h2 id="sendoff">Human Apex: Overreacting Justice Against Animal Kingdom</h2>
+                <p>For two hundred thousand years, they hunted us. They took our livestock, our pets and our peace of mind. They thought nobody was keeping count.</p>
+                <p>Somebody was. The fence is up, the drones are airborne and the tanks are warm. Report to the briefing room: today's target has fur.</p>
+                <p><strong>Somebody has to answer for the chickens.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Battlefield 2 and Mass Effect 2</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Operation Napalm (CC0), Exo 2 Black, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

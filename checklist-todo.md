@@ -143,7 +143,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] ETCC family, now one page: Epic Toy Cool Combat (v2 is v1's unfinished rewrite; KMF is a variant on it)
 - [x] Vigilant pursuit racing, now Vigilant Pursuit: Fugitive Combat Racing
 - [ ] Kenney Jam anthology page
-- [ ] Human Apex
+- [x] Human Apex
 - [ ] Motherlode × Tasty Planet (pick the best variants)
 - [ ] Pinball mix
 - [-] Party Hard–style (its own page, or part of the Kenney anthology (Author note: its own page.)) (Skip, needs some manual preps by me.)
