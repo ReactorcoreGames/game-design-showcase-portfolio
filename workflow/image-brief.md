@@ -54,6 +54,7 @@ Pick the preset that best expresses **this** game. **Spread presets across proje
 - **Recurring subjects are described identically every time.** If the hero is "a teal abyssal frogman guardian in glowing armor", write that full phrase in every prompt it appears in. A shortened "the guardian" becomes a generic human knight.
 - **Match the page.** Each image depicts what its quote and section claim: the vignette shows the gameplay feel described, the feature image shows the feature it sits beside, the story image shows the world from the Lore section.
 - **Box art is portrait (2:3).** Compose for a tall cover: a strong central subject, with room at the top where a title would go (but no title).
+- **Don't describe a tall subject in a 16:9 image.** On Core Kicker, a 16:9 title asking for a reactor chamber "laid out like a tall pinball table" came back as a narrow vertical strip between black bars (Warning Forever preset). It passed as "a wide landscape view filling the entire frame from edge to edge".
 
 ## Running it (local session only)
 
