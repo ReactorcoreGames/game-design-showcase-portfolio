@@ -141,7 +141,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Bazooka Bomber, now AAL Bazooka Bomber
 - [x] UNO-inspired family, now three pages: Bonfire, Ultimate Card and Power Pile
 - [x] ETCC family, now one page: Epic Toy Cool Combat (v2 is v1's unfinished rewrite; KMF is a variant on it)
-- [ ] Vigilant pursuit racing
+- [x] Vigilant pursuit racing, now Vigilant Pursuit: Fugitive Combat Racing
 - [ ] Kenney Jam anthology page
 - [ ] Human Apex
 - [ ] Motherlode × Tasty Planet (pick the best variants)

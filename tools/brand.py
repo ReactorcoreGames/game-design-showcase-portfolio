@@ -41,7 +41,7 @@ FONTS = [
     ("Orbitron[wght].ttf", "rc-display-black.woff2", {"wght": 900}, "RC Display"),
     # Project pages' own display fonts (see workflow/page-brief.md). Check each font's
     # embedded licence first; prefer CC0 and SIL OFL ones.
-    ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships, greensteelcommander, thermonuclear-berserker
+    ("Stormfaze.otf", "stormfaze.woff2", None, None),                       # CC0, AAL-Bunkerships, greensteelcommander, thermonuclear-berserker, vigilant-pursuit
     ("OperationNapalm-Regular.ttf", "operation-napalm.woff2", None, None),  # CC0, AAL-Bunkerships
     ("Zero Hour.otf", "zero-hour.woff2", None, None),                       # CC0, graviton-mayhem
     ("Squares Bold Free.otf", "squares-bold.woff2", None, None),            # SIL OFL, graviton-mayhem, smash-droids
@@ -68,7 +68,7 @@ FONTS = [
     ("TurretRoad-Medium.ttf", "turret-road-medium.woff2", None, None),      # SIL OFL, Mafia_Takedown
     ("Exo2.0-BoldItalic.otf", "exo2-bold-italic.woff2", None, None),        # SIL OFL, Megalodon
     ("MatrixType-Bold.ttf", "matrixtype-bold.woff2", None, None),           # CC0, Megalodon
-    ("Skateblade-RegularItalic.ttf", "skateblade-italic.woff2", None, None),  # SIL OFL, Mosh_Pit_Mayhem (with Anklepants)
+    ("Skateblade-RegularItalic.ttf", "skateblade-italic.woff2", None, None),  # SIL OFL, Mosh_Pit_Mayhem (with Anklepants), vigilant-pursuit
     ("Zeroes Two.otf", "zeroes-two.woff2", None, None),                     # CC0, MutantLoveQuest, unhinged_lander_heist_scifi
     ("ExpletusSans-Medium.ttf", "expletus-sans-medium.woff2", None, None),  # SIL OFL, MutantLoveQuest, bonfire
     ("Skateblade-Regular.ttf", "skateblade.woff2", None, None),             # SIL OFL, Planetary Ring Miner, kickblade, aal-voyager

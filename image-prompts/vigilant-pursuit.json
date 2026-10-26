@@ -1,0 +1,37 @@
+{
+  "slug": "vigilant-pursuit",
+  "preset": "08 Games - Tribes Ascend (FPS/3D)",
+  "style": "Palette of crimson tail-light red and warm sodium amber against dusky asphalt and dark sky, with pale chrome highlights. No text, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Low, wide chase-camera shot from just behind and beside a heavy armored futuristic motorcycle racing down an empty desert highway at dusk, its rider in a dark full-face helmet and a long armored riding coat leaning into the speed, crimson tail light streaking behind. Far ahead on the horizon, a convoy of armored getaway trucks kicks up a long plume of dust. Wide dusky sky with a pale moon. The lower left of the picture is open road."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Dynamic chase view on a coastal highway at sunset, seen from behind a heavy armored futuristic motorcycle racing between slow civilian cars. Beside it, a second armored motorbike with spiked plates and red lights drifts toward the guard rail, losing control. Ahead, a roadblock of stacked barrels and wooden crates bursts apart in sparks and splinters. Speed blur on the road, the sea glittering beside it."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Very high aerial view of one long winding highway crossing several landscapes in a single picture: red desert in the foreground, a snowy mountain pass in the middle, and a long bridge over a dark sea in the far distance. A tiny motorcycle with a crimson light trail rides in the foreground, and far, far ahead on the distant bridge a single armored getaway truck with amber lights. Late afternoon light, clear sky."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall vertical view down a long straight highway running toward a distant city skyline at night, a glowing ring of lights arcing across the sky. On the road in the middle distance, a heavy armored futuristic motorcycle seen from far behind, small in the frame, crimson tail light streaking. Far ahead, a big armored getaway truck with amber lights. Filling the sky above, a huge flying carrier ship with its hangar lights on."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide panoramic view of a frontier world at sunset: a colossal flying carrier ship with a hangar deck and amber running lights cruises low over a vast landscape of red desert, dark forests and a sea, a network of highways and long bridges below it running off to the horizon. High in the sky, a faint ring of orbital roads and lights circles the planet."
+    }
+  ]
+}

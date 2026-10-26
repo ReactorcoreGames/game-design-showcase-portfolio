@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigilant Pursuit: Fugitive Combat Racing</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a Road Rash-style combat racing game where the finish line is a fugitive on the run, a few stages ahead on the same road. No clock, no laps: every boost, kick and wreck shortens the gap until you catch them.">
+    <meta name="keywords" content="game design concept, combat racing, vehicular combat, chase game, motorcycle brawler, bounty hunter, nemesis system, Road Rash inspired, Road Redemption inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/vigilant-pursuit.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Vigilant Pursuit: Fugitive Combat Racing">
+    <meta property="og:description" content="A game design concept: a combat racing game where the finish line is a fugitive a few stages ahead. Kick, boost and wreck your way through the gap. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/vigilant-pursuit.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/vigilant-pursuit_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: two armored motorcycles race along a coastal highway at sunset as a roadblock bursts apart ahead">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Vigilant Pursuit: Fugitive Combat Racing">
+    <meta name="twitter:description" content="A game design concept: a combat racing game where the finish line is a fugitive a few stages ahead on the same road.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/vigilant-pursuit_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Vigilant Pursuit: Fugitive Combat Racing",
+        "description": "A game design concept, not a released game: a combat racing game where a relentless pursuer chases a fugitive across a continuous chain of generated stages, closing the gap with speed and force instead of racing a clock, with a roaming carrier crew, a bounty board and fugitives who come back when they escape.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Racing", "Vehicular combat", "Action"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/vigilant-pursuit.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/vigilant-pursuit_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#160f10">
+
+    <link rel="preload" href="../fonts/stormfaze.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Vigilant Pursuit: crimson tail lights and sodium-amber road lamps over dusky asphalt,
+           with pale chrome for highlights. Stormfaze for the title and headings, Skateblade
+           Italic for the subtitle and kickers. */
+        @font-face { font-family: "Stormfaze"; src: url("../fonts/stormfaze.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Skateblade Italic"; src: url("../fonts/skateblade-italic.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #160f10;
+            --flow-2: #3d1419;
+            --grid-minor: rgba(255, 180, 150, 0.045);
+            --grid-major: rgba(255, 180, 150, 0.10);
+            --p-ground: rgba(22, 15, 16, 0.95);
+            --p-panel: #241718;
+            --p-1: #ff4a5c;
+            --p-2: #ffb43a;
+            --p-3: #f4ece2;
+            --p-text: #e8dcd8;
+            --p-dim: #b5a2a0;
+            --p-line: rgba(255, 180, 160, 0.16);
+            --font-title: "Stormfaze", "Segoe UI", sans-serif;
+            --font-sub: "Skateblade Italic", "Segoe UI", sans-serif;
+            --shade: #0e0809;
+        }
+
+        /* Title effect, "slipstream": the letters trail crimson afterimages to the left, like tail
+           lights on a long exposure, which stretch out as the rider accelerates and snap back in.
+           Dark layered shadows underneath keep it legible at every frame. */
+        /* Stormfaze is wide and heavy, so the title runs a little smaller than the default. */
+        .p-name {
+            font-size: clamp(2rem, 0.9rem + 4.6vw, 5.2rem);
+            letter-spacing: 0.02em;
+            animation: slipstream 4.5s cubic-bezier(.6, 0, .3, 1) infinite;
+        }
+        @keyframes slipstream {
+            0%, 100% { color: var(--p-3); text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), -4px 0 0 rgba(255, 74, 92, 0.35); }
+            55% { color: #fff7ee; text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), -8px 0 0 rgba(255, 74, 92, 0.55), -18px 0 0 rgba(255, 74, 92, 0.3), -30px 0 0 rgba(255, 74, 92, 0.14); }
+            62% { color: var(--p-3); text-shadow: 0 0 4px var(--shade), 0 0 10px var(--shade), 3px 3px 0 var(--shade), -3px 0 0 rgba(255, 74, 92, 0.4), 0 0 18px rgba(255, 180, 58, 0.45); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        /* The underline is a lane marking that a headlight sweeps along. */
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.4rem; height: 4px;
+            background: repeating-linear-gradient(90deg, var(--p-2) 0 22px, transparent 22px 34px);
+            animation: lane 4.5s cubic-bezier(.6, 0, .3, 1) infinite;
+        }
+        @keyframes lane {
+            0%, 100% { box-shadow: 0 0 4px rgba(255, 180, 58, 0.2); opacity: 0.75; }
+            55% { box-shadow: 0 0 14px rgba(255, 180, 58, 0.85), 0 0 26px rgba(255, 74, 92, 0.5); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 4.5s cubic-bezier(.6, 0, .3, 1) infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 55% { box-shadow: 0 0 12px rgba(255, 74, 92, 0.75); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.86rem; letter-spacing: 0.1em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .setbacks td:nth-of-type(1) { width: 42%; }
+        .roster td:nth-of-type(1) { width: 46%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.86rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/vigilant-pursuit_1_title.jpg" alt="An armored motorcycle rider in a dark helmet leans into the speed on a desert highway at dusk under a pale moon, crimson light streaking behind, armored trucks kicking up dust on the road behind." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Vigilant Pursuit</span><span class="p-sub">Fugitive Combat Racing</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/wanted-reward-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/horizon-road-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Vigilant Pursuit is a combat racing game where the finish line is a person. Somewhere a few stages ahead of you, on the same road, a fugitive is running from what they did. There's no countdown, no lap time and no podium: only the gap between you, and everything you do on the road makes it shorter.</p>
+            <p>You ride as one of a roaming crew of pursuers, the kind of rider legends say can't be stopped, chasing your target through desert, forest, sea, sky and orbit in one unbroken run. Kick goons off their bikes, harpoon a truck, smash the roadblock, launch the wreckage down the road at the fugitive, and boost. Sooner or later, you catch up.</p>
+            <p>It's built on the brawling of Road Rash and Road Redemption, with Star Fox 64's barrel rolls, Time Crisis 2's one-handed gunplay, Mario Kart and Wipeout's items, and a nemesis system in the spirit of Shadow of Mordor for the targets who get away.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who loved kicking rivals into traffic in Road Rash, chaining takedowns in Burnout, or the rhythm of an on-rails shooter, and who find most racing games come down to a lap timer and a ranking.</p>
+                    <p>They want <strong>speed with a reason</strong>: a chase that means something and ends in a showdown, not a finish line.</p>
+                    <p>It plays best on a gamepad, with a fair number of buttons, but the game is forgiving: your ride shrugs off small arms, and slow motion is there for the moments that need precision.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/spiral-bloom-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Power and freedom:</strong> being the rider nothing can stop, faster and stronger than anything on the road.</p>
+                    <p><strong>Meaning and fairness:</strong> justice that actually arrives. Someone did wrong and ran, and you're the reason they don't get away with it.</p>
+                    <p><strong>Excitement and play:</strong> speed, crashes and improvised violence at full throttle.</p>
+                    <p>It avoids draining <strong>rest</strong> and <strong>respect</strong>: there's no clock to beat and no countdown to sit through, stopping between stages costs nothing, and a hunt that fails moves the story forward instead of erasing it.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/targeting-lorc.png)"></span>Core concept</h3>
+                    <p>Racing games usually fence the fun into one track with a start line, a clock and a podium. Then it resets, and the next race starts from zero.</p>
+                    <p>Here the race is <strong>one continuous chase across a chain of stages</strong> against a single target running in parallel. You're always faster, so <strong>catching them is the expected outcome</strong>; the question is how soon, and how hard they fight.</p>
+                    <p>A target who escapes doesn't reset anything. They come back later, changed by the chase, and the frontier keeps producing new names for the board.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/vigilant-pursuit_5_story.jpg" alt="A huge flying carrier ship with amber running lights cruises over a red frontier landscape at sunset, highways, forests and lakes stretching to the horizon below it." width="1280" height="720" loading="lazy">
+            <figcaption>"Local law ends at the town line. The crew's carrier follows the fugitives from world to world."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/carrier-cathelineau.png)"></span>Lore and story</h2>
+            <h3>The frontier</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/01-frontier.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The game is set across a frontier of settled worlds stitched together by roads. Highways cross deserts and forests, causeways and sea lanes run between islands, sky lanes link the cloud cities, and ring roads circle the planets in orbit. Everything that matters travels on them.</p>
+            <p>Every town has its own law, and that law ends at the town line. Courts can post a warrant, but nobody can follow a runaway across a sea, a mountain range and a stretch of orbit. So people who do something terrible tend to run, and mostly they get away with it.</p>
+
+            <h3>The crew</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/02-carrier.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Almost always. A band of unlikely people live aboard a roaming carrier ship, a mobile home and garage in the spirit of Cowboy Bebop's ship or Gundam's White Base, and they follow the warrants nobody else will. Its riders are the stuff of road stories: masked, armored, never far behind, in the tradition of The Phantom, Ghost Rider and Knight Rider. People say they can't be killed. That's not quite true, but their armor shrugs off most of what a fugitive can throw, and the carrier always gets them back on the road.</p>
+
+            <h3>The runners</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/03-fugitive.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Each fugitive did something, knows exactly what's waiting for them, and is running with everything they have: their own ride, a gang of hired guns, and a head start. They're defined by what they did and how they behave, not by who they are: a convoy boss who sold out his own drivers, a fraudster who drained a colony's air fund, a raider who burned a harbor town, a coward who left a crew to die. Greed, cruelty, pride and cowardice are the usual reasons people end up on the board.</p>
+
+            <h3>The job right now</h3>
+            <p>Pick a name from the bounty board, set the carrier's course for the world they fled to, and drop onto the road behind them. The warrant says wanted dead or alive. How it ends is up to you.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You ride one vehicle and fight from the saddle. Steering and speed are in one hand, a weapon is in the other: every rider and almost every enemy fights one-handed, which keeps the combat readable at speed. Shown here for keyboard and mouse; a gamepad layout mirrors it.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Ride</h3>
+                    <dl>
+                        <div><dt>W / S</dt><dd>Throttle and brake</dd></div>
+                        <div><dt>A / D</dt><dd>Steer</dd></div>
+                        <div><dt>Shift</dt><dd>Nitro: tap for a quick boost, hold for a long one, full bar for overboost</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Brawl</h3>
+                    <dl>
+                        <div><dt>Q / E</dt><dd>Kick left or right</dd></div>
+                        <div><dt>Right click</dt><dd>Melee: tap light, hold heavy</dd></div>
+                        <div><dt>F</dt><dd>Grab a rider alongside, then slam</dd></div>
+                        <div><dt>R</dt><dd>Fire the harpoon</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Shoot and use</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim the one-handed gun</dd></div>
+                        <div><dt>Left click</dt><dd>Fire</dd></div>
+                        <div><dt>Wheel</dt><dd>Switch weapon</dd></div>
+                        <div><dt>Tab</dt><dd>Use the held item</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Evade</h3>
+                    <dl>
+                        <div><dt>Space</dt><dd>Barrel roll or side-dodge</dd></div>
+                        <div><dt>C</dt><dd>Duck under the canopy armor</dd></div>
+                        <div><dt>Ctrl</dt><dd>Slow motion while the meter lasts</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The HUD keeps to what matters: health, the nitro bar, ammunition and item uses, ability cooldowns, and across the top, the <strong>gap meter</strong>: your position, the fugitive's, and the stages between you.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/vigilant-pursuit_2_vignette.jpg" alt="Seen from behind, an armored motorcycle races along a coastal highway at sunset beside a second armored bike, as a roadblock of crates bursts apart in sparks ahead." width="1280" height="720" loading="lazy">
+            <figcaption>"There's no clock and no lap time. The only number that matters is the gap to the fugitive."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/speedometer-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A stretch of road</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/04-stage.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A stage is a few minutes of generated road through one biome, or a blend of two or three. Civilian traffic to weave through, the fugitive's goons riding to stop you, heavies, the odd miniboss, weather, stage events, hazards and breakable obstacles.</p>
+                        <p>You fight while you ride: kick a biker into the guard rail, grab another and slam him into a truck, shoot the tires off a car, roll past a rocket, smash the roadblock. Everything that slows down an enemy keeps you fast, and speed is what closes the gap.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mountain-road-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A hunt</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/05-hunt.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A hunt is one continuous chase across a chain of stages, like a multi-stage shoot-'em-up with no seams. You start on stage one. The fugitive starts somewhere on stage two to four, and you both race in parallel. Every stage you ride faster and fight harder than they can flee, and the gap shrinks, until you're on the same stretch of road and the showdown begins.</p>
+                        <p>Between stages, the carrier drops repairs, ammunition and tuning for this hunt, paid for with cash you scooped up from the road. None of it carries past the hunt.</p>
+                        <p>Things can go wrong, and none of them stop the chase on their own:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table setbacks">
+                                <thead><tr><th scope="col">Setback</th><th scope="col">What happens</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Knocked off the road</th><td>The carrier's recovery rig puts you back on it. You lose a little ground.</td></tr>
+                                    <tr><th scope="row">Ride wrecked</th><td>A fresh ride drops from the carrier. You lose more ground.</td></tr>
+                                    <tr><th scope="row">Forced onto a detour</th><td>A collapsed bridge or a blocked pass sends you the long way round, and it rejoins the main road later.</td></tr>
+                                    <tr><th scope="row">Too slow, pushed back</th><td>The gap grows, and the fugitive gets more comfortable.</td></tr>
+                                    <tr><th scope="row">The fugitive reaches their getaway</th><td>The hunt is over and they've escaped, for now. See below.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mug-shot-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The bounty board and the trophy room</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/06-wall.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The carrier is your home. Its <strong>bounty board</strong> lists who's wanted, what they did and where they fled; you choose the target, and the carrier sets course for that world. The frontier never runs out of people who think they can outrun the consequences, so there's always another name.</p>
+                        <p>A fugitive who escapes stays on the board, and the next hunt for them starts from where the last one left them: a damaged ride, fewer guards, a closer lead, or a more paranoid runner with new tricks. Some take two or three hunts to bring in, and those are the stories you remember.</p>
+                        <p>When a hunt ends in a capture or a takedown, the people the fugitive wronged hear about it, and their reply comes back to the carrier. The fugitive's mugshot goes up in the <strong>trophy room</strong>, with the route, the date and how it ended. It's a record of every chase the crew has finished, not a scoreboard, and nothing is unlocked by filling it.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/hourglass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Straight onto the road</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/07-hangar.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>No "get set, ready, go": you launch from the carrier's hangar and land on the road already moving. A stage takes a few minutes, and a whole hunt an evening.</p>
+                        <p>The game saves between stages, and the hunt waits exactly where you left it, with the fugitive just as far ahead. Ride one stage on a lunch break or a whole hunt on a Friday night.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/crossroad-delapouite.png)"></span>Game modes</h2>
+            <p>There's one mode, <strong>the pursuit campaign</strong>, built from pieces that nest inside each other, so it fits any session length:</p>
+            <div class="p-nest" aria-label="The campaign, outermost first">
+                <div><span>The frontier</span><small>Endless: one bounty after another, as long as you want to ride.</small>
+                    <div><span>A bounty</span><small>One fugitive, brought in over one hunt or several.</small>
+                        <div><span>A hunt</span><small>A continuous chase across a chain of stages, ending in the showdown: an evening.</small>
+                            <div><span>A stage</span><small>A few minutes of road through one to three biomes.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/wanted-reward-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/radar-sweep-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>The gap, not the clock</h3>
+                        <p>A traditional race measures you against a timer and other racers inside one contained track. Vigilant Pursuit drops all of that: <strong>no countdown, no time limits or extensions, no recorded times and no checkpoints</strong>. One hunt is a single, unbroken run across many stages, and the fugitive is running the same road in parallel, somewhere ahead.</p>
+                        <p>Everything you do feeds the chase. Riding faster, taking risky lines, wrecking goons and blasting through obstacles all shorten the gap; slowing down, getting knocked about and taking detours widen it. The gap meter always shows where you both are.</p>
+                        <p>The gauntlet is designed so that you're <strong>always faster and stronger</strong> than your target. Catching them in one hunt is meant to be normal; the stages decide how soon and how fiercely.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/vigilant-pursuit_3_feature.jpg" alt="A very high aerial view of one long highway winding over red desert hills and snowy peaks toward a long bridge across the sea, a tiny vehicle with a crimson light on the road." width="1280" height="720" loading="lazy">
+                            <figcaption>"The fugitive starts two to four stages ahead, on the same road. Every wreck you leave behind brings them closer."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cargo-crate-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Cause and effect down the road</p>
+                        <h3>Throw it forward</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/08-debris.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Because the stages are one continuous road, what you do in one carries into the next. A car you launch off a ramp, a fuel truck you blow up on a bridge, a rockslide you set off with a grenade: some of it <strong>lands further down the road</strong>, in a stage the fugitive hasn't reached yet.</p>
+                        <p>When their getaway hits that wreckage, they slow down, and you see it on the gap meter. Being reckless and destructive is a strategy, not a distraction.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/tired-eye-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The fugitive's nerve</p>
+                        <h3>Desperate or complacent</h3>
+                        <p>Fugitives react to how close you are. Catch one early, while the fear is fresh, and they're <strong>desperate</strong>: they throw everything they have at you, call in every hired gun, and the showdown is a brawl. Let them get comfortable and they turn <strong>complacent</strong>: they slow down, cut corners and spend their guards, and they're easier to catch, but it takes you longer.</p>
+                        <p>Neither is wrong. An aggressive rider gets a fiercer fight sooner, a steady one gets an easier showdown later, and the fugitive's state shows on the gap meter so you know which one you're heading into.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/boot-kick-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Road Rash, one-handed</p>
+                        <h3>Brawling at full speed</h3>
+                        <p>Combat happens alongside other vehicles at speed. Up close you <strong>kick</strong> left and right, throw light and heavy melee, and <strong>grab and slam</strong> a rider into whatever's nearby. At range, a <strong>harpoon</strong> hooks a bike to drag it down, or a truck to slingshot past it, and one-handed guns cover the rest: pistol, revolver, shotgun, SMG, grenade launcher and mines.</p>
+                        <p>Items work like Mario Kart's and Wipeout's: picked up on the road, held, and used at the right moment, from a shockwave to an oil slick to a homing charge. Weapons have limited ammunition or uses, abilities have cooldowns, and both are topped up as you ride.</p>
+                        <p>The fugitive's side plays by the same rules: mostly one-handed weapons, plus slowly turning turrets on their bigger vehicles, and escorts that ride beside the road, fly above it, or come up from below.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dodge-felbrigg.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Survive the crossfire</p>
+                        <h3>Roll, duck and slow down time</h3>
+                        <p>Your ride is armored: small-arms fire barely scratches it, so the danger is to the rider and from the heavy stuff. Two moves cover that. A <strong>barrel roll</strong> or side-dodge, as in Star Fox 64, slips past rockets and shells. <strong>Ducking</strong> under the canopy armor, as in Time Crisis 2, shields the rider from a volley at the cost of fighting back for a moment.</p>
+                        <p><strong>Slow motion</strong> drains a meter that refills as you ride, for lining up a harpoon on a truck's axle or picking a path through a minefield.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/aero-bike-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Ground, sea, air and orbit</p>
+                        <h3>One ride for every road</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/09-transform.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Fugitives don't stay on the asphalt, so neither do you. Every player ride <strong>transforms</strong>, as in Mario Kart 8: wheels fold into hydrofoils when the road drops into the sea, wings unfold over a canyon, thrusters take over on the orbital ring roads.</p>
+                        <p>Players ride the small, quick machines: motorcycles, small cars, small mecha and power armor. Big vehicles belong to the other side, where they're bosses, hazards and opportunities: an armored truck you can harpoon and ride in the slipstream of, a cargo hauler you can climb onto, a gunship escort shadowing the road.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/mechanic-garage-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Everything from the start</p>
+                        <h3>The garage</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/vigilant-pursuit/10-garage.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The carrier's garage holds the crew's whole roster of <strong>riders and rides</strong>, every one available from the first hunt. A rider brings attributes, perks, abilities and a favorite loadout; a ride brings speed, armor and handling. Pick the pairing that suits the target: a fast bike for a fugitive with a long lead, power armor for one with a big gang.</p>
+                        <p>Nothing is unlocked by playing. The cash you pick up on the road pays for this hunt's repairs, ammunition and tuning, and goes no further, so your strength rises over a hunt and starts fresh with the next one.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/handcuffs-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A nemesis system</p>
+                        <h3>Fugitives built from parts</h3>
+                        <p>Every fugitive is assembled from modules: a name, a mugshot, a crime, a temperament, a personal ride, an escort roster and a few tricks of their own. Some ride twisted versions of the crew's own machines, in their own colors.</p>
+                        <p>The ones who get away <strong>remember the chase</strong>. A fugitive who escaped once may come back with a repaired ride and new guards, may have hired someone to slow you down, or may simply be more frightened, which, as above, makes them more dangerous. Each new hunt for them picks up their story where it left off.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/perspective-dice-six-faces-random-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Content that multiplies</p>
+                        <h3>Roads built from parts</h3>
+                        <p>Every stage is generated from parts: biomes and their blends, road surfaces and markings, surroundings, props, weather, stage events and hazards. Every new rider, ride, enemy, item or road piece combines with all the others, so the frontier keeps producing roads nobody has ridden.</p>
+                        <p>The road's population comes in clear tiers:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table roster">
+                                <thead><tr><th scope="col">Who</th><th scope="col">What they're for</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Civilians</th><td data-label="For">Traffic to weave through. Goons hide behind them; hitting them costs you speed.</td></tr>
+                                    <tr><th scope="row">Goons</th><td data-label="For">The fugitive's hired riders: plentiful, fragile, good for kicking.</td></tr>
+                                    <tr><th scope="row">Heavies</th><td data-label="For">Armored bikes, gun trucks and elite riders who need a plan.</td></tr>
+                                    <tr><th scope="row">Minibosses</th><td data-label="For">The fugitive's lieutenants, holding a stage of the road.</td></tr>
+                                    <tr><th scope="row">The fugitive</th><td data-label="For">The target and the showdown: their own ride, their own escorts, their own tricks.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>Trivia</h2>
+            <p>This is Reactorcore's first racing design. The notes start by admitting it: a brainstorm for a racing game, because there wasn't one in the portfolio yet. They also say what it should never be, in plain words: no "get set, ready, go", and no unlocking anything, "that's bad design".</p>
+            <p>The file's working title was Vigilant Terminator Pursuit, and the notes list the pursuer as a terminator, vigilante, police officer, bounty hunter or just a very angry civilian. The roaming carrier crew covers all of them.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/vigilant-pursuit_4_boxart.jpg" alt="Box art: a motorcycle seen from behind on a long highway toward a city at night, a crimson light trail on the road, a truck ahead and a huge carrier ship ringed with light overhead." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Warrant issued</p>
+                <h2 id="sendoff">Vigilant Pursuit: Fugitive Combat Racing</h2>
+                <p>Wanted, dead or alive. Last seen heading for the coast with three stages' head start, an armored truck and a dozen hired riders. Considered dangerous. Considered unreachable.</p>
+                <p>The carrier is already overhead. Your ride is already on the road. Kick, harpoon, boost, and leave the wreckage where it'll do the most good.</p>
+                <p><strong>They've got a head start. You've got the rest of the road.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Road Rash, Road Redemption, Star Fox 64, Time Crisis 2, Mario Kart, Wipeout, the Nemesis system of Middle-earth: Shadow of Mordor, Cowboy Bebop, Mobile Suit Gundam, The Phantom, Ghost Rider and Knight Rider</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Stormfaze (CC0), Skateblade Italic, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

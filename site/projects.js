@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "vigilant-pursuit.html", prefix: "vigilant-pursuit",
+    title: "Vigilant Pursuit", subtitle: "Fugitive Combat Racing",
+    icon: "wanted-reward-delapouite", tint: "red",
+    blurb: "Road Rash-style combat racing where the finish line is a fugitive a few stages ahead on the same road: no clock and no laps, just a gap that every kick, boost and wreck makes shorter.",
+    genres: ["vehicles", "action"], tags: ["combat racing", "chase", "bounty hunter", "nemesis"],
+    status: "concept", added: "2026-10-26"
+  },
+  {
     page: "epic-toy-cool-combat.html", prefix: "epic-toy-cool-combat",
     title: "Epic Toy Cool Combat", subtitle: "Tape Measure Tactics",
     icon: "measure-tape-delapouite", tint: "red",

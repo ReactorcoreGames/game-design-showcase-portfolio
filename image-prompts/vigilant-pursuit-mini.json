@@ -1,0 +1,23 @@
+{
+  "slug": "vigilant-pursuit-mini",
+  "out": "site/projects/mini/vigilant-pursuit",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - Q - Rad Fisheye",
+  "lead": "Fisheye action photograph, highway at dusk, crimson tail lights and amber glow. ",
+  "images": [
+    {"n": 1, "name": "frontier", "ratio": "3:2", "prompt": "A long empty highway across a desert under a huge moon"},
+    {"n": 2, "name": "carrier", "ratio": "3:2", "prompt": "A giant flying cargo ship hovering above a desert road"},
+    {"n": 3, "name": "fugitive", "ratio": "3:2", "prompt": "A lone armored truck speeding away into the dark"},
+    {"n": 4, "name": "stage", "ratio": "3:2", "prompt": "Motorcycles racing between cars on a coastal highway"},
+    {"n": 5, "name": "hunt", "ratio": "3:2", "prompt": "A long road winding through mountains toward a distant city"},
+    {"n": 6, "name": "wall", "ratio": "3:2", "prompt": "Rows of framed portrait photographs on a dark hangar wall under red lights"},
+    {"n": 7, "name": "hangar", "ratio": "3:2", "prompt": "A motorcycle parked in a hangar under work lights, tools around it"},
+    {"n": 8, "name": "debris", "ratio": "3:2", "prompt": "Barrels and crates tumbling across a highway in dust and sparks"},
+    {"n": 9, "name": "transform", "ratio": "3:2", "prompt": "A futuristic winged motorcycle flying low over the sea"},
+    {"n": 10, "name": "garage", "ratio": "3:2", "prompt": "A row of futuristic motorcycles and small armored cars in a garage"}
+  ]
+}
