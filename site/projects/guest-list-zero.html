@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest List Zero: Stealth Party Takedown</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a top-down stealth puzzle game where a covert operative clears a criminal crew's whole party, guest by guest, without being seen. Generated multi-floor venues, a loadout drawn from a random offer, witnesses who run for the phone, and a world map of pins.">
+    <meta name="keywords" content="game design concept, stealth puzzle, top-down stealth, party, social stealth, procedural levels, destructible buildings, 16x16 pixel art, Party Hard inspired, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/guest-list-zero.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Guest List Zero: Stealth Party Takedown">
+    <meta property="og:description" content="A game design concept: slip into a crew's party and bring the guest list to zero before anyone sees a thing. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/guest-list-zero.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/guest-list-zero_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a cutaway view from above into a party venue, a gold dance floor beside a velvet lounge and a back corridor">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Guest List Zero: Stealth Party Takedown">
+    <meta name="twitter:description" content="A game design concept: slip into a crew's party and bring the guest list to zero before anyone sees a thing.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/guest-list-zero_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Guest List Zero: Stealth Party Takedown",
+        "description": "A game design concept, not a released game: a top-down stealth puzzle game where a covert operative clears a criminal crew's party guest by guest without being seen, in generated multi-floor venues, across campaigns of three to twelve parties pinned to a world map.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Stealth", "Puzzle", "Action"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/guest-list-zero.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/guest-list-zero_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#160b12">
+
+    <link rel="preload" href="../fonts/chargen-6809.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Guest List Zero: VIP gold and neon rose over a velvet plum-black, the colours of a club
+           after midnight. 6809 Chargen (a dot-matrix LED face, like a club sign and a pixel game
+           at once) for the title and headings, Jersey 10 (pixel) for the subtitle and kickers. */
+        @font-face { font-family: "6809 Chargen"; src: url("../fonts/chargen-6809.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Jersey 10"; src: url("../fonts/jersey-10.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #160b12;
+            --flow-2: #3a1630;
+            --grid-minor: rgba(255, 200, 140, 0.04);
+            --grid-major: rgba(255, 200, 140, 0.09);
+            --p-ground: rgba(22, 12, 18, 0.95);
+            --p-panel: #22131c;
+            --p-1: #ffc247;
+            --p-2: #ff5c9d;
+            --p-3: #fff0dd;
+            --p-text: #ecdfe1;
+            --p-dim: #b9a3ae;
+            --p-line: rgba(255, 200, 150, 0.15);
+            --font-title: "6809 Chargen", "Segoe UI", sans-serif;
+            --font-sub: "Jersey 10", "Segoe UI", sans-serif;
+            --shade: #0e070b;
+        }
+
+        /* Title effect, "bass drop": the name's gold glow kicks twice on the beat, like a dance floor
+           lighting up, then rests. Dark layered shadows keep it legible at the dimmest frame. */
+        .p-name {
+            font-size: clamp(2rem, 0.9rem + 4.8vw, 5.4rem);
+            animation: kick 2.6s ease-out infinite;
+        }
+        @keyframes kick {
+            0%, 30%, 100% { text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 40px rgba(255, 194, 71, 0.18); }
+            6% { text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(255, 194, 71, 0.95), 0 0 34px rgba(255, 92, 157, 0.55); }
+            14% { text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 24px rgba(255, 194, 71, 0.35); }
+            20% { text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 14px rgba(255, 194, 71, 0.85), 0 0 34px rgba(255, 92, 157, 0.45); }
+        }
+        .p-sub { text-transform: uppercase; letter-spacing: 0.12em; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.3rem; height: 3px;
+            background: var(--p-2);
+            animation: kick-line 2.6s ease-out infinite;
+        }
+        @keyframes kick-line {
+            0%, 30%, 100% { box-shadow: 0 0 4px rgba(255, 92, 157, 0.3); opacity: 0.65; }
+            6%, 20% { box-shadow: 0 0 14px rgba(255, 92, 157, 0.95), 0 0 26px rgba(255, 194, 71, 0.5); opacity: 1; }
+            14% { box-shadow: 0 0 6px rgba(255, 92, 157, 0.5); opacity: 0.8; }
+        }
+        .section-mark::after { animation: h2-line 5.2s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(255, 194, 71, 0.6); } }
+        h2, h3 { letter-spacing: 0.01em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 1.15rem; line-height: 1.1; letter-spacing: 0.1em; }
+
+        .arsenal tbody th { width: 9.5rem; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.95rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/guest-list-zero_1_title.jpg" alt="From a dark balcony, a man in a black suit, black gloves and a gold cone party hat leans on a brass railing over a packed gilded nightclub, guests dancing on a glowing gold floor under pink spotlights and a mirror ball." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Guest List Zero</span><span class="p-sub">Stealth Party Takedown</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/party-hat-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/party-popper-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Guest List Zero is a top-down stealth puzzle game about clearing out an entire party, one guest at a time, without anybody seeing you do it.</p>
+            <p>Every venue belongs to a criminal crew, and tonight the whole crew is inside: dancing, drinking, dozing on the sofas, guarding the stairs. You walk in with two weapons and two stacks of tools, read the routines, and work through the guest list unseen. Anyone who sees something runs for a phone, and the police don't give up easily.</p>
+            <p>It grows out of <strong>Party Hard</strong> by Pinokl Games, a cathartic stealth puzzle about crashing parties, and leans toward the proactive social stealth of the Hitman series. Every venue is generated: a building of several floors on a 16-pixel grid, with walls that break and floors that can fall in, so no two parties are alike. The tiny sprites keep the violence as cartoony and vague as it was in the original.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love a stealth game where <strong>the whole level is the puzzle</strong>: Party Hard, Hitman's crowds and disguises, the planning half of Hotline Miami.</p>
+                    <p>Also anyone who wants to <strong>let off steam</strong> after a long day, safely, with something that needs thought rather than reflexes. They're tired of hand-made levels that run out, and of stealth games where half the time is spent waiting for a patrol to turn around.</p>
+                    <p>Keyboard and mouse, seen from above. The pace is yours: nobody hunts you until somebody calls.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/champagne-cork-delapouite.png)"></span>Game's purpose</h3>
+                    <p><strong>Relief and play:</strong> a cartoonish, slightly absurd outlet for frustration, with bears and UFOs wandering into the party.</p>
+                    <p><strong>Challenge and mastery:</strong> the puzzle of emptying a whole building without a single witness getting to a phone.</p>
+                    <p><strong>Freedom and choice:</strong> any order, any tool, any route, even through a wall.</p>
+                    <p>It avoids draining <strong>rest</strong> (portable tools replace most of the waiting) and <strong>safety</strong> (16-pixel violence, and the guest lists are crews, not passers-by).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/cloak-dagger-lorc.png)"></span>Core concept</h3>
+                    <p>Party Hard's stages were drawn by hand, its props could only face one way, and its characters were fixed. Its fun ended when the levels did.</p>
+                    <p>Here <strong>everything is a standard 16-pixel piece</strong>, so venues are generated: themed, layered, breakable and never the same twice. A campaign is three to twelve parties, sized to your evening, and each one you finish becomes <strong>a pin on a world map</strong>.</p>
+                    <p>Nothing is unlocked along the way. Every weapon, tool and theme is in the pool from the first party.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/guest-list-zero_5_story.jpg" alt="Night view from above of a waterfront district of old brick warehouses, one of them lit gold and pink from its tall windows and open doors, motorbikes and black cars parked outside, searchlights in the clouds and a city skyline across the water." width="1280" height="720" loading="lazy">
+            <figcaption>"Every crew throws a party sooner or later. It's the one night the whole crew is under one roof."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/modern-city-delapouite.png)"></span>Lore and story</h2>
+            <h3>The crews</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/01-crews.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>In cities all over the world, crews run the night: protection rackets, loan sharks, smuggling rings, biker gangs. They aren't a nationality, a culture or a side in anyone's politics. They're people who have made greed and intimidation their trade, and everyone around them pays for it.</p>
+            <p>And they love a party. Each crew celebrates in a venue it owns: a nightclub, a biker clubhouse, a mansion costume party, a beach house, a warehouse rave. The bouncers, the bartenders and the cleaners are the crew's own people. For one night, everybody on the payroll is in the same building.</p>
+
+            <h3>The uninvited guest</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/02-uninvited.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You're a covert operative who takes the job nobody else can: clear a crew's whole party in one night, quietly. Your look is your own, any outfit in any colours. To the crowd you're one more guest, until people start going missing.</p>
+
+            <h3>The job right now</h3>
+            <p>A campaign is a string of parties, three to twelve of them, one region at a time. Work through each guest list without being seen, and walk out of the exit before the police catch up. When the last party of the campaign is over, a pin goes in the map.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You control one operative from above. Everything in a venue sits on a grid of 16-pixel tiles, but people move freely across it, never hopping from square to square.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Walk in any direction</dd></div>
+                        <div><dt>Shift</dt><dd>Run, on a stamina meter that recharges</dd></div>
+                        <div><dt>Hold Q</dt><dd>Dance (see below)</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Weapons</h3>
+                    <dl>
+                        <div><dt>Mouse</dt><dd>Aim</dd></div>
+                        <div><dt>Left click</dt><dd>Use weapon one</dd></div>
+                        <div><dt>Right click</dt><dd>Use weapon two</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Items and interaction</h3>
+                    <dl>
+                        <div><dt>E</dt><dd>Interact: pick up, carry a body, work a trap or its trigger</dd></div>
+                        <div><dt>F</dt><dd>Use the selected item</dd></div>
+                        <div><dt>R</dt><dd>Cycle to the next item (up to four carried)</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Drop</h3>
+                    <dl>
+                        <div><dt>Shift + left</dt><dd>Drop weapon one</dd></div>
+                        <div><dt>Shift + right</dt><dd>Drop weapon two</dd></div>
+                        <div><dt>Shift + E</dt><dd>Drop the selected item</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p><strong>Dancing</strong> is a gamble. Keep it up for three to five seconds and the people around you react, each in their own way: some gather round to dance with you, some leave the room in annoyance, and once in a while someone punches you in the face (a short knockout, no damage). It can clear a room or fill one.</p>
+            <p>Everyone's state shows over their head, so a busy room reads at a glance: a <strong>phone</strong> over a guest on their way to call the police, a <strong>siren</strong> over a body someone has found, drifting light-blue pixels over a sleeper, spinning yellow ones over someone knocked out.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/guest-list-zero_2_vignette.jpg" alt="A cutaway miniature of three rooms seen from above: guests dancing on a gold-tiled floor beside a big standing fan, a velvet lounge with a guest asleep on a sofa, and a pink back corridor by the bins where a man in a red jacket walks past a bouncer, red telephones on the walls." width="1280" height="720" loading="lazy">
+            <figcaption>"Every guest follows a routine of their own: dance here, face the wall there for ten seconds, sleep for thirty on a free sofa."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/spy-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>One party, one guest list</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/03-one-party.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A generated venue: a building of one or more floors on its own patch of ground, full of guests going about their night. You find the gaps: the dancer who drifts to the bathroom, the guard who turns to face the wall for ten seconds, the sleeper in the back room.</p>
+                        <p>You take guests out where nobody's looking, hide what you leave behind, set up traps and lures, and slip away when someone gets suspicious. The party is over when <strong>the guest list reads zero</strong> and you walk out of the exit.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/checklist-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A campaign of parties</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/04-campaign.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A linear string of parties, as many as you want tonight: <strong>3, 6, 9 or 12</strong>. The first is usually quieter and sparser, the middle ones swing randomly between calm and busy, and the last is crowded or hard in some way. The longer the campaign, the wilder its final party gets.</p>
+                        <p>Each campaign has a <strong>theme</strong>, which sets its tilesets and its crowd (bikers, clubbers, a costume party), and may carry a <strong>mutator</strong> that changes how it plays: half again as many guests, guests who are slow or fast, items that make less noise and light than usual, explosions two or three times wilder. Before each party you pick your loadout from a fresh random offer.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/position-marker-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The world map of pins</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/05-world-map.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The home screen is a world map, and it starts blank. Every finished campaign puts a pin in it: the <strong>size of the pinhead</strong> shows how many parties it had, its <strong>colour</strong> shows the theme, and an outline or symbol on it marks a mutator. Over time the pins crowd together until the map disappears under them.</p>
+                        <p>The map is also where new campaigns are set up and generated, so it's an endless supply of them. And every pin opens its campaign again: the list behind the pins is a record of seeded campaigns you can replay as <strong>flashbacks</strong> (see Game modes). It's a memento of what you did, not a score.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Sized to the evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/06-closing-time.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Open the map, set up a campaign (length, theme, maybe a mutator), take your loadout and go in. Three parties make a short session, twelve an extra-long one, and you decide which before you start.</p>
+                        <p>A campaign waits between parties if you stop, and the game saves to one permanent file between campaigns, so the map and its pins are always there when you come back.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/film-projector-delapouite.png)"></span>Game modes</h2>
+            <p><strong>The campaign</strong> is the game: a generated string of parties, sized by you.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Length</th><th scope="col">Parties</th><th scope="col">On the map</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Small</th><td data-label="Parties">3</td><td data-label="On the map">The smallest pinhead</td></tr>
+                        <tr><th scope="row">Normal</th><td data-label="Parties">6</td><td data-label="On the map">A medium pinhead</td></tr>
+                        <tr><th scope="row">Big</th><td data-label="Parties">9</td><td data-label="On the map">A large pinhead</td></tr>
+                        <tr><th scope="row">Extra long</th><td data-label="Parties">12</td><td data-label="On the map">The biggest pinhead, and the wildest final party</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>Flashbacks</strong> replay a finished campaign from its pin, with the same seed, as a memory that's grown in the telling: a vignette and film grain, deeper sound, and explosions and particle effects three times as bombastic. It's a small New Game+, a way to revisit a favourite run with everything exaggerated.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/hooded-assassin-darkzaitzev.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/candlestick-phone-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Witnesses and the phone</h3>
+                        <p>Every guest sees in a cone in the direction they face. Take someone out in front of a witness, or let a guest stumble on a body, and the game's one real threat begins: <strong>the witness doesn't fight, they run for a phone</strong>. A phone icon over their head shows where they're headed, and if they get there, the police are coming.</p>
+                        <p>The police come in to arrest whoever was reported, and you can try to get away: sprint on your stamina, duck through a shortcut (it closes behind you and stays closed for a long while), change into a disguise. But <strong>every call brings a more persistent police response than the last</strong>, until outrunning them is close to impossible. The best escape is never being reported at all.</p>
+                        <p>Bodies are evidence. A found body gets a siren over it and frightens everyone who sees it, until medics arrive to cover it with a body bag. Before that happens you can carry it out of sight or drop it in a dumpster. Some guests are harder than others: <strong>bouncers</strong> shove you away if you come at them from the front, and a <strong>plain-clothes agent</strong> will run you down unless you get behind them.</p>
+                        <p>Getting caught ends that party where it stands. The guests still on the list get away, and the campaign moves on to the next venue. Nothing is reloaded; the record keeps the night as it went.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/guest-list-zero_3_feature.jpg" alt="In a gold-panelled hallway, a startled woman in a sequined pink dress holds a red telephone receiver and looks back over her shoulder, while two figures in black suits and party hats walk away down the corridor toward the pink light." width="1280" height="720" loading="lazy">
+                            <figcaption>"Witnesses don't fight. They run for the nearest phone, and each call brings the police back more persistent than before."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/swap-bag-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A loadout from a random offer</p>
+                        <h3>Two weapons, two stacks</h3>
+                        <p>Before each party you're offered <strong>four weapons and four item stacks</strong>, drawn at random from a much bigger pool, and you take two of each. Every party deals a different offer, so every run asks for a different plan, and the whole pool is in play from the first campaign: nothing is held back to be unlocked later.</p>
+                        <p>Inside, weapons and items are plentiful. Swap what you carry for what you find; whatever you put down stays on the floor, so you can come back and swap again. Several drops on one tile stack up, and the last one dropped is the first one picked up. You can carry up to four item stacks at once.</p>
+                        <p>One deliberate contrivance: guests ignore weapons lying on the floor. Pickup spots sit on the routes people walk all night, and a crowd that panicked at every knife on a table would leave you nothing to work with.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/katana-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">One weapon system</p>
+                        <h3>Every weapon is a set of numbers</h3>
+                        <p>A weapon is a simple hit shape (a ray, a rectangle or a circle) with an outcome: it knocks a guest out, kills them and leaves a body, or <strong>obliterates them</strong>, leaving only a stain and no body for anyone to find. Around that, every weapon has the same parameters: swing time and recovery, reach, damage against walls and props, how far its <strong>sound</strong> and <strong>light</strong> carry, and how <strong>concealable</strong> it is, meaning how close you can get to a guest before they notice it and panic.</p>
+                        <p>Weapons are hidden when you're not using them, but the least concealable one you carry decides how close you can stand. Firearms add projectile speed, rate of fire, spread, pellets per shot and an ammo count, with no reloads: when it's empty you throw it away, as in Hotline Miami. They're rare, loud, bright and hard to hide, so they're the risky choice in a stealth game.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table arsenal">
+                                <thead><tr><th scope="col">Weapon</th><th scope="col">What it does</th><th scope="col">The catch</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Knife</th><td data-label="Does">An instant kill, one target at a time</td><td data-label="Catch">Slow work on a crowd</td></tr>
+                                    <tr><th scope="row">Baton</th><td data-label="Does">Knocks a guest out; a second hit finishes them</td><td data-label="Catch">Two hits per guest, one at a time</td></tr>
+                                    <tr><th scope="row">Katana</th><td data-label="Does">Kills everyone in its sweep at once</td><td data-label="Catch">A long blade is hard to hide</td></tr>
+                                    <tr><th scope="row">Sledgehammer</th><td data-label="Does">Obliterates a guest into a stain and breaks walls</td><td data-label="Catch">Slow and loud</td></tr>
+                                    <tr><th scope="row">9mm pistol</th><td data-label="Does">A ranged shot, and easy to conceal</td><td data-label="Catch">Very loud</td></tr>
+                                    <tr><th scope="row">Silenced pistol</th><td data-label="Does">A much quieter ranged shot</td><td data-label="Catch">The long silencer is harder to hide</td></tr>
+                                    <tr><th scope="row">Shotgun</th><td data-label="Does">Several targets with one shot</td><td data-label="Catch">Absurdly loud, and nearly impossible to hide</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/smoke-bomb-darkzaitzev.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Less waiting, more noise</p>
+                        <h3>Tools that do a trap's job</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/07-pizza-lure.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Party Hard's traps meant waiting: stand at a trigger and hope someone walks into range. Venues here still have them, each with limited uses: a fan-blade box to push someone into, a stack of logs to roll down on someone, drinks to poison, contraptions that go off on a timer, when someone walks close, instantly over an area, or again and again. Some leave a body; some leave no trace.</p>
+                        <p>But the trap's power mostly travels with you now, in items: a <strong>smoke bomb</strong> that blinds a room, a <strong>pizza box</strong> that draws a crowd to one spot, a <strong>stun bomb</strong> that knocks out a group before anyone can call, a <strong>time bomb</strong>, a <strong>disguise</strong> for shaking off the police, <strong>running shoes</strong> for outrunning them. A sparse venue with no traps never turns into stabbing a hundred guests one by one.</p>
+                        <p>The price is attention. Items are much more likely to make <strong>noise and light</strong> than a knife is, and both draw people in. The faster way is never the quieter one.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crumbling-ball-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Floors, supports and collapse</p>
+                        <h3>Buildings that can come down</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/08-collapse.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A venue is a building of one or more floors, linked by stairs and ladders, standing on a base plate of open ground. Walls and props have hit points, and every floor rests on supports. Break the supports under a section and everything above it, floors and walls alike, comes down, much as in X-COM: Apocalypse.</p>
+                        <p>That opens routes nobody planned: a hole in a wall, a floor dropped onto the room below. But destruction is <strong>rare and usually unwise</strong>. Only explosives, certain contraptions and slow weapons like the sledgehammer can manage it, and every broken wall destroys traps and opens sight lines that used to give you privacy.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/music-spell-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Routines and random events</p>
+                        <h3>A party that runs itself</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/09-party-life.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Guests, staff and security each follow their own network of waypoints: go here and face left or right, go here and pause for one, five or ten seconds, go here and sleep for thirty seconds if the spot is free (and if not, pause and move on). Some patrol, some roam, some stay put and dance, and some doze off where they stand. A body or a commotion changes what they do next.</p>
+                        <p>Then the night throws in surprises:</p>
+                        <ul>
+                            <li>More guests arrive, one to nine at a time.</li>
+                            <li>A bear wanders in and eats someone at random.</li>
+                            <li>A UFO lands and abducts a guest, and nobody bats an eye.</li>
+                            <li>A pizza courier drops off a box, and a crowd flocks to it.</li>
+                            <li>An engineer turns up and hands out an item.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/suits-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Characters from parts</p>
+                        <h3>An operative of your own</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/guest-list-zero/10-outfits.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Party Hard came with a fixed roster: a ninja who turns invisible by standing still, a cop who can carry bodies without raising suspicion, a chainsaw wielder who mows through a crowd in short bursts, a killer who knocks people out first. Each was hard-coded, so new ones were hard to make.</p>
+                        <p>Here those tricks become parts. You build your operative in a simple character creator: any outfit, <strong>your own colours</strong>, one <strong>passive trait</strong> and one <strong>active ability</strong> on a cooldown, chosen from a pool that includes the old roster's tricks. A new character is a new combination, and a new trait or ability works for every combination at once. The operative is drawn from the same sprite pool as the guests, which is exactly why you blend in.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dice-target-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A recipe, not a level</p>
+                        <h3>Venues from a generator</h3>
+                        <p>Party Hard drew its walls freehand on a pixel canvas, which made levels hard to generate, made destruction impractical and left walls overlapping. Here a venue is assembled from 16-pixel tiles by a short set of rules, the way a roguelike builds a dungeon, but as buildings on open ground rather than caves underground:</p>
+                        <ul>
+                            <li>A base plate of ground, with patches of water that nobody can cross, but that never cut anyone off from the rest of the venue.</li>
+                            <li>Buildings made of rectangles, whose edge tiles may become <strong>doors</strong> (closed and blocking sight unless someone is near), <strong>openings</strong> (free passage and sight) or <strong>windows</strong> (see through, can't pass).</li>
+                            <li>Furniture and rugs along the walls, with the middle of a room left clear unless it's a big one, and never blocking a passage.</li>
+                            <li>Walk-through decorations chosen for indoors or outdoors, with a very rare chance of an indoor object turning up outside.</li>
+                            <li>Pickup spots for weapons and items, guests in clusters with random facings plus a few stragglers, the start and exit, and spots where the police, medics, maintenance and new arrivals come in.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/toolbox-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Content as data</p>
+                        <h3>Built to grow</h3>
+                        <p>Walls, floors, props and characters all share <strong>one 16×16 standard</strong>, which opens up the huge library of existing 16×16 asset packs. Each party theme is a set of floor, ground, wall, door and decoration sprites plus its own crowd, and anything not tied to a theme is shared by all of them.</p>
+                        <p>Weapons, items, traps and themes are all data. Anything added goes into the pool the next time a campaign is generated, and a new theme brings a new pin colour to the map. If something is removed, the generator simply works with what's left, so a save never breaks over missing content.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/person-in-bed-delapouite.png)"></span>Trivia</h2>
+            <p>Before the design turned toward a covert operative, its default character had a far more relatable motive: it's three in the morning, a party nearby is too loud to sleep through, so he goes over to shut it down. "Obviously not something to act out in real life," the notes add, "but definitely something that is a relatable situation."</p>
+            <p>The design notes describe what's left of an obliterated guest as a stain "with tiny meat kibble". At sixteen pixels, that's about four red dots.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/guest-list-zero_4_boxart.jpg" alt="Box art: a man in a black suit and a gold cone party hat walks out of a nightclub's back door into a rain-wet alley, hands in pockets, confetti drifting down between two dumpsters." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">You are not on the list</p>
+                <h2 id="sendoff">Guest List Zero: Stealth Party Takedown</h2>
+                <p>You are cordially not invited. Dress code: whatever you like, in your colours. Plus-one: two weapons and two stacks of something useful, chosen at the door.</p>
+                <p>Tonight the crew has the whole building: three floors, a bouncer on every stair, a dance floor nobody can see across, and a phone on every wall. Mingle. Wait for the song to change. Stay out of sight.</p>
+                <p><strong>The party's over when the guest list reads zero.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Party Hard (Pinokl Games), the Hitman series, Hotline Miami and X-COM: Apocalypse</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: 6809 Chargen (CC0), Jersey 10, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

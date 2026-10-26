@@ -1,0 +1,37 @@
+{
+  "slug": "guest-list-zero",
+  "preset": "08 Games - Deus Ex Human Revolution (Action RPG/3D)",
+  "style": "Palette of velvet black, warm gold and neon rose pink, with deep plum shadows. Everyone fully clothed and unharmed. No text, signs, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide cinematic landscape shot from a dark upper balcony looking down over a lavish nightclub party at night, filling the frame from edge to edge: a packed dance floor of glowing gold tiles under rose pink spotlights and a big mirror ball, guests in suits and sequined party dresses dancing, a long bar with rows of bottles along the back wall, balloons and streamers overhead. In the left foreground on the shadowy balcony, a slim figure in a sharp black suit, black gloves and a small gold cone party hat leans on a brass railing, calmly watching the crowd, face hidden in shadow."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Top-down view looking straight down into a cutaway party venue with the roof removed, like a tidy miniature diorama of several rooms side by side, filling the frame from edge to edge: a crowded dance floor of glowing gold tiles full of tiny dancing guests, a lounge with velvet sofas where one guest dozes, a narrow dim back corridor, a storage room with a big industrial fan, and an alley exit with a green dumpster. In the corridor, a slim figure in a sharp black suit, black gloves and a small gold cone party hat creeps up behind a burly bouncer in a red jacket who faces the other way. A red telephone hangs on the corridor wall."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Medium shot down a long gold-lit hallway inside a nightclub at night: in the foreground a startled party guest in a sequined rose pink dress grabs the receiver of a red wall telephone, eyes wide, looking back over her shoulder. Far behind her at the end of the hallway, a slim figure in a sharp black suit, black gloves and a small gold cone party hat slips around a corner into darkness. Pink party light spills from an open doorway along the hallway."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait view of a narrow back alley behind a nightclub at night, rain-wet asphalt reflecting the light: a back door stands open at the end of the alley, spilling warm gold and rose pink party light and drifting confetti, a green dumpster beside it, rows of lit club windows high above on a brick wall. Walking out of the doorway toward the camera, small in the frame, a slim figure in a sharp black suit, black gloves and a small gold cone party hat, hands in pockets, calm and unhurried."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide high aerial view of a big city waterfront at night: rows of dark warehouses, piers and quiet streets, and in the middle one plain old brick warehouse with bare walls and no signboards, blazing with gold and rose pink party light from every tall window and open loading door, searchlights sweeping the low clouds, a crowd of motorbikes and long black cars parked outside. Beyond it the city skyline glows dimly across the water."
+    }
+  ]
+}

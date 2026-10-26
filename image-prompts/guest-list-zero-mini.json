@@ -1,0 +1,23 @@
+{
+  "slug": "guest-list-zero-mini",
+  "out": "site/projects/mini/guest-list-zero",
+  "size": [
+    320,
+    240
+  ],
+  "quality": 70,
+  "preset": "02 Photo - B - Candid Amateur",
+  "lead": "Candid phone snapshot at a nightclub party after midnight, gold and rose pink light, deep shadows. ",
+  "images": [
+    {"n": 1, "name": "crews", "ratio": "3:2", "prompt": "A crew in leather jackets and gold chains celebrating around a private table with bottles"},
+    {"n": 2, "name": "uninvited", "ratio": "3:2", "prompt": "A figure in a black suit waiting in a dark doorway, watching the party from outside the light"},
+    {"n": 3, "name": "one-party", "ratio": "3:2", "prompt": "A crowded dance floor seen from a balcony above, everyone dancing under spotlights"},
+    {"n": 4, "name": "campaign", "ratio": "3:2", "prompt": "A wet city street at night with a row of lit nightclub doorways stretching into the distance"},
+    {"n": 5, "name": "world-map", "ratio": "3:2", "prompt": "A world map on a wall covered in dozens of colorful pushpins"},
+    {"n": 6, "name": "closing-time", "ratio": "3:2", "prompt": "An empty club at dawn, chairs stacked on tables, confetti and balloons on the floor"},
+    {"n": 7, "name": "pizza-lure", "ratio": "3:2", "prompt": "An open pizza box on a bar counter with a crowd of hungry guests gathering around it"},
+    {"n": 8, "name": "collapse", "ratio": "3:2", "prompt": "A cracked brick wall and a sagging ceiling in an old party warehouse, dust in the air"},
+    {"n": 9, "name": "party-life", "ratio": "3:2", "prompt": "Guests dancing with their arms raised while one sleeps on a velvet sofa"},
+    {"n": 10, "name": "outfits", "ratio": "3:2", "prompt": "A rack of sharp suits, gloves and party hats in a dressing room mirror"}
+  ]
+}

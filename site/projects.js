@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "guest-list-zero.html", prefix: "guest-list-zero",
+    title: "Guest List Zero", subtitle: "Stealth Party Takedown",
+    icon: "party-hat-delapouite", tint: "yellow",
+    blurb: "Slip into a criminal crew's party and clear the whole guest list without a single witness reaching a phone. Generated multi-floor venues, two weapons and two tool stacks from a random offer, and a world map that fills with pins.",
+    genres: ["puzzle", "action"], tags: ["stealth", "party", "procedural venues", "destructible buildings"],
+    status: "concept", added: "2026-10-26"
+  },
+  {
     page: "core-kicker.html", prefix: "core-kicker",
     title: "Core Kicker", subtitle: "Reactor Meltdown Pinball",
     icon: "pinball-flipper-delapouite", tint: "magenta",
