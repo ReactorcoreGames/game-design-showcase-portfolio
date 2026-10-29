@@ -4,6 +4,8 @@
      1:1 text copy of the page (no images, no styling) that someone can hand to an AI or keep as
      the start of their own design document. Elements marked data-md="skip" are left out.
    - Box art sizing: the send-off's box art is made exactly as tall as the card beside it.
+   - Icon paths: every inline --icon url() is pinned to an absolute URL, as in fx.js (which
+     explains why).
 
    Markdown rules: h2/h3 become headings, paragraphs keep bold, italics and links, lists stay
    lists, tables stay tables, quotes on images become blockquotes, the step chains become
@@ -11,6 +13,13 @@
 
 (function () {
     "use strict";
+
+    /* ---------- Icon paths ---------- */
+
+    document.querySelectorAll('[style*="--icon"]').forEach(function (el) {
+        var m = /url\(\s*["']?([^"')]+)["']?\s*\)/.exec(el.style.getPropertyValue("--icon"));
+        if (m && !/^(data:|https?:)/.test(m[1])) el.style.setProperty("--icon", 'url("' + new URL(m[1], document.baseURI).href + '")');
+    });
 
     var NOTE = "Forked copy of an original design by https://reactorcoregames.github.io, rename this project under a new name to continue working on it.";
 

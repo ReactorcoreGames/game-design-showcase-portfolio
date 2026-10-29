@@ -6,11 +6,23 @@
        <script>try{if(!sessionStorage.getItem("rc-burst"))document.documentElement.classList.add("burst-pending")}catch(e){}</script>
      The element marked data-burst-origin (usually the logo) is where the pulse starts.
    - prefers-reduced-motion: the wave is drawn once and holds still; the burst is a plain fade.
+   - Icon paths: every inline --icon url() is pinned to an absolute URL (see below).
 
    window.RCFX.replayBurst() and window.RCFX.wave(on) exist for the look-test page. */
 
 (function () {
     "use strict";
+
+    /* ---------- Icon paths ---------- */
+
+    // Chrome resolves a url() held in a custom property against the stylesheet that uses it
+    // (theme.css at the site root), not the page. So "../icons/x.png" on a page in a subfolder
+    // climbs out of the site on a mirror served from a subpath (GitHub Pages). Pin each inline
+    // --icon to an absolute URL resolved against the page. project.js does the same.
+    document.querySelectorAll('[style*="--icon"]').forEach(function (el) {
+        var m = /url\(\s*["']?([^"')]+)["']?\s*\)/.exec(el.style.getPropertyValue("--icon"));
+        if (m && !/^(data:|https?:)/.test(m[1])) el.style.setProperty("--icon", 'url("' + new URL(m[1], document.baseURI).href + '")');
+    });
 
     var root = document.documentElement;
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
