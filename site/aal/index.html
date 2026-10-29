@@ -74,6 +74,7 @@
         .aal-hero img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #120a24; border-bottom: 1px solid color-mix(in srgb, var(--aal) 45%, transparent); }
         .intro { position: relative; padding: clamp(1.8rem, 5vw, 3rem) 0 0.5rem; }
         .intro .bg-icon { right: -40px; top: 0; --size: 340px; --tint: var(--aal); --alpha: 0.06; }
+        @media (max-width: 620px) { .intro .bg-icon { right: 0; } }
         .intro .eyebrow { color: var(--aal); }
         .intro h1 { font-size: clamp(2.2rem, 1.2rem + 4.4vw, 4.4rem); animation: aal-glow 9s ease-in-out infinite; }
         .intro .lead { max-width: 66ch; color: #d9c8ea; }
