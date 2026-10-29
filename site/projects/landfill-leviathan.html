@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landfill Leviathan: Sentient Garbage Rampage</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: a cartoon landfill wakes up hungry. Roll it through town top-down, eating everything smaller than you, and send a digger into the strata below to find the junk that becomes your next body part. Motherlode meets Tasty Planet.">
+    <meta name="keywords" content="game design concept, grow game, eat to grow, digging game, Motherlode inspired, Tasty Planet inspired, metroidvania, sentient landfill, cartoon, top-down, side-view, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/landfill-leviathan.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="Landfill Leviathan: Sentient Garbage Rampage">
+    <meta property="og:description" content="A game design concept: a sentient garbage heap eats its way from the town dump to the whole planet, digging up its own new body parts on the way. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/landfill-leviathan.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/landfill-leviathan_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a living garbage heap with big eyes sits in a parking lot seen from above, next to a much bigger garbage truck">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="Landfill Leviathan: Sentient Garbage Rampage">
+    <meta name="twitter:description" content="A game design concept: a sentient garbage heap eats its way from the town dump to the whole planet.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/landfill-leviathan_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Landfill Leviathan: Sentient Garbage Rampage",
+        "description": "A game design concept, not a released game: a cartoon garbage heap comes alive, grows by eating everything smaller than itself in a top-down town, and sends a digger into the ground below to find the junk that becomes its new abilities, then seeds the next town, region and planet.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Arcade", "Action", "Metroidvania"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/landfill-leviathan.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/landfill-leviathan_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#16120c">
+
+    <link rel="preload" href="../fonts/dendritic-voltage.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* Landfill Leviathan: coffee-ground brown, with slime chartreuse for the heap and rust orange
+           for the junk it's made of, and newsprint cream for highlights. Dendritic Voltage for the
+           title and headings, Hydrogen Whiskey for the subtitle and kickers. */
+        @font-face { font-family: "Dendritic Voltage"; src: url("../fonts/dendritic-voltage.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Hydrogen Whiskey"; src: url("../fonts/hydrogen-whiskey.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #16120c;
+            --flow-2: #33301a;
+            --grid-minor: rgba(200, 225, 80, 0.04);
+            --grid-major: rgba(200, 225, 80, 0.09);
+            --p-ground: rgba(22, 18, 12, 0.95);
+            --p-panel: #221c13;
+            --p-1: #bfe23a;
+            --p-2: #e57a3c;
+            --p-3: #f1e7c8;
+            --p-text: #e0d9c6;
+            --p-dim: #ada38b;
+            --p-line: rgba(225, 215, 170, 0.15);
+            --font-title: "Dendritic Voltage", "Segoe UI", sans-serif;
+            --font-sub: "Hydrogen Whiskey", "Segoe UI", sans-serif;
+            --shade: #0f0c07;
+        }
+
+        /* Title effect, "ooze": the name swells with a chartreuse slime glow that drips down below the
+           letters and settles back, like the heap taking a breath. Dark layered shadows underneath keep
+           it legible at every frame. */
+        .p-name {
+            letter-spacing: 0.02em;
+            animation: ooze 5s ease-in-out infinite;
+        }
+        @keyframes ooze {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 6px 18px rgba(191, 226, 58, 0.15); }
+            50% { color: #f8f9dc; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 10px 22px rgba(191, 226, 58, 0.7), 0 0 6px rgba(191, 226, 58, 0.6); }
+        }
+        .p-sub { text-transform: uppercase; color: var(--p-1); letter-spacing: 0.08em; text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: ooze-line 5s ease-in-out infinite;
+        }
+        @keyframes ooze-line {
+            0%, 100% { box-shadow: 0 0 4px rgba(229, 122, 60, 0.3); opacity: 0.75; }
+            50% { box-shadow: 0 4px 12px rgba(191, 226, 58, 0.8), 0 0 20px rgba(229, 122, 60, 0.5); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 5s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(191, 226, 58, 0.6); } }
+        h2, h3 { letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.95rem; letter-spacing: 0.1em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .sizes td:last-child { width: 45%; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/landfill-leviathan_1_title.jpg" alt="A huge living garbage heap with two big glowing eyes and a wide grin bears down a sunny small-town street with its mouth wide open, a red car shoved along in front of it and seagulls circling overhead." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">Landfill Leviathan</span><span class="p-sub">Sentient Garbage Rampage</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/gooey-daemon-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/trash-can-delapouite.png)"></span>Game overview</h2>
+            <p class="p-lead">Landfill Leviathan is a cartoon game about a town dump that wakes up hungry. You are the heap. Roll through town from above and eat everything smaller than you, steer clear of everything bigger, and grow until the bigger things are on the menu too.</p>
+            <p>Between meals, the heap sends a digger made of its own junk down into the ground beneath the dump, in a side-view digging game. Somewhere in the old buried layers lies the thing it needs next: a crane magnet, a jet engine, a shredder. Haul it up, swallow it, and it becomes a new body part that opens the next part of town.</p>
+            <p>It grows out of two genres that fit together better than they look: <strong>Motherlode</strong>'s dig-and-upgrade loop and <strong>Tasty Planet</strong>'s (and Fishy's) eat-to-grow loop, with Metroid-style gates in between and a little of Spore's cell stage, where what you attach to yourself decides what you can eat.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love the feeling of <strong>getting bigger</strong>: Katamari, Tasty Planet, the first minutes of Spore, a digging game where every trip down comes back with a little more.</p>
+                    <p>They want something silly, physical and easy to read, and they're tired of games where growing means filling a bar.</p>
+                    <p>The controls are WASD and the mouse, with two views. Nothing needs fast reflexes for long, and the size rule is the whole tutorial: <strong>smaller is food, bigger is trouble</strong>.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/growth-delapouite.png)"></span>Game's purpose</h3>
+                    <p><strong>Growth and power:</strong> watching the camera pull back as the heap outgrows the street, then the block, then the town.</p>
+                    <p><strong>Play and silliness:</strong> a grinning mountain of junk with saw blades for teeth and a box fan for a fin.</p>
+                    <p><strong>Discovery:</strong> finding out what's buried under the dump and what it lets the heap do.</p>
+                    <p>It avoids draining <strong>respect for the player's time</strong>: a hit sheds mass you can eat right back, and a lost digger leaves its cargo where it fell.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/resize-delapouite.png)"></span>Core concept</h3>
+                    <p>Grow games usually end when you're as big as the level, and digging games hand you upgrades from a shop menu.</p>
+                    <p>Here the two feed each other: <strong>the surface makes the heap big enough to dig, and the dig gives it the body part it needs to keep growing</strong>. Nothing is bought; everything is swallowed.</p>
+                    <p>And growing never runs out of room. When a town is eaten, the heap sends a seedling of itself to the next one, then the next region, then the next planet.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/landfill-leviathan_5_story.jpg" alt="A wide view at dusk of a huge landfill of colorful garbage hills at the edge of a small town, green chemical puddles glowing and sparks crackling between the mounds." width="1280" height="720" loading="lazy">
+            <figcaption>"Rotting food, leaking chemicals and a few million dead batteries. Nobody planned for the dump to wake up."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/biohazard-lorc.png)"></span>Lore and story</h2>
+            <h3>The dump</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/01-dump.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Every town has one: the landfill out past the edge of the map, where everything ends up. Decades of food scraps, paint cans, cleaning chemicals and electronics have been pressed together there, and threaded through all of it are millions of discarded lithium-ion batteries, still holding a little charge.</p>
+            <p>One stormy night the soup reaches the right mix. A current runs through the whole heap, the rot starts thinking, and the dump opens its eyes.</p>
+
+            <h3>The heap</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/02-heap.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>It isn't evil and it isn't clever. It's a cartoon appetite with eyes: it wants to be bigger, and the town is full of things to be bigger with. Everything it swallows becomes part of it, and anything mechanical it swallows becomes a working part of it.</p>
+            <p>The heap never eats people. They hear it coming (it is not quiet) and the town evacuates ahead of it, by bus, by bicycle and occasionally on foot with a lamp under one arm. What's left behind is fair game.</p>
+
+            <h3>The town</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/03-town.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The town answers with its sanitation department: a fleet of automated garbage trucks, compactors, street sweepers, recycling sorters and, for emergencies, an incinerator on treads. Nobody rides in them. To a small heap they're terrifying. To a big one they're lunch.</p>
+
+            <h3>The job right now</h3>
+            <p>Eat the town, down to its tallest landmark. Then do what every heap does when it's full: pack a little of itself into a garbage bag and send it somewhere new.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>There are two views. <strong>On the surface</strong> you see the heap from above and roll it around with its attachments aimed at the pointer. <strong>Underground</strong> the camera turns side-on and you steer a digger through tiles, Motherlode style. Some surface areas (a cliffside quarry, a canal lock) turn side-on as well when the place calls for it.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Surface: move</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Roll in any direction; the bigger the heap, the more momentum</dd></div>
+                        <div><dt>Mouse</dt><dd>Aim the attachments</dd></div>
+                        <div><dt>F</dt><dd>At a dig site: send the digger down</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Surface: attachments</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Use the primary attachment (saw, harpoon, magnet…)</dd></div>
+                        <div><dt>Right click</dt><dd>Use the secondary attachment</dd></div>
+                        <div><dt>Wheel</dt><dd>Swap which attachments are on the two buttons</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Underground: move</h3>
+                    <dl>
+                        <div><dt>A D</dt><dd>Drive left and right, drilling through what's in the way</dd></div>
+                        <div><dt>W</dt><dd>Thrust upward</dd></div>
+                        <div><dt>S</dt><dd>Drill down, or drop faster</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Underground: tools</h3>
+                    <dl>
+                        <div><dt>Space</dt><dd>Use the digger's ability</dd></div>
+                        <div><dt>1–4</dt><dd>Consumables: explosives, a hazard patch, an escape float back to the surface</dd></div>
+                        <div><dt>Esc</dt><dd>Pause, in either view</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>The heap's size is always shown as a ring around it, colored against whatever is nearest: green for things you can eat, orange for things that can hurt you. A small panel lists its attachments, and the town map marks dig sites and the gates still closed to you.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/landfill-leviathan_2_vignette.jpg" alt="Top-down view of a parking lot: a living garbage heap with big eyes sits in a pool of green slime among small cars, while a much larger yellow garbage truck waits at the edge." width="1280" height="720" loading="lazy">
+            <figcaption>"Anything smaller than the heap is food. Anything bigger can knock pieces off it."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/carnivore-mouth-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Eat, dodge, grow</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/04-eat.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Roll into anything smaller and it's swallowed, and the heap grows a little. Bump anything bigger and it knocks chunks off you. The art is in reading the street: which bins you can take now, which sweeper is about to turn round, which car you're one meal away from.</p>
+                        <p>Underground it's a different rhythm: picking a route through soft and hard tiles, grabbing what spills out of them, and judging how far you can push before the digger has to come home.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-conquest-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One town, from the dump to the landmark</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/05-town-map.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is one generated place: a town, a district, an industrial port. The heap starts small at its dump and grows outward, flipping between the surface and the dig sites, until it can swallow the place's tallest landmark.</p>
+                        <p>The place is laid out like a Metroid map. Some parts are closed to the heap until it has the right body part: a fenced scrapyard needs a saw, a river needs something that floats, a foundry district needs heat-proofing. Those parts are found at the dig sites, so the surface tells you where to dig, and the dig tells you where to go next.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/seedling-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The seedlings</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/06-seedling.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>When a place is eaten, the heap packs a seedling of itself into a garbage bag and sends it on: in the back of a truck to the next town, on a cargo ship to the next region, and once the planet has nothing left, on a scrap rocket to the next world. Each landing starts a new campaign, and the timeline only moves forward.</p>
+                        <p>The <strong>planet map</strong> fills in with every place the heap has become, and a <strong>family tree</strong> keeps one entry per seedling: where it landed, what it swallowed last, how big it got and the body parts it ended up with. That's the record of the heap's story, never a score.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stopwatch-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One dig or one evening</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/07-session.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Open the game and you're back at the heap, wherever you left it. A trip down a dig site takes a few minutes, a district a half hour, a whole town an evening or two.</p>
+                        <p>Quit at any moment and the heap, the town and the half-dug tunnel wait exactly as they were.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span>Game modes</h2>
+            <p>There's one mode: <strong>the heap's timeline</strong>. Everything happens in it, in nested pieces you can stop between:</p>
+            <div class="p-nest" aria-label="The timeline, outermost first">
+                <div><span>The worlds</span><small>Endless: planet after planet, each one eaten place by place.</small>
+                    <div><span>A planet</span><small>Its towns, regions and ports, filled in on the planet map.</small>
+                        <div><span>A campaign</span><small>One place, from the dump to the landmark: an evening or two.</small>
+                            <div><span>A trip</span><small>One stretch of surface between dig sites, or one dig: a few minutes.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/gooey-daemon-lorc.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/circular-saw-sbed.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Junk becomes anatomy</h3>
+                        <p>The heap has no upgrade menu. It has <strong>attachments</strong>: whatever machine it swallows and keeps, it can use. A circular saw becomes a set of teeth for cutting through fences. A box fan blows things away, and a vacuum cleaner pulls them in. A crane magnet on its cable drags metal toward the mouth. A harpoon gun reels in things from across the street, a pair of water heaters become thrusters, and a set of shopping-cart wheels makes it fast on tarmac.</p>
+                        <p>Each one is one of two kinds. <strong>Combat attachments</strong> change how the heap deals with things that fight back: reach, aim, armor-breaking, wider or faster attacks. <strong>Environment attachments</strong> change where it can go and what it can eat: floating, heat and acid proofing, climbing, swallowing a material it couldn't digest before.</p>
+                        <p>The town's machines play by the same rule. A sweeper with a brush can only push; a compactor with a crusher squeezes; a recycling sorter with grabber arms can pull your metal parts back out of you. Read what's bolted onto a thing, and you know what it will do.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/landfill-leviathan_3_feature.jpg" alt="A grinning green slime heap in a scrapyard, bristling with junk: rusty saw-toothed gears on its sides, a red horseshoe magnet hanging on a chain from a pole on top, a harpoon poking out and two rusty tanks spouting little flames." width="1280" height="720" loading="lazy">
+                            <figcaption>"Every machine the heap swallows becomes a working body part: a saw for teeth, a fan for a fin."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/drill-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The other view</p>
+                        <h3>Under the dump</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/08-dig.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Dig sites are the places where the ground is worth opening: an old dump under the new one, a sealed bunker, a flooded railway tunnel. The heap grows a <strong>digger</strong> out of its own mass and sends it down, and the game turns into a side-view tile digger.</p>
+                        <p>Tiles have <strong>hardness</strong> (topsoil, compacted trash, clay, concrete, bedrock), and breaking one releases what's inside it: scrap metal, copper wire, insulation, batteries. What the digger brings back is how it improves, with no shop in between: metal hardens its shell and drill, insulation proofs it against heat and cold, batteries carry it further. The deeper layers have their own <strong>hazards</strong>: groundwater, gas pockets, acid seepage, the heat of an old buried fire, and the odd battery that bursts into flame.</p>
+                        <p>At the bottom of each site is the reason you came: the <strong>buried machine</strong> that becomes the heap's next attachment.</p>
+                        <p>If the digger breaks, nothing is undone. Its wreck and whatever it carried stay down in the tunnel for the next digger to collect, and the new one costs the heap a little of its size, which more eating fixes.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/expand-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The one rule</p>
+                        <h3>Size is everything</h3>
+                        <p>On the surface, everything has a size, and the heap's size against it decides what happens. The camera pulls back as the heap grows, so the world keeps fitting on the screen.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table sizes">
+                                <thead><tr><th scope="col">The heap is about as big as</th><th scope="col">It can eat</th><th scope="col">What still hurts</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">A trash bag</th><td data-label="Eats">Litter, cans, cardboard</td><td data-label="Hurts">Bins, bicycles, sweepers</td></tr>
+                                    <tr><th scope="row">A dumpster</th><td data-label="Eats">Bins, bikes, shopping carts, fences</td><td data-label="Hurts">Cars and the garbage trucks</td></tr>
+                                    <tr><th scope="row">A truck</th><td data-label="Eats">Cars, sheds, bus shelters, trees</td><td data-label="Hurts">Compactors and empty houses</td></tr>
+                                    <tr><th scope="row">A house</th><td data-label="Eats">Houses, trucks, the sanitation fleet</td><td data-label="Hurts">The incinerator, warehouses, towers</td></tr>
+                                    <tr><th scope="row">A city block</th><td data-label="Eats">Everything up to the landmark</td><td data-label="Hurts">Only the landmark's defenses</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>A hit from something bigger knocks chunks of junk off the heap and makes it smaller. Those chunks <strong>land nearby, and they're food</strong>: roll back over them and the size returns. A setback is a detour of a few seconds, not a grind.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/steamroller-caro-asercion.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Who's out there</p>
+                        <h3>The cleanup crew</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/09-crew.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The things that move follow a few simple temperaments. <strong>Roamers</strong> drift around at random. <strong>Hunters</strong> have eyes: when they see the heap, they come for it if it's smaller and flee if it's bigger, so the street's mood flips the moment you outgrow it. <strong>Hybrids</strong> hunt from a distance and lose their nerve up close. <strong>Ambushers</strong> sit still: a turret sprinkler, a parked compactor waiting for something small to roll in front of it.</p>
+                        <p>Underground, the enemies work like the ones in classic Super Bomberman: maintenance crawlers and burrowing machines that obey the tile rules just as the digger does, and bosses, a tunnel-boring machine or a sewer-cleaning robot, that bend those rules in readable, fair ways.</p>
+                        <p>The local wildlife has opinions too. Seagulls peck bits off a small heap and scatter from a big one. Nobody eats a seagull.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/magnet-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Gates made of the world</p>
+                        <h3>A town that locks itself</h3>
+                        <p>Nothing in a campaign is closed by an invisible wall or a level number. It's closed by what the place is: a river too deep, a chain-link fence, a foundry too hot to touch, a pile of steel beams too heavy to lift, a pit too far to cross. Each one has an answer among the attachments, and each answer opens things elsewhere too: the magnet that lifts the beams also drags a fleeing truck back to you.</p>
+                        <p>The generator builds each place so its gates and dig sites line up, with more than one route where it can, so there's always somewhere to go and the order is often yours to pick.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/perspective-dice-six-faces-random-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Every landing is new</p>
+                        <h3>The seedling carries something</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/landfill-leviathan/10-landing.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every campaign is a new generated place, and each gets <strong>a twist or two</strong>: the heap grows faster from each meal, the trucks are quicker, the sweepers leave a slippery trail, the ground is all clay. The twists are listed before you land, so you know what kind of place you're walking into.</p>
+                        <p>The seedling also <strong>carries a gift</strong>: a few of the old heap's attachments, your pick, so a new campaign starts with a trick or two already in hand rather than from nothing.</p>
+                        <p>And the world <strong>reacts to the story so far</strong>. Word gets around. A heap that leaned on its magnet lands somewhere whose fleet has gone rubber and plastic; a heap that grew huge early finds the next town has walled its dump. The opposition changes its approach rather than getting tougher, so you're pushed to play differently, not harder.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/seagull-delapouite.png)"></span>Trivia</h2>
+            <p>The design began as one engine with nine possible settings, each meant to be its own game with its own look and its own quirks. The sentient landfill is the one that survived the cut.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/landfill-leviathan_4_boxart.jpg" alt="Box art: a towering garbage mountain with glowing green eyes and a grin full of junk looms over a small-town street at sunset, slime dripping down its sides and seagulls wheeling around it." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Notice of service disruption</p>
+                <h2 id="sendoff">Landfill Leviathan: Sentient Garbage Rampage</h2>
+                <p>Residents are advised that collection is suspended until further notice, because the landfill has started collecting you. Please leave the area calmly, take your lamp if you must, and do not leave anything smaller than a house unattended.</p>
+                <p>The sanitation department is responding. The landfill has eaten two of its trucks and is wearing the third.</p>
+                <p><strong>Everything you throw away ends up somewhere. This time it's coming back.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Motherlode, Tasty Planet, Fishy, G.E.O., Spore's cell stage and Super Bomberman</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Dendritic Voltage and Hydrogen Whiskey (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

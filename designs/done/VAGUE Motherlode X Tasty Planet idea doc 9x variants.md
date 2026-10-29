@@ -16,17 +16,9 @@ High metagame is like a generator for Low metagame campaigns, letting player hav
 
 ## Lore Context Options
 
-1. Alien space monster organism conquers earth game inspired. Evolving tentacle beast crawls and consumes all.
-2. Grey Goo scenario. Basically a non-organic/artificial matter version of the above with its own quirks.
-3. Zero Horizon Chariot series inspired berserker robot spread consume nightmare scenario.
-4. Cannibal Flesh Monster on a meat planet, part of a survival of strongest science initiative by an long ruined oppressive empire that spiraled out of control, ate its masters and is now mindlessly consuming the rest of the world.
-5. Humans are worst monster - greedy exploitation of everything in universe, even the people (slaves and c-suite) themselves. A small company grows into a mega corporation that is run on expendable slaves and backstabbing greedy ceos as this horrific mobile megacorp HQ crawls the earth, devouring resources, upgrading, growing, bulldozing cities and nature into endless parking lots, expanding into space to turn the entire universe into a horrible dystopia.
-6. Reverse alternative idea to above where player is the opposite of the previous idea and mines/grows to dismantle car culture/consumerist society into a healthy Venus Project esque utopia.
-7. Osmos inspired (an old indie game about a spheres/organisms that shrink/grow based on if they're touching a larger or smaller version of themselves) restyled melee/erotic armies, where you mine for armor and weapons, forage for slave/brainwashed/corrupted soldiers and conquer earth until only your domain remains, so you can create a new lewd femboy utopia world order. Each conflict reduces your forces that you must replenish with new meat/cyborgs/droids/armor. (in the erotic context your "soldiers" become "occupied with the corrupted/captured enemy forces, keeping them busy with endless pleasure)
-8. Garbage Landfill becomes sentient due to chemicals and lithium ion batteries and wants to grow bigger, eventually swallowing a nuclear powerplanet to ascend to a higher plane of existance.
-9. Huminerals: Mafia thug gang goes around oppressing and subjugating more and more people under its thumb, exploiting them into a massive meat shield for its own benefit, discarding the ones that are useless and using the mass to conquer even more villages, towns, cities and eventually countries too.
+8. Garbage Landfill becomes sentient due to chemicals, organic matter and lithium ion batteries and wants to grow bigger mindlessly, eventually swallowing/becoming the whole planet itself. Sort of a cartoon/absurd mood.
 
-Each of the above variants would be their own game, probably with their own quirks and differences, as well as different visual styles and colorscapes. Some could be simpler, some more complex, some use one-handed controls, while others use mouse and keyboard two-handed controls.
+Each of the above variants (correction: only one left, #8, I removed all others) would be their own game, probably with their own quirks and differences, as well as different visual styles and colorscapes. Some could be simpler, some more complex, some use one-handed controls, while others use mouse and keyboard two-handed controls.
 
 (Note to Claude and Self: Offer this doc to Claude and come up with mechanics/feature/system/metagame difference per each game. To me: do it in this way: "Look at this doc and created a modified version of this game for the Lore Context Option #2, using the existing stuff from the doc as a basis not straying too far from the core systems.")
 

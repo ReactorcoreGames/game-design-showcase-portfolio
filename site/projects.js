@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "landfill-leviathan.html", prefix: "landfill-leviathan",
+    title: "Landfill Leviathan", subtitle: "Sentient Garbage Rampage",
+    icon: "gooey-daemon-lorc", tint: "green",
+    blurb: "The town dump wakes up hungry. Roll it through town eating everything smaller than you, dig under the landfill for the junk that becomes your next body part, then mail a seedling of yourself to the next town, region and planet.",
+    genres: ["arcade", "action"], tags: ["eat to grow", "digging", "metroidvania", "cartoon"],
+    status: "concept", added: "2026-10-29"
+  },
+  {
     page: "guest-list-zero.html", prefix: "guest-list-zero",
     title: "Guest List Zero", subtitle: "Stealth Party Takedown",
     icon: "party-hat-delapouite", tint: "yellow",

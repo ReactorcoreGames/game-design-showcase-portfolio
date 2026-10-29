@@ -1,0 +1,20 @@
+{
+  "slug": "landfill-leviathan-mini",
+  "out": "site/projects/mini/landfill-leviathan",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - S - Tilt Shift",
+  "lead": "Tilt-shift miniature diorama photograph, playful and absurd, slime green and rusty orange junk, warm daylight. ",
+  "images": [
+    {"n": 1, "name": "dump", "ratio": "3:2", "prompt": "A landfill out past the edge of town, hills of garbage bags, tires and old electronics under storm clouds"},
+    {"n": 2, "name": "heap", "ratio": "3:2", "prompt": "A lumpy living pile of colorful garbage with two big round eyes, grinning"},
+    {"n": 3, "name": "town", "ratio": "3:2", "prompt": "A row of yellow garbage trucks and street sweepers parked at a town depot"},
+    {"n": 4, "name": "eat", "ratio": "3:2", "prompt": "Trash cans, bicycles and a shopping cart scattered across a small town street"},
+    {"n": 5, "name": "town-map", "ratio": "3:2", "prompt": "A small town seen from above with a river, a fenced scrapyard and a foundry with chimneys"},
+    {"n": 6, "name": "seedling", "ratio": "3:2", "prompt": "A single bulging black garbage bag in the back of an open pickup truck on a country road"},
+    {"n": 7, "name": "session", "ratio": "3:2", "prompt": "An evening view of a quiet town with a mound of garbage glowing green beside it"},
+    {"n": 8, "name": "dig", "ratio": "3:2", "prompt": "An underground cross section of soil layers, buried trash, pipes and old machines"},
+    {"n": 9, "name": "crew", "ratio": "3:2", "prompt": "A yellow garbage compactor truck and a street sweeper machine on an empty road"},
+    {"n": 10, "name": "landing", "ratio": "3:2", "prompt": "A garbage bag landing on a dock beside a cargo ship in an industrial port"}
+  ]
+}

@@ -144,7 +144,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Vigilant pursuit racing, now Vigilant Pursuit: Fugitive Combat Racing
 - [ ] Kenney Jam anthology page
 - [x] Human Apex
-- [ ] Motherlode × Tasty Planet (pick the best variants)
+- [x] Motherlode × Tasty Planet, now Landfill Leviathan
 - [x] Pinball mix, now Core Kicker: Reactor Meltdown Pinball
 - [x] Party Hard–style, now Guest List Zero
 - [-] Planet Warfare (Skip until further notice - I need to prepare for this)

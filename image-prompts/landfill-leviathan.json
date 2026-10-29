@@ -1,0 +1,37 @@
+{
+  "slug": "landfill-leviathan",
+  "preset": "08 Games - Super Mario Galaxy (Platformer/3D)",
+  "style": "Palette of slime chartreuse green, rusty orange and cardboard brown, with cream highlights and warm hazy daylight. Cartoon and comedic, no people in harm's way. No text, signs, letters, numbers or logos anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide low-angle landscape shot down a sunny small-town main street, filling the frame from edge to edge: rolling toward the camera is a huge living heap of colorful garbage, a lumpy mound of trash bags, old tires, crushed cans, cardboard boxes and broken appliances, with two big round glowing chartreuse eyes and a wide happy grin, lime green slime oozing between the junk. A small parked car tips into its open mouth and trash cans and a lamp post tumble toward it. Neat shopfronts with striped awnings line both sides of the empty street, seagulls circle above in a blue sky."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Top-down view looking straight down at a supermarket parking lot like a game level, filling the frame from edge to edge: in the middle a living heap of colorful garbage, a round lumpy mound of trash bags, old tires, crushed cans and cardboard with two big round glowing chartreuse eyes and a wide grin, rolls over a row of tiny toy-sized cars and green trash bins, pulling them into its mouth, a trail of lime green slime behind it. At the edge of the lot waits a much bigger bright yellow garbage compactor truck with no driver, its crusher jaws open. Painted parking lines, shopping carts and small trees."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Medium shot of a living heap of colorful garbage standing in a scrapyard, a lumpy mound of trash bags, old tires, crushed cans and cardboard with two big round glowing chartreuse eyes and a wide grin, bristling with machine parts it has absorbed: two big spinning circular saw blades sticking out of its sides, a box fan on its back like a fin, a red crane magnet dangling on a steel cable from a bent pole on top, a harpoon gun poking out of the front and two rusty water heaters on its back shooting little flames like rocket thrusters. Lime green slime oozes between the junk. Stacks of crushed cars and chain-link fences behind."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait view at sunset from street level in a small town: a towering living mountain of colorful garbage, trash bags, old tires, crushed cans, cardboard boxes and broken appliances piled impossibly high, with two huge round glowing chartreuse eyes near the top and a wide happy grin, lime green slime dripping down its sides, looms over rooftops and a church steeple. Seagulls wheel around its peak against an orange and green sky. Small houses and an empty street in the foreground."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide aerial landscape view at dusk of a huge landfill at the edge of a small cozy town, filling the frame from edge to edge: rolling hills of colorful garbage, trash bags, tires, cardboard and broken appliances, puddles of glowing lime green chemicals, little electric sparks crackling between discarded batteries, a few bulldozers parked and abandoned. In the biggest garbage hill in the middle, two huge round chartreuse eyes are just opening. The lights of the town glow beyond a fence on the horizon, storm clouds rolling away overhead, seagulls."
+    }
+  ]
+}
