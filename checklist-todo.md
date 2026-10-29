@@ -134,33 +134,35 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] AAL Inspector (no page of its own, Reactorcore's call: it's the foundation the trio grew from, folded into their pages; all five docs are in `designs/done/AAL Terrene Clones/`)
 - [x] AAL Trash Miner
 - [x] Temporal Shift RTS
-- [x] Type 1-X Mecha RTS (images pending)
-- [x] Titanium Punk Orphans (images pending)
+- [x] Type 1-X Mecha RTS
+- [x] Titanium Punk Orphans
 - [x] Metsanelaimet
 - [x] Auto chess, now Auto Art Chess (its own small page)
 - [x] Bazooka Bomber, now AAL Bazooka Bomber
 - [x] UNO-inspired family, now three pages: Bonfire, Ultimate Card and Power Pile
 - [x] ETCC family, now one page: Epic Toy Cool Combat (v2 is v1's unfinished rewrite; KMF is a variant on it)
 - [x] Vigilant pursuit racing, now Vigilant Pursuit: Fugitive Combat Racing
-- [ ] Kenney Jam anthology page
 - [x] Human Apex
-- [x] Motherlode × Tasty Planet, now Landfill Leviathan
 - [x] Pinball mix, now Core Kicker: Reactor Meltdown Pinball
-- [x] Party Hard–style, now Guest List Zero
-- [-] Planet Warfare (Skip until further notice - I need to prepare for this)
-- [-] TopVerse (Skip until further notice - I need to prepare for this)
+- [x] Motherlode × Tasty Planet, now Landfill Leviathan (author: I narrowed it to one variant and removed the rest (there were 9, I removed all but #8.))
 - [x] AAL Standalone
+- [x] Party Hard–style, now Guest List Zero
+- [x] Planet Warfare, now AAL Universe: Perpetual Boundless Freedom (Make this one more detailed and polished than usual - use nano banana 2 lite for up to 6 main images, and use upto 9 for additional secondary images with Klein as you see fit (resized to half the usual standard size, although generated at standard size nonetheless.), and additional 10 SDXL minis if need be.)
+- [x] TopVerse (Make this one more detailed and polished than usual - use nano banana 2 lite for up to 6 main images, and use upto 9 for additional secondary images with Klein as you see fit (resized to half the usual standard size, although generated at standard size nonetheless.), and additional 10 SDXL minis if need be.)
+
 
 ## 5. Image generation (local sessions only)
 
 Up to 70 Klein images a day. Use `python tools/images.py check`, then `gen` and `finish` (see `workflow/image-brief.md`).
 
-- [ ] Day 1 batch
-- [ ] Day 2 batch
-- [ ] Day 3 batch
-- [ ] Day 4 batch (if needed)
-- [ ] Story images for the 5 ⚑ pages
-- [ ] Optional: SDXL stand-ins for pages still waiting, later replaced with Klein images
+- [x] Day 1 batch
+- [x] Day 2 batch
+- [x] Day 3 batch
+- [x] Day 4 batch (if needed)
+- [x] Story images for the 5 ⚑ pages
+- [x] Optional: SDXL stand-ins for pages still waiting, later replaced with Klein images
+
+(Author note: I ended up doing every locally anyway so we got all images generated just fine. Phase 5 is effectively done.)
 
 ## 6. Publish
 

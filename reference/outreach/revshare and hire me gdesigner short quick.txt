@@ -1,4 +1,4 @@
-Just released a major update to my Game Design Portfolio, now hosting 37 project in total.
+Just released a major update to my Game Design Portfolio, now hosting 70 projects in total.
 
 https://reactorcoregames.github.io/game-design-showcase-portfolio/
 

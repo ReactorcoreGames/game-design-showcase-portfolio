@@ -381,7 +381,7 @@ Metagame random gauntlet variant. V1 too.
 
 
 
-## Building process info:
+## Building process info: (super old and outdated btw)
 Note to Claude: The stuff below isn't meant for the HTML pitch showcase generally, its mainly me figuring out prompts on how to build this project using Claude Code. If theres some tidbits that answer some questions for the stuff higher in the document, you can use those details from the things below, otherwise just ignore the stuff below.
 
 <building_process_stuff>

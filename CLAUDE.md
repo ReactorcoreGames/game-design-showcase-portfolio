@@ -28,6 +28,7 @@ site/                  THE PUBLISHED SITE. Only this folder is deployed.
   projects/            one <slug>.html per project, plus project.css (the shared showcase template)
     images/            <prefix>_<1-5>_<role>.jpg
     thumbnails/        <prefix>_2_vignette_thumb.jpg (nexus cards)
+    extra/<slug>/      richer pages only: a sixth main image and half-size secondary images
 book/
   chapters/            THE BOOK'S TEXT: one HTML fragment per page (conventions and order in book/README.md)
   fonts/               IBM Plex Sans for the offline edition (the site loads it from Google Fonts)
@@ -44,6 +45,7 @@ reference/
   lore/                AAL universe lore, for AAL-set projects only
   outreach/            article links, contact links, revshare/hire-me post texts
   supercores.md        what "supercores" means (a mechanic many designs mention without explaining)
+  ad-circus.md         what the "Ad Circus" is (the opt-in ad screen several designs list without explaining)
 workflow/
   site-plan.md         the second overhaul: site purpose, look, identity rules, session plan
   page-brief.md        how to write a showcase page (new or rewrite)
@@ -54,9 +56,11 @@ workflow/
   fonts/               rendered samples and a licence table of assets/fonts/, for choosing page fonts
   legacy/              the old Sonnet-era task docs, kept for history only
 image-prompts/         <slug>.json image specs (+ legacy/ old prompt txts)
+articles-src/          hand-written article sources (final HTML), built by tools/articles.py
 tools/images.py        spec -> BAIG -> resized JPEGs + thumbnails in site/
 tools/sitemap.py       rebuilds site/sitemap.xml from site/projects.js, site/articles.js and site/book/
-tools/articles.py      Google Docs exports (assets/gd articles raw/) -> site/articles/ pages + WebP images
+tools/articles.py      Google Docs exports (assets/gd articles raw/) -> site/articles/ pages + WebP images;
+                       also builds hand-written articles from articles-src/ ("native" sources)
 tools/book.py          book/chapters/ -> site/book/ (build), and the itch.io zip + EPUB into dist/ (release)
 tools/book_promo.py    renders book/release/ images with headless Edge, then reruns the release
 build_release.bat      double-click wrapper for `python tools/book.py release`
@@ -94,6 +98,7 @@ Only `tools/images.py gen` without `--dry-run` spends anything (Klein and Nano B
 - Reactorcore stays anonymous: no real name anywhere in the repo, file names and metadata included. Don't highlight Finland. See the identity rules in `workflow/site-plan.md`.
 - The game-icons in `assets/icons/` are CC BY 3.0, so any page using them needs the credits link.
 - Markdown prose is never hard-wrapped. One line per paragraph.
+- **Subagents run on Sonnet** (the global default, `CLAUDE_CODE_SUBAGENT_MODEL` in `~/.claude/settings.json`), Haiku for mechanical jobs, never Opus, and at most two at a time. Reactorcore is on the Pro plan; see the subagent rules in `workflow/scan-digest.md`.
 - The pages are hand-written static HTML/CSS: no build step, no framework. Diagrams are styled HTML from the template's diagram kit; mermaid is no longer used.
 
 ## Status and next steps
