@@ -7,7 +7,7 @@
       "n": 1,
       "role": "title",
       "ratio": "16:9",
-      "prompt": "Wide side view of a cratered, crumbling hilly landscape cut by explosions, like a cross-section of earth with tunnels and loose rocks. On a hill on the right stand three boxy, clearly mechanical scrap mecha robots welded together from tank parts, painted in lime and pink spray-paint patterns, with spiked armor plates and oversized welded-on rocket launchers. Across the valley on the far left horizon, a grim angular purple alien fortress with turrets. The lower left of the picture is calm open ground."
+      "prompt": "Wide side view of a cratered, crumbling hilly landscape cut by explosions, like a cross-section of earth with tunnels and loose rocks. On a hill on the right stand three boxy, clearly mechanical scrap mecha robots painted in lime and pink spray-paint patterns, with spiked armor plates and rocket launchers welded together. Across the valley on the far left horizon, a grim angular purple alien fortress with turrets. The lower left of the picture is calm open ground."
     },
     {
       "n": 2,
@@ -23,9 +23,10 @@
     },
     {
       "n": 4,
+      "model": "nano-banana-2-lite",
       "role": "boxart",
       "ratio": "2:3",
-      "prompt": "Tall portrait poster-style illustration: three boxy, clearly mechanical scrap mecha robots welded together from tank parts, painted in lime and pink spray-paint patterns, with spiked armor plates and oversized welded-on weapons, pose proudly on top of a heap of wrecked purple alien machinery. Paint drips and splashes around them. The top third of the picture is a loud empty sky of hot pink and lime color blocks."
+      "prompt": "Tall portrait illustration: inside a cluttered scrap workshop in a garage, two boxy, clearly mechanical scrap mecha robots painted in lime and pink spray-paint patterns, with spiked armor plates and rocket launchers welded together, stand parked side by side under a single hanging work lamp, tools, tires and spray cans around their feet. The garage door is open behind them onto a dusky sky with a huge angular purple alien battleship. The top third of the picture is that sky. Pure illustration with no lettering."
     },
     {
       "n": 5,

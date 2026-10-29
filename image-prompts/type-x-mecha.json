@@ -1,37 +1,37 @@
 {
   "slug": "type-x-mecha",
-  "preset": "06 Cool - Combat Robot",
+  "preset": "08 Games - Battletech (Tactics/3D)",
   "style": "Palette of crimson and gunmetal grey armor, polished steel, pale gold lights, dusky violet-grey sky. No text, numbers, logos or markings anywhere.",
   "images": [
     {
       "n": 1,
       "role": "title",
       "ratio": "16:9",
-      "prompt": "Wide cinematic view of a rocky battlefield at dusk with war machines of hugely different sizes. On the right, a few small boxy two-legged walker machines in the foreground; in the middle a tall humanoid war mecha robot in crimson and gunmetal armor holding a long rifle; far behind, a colossal fortress mecha the size of a mountain towers in the haze. A long armored battlecruiser hangs in the sky above. The lower left of the picture is open dark rocky ground."
+      "prompt": "Wide cinematic view of a rocky battlefield at dusk with war machines of hugely different sizes. On the right, a few small boxy two-legged walker machines in the foreground; in the middle a heavy armored walker war machine on four thick mechanical legs with a twin cannon turret and bolted crimson and gunmetal armor plates; far behind, a colossal blocky fortress war machine the size of a mountain towers in the haze. A long armored battlecruiser hangs in the sky above. The lower left of the picture is open dark rocky ground."
     },
     {
       "n": 2,
       "role": "vignette",
       "ratio": "16:9",
-      "prompt": "High wide view of a rocky planet battlefield: a mixed army advances down from a hilltop base of factories, gantries and landing pads. Rows of small boxy walker machines and tracked tanks march in formation, led by a tall humanoid war mecha robot in crimson and gunmetal armor holding a long rifle. Dust clouds, distant enemy towers on the horizon."
+      "prompt": "High wide view of a rocky planet battlefield: a mixed army rolls down from a hilltop base of factories, gantries and landing pads. Rows of small boxy walker machines and tracked tanks move in formation, led by a tall boxy, clearly mechanical bipedal war mecha with a square visor head and bolted crimson and gunmetal armor plates, holding a long cannon. Dust clouds, distant enemy towers on the horizon."
     },
     {
       "n": 3,
       "role": "feature",
       "ratio": "16:9",
-      "prompt": "A lineup of six mechanical war robots standing side by side on a flat grey plain, each one much bigger than the last, from left to right: a small crude boxy walker, a sleek armored fighting machine, a tall humanoid mecha with a rifle, a more refined humanoid mecha with glowing parts, a colossal fortress mecha, and a gigantic mecha so huge its head is lost in the clouds. Crimson and gunmetal armor, side view, size comparison."
+      "prompt": "A lineup of six blocky mechanical war machines standing side by side on a flat grey plain, each one much bigger than the last, from left to right: a small crude boxy walker, an armored tracked tank, a four-legged walker tank with a cannon turret, a six-legged spider walker tank with glowing panels, a colossal fortress walker like a moving castle, and a gigantic machine so huge its top is lost in the clouds. Crimson and gunmetal armor plates, side view, size comparison."
     },
     {
       "n": 4,
       "role": "boxart",
       "ratio": "2:3",
-      "prompt": "Tall portrait scene: a boxy, clearly mechanical humanoid war mecha robot in crimson and gunmetal armor plates stands on a rocky ridge holding a long rifle, seen from a low angle. Behind it in the clouds looms the dark silhouette of a colossal mecha many times its size, its eyes glowing pale gold. The top third of the picture is a wide dusky violet-grey sky."
+      "prompt": "Tall portrait scene seen from a low angle: a heavy armored walker war machine on four thick mechanical legs with a twin cannon turret and bolted crimson and gunmetal armor plates, strides over a rocky ridge, dust kicking up from its feet. Behind it in the clouds looms the dark blocky silhouette of a colossal fortress war machine many times its size, with rows of pale gold lights. The top third of the picture is a wide dusky violet-grey sky."
     },
     {
       "n": 5,
       "role": "story",
       "ratio": "16:9",
-      "prompt": "A rocky planet seen from orbit, its curve filling the lower part of the picture. Above it a fleet of long armored battlecruisers and carrier ships in crimson and gunmetal. From the open bay of the nearest carrier, small humanoid mecha robots launch toward the clouds below, engine glows trailing behind them. Black starry space."
+      "prompt": "A rocky planet seen from orbit, its curve filling the lower part of the picture. Above it a fleet of long armored battlecruisers and carrier ships in crimson and gunmetal. From the open bay of the nearest carrier, small boxy landing pods with engine glows drop toward the clouds below. Black starry space."
     }
   ]
 }

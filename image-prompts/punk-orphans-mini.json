@@ -10,7 +10,7 @@
     {"n": 2, "name": "orphans", "ratio": "3:2", "prompt": "A garage full of military gear, spray cans and manuals"},
     {"n": 3, "name": "boom", "ratio": "3:2", "prompt": "A crater blown in a dirt hillside, smoke rising"},
     {"n": 4, "name": "region", "ratio": "3:2", "prompt": "A hand-drawn map pinned to a garage wall with marker scribbles"},
-    {"n": 5, "name": "wall", "ratio": "3:2", "prompt": "A brick wall covered in colorful graffiti tags"},
+    {"n": 5, "name": "wall", "ratio": "3:2", "prompt": "A brick wall covered in abstract spray-painted stars, arrows and splatter shapes"},
     {"n": 6, "name": "battle", "ratio": "3:2", "prompt": "A scrap robot parked in a garage under a single light bulb"},
     {"n": 7, "name": "fortress", "ratio": "3:2", "prompt": "A spiked concrete bunker with gun turrets on a hill"},
     {"n": 8, "name": "arsenal", "ratio": "3:2", "prompt": "Several rocket launchers welded together and wrapped in duct tape"},
