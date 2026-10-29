@@ -168,6 +168,7 @@ Up to 70 Klein images a day. Use `python tools/images.py check`, then `gen` and 
 
 Pages only go live once their images exist. Keep page work on a branch until its image pass is done.
 
-- [ ] Merge to `main` and push (GitHub Pages deploys automatically)
-- [ ] Spot-check both mirrors on desktop and phone
-- [ ] Update the project count in `reference/outreach/` post texts and announce
+- [x] Merge to `main` and push (GitHub Pages deploys automatically)
+- [x] Spot-check both mirrors on desktop and phone
+- [x] Update the project count in `reference/outreach/` post texts (70)
+- [ ] Announce
