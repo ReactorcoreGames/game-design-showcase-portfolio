@@ -114,7 +114,13 @@
             else if (tag === "p") { text = line(inline(n)); if (text) out.push(text); }
             else if (tag === "figure") {
                 var cap = n.querySelector("figcaption");
-                if (cap) out.push("> " + line(inline(cap)));
+                if (cap && cap.firstElementChild && cap.firstElementChild.tagName === "B" && cap.firstChild === cap.firstElementChild) {
+                    // a gallery caption: its leading bold label, then the text, as in the step chains
+                    var copy = cap.cloneNode(true), label = line(copy.firstElementChild.textContent);
+                    copy.firstElementChild.remove();
+                    out.push("> **" + label + "**: " + line(inline(copy)));
+                }
+                else if (cap) out.push("> " + line(inline(cap)));
             }
             else if (tag === "table") out.push(table(n));
             else if (cls.contains("p-chain")) out.push(chain(n));

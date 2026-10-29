@@ -110,7 +110,7 @@ h2, h3 { font-family: var(--font-title); }
 .p-section { padding: clamp(2.2rem, 5vw, 3.4rem) 0 0; }
 .p-section > h2 { margin-bottom: 1.1rem; }
 .p-section > p, .p-prose p { max-width: 72ch; }
-.p-prose h3 { margin: 1.8rem 0 0.6rem; color: var(--p-1); font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem); }
+.p-prose h3, .p-section > h3 { margin: 1.8rem 0 0.6rem; color: var(--p-1); font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem); }
 .p-lead { font-size: clamp(1.08rem, 1rem + 0.4vw, 1.25rem); color: var(--p-text); max-width: 68ch; }
 .section-mark .icon { color: var(--p-1); }
 .section-mark::after { background: linear-gradient(90deg, color-mix(in srgb, var(--p-1) 70%, transparent), transparent); }
@@ -155,6 +155,28 @@ h2, h3 { font-family: var(--font-title); }
 @media (max-width: 760px) {
     .p-shot figcaption, .p-feature .p-shot figcaption { position: static; max-width: none; border-top: 0; }
 }
+
+/* ---------- Galleries ---------- */
+
+/* Half-size secondary images (640x360) in a row of two (.p-gallery) or three (.p-gallery.three),
+   each captioned underneath. Only the richer pages have them. Unlike the minis they show what the
+   text describes, so they keep their alt text, and each caption becomes a quote in the Markdown. */
+.p-gallery { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 1.6rem 0 0.6rem; }
+.p-gallery.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.p-gallery figure {
+    margin: 0;
+    background: var(--p-panel);
+    border: 1px solid color-mix(in srgb, var(--p-1) 30%, transparent);
+}
+.p-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.p-gallery figcaption { padding: 0.65rem 0.85rem 0.8rem; font-size: 0.92rem; line-height: 1.45; color: var(--p-text); }
+.p-gallery figcaption b {
+    display: block; margin-bottom: 0.2rem;
+    font-family: var(--font-ui); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--p-1);
+}
+@media (max-width: 760px) { .p-gallery.three { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .p-gallery { grid-template-columns: 1fr; } }
 
 /* ---------- Mini images ---------- */
 

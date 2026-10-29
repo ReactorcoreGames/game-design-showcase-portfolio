@@ -52,7 +52,7 @@ FONTS = [
     ("Anklepants.otf", "anklepants.woff2", None, None),                     # CC0, ChainReactionDemolitionPunch, bunkership, thunderstrike-justice, god-tier-tantrum
     ("6809 Chargen.otf", "chargen-6809.woff2", None, None),                 # CC0, ChainReactionDemolitionPunch, tile-mechs
     ("Audiowide-Regular.ttf", "audiowide.woff2", None, None),               # SIL OFL, City Buster, spacelancer, power-pile, core-kicker
-    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace, smash-droids
+    ("Jersey10-Regular.ttf", "jersey-10.woff2", None, None),                # SIL OFL, City Buster, colossal_devastators, roomspace, smash-droids, topverse
     ("Exo2.0-Black.otf", "exo2-black.woff2", None, None),                   # SIL OFL, Collidotron, human-apex
     ("Electrolize-Regular.ttf", "electrolize.woff2", None, None),           # SIL OFL, Collidotron, bunkership, roomspace
     ("Spectrashell.otf", "spectrashell.woff2", None, None),                 # CC0, Custom Dismount, Underground Brawl, lattice-walker, aal-exterminator
@@ -78,7 +78,7 @@ FONTS = [
     ("Zeroes One.otf", "zeroes-one.woff2", None, None),                     # CC0, StardustAssault, shape-smasher
     ("MatrixTypeDisplay-Regular.ttf", "matrixtype-display.woff2", None, None),  # CC0, StardustAssault
     ("Unsteady Oversteer.otf", "unsteady-oversteer.woff2", None, None),     # CC0, Zero Space Robo Derby, shape-smasher
-    ("Zeroes Three.otf", "zeroes-three.woff2", None, None),                 # CC0, Zero Space Robo Derby
+    ("Zeroes Three.otf", "zeroes-three.woff2", None, None),                 # CC0, Zero Space Robo Derby, topverse
     ("Cranberry Gin.otf", "cranberry-gin.woff2", None, None),               # CC0, abyssal_caretaker
     ("ExpletusSans-SemiBoldItalic.ttf", "expletus-sans-semibold-italic.woff2", None, None),  # SIL OFL, abyssal_caretaker
     ("Exo2.0-BlackItalic.otf", "exo2-black-italic.woff2", None, None),      # SIL OFL, admiralwars, vectorthunder, god-tier-tantrum, power-pile

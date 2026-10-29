@@ -8,7 +8,8 @@ A spec with an "out" folder (relative to the repo) is a free-form section spec i
 project's five: any number of images, each with a "name", saved as <out>/<NN>-<name>.jpg
 and no thumbnail. The AAL page (site/aal/) uses one, and so do the project pages' mini images:
 those specs add "size" ([320, 240]: centre-crop and resize to exactly that), "quality" (JPEG,
-default 82) and "lead" (text put in front of every prompt, for SDXL).
+default 82) and "lead" (text put in front of every prompt, for SDXL). An image's own "size"
+overrides the spec's, so one spec can mix full-size and half-size images (a richer page's extras).
 
     python tools/images.py check  [slug ...]             validate specs, show lengths and image count
     python tools/images.py gen    slug ... [--dry-run]   generate through BAIG (klein4b, Standard tier)
@@ -257,10 +258,11 @@ def cmd_finish(args) -> None:
             if only is not None and img["n"] not in only:
                 continue
             src = find_raw(slug, img.get("model", args.model), img["n"])
-            im = fit_size(Image.open(src), spec["size"]) if spec.get("size") else scale_to_area(Image.open(src))
+            size = img.get("size") or spec.get("size")
+            im = fit_size(Image.open(src), size) if size else scale_to_area(Image.open(src))
             dest = dest_path(spec, img)
-            size = save_jpeg(im, dest, spec.get("quality", JPEG_QUALITY))
-            print(f"{dest.relative_to(REPO)}  {im.size[0]}x{im.size[1]}  {size // 1024} KB")
+            kb = save_jpeg(im, dest, spec.get("quality", JPEG_QUALITY)) // 1024
+            print(f"{dest.relative_to(REPO)}  {im.size[0]}x{im.size[1]}  {kb} KB")
             if img["n"] == 2 and not spec.get("out"):
                 thumb = Image.open(src).convert("RGB")
                 thumb.thumbnail((THUMB_SIZE[0] * 4, THUMB_SIZE[1] * 4))

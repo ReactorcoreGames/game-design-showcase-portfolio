@@ -1,6 +1,7 @@
 """Move the game design articles off Google Docs and onto the site.
 
-The sources are Google Docs "Web page (.html, zipped)" exports in assets/gd articles raw/ (gitignored).
+The sources are Google Docs "Web page (.html, zipped)" exports in assets/gd articles raw/ (gitignored),
+or, for articles written straight for the site, a hand-written HTML fragment in articles-src/ ("native").
 site/articles.js is the catalog: titles, summaries, shelves and order all come from there, and every
 entry with a slug in SOURCES below gets a page.
 
@@ -15,6 +16,10 @@ template's closing panel, unwraps google.com/url redirects, points links to othe
 Docs at their pages here, rebuilds nested lists, and keeps only bold, italic and superscript.
 Images are resized to at most 800 px wide (or twice their width in the doc, if smaller) and
 re-encoded as WebP into site/articles/images/<slug>/.
+
+A native source is the finished article: an "In short" part, a line <!-- body -->, then the body, in the
+same HTML the cleanup produces (h2s with ids, p, ul/ol, figure). Its images are made by hand into
+site/articles/images/<slug>/ and are left alone by the build.
 """
 
 from __future__ import annotations
@@ -36,6 +41,7 @@ REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "site"
 OUT = SITE / "articles"
 RAW = REPO / "assets" / "gd articles raw"
+NATIVE = REPO / "articles-src"
 WORK = REPO / "_work" / "articles"
 CATALOG = SITE / "articles.js"
 BASE = "https://reactorcoregames.github.io/game-design-showcase-portfolio/"
@@ -63,6 +69,7 @@ SOURCES = {
     "why-i-dont-play-competitive-games": "Why I Don't Play Competitive Human Vs Human Games Anymore",
     "universe-life-and-death-1": "My View On The Universe, Life And Death Pt1",
     "universe-life-and-death-2": "My View On The Universe, Life And Death Pt2",
+    "ad-circus": {"native": "ad-circus.html", "written": "October 2026"},
     # C2. Options (all optional), matched against a block's text from its start:
     #   start      the first block kept (default: the first heading); blocks before it are dropped
     #   stop       the block where the article ends (not included)
@@ -75,6 +82,7 @@ SOURCES = {
     #   links      heading -> page: a "See the showcase page" link under that heading
     #   written    shown in the header, for articles that are a snapshot of their time
     #   guest      guest-article header: author, author_url, site, published, note
+    #   native     a hand-written source in articles-src/ instead of a zip (see the top of this file)
     "reactorcores-big-projects": {
         "zip": "!Reactorcore's Big Projects",
         "start": "General Design Tenets",
@@ -437,6 +445,25 @@ class Converter:
         return {"summary": "\n".join(summary), "body": body}
 
 
+class Native:
+    """A hand-written article: already clean HTML, so only split it and collect what the page needs."""
+
+    def __init__(self, path: Path):
+        if not path.exists():
+            sys.exit(f"missing source {path}")
+        self.text = path.read_text(encoding="utf-8")
+        self.images = re.findall(r"<img ", self.text)
+        self.headings = [(2, hid, html.unescape(re.sub(r"<[^>]+>", "", t)))
+                         for hid, t in re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', self.text)]
+        self.words = len(re.sub(r"<!--.*?-->|<[^>]+>", " ", self.text).split())
+
+    def convert(self) -> dict:
+        if "<!-- body -->" not in self.text:
+            sys.exit("native source needs a <!-- body --> line between the summary and the body")
+        summary, body = self.text.split("<!-- body -->", 1)
+        return {"summary": summary.strip(), "body": body.strip()}
+
+
 # ---------- page ----------
 
 PAGE = Template((Path(__file__).parent / "article_template.html").read_text(encoding="utf-8"))
@@ -451,13 +478,6 @@ def build(slug: str, shelves: list[dict], articles: list[dict]) -> None:
     if not entry:
         sys.exit(f"{slug}: no articles.js entry with this slug")
     opts = source(slug)
-    zpath = RAW / f"{opts['zip']}.zip"
-    if not zpath.exists():
-        sys.exit(f"{slug}: missing source {zpath}")
-    work = WORK / slug
-    with zipfile.ZipFile(zpath) as z:
-        z.extractall(work)
-    doc = next(work.glob("*.html"))
 
     doc_links = {}
     for a in articles:
@@ -466,9 +486,19 @@ def build(slug: str, shelves: list[dict], articles: list[dict]) -> None:
             doc_links[m[1]] = f"{a['slug']}.html"
 
     img_dir = OUT / "images" / slug
-    for old in img_dir.glob("*.webp") if img_dir.exists() else []:
-        old.unlink()                        # generated files only; rebuilt below
-    conv = Converter(slug, doc.read_text(encoding="utf-8"), doc.parent, doc_links, opts)
+    if opts.get("native"):
+        conv = Native(NATIVE / opts["native"])
+    else:
+        zpath = RAW / f"{opts['zip']}.zip"
+        if not zpath.exists():
+            sys.exit(f"{slug}: missing source {zpath}")
+        work = WORK / slug
+        with zipfile.ZipFile(zpath) as z:
+            z.extractall(work)
+        doc = next(work.glob("*.html"))
+        for old in img_dir.glob("*.webp") if img_dir.exists() else []:
+            old.unlink()                    # generated files only; rebuilt below
+        conv = Converter(slug, doc.read_text(encoding="utf-8"), doc.parent, doc_links, opts)
     parts = conv.convert()
     minutes = max(1, round(conv.words / WORDS_PER_MINUTE))
 
@@ -560,7 +590,9 @@ def cmd_list(args) -> None:
     _, articles = read_catalog()
     for a in articles:
         slug = a.get("slug", "")
-        src = "source ok" if slug in SOURCES and (RAW / f"{source(slug)['zip']}.zip").exists() else "no source"
+        opts = source(slug) if slug in SOURCES else {}
+        path = NATIVE / opts["native"] if "native" in opts else RAW / f"{opts.get('zip')}.zip"
+        src = "source ok" if opts and path.exists() else "no source"
         page = "page ok" if slug and (OUT / f"{slug}.html").exists() else "no page"
         print(f"{slug or '(no slug)':50} {src:10} {page:8} {a['title']}")
 

@@ -86,6 +86,8 @@ Heroic figures get flagged even when nothing is violent, probably by the output'
 
 Machines that look like bodies get the same treatment. In batch 11 a "gaunt skeletal biomechanical war machine" (Thermonuclear Berserker, Digital Anime 90s preset) was flagged on every combat shot, then again as "clearly robotic" with a skull-shaped head, and again with all destruction taken out; only "a lean, spindly combat mecha robot with a narrow pointed visor head" passed, and only in a calm shot. Its combat shots went to Nano Banana. Keep skeleton, rib, skull and claw words off machines from the first prompt.
 
+Presets can trigger it on their own. On Type 1-X Mecha, the `06 Cool - Combat Robot` preset (whose text reimagines the subject as "a towering armored combat mecha" with "powerful articulated limbs") was flagged on all five images, even an orbital fleet shot with no robot in it. Avoid that preset. On `08 Games - Battletech`, a close standing bipedal mecha was still flagged, and four-legged or spider walker tanks passed; bipedal mecha passed only as small parts of wide scenes. On Titanium Punk Orphans (Popart), every 2:3 box art of the scrap robots was flagged (posing, leaping, even parked in a garage) while the same robots passed in 16:9 shots, so a tall frame filled by one robot seems to read as a figure. Plan machine box art as a scene, not a portrait.
+
 Painterly presets sign their work. The Frazetta Oil Paint and Digital Anime 90s presets put a small painted signature in a bottom corner of about one image in three, so check the corners at full size, not on the collage. Remove them as below.
 
 Nano Banana doesn't always obey its no-text line: on a 2:3 box art it painted a made-up title in big letters. Manga presets (Murata) add speech-bubble lettering on their own. Small lettering on plain sky can be removed with OpenCV inpainting (`cv2.inpaint`, masking only the strokes) on the finished JPG; note it in the manifest, because a later `finish` overwrites the fix.
@@ -116,6 +118,16 @@ Project pages also get up to ten small mood images beside their lore, layer and 
 - The prompt is the section's opening line, lightly trimmed of names SDXL can't know. Don't chase accuracy; it's flavor, and the thumbnail size hides flaws.
 - `size` and `quality` make `finish` centre-crop to 4:3 and save at exactly 320×240, about 7 to 10 KB each.
 - Run: `gen <slug>-mini --model sdxl --max 999`, then `finish <slug>-mini --model sdxl`, then `collage <slug>-mini`. SDXL is slow (several minutes for ten), so run it in the background while doing other work. Reroll duds (an image whose mood fights the section) at most twice. Changing only the `lead` doesn't make a new batch: BAIG names its files from the prompt alone, so a rerun reuses the old images. Reword the prompts themselves (on Auto Art Chess, a lead with "rose" in it drew roses, and swapping the lead changed nothing until the prompts were reworded). SDXL sometimes blocks one image of a set (`blocked=1` in the batch line), and `finish` then stops at that image without saving the ones after it: reword the blocked prompt, run `gen ... --only <n>` (a plain rerun reuses the old batch and changes nothing), and run `finish` again.
+
+## Richer pages: a sixth main image and secondary images
+
+A few big designs get a richer page on Reactorcore's word (the checklist line says so, with its own limits): the five main images on Nano Banana 2 Lite, possibly a sixth, and up to nine Klein secondary images shown at half size. AAL Universe: Perpetual Boundless Freedom was the first.
+
+- The five main images stay in the normal spec, each marked `"model": "nano-banana-2-lite"`, generated with `gen <slug> --model nano-banana-2-lite`.
+- Everything else goes in one free-form spec, `image-prompts/<slug>-extra.json`, with `"out": "site/projects/extra/<slug>"`. A sixth main image is a full-size entry marked with the Nano Banana model; the secondaries carry `"size": [640, 360]` on each image, so `finish` centre-crops and resizes those to half the standard size while the sixth stays full size (an image's own `size` overrides the spec's). Generate per model with `--only`: `gen <slug>-extra --model nano-banana-2-lite --only 1`, then `gen <slug>-extra --only 2,3,…` for Klein, then one `finish <slug>-extra`.
+- On the page, secondaries go in `.p-gallery` (two per row) or `.p-gallery.three`, each figure with a short caption under it; see `page-brief.md`.
+- Nano Banana painted made-up place names and orbit rings on a star-system vista despite the no-text line. Ask for "a painting rather than a map" and say "no orbit lines, no diagram, no labels" when a scene could read as a chart.
+- Klein secondaries follow the scene loosely: "a rover drives up the ramp into the dropship" came back as the rover parked beside it. Check each against its caption and fix the alt text or caption.
 
 ## SDXL fallback
 
