@@ -1,0 +1,20 @@
+{
+  "slug": "aal-perpetual-boundless-freedom-mini",
+  "out": "site/projects/mini/aal-perpetual-boundless-freedom",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "03 Style - Graphite Watercolor",
+  "lead": "Soft watercolor painting, dawn light, periwinkle blue and rose pink washes. ",
+  "images": [
+    {"n": 1, "name": "universe", "ratio": "3:2", "prompt": "A calm field of galaxies inside a vast glowing bowl whose rim rises into swirling storms"},
+    {"n": 2, "name": "exploration", "ratio": "3:2", "prompt": "Humans, friendly aliens and robots on a balcony of a peaceful colony city, watching ships depart"},
+    {"n": 3, "name": "who-you-are", "ratio": "3:2", "prompt": "A young adult waking up at a window of a family house on an alien world, a rover parked outside"},
+    {"n": 4, "name": "moment", "ratio": "3:2", "prompt": "A person in a work suit carrying a heavy crate across a rope bridge over a canyon"},
+    {"n": 5, "name": "situation", "ratio": "3:2", "prompt": "A traveller on a hill spotting a strange glowing anomaly far away on the horizon"},
+    {"n": 6, "name": "calling", "ratio": "3:2", "prompt": "A traveller with a backpack choosing between three roads: one to a green valley, one to a city, one up toward the stars"},
+    {"n": 7, "name": "evening", "ratio": "3:2", "prompt": "A cozy sanctuary home at evening, warm lit windows, a starship parked in the field beside it"},
+    {"n": 8, "name": "matter", "ratio": "3:2", "prompt": "Neat piles of stone, metal ore, wood and blue crystal stacked in a cave beside a digging tool"},
+    {"n": 9, "name": "workshop", "ratio": "3:2", "prompt": "A cluttered workshop with a workbench, blueprints pinned on the wall and a half-built machine"},
+    {"n": 10, "name": "people", "ratio": "3:2", "prompt": "Townsfolk chatting and trading at a small colony market square, speech and laughter"}
+  ]
+}

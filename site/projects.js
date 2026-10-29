@@ -62,6 +62,22 @@ window.PROJECTS = [
     status: "concept", added: "2026-10-26"
   },
   {
+    page: "aal-perpetual-boundless-freedom.html", prefix: "aal-perpetual-boundless-freedom",
+    title: "AAL Universe", subtitle: "Perpetual Boundless Freedom",
+    icon: "ringed-planet-lorc", tint: "blue",
+    blurb: "Live one life after another in an endless side-view universe with no levels and no loading doors: dig into planets, drive into dropships, fly them into carriers, and come back years later to find the places you left overgrown, rebuilt or ruined.",
+    genres: ["sandbox", "action", "physics", "vehicles"], tags: ["persistent universe", "vehicles inside vehicles", "equivalent exchange", "rebirth"],
+    universe: "aal", status: "concept", added: "2026-10-26"
+  },
+  {
+    page: "topverse.html", prefix: "topverse",
+    title: "TopVerse", subtitle: "Twin-Stick Universe Simulator",
+    icon: "nested-eclipses-lorc", tint: "green",
+    blurb: "Thirty-odd small top-down games on one framework, from a microbe curing a disease to god machines in hyperspace. Make a decision on the region map, play it out on foot or in a vehicle, and the universe keeps the result.",
+    genres: ["action", "sandbox", "strategy", "vehicles"], tags: ["persistent universe", "twin-stick", "campaign generator", "fleets"],
+    status: "concept", added: "2026-10-26"
+  },
+  {
     page: "core-kicker.html", prefix: "core-kicker",
     title: "Core Kicker", subtitle: "Reactor Meltdown Pinball",
     icon: "pinball-flipper-delapouite", tint: "magenta",

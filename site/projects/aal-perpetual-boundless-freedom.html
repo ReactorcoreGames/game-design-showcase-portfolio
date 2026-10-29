@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Universe: Perpetual Boundless Freedom</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: live one life after another in an endless 2D side-view universe with no levels and no loading doors. Dig into planets, drive into ships, fly ships into carriers, and come back years later to find the places you left changed.">
+    <meta name="keywords" content="game design concept, universe simulator, seamless open universe, 2D side view, vehicles inside vehicles, equivalent exchange, persistent world, procedural generation, rebirth, infinite metagame, AAL universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-perpetual-boundless-freedom.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Universe: Perpetual Boundless Freedom">
+    <meta property="og:description" content="A game design concept: one continuous side-view universe where you walk, dig, drive, fly and live, and where the places you leave keep living without you. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-perpetual-boundless-freedom.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-perpetual-boundless-freedom_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a side-view cross-section of a world, from a tunnel underground to a carrier starship in orbit">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Universe: Perpetual Boundless Freedom">
+    <meta name="twitter:description" content="A game design concept: one continuous side-view universe where you walk, dig, drive, fly and live, and the places you leave keep living without you.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-perpetual-boundless-freedom_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Universe: Perpetual Boundless Freedom",
+        "alternateName": "Planet Warfare",
+        "description": "A game design concept, not a released game: a persistent, endlessly playable universe played as a 2D side-view action game. One continuous universe with no levels or loading doors, vehicles inside vehicles, everything made of materials, places that age while you're away, and rebirth after your whole household is lost. Set in Reactorcore's AAL universe.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Sandbox", "Simulation", "Action", "Adventure"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-perpetual-boundless-freedom.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-perpetual-boundless-freedom_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0b0d1c">
+
+    <link rel="preload" href="../fonts/cranberry-gin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* AAL Universe: Perpetual Boundless Freedom: sunrise seen from orbit. Periwinkle sky and
+           dawn rose over deep indigo night, with warm starlight cream for highlights. Cranberry Gin,
+           thin and wide open, for the title and headings; 6809 Chargen, a pixel face, for the
+           subtitle and kickers, after the game's pixel-art look. */
+        @font-face { font-family: "Cranberry Gin"; src: url("../fonts/cranberry-gin.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "6809 Chargen"; src: url("../fonts/chargen-6809.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0b0d1c;
+            --flow-2: #222b62;
+            --grid-minor: rgba(170, 185, 255, 0.045);
+            --grid-major: rgba(170, 185, 255, 0.10);
+            --p-ground: rgba(12, 14, 30, 0.95);
+            --p-panel: #151a33;
+            --p-1: #9fb0ff;
+            --p-2: #ffa8c8;
+            --p-3: #fff3e2;
+            --p-text: #dfe2f2;
+            --p-dim: #a3a8c6;
+            --p-line: rgba(180, 195, 255, 0.16);
+            --font-title: "Cranberry Gin", "Segoe UI", sans-serif;
+            --font-sub: "6809 Chargen", "Segoe UI", sans-serif;
+            --shade: #080a16;
+        }
+
+        /* Title effect, "pulsing star": the game's stars don't set, they pulse between a dim phase
+           and a bright one. The name cools to periwinkle starlight, then warms to a dawn glow, over
+           layered dark shadows that keep the thin letters legible at either phase. */
+        .p-name {
+            font-size: clamp(2.6rem, 1.2rem + 6vw, 6.6rem);
+            letter-spacing: 0.02em;
+            animation: star-pulse 10s ease-in-out infinite;
+        }
+        @keyframes star-pulse {
+            0%, 100% { color: #e9ecff; text-shadow: 0 0 3px var(--shade), 0 0 7px var(--shade), 0 0 14px var(--shade), 2px 2px 0 var(--shade), 0 0 28px rgba(159, 176, 255, 0.3); }
+            50% { color: #fffaf0; text-shadow: 0 0 3px var(--shade), 0 0 7px var(--shade), 0 0 14px var(--shade), 2px 2px 0 var(--shade), 0 0 20px rgba(255, 214, 170, 0.8), 0 0 50px rgba(255, 168, 200, 0.5); }
+        }
+        .p-sub { font-size: clamp(0.95rem, 0.7rem + 1.3vw, 1.7rem); letter-spacing: 0.04em; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 0 0 22px var(--shade); }
+        /* A horizon line under the subtitle that brightens with each dawn. */
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.4rem; height: 2px;
+            background: linear-gradient(90deg, var(--p-1), var(--p-2) 60%, transparent);
+            animation: dawn-line 10s ease-in-out infinite;
+        }
+        @keyframes dawn-line {
+            0%, 100% { opacity: 0.5; box-shadow: 0 0 4px rgba(159, 176, 255, 0.3); }
+            50% { opacity: 1; box-shadow: 0 0 14px rgba(255, 168, 200, 0.85), 0 0 30px rgba(255, 214, 170, 0.45); }
+        }
+        .section-mark::after { animation: h2-line 10s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 10px rgba(255, 168, 200, 0.6); } }
+
+        /* Cranberry Gin's capital B reads as a D in capitals, so headings stay in mixed case. */
+        h2, h3, .p-sendoff h2 { text-transform: none; letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.82rem; letter-spacing: 0.06em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 400; letter-spacing: 0.06em; }
+
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div > div > div > div { --c: var(--p-2); }
+
+        .tiers td:first-of-type { width: 22%; }
+        .callings td:last-of-type { width: 55%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1.15rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/aal-perpetual-boundless-freedom_1_title.jpg" alt="A person in a work jumpsuit on a grassy hilltop of a small curved planet at dawn, a long cream carrier starship in the sky above and a dropship rising toward it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">AAL Universe</span><span class="p-sub">Perpetual Boundless Freedom</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">You are one ordinary, versatile person in an endless, living universe, drawn as one continuous 2D side-view world. You walk on planets whose surfaces wrap all the way round, dig into them and build on them. You drive a rover up a ramp into a dropship, walk to its cockpit, fly it into orbit and dock in your carrier's hangar. Then you climb out, go to the bridge and take the carrier to another star.</p>
+            <p>Nothing on the way is a level, a room or a loading door. Everything near you is simulated, and everything far away is kept as data that catches up when you return, so the places you leave are overgrown, rebuilt or ruined when you come back. Every object is made of materials, and nothing is ever created from nothing.</p>
+            <p>The universe tends toward calm. Danger exists, but it rarely comes looking for you, and every session you choose whether to garden a valley, chart a nebula, help a colony through a crisis or go to war on a frontier. When your whole household is lost, you're reborn somewhere else, years later, and the universe remembers what you did.</p>
+            <p>This is Reactorcore's oldest and largest design, first drafted in 2011 as Planet Warfare. It carries the physics and data-driven content of Cortex Command and Soldat, the dig-and-build worlds of Terraria, Minecraft and Starbound, and the fantasy of anime like Mobile Suit Gundam: a crew aboard a mothership, travelling from place to place and fighting on land, sea, air and space. It doesn't copy any of them; it asks what would let all of that happen without a script.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/astronaut-helmet-delapouite.png)"></span>Target audience</h3>
+                    <p>People who finish a Gundam series, a Star Wars film or a season of Cowboy Bebop and wish they could <strong>just go and live there</strong>: crew a ship, see the megastructures, make friends, have their own adventures.</p>
+                    <p>Sandbox players whose worlds ran out of reasons. Terraria, Starbound and Minecraft give them the hands and the tools, then nothing to do with a finished base but tear it down. They're also tired of mountains that turn out to be painted backdrops.</p>
+                    <p>The surface is simple: WASD, the mouse, one inventory key and one interact key. All the depth comes from context: what you wear, hold and operate.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/over-infinity-lorc.png)"></span>Game's purpose</h3>
+                    <p><strong>Freedom and choice:</strong> go anywhere, be anyone, do anything in any order, with nothing fenced off by an invisible wall.</p>
+                    <p><strong>Growth, variety and understanding:</strong> a universe that keeps generating places, people and situations nobody scripted, all following rules you can learn.</p>
+                    <p><strong>Meaning and identity:</strong> stories that are truly your own, in a universe that remembers them after you're gone.</p>
+                    <p>It deliberately avoids draining <strong>rest</strong> (every session can end at a safe point, and the universe's clock only runs while you play), <strong>safety</strong> (nothing dangerous comes unprovoked) and <strong>respect for your time</strong> (no grind, not even after a rebirth).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/matryoshka-dolls-delapouite.png)"></span>Core concept</h3>
+                    <p>Open-world games usually build a fixed stage: a painted horizon, scripted events and invisible walls to keep you on the path. Sandboxes give real freedom, then run out of reasons to use it, and infinite worlds bloat the save until players delete their own chunks.</p>
+                    <p>This one builds <strong>the forces instead of the stage</strong>: materials, gravity, people with needs, and a universe that keeps living in the background. Things happen because the world is the way it is.</p>
+                    <p>Above that sit <strong>a calling you choose</strong>, which never runs out, and <strong>situations generated from the real state of the world</strong>, each one finished in an evening or a few.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-perpetual-boundless-freedom_5_story.jpg" alt="A vast plane of glowing galaxies whose far edges curve up into a towering wall of galaxies and cosmic cloud, with a star, small green planets, ships and a ring station in the foreground." width="1280" height="720" loading="lazy">
+            <figcaption>"The universe was never created and will never end. It only changes form, and it remembers."<cite>The universe, in short</cite></figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span>Lore &amp; story</h2>
+            <h3>A universe with an edge</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/01-universe.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The universe has no beginning and no end: no first big bang, no heat death. It's vast but finite, a calm, settled middle of superclusters, galaxies and voids, surrounded by the <strong>Wilderness</strong>, an edge that curves up like the rim of a bowl. Whatever drifts over the rim is reshuffled, combined, purified or corrupted, and sooner or later pushed back in.</p>
+            <p>Matter is never created or destroyed, only changed. Everything settles toward stillness over time, while weather, life, stars and accidents keep shaking it up again. And when too much happens in one place at once, the universe defends itself with a storm of space-time that thins the crowd. Its scientists call it the <a href="../aal/#chaos">Chaos System</a>.</p>
+
+            <h3>The age of exploration</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/02-exploration.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The game is set in the <a href="../aal/">AAL universe</a>, in the era called the Exploration of the Universe. The space monster wars are over. Humanity, long since become Homo mugen, has spread beyond the Milky Way with its alien friends and its machines, into a soft utopia where people live as long as they like and do what they love.</p>
+            <p>Most of the settled universe is at peace. The frontier isn't: remnant space monsters, rogue machines, anomalies, dimensional fallout from the superweapons of earlier wars, and groups who refused the galactic community and hold their own corners of space. And far out, at the edges of the map, the Wilderness is coming into view.</p>
+            <p>Every earlier AAL story happened in this universe's past. Its wrecks, ruins, relics and old superweapon sites are still out there to find.</p>
+
+            <h3>Who you are</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/03-who-you-are.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>Someone's grown-up child, somewhere. The universe is already alive when you arrive, full of stars, planets, cities, ruins, fleets, monsters and friendly strangers, and you wake up in it with a family, a home and a backstory of your own. Maybe there's a spaceport down the road. Maybe your people still work with stone tools.</p>
+            <p>Thanks to digital immortality, death is usually a setback: you're restored at your household's sanctuary. Only if every one of you is lost does your soul return to the astral realm, to be born again elsewhere, years later.</p>
+
+            <h3>The goal right now</h3>
+            <p>Whatever you choose. You can stay and make your corner of the universe beautiful, or leave your family behind and found a crew of your own. You can seek out what threatens the universe and stop it, or travel toward the edge just to see it. The universe offers plenty of reasons, and it doesn't insist on any of them.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls &amp; interface</h2>
+            <p>You control one person directly, the way you would in a platformer or a shooter. Their two hands with opposable thumbs are the whole interface: anything they can hold, wear, enter or operate changes what they can do.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Move</h3>
+                    <dl>
+                        <div><dt>A / D</dt><dd>Walk, or steer whatever you're driving</dd></div>
+                        <div><dt>W</dt><dd>Jump, climb, or thrust up</dd></div>
+                        <div><dt>S</dt><dd>Crouch, descend, or brake</dd></div>
+                        <div><dt>Mouse</dt><dd>Aim; the camera leans the way you look</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Hands</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Use what you're holding: dig, build, fire, repair</dd></div>
+                        <div><dt>Right click</dt><dd>Its second function</dd></div>
+                        <div><dt>E</dt><dd>Interact with what's in front of you: enter, drive, open, talk, pick up</dd></div>
+                        <div><dt>Q</dt><dd>Inventory, worn gear and body slots</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Household</h3>
+                    <dl>
+                        <div><dt>Tab</dt><dd>Switch to another member of your household in range</dd></div>
+                        <div><dt>F</dt><dd>Orders: follow, guard, work, go there</dd></div>
+                        <div><dt>1–4</dt><dd>Quick items and abilities</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Views</h3>
+                    <dl>
+                        <div><dt>Wheel</dt><dd>Zoom from 600% close-up out to 50%</dd></div>
+                        <div><dt>M</dt><dd>Sensor view: what your ship or binoculars can see</dd></div>
+                        <div><dt>Esc</dt><dd>Pause anywhere; the game saves continuously</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>That's all there is, and none of it needs more than a console controller. <strong>Abilities come from equipment</strong>: magnetic boots let you walk on a hull, a jetpack lets you fly in zero gravity, scuba gear lets you dive, climbing hooks let you cling to a cliff, and a sealed suit lets you step into vacuum, heat or radiation. Climb into a rover and the same keys drive it; sit at a carrier's helm and they fly it.</p>
+            <p><strong>"Down" is wherever your floor is.</strong> On a planet that's toward its core; inside a ship it's the deck under your feet, even while the ship rolls. The camera turns with it, so the floor is always the bottom of the screen. Further views are devices in the world: binoculars, a ship's sensors, a station's star map. Better sensors see further and in more spectra (heat, radiation, pressure), and leaving a view is instant.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-perpetual-boundless-freedom_2_vignette.jpg" alt="A side-view cross-section of a world: a homestead and greenhouse on the surface, a person digging a tunnel through colourful rock strata below, a rover driving into a landed dropship, and a carrier starship high in the sky." width="1280" height="720" loading="lazy">
+            <figcaption>"From the tunnel under your house to the carrier in orbit, it's one continuous world. Nothing in between is a loading screen."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="journey">
+            <h2 class="section-mark" id="journey"><span class="icon" style="--icon: url(../icons/rocket-flight-lorc.png)"></span>From the ground to the stars</h2>
+            <p>The heart of the fantasy is a journey with no cuts in it. Here's one, from a hole in the ground to another star system, and every step of it is played:</p>
+            <div class="p-gallery">
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/02-dig.jpg" alt="Cross-section of a hillside: a person digs a lit tunnel through layered rock under a small house, piles of stone, soil and blue crystal stacked at the entrance." width="640" height="360" loading="lazy">
+                    <figcaption><b>1 · Dig</b>Every tile of ground is a quantity of one material. Dig it out and you're carrying a pile of stone, soil or crystal you can store, sell or build with.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/03-drive.jpg" alt="A six-wheeled rover beside a landed dropship at sunset, its ramp lowered and a person standing in its lit cargo bay." width="640" height="360" loading="lazy">
+                    <figcaption><b>2 · Drive</b>Load the haul into the rover, drive it up the ramp into your dropship, park it and walk forward to the cockpit.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/04-dock.jpg" alt="A boxy dropship docking at the open, lit side bay of a long cream carrier starship in orbit above a planet." width="640" height="360" loading="lazy">
+                    <figcaption><b>3 · Fly</b>Lift off through the atmosphere, out of the gravity well, and into the open hangar of your carrier. The dropship, with the rover inside it, now travels with the carrier.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/05-bridge.jpg" alt="A starship bridge with its crew at rounded consoles before a huge window showing a glowing map of star systems." width="640" height="360" loading="lazy">
+                    <figcaption><b>4 · Jump</b>Walk up to the bridge and plot a jump. FTL travel happens in the ship's sensor view, and something on the way can pull you out of it into a real encounter.</figcaption>
+                </figure>
+            </div>
+
+            <h3>Bodies inside bodies</h3>
+            <p>What makes that possible is one rule: <strong>the world is a tree of bodies</strong>. A planet is a body. A carrier is a frame inside it, the dropship a frame inside the carrier, and you're inside the dropship. Each has its own coordinates and its own gravity: toward a planet's core, toward a ship's deck, or none at all in open space. Things inside a moving frame are simulated in the frame's own space, so the crew keeps its footing while the carrier accelerates and rolls.</p>
+            <div class="p-nest" aria-label="Where you are, outermost first">
+                <div><span>The universe</span><small>Superclusters, galaxies and voids, inside the Wilderness rim.</small>
+                    <div><span>A star system</span><small>A pulsing star and around eight celestials.</small>
+                        <div><span>A celestial</span><small>A planet, moon or asteroid: a disc you can walk around.</small>
+                            <div><span>A large frame</span><small>Your carrier, a station or an arcology, with its own gravity.</small>
+                                <div><span>A small frame</span><small>The dropship parked in its hangar.</small>
+                                    <div><span>You</span><small>Standing in the cockpit, on the dropship's floor.</small></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>How fast, how far</h3>
+            <p>The universe is compressed: still huge, but scaled so that a journey fits an evening. Each speed has its own way of seeing:</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Speed</th><th scope="col">Where</th><th scope="col">How you see it</th><th scope="col">How long it takes</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">On foot</th><td>Surfaces and interiors</td><td data-label="View">Close up, zoom 600% to 50%</td><td data-label="Time">Hours to walk around a planet</td></tr>
+                        <tr><th scope="row">Ground and air</th><td>Surfaces and atmosphere</td><td data-label="View">Zoomed out, the live area stretching ahead of you</td><td data-label="Time">Tens of minutes around a planet by rover, a few by aircraft</td></tr>
+                        <tr><th scope="row">Orbit and sublight</th><td>Between the celestials of one system</td><td data-label="View">Epic scale, then the far view</td><td data-label="Time">2 to 10 minutes across a system</td></tr>
+                        <tr><th scope="row">FTL</th><td>Between star systems</td><td data-label="View">The ship's sensor view</td><td data-label="Time">30 to 90 seconds to a neighbouring star</td></tr>
+                        <tr><th scope="row">Deep FTL</th><td>Between galaxies, toward the Wilderness</td><td data-label="View">The sensor view, with better drives</td><td data-label="Time">An expedition of many jumps</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>FTL slows to a crawl near big masses and is useless below a moon's high orbit, as it does throughout the AAL universe. So every landing and every launch is flown for real, through the atmosphere, never skipped by a cutscene.</p>
+
+            <h3>Everything from a bike to a battle station</h3>
+            <p>Vehicles, buildings and stations are the same thing in different sizes: a <strong>frame</strong>, a grid of tiles with its own gravity, a hull and the modules placed inside it. Anchor one to the ground and it's a building. Leave it free and it's a vehicle. Undo the anchors and your base lifts off as a mothership.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Size</th><th scope="col">Length</th><th scope="col">Examples</th><th scope="col">Inside</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Object</th><td data-label="Length">Up to 3 m</td><td data-label="Examples">Tools, crates, bikes, turrets</td><td data-label="Inside">One sprite each</td></tr>
+                        <tr><th scope="row">Small frame</th><td data-label="Length">3–20 m</td><td data-label="Examples">Rovers, mechs, fighters, dropships, houses</td><td data-label="Inside">A cockpit or a few rooms</td></tr>
+                        <tr><th scope="row">Medium frame</th><td data-label="Length">20–200 m</td><td data-label="Examples">Gunships, freighters, bunkers, towers</td><td data-label="Inside">Fully walkable</td></tr>
+                        <tr><th scope="row">Large frame</th><td data-label="Length">200 m–2 km</td><td data-label="Examples">Carriers, stations, arcologies</td><td data-label="Inside">Walkable decks and hangars for smaller frames</td></tr>
+                        <tr><th scope="row">Megastructure</th><td data-label="Length">Over 2 km</td><td data-label="Examples">Ring stations, planet fortresses, pieces of a Dyson swarm</td><td data-label="Inside">Built like a celestial; walkable in parts</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <p>Four layers. The moment-to-moment life is the fun; the layers above it give it direction, and none of them ever has to end.</p>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/dig-hole-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>A body in a physical world</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/04-moment.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Side-view action where everything is made of something. You walk, climb, dig, carry, build, repair, drive, fly and, when it comes to that, fight, all with the same two hands.</p>
+                        <p>Problems are physical and so are their answers. A crossing too wide to jump wants a bridge, a jetpack or a vehicle. A cave too hot to enter wants a heat suit. A load too heavy to carry wants a rover, and a rover too slow wants a dropship. Every piece of gear opens a new way through.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/direction-signs-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>Situations</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/05-situation.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Finite goals with a clear start and a clear end, <strong>generated from the real state of the world</strong>, never scripted: a better place to settle, a monster nest that will grow if left alone, materials your settlement lacks, a stranger who needs help, a cave with traces of an old civilization, a storm on its way.</p>
+                        <p>They reach you the way news does: through your sensors, your comms, the people you meet, and the situation board in your sanctuary. One situation often leads to the next. Reaching the ideal spot becomes building a settlement, which becomes finding materials, which becomes working out how to haul them home.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/compass-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>A calling, a home and a history</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/06-calling.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The goal that never runs out is a <strong>calling</strong> you choose: guard the universe, garden it, find its edge, raise a civilization, or simply live. It changes which situations come to your attention, never what you're allowed to do.</p>
+                        <p>Your <strong>sanctuary</strong> is the persistent home your household returns to, wherever you decide it is: a farmhouse, a city block or a carrier. And the <strong>Chronicle</strong> keeps the history of everything you've done, through every life you've lived.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-1)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/sunrise-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>One evening, start to finish</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/07-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Boot up and see a few clearly highlighted routes: situations near you and situations that fit your calling. Pick one, or ignore them all and go fishing. Play until you've had your fill.</p>
+                        <p>The game saves continuously, and every session can end at a safe point you choose. <strong>The universe's clock only runs while you play</strong>: it ages the places you've left in game time, never behind your back in real life. Nothing nags you to come back, and nothing is lost if you take a month off.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/family-house-delapouite.png)"></span>Game modes</h2>
+            <p>There's one universe and one game. What changes is how many people you live it as: the design started with two modes and folds them into one model, the <strong>household</strong>. Playing solo is simply a household of one.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Way to live</th><th scope="col">What you control</th><th scope="col">When someone dies</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Alone</th><td>Yourself. Companions can travel and fight beside you on their own.</td><td data-label="On death">You're restored at your sanctuary. If it has fallen, you're reborn elsewhere after a time skip, to finish what you started.</td></tr>
+                        <tr><th scope="row">Household</th><td>You plus up to eight members: family, crew, partners. Switch to any of them at any time; the others follow simple orders and live their own lives.</td><td data-label="On death">Play passes straight to another member, with no time skip. Only when every one of them is gone are you reborn, after a longer, harsher skip.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>It's a single-player game at heart. A universe where a player can level a city or crash a planet into a sun can't be shared with strangers without becoming a griefing nightmare. What can be shared is everything else: blueprints, photos of your worlds, the stories of your lives.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="callings">
+            <h2 class="section-mark" id="callings"><span class="icon" style="--icon: url(../icons/compass-lorc.png)"></span>Callings &amp; situations</h2>
+            <p>A sandbox without a reason ends the same way every time: the player builds something wonderful, runs out of things to do with it, and starts blowing it up. The design answers that with two kinds of goal working together. The calling is the infinite one: a role that's never finished, because the universe never stops needing it. Situations are the finite ones, and there's always another.</p>
+            <div class="p-table-wrap">
+                <table class="p-table callings">
+                    <thead><tr><th scope="col">Calling</th><th scope="col">The infinite goal</th><th scope="col">The situations it brings to your attention</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Guardian</th><td data-label="Goal">Seek out what threatens the universe and stop it</td><td data-label="Situations">Growing nests, warlord borders, derelict reactors, calamities in the making</td></tr>
+                        <tr><th scope="row">Gardener</th><td data-label="Goal">Cultivate places into well-kept, beautiful worlds</td><td data-label="Situations">Barren valleys, poisoned rivers, ruins worth restoring, settlements that need a hand</td></tr>
+                        <tr><th scope="row">Pathfinder</th><td data-label="Goal">Reach the edge of the universe and understand it</td><td data-label="Situations">Anomalies on the horizon, uncharted nebulae, places nobody can reach yet</td></tr>
+                        <tr><th scope="row">Founder</th><td data-label="Goal">Raise your household into a civilization that can take on anything</td><td data-label="Situations">Better sites to settle, materials to secure, factories and shipyards to build</td></tr>
+                        <tr><th scope="row">Free spirit</th><td data-label="Goal">None. Just live.</td><td data-label="Situations">Whatever happens to be nearby</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>You can hold several callings, or change them whenever you like. A calling only decides what gets highlighted; every situation stays open to everyone.</p>
+            <div class="p-gallery three">
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/08-gardener.jpg" alt="A terraced garden valley with waterfalls, greenhouse domes and a small settlement, people tending crops under a pastel sky with a ringed planet." width="640" height="360" loading="lazy">
+                    <figcaption><b>Gardener</b>A barren valley, a few seasons of work, and a place worth coming home to.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/09-guardian.jpg" alt="A small armored team and their rover watch from a ridge as a glowing alien hive spreads across a canyon at dusk." width="640" height="360" loading="lazy">
+                    <figcaption><b>Guardian</b>A nest that will keep growing unless someone deals with it. It won't come to you; you decide when to go.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/10-pathfinder.jpg" alt="A small cream ship approaches a field of floating chunks of fused rock, crystal and wreckage before a towering wall of cosmic storms." width="640" height="360" loading="lazy">
+                    <figcaption><b>Pathfinder</b>Near the Wilderness, matter comes back reshuffled: half-planets fused with crystal and wrecks grown into rock.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/atom-core-delapouite.png)"></span>Features &amp; mechanics: the universe engine</h2>
+            <p>A universe that runs without a script needs its laws in place before any content. These are the laws.</p>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stone-tablet-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Foundations</p>
+                        <h3>Laws before content</h3>
+                        <p>Most games build their content first and patch the rules around it. Here nothing is made until the thing it stands on exists. A gun depends on who carries it and where; that person depends on the environment; the environment on the universe's natural laws; and all of it on what the computer can actually run. Each link depends on everything to its left:</p>
+                        <ol class="p-chain" aria-label="What depends on what">
+                            <li><b>The computer</b>How many bodies, fluids and minds can live at once</li>
+                            <li><b>The premise</b>One continuous universe, played as a person</li>
+                            <li style="--c: var(--p-2)"><b>Natural laws</b>Materials, gravity, energy, the Chaos System</li>
+                            <li style="--c: var(--p-2)"><b>Environments</b>Strata, atmospheres, liquids, heat, radiation</li>
+                            <li style="--c: var(--p-3)"><b>People &amp; frames</b>Bodies, gear, vehicles, buildings</li>
+                            <li style="--c: var(--p-3)"><b>Tools &amp; weapons</b>Last of all, built on all of it</li>
+                        </ol>
+                        <p>So there's one kind of fire, one kind of water and one kind of radiation in the whole universe, and everything treats them the same. Energy comes in four forms: <strong>solid</strong> (projectiles, beams, bolts), <strong>area</strong> (heat, gas and liquid spreading tile to tile), <strong>fall-off</strong> (blasts and exhausts that weaken with distance) and <strong>being</strong> (creatures made of gas, slime or plasma). Any new item, from any author, behaves correctly in every place it can ever end up.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/matryoshka-dolls-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>Vehicles inside vehicles, all the way up</h3>
+                        <p>A frame is a tile grid with its own gravity, a hull and modules: a cockpit or bridge, engines and thrusters, a reactor, a gravity generator, turrets, hangars, cargo holds, crew quarters, a med bay, a lab, a workshop, airlocks, doors and elevators. <strong>Every module needs supplies</strong> through real connections: power, fuel, crew. A bigger ship can do more and has more to keep running.</p>
+                        <p>Fly into a bigger frame's hangar and you become part of it, carried wherever it goes. The reverse holds too: destroy a carrier and everything inside is in trouble. From the outside you see a frame's hull; step inside and the hull fades away to show its interior, which outsiders can't see into.</p>
+                        <p>Damage is physical: hull tiles break off, a module stops working when its tiles are destroyed, and boarders come in through breaches, airlocks or a hangar door someone left open.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/aal-perpetual-boundless-freedom_3_feature.jpg" alt="Side-view cutaway of a long cream carrier in orbit, every deck visible: bridge, quarters, a glowing reactor, engines, and a central hangar holding a dropship with a rover parked inside it." width="1280" height="720" loading="lazy">
+                            <figcaption>"The carrier carries the dropship, the dropship carries the rover, and everyone aboard keeps their own floor."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-core-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Celestials</p>
+                        <h3>Planets you can walk all the way around</h3>
+                        <p>In side view, a planet is a <strong>cross-section disc</strong>. Its surface is a ring you can walk, drive or fly around without ever reaching an edge, and below it lie the strata: surface, crust, mantle and core, all pointing "down" to the centre. The disc is cut into wedge-shaped sectors that stream in as you approach.</p>
+                        <p>Around it, a ring of atmosphere cells trades air with its neighbours, and that exchange is the wind. Above the air is orbit, where gravity still pulls but nothing breathes. Gas giants and stars have no surface at all; diving their layers takes a special vehicle.</p>
+                        <p>Celestials don't orbit or spin. <strong>Stars pulse</strong> between a bright, hot phase and a dim, cool one, which gives every world in reach its day and night: sometimes two-minute days, sometimes month-long ones. Planets stay where they are, so you can always find them, dock with them and come home.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/stone-pile-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Matter</p>
+                        <h3>Everything is made of something</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/08-matter.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Close up, terrain is a grid of half-metre tiles, each holding one material. Digging turns tiles into piles you carry, store or feed to machines; building consumes them again. <strong>Equivalent exchange is just counting</strong>: nothing appears from nowhere, and nothing vanishes into nowhere.</p>
+                        <p>Materials come in a handful of groups (light and heavy metals, rock and minerals, hard and soft organics, ice and water, volatile and inert chemicals, and exotics from dead stars and the Wilderness), each with a density, toughness, conductivity, heat tolerance and flammability. <strong>An object's mass, strength and cost follow from its shape and materials.</strong> Build a ten-metre boulder out of cardboard and it'll be light, flammable and fragile, and a one-metre fall will crush it.</p>
+                        <p>Loose rubble settles into clumps that slowly fuse back into the terrain, so debris never piles up forever. And a truly huge blast doesn't simulate every grain: it removes whole blocks and turns them into totals of rubble and dust. Nothing is lost, only counted more broadly.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/anvil-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Making things</p>
+                        <h3>Materials, a workshop and know-how</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/09-workshop.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Making anything takes three things: <strong>materials</strong>, <strong>a place to make it</strong> (a workbench, a fabricator, a shipyard) and <strong>the knowledge</strong> of how. Time, too, which a better workshop shortens. Even terrain, planets and stars can be made, given enough of all three.</p>
+                        <p>Knowledge comes from experiments, as in Eco: run enough of them in a lab and you have a blueprint. Blueprints are things in the world. They can be copied, traded, given away or shared, and lost if every copy is destroyed, which is why libraries and vaults matter.</p>
+                        <p>There are no experience levels. What you can do comes from what you know, what you own and what you can build. Machines need their inputs (power, fuel, ammunition, food) through connections that fit: sockets, pipes, wires, conveyors. No electricity through a wooden pipe, no lava through a copper wire.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/radar-sweep-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The simulation</p>
+                        <h3>A live bubble and a ledger</h3>
+                        <p>A whole universe can't run at full detail on one computer, and it doesn't need to. Detail follows <strong>distance from you</strong>, in three tiers:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table tiers">
+                                <thead><tr><th scope="col">Tier</th><th scope="col">Reach</th><th scope="col">What runs there</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Live</th><td data-label="Reach">About a kilometre around you, and around the frame you're in</td><td data-label="What runs">Everything: physics, tiles, fluids, every mind, combat</td></tr>
+                                    <tr><th scope="row">Near</th><td data-label="Reach">1 to 10 km</td><td data-label="What runs">Coarse movement and simplified minds; ships and people as moving tokens</td></tr>
+                                    <tr><th scope="row">Ledger</th><td data-label="Reach">Everything else</td><td data-label="What runs">Data only: factions, populations, settlements, fleets, celestials, updated by a background sweep every few minutes</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The save keeps only what changed. Any untouched place can be regenerated exactly from its seed, so the save holds the tiles you dug and built, the frames you own, the places you named and the people who matter. That's how a whole universe fits on an ordinary hard drive, and why it's built as a finite universe in a bowl rather than an infinite world that eats the disk.</p>
+                        <p>When a place leaves the ledger, it first gets <strong>the time that has passed and the events that touched it</strong>: overgrowth, decay, flooding, a settlement rebuilt, a base taken over. Leave a fire burning beside a flower bed and the spot is scorched and warm when you return.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/vortex-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A law of nature</p>
+                        <h3>The Chaos System</h3>
+                        <p>Most games hide their performance tricks, or shrug them off with "it's only a game". Here the universe's anti-lag system is <strong>a visible law of nature</strong>, with a budget for every live area: objects, active bodies, minds, fluid cells, particles and mechanisms. Its response grows with the strain:</p>
+                        <ol class="p-chain" aria-label="The Chaos System's response, from calm to severe">
+                            <li><b>Calm</b>Everything runs, with room to spare</li>
+                            <li style="--c: var(--p-3)"><b>Quiet</b>Rubble merges, distant bodies sleep, minds think a little slower</li>
+                            <li style="--c: var(--p-2)"><b>Visible</b>Space shimmers; clutter folds into clumps or falls into rifts</li>
+                            <li style="--c: var(--p-2)"><b>Severe</b>Local storms carry the excess away to the Wilderness</li>
+                        </ol>
+                        <p>The line it never lets anything cross is lag. Because the response is diegetic and predictable, players read it like weather: crowded places feel stormy, so people learn to build sensibly. And <strong>nothing it takes is deleted</strong>; it goes to the Wilderness, and may come back one day. The same system checks modded content when the game starts, so a mod that blows past the part limits gets a warning and a higher place in the culling queue.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/telescope-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Seeing ahead</p>
+                        <h3>The far view</h3>
+                        <p>Side view has an old problem: going fast, you can't see what's ahead. Here the background is the answer. It's a <strong>live far view</strong>, like a forward camera: distant bodies appear as faint dots in the centre of the screen, grow and gain colour as you approach, and drift toward the edge they'll arrive from, so you can see what's coming above, below, ahead and behind.</p>
+                        <p>What appears is chosen by size and brightness against distance, within your sector and its neighbours. Underground, the dark mass of the rock around you replaces the horizon. And things can cross between the background and the play layer: a missile arcs off into the distance and comes back down somewhere else.</p>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="p-gallery">
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/06-asteroid.jpg" alt="A tiny round asteroid with a cabin, trees and a vegetable patch along its curved surface, a person walking on top and a rover parked on its side." width="640" height="360" loading="lazy">
+                    <figcaption><b>Small worlds</b>An asteroid is a kilometre or so around: small enough to walk around before lunch, big enough to live on.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/aal-perpetual-boundless-freedom/07-chaos.jpg" alt="A heap of ship wreckage and crates in orbit being pulled into a shimmering violet-black tear in space edged with electric arcs." width="640" height="360" loading="lazy">
+                    <figcaption><b>Too much in one place</b>Pile up enough wreckage and the universe folds it away into a rift. Somewhere near the edge, it will turn up again.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="extra/aal-perpetual-boundless-freedom/01-coming-home.jpg" alt="A person stands before the overgrown ruins of a homestead at golden hour, vines over its crumbled walls, a mossy rover beside it and a carrier starship waiting in the sky." width="1280" height="720" loading="lazy">
+            <figcaption>"Places you leave keep living without you. Come back after a lifetime and the forest may own the house."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="life">
+            <h2 class="section-mark" id="life"><span class="icon" style="--icon: url(../icons/family-tree-delapouite.png)"></span>Features &amp; mechanics: life in the universe</h2>
+            <p>The laws make the universe possible. These are what make it a place to live.</p>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/soul-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Death and rebirth</p>
+                        <h3>A household, a sanctuary and another life</h3>
+                        <p>Your household lives around a <strong>sanctuary</strong>: a settlement, a building or a ship with a revival facility. While anyone in the household lives, a death is a setback. The fallen member is restored at the sanctuary after a while, and you carry on as someone else straight away.</p>
+                        <p>If everyone is lost, or the sanctuary falls with nobody left to restore you, your soul returns to the astral realm and you're <strong>reborn elsewhere</strong> into a new family, after a long time skip. Your old sanctuary becomes ruins, for strangers or for you to find. Time never rewinds: what happened, happened.</p>
+                        <p>And there's no grind on the other side. Your new family's circumstances decide your start. If there's a military spaceport nearby, you can talk, sneak or fight your way onto a ship that same evening. If all your people have is stone tools, you'll build up from there. Everything you knew is still out there to reclaim, and you can change your look and name any time, so you never have to restart a universe to feel new.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/eclipse-flare-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Cozy or intense, your call</p>
+                        <h3>Nothing comes unprovoked</h3>
+                        <p>The universe follows one rule: <strong>nothing bad comes to you unless you provoke it or go where it lives</strong>. Natural cycles are real (star flares, quakes, storms, floods), but each is telegraphed with warning signs, so living somewhere is a choice, not a trap.</p>
+                        <p>Poke something dangerous, like a monster nest, a derelict reactor or a warlord's border, and you may start a <strong>calamity</strong>: a crisis that spreads over an area and leaves a lasting change unless someone stops it. Calamities can chain into one another, but they never end the universe. At worst, you move.</p>
+                        <p>Disasters scale with what you've built. A small household is threatened by small things; a great civilization is stable, but big enough to attract bigger trouble. A quiet evening of gardening stays quiet unless you decide otherwise.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/conversation-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">People with needs</p>
+                        <h3>Minds that say please and thank you</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-perpetual-boundless-freedom/10-people.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Everyone in the universe acts to meet their needs, as Nonviolent Communication describes them: subsistence, safety, freedom, growth, fun, meaning, respect and care. Each need is a number. A person picks the most urgent and tries one of their kind's usual ways to meet it: eat at home, go to work, flee danger, seek company.</p>
+                        <p>Their <strong>feelings show</strong> in emotes and speech bubbles, phrased as requests and thanks, so you can always tell why someone acts the way they do. They <strong>remember</strong> people and places as safe, dangerous or unknown, and they forget over time. They share memories by talking, so word of what you did travels ahead of you.</p>
+                        <p>They think every half-second or so, slower when the Chaos System is busy, because they're awestruck. They go dormant in their homes and wake up when needed. Above them, factions (colony governments, companies, research groups, guilds, nomad fleets, and on the frontier, outcasts and warlord remnants) live mostly in the ledger, and their attitude toward you changes region by region with what you do.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/portal-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The edge</p>
+                        <h3>The Wilderness gives things back</h3>
+                        <p>There are no invisible walls, not even at the end of the universe. Its edge is the Wilderness, a place you can actually travel to: rising, stormy, and stranger the further you go. It takes in whatever drifts or is thrown over the rim and <strong>sends it back reshuffled</strong>: combined, purified or corrupted. Throw bad things in, and bad things come back out.</p>
+                        <p>Generic matter is broken down and returned as raw material. <strong>Unique things are kept</strong> in a pool, so the ship you lost to a chaos storm or a bad jump may drift home one day, changed. Understanding the edge, and learning to live with it, is the work of the Pathfinder calling and of the eras that follow.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/scroll-unfurled-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A universe that remembers</p>
+                        <h3>Names, the Chronicle and déjà vu</h3>
+                        <p>Most of the universe has no names until someone gives them. <strong>You name what you find and claim</strong>: planets, systems, settlements, ships. The names stay.</p>
+                        <p>The <strong>Chronicle</strong> is the universe's history of your lives: the places you named, the calamities you stopped or started, the households you lost and the ones that came after. It's readable in your sanctuary. It celebrates and mourns with you, and it never pays out. It's also why returning somewhere feels like déjà vu: a valley you terraced three lives ago, wild again; a city you helped found, grown huge; a border you held, now somebody else's.</p>
+                        <p>Abandoned places rust and overgrow. Conquered ones belong to whoever took them, with their own rules. Some are wastelands. Some are better than you left them.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/toolbox-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Content that multiplies</p>
+                        <h3>Standards that let anyone add to it</h3>
+                        <p>The whole universe is data, built from generic templates that a generator gives context, so it was meant for modding from the first page. The rule that keeps it consistent: <strong>an author sets an object's size, shape and materials, never its weight or hit points</strong>. Those follow from the materials, like everything else. Nobody can sneak in a three-kilogram bullet or an indestructible paper wall.</p>
+                        <p>Because every item stands on the same laws, every new item works with everything already there: a new tool works in every hand, a new module in every frame, a new material in every recipe. Generation works the same way: places aren't drawn from a list of biome templates but grown from their conditions (humidity, materials, temperature, life, hazards, weather, soil), so mixed and entirely new biomes appear without anyone designing them, plus the odd wildcard: a mountain with a hole punched clean through it by a meteor from a distant nova.</p>
+                        <p>Content that meets the standards can load on its own; anything else is the player's choice. On consoles, where modding tools don't exist, authors could apply to have their best work bought outright and shipped in official updates.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/notebook-delapouite.png)"></span>Trivia</h2>
+            <h3>It started as a war game</h3>
+            <p>In 2011 this was <strong>Planet Warfare</strong>: "an epic war game expanding through galaxies", two games in one. A side-view squad shooter with bunkers, very like Cortex Command, fought on the planets; top-down ship battles like Battleships Forever were fought in space; and a turn-based overview of the solar system, close to the board game Risk, tied them together. You were "the consensus of your faction", and your population was your lives: about a hundred people, replaced slowly by cloning, and when the last one died, you lost.</p>
+            <p>Over a decade of notebooks (two waves of design pages and a third notebook on the universe engine), the war became one situation among many and the fronts became one seamless universe. In 2026 Reactorcore renamed it, because the old name was "too war focused" for what it had become.</p>
+            <h3>An art system came out of it</h3>
+            <p>A game that has to draw "a pie, a person and a planet" needs a standard for all three, so the project spun off Reactorcore's <strong>Pixel Sprites ala Reactorcore</strong> (PSRC) system: hand-drawn sprites at one universal scale (32 pixels to the metre) for anything up to three metres, and the 3M system of primitive shapes with tiled pixel textures for everything bigger, because "pixel art is unsustainable for objects beyond 3 meter size".</p>
+            <h3>Its children came first</h3>
+            <p>The seamless universe was always the hardest part, so its ideas were split into simpler designs that each deliver part of the same promise: <a href="roomspace.html">RoomSpace</a> keeps the universe but builds it from rooms; TopVerse goes top-down, with subgames on a region map; and <a href="AAL-Bunkerships.html">AAL Bunkerships</a> brought back the side-view Cortex Command core without the universe. This is the one they all came from.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/aal-perpetual-boundless-freedom_4_boxart.jpg" alt="Box art: a person seen from behind on a grassy cliff of a small planet, looking out at a vast dawn sky full of planets, a carrier starship, tiny ships and a nebula." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Welcome to your life</p>
+                <h2 id="sendoff">AAL Universe: Perpetual Boundless Freedom</h2>
+                <p>You open your eyes on a world you've never seen, as someone's grown-up child. Your family has a house, a rover and opinions. Past the moon, a carrier is looking for a crew. Beyond the galaxy, the edge of everything is coming into view.</p>
+                <p>Dig, build, drive and fly, with no walls and no loading doors between the tunnel under your house and the stars. Go where nobody has been, or stay and make one valley beautiful. The universe keeps living while you do, and it remembers what you did, even after you're gone.</p>
+                <p><strong>Go anywhere. Be anyone. You'll be remembered.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Cortex Command, Soldat, Terraria, Minecraft, Starbound, Eco and Mobile Suit Gundam</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Cranberry Gin and 6809 Chargen (CC0), Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

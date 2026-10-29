@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopVerse: Twin-Stick Universe Simulator</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: thirty-odd small top-down twin-stick games woven into one persistent universe. Make a decision on the region map, play it out on foot or in a vehicle, and the result permanently changes the world.">
+    <meta name="keywords" content="game design concept, twin-stick shooter, top-down, persistent universe, universe simulator, campaign generator, procedural generation, region map, fleets, infinite metagame, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/topverse.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="TopVerse: Twin-Stick Universe Simulator">
+    <meta property="og:description" content="A game design concept: thirty-odd top-down games on one framework, from a microbe curing a disease to god machines in hyperspace, all changing one persistent universe. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/topverse.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/topverse_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a top-down view of a firefighter spraying foam at flames inside a roofless apartment">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="TopVerse: Twin-Stick Universe Simulator">
+    <meta name="twitter:description" content="A game design concept: thirty-odd top-down games on one framework, all changing one persistent universe.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/topverse_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "TopVerse: Twin-Stick Universe Simulator",
+        "description": "A game design concept, not a released game: a persistent, endlessly playable universe built from thirty-odd small top-down twin-stick games on one shared framework. Decisions made on a region map are played out on foot or in vehicles, and every result permanently changes the tile, the region and everything above it.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Simulation", "Sandbox", "Strategy"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/topverse.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/topverse_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0a1513">
+
+    <link rel="preload" href="../fonts/zeroes-three.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* TopVerse: a colour-coded map of a living world. Jade for the land, signal yellow for the
+           tile cursor, soft lilac for the far layers, over deep green-slate. Zeroes Three, round and
+           geometric, for the title and headings; Jersey 10, a chunky pixel face, for the subtitle
+           and kickers. */
+        @font-face { font-family: "Zeroes Three"; src: url("../fonts/zeroes-three.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Jersey 10"; src: url("../fonts/jersey-10.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0a1513;
+            --flow-2: #1b4a3e;
+            --grid-minor: rgba(120, 230, 190, 0.045);
+            --grid-major: rgba(120, 230, 190, 0.10);
+            --p-ground: rgba(10, 20, 18, 0.95);
+            --p-panel: #11211d;
+            --p-1: #4fe3b0;
+            --p-2: #ffd34d;
+            --p-3: #cdb8ff;
+            --p-text: #dbe8e2;
+            --p-dim: #9fb3ab;
+            --p-line: rgba(140, 230, 200, 0.16);
+            --font-title: "Zeroes Three", "Segoe UI", sans-serif;
+            --font-sub: "Jersey 10", "Segoe UI", sans-serif;
+            --shade: #06100d;
+        }
+
+        /* Title effect, "tile ping": the name sits in pale jade like a map label, and every few
+           seconds the selection cursor pings it, a yellow ring of light that swells and fades,
+           over layered dark shadows that keep it legible at every frame. */
+        .p-name {
+            font-size: clamp(2.6rem, 1.2rem + 6vw, 6.4rem);
+            letter-spacing: 0.02em;
+            animation: tile-ping 7s ease-out infinite;
+        }
+        @keyframes tile-ping {
+            0%, 62%, 100% { color: #e6fff5; text-shadow: 0 0 3px var(--shade), 0 0 7px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 26px rgba(79, 227, 176, 0.35); }
+            70% { color: #fffbe6; text-shadow: 0 0 3px var(--shade), 0 0 7px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 12px rgba(255, 211, 77, 0.95), 0 0 30px rgba(255, 211, 77, 0.6); }
+            82% { color: #ecfff7; text-shadow: 0 0 3px var(--shade), 0 0 7px var(--shade), 0 0 14px var(--shade), 3px 3px 0 var(--shade), 0 0 40px rgba(255, 211, 77, 0.25), 0 0 70px rgba(79, 227, 176, 0.35); }
+        }
+        .p-sub { font-size: clamp(1.2rem, 0.85rem + 1.7vw, 2.3rem); letter-spacing: 0.05em; color: var(--p-2); text-shadow: 0 1px 0 var(--shade), 0 0 6px var(--shade), 0 0 14px var(--shade), 0 0 22px var(--shade); }
+        /* A row of map tiles under the subtitle that lights up with each ping. */
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.45rem; height: 4px;
+            background: repeating-linear-gradient(90deg, var(--p-1) 0 18px, transparent 18px 22px);
+            animation: tile-row 7s ease-out infinite;
+        }
+        @keyframes tile-row {
+            0%, 62%, 100% { opacity: 0.55; box-shadow: none; }
+            72% { opacity: 1; box-shadow: 0 0 14px rgba(255, 211, 77, 0.8), 0 0 26px rgba(79, 227, 176, 0.5); }
+        }
+        .section-mark::after { animation: h2-ping 7s ease-out infinite; }
+        @keyframes h2-ping { 0%, 62%, 100% { box-shadow: none; } 72% { box-shadow: 0 0 10px rgba(255, 211, 77, 0.6); } }
+
+        /* Zeroes Three is mixed-case at heart; capitals would read as shouting. */
+        h2, h3, .p-sendoff h2 { text-transform: none; letter-spacing: 0.02em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 1.05rem; letter-spacing: 0.08em; }
+        .p-keygroup h3 { font-family: var(--font-sub); font-weight: 400; font-size: 1.05rem; letter-spacing: 0.08em; }
+
+        /* The zoom, from the universe down to a room: eight frames, cycling jade, lilac and yellow. */
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div > div > div > div { --c: var(--p-3); }
+        .p-nest > div > div > div > div > div > div > div > div { --c: var(--p-1); }
+        /* Eight frames deep, the inner ones need their padding back on phones. */
+        @media (max-width: 620px) { .p-nest div div { padding: 0.6rem 0.5rem 0.7rem; } }
+
+        .slots td:last-of-type { width: 68%; }
+        .groups td { width: 80%; }
+        .layers-grid th[scope="row"] { color: var(--p-1); }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 1.15rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/topverse_1_title.jpg" alt="An aerial view of a sunlit frontier region: a village of pastel houses, a river through forests and farmland, a huge block-shaped mobile fortress beside a road and five airships flying over the fields." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">TopVerse</span><span class="p-sub">Twin-Stick Universe Simulator</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/nested-eclipses-lorc.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/nested-eclipses-lorc.png)"></span>Game overview</h2>
+            <p class="p-lead">TopVerse is one universe made of thirty-odd small top-down games. You make a decision on the map of your region, play it out as a twin-stick action game on foot or at the controls of a vehicle, and the result permanently changes that tile, its region and everything above it. Then you make the next decision.</p>
+            <p>All the games stand on one framework: a character with ten item slots, fully destructible levels, simple physics, and generators that build levels and whole campaigns on demand. What changes is the job. One session the ten slots hold extinguishers for a burning apartment block; the next, foam dart blasters for a shopping mall, the weapons of a four-ship fleet, or the psychic powers of someone who has just woken up to them. The games run from a microbe curing a disease to god machines duelling in hyperspace, and from tending a garden to raising a city.</p>
+            <p>The universe is in <strong>equilibrium</strong>: nothing bad comes to you unless you go and poke it. Every session is as cozy or as violent as you choose, and the world keeps what you did either way.</p>
+            <p>It grew from two places. One is a decade of modding Cortex Command, whose data-driven content turned up in any scenario and made every session different, yet reset to zero each time. The other is Syndemic, a microbe shooter by the solo developer Adjuvant, which Reactorcore beta-tested and wrote a long overhaul report for. The report's systems turned out to fit almost any theme. The region map owes a debt to Advance Wars, the fleets to Starsector and Battleships Forever.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/gamepad-delapouite.png)"></span>Target audience</h3>
+                    <p>Players who love a game's mechanics and feel robbed when its campaign <strong>ends just as they've learned to play</strong>, so the skill they built has nowhere left to go.</p>
+                    <p>People who want a different kind of evening each time (an hour of mayhem, an hour of gardening, an hour of hauling cargo between stars) and are tired of games that can't talk to each other, where a vehicle section is a cutscene and a city is a menu.</p>
+                    <p>The surface is twin-stick: move with one hand, aim with the other, ten slots and an interact key. Every subgame keeps the same controls.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/infinity-various-artists.png)"></span>Game's purpose</h3>
+                    <p><strong>Freedom and choice:</strong> whatever kind of play you're in the mood for, at whatever scale, whenever you want it.</p>
+                    <p><strong>Enjoyment and variety:</strong> action, leisure, building, exploring, strategy and silly fun, each a whole game of its own.</p>
+                    <p><strong>Meaning:</strong> every session leaves a permanent mark on a world that keeps it.</p>
+                    <p>It avoids draining <strong>safety</strong> (nothing hostile comes unprovoked), <strong>rest</strong> (sessions are short and end back on the map, saved) and <strong>respect for your effort</strong> (what you learned and built never resets).</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/linked-rings-lorc.png)"></span>Core concept</h3>
+                    <p>Most games are silos: a campaign that ends, a genre that can't borrow another genre's systems. Roguelites reset you at the climax, and sandboxes run out of reasons.</p>
+                    <p>TopVerse is <strong>a campaign generator for many kinds of game, hung on one persistent map</strong>. Each session is a finite campaign of 10 to 40 minutes with a start, a middle and an end. The universe they all change never ends.</p>
+                    <p>Content is modular data, so it <strong>multiplies</strong>: a new tool works for every character in every subgame, and every new subgame inherits the universe.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/topverse_5_story.jpg" alt="A painted view of a star system: a bright star ringed by small planets, a green and blue world with city lights and a moon, an asteroid belt, a ringed gas giant, a glowing ring-shaped gate and tiny ships, all framed by a dark wall of violet storm clouds." width="1280" height="720" loading="lazy">
+            <figcaption>"Nothing majorly bad ever happens unless you go and poke it. The universe waits for you to decide."<cite>The equilibrium universe</cite></figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/world-lorc.png)"></span>Lore and story</h2>
+            <h3>A universe at rest</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/topverse/01-at-rest.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>TopVerse's universe has settled into calm. Its dangers are real (monster territories, despot armies, contaminated zones, the crushing depths of planets and stars), but they stay where they are. From outside, only neutral or good things wander in, rarely and slowly. The interesting things are out there, and so are the risks, and you decide when to go and meet them.</p>
+            <p>It is huge but finite: star systems in sectors, sectors in galaxies, galaxies in clusters, and around all of it the <strong>Wilderness</strong>, a chaotic border where everything lost ends up. Civilisations use matter and energy, which bleed away as heat and drift to the Wilderness. There they mix, build up and finally erupt back through the universe's darkest sectors as new material. Nothing gets stuck, and nothing runs out.</p>
+
+            <h3>Where you begin</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/topverse/02-begin.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>You start as a villager in a local region. The intro zooms from the planet down to your tile and into your boots, and most of the map around you is fog, with hints and warnings from the locals about what lies in it.</p>
+            <p>You choose whether to build up the village first or head out and gather what you need along the way. You have a home faction, and you can join other benevolent ones and gain their tools, people and systems. Meet an enslaving despot's army unprepared and it can overrun your village. Then the story becomes a guerrilla resistance, an escape to a neighbour's village to return stronger, or a rise through the despot's own ranks to bring them down.</p>
+
+            <h3>The goal right now</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/topverse/03-goal.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>To grow, to prosper, and to live the way you like. Push back the fog with scouts, towers, probes and satellites. Take your region, then the continent, then the planet, then the stars. Or stay home, decorate the house and help the neighbours. The universe doesn't need saving. It needs you to decide what to do in it.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/joystick-delapouite.png)"></span>Controls and interface</h2>
+            <p>Every subgame uses the same twin-stick controls, on a keyboard and mouse or a gamepad. What you control changes; how you control it doesn't.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>On foot</h3>
+                    <dl>
+                        <div><dt>WASD</dt><dd>Move (left stick)</dd></div>
+                        <div><dt>Mouse</dt><dd>Aim and face (right stick)</dd></div>
+                        <div><dt>Left click</dt><dd>Use the item in the active slot</dd></div>
+                        <div><dt>Right click</dt><dd>Its second function</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Slots and items</h3>
+                    <dl>
+                        <div><dt>1–0</dt><dd>The ten item slots of your current role</dd></div>
+                        <div><dt>Space, Shift</dt><dd>Auxiliary abilities: dash, jump jets, shields</dd></div>
+                        <div><dt>E</dt><dd>Interact: doors, vehicles, pickups, people</dd></div>
+                        <div><dt>B</dt><dd>The shared backpack: escape items, resupply packs, switch kits</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Vehicles and fleets</h3>
+                    <dl>
+                        <div><dt>WASD, mouse</dt><dd>Drive and aim, exactly as on foot</dd></div>
+                        <div><dt>Click</dt><dd>Fire the selected weapon group, or all of them at once</dd></div>
+                        <div><dt>2, 3, 4</dt><dd>Unpack that fleet ship from the flagship, aim where it lands</dd></div>
+                        <div><dt>E</dt><dd>Dock on the flagship, or pass through an arena door</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Region view</h3>
+                    <dl>
+                        <div><dt>Click</dt><dd>Move to a tile, or act on it</dd></div>
+                        <div><dt>Hover</dt><dd>A character's portrait, name, role and condition</dd></div>
+                        <div><dt>Tab</dt><dd>Switch character, or gather a squad</dd></div>
+                        <div><dt>Esc</dt><dd>Pause anywhere; every decision is saved</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p><strong>A vehicle plays like a character.</strong> Its controls, mobility, weapons and abilities come from the modules installed inside it, so a tank, a submarine and a starship are all driven with the same two hands. Characters are drawn simply, as a body sprite, floating hands and whatever they hold, and their faces live in a <strong>portrait</strong> that pops up when you hover over them, with emotion overlays: sweat drops, anger marks, a question mark, a bright idea.</p>
+            <p>The world is stacked in layers (sky, surface, underground, and further up and down), and things on other layers are drawn as ghosts: shrunken and darker below you, faded silhouettes above. Shooting up or down to another layer is a deliberate action aimed at a cell, never an accident.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/topverse_2_vignette.jpg" alt="Top-down view into a roofless burning apartment: a firefighter in a yellow suit sprays a white foam jet at flames on a sofa and floor, with smoke, a fallen beam and a cat hiding in the next room." width="1280" height="720" loading="lazy">
+            <figcaption>"As a firefighter, the ten slots hold extinguishing agents, and each kind of fire needs the right one."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="loop">
+            <h2 class="section-mark" id="loop"><span class="icon" style="--icon: url(../icons/treasure-map-lorc.png)"></span>One decision, played at any scale</h2>
+            <p>The heart of TopVerse is a loop Reactorcore calls the <strong>combo game flow</strong>. It turns a pile of separate games into one game, and it's the same at every scale, from a village to a galaxy.</p>
+            <figure class="p-shot">
+                <img src="extra/topverse/01-region-map.jpg" alt="A painted square-grid map of a region seen from above, like a board game: rivers, forests, farmland, a village, a city of several tiles and a coastline, with game tokens on some tiles and fog of war over the right side." width="1280" height="720" loading="lazy">
+                <figcaption>"The region view is where you decide. Time only moves when you move or act, and there is no end-turn button."</figcaption>
+            </figure>
+            <ol class="p-chain" aria-label="The combo game flow">
+                <li><b>Decide</b>On the region view, choose a tile and what to do there. The game saves.</li>
+                <li style="--c: var(--p-2)"><b>Play it out</b>On foot in a room network, in a vehicle arena, or in a tunnel on the move</li>
+                <li style="--c: var(--p-2)"><b>Come back</b>Whatever happened: success, failure, a retreat halfway, or a change of mind</li>
+                <li style="--c: var(--p-3)"><b>Ripple upward</b>The tile changes, then its region, then the continent and above</li>
+                <li><b>The universe answers</b>Factions and forces act on their own rules, with a little chaos</li>
+            </ol>
+            <div class="p-gallery three">
+                <figure>
+                    <img src="extra/topverse/02-arena.jpg" alt="Top-down view of a canyon arena where tanks trade glowing shots around a round central pad, ringed by rocky cliffs." width="640" height="360" loading="lazy">
+                    <figcaption><b>In a vehicle</b>The tile zooms out into an arena. Fleets of four fight around its central parking space and leave through doors in its edges.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/topverse/03-tunnel.jpg" alt="Four starships in formation fly up a corridor of streaming hyperspace light while yellow targeting circles bloom and shots rain down around them." width="640" height="360" loading="lazy">
+                    <figcaption><b>On the move</b>Long trips are played as tunnels: scrolling corridors where convoys can be chased, intercepted or shot at from afar.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/topverse/04-aftermath.jpg" alt="Top-down view of a forest clearing after a battle: craters in the grass, a battered tracked vehicle, salvage crates, a tent camp around a campfire and a dirt road." width="640" height="360" loading="lazy">
+                    <figcaption><b>Afterwards</b>The tile keeps the result. Craters, wrecks, survivors and new roads shape every room network generated there later.</figcaption>
+                </figure>
+            </div>
+
+            <h3>From a room to the universe</h3>
+            <p>The same map works at every zoom level. Each scale shapes the ones inside it (a continent gets its climate from where it sits among its system's stars, a region from where it sits on its continent), and a big enough change below pushes back up: a terraformed or devastated tile changes its region.</p>
+            <div class="p-nest" aria-label="The scales of the universe, outermost first">
+                <div><span>The universe</span><small>An even grid of galaxy clusters, ringed by the Wilderness.</small>
+                    <div><span>A star sector</span><small>A 5 by 5 or 7 by 7 grid of star systems, or a void.</small>
+                        <div><span>A star system</span><small>An 11 by 11 grid: stars, planets, fields, gates, derelicts.</small>
+                            <div><span>A celestial</span><small>A planet, moon or asteroid of one to six continents, wrapped into a sphere.</small>
+                                <div><span>A continent</span><small>Three by three regions, about a thousand kilometres across.</small>
+                                    <div><span>A region</span><small>The region view: 10 by 10 up to 25 by 20 tiles.</small>
+                                        <div><span>An area tile</span><small>One to ten square kilometres: a district, a farm, a mine, a forest. Persistent.</small>
+                                            <div><span>A room</span><small>10 to 100 metres, on foot. Generated when you enter, gone when you leave.</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>And below the room there's one more scale: the microscopic one, where the whole thing began.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <p>Four layers. The action is the fun; the layers above it give it a reason, and none of them ever has to end.</p>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/footprint-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Twin-stick action with a job to do</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/topverse/04-moment.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Top-down physics action in levels that break: walls come down, crates tumble, fires spread, and every hit lands somewhere. The core skill is <strong>the right tool for the right target</strong>, whether that's an antibiotic for a fungus, a foam extinguisher for an electrical fire or armour-piercing rounds for a tank.</p>
+                        <p>Most jobs care about collateral damage. A cure that kills the patient, a cop who shoots bystanders or a mecha that flattens the shelter it was sent to protect all leave their mark on the world, and on how its people see you.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/flying-flag-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>A campaign of 10 to 40 minutes</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/topverse/05-campaign.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Every decision on the map opens a short <strong>generated campaign</strong> with a clear start, middle and end: a briefing, a chain of rooms, arenas or tunnel legs, objectives, and a debrief. It's built from the tile's real state, so a district you fought over generates rubble, scared civilians and a few wrecks.</p>
+                        <p>The campaigns are "not about challenge nor permadeath", in the design's words. They can be calm or tense, short or long, and you can always leave early: a tactical retreat counts as an outcome, and the world takes it into account.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/nested-hexagons-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>Your corner of a universe that remembers</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/topverse/06-hub.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The goal that never runs out is to <strong>grow, prosper and live</strong>: a village into a city, a region into a civilisation across the stars, or just a house you love coming home to. There is always somewhere wild, always someone who needs help, and always something new the generators haven't shown you yet.</p>
+                        <p>Your settlements are <strong>hubs</strong>: persistent districts you customise, each with a nexus screen showing its status, resources, services and links. And every tile keeps its own history: the wrecks, the lost crews, the ruins and the messages left behind.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-1)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/save-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Pick a tile, play a campaign, stop</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/topverse/07-evening.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Boot up on the region view, where the game saved after your last decision. Pick something that suits your mood tonight: a riot to calm, a fire to put out, a monster nest to clear, a garden to tend, a convoy to escort. Play it, return to the map, and stop there or pick the next one.</p>
+                        <p><strong>Time only passes when you move or act.</strong> Nothing happens to your world while you're away, nothing nags you to come back, and a month off costs you nothing.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/clockwise-rotation-delapouite.png)"></span>Game modes</h2>
+            <p>Two ways in, sharing the same games.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What it is</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Quick play</th><td data-label="What it is">Any subgame as a self-contained, throwaway campaign that doesn't touch your universe</td><td data-label="For">Playing one game as its own title: a fire to fight or a derby to crash on a lunch break</td></tr>
+                        <tr><th scope="row">Persistent world</th><td data-label="What it is">The whole universe, with its mysteries, places, hazards, calamities, discoveries and opportunities</td><td data-label="For">Living in it: every session changes the world for good</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>In the persistent world you play solo or with your own gathered squad of characters, and you can step into the boots of a random civilian or soldier to see the world as a stranger does. Online cooperative play is on the design's growth list. Nothing in it is competitive.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="journey">
+            <h2 class="section-mark" id="journey"><span class="icon" style="--icon: url(../icons/village-delapouite.png)"></span>From a village to the stars</h2>
+            <p>The persistent world has a beginning and a middle, and on purpose, no end.</p>
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3>Start</h3>
+                    <p>A villager in a fogged region with a home faction, a few warnings from the locals and the whole world to uncover. Early on, recovering from a disaster is cheap.</p>
+                    <p>You're immortal, but your faction isn't. If it's wiped out and you haven't risen in a friendly one, time skips and you start over in a new village, and <strong>the ruins of the old one stay</strong> for others, or you, to find.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-1)">
+                    <h3>Middle</h3>
+                    <p>Expand from a region to a continent to the whole planet. Build fleets of vehicles and mobile bases. Go underground and underwater, then to orbit, the star system and beyond, and build trade lanes, jump gates and defences as you go.</p>
+                    <p>Events keep arising in your territory where you can step in and help, and travel can stir up armies, outbreaks and calamities, usually with <strong>warning signs ahead</strong>.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3>No end</h3>
+                    <p>Even after you've conquered everything, the universe is too big to tame. Some places stay wild, your people always have needs, the deep layers and the Wilderness hold oddities, and the wildlife keeps the ecosystem working, nice mixed with nasty so neither can be wiped out.</p>
+                    <p>In the end, as the design puts it, the focus shifts "from destination to the moment-to-moment fulfillment and exploration of the already discovered world; <strong>to live in it</strong>".</p>
+                </article>
+            </div>
+            <h3>A bigger empire takes a bigger disaster</h3>
+            <p>A small village can be overrun by one army. A big civilisation is more stable, and it takes something proportionally huge to hurt it. Disasters come from calamities, which the player sets off, so even these wait to be provoked.</p>
+            <div class="p-table-wrap">
+                <table class="p-table">
+                    <thead><tr><th scope="col">What you hold</th><th scope="col">What it would take to shake it</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">An area tile</th><td data-label="Disaster">A nuke</td></tr>
+                        <tr><th scope="row">A region</th><td data-label="Disaster">A colony ship dropped from orbit</td></tr>
+                        <tr><th scope="row">A continent</th><td data-label="Disaster">A moon colliding with the planet</td></tr>
+                        <tr><th scope="row">A celestial</th><td data-label="Disaster">A nova, a planet-killing superweapon or an invasion</td></tr>
+                        <tr><th scope="row">A star system</th><td data-label="Disaster">A supernova or a hyperweapon</td></tr>
+                        <tr><th scope="row">A star sector</th><td data-label="Disaster">A machine war, a brood fleet or a chaos eruption</td></tr>
+                        <tr><th scope="row">A galaxy</th><td data-label="Disaster">The galactic core detonating</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Against an ordinary threat like an enemy army, you can also submit: give up resources, people, fleets and structures and accept restrictions, and live to try again.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="subgames">
+            <h2 class="section-mark" id="subgames"><span class="icon" style="--icon: url(../icons/cubes-lorc.png)"></span>Thirty-three games, one universe</h2>
+            <p>Reactorcore's list holds 33 subgames in seven groups, sorted by the scale they play at. Each one is a small focused game, playable on its own in quick play or as one activity in the universe. Some are worked out down to their toolkits; others are a title and a promise, waiting for the framework to carry them.</p>
+            <div class="p-table-wrap">
+                <table class="p-table groups">
+                    <thead><tr><th scope="col">Scale</th><th scope="col">Subgames</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Microscopic</th><td data-label="Subgames"><b>Omnicure</b>: an artificial microbe that cures diseases without killing its patient, the game the whole design grew out of.</td></tr>
+                        <tr><th scope="row">Human-sized</th><td data-label="Subgames"><b>Regime Eradicator</b> and <b>Corporate Crime Slayer</b> (cathartic power fantasies against fictional tyrants and abusers); the civil service jobs: <b>Police Enforcer</b>, <b>Fire Fighters</b>, <b>Rescue Team</b>, <b>Off-Road Trail Engineer</b>, <b>Parkour Gadgeteer</b>, <b>Radical Janitor</b>, <b>Mad Dash Medic</b>, <b>Zoo Pacifier</b>; the alien and monster wars: <b>Machine Uprising</b>, <b>Ballistic Weapons</b>, <b>Phantom Purge</b>, <b>Extraterrestrial Overkill</b>; the fighters: <b>Super Warrior</b>, <b>Astral Psychic Vengeance</b>; the monsters: <b>Evolver Devourer</b> and <b>Miner vs Beasts</b>; the kids: <b>Tacticool Teenage Operator</b>; and the default, <b>Off-Duty Life</b>.</td></tr>
+                        <tr><th scope="row">Minor vehicles</th><td data-label="Subgames"><b>Crash Car Derby</b>, <b>Tunnel Travellers</b> (convoy defence and interception), <b>Super Warrior 2</b> in power armour.</td></tr>
+                        <tr><th scope="row">Mega vehicles</th><td data-label="Subgames"><b>Fleetstorm</b> (momentum-driven ship combat on land, sea, air and space), <b><a href="EradicationWars.html">Eradication Wars</a></b> (mecha against mecha), <b>Kaiju Defence</b>, <b>Kaiju Attack</b> (as the kaiju), <b>Cyber Kaiju Attack</b> (a kaiju fighting beside the mecha), <b>Super Warrior 3</b> as a mecha.</td></tr>
+                        <tr><th scope="row">Hyperspace</th><td data-label="Subgames"><b>Hyperspace God Mecha</b>: giant machines with celestial-scale superweapons, jousting in hyperspace tunnels.</td></tr>
+                        <tr><th scope="row">Area and region</th><td data-label="Subgames"><b>City Builder / World Terraformer</b>: premade, pre-balanced blocks on the ground, at sea, underground and in space.</td></tr>
+                        <tr><th scope="row">Region and above</th><td data-label="Subgames"><b>Sunshine Heavy Industries</b>: a puzzle-like transport tycoon of metros, rails, hyperrails, trade lanes and jump gates.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-gallery three">
+                <figure>
+                    <img src="extra/topverse/05-omnicure.jpg" alt="Top-down view inside a blood vessel: a small glowing green microbe craft fires yellow pellets at spiky purple viruses as red blood cells drift by." width="640" height="360" loading="lazy">
+                    <figcaption><b>Omnicure</b>The body as a city: organs are districts, blood vessels are highways with currents. Hit the patient's good cells and the patient pays.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/topverse/06-off-duty.jpg" alt="Top-down view into a roofless cozy house: a person relaxes in a sunny pastel living room while a neighbour tends the flower beds in the garden." width="640" height="360" loading="lazy">
+                    <figcaption><b>Off-Duty Life</b>What every character goes back to: decorating, chatting with the neighbours, and crafting and moving goods around the settlement.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/topverse/07-evolver-devourer.jpg" alt="Top-down view of a meadow where elemental monsters face off, a leafy lizard, a mossy turtle, an electric fox and a big lava turtle, with a small fluffy fairy creature carrying a satchel behind them." width="640" height="360" loading="lazy">
+                    <figcaption><b>Evolver Devourer</b>Trading-card monster battles played in real time, with wind-up attacks and three to six swappable monsters. In the universe, they're the wildlife.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/topverse/08-astral.jpg" alt="Top-down view of a night parking lot where a person in a jacket stands in a glowing violet ring, with translucent barrier panels hovering around them." width="640" height="360" loading="lazy">
+                    <figcaption><b>Astral Psychic Vengeance</b>Powers of nearly limitless strength with a three-metre reach, so every fight is about closing the distance creatively.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/topverse/09-kaiju.jpg" alt="Aerial view of a coastal city at sunset where a giant green reptile monster wades along the seawall while three yellow-striped hover platforms keep watch in the water." width="640" height="360" loading="lazy">
+                    <figcaption><b>Kaiju Defence</b>Giant machines between a huge monster and the city while civilians get clear, with as little collateral damage as the city can afford.</figcaption>
+                </figure>
+                <figure>
+                    <img src="extra/topverse/10-sunshine.jpg" alt="Top-down view of a colour-coded transport network: rail lines with cargo trains, a highway interchange, a harbour, an airport and a spaceport with a rocket." width="640" height="360" loading="lazy">
+                    <figcaption><b>Sunshine Heavy Industries</b>Networks at every scale, from city metros to interstellar jump gates, built for the lowest cost and the easiest maintenance.</figcaption>
+                </figure>
+            </div>
+            <h3>Games that combine</h3>
+            <p>Many subgames are written as "combinable": the civil service jobs fold into one game of specialists, or of one character who changes class at role-specific supply pods, Thunderbirds style. In the universe this becomes a rule: <strong>you can take a role wherever its changing station and supply system exist</strong>. Police at a police station, firefighters at the fire station, a pilot wherever there's a vehicle and the key, suit or licence it needs. Every character, whatever their role, goes back to Off-Duty Life when the job is done.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/cubeforce-lorc.png)"></span>Features and mechanics: one framework</h2>
+            <p>Thirty games are only possible if they're one game underneath. These are the shared foundations.</p>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/switch-weapon-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Foundations</p>
+                        <h3>One character, ten slots, any job</h3>
+                        <p>Every subgame keeps the same core: a top-down twin-stick character with up to <strong>ten active item slots</strong> and auxiliary ability buttons, fully destructible levels, simple physics objects, a level generator and a campaign generator. A new subgame changes only the content: the theme, the character, what the slots hold, the objectives and the generator's parameters.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table slots">
+                                <thead><tr><th scope="col">Role</th><th scope="col">What the ten slots hold</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Omnicure</th><td data-label="Slots">One antibiotic weapon per kind of disease, a mover tool, and an omniweapon that kills anything but harms the patient</td></tr>
+                                    <tr><th scope="row">Fire Fighters</th><td data-label="Slots">Extinguishing agents for each kind of fire, with gas mask filters refilled at safe spots</td></tr>
+                                    <tr><th scope="row">Police Enforcer</th><td data-label="Slots">Taser, net, tear gas, baton, rubber bullets, cuffs and flashbangs</td></tr>
+                                    <tr><th scope="row">Miner vs Beasts</th><td data-label="Slots">Welders, saws, hammers, drills, torches, tethers, explosives, acid and a water hose</td></tr>
+                                    <tr><th scope="row">Tacticool Teenage Operator</th><td data-label="Slots">Foam dart blasters, water guns, fireworks, a walkie-talkie and a listening dish</td></tr>
+                                    <tr><th scope="row">Regime Eradicator</th><td data-label="Slots">Light and heavy calibre, siege, flame, EMP, chemical and a super weapon, plus first aid for civilians and a tool to move bystanders out of the way</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>How slots fire varies too: one weapon at a time, every selected weapon together or as an alpha strike for ships, paired slots for mecha, or several weapons cycled within a slot. Enemies and objects come in <strong>standard tiers</strong>, measured in shots of a benchmark weapon, from a small one at half a shot to a massive one at nine. The rules: "nothing is indestructible", and "no bosses, no sponges, no invulnerability". What would be a boss elsewhere is a huge regular here, and it can turn up anywhere.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/maze-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Levels that multiply</p>
+                        <h3>Rooms that exist only while you're in them</h3>
+                        <p>Every on-foot zone is a <strong>room network</strong> generated for its tile: entry rooms, corridors, locations and transit rooms that act as stairs to the layers above and below, joined by doors, with several routes and a few dead ends. It's never stored as a map, only as which door leads where, and it's deleted when you leave. Come back and you get a new one, shaped by the same tile: a forest tile gives wild trails, a city tile gives streets and catwalks.</p>
+                        <p>Each room is built on a three-by-three grid of anchors, with eight door positions around a centre, for terrain islands, corner emplacements, wall fixtures and safe or dangerous spawn zones, and a small chance (1 to 5%) to randomise freely within the rules. Doors open with a key press, never by script: a door is held shut only by a guardian or a barricade you can blow open.</p>
+                        <p><strong>Every room has a way out.</strong> Escape items in the shared backpack get any character out of a room network and back to the map: a wall buster that blasts a new door, a drill digger underground, a ballast dinghy underwater, a balloon that lifts you through every layer (shootable on the way up), an escape pod in orbit.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/player-base-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>One structure, five faces</h3>
+                        <p>Every building is a <strong>DRC</strong> (district room complex), and every major vehicle, ship and mobile base an <strong>MDRC</strong>, a mobile one. Each one exists at every zoom level at once, so the same ship can be walked through, fought, flown and traded:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table">
+                                <thead><tr><th scope="col">Face</th><th scope="col">Where you see it</th><th scope="col">What it is</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Entrance</th><td data-label="Seen">On foot, outside</td><td data-label="What">The outer cells you walk around and into, up to 20 by 20 cells of two metres</td></tr>
+                                    <tr><th scope="row">Interior</th><td data-label="Seen">On foot, inside</td><td data-label="What">Every entrance cell is a three-by-three room inside, all on one floor</td></tr>
+                                    <tr><th scope="row">Facade</th><td data-label="Seen">Vehicle arenas</td><td data-label="What">The zoomed-out vehicle, its shape and weapons set by the modules inside</td></tr>
+                                    <tr><th scope="row">Map icon</th><td data-label="Seen">Region view</td><td data-label="What">A piece on the map</td></tr>
+                                    <tr><th scope="row">Data node</th><td data-label="Seen">Further out</td><td data-label="What">Pure data, until you get close</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The interior's modules (cockpit, thrusters or wheels, turrets, a reactor, a vehicle bay) define a simple rectangular vehicle with its true collider, and an optional freeform facade is drawn over it to make it look like anything. Break through a boundary wall from inside and you drop out "from above" onto the matching cell outside. Separated cells work too: each sits on its own wheels, hover skirt or thrusters, joined by a frame of girders or living struts.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/topverse_3_feature.jpg" alt="Top-down cutaway of a huge tracked mobile base on a sandy plain, its roof removed to show a grid of rooms with tiny crew, a reactor and a parked tank, while four small tanks fire at its hull and one shot bursts inside a single room." width="1280" height="720" loading="lazy">
+                            <figcaption>"The base you shoot at from outside is a floor plan you can walk through, and a shot that penetrates lands in one room of it."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/shield-impact-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Destruction with rules</p>
+                        <h3>Hits that land somewhere</h3>
+                        <p>A vehicle or building has one pool of health, and its strength comes from what it's made of: size, material and how much of it. <strong>Hull hits</strong> chip away at the entrance's walls and struts; break them all and the whole structure collapses into rubble where it stood, its contents scattered.</p>
+                        <p>Some hits <strong>penetrate</strong>. Each one is weighed (payload, type, armour, thickness) and either stops at the hull, goes inside and stops, or goes straight through and out the other side, maybe into something else. A penetrating hit lands on one random interior room, "from above", where the heaviest things and any absorption armour take it first. Interior hits never bring a building down. They wreck what's inside it.</p>
+                        <p>Fire is one system for every game: a global fire manager spreads flames from object to object, slowly, with each object's material deciding how fast it catches and how long it burns, and nearby fires merging into one. It was designed for Fire Fighters, and it burns the same way in every other subgame.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="vehicles">
+            <h2 class="section-mark" id="vehicles"><span class="icon" style="--icon: url(../icons/spaceship-delapouite.png)"></span>Features and mechanics: vehicles, fleets and travel</h2>
+            <p>The same rules carry you from a car to a starship, and from a region map to the far side of the galaxy.</p>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/cargo-crane-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Fleets</p>
+                        <h3>Four ships and a flagship</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/topverse/08-fleet.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Vehicle combat is fleet against fleet. A fleet is up to <strong>four ships</strong> of any size, and any ship with a docking gantry can be the flagship. Fly a ship over the flagship's docking point and press E, and it slides underneath, darkened and see-through, carried as a node. Press 2, 3 or 4 to unpack it again: aim where it should appear on a ring around the flagship, and an outline turns green when the spot is clear.</p>
+                        <p>Pack a fleet to cross terrain only the flagship can (a boat across a desert, a car through space), to shield a fragile ship in a fight, or to squeeze through a narrow passage. Any ship can carry any other, "even if it's comically larger", but the <strong>APC effect</strong> applies: lose the flagship and everything packed inside goes with it. A cooldown on docking stops anyone popping armour bricks out in front of incoming fire. Enemies use the same rules, so a packed enemy fleet caught before it unpacks can lose four ships at once.</p>
+                        <p>On foot, a packed fleet is a plus-shaped room: the gantry in the middle, the four docked ships around it, and four empty corners where raiders, infiltrators or rescuers come aboard.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/gate-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Vehicle arenas</p>
+                        <h3>Doors with requirements</h3>
+                        <p>A tile's vehicle arena has a <strong>parking space</strong> in the centre, where the local fleet launches from and where you stop to start on-foot missions or regional actions like long-range fire and scans. Its exits are directional doors to the neighbouring tiles, up to four per side, no diagonals.</p>
+                        <p>Each door has requirements, like a door on foot: ground propulsion for a road, a hull for the sea, wings or thrusters for the sky, and each layer has its own doors. A ground car that drives into the ocean sinks on the spot. With fewer than four doors open, some ships pack into the flagship to move on together.</p>
+                        <p>To leave, drive onto a door and press E. If your momentum points within its 90° window, you keep it and slide out in a no-physics "ghost mode", still shootable until you're gone. Speed gets you out faster; a heavy, slow ship takes longer to leave a fight.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/orbital-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Vertical layers</p>
+                        <h3>From orbit to the core</h3>
+                        <p>Every place is a stack of layers, and every kind of world has its own. They're described with one grid of solids, liquids and gases:</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table layers-grid">
+                                <thead><tr><th scope="col">Depth</th><th scope="col">Solid</th><th scope="col">Liquid</th><th scope="col">Gas</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Top</th><td data-label="Solid">Surface</td><td data-label="Liquid">Shallows</td><td data-label="Gas">Fog</td></tr>
+                                    <tr><th scope="row">Under</th><td data-label="Solid">Underground</td><td data-label="Liquid">Underwater</td><td data-label="Gas">Under fog</td></tr>
+                                    <tr><th scope="row">Deep</th><td data-label="Solid">Bedrock</td><td data-label="Liquid">Depths</td><td data-label="Gas">Deep fog</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Above sit sky, high atmosphere and orbit; below, the crust, the mantle (shown as a side-scroller) and the core. An Earth-like world is surface, soil and bedrock; an ocean world shallows, sea and depths; a gas giant all fog down to metallic hydrogen. Stars, neutron stars and black holes have layers too, for those with vehicles that can dive them.</p>
+                        <p>Vehicle combat happens in the middle band of sky, surface and soil or sea; going higher or deeper is a way out. Altitude bands have <strong>overlapping thresholds</strong> so nothing flickers between layers mid-fight: climb past 500 metres to reach the sky, drop below 250 to come back down. Jumping doesn't change layers. Only propulsion does, and without it, things fall and land hard by their mass.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/rocket-thruster-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Tunnels</p>
+                        <h3>One corridor for every journey</h3>
+                        <p>Long trips are played as <strong>tunnels</strong>: temporary scrolling corridors from A to B, horizontal or vertical, with controlled acceleration and some room to manoeuvre. The same idea serves roads, rails, rivers, the sky, underground, underwater, space and hyperspace. Each segment generates the terrain of the tile it crosses, side exits drop you into the neighbouring tile, and there's no timer and no rush. Others can find a tunnel and enter it at the start, middle or end, which makes it the place for races, chases, interceptions and convoys.</p>
+                        <p>The long-range trips need a <strong>drive shaft</strong>: a component that binds a fleet for transit, propels it (FTL, sublight, orbital, through the ground or the mantle), defends it with point defence and countermeasures, and clears the path with a forward plasma lance that only works away from celestials. On foot it's reached through drive shaft nodes in the interior. Destroy them all and the drive shaft is gone, so they're what boarders go for. And every jump leaves clues at both ends, which is how chases start.</p>
+                        <p>In space, every star system is an 11 by 11 grid of arena tiles. Sublight goes tile by tile and can't be targeted by anti-FTL guns, which makes it the quiet way in. FTL jumps anywhere in the system that isn't blocked, and between stars. Hypergates catapult you one way across the universe.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/crosshair-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Interdiction</p>
+                        <h3>Running the anti-FTL gauntlet</h3>
+                        <p>Star systems defend themselves with anti-FTL gun arrays, and you can be the gunner or the target. The gunner aims a <strong>reticle</strong> that starts large: each shot lands at a random angle and distance from the crosshair. Moving it makes it bigger for a moment; holding still shrinks it to a minimum set by range, weapon, weather and jamming. Shots appear in the background first and grow sharper as they near their impact point, so the gunner peppers where the traveller will be.</p>
+                        <p>The traveller dodges inside a manoeuvring box, speeds up or slows down to throw off the aim, flips like a Star Fox ship at the cost of distance, and answers with countermeasures and point defence. There's a minimum speed, so no stalling. Three kinds of gunner share one reticle: <strong>direct</strong> fire at an invader coming straight in, <strong>potshots</strong> at someone crossing the system, and <strong>chasers</strong> firing after an escapee. The arrays overheat, longer range means a slower rate of fire, and the medium matters: asteroid fields block shots, gas clouds blind the gunner but feed the traveller's lance.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="living">
+            <h2 class="section-mark" id="living"><span class="icon" style="--icon: url(../icons/globe-ring-delapouite.png)"></span>Features and mechanics: a universe that remembers</h2>
+            <p>The framework makes the games. These make the universe a place to live in.</p>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/beehive-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Cozy or intense, your call</p>
+                        <h3>Nothing comes unprovoked</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/topverse/09-beehive.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The universe settles into a lazy, dormant state. <strong>Dangerous areas never come to you first.</strong> To gain something new you go into volatile places, and there you risk triggering a <strong>calamity</strong>: a crisis over a region that will leave a permanent negative or neutral change unless you stop it, defuse it, clear it or conquer it.</p>
+                        <p>In the design's own example: "If I go bother a bees nest in an unexplored zone, it may create a calamity that will threaten the cozy side for that area if not dealt with." One calamity can set off another, but none can end the universe; at worst you relocate and regroup. Once your core settlement is established it usually stays safe, and the risk moves out to your frontier outposts and colonies.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/orbit-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The universe generator</p>
+                        <h3>Contents, not biomes</h3>
+                        <p>"Remember: no specific biomes." A tile isn't a desert or a forest template. It's a list of contents: humid or dry, acidic or neutral, how much life and what kind, which structures, which geological features (holes, cliffs, ravines), which water (a lake, a river, a pond), and what its solids, liquids and gases are made of. The generator reads those and draws whatever they add up to, desert, forest, city district or any mix.</p>
+                        <p>Contents come from the <strong>spheres of influence</strong>: each scale sets the conditions for the ones inside it, from the universe's laws of nature down to the room you're in, with a small chance of a chaotic mutation at each step. So every tile makes sense where it is, and it carries its history too.</p>
+                        <p>Nothing is stored as a map. Tiles keep hard data for what's tangibly there, and maps are generated from the same seed when needed, with any changed contents shaping the result. An Earth-like planet is at most about 108,000 data points, a ten-by-ten universe holds some 432 million potential celestial locations, and everything is generated only when you first get there, only as far as needed. Save files stay a few megabytes.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/tornado-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Persistence</p>
+                        <h3>Live in the moment</h3>
+                        <p>Most of the universe isn't loaded and doesn't exist until you touch it. Touching it creates a temporary zone or route, which deletes itself when you leave and comes back new next time. What does persist is chosen carefully:</p>
+                        <ul>
+                            <li><strong>Hubs</strong>: your settlement districts, kept as you customised them, with a nexus screen and terminals for switching to the characters at its role stations, so a police or rescue job never needs a trip across the map.</li>
+                            <li><strong>Parking rooms</strong>: decorated plots where your buildings stand, in limited numbers per region.</li>
+                            <li><strong>Your buildings and vehicles</strong>: <em>truly persistent</em> ones (a personal HQ, a flagship, a mobile base) keep every item and piece of furniture exactly where you left it; <em>semi-persistent</em> ones remember their place, type, look and weapons and reshuffle the rest.</li>
+                        </ul>
+                        <p>The truly persistent ones have a universe-wide quota tied to the save's size. Exceed a density limit and the <strong>chaos system</strong> steps in, the universe's own enforcer of performance, with chaos storms that grow until order is restored. Too much in one place is a natural law here, not a loading bar.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/character-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Who you play</p>
+                        <h3>You, your partners and the randoms</h3>
+                        <p>You play a group of characters one at a time, switching whenever you like, or field them together as a squad.</p>
+                        <ul>
+                            <li><strong>You</strong>: your own character, who always comes back after death. Bored of them? Change the look and press <strong>Rebrand</strong>, or switch between saved presets of name, colours, body, head and voice. You never have to reset a universe to feel new.</li>
+                            <li><strong>Partners</strong>: customised companions who join you as teammates, the council of immortals.</li>
+                            <li><strong>Randoms</strong>: rotating settlers from your own population, with their own names and looks, for living the world as a stranger. They die for good.</li>
+                        </ul>
+                        <p>Death is an inconvenient setback, never an ending: a fallen character is out of action for a long stretch of in-game time and drops heirlooms to recover. If everyone is out at once, time skips forward and whatever calamity was under way gets its way. Time never rewinds.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/paw-heart-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Wildlife</p>
+                        <h3>Monsters that remember how you treated them</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/topverse/10-wildlife.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The universe's wildlife is the monsters of Evolver Devourer, from pocket-sized to kaiju. Each region keeps a <strong>fear and loyalty index</strong> for them: a general attitude toward people, with overrides per faction.</p>
+                        <p>In a wild region, monsters may approach and attack like predators. Fight back and they grow afraid, avoiding people unless one looks weak and alone. Tame them instead (feed them, give them something nice, and set boundaries by blocking or dodging their attacks without hitting back) and they turn friendly. A monster tamed by your faction that sees your people attacked comes to heal, defend, fight or harass on their side.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/ship-wreck-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">A living history</p>
+                        <h3>Lost and found, scrolls and the Wilderness</h3>
+                        <p>Nothing that happens just vanishes. When a vehicle goes down, its crew ejects with whatever survival kit that vehicle carries (parachutes, dinghies, stasis pods, goo cradles) and becomes a rescue to pick up, or goes on the <strong>missing list</strong>, assigned to a tile and waiting to be found in a room network there on a later mission. Destroyed things become scrap in the tile's materials, and their remains turn up later.</p>
+                        <p><strong>Scrolls</strong> are messages attached to places, events and groups: welcomes, warnings, obituaries, recipes, songs, manuals, blueprints, threats and surrenders, with deeper tablets behind clearance levels named after the ranks of angels. Players can write their own and attach them to places they make.</p>
+                        <p>And at the universe's border lies the <strong>Wilderness</strong>, a chaotic lost and found that recycles matter and energy and holds oddities, mutations and challenges made by other players, to duel when you choose to. Nothing bad pours out of it. You go in when you want to.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/virus-lorc.png)"></span>Trivia</h2>
+            <h3>It started as someone else's game</h3>
+            <p>Syndemic was a crowdfunded microbe shooter by the solo developer Adjuvant: an artificial microbe destroying diseases inside the human body. Reactorcore beta-tested version 0.43 and wrote a very long overhaul proposal for it, which reached about a third of its planned length: patients as networks of rooms like districts of a city, blood vessels as highway rooms with currents, diseases as recipes for the generator, standardised enemy tiers, and collateral damage as the core tension. A note in the notebook reads "make Syndemic my way if Adj. fails". Adjuvant did give up on the game, and while reframing its systems as other games (a vigilante against a regime, firefighters, mecha, kaiju), Reactorcore noticed they were all pieces of one bigger puzzle. The microbe game survives as the smallest subgame, under a name from the old list of ideas: Omnicure.</p>
+            <h3>Paper fleets</h3>
+            <p>Fleet battles and pack-and-unpack scenarios were prototyped on paper first, with a Token Fleet Pack of cardboard tokens.</p>
+            <h3>A power ceiling, written down</h3>
+            <p>Astral Psychic Vengeance has awakening tiers named Super, Hyper, Mega, Tera, Ultimate and God, from just past 100% synchronisation up to 9,999,999%. Anything past 100% needs huge outside support (vehicles, structures, megastructures, a whole group's effort), so a lone psychic, in the notes' words, can't "casually" blow up a planet "with a random finger laser".</p>
+            <h3>Three tries at one dream</h3>
+            <p>TopVerse, <a href="roomspace.html">RoomSpace</a> and <a href="aal-perpetual-boundless-freedom.html">AAL Universe: Perpetual Boundless Freedom</a> (once called Planet Warfare) are Reactorcore's three attempts at the same dream: a persistent universe to play in. Perpetual Boundless Freedom does it as one seamless side-view world, RoomSpace builds it from connected rooms, and TopVerse goes top-down, with many games on one region map.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/topverse_4_boxart.jpg" alt="Box art: a tall zoom from a figure in a village square up through a region with a mobile fortress and airships, a planet ringed by stations, and a star system with a ringed gas giant and a galaxy at the top." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Regional notice: new arrival</p>
+                <h2 id="sendoff">TopVerse: Twin-Stick Universe Simulator</h2>
+                <p>Welcome, villager. Your region is mostly fog. The locals say there's a mine to the north, a monster forest to the east and a despot somewhere past the river. The fire station is hiring. So is the garden.</p>
+                <p>Pick a tile. Fight a fire, chase a convoy, calm a riot, tame a beast, raise a city or fly a fleet to the next star. Whatever you do, the world keeps it, and nothing out there comes for you until you go looking.</p>
+                <p><strong>Choose a tile. Play it your way. The universe remembers.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a></p>
+            </div>
+            <div>
+                <p>Inspired by Cortex Command, Syndemic by Adjuvant, Advance Wars, Starsector, Battleships Forever, Angels Fall First: Planetstorm, the Pokémon Trading Card Game, X-COM, Animal Crossing, Pacific Rim and 8089: The Next Action RPG</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Zeroes Three (CC0), Jersey 10, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

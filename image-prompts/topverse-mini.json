@@ -1,0 +1,20 @@
+{
+  "slug": "topverse-mini",
+  "out": "site/projects/mini/topverse",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - S - Tilt Shift",
+  "lead": "Tilt-shift miniature diorama photo seen from above, sunny jade green and yellow tones. ",
+  "images": [
+    {"n": 1, "name": "at-rest", "ratio": "3:2", "prompt": "A peaceful countryside of fields, forests and a quiet village, a dark untouched forest far away"},
+    {"n": 2, "name": "begin", "ratio": "3:2", "prompt": "A small village at dawn surrounded by drifting fog, a wooden watchtower at its edge"},
+    {"n": 3, "name": "goal", "ratio": "3:2", "prompt": "A growing town with a new road, a radio mast and a satellite dish on a green hill"},
+    {"n": 4, "name": "moment", "ratio": "3:2", "prompt": "A lone figure in a warehouse full of tumbling crates and broken shelves"},
+    {"n": 5, "name": "campaign", "ratio": "3:2", "prompt": "A small team setting out from a briefing tent toward a rocky canyon"},
+    {"n": 6, "name": "hub", "ratio": "3:2", "prompt": "A sprawling city of colour-coded districts beside a harbour"},
+    {"n": 7, "name": "evening", "ratio": "3:2", "prompt": "A board game map with small figure tokens and a cup of tea beside it on a table"},
+    {"n": 8, "name": "fleet", "ratio": "3:2", "prompt": "A huge plain flagship hovercraft on a lake, four small boats docked around its sides"},
+    {"n": 9, "name": "beehive", "ratio": "3:2", "prompt": "A giant beehive in a dark forest, a lone explorer stepping toward it"},
+    {"n": 10, "name": "wildlife", "ratio": "3:2", "prompt": "A person feeding a strange friendly horned beast in a meadow beside a farm"}
+  ]
+}
