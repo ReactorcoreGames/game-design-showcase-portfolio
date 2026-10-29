@@ -149,7 +149,7 @@ Each one means: plan → approval → page → image spec → nexus entry → ma
 - [x] Party Hard–style, now Guest List Zero
 - [-] Planet Warfare (Skip until further notice - I need to prepare for this)
 - [-] TopVerse (Skip until further notice - I need to prepare for this)
-- [-] AAL Standalone (Skip until further notice - I need to prepare for this)
+- [x] AAL Standalone
 
 ## 5. Image generation (local sessions only)
 

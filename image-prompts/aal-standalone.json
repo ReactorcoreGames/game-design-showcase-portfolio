@@ -1,0 +1,37 @@
+{
+  "slug": "aal-standalone",
+  "preset": "01 Main - 3D Low Poly",
+  "style": "Palette of deep space slate, hull white and grey with red accents, phosphor green and bright cyan energy glows. Big stylized anime explosions with flat shockwave rings. No text, letters, numbers, logos or insignia anywhere.",
+  "images": [
+    {
+      "n": 1,
+      "role": "title",
+      "ratio": "16:9",
+      "prompt": "Wide cinematic landscape shot in orbit above the curved horizon of a cratered grey planet, filling the frame from edge to edge: a huge long flat boxy grey and white carrier spaceship with a red bow, hazard stripes, swept red-tipped fins, twin glowing rear engines and a white launch rail along its top deck glides across the frame. Far ahead of it, small in the frame, a blocky white and red robot with a large hexagonal shield with a glowing cyan rim flies toward a distant swarm of crude angular dark green and black alien ships, leaving a green thruster trail. Stars and a pale sun behind."
+    },
+    {
+      "n": 2,
+      "role": "vignette",
+      "ratio": "16:9",
+      "prompt": "Dynamic wide shot low over a dusty orange alien plain with rock pillars and craters: a sleek small white and red jet fighter with a round hexagonal cyan-rimmed shield on its belly streaks across the frame just above the ground, kicking up a long dust trail, firing a thick bright yellow-white energy beam ahead into a cluster of crude angular dark green and black alien ships, two of them bursting into big stylized orange explosions with flat white shockwave rings. Hazy sky with a ringed planet on the horizon."
+    },
+    {
+      "n": 3,
+      "role": "feature",
+      "ratio": "16:9",
+      "prompt": "Wide side view in space of the front end of a long grey and white carrier spaceship with a red bow and hazard stripes, a blue and white planet curving below. Shooting forward off the tip of a long white launch rail that runs along the ship's top deck is a blocky white and red humanoid robot in a forward-leaning flying pose, as big as a fighter jet in the frame, square head with one round red sensor eye, holding a tall hexagonal shield with a glowing cyan rim on its left arm and a long rifle in its right. The rail behind it glows bright green, with a streak of green light and sparks trailing back along it. Stars above."
+    },
+    {
+      "n": 4,
+      "role": "boxart",
+      "ratio": "2:3",
+      "prompt": "Tall portrait view from below of a huge long flat boxy grey and white carrier spaceship with a red bow, hazard stripes and swept red-tipped fins rising nose first out of a sea of glowing clouds above a planet, its frontal energy field glowing cyan. From the white launch rail on its top deck a small blocky white and red robot with a large hexagonal cyan-rimmed shield launches upward into a dark star-filled sky, trailing green light. A swarm of tiny dark green alien ships high above."
+    },
+    {
+      "n": 5,
+      "role": "story",
+      "ratio": "16:9",
+      "prompt": "Wide space vista painting of a star system, a painting rather than a map, no orbit lines, no diagram, no labels: a bright white sun on the left, a big ringed gas giant in the middle distance, and in the foreground a rocky brown planet whose surface is spotted with spreading dark green growths and glowing green hive mounds. A long swarm of crude angular dark green and black alien ships drifts toward it across a faint purple nebula."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "aal-standalone-mini",
+  "out": "site/projects/mini/aal-standalone",
+  "size": [320, 240],
+  "quality": 70,
+  "preset": "02 Photo - P - Long Exposure",
+  "lead": "Long exposure sci-fi film still in deep space, dark slate, green and cyan light trails. ",
+  "images": [
+    {"n": 1, "name": "monsters", "ratio": "3:2", "prompt": "A swarm of dark alien ships and organic hive pods drifting between galaxies"},
+    {"n": 2, "name": "standalones", "ratio": "3:2", "prompt": "A long grey carrier spaceship with a red bow leaving a shipyard, engines glowing"},
+    {"n": 3, "name": "battle", "ratio": "3:2", "prompt": "A small white robot skating fast across a crater floor, sparks and green thruster trails"},
+    {"n": 4, "name": "system", "ratio": "3:2", "prompt": "A star system with two suns, a nebula and a debris field seen from far away"},
+    {"n": 5, "name": "universe", "ratio": "3:2", "prompt": "A spiral galaxy glowing in the dark, seen from outside"},
+    {"n": 6, "name": "session", "ratio": "3:2", "prompt": "Headphones resting on a desk in front of a glowing green cockpit display at night"},
+    {"n": 7, "name": "momentum", "ratio": "3:2", "prompt": "A jet fighter looping in the night sky, long curving light trails"},
+    {"n": 8, "name": "mothership", "ratio": "3:2", "prompt": "Small mining drones cutting into an asteroid beside a large carrier spaceship"},
+    {"n": 9, "name": "swarm", "ratio": "3:2", "prompt": "Hundreds of small dark alien ships swarming over a planet's surface"},
+    {"n": 10, "name": "planet", "ratio": "3:2", "prompt": "Crystal valley on an alien planet under a meteor storm"}
+  ]
+}

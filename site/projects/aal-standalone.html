@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAL Standalone: Super Warrior Mecha</title>
+
+    <meta name="description" content="A game design concept by Reactorcore: you are the AI of a lone superweapon, a transformable mecha and the mothership that rebuilds it, clearing generated star systems of space monsters. Momentum flight, overkill from the first launch, and a memorial for every unit lost.">
+    <meta name="keywords" content="game design concept, mecha, transformable mecha, mothership, third-person shooter, space combat, momentum physics, flow state, permadeath, procedural campaign, space monsters, AAL universe, Reactorcore">
+    <meta name="author" content="Reactorcore Games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-standalone.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="AAL Standalone: Super Warrior Mecha">
+    <meta property="og:description" content="A game design concept: one AI, one mecha, one mothership, against every space monster in the star system. Free for anyone to build.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-standalone.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-standalone_2_vignette.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Concept art: a white and red jet streaks low over an orange desert, its beam blowing apart a cluster of monster ships">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="AAL Standalone: Super Warrior Mecha">
+    <meta name="twitter:description" content="A game design concept: one AI, one mecha, one mothership, against every space monster in the star system.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-standalone_2_vignette.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "AAL Standalone: Super Warrior Mecha",
+        "description": "A game design concept, not a released game: a third-person mecha action game where the player is the AI of a lone tandem superweapon, a transformable mecha and the mothership that rebuilds it, clearing generated star systems of space monsters with momentum flight and an overpowered arsenal, in a persistent universe that remembers every unit lost.",
+        "creativeWorkStatus": "Concept",
+        "genre": ["Action", "Shooter", "Mecha"],
+        "gamePlatform": "PC",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/aal-standalone.html",
+        "image": "https://reactorcoregames.github.io/game-design-showcase-portfolio/projects/images/aal-standalone_2_vignette.jpg",
+        "author": { "@type": "Organization", "name": "Reactorcore Games", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0a0f12">
+
+    <link rel="preload" href="../fonts/radio-stars.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+
+    <style>
+        /* AAL Standalone: the green of a jet fighter's display over deep space slate, the cyan of the
+           mecha's shield, hull white for highlights and the mothership's red bow kept for the
+           memorial. Radio Stars for the title and headings, Zector for the subtitle and kickers. */
+        @font-face { font-family: "Radio Stars"; src: url("../fonts/radio-stars.woff2") format("woff2"); font-display: swap; }
+        @font-face { font-family: "Zector"; src: url("../fonts/zector.woff2") format("woff2"); font-display: swap; }
+
+        :root {
+            --flow-1: #0a0f12;
+            --flow-2: #123038;
+            --grid-minor: rgba(110, 255, 150, 0.04);
+            --grid-major: rgba(110, 255, 150, 0.09);
+            --p-ground: rgba(11, 15, 18, 0.95);
+            --p-panel: #131b1f;
+            --p-1: #6dff95;
+            --p-2: #4fd6ff;
+            --p-3: #eef3f5;
+            --p-text: #d6dfe1;
+            --p-dim: #9db0b3;
+            --p-line: rgba(170, 235, 215, 0.15);
+            --bow: #ff5a4e;
+            --font-title: "Radio Stars", "Segoe UI", sans-serif;
+            --font-sub: "Zector", "Segoe UI", sans-serif;
+            --shade: #070a0c;
+        }
+
+        /* Title effect, "catapult launch": a green charge builds along the name, flashes white as the
+           rail fires, and falls away. Layered dark shadows keep it legible at the dimmest frame. Radio
+           Stars is wide, so the title runs smaller than the template's default. */
+        .p-name {
+            font-size: clamp(1.7rem, 0.6rem + 4.6vw, 5.2rem);
+            animation: launch 6s ease-in-out infinite;
+        }
+        @keyframes launch {
+            0%, 100% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), -20px 0 30px rgba(109, 255, 149, 0); }
+            40% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), -12px 0 26px rgba(109, 255, 149, 0.55); }
+            48% { color: #ffffff; text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 0 0 30px rgba(109, 255, 149, 0.95), 0 0 6px rgba(220, 255, 230, 0.9); }
+            62% { color: var(--p-3); text-shadow: 0 2px 0 var(--shade), 0 0 5px var(--shade), 0 0 12px var(--shade), 3px 3px 0 var(--shade), 24px 0 30px rgba(79, 214, 255, 0.35); }
+        }
+        /* Zector is thin, so the subtitle gets a heavy dark halo to hold up over the pale planet art. */
+        .p-sub { text-transform: uppercase; letter-spacing: 0.18em; color: var(--p-1); text-shadow: 1px 1px 0 var(--shade), -1px -1px 0 var(--shade), 1px -1px 0 var(--shade), -1px 1px 0 var(--shade), 0 0 3px var(--shade), 0 0 6px var(--shade), 0 0 12px var(--shade), 0 0 20px var(--shade); }
+        .p-sub::after {
+            content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem; height: 3px;
+            background: var(--p-2);
+            animation: launch-line 6s ease-in-out infinite;
+        }
+        @keyframes launch-line {
+            0%, 40%, 100% { box-shadow: 0 0 4px rgba(79, 214, 255, 0.3); opacity: 0.7; }
+            48% { box-shadow: 0 0 16px rgba(109, 255, 149, 0.95), 0 0 30px rgba(79, 214, 255, 0.6); opacity: 1; }
+        }
+        .section-mark::after { animation: h2-line 6s ease-in-out infinite; }
+        @keyframes h2-line { 0%, 100% { box-shadow: none; } 48% { box-shadow: 0 0 10px rgba(109, 255, 149, 0.6); } }
+        h2, h3 { letter-spacing: 0.03em; }
+        .p-kicker { font-family: var(--font-sub); font-weight: 400; font-size: 0.85rem; letter-spacing: 0.16em; }
+
+        .memorial { --c: var(--bow); }
+        .memorial h3 { color: var(--p-3); }
+        .p-nest > div { --c: var(--p-3); }
+        .p-nest > div > div { --c: var(--p-1); }
+        .p-nest > div > div > div { --c: var(--p-2); }
+        .p-nest > div > div > div > div { --c: var(--p-dim); }
+        .arsenal td:first-of-type { width: 100%; }
+        .modes td { width: 70%; }
+        @media (max-width: 620px) { .p-sendoff h2 { font-size: 0.9rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-optional" href="../aal/">Universe</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <header class="p-hero">
+        <div class="p-hero-frame">
+            <img class="p-hero-img" src="../projects/images/aal-standalone_1_title.jpg" alt="A long grey and white carrier ship with red stripes glides above a grey cratered planet, while far ahead a small white mecha with a cyan-rimmed shield fights among dark green monster ships, a green thruster trail curving behind it." width="1280" height="720" fetchpriority="high">
+            <div class="p-hero-title">
+                <h1 class="p-title"><span class="p-name">AAL Standalone</span><span class="p-sub">Super Warrior Mecha</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap sheet">
+        <div class="p-id" data-md="skip">
+            <span class="id-badge lg"><span class="icon" style="--icon: url(../icons/robot-helmet-delapouite.png)"></span></span>
+            <div class="p-id-text">
+                <a class="p-label" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener">Reactorcore's Personal Game Design Project</a>
+                <p class="p-fork"><b>Free to fork</b>No licence and no copyright claim: build this game under your own name, or lift one idea from it. <a href="../index.html#free-to-fork">Why?</a></p>
+            </div>
+            <button class="btn btn-sm p-md" type="button" data-fork-md hidden>Download as Markdown</button>
+        </div>
+
+        <section class="p-section" aria-labelledby="overview">
+            <h2 class="section-mark" id="overview"><span class="icon" style="--icon: url(../icons/carrier-cathelineau.png)"></span>Game overview</h2>
+            <p class="p-lead">AAL Standalone is a third-person mecha action game about being truly, unapologetically overpowered. You are the AI of a lone superweapon: a transformable mecha that flies, skates and fights at absurd speed, and the armored mothership that carries it, repairs it and builds a new one whenever it's lost.</p>
+            <p>Each campaign is a generated star system overrun by space monsters. They have their own plans for its planets and you pick your fights, launching off the mothership's catapult into battles on planets and in open space, with momentum physics, infinite flight, beam rifles and guided fusion bombs from the very first minute.</p>
+            <p>The mecha is yours to throw away. The mothership isn't: it holds the AI, and if it falls, that Standalone unit and its name go onto a permanent memorial and a new unit takes over the fight. It's one of Reactorcore's oldest designs, born from a love of <strong>Gundam</strong>, <strong>Macross</strong>, <strong>Armored Core</strong>, <strong>Lost Planet</strong> and <strong>Knights of Sidonia</strong>, and from frustration with mecha games that never let the machine feel like that.</p>
+
+            <div class="p-trio">
+                <article class="p-card" style="--c: var(--p-2)">
+                    <h3><span class="icon" style="--icon: url(../icons/person-delapouite.png)"></span>Target audience</h3>
+                    <p>Mecha fans who have always wanted to <strong>pilot the machine the anime promised</strong>: the startup sequence, the catapult launch, the acrobatics, the beam that cuts a fleet in half.</p>
+                    <p>They're tired of western mech games where the giant lumbers, and of Japanese ones where it's fast but weightless. And they like blowing off steam to their own music.</p>
+                    <p>Full 3D flight asks for practice, so the mothership has assisted flight states, the training is in a simulator, and a manual that pauses the game is always one key away.</p>
+                </article>
+                <article class="p-card" style="--c: var(--p-3)">
+                    <h3><span class="icon" style="--icon: url(../icons/speedometer-delapouite.png)"></span>Game's purpose</h3>
+                    <p><strong>Power:</strong> abundance, excess and overkill, with nothing held back.</p>
+                    <p><strong>Freedom and excitement:</strong> flight that never runs out, momentum you steer with your whole body, and the flow of a long fight played to your own soundtrack.</p>
+                    <p><strong>Meaning:</strong> a named unit, a universe that remembers it, and a job worth doing.</p>
+                    <p>It avoids draining <strong>rest</strong> (nothing kills you without a big mistake) and <strong>autonomy</strong> (the full arsenal from the start), and it never counts how much of the galaxy you've cleared, so there's no tally to chase.</p>
+                </article>
+                <article class="p-card">
+                    <h3><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span>Core concept</h3>
+                    <p>Mecha games usually ration power: fuel limits, speed caps, weak starting weapons, the good stuff earned late.</p>
+                    <p>Here <strong>the power is the premise</strong>. The danger comes from logistics, numbers and your own recklessness, never from a stat sheet.</p>
+                    <p>Each star system is a finite, generated campaign inside a persistent universe. Losing doesn't reset anything: the next unit inherits the war you left, and the memorial keeps the old one.</p>
+                </article>
+            </div>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-standalone_5_story.jpg" alt="A wide view of a star system: a bright sun, a ringed gas giant and, in front, a rocky brown planet studded with glowing green crystal hives, while a swarm of dark monster ships streams past through a purple nebula." width="1280" height="720" loading="lazy">
+            <figcaption>"The monsters don't want anything from a star system. They just turn it into more of themselves."</figcaption>
+        </figure>
+
+        <section class="p-section p-prose" aria-labelledby="lore">
+            <h2 class="section-mark" id="lore"><span class="icon" style="--icon: url(../icons/hive-mind-delapouite.png)"></span>Lore and story</h2>
+            <h3>The space monsters</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/01-monsters.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The peoples of the Milky Way settled their own galaxy and made peace with every neighbor who could be reasoned with. Then their probes looked outward, and found what lives between the galaxies.</p>
+            <p>The space monsters aren't an empire or an army. They're many unrelated things with one habit in common: rogue beasts, robots that outlived their masters, self-replicating war fleets, infected zombie armadas, plagues of grey goo. Most are some long-gone civilization's mistake. None of them can be negotiated with, and none of them stop. They land on planets, moons, gas giants, asteroid belts and nebulae, build nests and replicators and factories, strip everything, corrupt what's left, multiply and move on.</p>
+
+            <h3>The Standalones</h3>
+            <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/02-standalones.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+            <p>The Milky Way's answer is a weapon built to go where no fleet could be sent: a self-sustaining deep-space probe that's also a battleship, carrying a mecha in its bay and an AI in its core. It harvests what it needs, repairs itself and builds what it loses, so it can fight alone, indefinitely, light-years from home. Each unit carries its own ID, like SA-56, and a name.</p>
+            <p>The first ones had accidents. The later ones were perfected and sent out by the thousand, one star system at a time.</p>
+
+            <h3>You</h3>
+            <p>You are one of those AIs. You split your attention between the mothership and the mecha, flying one while the other works on its own. There's no mystery to uncover and no plot twist waiting: the game tells you plainly who you are and why you're here, and the rest is the fight.</p>
+
+            <h3>The job right now</h3>
+            <p>Clear this star system before the monsters ruin it, so people can live there one day and more Standalones can be built from it. Then move on to the next one.</p>
+        </section>
+
+        <section class="p-section" aria-labelledby="controls">
+            <h2 class="section-mark" id="controls"><span class="icon" style="--icon: url(../icons/keyboard-delapouite.png)"></span>Controls and interface</h2>
+            <p>You fly one machine at a time from a third-person camera that pulls back as you speed up. The other runs itself: the mothership on autopilot following your standing orders, the mecha docked or fighting where you left it. Switch whenever you like.</p>
+            <div class="p-keys">
+                <div class="p-keygroup">
+                    <h3>Mecha: flight</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Thrust in that direction; momentum carries on until you brake</dd></div>
+                        <div><dt>Space / Ctrl</dt><dd>Thrust up, thrust down</dd></div>
+                        <div><dt>Shift</dt><dd>Boost</dd></div>
+                        <div><dt>X</dt><dd>Brake hard</dd></div>
+                        <div><dt>Tab</dt><dd>Transform between robot and jet</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Mecha: weapons</h3>
+                    <dl>
+                        <div><dt>Left click</dt><dd>Fire the rifle in its current mode</dd></div>
+                        <div><dt>Right click</dt><dd>Raise the shield</dd></div>
+                        <div><dt>Wheel</dt><dd>Change the rifle's mode</dd></div>
+                        <div><dt>Hold R</dt><dd>Paint missile locks, release to fire</dd></div>
+                        <div><dt>F</dt><dd>Fusion bomb: tap to throw, hold to guide</dd></div>
+                        <div><dt>B</dt><dd>Buster mode</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Mothership</h3>
+                    <dl>
+                        <div><dt>W A S D</dt><dd>Fly, in automatic, assisted or fully manual flight</dd></div>
+                        <div><dt>Left click</dt><dd>Fire the turrets at the pointer</dd></div>
+                        <div><dt>Right click</dt><dd>Charge and fire the main cannon</dd></div>
+                        <div><dt>G</dt><dd>Launch the mecha from the catapult</dd></div>
+                        <div><dt>H</dt><dd>Call the mecha home to dock</dd></div>
+                    </dl>
+                </div>
+                <div class="p-keygroup">
+                    <h3>Unit</h3>
+                    <dl>
+                        <div><dt>V</dt><dd>Switch between mecha and mothership</dd></div>
+                        <div><dt>M</dt><dd>Tactics screen (the battle keeps running)</dd></div>
+                        <div><dt>F1</dt><dd>Manual and Database (pauses)</dd></div>
+                        <div><dt>Esc</dt><dd>Pause</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <p>A rectangular <strong>lock-on reticle</strong> picks the target nearest its center, and once you open fire the rifle arm leads that target on its own, so you can fly freely while it aims. For a precise shot you drop into first person with a pinpoint crosshair. The interface is styled like a fighter jet's green display, and the game has <strong>no music of its own</strong>: only weapons, engines and ambience, so you can bring your own.</p>
+            <p>The same game works as a 3D shooter or as a side-view 2D one. Only the camera changes; the momentum, the arsenal and the campaign stay the same.</p>
+        </section>
+
+        <figure class="p-shot">
+            <img src="../projects/images/aal-standalone_2_vignette.jpg" alt="A white and red jet with a cyan-rimmed shield streaks low over an orange desert, kicking up dust, its yellow beam blowing apart dark green monster ships in an explosion ringed by white shockwaves." width="1280" height="720" loading="lazy">
+            <figcaption>"Nothing slows the mecha down but you. Let go of the stick and it keeps going."</figcaption>
+        </figure>
+
+        <section class="p-section" aria-labelledby="layers">
+            <h2 class="section-mark" id="layers"><span class="icon" style="--icon: url(../icons/stack-delapouite.png)"></span>Game layers</h2>
+            <ol class="p-stack">
+                <li class="p-layer">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/jet-fighter-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">01 · Moment-to-moment</p>
+                        <h3>Launch, fight, dock</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/03-battle.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>You choose where to enter a battle. In space you arrive from the edge, already moving; on a planet you pick a point and an angle and come in through re-entry. The mecha fires off the catapult and the battle is on: skating across a crater floor, flipping to jet form to cross the map in seconds, flipping back to stop on a dime and cut a monster in half.</p>
+                        <p>Meanwhile the mothership hammers the field with railguns, its drones mine the nearest asteroid, and when the mecha is hurt it docks to repair while the ship covers it. Lose the mecha and the ship prints a new one.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/ringed-planet-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">02 · Low metagame</p>
+                        <h3>One star system</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/04-system.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A campaign is one generated star system on a tile map, like Freelancer's, with zones for its suns, planets, moons, nebulae, debris fields and belts. It may have up to nine suns, or none. The monsters may already have settled in, be in the middle of landing, or not have arrived yet.</p>
+                        <p>Time on the map runs semi-real-time, as in Star Fox 2: while you travel and fight, the monster groups go about their own plans, spreading toward the next planet and corrupting what they reach. Groups can fight each other too. You decide which threat to intercept first.</p>
+                        <p>The campaign ends when every threat is gone, and the system is safe. If one place is too far gone to save, the last resort is to <strong>detonate its sun</strong>.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-conquest-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">03 · High metagame</p>
+                        <h3>The service, and the record of it</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/05-universe.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Above the campaign is the work that never runs out: making the universe safe, one star system after another. The universe is persistent and nothing in it is ever reset. The galaxy screen <strong>shows the galaxy but not the progress</strong>: no map of cleared systems, no running total, nothing to chase except the next system that needs you.</p>
+                        <p>What the game keeps instead is a <strong>log</strong> of every unit, every campaign, every system saved or given up, and the memorial of the units that didn't come back. It's a history to read back, not a score.</p>
+                    </div>
+                </li>
+                <li class="p-layer" style="--c: var(--p-dim)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/headphones-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">04 · Practical game flow</p>
+                        <h3>Put on an album</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/06-session.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Start your music, open the system map, pick a target. A battle runs a few minutes to a quarter of an hour; a star system takes a few evenings.</p>
+                        <p>The game saves itself constantly, so you can quit at any moment and pick up exactly there. There's no loading an older save to undo a loss, because the universe only moves forward.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section" aria-labelledby="modes">
+            <h2 class="section-mark" id="modes"><span class="icon" style="--icon: url(../icons/stopwatch-lorc.png)"></span>Game modes</h2>
+            <div class="p-table-wrap">
+                <table class="p-table modes">
+                    <thead><tr><th scope="col">Mode</th><th scope="col">What it's for</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Campaign</th><td>The real thing: your named unit in the persistent universe, star system after star system. Losing the mothership is permanent.</td></tr>
+                        <tr><th scope="row">Quick Game</th><td>A simulator fight that doesn't count. Generate a random battle or build one, from the world and its weather to the monster groups and your own unit's condition, with any part randomized, locked or hidden for a surprise. No log, no permadeath, retry as often as you like.</td></tr>
+                        <tr><th scope="row">Training</th><td>Short simulator lessons in movement, sensors, weapons, systems and tactics, with no danger and no rush. Never forced: you can skip straight to a quick game and figure it out yourself.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Inside the campaign, the structure nests, and you can stop between any of its pieces:</p>
+            <div class="p-nest" aria-label="The campaign, outermost first">
+                <div><span>The universe</span><small>Persistent and endless: system after system, unit after unit.</small>
+                    <div><span>A star system</span><small>One generated campaign: a few evenings.</small>
+                        <div><span>A battle</span><small>One location on the map, from entry to debriefing: minutes.</small>
+                            <div><span>A sortie</span><small>The mecha's launch, fight and return to dock.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="features">
+            <h2 class="section-mark" id="features"><span class="icon" style="--icon: url(../icons/robot-helmet-delapouite.png)"></span>Features and mechanics</h2>
+            <ol class="p-stack">
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/catapult-heavenly-dog.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The heart of it</p>
+                        <h3>One AI, two machines</h3>
+                        <p>You aren't a pilot. You're the AI, and the AI lives in the mothership's core. The mecha, the <strong>ReWaR</strong> (Remote Warrior Robot), is a proxy body it flies by remote. That one fact sets the game's whole attitude to risk.</p>
+                        <p><strong>The mecha is expendable.</strong> If it's destroyed, the mothership's fabricator prints a new one from harvested resources and catapults it straight back into the fight. So you can be reckless with it, dive into a swarm and see what happens. <strong>The mothership is not.</strong> It's slower, tougher and carries bigger guns, and if it falls, the AI falls with it.</p>
+                        <p>The two cover each other. The ship fires support, repairs and rearms the mecha, and recovers it through its docking bay; the mecha keeps the swarm off the ship. You can even leave the mothership out of a battle entirely, at the cost of every repair, rebuild and support shot it would have given you.</p>
+                        <figure class="p-shot">
+                            <img src="../projects/images/aal-standalone_3_feature.jpg" alt="A blocky white mecha with a long rifle and a hexagonal cyan-rimmed shield leaps off the green-lit launch rail along the top of a grey and white carrier with a red-striped bow, a blue planet below and explosions in the distance." width="1280" height="720" loading="lazy">
+                            <figcaption>"Lose the mecha and the mothership prints another. Lose the mothership and that unit is gone for good."</figcaption>
+                        </figure>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/spiral-thrust-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">The way it moves</p>
+                        <h3>Momentum, not friction</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/07-momentum.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>Most mecha games stop you the instant you let go of a key. Here <strong>momentum is conserved</strong>: no air friction, no speed cap, and you brake on purpose. You move by adding force in the direction you want, so you skate and glide across surfaces and throw yourself around in the air, then turn on a dime, which no plane can do.</p>
+                        <p>Thrusters cover the whole body: shoulders for turning, waist for strafing and dodging, a back unit for balance and forward thrust, breast and knees for hovering. Flight is unlimited, with no fuel and no overheating, and the mecha can cross a whole battlefield in seconds.</p>
+                        <p>One key <strong>transforms</strong> it into a jet that flies behind its shield, rifle mounted down the middle, for extreme straight-line speed and re-entry. The mothership flies too, with three control states: automatic, which keeps it level and makes docking easy; assisted, which keeps it stable while you steer and aim; and fully manual, with roll, pitch and no limits.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/nuclear-bomb-skoll.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Overkill from the first launch</p>
+                        <h3>The arsenal</h3>
+                        <p>Nukes and beam cannons are usually a game's last reward. Here they're <strong>standard equipment from the first minute</strong>, usable as often as you like. The balance comes from the situation, one unit against whole swarms, not from rationing.</p>
+                        <div class="p-table-wrap">
+                            <table class="p-table arsenal">
+                                <thead><tr><th scope="col">Weapon</th><th scope="col">What it does</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Variable rifle</th><td>A particle gun fed by the reactor, so it never runs out, only needs a moment to recharge. Modes for every job: heavy machine gun, charge cannon that pierces barriers, spread, flamer, shield, a curved energy slash and a blowtorch blade</td></tr>
+                                    <tr><th scope="row">Buster mode</th><td>The rifle mounts on the back reactor and opens up: a wide raw beam that vaporizes a whole group, a concentrated cutting beam (a massive laser sword), or the buster bolt, a nuke-grade shot that leaves a crackling trail</td></tr>
+                                    <tr><th scope="row">Super shield</th><td>Covers the whole body and survives a direct nuclear blast or a death ray. Doubles as the heat shield for re-entry</td></tr>
+                                    <tr><th scope="row">Fusion bombs</th><td>Compact guided bombs from the shield: thrown, dropped, stuck on by magnet, claw or adhesive foam, or flown to the target like a missile, and set off by remote, timer or impact</td></tr>
+                                    <tr><th scope="row">Missiles</th><td>Homing cryo missiles, fired in a swarm at every target you've painted at once, Freedom Gundam style</td></tr>
+                                    <tr><th scope="row">Bomblets</th><td>Tiny incendiary flares from the legs: they break lock-ons, rain on the ground from altitude, fire backwards like a shotgun, and hang in space as a cloud of mines</td></tr>
+                                    <tr><th scope="row">Automatic guns</th><td>Two head lasers and a back railgun turret that fire on their own</td></tr>
+                                    <tr><th scope="row">The body itself</th><td>Kicks, stomps and punches from a hardened frame, after-images from the heat vents, a chaff cloud, a speed lance to plough straight through, and a self-destruct for when it's all over anyway</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Almost everything has <strong>modes</strong>: detonation by timer, remote, proximity or impact; payloads switched between incendiary, frag, cryo and shockwave; lasers that pulse, charge or stream. Loadouts are set at the mothership or in the field, and the mecha's frame is modular enough to move weapons between slots or swap the standard parts for oversized and undersized guns, each with its trade-off.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/delivery-drone-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Carrier, factory, battleship</p>
+                        <h3>The mothership</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/08-mothership.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The mothership is a self-sufficient war factory. Its <strong>drones</strong> fly out to mine rocks, crystals, asteroids and gas; its fabricator turns what they bring back into ammunition, repairs, more drones and new mechas. Everything costs resources, which is where the real tension lives: a ship far from anything worth mining has to think about what it spends.</p>
+                        <p>It fights, too. Railgun turrets cover every angle, point-defence lasers swat missiles, a missile array and bomb, torpedo and mine bays support the mecha, and a <strong>main cannon</strong> along its spine can erase a fleet in one shot. It travels faster than light, and a frontal energy field shields it on re-entry.</p>
+                        <p>From the <strong>tactics screen</strong>, a map of the battle that never pauses it, you hand out orders while you fly the mecha: move here, fire that at this, harvest there, be aggressive or defensive, dock the mecha, retreat.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/artificial-hive-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">No reason, no surrender</p>
+                        <h3>The space monsters</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/09-swarm.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>The enemy is <strong>numerous and individually weak</strong>. One monster is no match for a Standalone; a system full of them, spreading while you're busy elsewhere, is. Each campaign rolls one or more groups, and each group pursues its own goals on the map: gatherers that strip resources and only fight when attacked, defenders that guard them, nests that grow into factories.</p>
+                        <p>Every monster is built from a <strong>chassis</strong>, which gives it a size, a behavior and a trick (a cloak, a shield, an overcharge), and <strong>hardpoints</strong> that take any weapon or tool. Chassis scale from half size to three times, guns and all, so one design becomes a whole family, and every new part works on every chassis. The first group designed this way is the Robot Starships, self-replicating harvesters gone rogue that remember whoever attacked them and spread that grudge to every ship in the system.</p>
+                        <p>Some groups also carry <strong>supercores</strong>, power objects that strengthen them or their whole force. Destroy one, or steal it and use its power yourself, then send it home for study or burn it on one overpowered attack.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-3)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/bright-explosion-lorc.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Every kill looks different</p>
+                        <h3>Overkill destruction</h3>
+                        <p>Everything in the game, the player, the monsters and the scenery, obeys <strong>one universal standard</strong>: mass, materials, a hidden health value, and thresholds for EMP, armor, heat, radiation, cryo and knockback. Nothing gets special rules, so whatever works on one thing works the same on everything.</p>
+                        <p>How a target dies depends on what killed it. A normal kill leaves a burning wreck. <strong>Overkill</strong> destroys it according to the damage type: steady small damage breaks it into exploding debris and smoke, a big kinetic hit blows it into shreds, heat melts it to nothing, a radiation burst makes it glow and dissolve. EMP crawls across a surface in blue arcs; cryo slows a target, makes it brittle and freezes it solid, until heat thaws it out.</p>
+                        <p>The look is deliberately simple, low-poly models with flat colors and small pixel textures, so the effects can be big, stylized anime explosions with shockwave rings, the way Star Fox 64 did them.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/planet-core-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Two kinds of battlefield</p>
+                        <h3>Planets and open space</h3>
+                        <figure class="p-mini" data-md="skip"><img src="mini/aal-standalone/10-planet.jpg" alt="" width="320" height="240" loading="lazy"></figure>
+                        <p>A <strong>planet</strong> is a huge surface that wraps around at its edges, so there are no walls. You come in from above and leave the same way, back to space. Seas, lava and acid have depths that grow lethal gradually, with warnings, and a gas giant with no ground at all has a crushing depth instead. <strong>Space</strong> has borders you can exit through anywhere, and some directions grow deadly as you near them: a sun, an anomaly, a black hole.</p>
+                        <p>Both are built from the same pieces, which the generator combines: solid scenery, liquids, weather bands, and Freelancer-style <strong>effect areas</strong> (gas clouds, radiation and magnetic fields, nebula fog) that can nest inside each other. Planets range from crater deserts, coal mountains and ice fields to crystal valleys, flying islands and cloud worlds; space from asteroid and ice fields to planetary rings and a sun's corona. Meteor storms and enemy reinforcements arrive with a warning and a countdown.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature memorial">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/martyr-memorial-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Nothing un-happens</p>
+                        <h3>The memorial</h3>
+                        <p>Before your first launch you name your unit and choose its colors. That name stays with it. If the mothership is destroyed, the unit goes onto a <strong>permanent list of the fallen</strong>, with its name, its colors and the record of what it did, and that name can never be used again, much like XCOM's memorial wall.</p>
+                        <p>The war doesn't reset. A new Standalone arrives in the same system to finish the job, usually to find the monsters have gained ground while it was on its way. Your knowledge carries over; the old unit doesn't.</p>
+                        <p>If a star system is lost beyond saving, the last resort is to detonate its sun. That stays in the log too, as a loss mourned rather than a score lost. Every save is automatic, with emergency backups kept only for a crashed computer, so the only way through a mistake is forward.</p>
+                    </div>
+                </li>
+
+                <li class="p-feature" style="--c: var(--p-2)">
+                    <span class="p-mark"><span class="icon" style="--icon: url(../icons/database-delapouite.png)"></span></span>
+                    <div class="p-body">
+                        <p class="p-kicker">Know your enemy</p>
+                        <h3>The Database and scanning</h3>
+                        <p>The game's encyclopedia lives inside it, part of the manual, and opening it pauses everything. Your own unit is fully documented from the start. The monsters and the worlds start blank.</p>
+                        <p>To fill them in, hold a target in the missile reticle and <strong>scan</strong> it. Bigger, tougher things take longer, scans add up across short bursts, and the data is lost if the target dies first. A finished scan adds the monster and each of its parts; enough scans of one group reveal what the group is and where it came from.</p>
+                        <p>Unknown monsters get a designation like <strong>RS-5</strong>, the group's code and the order you met them, and you can give each one a nickname of your own, like "Bogey", which the game uses from then on. It's optional depth: useful information for the curious, never a checklist.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="p-section p-prose" aria-labelledby="trivia">
+            <h2 class="section-mark" id="trivia"><span class="icon" style="--icon: url(../icons/galaxy-delapouite.png)"></span>Trivia</h2>
+            <p>Standalone is one of Reactorcore's oldest designs. Its working title was <em>Adventures of You</em>, because the AI you played was simply called "You". An even earlier version had a human pilot in a single machine with a supply dropship; the AI and the mothership came later.</p>
+            <p>Several later designs are set in the peace the Standalones leave behind: <a href="aal-collector.html">AAL Collector</a>, <a href="aal-exterminator.html">AAL Exterminator</a> and <a href="aal-voyager.html">AAL Voyager</a> take place among the outposts and worker bots they built, and AAL Exterminator's smart bomb is modeled on the Standalone's fusion bomb.</p>
+        </section>
+
+        <section class="p-sendoff" aria-labelledby="sendoff">
+            <img src="../projects/images/aal-standalone_4_boxart.jpg" alt="Box art: a long grey and white carrier with red fins rises out of a sea of clouds, engines glowing cyan, as a small white and red mecha shoots up from its deck on a green beam toward a swarm of tiny ships." width="784" height="1176" loading="lazy">
+            <div class="p-card">
+                <p class="p-kicker">Activation order · Standalone unit</p>
+                <h2 id="sendoff">AAL Standalone: Super Warrior Mecha</h2>
+                <p>Core online. Reactor stable. Mecha in the bay, catapult charged. Your destination is a star system nobody has heard from in years, and everything in it that isn't you wants to eat it.</p>
+                <p>You have no fleet and you need none. You have infinite flight, a rifle that never runs dry, bombs that would end a city and a shield that shrugs them off. Lose your mecha and build another. Keep your ship, and keep your name.</p>
+                <p><strong>Choose your name carefully. It's the one they'll remember.</strong></p>
+                <button class="btn" type="button" data-fork-md hidden style="--c: var(--p-1)">Fork it: download as Markdown</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="https://linktr.ee/reactorcore" target="_blank" rel="noopener">linktr.ee/reactorcore</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Reactorcore Games · 2026 · <a href="../">Back to the designs</a> · <a href="../aal/">The AAL Universe</a></p>
+            </div>
+            <div>
+                <p>Inspired by Gundam (Wing Zero and Freedom), Macross, Armored Core, Lost Planet, Knights of Sidonia, Star Fox 2 and 64, Freelancer, Homeworld and XCOM's memorial</p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Radio Stars (CC0), Zector, Oxanium and IBM Plex Sans (SIL OFL)</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

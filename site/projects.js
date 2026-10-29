@@ -38,6 +38,14 @@ window.GENRES = [
 
 window.PROJECTS = [
   {
+    page: "aal-standalone.html", prefix: "aal-standalone",
+    title: "AAL Standalone", subtitle: "Super Warrior Mecha",
+    icon: "robot-helmet-delapouite", tint: "green",
+    blurb: "Be the AI of a lone superweapon: a transformable mecha you can throw away and the mothership that builds it again. Clear generated star systems of space monsters with momentum flight and nukes from the first launch, and if the mothership falls, its name goes on the memorial.",
+    genres: ["mecha", "action"], tags: ["third-person shooter", "momentum physics", "space monsters", "memorial"],
+    universe: "aal", status: "concept", added: "2026-10-29"
+  },
+  {
     page: "landfill-leviathan.html", prefix: "landfill-leviathan",
     title: "Landfill Leviathan", subtitle: "Sentient Garbage Rampage",
     icon: "gooey-daemon-lorc", tint: "green",
