@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ad Circus: Ads Only When Players Ask For Them · Reactorcore</title>
+    <!-- Built by tools/articles.py from the Google Docs export. Edit the template or the tool, not this file. -->
+
+    <meta name="description" content="A consensual way to show ads in a game: a quiet menu button to a separate screen of curtained ads, never forced on anyone, with an honest look at what each view supports.">
+    <meta name="author" content="Reactorcore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/ad-circus.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Reactorcore Games">
+    <meta property="og:title" content="The Ad Circus: Ads Only When Players Ask For Them">
+    <meta property="og:description" content="A consensual way to show ads in a game: a quiet menu button to a separate screen of curtained ads, never forced on anyone, with an honest look at what each view supports.">
+    <meta property="og:url" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/ad-circus.html">
+    <meta property="og:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ReactorcoreDev">
+    <meta name="twitter:title" content="The Ad Circus: Ads Only When Players Ask For Them">
+    <meta name="twitter:description" content="A consensual way to show ads in a game: a quiet menu button to a separate screen of curtained ads, never forced on anyone, with an honest look at what each view supports.">
+    <meta name="twitter:image" content="https://reactorcoregames.github.io/game-design-showcase-portfolio/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Ad Circus: Ads Only When Players Ask For Them",
+        "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/articles/ad-circus.html",
+        "author": { "@type": "Person", "name": "Reactorcore" },
+        "isPartOf": { "@type": "CollectionPage", "url": "https://reactorcoregames.github.io/game-design-showcase-portfolio/articles.html" },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#040b16">
+
+    <link rel="preload" href="../fonts/rc-display-black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="article.css">
+    <script src="../fx.js" defer></script>
+</head>
+<body class="shelf-ethics">
+    <header class="site-header">
+        <a class="brand" href="../"><img class="logo" src="../logo.png" alt="" width="86" height="86">Reactorcore <span>Game Designs</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-optional" href="../#designs">Designs</a>
+            <a class="nav-optional" href="../articles.html">Articles</a>
+            <a class="nav-optional" href="../book/">Book</a>
+            <a class="nav-keep" href="../links.html">Links</a>
+            <a class="btn btn-sm nav-keep" href="../hire_me/hire_me.html" style="--c: var(--tint-yellow)">Hire me</a>
+        </nav>
+    </header>
+
+    <main class="wrap sheet article-page">
+        <header class="article-head">
+            <span class="bg-icon" style="--icon: url(../icons/quill-ink-lorc.png)" aria-hidden="true"></span>
+            <p class="eyebrow"><a href="../articles.html#shelf-ethics">Articles · Industry &amp; ethics</a></p>
+            <h1 class="glow" data-burst-origin>The Ad Circus: Ads Only When Players Ask For Them</h1>
+            <p class="meta-line"><span>By Reactorcore</span><span>5 min read</span><span>Written October 2026</span></p>
+            
+        </header>
+
+        <div class="article-layout">
+            <div class="summary panel bracketed"><p class="label">In short</p><!-- Native article source for tools/articles.py: the "In short" panel, then the body marker line, then the body. -->
+<p>Ads in games don't have to ambush anyone. The Ad Circus is my idea for showing ads with the player's full consent: a separate screen behind a plain menu button that nobody is ever pushed toward. You walk in when you feel like it, look at a handful of curtained ads that change every few hours, close any of them whenever you want, and see exactly how your visit supports the developer.</p></div>
+            <nav class="toc" aria-labelledby="toc-title"><p class="label" id="toc-title">In this article</p><ol><li><a href="#the-problem-with-ads-in-games">The problem with ads in games</a></li><li><a href="#what-the-ad-circus-is">What the Ad Circus is</a></li><li><a href="#how-a-visit-works">How a visit works</a></li><li><a href="#being-honest-about-what-the-support-is-for">Being honest about what the support is for</a></li><li><a href="#what-goes-in-the-circus">What goes in the circus</a></li><li><a href="#why-this-works-better">Why this works better</a></li></ol></nav>
+            <article class="article-main">
+                <div class="prose">
+<h2 id="the-problem-with-ads-in-games">The problem with ads in games</h2>
+<p>Most games that run ads treat the player's attention as something to be taken. An ad plays between levels, in the middle of a session, or right as you press "continue". A banner sits at the edge of the screen while you play. A pop-up appears just as you were about to do something. The player never asked for any of it, so every ad lands as an interruption, and people learn to hate ads, the game that shows them, and the developer behind it.</p>
+<p>That's a shame, because ads aren't evil by themselves. An ad is someone telling you that a thing exists. Sometimes that thing is genuinely interesting, and the money from the view keeps a small developer going. The problem isn't the ad. It's that the ad is forced on you.</p>
+<p>So what if the player chose when to see ads?</p>
+<h2 id="what-the-ad-circus-is">What the Ad Circus is</h2>
+<p>The Ad Circus is a dedicated screen, separate from the rest of the game. You reach it from a button in a menu: the main menu, the options or pause menu, or an "Extras" page, whichever fits the game. The button sits quietly among the other buttons. It's never highlighted, never flashing, never advertised more than any other function in the game. It's simply there, like the credits.</p>
+<p>The game never shows an ad anywhere else. No mid-roll ads, no ads during intermissions, no ads between levels, no ads as a toll for continuing. If you never open the Ad Circus, you never see a single ad.</p>
+<figure><img src="images/ad-circus/01.webp" alt="A game menu with a plain Ad Circus button among Play, Continue, Options, Extras and Quit, next to the opened Ad Circus screen: six small curtained stages labelled Ad 1 to Ad 6 under the banner 'New ads every 6 hours!', one opened ad with a 5-second timer and Link, More info and Close buttons, a support progress bar at 42 of 100, and an info pop-up listing server costs, funding goals, features in development and what your views did." width="1376" height="768" decoding="async"><figcaption>A mock-up of an Ad Circus: an ordinary menu button, a handful of curtained ads, a 5-second rule, and an honest look at what the support is for.</figcaption></figure>
+<p>Inside is a small grid of ads, around four to eight, each shown as a little stage with its curtains closed. The selection cycles to fresh entries every few hours ("New ads every 6 hours!"), so there's always a reason to peek in now and then and see what's on offer today.</p>
+<p>That's the whole spirit of it. I like discovering new things, and ads can be one way to discover them, but I only want to see them when I want to see them. So you wander into the Ad Circus whenever you pass by the menu, see what's playing, maybe find something cool or interesting, or just laugh at a crappy ad. Hence the name: it's a little show you visit for fun, not a checkpoint you have to pass.</p>
+<h2 id="how-a-visit-works">How a visit works</h2>
+<ul>
+<li><strong>Open any tile</strong> to view that ad. The curtains part and the ad plays.</li>
+<li><strong>Close at any time.</strong> There's no obligation to watch an ad fully, and no penalty for closing it.</li>
+<li><strong>Five seconds counts.</strong> Viewing an ad for at least 5 seconds registers as a valid view and adds to the support progress. A small timer shows when you've reached it.</li>
+<li><strong>Follow up if you want.</strong> The viewer has a link to the advertised thing and a "more info" button where there's more to say, next to the close button.</li>
+</ul>
+<p>The 5-second rule matters more than it looks. Plenty of people will visit the circus mainly to support the developer, with the ads themselves as a side interest. If they don't know what makes a view count, they might click through a bunch of ads too fast, or close them too early, and their goodwill would quietly go nowhere. So the requirement is stated openly, right where you watch: stay five seconds and it counts. Nobody has to guess.</p>
+<h2 id="being-honest-about-what-the-support-is-for">Being honest about what the support is for</h2>
+<p>Below the ads sits an "About the Ad Circus" section with a support progress bar, something like "Support progress 42 / 100", that fills as valid views come in. Next to it, an info button opens a pop-up that explains what the support actually goes to:</p>
+<ul>
+<li>the current server costs and data limits, if the game runs on servers,</li>
+<li>expenses and funding goals,</li>
+<li>new features in development and what the developer wants to do next,</li>
+<li>the impact of the support so far, and news from the developer.</li>
+</ul>
+<p>This turns the circus into a small window onto the project itself. If a game needs servers to run, or the developer needs a certain amount to keep updating it, that's part of the experience, and players deserve to see it plainly instead of being guilted or tricked into paying. The circus should communicate clearly what it is, why it's there, and what it gives both sides, and link to where the project is heading, saying that any support goes toward those aims.</p>
+<h2 id="what-goes-in-the-circus">What goes in the circus</h2>
+<p>There are two kinds of entries:</p>
+<ol>
+<li><strong>Standardised ads</strong> from an ad network such as Google Ads, in the network's common formats.</li>
+<li><strong>Custom-made ads</strong>, put together by the developer: an image, a title and description, one or more links, or a video. These can promote the developer's other projects, friends' games, or anything else worth showing.</li>
+</ol>
+<p>One firm rule: no interactive content inside the circus. A link can lead somewhere interactive, but the circus itself stays a calm viewing room: no mini-games, no playable ads, nothing that grabs your controls.</p>
+<p>The tone should stay fun and casual. The circus can even poke a little fun at the usual ways other games push ads on people, as long as it's a passing remark rather than a loud sermon. And it should never beg. People watch if they want to, for their own reasons.</p>
+<h2 id="why-this-works-better">Why this works better</h2>
+<p>Forced ads make the player resent the game, the ad, the advertiser and the developer all at once. The Ad Circus flips every one of those:</p>
+<ul>
+<li><strong>The player is in control.</strong> Every single ad view is a choice, so nobody is ambushed and nobody's session is broken.</li>
+<li><strong>Ads become discovery.</strong> A viewer who chose to look is actually paying attention, which is exactly what an ad wants.</li>
+<li><strong>Support becomes visible.</strong> Players can see their views adding up and what they're for, so supporting the game feels like taking part, not being milked.</li>
+<li><strong>Trust survives.</strong> A game that never forces ads on you is a game you're happy to come back to, and maybe to visit the circus of now and then as a thank-you.</li>
+</ul>
+<p>I first sketched the Ad Circus for <a href="../projects/shape-smasher.html">Shape Smasher</a>, where the ads can even be smashed for fun, and it sits as a plain menu entry in other designs of mine too. It works just as well in a mobile game, a PC game or a web game: all it needs is one quiet button and the patience to let players come to it.</p>
+                </div>
+
+                <section class="closing panel" aria-labelledby="closing-title">
+                    <h2 class="section-mark" id="closing-title"><span class="icon" style="--icon: url(../icons/conversation-lorc.png)"></span>Talk about it</h2>
+                    <p>Questions, disagreements and ideas of your own are all welcome. Discuss this article with other readers on the Reactorcore Games Discord, follow new articles and dev news on Patreon, or write to me directly.</p>
+                    <p class="closing-links">
+                        <a class="btn" href="https://discord.gg/UdRavGhj47" target="_blank" rel="noopener"><span class="icon" style="--icon: url(../icons/chat-bubble-delapouite.png)"></span>Discord</a>
+                        <a class="btn" href="https://www.patreon.com/ReactorcoreGames" target="_blank" rel="noopener"><span class="icon" style="--icon: url(../icons/megaphone-delapouite.png)"></span>Patreon</a>
+                        <a class="btn" href="mailto:reactorcoregames@gmail.com"><span class="icon" style="--icon: url(../icons/envelope-lorc.png)"></span>Email</a>
+                    </p>
+                </section>
+
+                <nav class="pager" aria-label="More articles">
+                    <a class="pager-link prev" href="why-i-dont-play-competitive-games.html"><span class="label">← Previous</span><span class="pager-title">Why I Don&#x27;t Play Competitive Human Vs Human Games Anymore</span></a>
+                    <a class="pager-link next" href="universe-life-and-death-1.html"><span class="label">Next →</span><span class="pager-title">My View On The Universe, Life And Death (Part 1)</span></a>
+                </nav>
+                <p class="back"><a class="btn btn-ghost" href="../articles.html"><span class="icon" style="--icon: url(../icons/open-book-lorc.png)"></span>All articles</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <p>All my links: <a href="../links.html">every link in one place</a></p>
+                <p>All my releases: <a href="https://reactorcore.itch.io/" target="_blank" rel="noopener">reactorcore.itch.io</a></p>
+                <p>Homepage: <a href="https://reactorcoregames.github.io/" target="_blank" rel="noopener">reactorcoregames.github.io</a></p>
+            </div>
+            <div>
+                <p>Reactorcore Games · <a href="../articles.html">Back to the articles</a></p>
+                <p>Icons by Lorc, Delapouite and others at <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
+                <p>Fonts: Oxanium, Orbitron (as "RC Display"), IBM Plex Sans, all SIL OFL</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

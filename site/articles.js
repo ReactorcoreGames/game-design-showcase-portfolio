@@ -119,6 +119,12 @@ window.ARTICLES = [
     original: GDOC("1AEL4GWYjHf8qOK0p_JG7hN2RIB0ogGXMOgNWE4psDfs")
   },
   {
+    shelf: "ethics", minutes: 5,
+    title: "The Ad Circus: Ads Only When Players Ask For Them",
+    summary: "A consensual way to show ads in a game: a quiet menu button to a separate screen of curtained ads, never forced on anyone, with an honest look at what each view supports.",
+    slug: "ad-circus"
+  },
+  {
     shelf: "beyond", minutes: 10,
     title: "My View On The Universe, Life And Death (Part 1)",
     summary: "Not strictly game design, but it shapes the metagames and universes of my projects: a universe that never began and never ends, and no reason for apathy about our future.",
